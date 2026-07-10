@@ -16,6 +16,7 @@ import { AvailabilityStatus } from "@/components/availability-status";
 import { LaboratoryWorkflow } from "@/components/laboratory-workflow";
 import { ProofScanner } from "@/components/proof-scanner";
 import { MarketOpportunityNavigator } from "@/components/market-opportunity-navigator";
+import { AchievementsTimelineSection } from "@/components/achievements-timeline-section";
 import { buildPersonJsonLd, type PortfolioFrontmatter } from "@/lib/proof-archive";
 import { buildWebSiteJsonLd } from "@/lib/structured-data";
 import { buildMetadata } from "@/lib/seo";
@@ -179,124 +180,8 @@ export default async function HomePage() {
           <MarketOpportunityNavigator />
         </section>
 
-        {/* SECTION 4: 'ГЛАВНОЕ ДОСТИЖЕНИЕ' (35AWARDS Grid + Timeline + Quote) */}
-        <section className="space-y-6">
-          <div className="grid gap-6 xl:grid-cols-2">
-            
-            {/* Left Card: 35AWARDS Photo Award */}
-            <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 grid sm:grid-cols-[1.2fr_0.8fr] gap-6 overflow-hidden relative">
-              <div className="flex flex-col justify-between h-full z-10">
-                <div>
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
-                    ГЛАВНОЕ ДОСТИЖЕНИЕ
-                  </p>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
-                    <span className="text-accent">TOP 35</span> INTERNATIONAL AI PHOTOGRAPHY AWARD
-                  </h3>
-                  <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.16em] text-titanium mb-4">
-                    35AWARDS 2025
-                  </p>
-                  <p className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.78)]">
-                    Международная премия в области AI фотографии. Признание на мировом уровне: 9 работ в финале, ТОП-35 авторов в категории генеративных визуальных образов.
-                  </p>
-
-                  {/* Categories ranked stats */}
-                  <div className="grid grid-cols-3 gap-2 mt-4">
-                    {[
-                      { label: "Living Creatures", rank: "Top 35" },
-                      { label: "Landscape", rank: "Top 50" },
-                      { label: "Undocumented", rank: "Top 70" }
-                    ].map((cat, idx) => (
-                      <div key={idx} className="rounded border border-border-subtle/50 bg-[rgba(10,13,12,0.4)] p-2 text-center">
-                        <span className="block font-mono text-[8px] uppercase tracking-wider text-titanium mb-1">
-                          {cat.label}
-                        </span>
-                        <span className="font-mono text-xs font-semibold text-accent">
-                          {cat.rank}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-border-subtle/30">
-                  <Link
-                    href="/awards-credentials"
-                    className="inline-flex min-h-9 items-center justify-center gap-1.5 rounded-panel border border-accent/40 bg-accent/4 px-4 py-2 text-xs font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/18 hover:scale-[1.02] shadow-[0_0_8px_rgba(183,255,60,0.05)] hover:shadow-[0_0_18px_rgba(183,255,60,0.2)]"
-                  >
-                    ПОДРОБНЕЕ
-                  </Link>
-                </div>
-              </div>
-
-              {/* Right Side: Collage Container */}
-              <div 
-                className="relative rounded-panel overflow-hidden border border-border-subtle bg-cover min-h-[200px] sm:min-h-full"
-                style={{
-                  backgroundImage: "url('/proof-assets/sig-01-35awards.jpg')",
-                  backgroundPosition: "50% 25%",
-                }}
-              >
-                {/* Overlay gradient mask to blend with the card background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none sm:block hidden" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none" />
-              </div>
-
-            </div>
-
-            {/* Right Card: Career Timeline Path */}
-            <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between">
-              <div>
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
-                  ПУТЬ РАЗВИТИЯ
-                </p>
-
-                {/* Timeline Grid */}
-                <div className="relative border-l border-border-subtle pl-5 space-y-5">
-                  {[
-                    { year: "2020", title: "Первые AI эксперименты", desc: "Минскводоканал Electrical maintenance // Запуск тестов" },
-                    { year: "2022", title: "Запуск LabStory / Helix", desc: "Победа в конкурсах, R&D в генерации видео" },
-                    { year: "2024", title: "AI продукты и внедрение", desc: "Кастомные пайплайны, автоматические агенты" },
-                    { year: "2026", title: "AI Core Architect", desc: "Создание будущего системного AI проектирования" }
-                  ].map((node, idx) => (
-                    <div key={idx} className="relative">
-                      {/* Node Bullet */}
-                      <span className="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-accent border border-void-black animate-pulse" />
-                      
-                      <div className="flex items-baseline gap-2">
-                        <span className="font-mono text-[10px] font-bold text-accent">
-                          {node.year}
-                        </span>
-                        <h4 className="text-xs sm:text-sm font-semibold text-foreground">
-                          {node.title}
-                        </h4>
-                      </div>
-                      <p className="text-[10px] text-titanium leading-5">
-                        {node.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Quote Card */}
-          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.32)] p-6 md:p-8 relative overflow-hidden">
-            <div className="absolute top-4 left-4 text-accent/10 pointer-events-none">
-              <Quote size={56} />
-            </div>
-            
-            <blockquote className="relative z-10 text-sm sm:text-base leading-7 text-[rgba(214,207,191,0.85)] max-w-4xl italic pl-6 border-l-2 border-accent/40">
-              «Технологии — это инструмент. Важно то, как мы применяем их, чтобы решать реальные инженерные задачи и улучшать качество жизни людей.»
-            </blockquote>
-            
-            <div className="mt-4 pl-6 text-right font-mono text-[9px] uppercase tracking-wider text-titanium">
-              — Никита Кизевич / <span className="text-accent font-semibold">AI ARCHITECT</span>
-            </div>
-          </div>
-        </section>
+        {/* SECTION 4: 'ГЛАВНОЕ ДОСТИЖЕНИЕ' & 'ПУТЬ РАЗВИТИЯ' (Interactive slider & horizontal timeline) */}
+        <AchievementsTimelineSection />
 
         {/* SECTION 5: 'МОЯ ЛАБОРАТОРИЯ' workflow flow diagram */}
         <section className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8">
