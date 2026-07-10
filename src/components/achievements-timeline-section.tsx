@@ -95,9 +95,20 @@ const awardSlides: readonly AwardSlide[] = [
   }
 ];
 
+const timelineNodes = [
+  { year: "2020", label1: "Электрик 5 р.", label2: "Пром. объекты", coords: "SYS // 53.900" },
+  { year: "2021", label1: "Электромонтаж", label2: "Минскводоканал", coords: "SYS // 53.901" },
+  { year: "2022", label1: "Знакомство с ИИ", label2: "Ноябрь: ChatGPT", coords: "AI_ST // 53.902" },
+  { year: "2023", label1: "Промптинг", label2: "Разбор на винтики", coords: "R&D // 53.903" },
+  { year: "2024", label1: "Нейрокартинки", label2: "Плотная работа", coords: "IMG // 53.904" },
+  { year: "2025", label1: "Видеогенерация", label2: "Первые победы", coords: "VID // 53.905" },
+  { year: "2026", label1: "Сейчас:", label2: "Вайбкодинг & R&D", isCurrent: true, coords: "LIVE // 53.906" }
+];
+
 export function AchievementsTimelineSection() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [activeNode, setActiveNode] = useState<number | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -115,6 +126,26 @@ export function AchievementsTimelineSection() {
 
   return (
     <section className="space-y-6">
+      {/* HUD Embedded Styles for Keyframe Animations */}
+      <style jsx global>{`
+        @keyframes laser-sweep-vertical {
+          0% { top: 4%; opacity: 0.1; }
+          10% { opacity: 0.9; }
+          90% { opacity: 0.9; }
+          100% { top: 96%; opacity: 0.1; }
+        }
+        @keyframes ring-spin-ccw {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        .animate-laser-sweep-vertical {
+          animation: laser-sweep-vertical 6s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+        }
+        .animate-ring-spin-ccw {
+          animation: ring-spin-ccw 12s linear infinite;
+        }
+      `}</style>
+
       {/* 2-Column Grid Layout: Slider on Left, stacked Path & Quote on Right (matching design mockup) */}
       <div className="grid gap-6 lg:grid-cols-[1.14fr_0.86fr] items-stretch">
         
@@ -124,6 +155,9 @@ export function AchievementsTimelineSection() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
+          {/* Tactical Background Grid Details */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(142,150,140,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(142,150,140,0.03)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+          
           <div className="flex flex-col justify-between h-full z-10">
             <div className="space-y-3.5">
               <div className="flex items-center justify-between">
@@ -211,75 +245,122 @@ export function AchievementsTimelineSection() {
 
         </div>
 
-        {/* Right Column Stack: Timeline (Top) + Quote (Bottom) (100% matched to mockup) */}
+        {/* Right Column Stack: Vertical HUD Timeline (Top) + Quote (Bottom) */}
         <div className="flex flex-col gap-6 justify-between items-stretch">
           
-          {/* Card 1: Career Path Timeline */}
-          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 flex flex-col justify-center flex-1">
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
-              ПУТЬ РАЗВИТИЯ
-            </p>
+          {/* Card 1: Vertical HUD Career Path Timeline */}
+          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-5 md:p-6 flex flex-col justify-between flex-1 relative overflow-hidden">
+            {/* Tactical Grid Overlay & Corner Brackets */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(142,150,140,0.025)_1px,transparent_1px)] bg-[size:100%_12px] pointer-events-none" />
+            <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-accent/40 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-accent/40 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-accent/40 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-accent/40 pointer-events-none" />
 
-            {/* Horizontal Timeline Container */}
-            <div className="relative mt-4 pt-4 pb-4 overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
-              <div className="min-w-[550px] lg:min-w-0 lg:w-full relative px-2">
-                
-                {/* Horizontal line background */}
-                <div className="absolute top-[28px] left-[7.14%] right-[7.14%] h-[1.5px] bg-border-subtle/30" />
-                
-                {/* Colored progress line leading to active current year (2026) */}
-                <div className="absolute top-[28px] left-[7.14%] right-[7.14%] h-[1.5px] bg-gradient-to-r from-accent/20 to-accent" />
-                
-                <div className="grid grid-cols-7 gap-1 relative z-10">
-                  {[
-                    { year: "2020", label1: "Электрик 5 р.", label2: "Пром. объекты" },
-                    { year: "2021", label1: "Электромонтаж", label2: "Минскводоканал" },
-                    { year: "2022", label1: "Знакомство с ИИ", label2: "Ноябрь: ChatGPT" },
-                    { year: "2023", label1: "Промптинг", label2: "Разбор на винтики" },
-                    { year: "2024", label1: "Нейрокартинки", label2: "Плотная работа" },
-                    { year: "2025", label1: "Видеогенерация", label2: "Первые победы" },
-                    { year: "2026", label1: "Сейчас:", label2: "Вайбкодинг & R&D", isCurrent: true }
-                  ].map((node, idx) => (
-                    <div key={idx} className="flex flex-col items-center text-center relative group">
-                      
-                      {/* Year above line */}
-                      <span className={`font-mono text-[11px] font-bold mb-3 transition-colors ${
-                        node.isCurrent ? "text-accent" : "text-titanium group-hover:text-accent"
-                      }`}>
-                        {node.year}
-                      </span>
-                      
-                      {/* Dot on the line */}
+            <div className="flex justify-between items-center mb-4 z-10">
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
+                ПУТЬ РАЗВИТИЯ // TIMELINE_FLOW
+              </p>
+              <div className="font-mono text-[8px] text-titanium flex items-center gap-1.5 select-none">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                TELEMETRY ACTIVE
+              </div>
+            </div>
+
+            {/* Vertical Stepper Container */}
+            <div className="relative flex-1 flex flex-col justify-between py-1.5 pl-2 pr-1">
+              
+              {/* Vertical line background */}
+              <div className="absolute top-2 bottom-2 left-[53px] w-[1px] bg-border-subtle/30 pointer-events-none" />
+              
+              {/* Colored progress line leading to active current year (2026) */}
+              <div className="absolute top-2 bottom-2 left-[53px] w-[1px] bg-gradient-to-b from-accent/10 via-accent/40 to-accent pointer-events-none" />
+              
+              {/* Vertical scanner laser sweep point */}
+              <div className="absolute left-[50px] w-2 h-2 -ml-0.5 rounded-full bg-accent animate-laser-sweep-vertical pointer-events-none shadow-[0_0_8px_#b7ff3c]" />
+
+              {timelineNodes.map((node, idx) => {
+                const isHoveredNode = activeNode === idx;
+                return (
+                  <div 
+                    key={idx} 
+                    className="flex items-center text-left relative group min-h-[36px] outline-none focus-visible:ring-1 focus-visible:ring-accent rounded transition-all duration-200" 
+                    tabIndex={0}
+                    onMouseEnter={() => setActiveNode(idx)}
+                    onMouseLeave={() => setActiveNode(null)}
+                    aria-label={`Год ${node.year}: ${node.label1}, ${node.label2}`}
+                  >
+                    
+                    {/* Year on the left (IBM Plex Mono typography) */}
+                    <span className={`font-mono text-[11px] font-bold w-[38px] text-right pr-2 transition-colors duration-200 select-none ${
+                      node.isCurrent 
+                        ? "text-accent drop-shadow-[0_0_5px_rgba(183,255,60,0.6)]" 
+                        : isHoveredNode
+                          ? "text-accent"
+                          : "text-titanium"
+                    }`}>
+                      {node.year}
+                    </span>
+                    
+                    {/* Interactive Dot/HUD reticle in the middle */}
+                    <div className="w-[30px] flex justify-center z-10">
                       {node.isCurrent ? (
-                        <div className="h-4 w-4 rounded-full bg-accent border-2 border-void-black z-10 shadow-[0_0_12px_#b7ff3c] relative animate-pulse flex items-center justify-center">
-                          <div className="h-1.5 w-1.5 rounded-full bg-void-black" />
+                        /* Currently Active Rotating HUD Crosshair node */
+                        <div className="relative w-6 h-6 flex items-center justify-center">
+                          <svg className="absolute w-5 h-5 animate-ring-spin-ccw text-accent" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
+                          </svg>
+                          <div className="absolute w-3.5 h-3.5 rounded-full border border-accent/80 animate-ping opacity-75" />
+                          <div className="h-2 w-2 rounded-full bg-accent border border-void-black z-10 shadow-[0_0_8px_#b7ff3c]" />
                         </div>
                       ) : (
-                        <div className="h-3 w-3 rounded-full bg-[rgba(18,24,22,0.96)] border-2 border-border-subtle z-10 group-hover:border-accent group-hover:bg-accent/40 transition-all duration-300" />
+                        /* Inactive / Targetable Node */
+                        <div className="relative w-5 h-5 flex items-center justify-center">
+                          <div className={`absolute inset-0 border border-accent/60 rounded scale-75 opacity-0 transition-all duration-300 ${
+                            isHoveredNode ? "opacity-100 scale-100 rotate-45" : ""
+                          }`} />
+                          <div className={`h-2 w-2 rounded-full border transition-all duration-300 ${
+                            isHoveredNode 
+                              ? "bg-accent/40 border-accent scale-110" 
+                              : "bg-[rgba(18,24,22,0.96)] border-border-subtle"
+                          }`} />
+                        </div>
                       )}
-                      
-                      {/* Year Description below line (highly readable contrast) */}
-                      <div className="mt-4 min-h-[52px]">
-                        <p className="text-[11px] leading-tight max-w-[85px] mx-auto text-balance">
-                          {node.isCurrent ? (
-                            <>
-                              <span className="text-accent font-bold block mb-0.5">{node.label1}</span>
-                              <span className="text-[10px] text-[rgba(214,207,191,0.7)] font-medium leading-normal block">{node.label2}</span>
-                            </>
-                          ) : (
-                            <>
-                              <span className="text-[rgba(214,207,191,0.95)] font-bold block mb-0.5">{node.label1}</span>
-                              <span className="text-[10px] text-[rgba(214,207,191,0.62)] font-normal leading-normal block">{node.label2}</span>
-                            </>
-                          )}
-                        </p>
-                      </div>
-
                     </div>
-                  ))}
-                </div>
+                    
+                    {/* Description on the right - flowing horizontally with ample space */}
+                    <div className="flex-1 pl-3.5 leading-tight flex items-baseline gap-2 flex-wrap">
+                      <span className={`text-[11px] font-bold transition-colors ${
+                        node.isCurrent 
+                          ? "text-accent" 
+                          : isHoveredNode
+                            ? "text-accent"
+                            : "text-[rgba(214,207,191,0.95)]"
+                      }`}>
+                        {node.label1}
+                      </span>
+                      <span className="text-[9px] text-titanium/40 font-mono select-none">•</span>
+                      <span className={`text-[10px] transition-colors duration-200 ${
+                        node.isCurrent
+                          ? "text-foreground font-medium"
+                          : isHoveredNode
+                            ? "text-[rgba(214,207,191,0.85)]"
+                            : "text-[rgba(214,207,191,0.62)]"
+                      }`}>
+                        {node.label2}
+                      </span>
 
-              </div>
+                      {/* Technical coordinates tag revealed on hover */}
+                      <span className={`font-mono text-[7px] text-accent/50 ml-auto pr-1 transition-opacity duration-300 pointer-events-none select-none ${
+                        isHoveredNode ? "opacity-100" : "opacity-0"
+                      }`}>
+                        {node.coords}
+                      </span>
+                    </div>
+
+                  </div>
+                );
+              })}
             </div>
           </div>
 
