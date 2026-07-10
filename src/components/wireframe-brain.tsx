@@ -5,6 +5,21 @@ import { usePathname } from "next/navigation";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
+type Pulse = {
+  segmentIndex: number;
+  progress: number;
+  speed: number;
+  direction: number;
+};
+
+interface PulseSystem {
+  geometry: THREE.BufferGeometry;
+  material: THREE.PointsMaterial;
+  pulses: Pulse[];
+  segments: { start: THREE.Vector3; end: THREE.Vector3 }[];
+  positionsArray: Float32Array;
+}
+
 export function WireframeBrain() {
   const pathname = usePathname();
   const isEnglishRoute = pathname === "/en" || pathname?.startsWith("/en/");
@@ -79,6 +94,9 @@ export function WireframeBrain() {
     const brainGroup = new THREE.Group();
     scene.add(brainGroup);
 
+    // List to hold active pulse systems for updating inside animation loop
+    const activePulseSystems: PulseSystem[] = [];
+
     // 6. Interaction Variables
     let isDragging = false;
     let previousMousePosition = { x: 0, y: 0 };
@@ -136,6 +154,71 @@ export function WireframeBrain() {
             });
             const lineSegments = new THREE.LineSegments(edgesGeometry, lineMaterial);
             mesh.add(lineSegments);
+
+            // Extract edge vertex positions array for pulse particles
+            const edgePosAttr = edgesGeometry.attributes.position;
+            if (edgePosAttr && edgePosAttr.count > 0) {
+              const segments: { start: THREE.Vector3; end: THREE.Vector3 }[] = [];
+              const count = edgePosAttr.count;
+              for (let i = 0; i < count; i += 2) {
+                segments.push({
+                  start: new THREE.Vector3(edgePosAttr.getX(i), edgePosAttr.getY(i), edgePosAttr.getZ(i)),
+                  end: new THREE.Vector3(edgePosAttr.getX(i + 1), edgePosAttr.getY(i + 1), edgePosAttr.getZ(i + 1)),
+                });
+              }
+
+              if (segments.length > 0) {
+                const pulseCount = 150;
+                const pulsePositions = new Float32Array(pulseCount * 3);
+                const pulses: Pulse[] = [];
+
+                for (let i = 0; i < pulseCount; i++) {
+                  const segmentIndex = Math.floor(Math.random() * segments.length);
+                  const progress = Math.random();
+                  const speed = 0.004 + Math.random() * 0.008; // dynamic particle speed
+                  const direction = Math.random() > 0.5 ? 1 : 0;
+
+                  pulses.push({
+                    segmentIndex,
+                    progress,
+                    speed,
+                    direction,
+                  });
+
+                  const segment = segments[segmentIndex];
+                  const start = direction === 0 ? segment.start : segment.end;
+                  const end = direction === 0 ? segment.end : segment.start;
+
+                  pulsePositions[i * 3] = start.x + (end.x - start.x) * progress;
+                  pulsePositions[i * 3 + 1] = start.y + (end.y - start.y) * progress;
+                  pulsePositions[i * 3 + 2] = start.z + (end.z - start.z) * progress;
+                }
+
+                const pulseGeometry = new THREE.BufferGeometry();
+                pulseGeometry.setAttribute("position", new THREE.BufferAttribute(pulsePositions, 3));
+
+                const pulseMaterial = new THREE.PointsMaterial({
+                  color: 0xffffff,
+                  size: 0.05,
+                  transparent: true,
+                  opacity: 0.95,
+                  blending: THREE.AdditiveBlending,
+                  depthWrite: false,
+                  sizeAttenuation: true,
+                });
+
+                const pulsePoints = new THREE.Points(pulseGeometry, pulseMaterial);
+                mesh.add(pulsePoints);
+
+                activePulseSystems.push({
+                  geometry: pulseGeometry,
+                  material: pulseMaterial,
+                  pulses,
+                  segments,
+                  positionsArray: pulsePositions,
+                });
+              }
+            }
 
             // Sparse particle cloud (neural synapses)
             const positionAttr = mesh.geometry.attributes.position;
@@ -269,6 +352,38 @@ export function WireframeBrain() {
         greenPointLight.intensity = 0.5 + Math.sin(elapsed * 2.0) * 0.3;
       }
 
+      // Update electrical signal pulses running along the neural connections
+      for (const sys of activePulseSystems) {
+        const { pulses, segments, positionsArray, geometry } = sys;
+        for (let i = 0; i < pulses.length; i++) {
+          const pulse = pulses[i];
+          pulse.progress += pulse.speed;
+
+          if (pulse.progress >= 1.0) {
+            pulse.progress = 0.0;
+            // Pick a new random edge segment
+            pulse.segmentIndex = Math.floor(Math.random() * segments.length);
+            pulse.speed = 0.004 + Math.random() * 0.008; // dynamic particle speed
+            pulse.direction = Math.random() > 0.5 ? 1 : 0;
+          }
+
+          const segment = segments[pulse.segmentIndex];
+          if (segment) {
+            const start = pulse.direction === 0 ? segment.start : segment.end;
+            const end = pulse.direction === 0 ? segment.end : segment.start;
+
+            const x = start.x + (end.x - start.x) * pulse.progress;
+            const y = start.y + (end.y - start.y) * pulse.progress;
+            const z = start.z + (end.z - start.z) * pulse.progress;
+
+            positionsArray[i * 3] = x;
+            positionsArray[i * 3 + 1] = y;
+            positionsArray[i * 3 + 2] = z;
+          }
+        }
+        (geometry.attributes.position as THREE.BufferAttribute).needsUpdate = true;
+      }
+
       // Render scene
       renderer.render(scene, camera);
       animationFrameId = requestAnimationFrame(animate);
@@ -301,6 +416,13 @@ export function WireframeBrain() {
       container.removeEventListener("touchstart", onTouchStart);
       container.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("touchend", onMouseUpOrLeave);
+
+      // Dispose active pulse systems
+      activePulseSystems.forEach((sys) => {
+        sys.geometry.dispose();
+        sys.material.dispose();
+      });
+      activePulseSystems.length = 0;
       
       // Dispose materials and geometry to prevent memory leaks
       scene.traverse((object) => {

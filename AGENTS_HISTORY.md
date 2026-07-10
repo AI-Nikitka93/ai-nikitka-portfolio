@@ -1,5 +1,11 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 18:23:00 +03:00] Add Electrical Signal Pulses to 3D Wireframe Brain Mesh
+- Changed: Added custom electrical signal pulses moving dynamically along the wireframe edges in the 3D brain component. Inside the GLTFLoader callback, extracted edge coordinates from EdgesGeometry, initialized a dynamic particle system (BufferGeometry with 150 particles and PointsMaterial), implemented interpolation along random wireframe segments with dynamic speeds and directions, and implemented explicit resource cleanup for the geometry and material inside the component's unmount function.
+- Files: `src/components/wireframe-brain.tsx`, `docs/PROJECT_HISTORY.md`, `AGENTS_HISTORY.md`
+- Verification: Compiled and verified successfully via `npm run verify` and Zero-Trust Guardrails script.
+- Status: DONE.
+
 ## [2026-07-10 17:52:00 +03:00] Align 3-Column Hero Cards and Layout Heights
 - Changed: Adjusted grid layout alignment in the Hero section. Removed centering constraints on the middle column wrapper and added `lg:h-full` to the wireframe brain card, allowing it to stretch to the exact height of the left and right cards (511px). Harmonized the background color of the center card with the achievements card.
 - Files: `src/app/page.tsx`, `src/components/wireframe-brain.tsx`

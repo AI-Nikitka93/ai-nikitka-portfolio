@@ -377,3 +377,9 @@
 Изменены файлы: src/components/wireframe-brain.tsx, docs/PROJECT_HISTORY.md
 Результат/доказательство: `npm run typecheck` (pass), `npm run lint` (pass), `npm run build` (pass).
 Следующий шаг: Оценить вид трехмерного элемента на живом стенде.
+
+### 2026-07-10 18:23:00 +03:00 — Добавление электрических импульсов в 3D модель мозга
+- Changed: Добавлена визуализация электрических импульсов (сигналов) вдоль нейронных связей каркаса 3D-модели мозга. В GLTFLoader после извлечения линий через `EdgesGeometry` собираются 3D-координаты сегментов. Создана динамическая система частиц `THREE.Points` со светящимся материалом `THREE.PointsMaterial` (белые искры размером 0.05, аддитивное смешивание). В цикле анимации импульсы перемещаются по ребрам сетки, случайно перескакивая на новые сегменты при завершении пути. Добавлена очистка ресурсов (dispose) геометрии и материала импульсов при размонтировании компонента.
+- Files: src/components/wireframe-brain.tsx, docs/PROJECT_HISTORY.md
+- Verification: npm run verify (lint, typecheck, build, static release audit, dependency audit - PASS), adwp_guardrails check (Zero-Trust Guardrail: PASSED).
+- Status: DONE.
