@@ -1,14 +1,36 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 export function WireframeBrain() {
+  const pathname = usePathname();
+  const isEnglishRoute = pathname === "/en" || pathname?.startsWith("/en/");
+
+  const t = {
+    sysState: isEnglishRoute ? "SYS.STATE" : "СТАТУС.СИС",
+    coordRef: isEnglishRoute ? "COORD_REF" : "КООРД_РEФ",
+    loading: isEnglishRoute ? "LOADING_MODEL" : "ЗАГРУЗКА_МОДЕЛИ",
+    error: isEnglishRoute ? "CORE_FALLBACK" : "АВАРИЙНЫЙ_РЕЖИМ",
+    online: isEnglishRoute ? "ONLINE" : "В СЕТИ",
+    research: isEnglishRoute ? "RESEARCH" : "ИССЛЕДОВАНИЯ",
+    researchSub: isEnglishRoute ? "SYS.ANALYTICS // OK" : "АНАЛИТИКА.СИС // ОК",
+    architecture: isEnglishRoute ? "ARCHITECTURE" : "АРХИТЕКТУРА",
+    architectureSub: isEnglishRoute ? "MODEL.INFRA // ACTIVE" : "ИНФРА.МОДЕЛИ // АКТИВНО",
+    experiments: isEnglishRoute ? "EXPERIMENTS" : "ЭКСПЕРИМЕНТЫ",
+    experimentsSub: isEnglishRoute ? "NEURAL.SIM.v4.2" : "НЕЙРО.СИМ.v4.2",
+    deployment: isEnglishRoute ? "DEPLOYMENT" : "ДЕПЛОЙ",
+    deploymentSub: isEnglishRoute ? "EDGE.NODE.01 // LIVE" : "УЗЕЛ.EDGE.01 // РАБОТАЕТ",
+    engineActivated: isEnglishRoute ? "➔ AI ENGINE ACTIVATED ➔" : "➔ ИИ ЯДРО АКТИВИРОВАНО ➔"
+  };
+
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -366,10 +388,10 @@ export function WireframeBrain() {
 
       {/* Diagnostic Coordinate Indicators */}
       <div className="absolute top-3 left-4 font-mono text-[7px] tracking-widest text-accent/40 pointer-events-none select-none group-hover:text-accent/80 transition-colors">
-        SYS.STATE: {loading ? "LOADING_MODEL" : error ? "CORE_FALLBACK" : "ONLINE"}
+        {t.sysState}: {loading ? t.loading : error ? t.error : t.online}
       </div>
       <div className="absolute top-3 right-4 font-mono text-[7px] tracking-widest text-titanium/40 pointer-events-none select-none">
-        COORD_REF: [3D.BRAIN.v4.0]
+        {t.coordRef}: [3D.BRAIN.v4.0]
       </div>
 
       {/* WebGL Canvas */}
@@ -502,7 +524,7 @@ export function WireframeBrain() {
             className="font-mono text-[9px] font-extrabold tracking-widest fill-accent"
             style={{ filter: "drop-shadow(0 0 3px rgba(183, 255, 60, 0.7))" }}
           >
-            RESEARCH
+            {t.research}
           </text>
           <text
             x="30"
@@ -510,7 +532,7 @@ export function WireframeBrain() {
             textAnchor="start"
             className="font-mono text-[7px] tracking-wider fill-foreground/50 font-medium"
           >
-            SYS.ANALYTICS // OK
+            {t.researchSub}
           </text>
         </g>
 
@@ -532,7 +554,7 @@ export function WireframeBrain() {
             className="font-mono text-[9px] font-extrabold tracking-widest fill-accent"
             style={{ filter: "drop-shadow(0 0 3px rgba(183, 255, 60, 0.7))" }}
           >
-            ARCHITECTURE
+            {t.architecture}
           </text>
           <text
             x="370"
@@ -540,7 +562,7 @@ export function WireframeBrain() {
             textAnchor="end"
             className="font-mono text-[7px] tracking-wider fill-foreground/50 font-medium"
           >
-            MODEL.INFRA // ACTIVE
+            {t.architectureSub}
           </text>
         </g>
 
@@ -562,7 +584,7 @@ export function WireframeBrain() {
             className="font-mono text-[9px] font-extrabold tracking-widest fill-accent"
             style={{ filter: "drop-shadow(0 0 3px rgba(183, 255, 60, 0.7))" }}
           >
-            EXPERIMENTS
+            {t.experiments}
           </text>
           <text
             x="30"
@@ -570,7 +592,7 @@ export function WireframeBrain() {
             textAnchor="start"
             className="font-mono text-[7px] tracking-wider fill-foreground/50 font-medium"
           >
-            NEURAL.SIM.v4.2
+            {t.experimentsSub}
           </text>
         </g>
 
@@ -592,7 +614,7 @@ export function WireframeBrain() {
             className="font-mono text-[9px] font-extrabold tracking-widest fill-accent"
             style={{ filter: "drop-shadow(0 0 3px rgba(183, 255, 60, 0.7))" }}
           >
-            DEPLOYMENT
+            {t.deployment}
           </text>
           <text
             x="370"
@@ -600,7 +622,7 @@ export function WireframeBrain() {
             textAnchor="end"
             className="font-mono text-[7px] tracking-wider fill-foreground/50 font-medium"
           >
-            EDGE.NODE.01 // LIVE
+            {t.deploymentSub}
           </text>
         </g>
       </svg>
@@ -613,7 +635,7 @@ export function WireframeBrain() {
             textShadow: "0 0 8px rgba(183, 255, 60, 0.75)"
           }}
         >
-          ➔ AI ENGINE ACTIVATED ➔
+          {t.engineActivated}
         </div>
       </div>
     </div>

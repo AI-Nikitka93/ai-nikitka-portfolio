@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, FormEvent } from "react";
 import { Send, X, MessageSquare } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { marked } from "marked";
 
 type ChatMessage = {
@@ -10,22 +11,46 @@ type ChatMessage = {
   isStreaming?: boolean;
 };
 
-const initialGreeting =
+const initialGreetingRu =
   "Привет! Я цифровой клон Никиты. Задай мне любой вопрос: о его пути от электрика к нейросетям, хакатонах или о том, как связаться с ним.";
 
+const initialGreetingEn =
+  "Hi! I am Nikita's digital clone. Ask me any question: about his transition from high-voltage electrical systems to neural networks, hackathon results, or how to contact him.";
+
 export function FloatingChat() {
+  const pathname = usePathname();
+  const isEnglishRoute = pathname === "/en" || pathname?.startsWith("/en/");
+
   const [mounted, setMounted] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [query, setQuery] = useState("");
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: "assistant", content: initialGreeting },
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
+  const labels = {
+    triggerLabel: isEnglishRoute ? "AI-CHAT" : "ЧАТ-ИИ",
+    triggerState: isEnglishRoute ? "CLONE // ONLINE" : "КЛОН // ОНЛАЙН",
+    triggerAria: isEnglishRoute ? "Open AI Clone Chat" : "Открыть чат с ИИ-клоном",
+    title: isEnglishRoute ? "Nikita's AI Clone" : "ИИ-Клон Никиты",
+    closeAria: isEnglishRoute ? "Close chat" : "Закрыть чат",
+    userRole: isEnglishRoute ? "you" : "вы",
+    cloneRole: isEnglishRoute ? "clone" : "клон",
+    placeholder: isEnglishRoute ? "Ask about Nikita..." : "Спросите о Никите...",
+    errorMsg: isEnglishRoute 
+      ? "Connection error. You can contact me directly on Telegram @digital_ai_art or via email nikitka9318@gmail.com."
+      : "Произошла ошибка связи. Можешь написать мне в Telegram @digital_ai_art или на почту nikitka9318@gmail.com."
+  };
+
   useEffect(() => {
     setMounted(true);
-  }, []);
+    setMessages([
+      {
+        role: "assistant",
+        content: isEnglishRoute ? initialGreetingEn : initialGreetingRu,
+      },
+    ]);
+  }, [isEnglishRoute]);
 
   useEffect(() => {
     if (isExpanded) {
@@ -93,8 +118,7 @@ export function FloatingChat() {
         const next = [...prev];
         const last = next[next.length - 1];
         if (last && last.role === "assistant") {
-          last.content =
-            "Произошла ошибка связи. Можешь написать мне в Telegram @digital_ai_art или на почту nikitka9318@gmail.com.";
+          last.content = labels.errorMsg;
         }
         return next;
       });
@@ -125,7 +149,7 @@ export function FloatingChat() {
         <button
           onClick={() => setIsExpanded(true)}
           className="fixed bottom-6 right-6 z-40 flex items-center gap-3 rounded-full border border-accent/25 bg-[rgba(10,13,12,0.88)] p-2 pr-4 backdrop-blur-md transition-all duration-300 hover:border-accent hover:scale-105 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          aria-label="Открыть чат с ИИ-клоном"
+          aria-label={labels.triggerAria}
         >
           {/* Pulsing Core Indicator */}
           <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(18,24,22,0.8)] border border-border-subtle">
@@ -135,10 +159,10 @@ export function FloatingChat() {
 
           <div className="flex flex-col text-left">
             <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-titanium leading-none mb-1">
-              КЛОН // ОНЛАЙН
+              {labels.triggerState}
             </span>
             <span className="text-xs font-semibold leading-none text-accent">
-              ЧАТ-ИИ
+              {labels.triggerLabel}
             </span>
           </div>
         </button>
@@ -152,13 +176,13 @@ export function FloatingChat() {
             <div className="flex items-center gap-2">
               <MessageSquare size={16} className="text-accent" />
               <span className="font-mono text-[10px] uppercase tracking-wider text-accent font-semibold">
-                ИИ-Клон Никиты
+                {labels.title}
               </span>
             </div>
             <button
               onClick={() => setIsExpanded(false)}
               className="text-titanium hover:text-foreground transition-colors p-1"
-              aria-label="Закрыть чат"
+              aria-label={labels.closeAria}
             >
               <X size={16} />
             </button>
@@ -174,7 +198,7 @@ export function FloatingChat() {
                 }`}
               >
                 <span className="font-mono text-[8px] uppercase tracking-wider text-titanium px-1">
-                  {msg.role === "user" ? "вы" : "клон"}
+                  {msg.role === "user" ? labels.userRole : labels.cloneRole}
                 </span>
                 <div
                   className={`rounded-panel border px-3 py-2 text-xs leading-6 max-w-[90%] ${
@@ -209,7 +233,7 @@ export function FloatingChat() {
               onChange={(e) => setQuery(e.target.value)}
               disabled={isLoading}
               className="flex-1 min-h-10 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.58)] px-3 text-xs text-foreground outline-none transition-colors placeholder:text-[rgba(214,207,191,0.45)] focus:border-accent disabled:opacity-50"
-              placeholder="Спросите о Никите..."
+              placeholder={labels.placeholder}
             />
             <button
               type="submit"
@@ -224,3 +248,4 @@ export function FloatingChat() {
     </>
   );
 }
+
