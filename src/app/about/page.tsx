@@ -247,6 +247,7 @@ export default function AboutPage() {
                   ["sys.music_artists", "Nikitka AI, Niko Xian, NIKITAAL, Niquiano, Kezevix, NKVIS, Nikita Kizevich"],
                   ["sys.neural_stack", "LLM (ChatGPT, Claude, Gemini, DeepSeek) • Visual (Nanobanano Pro, Midjourney v6, Runway, Luma, Minimax, ранее Imagen 3/4) • Audio (Suno, Udio)"],
                   ["sys.status", "ACTIVE_RUNNING // BIOTECH_PRO-BONO_OPEN"],
+                  ["sys.ai_expenses", "0 USD / 0 BYN (Использование промо-лимитов и грантов)"],
                   ["sys.last_build", "Passed (100% Автономная верификация)"]
                 ].map(([key, value]) => (
                   <div key={key} className="border-b border-border-subtle/40 pb-3 last:border-b-0">
