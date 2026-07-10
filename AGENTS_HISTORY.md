@@ -1,7 +1,13 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 22:25:00 +03:00] Implement High-Fidelity CSS & SVG Animations in LaboratoryWorkflow
+- Changed: Replaced basic text arrows with responsive glowing SVG connectors (horizontal on desktop/tablet/mobile-landscape, vertical on mobile-portrait) containing animated running light signals using stroke-dasharray/dashoffset keyframes. Added hover-triggered CSS scanline grid overlays and floating green particles behind card content, and added a 360-degree rotation transition to the icons on hover. Included prefers-reduced-motion CSS rules to disable background effects and stop signal animations.
+- Files: `src/components/laboratory-workflow.tsx`, `src/app/globals.css`, `AGENTS_HISTORY.md`
+- Verification: Successful TypeScript compilation (`npm run typecheck`) and ESLint validation (`npm run lint`).
+- Status: DONE.
+
 ## [2026-07-10 18:23:00 +03:00] Add Electrical Signal Pulses to 3D Wireframe Brain Mesh
-- Changed: Added custom electrical signal pulses moving dynamically along the wireframe edges in the 3D brain component. Inside the GLTFLoader callback, extracted edge coordinates from EdgesGeometry, initialized a dynamic particle system (BufferGeometry with 150 particles and PointsMaterial), implemented interpolation along random wireframe segments with dynamic speeds and directions, and implemented explicit resource cleanup for the geometry and material inside the component's unmount function.
+- Changed: Added custom electrical signal pulses moving dynamically along the wireframe edges in the 3D brain component. Inside the GLTFLoader callback, extracted edge coordinates from EdgesGeometry, initialized a dynamic particle system (BufferGeometry with 150 particles and PointsMaterial), interpolated along random wireframe segments with dynamic speeds and directions, and implemented explicit resource cleanup for the geometry and material inside the component's unmount function.
 - Files: `src/components/wireframe-brain.tsx`, `docs/PROJECT_HISTORY.md`, `AGENTS_HISTORY.md`
 - Verification: Compiled and verified successfully via `npm run verify` and Zero-Trust Guardrails script.
 - Status: DONE.

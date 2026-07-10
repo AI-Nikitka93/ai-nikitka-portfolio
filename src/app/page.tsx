@@ -9,7 +9,6 @@ import {
   Sparkles,
   Quote,
 } from "lucide-react";
-import { DossierCard } from "@/components/dossier-card";
 import { JsonLdScript } from "@/components/json-ld-script";
 import { WireframeBrain } from "@/components/wireframe-brain";
 import { AvailabilityStatus } from "@/components/availability-status";
@@ -17,10 +16,10 @@ import { LaboratoryWorkflow } from "@/components/laboratory-workflow";
 import { ProofScanner } from "@/components/proof-scanner";
 import { MarketOpportunityNavigator } from "@/components/market-opportunity-navigator";
 import { AchievementsTimelineSection } from "@/components/achievements-timeline-section";
-import { buildPersonJsonLd, type PortfolioFrontmatter } from "@/lib/proof-archive";
+import { buildPersonJsonLd } from "@/lib/proof-archive";
 import { buildWebSiteJsonLd } from "@/lib/structured-data";
 import { buildMetadata } from "@/lib/seo";
-import { getPortfolioEntries, getPosts } from "@/lib/mdx";
+import { getPosts } from "@/lib/mdx";
 
 export const metadata: Metadata = buildMetadata({
   title: "AI_Nikitka93 — портфолио работ и проектов",
@@ -32,9 +31,6 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default async function HomePage() {
-  const dossiers = await getPortfolioEntries<PortfolioFrontmatter>();
-  // Match 4 featured projects exactly
-  const featuredProjects = dossiers.slice(0, 4);
   const posts = await getPosts();
   const latestPosts = posts.slice(0, 3);
   
@@ -208,31 +204,7 @@ export default async function HomePage() {
           <LaboratoryWorkflow />
         </section>
 
-        {/* SECTION 6: 'ИЗБРАННЫЕ ПРОЕКТЫ' grid */}
-        <section className="space-y-6">
-          <div className="flex items-end justify-between border-b border-border-subtle pb-3">
-            <div>
-              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-1">
-                ИЗБРАННЫЕ ПРОЕКТЫ
-              </p>
-              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
-                Флагманские решения
-              </h3>
-            </div>
-            <Link
-              href="/portfolio"
-              className="font-mono text-[10px] uppercase tracking-[0.16em] text-titanium hover:text-accent transition-colors"
-            >
-              СМОТРЕТЬ ВСЕ ПРОЕКТЫ &rarr;
-            </Link>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {featuredProjects.map((entry) => (
-              <DossierCard key={entry.slug} slug={entry.slug} frontmatter={entry.frontmatter} />
-            ))}
-          </div>
-        </section>
+        {/* Removed 'Selected Projects' grid from homepage for cleaner aesthetics. Complete listing is available on /portfolio route. */}
 
         {/* SECTION 6.5: Market Opportunity Navigator */}
         <section className="space-y-4">

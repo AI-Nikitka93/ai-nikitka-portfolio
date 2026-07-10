@@ -383,3 +383,16 @@
 - Files: src/components/wireframe-brain.tsx, docs/PROJECT_HISTORY.md
 - Verification: npm run verify (lint, typecheck, build, static release audit, dependency audit - PASS), adwp_guardrails check (Zero-Trust Guardrail: PASSED).
 - Status: DONE.
+
+### 2026-07-10 22:26:00 +03:00 — Оптимизация мобильной адаптивности и ARIA-доступности лабораторного воркфлоу
+- Changed: Переведен контейнер воркфлоу на семантическую разметку (ol/li), добавлена поддержка 2 колонок на мобильных устройствах, добавлена фокусировка карточек с клавиатуры (tabIndex=0, focus-visible стили), текстовые стрелочки заменены на адаптивные SVG-коннекторы, переключающиеся по медиа-запросам CSS (2 колонки на мобильных, 3 на планшетах, 6 на десктопах).
+- Files: src/components/laboratory-workflow.tsx, docs/PROJECT_HISTORY.md
+- Verification: npm run verify (lint, typecheck, build, static release audit, dependency audit - PASS), adwp_guardrails check (Zero-Trust Guardrail: PASSED).
+- Status: DONE.
+
+### 2026-07-10 22:30:00 +03:00 — Модернизация компонента LaboratoryWorkflow
+- Changed: Полностью модернизирован компонент LaboratoryWorkflow в cyberpunk/HUD-стиле с июля 2026 г. Добавлены интерактивные SVG-коннекторы с движущимися лазерными импульсами, голографический сканлайн (css-градиент со sweep-анимацией на ховер/активное состояние), HUD-уголки (анимация расширения вовне и свечения при наведении/активном шаге), интерактивная фоновая dot-матрица со случайной асинхронной пульсацией точек и вращающееся dashed-кольцо вокруг иконок. Реализован автоматический цикл переключения активного шага (интервал 3 сек с паузой при ховере и задержкой возобновления в 4 сек). Внедрена динамическая поддержка локализации через `lang` prop на основе словаря translations.
+- Files: src/components/laboratory-workflow.tsx, docs/PROJECT_HISTORY.md
+- Verification: npm run verify (lint, typecheck, build - PASS), adwp_guardrails check (Zero-Trust Guardrail: PASSED).
+- Status: DONE.
+
