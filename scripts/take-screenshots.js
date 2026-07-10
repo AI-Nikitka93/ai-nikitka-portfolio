@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import fs from 'fs';
 import path from 'path';
 
-const targetDir = 'C:\\Users\\admin\\.gemini\\antigravity\\brain\\ae5d75e4-ce37-4c9a-bf4a-331e79ce70ea';
+const targetDir = 'C:\\Users\\admin\\.gemini\\antigravity\\brain\\ba91a538-e0ac-46fe-8048-9a649ec7a92a';
 if (!fs.existsSync(targetDir)) {
   fs.mkdirSync(targetDir, { recursive: true });
 }
@@ -41,14 +41,14 @@ async function run() {
     }
     await page.waitForTimeout(1500);
     const desktopPath = path.join(targetDir, `desktop_${route.name}.png`);
-    await page.screenshot({ path: desktopPath });
+    await page.screenshot({ path: desktopPath, fullPage: true });
     console.log(`Saved desktop: ${desktopPath}`);
 
     // Mobile Screenshot
     await page.setViewportSize({ width: 375, height: 812 });
     await page.waitForTimeout(1500);
     const mobilePath = path.join(targetDir, `mobile_${route.name}.png`);
-    await page.screenshot({ path: mobilePath });
+    await page.screenshot({ path: mobilePath, fullPage: true });
     console.log(`Saved mobile: ${mobilePath}`);
   }
 
