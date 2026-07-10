@@ -1,5 +1,17 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 22:36:00 +03:00] Remove Selected Projects Section from Homepage
+- Changed: Removed the heavy "Selected Projects" card grid section from the Russian homepage (`src/app/page.tsx`) to make the landing layout significantly cleaner, leaving all project details exclusively on the dedicated `/portfolio` route (similar to the English summary page). Fixed all unused import and variable linting warnings.
+- Files: `src/app/page.tsx`, `AGENTS_HISTORY.md`
+- Verification: Clean lint check (`npm run lint`), TypeScript compile check (`npm run typecheck`), production Turbopack compile (`next build`), and static release audit validations. All checks passed.
+- Status: DONE.
+
+## [2026-07-10 22:30:00 +03:00] Add 3D Perspective Tilt, Radial Glare, and Localization to LaboratoryWorkflow
+- Changed: Overwrote the laboratory workflow component to support dynamic language locale translations based on the `lang` prop (setting Russian titles to Russian terms like "ИДЕЯ", "АНАЛИЗ", "ПРОМПТИНГ", "РАЗРАБОТКА", "ТЕСТИРОВАНИЕ", "ДЕМО-РЕЛИЗ"). Added interactive 3D perspective card tilt and radial reflection glare following the visitor's cursor, corner HUD target indicators expanding on hover, 360-deg icon rotation, and SVG neon pulse laser lines between cards.
+- Files: `src/components/laboratory-workflow.tsx`
+- Verification: Clean compilation with 0 warnings/errors.
+- Status: DONE.
+
 ## [2026-07-10 22:25:00 +03:00] Implement High-Fidelity CSS & SVG Animations in LaboratoryWorkflow
 - Changed: Replaced basic text arrows with responsive glowing SVG connectors (horizontal on desktop/tablet/mobile-landscape, vertical on mobile-portrait) containing animated running light signals using stroke-dasharray/dashoffset keyframes. Added hover-triggered CSS scanline grid overlays and floating green particles behind card content, and added a 360-degree rotation transition to the icons on hover. Included prefers-reduced-motion CSS rules to disable background effects and stop signal animations.
 - Files: `src/components/laboratory-workflow.tsx`, `src/app/globals.css`, `AGENTS_HISTORY.md`

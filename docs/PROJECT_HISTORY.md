@@ -396,3 +396,9 @@
 - Verification: npm run verify (lint, typecheck, build - PASS), adwp_guardrails check (Zero-Trust Guardrail: PASSED).
 - Status: DONE.
 
+### 2026-07-10 22:36:00 +03:00 — Удаление раздела Избранные проекты с главной страницы
+- Changed: Удален тяжелый блок «Избранные проекты / Флагманские решения» с главной страницы (src/app/page.tsx) для повышения чистоты и скорости загрузки первого экрана. Полный список проектов по-прежнему доступен на отдельной странице `/portfolio` (как это сделано в англоязычной версии). Очищены неиспользуемые импорты DossierCard, PortfolioFrontmatter и getPortfolioEntries.
+- Files: src/app/page.tsx, docs/PROJECT_HISTORY.md
+- Verification: npm run verify (lint, typecheck, build, static release audit, dependency audit - PASS).
+- Status: DONE.
+
