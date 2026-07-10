@@ -38,18 +38,18 @@ export function WireframeBrain() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     // 4. Ambient and Point Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.04);
     scene.add(ambientLight);
 
-    const mainLight = new THREE.DirectionalLight(0xb7ff3c, 2.0);
+    const mainLight = new THREE.DirectionalLight(0xb7ff3c, 0.6);
     mainLight.position.set(5, 5, 5);
     scene.add(mainLight);
 
-    const blueLight = new THREE.DirectionalLight(0x00ffff, 1.2);
+    const blueLight = new THREE.DirectionalLight(0x00ffff, 0.4);
     blueLight.position.set(-5, -5, -5);
     scene.add(blueLight);
 
-    const greenPointLight = new THREE.PointLight(0xb7ff3c, 3.0, 12);
+    const greenPointLight = new THREE.PointLight(0xb7ff3c, 1.0, 12);
     greenPointLight.position.set(0, 0, 0); // Core glow
     scene.add(greenPointLight);
 
@@ -90,32 +90,44 @@ export function WireframeBrain() {
           if ((child as THREE.Mesh).isMesh) {
             const mesh = child as THREE.Mesh;
             
-            // Premium wireframe material with intense glow and specular shine
+            // Premium wireframe material with extremely subtle translucency and glow to prevent overexposure
             mesh.material = new THREE.MeshStandardMaterial({
               color: 0xb7ff3c,
               wireframe: true,
               transparent: true,
-              opacity: 0.32,
-              roughness: 0.05,
-              metalness: 0.95,
+              opacity: 0.03, // Set wireframe mesh material opacity to a very low value
+              roughness: 0.1,
+              metalness: 0.9,
               emissive: 0xb7ff3c,
-              emissiveIntensity: 1.8,
+              emissiveIntensity: 0.2, // Lower emissive intensity to prevent solid blob rendering
               blending: THREE.AdditiveBlending,
               side: THREE.DoubleSide,
             });
 
-            // Add particle point vertices overlay for high fidelity
-            const pointsGeometry = mesh.geometry.clone();
-            const pointsMaterial = new THREE.PointsMaterial({
-              color: 0xb7ff3c,
-              size: 0.024,
-              transparent: true,
-              opacity: 0.85,
-              sizeAttenuation: true,
-              blending: THREE.AdditiveBlending,
-            });
-            const vertexParticles = new THREE.Points(pointsGeometry, pointsMaterial);
-            mesh.add(vertexParticles);
+            // Decimate / Sample Particles: Do not clone the entire geometry for particles.
+            // Sample every 12th vertex for clean spacing and delicate sparse point cloud.
+            const positionAttr = mesh.geometry.attributes.position;
+            if (positionAttr) {
+              const count = positionAttr.count;
+              const positions = [];
+              const step = 12; // Sample every 12th vertex for clean spacing
+              for (let v = 0; v < count; v += step) {
+                positions.push(positionAttr.getX(v), positionAttr.getY(v), positionAttr.getZ(v));
+              }
+              const sparseGeo = new THREE.BufferGeometry();
+              sparseGeo.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+              
+              const pointsMaterial = new THREE.PointsMaterial({
+                color: 0xb7ff3c,
+                size: 0.016, // Delicate particle size
+                transparent: true,
+                opacity: 0.65, // Subtle, translucent opacity
+                sizeAttenuation: true,
+                blending: THREE.AdditiveBlending,
+              });
+              const vertexParticles = new THREE.Points(sparseGeo, pointsMaterial);
+              mesh.add(vertexParticles);
+            }
           }
         });
 
