@@ -123,7 +123,7 @@ export function MarketOpportunityNavigator() {
   return (
     <section
       data-market-opportunity="true"
-      className="rounded-shell border border-border-subtle bg-[linear-gradient(145deg,rgba(255,106,42,0.08),rgba(12,16,14,0.92)_34%,rgba(10,13,12,0.96))] p-5 md:p-7"
+      className="rounded-shell border border-border-subtle bg-[linear-gradient(145deg,rgba(183,255,60,0.08),rgba(12,16,14,0.92)_34%,rgba(10,13,12,0.96))] p-5 md:p-7"
     >
       <div className="grid gap-6 xl:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)]">
         <div className="space-y-5">

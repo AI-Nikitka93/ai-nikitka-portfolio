@@ -178,11 +178,6 @@ export default async function HomePage() {
           <ProofScanner />
         </div>
 
-        {/* SECTION 4.8: Market Opportunity Navigator */}
-        <section className="space-y-4">
-          <MarketOpportunityNavigator />
-        </section>
-
         {/* SECTION 5: 'МОЯ ЛАБОРАТОРИЯ' workflow flow diagram */}
         <section className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
@@ -237,6 +232,11 @@ export default async function HomePage() {
               <DossierCard key={entry.slug} slug={entry.slug} frontmatter={entry.frontmatter} />
             ))}
           </div>
+        </section>
+
+        {/* SECTION 6.5: Market Opportunity Navigator */}
+        <section className="space-y-4">
+          <MarketOpportunityNavigator />
         </section>
 
         {/* SECTION 7: Bottom 3 Columns (Thoughts, Active info, Alex Chen quote) */}
