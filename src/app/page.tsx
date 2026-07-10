@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   ArrowRight,
-  ArrowUpRight,
   Cpu,
   Terminal,
   Activity,
@@ -181,48 +180,64 @@ export default async function HomePage() {
           <div className="grid gap-6 xl:grid-cols-2">
             
             {/* Left Card: 35AWARDS Photo Award */}
-            <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between">
-              <div>
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
-                  ГЛАВНОЕ ДОСТИЖЕНИЕ
-                </p>
-                <h3 className="text-3xl font-extrabold tracking-tight text-foreground leading-tight">
-                  <span className="text-accent">TOP 35</span> INTERNATIONAL AI PHOTOGRAPHY AWARD
-                </h3>
-                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.16em] text-titanium mb-5">
-                  35AWARDS 2025
-                </p>
-                <p className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.78)]">
-                  Международная премия в области AI фотографии. Признание на мировом уровне: 9 работ в финале, ТОП-35 авторов в категории генеративных визуальных образов.
-                </p>
+            <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 grid sm:grid-cols-[1.2fr_0.8fr] gap-6 overflow-hidden relative">
+              <div className="flex flex-col justify-between h-full z-10">
+                <div>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
+                    ГЛАВНОЕ ДОСТИЖЕНИЕ
+                  </p>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
+                    <span className="text-accent">TOP 35</span> INTERNATIONAL AI PHOTOGRAPHY AWARD
+                  </h3>
+                  <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.16em] text-titanium mb-4">
+                    35AWARDS 2025
+                  </p>
+                  <p className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.78)]">
+                    Международная премия в области AI фотографии. Признание на мировом уровне: 9 работ в финале, ТОП-35 авторов в категории генеративных визуальных образов.
+                  </p>
 
-                {/* Categories ranked stats */}
-                <div className="grid grid-cols-3 gap-2 mt-5">
-                  {[
-                    { label: "Living Creatures", rank: "Top 35" },
-                    { label: "Landscape", rank: "Top 50" },
-                    { label: "Undocumented", rank: "Top 70" }
-                  ].map((cat, idx) => (
-                    <div key={idx} className="rounded border border-border-subtle/50 bg-[rgba(10,13,12,0.4)] p-3 text-center">
-                      <span className="block font-mono text-[8px] uppercase tracking-wider text-titanium mb-1">
-                        {cat.label}
-                      </span>
-                      <span className="font-mono text-xs font-semibold text-accent">
-                        {cat.rank}
-                      </span>
-                    </div>
-                  ))}
+                  {/* Categories ranked stats */}
+                  <div className="grid grid-cols-3 gap-2 mt-4">
+                    {[
+                      { label: "Living Creatures", rank: "Top 35" },
+                      { label: "Landscape", rank: "Top 50" },
+                      { label: "Undocumented", rank: "Top 70" }
+                    ].map((cat, idx) => (
+                      <div key={idx} className="rounded border border-border-subtle/50 bg-[rgba(10,13,12,0.4)] p-2 text-center">
+                        <span className="block font-mono text-[8px] uppercase tracking-wider text-titanium mb-1">
+                          {cat.label}
+                        </span>
+                        <span className="font-mono text-xs font-semibold text-accent">
+                          {cat.rank}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-border-subtle/30">
+                  <Link
+                    href="/awards-credentials"
+                    className="inline-flex min-h-9 items-center justify-center gap-1.5 rounded-panel bg-accent px-4 py-2 text-xs font-bold text-void-black hover:opacity-90 hover:scale-[1.02] transition-all shadow-[0_0_12px_rgba(183,255,60,0.2)]"
+                  >
+                    ПОДРОБНЕЕ
+                  </Link>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-border-subtle/30">
-                <Link
-                  href="/awards-credentials"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-accent hover:underline"
-                >
-                  ПОДРОБНЕЕ <ArrowUpRight size={14} />
-                </Link>
+              {/* Right Side: Collage Container */}
+              <div 
+                className="relative rounded-panel overflow-hidden border border-border-subtle bg-cover min-h-[200px] sm:min-h-full"
+                style={{
+                  backgroundImage: "url('/proof-assets/sig-01-35awards.jpg')",
+                  backgroundPosition: "50% 25%",
+                }}
+              >
+                {/* Overlay gradient mask to blend with the card background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none sm:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none" />
               </div>
+
             </div>
 
             {/* Right Card: Career Timeline Path */}

@@ -77,7 +77,7 @@ export function SiteHeader() {
                 aria-label={isEnglishRoute ? "Primary navigation" : "Основная навигация"}
                 className="flex items-center gap-1"
               >
-                {navigation.map((item, index) => {
+                {navigation.map((item) => {
                   const isActive =
                     pathname === item.href ||
                     (item.href !== "/" && pathname.startsWith(item.href));
@@ -87,16 +87,13 @@ export function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       aria-current={isActive ? "page" : undefined}
-                      className={`group relative inline-flex min-h-11 items-center rounded-panel px-3 py-2 text-sm transition-colors ${
+                      className={`group relative inline-flex min-h-11 items-center rounded-panel px-3 py-2 text-xs font-semibold uppercase tracking-wider transition-all duration-150 ${
                         isActive
-                          ? "text-foreground"
-                          : "text-[rgba(214,207,191,0.7)] hover:text-foreground"
+                          ? "text-accent text-shadow-glow"
+                          : "text-[rgba(214,207,191,0.76)] hover:text-foreground"
                       }`}
                     >
-                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-titanium">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="ml-2 whitespace-nowrap">{getRouteCopy(item).label}</span>
+                      <span className="whitespace-nowrap">{getRouteCopy(item).label}</span>
                       <span
                         className={`absolute inset-x-3 bottom-1 h-px origin-left transition-transform duration-300 ${
                           isActive
@@ -167,7 +164,7 @@ export function SiteHeader() {
               className="border-t border-border-subtle px-3 pb-3 pt-2 lg:hidden"
             >
               <div className="grid gap-2">
-                {mobileNavigation.map((item, index) => {
+                {mobileNavigation.map((item) => {
                   const isActive =
                     pathname === item.href ||
                     (item.href !== "/" && pathname.startsWith(item.href));
@@ -178,16 +175,13 @@ export function SiteHeader() {
                       href={item.href}
                       aria-current={isActive ? "page" : undefined}
                       onClick={() => setOpenPath(null)}
-                      className={`flex min-h-11 items-center rounded-panel border px-3 py-3 transition-colors ${
+                      className={`flex min-h-11 items-center rounded-panel border px-3 py-3 transition-colors text-xs font-semibold uppercase tracking-wider ${
                         isActive
-                          ? "border-accent bg-[rgba(183,255,60,0.07)] text-foreground"
+                          ? "border-accent bg-[rgba(183,255,60,0.07)] text-accent"
                           : "border-border-subtle text-[rgba(214,207,191,0.76)]"
                       }`}
                     >
-                      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-titanium">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="ml-2">{getRouteCopy(item).label}</span>
+                      <span>{getRouteCopy(item).label}</span>
                     </Link>
                   );
                 })}

@@ -32,21 +32,32 @@ function formatRussianDate(isoDate: string) {
 export const siteFreshnessLabel = formatRussianDate(siteConfig.lastUpdated);
 
 export const navigation = [
-  { href: "/", label: "Главная", shortLabel: "Главная" },
-  { href: "/career-path", label: "Путь", shortLabel: "Путь" },
-  { href: "/portfolio", label: "Работы", shortLabel: "Работы" },
-  { href: "/lab", label: "Проверка", shortLabel: "Проверка" },
-  { href: "/about", label: "О себе", shortLabel: "О себе" },
-  { href: "/blog", label: "Блог", shortLabel: "Блог" },
-  { href: "/services-calculator", label: "Калькулятор", shortLabel: "Проект" },
-  { href: "/ai-assistant", label: "На связи", shortLabel: "Чат-ИИ" },
+  { href: "/", label: "ГЛАВНАЯ", shortLabel: "ГЛАВНАЯ" },
+  { href: "/about", label: "ОБО МНЕ", shortLabel: "ОБО МНЕ" },
+  { href: "/portfolio", label: "ПРОЕКТЫ", shortLabel: "ПРОЕКТЫ" },
+  { href: "/lab", label: "ЛАБОРАТОРИЯ", shortLabel: "ЛАБОРАТОРИЯ" },
+  { href: "/blog", label: "СТАТЬИ", shortLabel: "СТАТЬИ" },
+  { href: "/awards-credentials", label: "НАГРАДЫ", shortLabel: "НАГРАДЫ" },
+  { href: "/links", label: "КОНТАКТЫ", shortLabel: "КОНТАКТЫ" },
 ] as const;
 
 export const utilityNavigation = [
-  { href: "/links", label: "Контакты", shortLabel: "Контакты" },
-  { href: "/awards-credentials", label: "Награды", shortLabel: "Награды" },
   { href: "/en", label: "English", shortLabel: "EN" },
   { href: "/privacy", label: "Приватность", shortLabel: "Privacy" },
 ] as const;
 
-export const staticRoutes = [...navigation, ...utilityNavigation].map((item) => item.href);
+export const staticRoutes = [
+  "/",
+  "/career-path",
+  "/portfolio",
+  "/lab",
+  "/about",
+  "/blog",
+  "/services-calculator",
+  "/ai-assistant",
+  "/links",
+  "/awards-credentials",
+  "/en",
+  "/privacy",
+];
+
