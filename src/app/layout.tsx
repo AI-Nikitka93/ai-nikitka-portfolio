@@ -4,7 +4,7 @@ import { IBM_Plex_Mono, Space_Grotesk, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SkipLink } from "@/components/skip-link";
-import { AvailabilityStatus } from "@/components/availability-status";
+import { FloatingChat } from "@/components/floating-chat";
 import { absoluteUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
@@ -125,7 +125,7 @@ export default function RootLayout({
           <SiteHeader />
           {children}
           <SiteFooter />
-          <AvailabilityStatus mode="floating" />
+          <FloatingChat />
         </div>
       </body>
     </html>
