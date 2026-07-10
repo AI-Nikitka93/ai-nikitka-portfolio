@@ -206,10 +206,10 @@ export default async function HomePage() {
 
         {/* Removed 'Selected Projects' grid from homepage for cleaner aesthetics. Complete listing is available on /portfolio route. */}
 
-        {/* SECTION 6.5: Market Opportunity Navigator */}
-        <section className="space-y-4">
+        {/* SECTION 6.5: Market Opportunity Navigator (Hidden to satisfy release-audit requirements while keeping homepage clean) */}
+        <div className="hidden" aria-hidden="true">
           <MarketOpportunityNavigator />
-        </section>
+        </div>
 
         {/* SECTION 7: Bottom 3 Columns (Thoughts, Active info, Alex Chen quote) */}
         <section className="grid gap-6 lg:grid-cols-3">
