@@ -190,7 +190,7 @@ export default function AboutPage() {
             <div className="mt-4 grid gap-3">
               {[
                 ["Формат", "коротко и по делу"],
-                ["Телеметрия", "53.9000° N / 27.5667° E"],
+                ["Локация", "Минск, Беларусь"],
                 ["Режим", "Агентная верификация"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-panel border border-border-subtle bg-surface-muted/40 px-4 py-3 relative">
