@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Quote } from "lucide-react";
 
 type AwardSlide = {
@@ -183,17 +184,24 @@ export function AchievementsTimelineSection() {
           </div>
 
           {/* Right Side: Image / Collage for Active Slide */}
-          <div className="relative rounded-panel overflow-hidden border border-border-subtle min-h-[180px] sm:min-h-full transition-all duration-500">
+          <div className="relative rounded-panel overflow-hidden border border-border-subtle min-h-[180px] sm:min-h-full transition-all duration-500 bg-[rgba(10,13,12,0.4)] flex items-center justify-center p-3">
             <div 
-              className="absolute inset-0 bg-cover bg-center transition-all duration-500 scale-[1.01]"
+              className="absolute inset-0 bg-cover bg-center opacity-12 blur-md pointer-events-none transition-all duration-500 scale-[1.01]"
               style={{
                 backgroundImage: `url('${currentAward.image}')`,
-                backgroundPosition: "50% 25%",
               }}
             />
             {/* Overlay gradient mask to blend with the card background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none sm:block hidden" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none sm:block hidden z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none z-10" />
+            
+            <Image 
+              src={currentAward.image}
+              alt={currentAward.title}
+              width={400}
+              height={300}
+              className="relative z-0 max-h-[160px] sm:max-h-[260px] w-auto object-contain rounded drop-shadow-[0_12px_36px_rgba(0,0,0,0.8)] transition-all duration-500"
+            />
           </div>
 
         </div>
@@ -217,13 +225,13 @@ export function AchievementsTimelineSection() {
                 
                 <div className="grid grid-cols-7 gap-1 relative z-10">
                   {[
-                    { year: "2020", label1: "Первые AI", label2: "эксперименты" },
-                    { year: "2021", label1: "Запуск", label2: "LabStory" },
-                    { year: "2022", label1: "Победы в", label2: "конкурсах" },
-                    { year: "2023", label1: "Исследования", label2: "и обучение" },
-                    { year: "2024", label1: "AI продукты", label2: "и внедрения" },
-                    { year: "2025", label1: "Международное", label2: "признание" },
-                    { year: "2026", label1: "Сейчас:", label2: "Создание будущего", isCurrent: true }
+                    { year: "2020", label1: "Электрик 5 разряда", label2: "Первые ИИ-опыты" },
+                    { year: "2021", label1: "Смена сферы", label2: "Переход в AI R&D" },
+                    { year: "2022", label1: "Запуск LabStory", label2: "Нейровидео и арт" },
+                    { year: "2023", label1: "Победы в конкурсах", label2: "R&D пайплайнов" },
+                    { year: "2024", label1: "AI-агенты", label2: "Автоматизация" },
+                    { year: "2025", label1: "Мировые награды", label2: "ТОП-35 35AWARDS" },
+                    { year: "2026", label1: "Сейчас:", label2: "AI Core Architect", isCurrent: true }
                   ].map((node, idx) => (
                     <div key={idx} className="flex flex-col items-center text-center relative group">
                       
@@ -279,7 +287,7 @@ export function AchievementsTimelineSection() {
         </div>
         
         <blockquote className="relative z-10 text-sm sm:text-base leading-7 text-[rgba(214,207,191,0.85)] max-w-4xl italic pl-6 border-l-2 border-accent/40">
-          «Технологии — это инструмент. Важно то, как мы применяем их, чтобы решать реальные инженерные задачи и улучшать качество жизни людей.»
+          «Генерация медиафайлов — это лишь эффектная демонстрация. Настоящая сила ИИ ещё не раскрыта. Я верю, что его главная миссия — спасать жизни и побеждать болезни. Моя долгосрочная цель — внести вклад в разработку ИИ-архитектур для поиска лекарства от онкологии. Технологии должны служить человечеству на самом глубоком уровне.»
         </blockquote>
         
         <div className="mt-4 pl-6 text-right font-mono text-[9px] uppercase tracking-wider text-titanium">
