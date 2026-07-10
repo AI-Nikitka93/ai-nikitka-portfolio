@@ -7,7 +7,6 @@ import {
   Activity,
   Award,
   Sparkles,
-  Quote,
 } from "lucide-react";
 import { JsonLdScript } from "@/components/json-ld-script";
 import { WireframeBrain } from "@/components/wireframe-brain";
@@ -301,33 +300,41 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Column 3: Testimony */}
+          {/* Column 3: Contact Channels */}
           <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-5 md:p-6 flex flex-col justify-between relative overflow-hidden">
-            <div className="absolute top-3 right-3 text-accent/5 pointer-events-none">
-              <Quote size={40} />
-            </div>
-
-            <div className="space-y-4 relative z-10">
+            <div className="space-y-4">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
-                ОТЗЫВЫ И СОТРУДНИЧЕСТВО
+                СВЯЗЬ И КОНТАКТЫ
               </p>
 
-              <blockquote className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.85)] italic border-l border-accent/40 pl-3">
-                «Никита — исключительный специалист, который сочетает глубокие технические знания с креативным подходом к решению задач.»
-              </blockquote>
+              <p className="text-xs leading-5 text-[rgba(214,207,191,0.78)]">
+                Прямая линия для предложений, разбора ваших задач и бриф-запросов. Пишите в удобный канал:
+              </p>
 
-              <div className="flex items-center gap-2.5 pt-2">
-                <div className="h-8 w-8 rounded-full border border-accent bg-[rgba(10,13,12,0.78)] flex items-center justify-center font-mono text-xs font-bold text-accent select-none">
-                  AC
-                </div>
-                <div>
-                  <h4 className="text-xs font-semibold text-foreground leading-none">
-                    Alex Chen
-                  </h4>
-                  <span className="block mt-1 font-mono text-[8px] text-titanium uppercase tracking-wider leading-none">
-                    AI Research Director @ Google
-                  </span>
-                </div>
+              <div className="space-y-2 pt-2">
+                {[
+                  { label: "Telegram-канал", val: "t.me/digital_ai_art", href: "https://t.me/digital_ai_art" },
+                  { label: "Email-линия", val: "nikitka9318@gmail.com", href: "mailto:nikitka9318@gmail.com" },
+                  { label: "LinkedIn профиль", val: "linkedin.com/in/kizevichnik", href: "https://www.linkedin.com/in/kizevichnik/" }
+                ].map((item, idx) => (
+                  <a
+                    key={idx}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="flex items-center justify-between rounded border border-border-subtle bg-[rgba(10,13,12,0.58)] p-2.5 hover:border-accent/40 transition-colors"
+                  >
+                    <div>
+                      <span className="font-mono text-[8px] uppercase tracking-wide text-titanium block leading-none">
+                        {item.label}
+                      </span>
+                      <span className="text-[11px] font-semibold text-foreground block mt-1 leading-none font-mono">
+                        {item.val}
+                      </span>
+                    </div>
+                    <ArrowRight size={10} className="text-titanium hover:text-accent transition-colors" />
+                  </a>
+                ))}
               </div>
             </div>
 
@@ -336,7 +343,7 @@ export default async function HomePage() {
                 href="/links" 
                 className="font-mono text-[10px] uppercase tracking-wider text-accent hover:underline flex items-center gap-1.5"
               >
-                ВСЕ ОТЗЫВЫ <ArrowRight size={10} />
+                ВСЕ КОНТАКТЫ <ArrowRight size={10} />
               </Link>
             </div>
           </div>
