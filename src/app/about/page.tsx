@@ -283,33 +283,54 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Философия проекта */}
-          <div className="signal-frame signal-grid-panel interactive-surface rounded-shell p-6 md:p-7 relative">
+          {/* Философия и Манифест */}
+          <div className="signal-frame signal-grid-panel interactive-surface rounded-shell p-6 md:p-7 relative flex flex-col justify-between">
             {/* Подложка сетки scanline */}
             <div className="card-scanline-container">
               <div className="card-scanline-grid" />
               <div className="card-scanline-line" />
             </div>
             
-            <div className="flex items-center gap-2">
-              <Cpu size={14} className="text-accent" />
-              <p className="signal-label text-accent">Философия и инженерный подход</p>
+            <div>
+              <div className="flex items-center gap-2 border-b border-border-subtle pb-4">
+                <Cpu size={14} className="text-accent" />
+                <p className="signal-label text-accent">Философия и инженерный подход</p>
+              </div>
+              
+              <h2 className="mt-4 text-xl sm:text-2xl lg:text-[1.75rem] font-semibold tracking-normal text-foreground">
+                Манифест автора: философия и принципы
+              </h2>
+              
+              <p className="mt-4 text-sm leading-8 text-[rgba(214,207,191,0.82)]">
+                Я не утверждаю, что создаю безупречные цифровые продукты. Моя философия проще: я ежедневно пытаюсь создавать, исследовать и фиксировать этот процесс. Мой рабочий день проходит за экраном ПК в непрерывных тестах когнитивных систем, графических моделей и генераторов звука.
+              </p>
+              
+              <p className="mt-4 text-sm leading-8 text-[rgba(214,207,191,0.78)]">
+                Но генерация картинок и видео — это лишь малая часть. Возможности ИИ огромны, и моя главная, глубинная мечта — применить эти технологии там, где они могут спасать жизни. В 2023 году мой отец ушел из жизни из-за рака легких, и видеть, как стремительно развиваются нейросети, когда помочь самому близкому человеку уже невозможно — это тяжелый опыт.
+              </p>
             </div>
-            <h2 className="mt-4 text-xl sm:text-2xl lg:text-[1.75rem] font-semibold tracking-normal text-foreground">
-              Манифест автора: философия и принципы
-            </h2>
-            <p className="mt-4 text-sm leading-8 text-[rgba(214,207,191,0.82)]">
-              Я не утверждаю, что создаю безупречные цифровые продукты. Моя философия проще: я ежедневно пытаюсь создавать, исследовать и фиксировать этот процесс. Мой рабочий день проходит за экраном ПК в непрерывных тестах когнитивных систем, графических моделей и генераторов звука.
-            </p>
-            <p className="mt-4 text-sm leading-8 text-[rgba(214,207,191,0.78)]">
-              Моя база — это 7 лет практической работы с электрооборудованием до и выше 1000В. Эта суровая школа навсегда отучила меня от веры в «магию» или «идеальную работу с первого запуска». Системы всегда сбоят, а ИИ — галлюцинирует.
-            </p>
-            <p className="mt-4 text-sm leading-8 text-[rgba(214,207,191,0.78)]">
-              С ноября 2022 года я целенаправленно изучаю эти сбои и ограничения. Через промпт-инжиниринг, вайб-кодинг и сотни итераций я собираю рабочие интерфейсы, побеждаю в конкурсах нейросетевого искусства (КИНОМАТИК, Helix, 35AWARDS) и доказываю, что для решения сложных задач важен не заученный синтаксис, а понимание логики работы системы. Дипломы или сертификаты здесь не так важны — ценны только реальный опыт, тернистый путь и непрерывная практика.
-            </p>
-            <p className="mt-4 text-sm leading-8 text-[rgba(214,207,191,0.78)] border-t border-border-subtle/30 pt-4 italic">
-              Но генерация картинок и видео — это лишь малая часть. Возможности ИИ огромны, и моя главная, глубинная мечта — применить эти технологии там, где они могут спасать жизни. В 2023 году мой отец ушел из жизни из-за рака легких, и видеть, как стремительно развиваются нейросети, когда помочь самому близкому человеку уже невозможно — это тяжелый опыт. Я бы искренне хотел работать (даже на добровольных началах, бесплатно) в команде или стартапе, который занимается поиском лекарств от рака и борьбой со сложными заболеваниями с помощью ИИ. Я хочу направить все свои знания R&D и автоматизации, чтобы принести реальную пользу человечеству в борьбе с его самыми тяжелыми недугами.
-            </p>
+
+            {/* Вектор ИИ-исследований в виде формуляра */}
+            <div className="mt-6 pt-4 border-t border-border-subtle/40">
+              <p className="font-mono text-[10px] tracking-[0.2em] text-accent uppercase mb-3">R&D.VECTOR // MEDICAL_AI</p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  ["target.focus", "Биомедицина / Поиск онко-лекарств"],
+                  ["target.coop", "Сотрудничество (включая Pro-Bono)"],
+                  ["target.driver", "Памяти отца (ушел в 2023 г. от рака)"],
+                  ["target.stack", "Агентные сети / Парсинг / R&D-пайплайны"]
+                ].map(([key, value]) => (
+                  <div key={key} className="rounded-panel border border-border-subtle bg-surface-muted/10 p-3 relative">
+                    <span className="font-mono text-[8px] tracking-[0.16em] text-titanium uppercase block">
+                      {key}
+                    </span>
+                    <span className="mt-1 text-xs leading-5 text-[rgba(214,207,191,0.85)] block">
+                      {value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </ScrollReveal>
