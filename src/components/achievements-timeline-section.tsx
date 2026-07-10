@@ -232,13 +232,13 @@ export function AchievementsTimelineSection() {
                 
                 <div className="grid grid-cols-7 gap-1 relative z-10">
                   {[
-                    { year: "2020", label1: "Электрик 5 р.", label2: "ИИ-тесты" },
-                    { year: "2021", label1: "Смена сферы", label2: "Переход в AI" },
-                    { year: "2022", label1: "LabStory", label2: "Нейроарт" },
-                    { year: "2023", label1: "Обучение", label2: "R&D видео" },
-                    { year: "2024", label1: "AI-агенты", label2: "Автоматизация" },
-                    { year: "2025", label1: "35AWARDS", label2: "ТОП-35 в мире" },
-                    { year: "2026", label1: "Сейчас:", label2: "AI Architect", isCurrent: true }
+                    { year: "2020", label1: "Электрик 5 р.", label2: "Пром. объекты" },
+                    { year: "2021", label1: "Электромонтаж", label2: "Минскводоканал" },
+                    { year: "2022", label1: "Знакомство с ИИ", label2: "Ноябрь: ChatGPT" },
+                    { year: "2023", label1: "Промптинг", label2: "Разбор на винтики" },
+                    { year: "2024", label1: "Нейрокартинки", label2: "Плотная работа" },
+                    { year: "2025", label1: "Видеогенерация", label2: "Первые победы" },
+                    { year: "2026", label1: "Сейчас:", label2: "Вайбкодинг & R&D", isCurrent: true }
                   ].map((node, idx) => (
                     <div key={idx} className="flex flex-col items-center text-center relative group">
                       
