@@ -41,29 +41,67 @@ const fallbacks = [
   }
 ];
 
+function handleStreamResponse(response: Response) {
+  const encoder = new TextEncoder();
+  const decoder = new TextDecoder();
+  const reader = response.body?.getReader();
+
+  if (!reader) {
+    throw new Error("Response body is not readable");
+  }
+
+  const stream = new ReadableStream({
+    async start(controller) {
+      let buffer = "";
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split("\n");
+          buffer = lines.pop() || "";
+
+          for (const line of lines) {
+            const cleaned = line.trim();
+            if (!cleaned || cleaned === "data: [DONE]") continue;
+
+            if (cleaned.startsWith("data: ")) {
+              try {
+                const data = JSON.parse(cleaned.substring(6));
+                const token = data.choices?.[0]?.delta?.content;
+                if (token) {
+                  controller.enqueue(encoder.encode(token));
+                }
+              } catch {
+                // Ignore JSON parse errors on partial chunks
+              }
+            }
+          }
+        }
+        controller.close();
+      } catch (err) {
+        controller.error(err);
+      }
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/event-stream; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      Connection: "keep-alive",
+    },
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { message, history = [] } = await req.json();
 
     const groqKey = process.env.GROQ_API_KEY;
     const openRouterKey = process.env.OPENROUTER_API_KEY;
-    const apiKey = groqKey || openRouterKey;
 
-    if (!apiKey) {
-      // Rule-based fallback if no API key is present
-      const query = message.toLowerCase();
-      const matched = fallbacks.find((f) =>
-        f.keywords.some((k) => query.includes(k))
-      );
-
-      const text = matched
-        ? matched.answer
-        : "Я цифровой клон Никиты. Настоящий Никита сейчас, скорее всего, скармливает очередную пачку логов в LLM. Я могу рассказать тебе о его пути электромонтера, о том, как он выжал 56μs на хакатоне NVIDIA без знания C++, о победе в Helix LabStory или отправить тебя в калькулятор услуг (/services-calculator) для оценки бюджета.";
-
-      return NextResponse.json({ text });
-    }
-
-    // Call LLM with streaming enabled
     const messages = [
       { role: "system", content: systemPrompt },
       ...history.map((h: { role: string; content: string }) => ({
@@ -73,97 +111,73 @@ export async function POST(req: NextRequest) {
       { role: "user", content: message },
     ];
 
-    const isGroq = Boolean(groqKey);
-    const fetchUrl = isGroq
-      ? "https://api.groq.com/openai/v1/chat/completions"
-      : "https://openrouter.ai/api/v1/chat/completions";
+    // Attempt 1: Groq
+    if (groqKey) {
+      try {
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${groqKey}`,
+          },
+          body: JSON.stringify({
+            model: "llama-3.3-70b-versatile",
+            messages,
+            temperature: 0.7,
+            stream: true,
+          }),
+        });
 
-    const fetchHeaders: Record<string, string> = {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    };
-    if (!isGroq) {
-      fetchHeaders["HTTP-Referer"] = "https://kizevich.com";
-      fetchHeaders["X-Title"] = "AI_Nikitka93 Portfolio Assistant";
-    }
-
-    const response = await fetch(fetchUrl, {
-      method: "POST",
-      headers: fetchHeaders,
-      body: JSON.stringify({
-        model: isGroq ? "llama-3.3-70b-versatile" : "meta-llama/llama-3.3-70b-instruct:free",
-        messages,
-        temperature: 0.7,
-        stream: true,
-      }),
-    });
-
-    if (!response.ok) {
-      console.warn(`LLM API responded with status ${response.status}. Degrading to local fallback.`);
-      const query = message.toLowerCase();
-      const matched = fallbacks.find((f) =>
-        f.keywords.some((k) => query.includes(k))
-      );
-
-      const text = matched
-        ? matched.answer
-        : "Я цифровой клон Никиты. Мое нейросетевое ядро сейчас перегружено (ошибка API), но я все еще могу рассказать тебе о его пути электромонтера, о том, как он выжал 56μs на хакатоне NVIDIA без знания C++, о победе в Helix LabStory или отправить в калькулятор услуг (/services-calculator).";
-
-      return NextResponse.json({ text });
-    }
-
-    // Standard Next.js Route Handler Streaming
-    const encoder = new TextEncoder();
-    const decoder = new TextDecoder();
-    const reader = response.body?.getReader();
-
-    if (!reader) {
-      throw new Error("Response body is not readable");
-    }
-
-    const stream = new ReadableStream({
-      async start(controller) {
-        let buffer = "";
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-
-            buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split("\n");
-            buffer = lines.pop() || "";
-
-            for (const line of lines) {
-              const cleaned = line.trim();
-              if (!cleaned || cleaned === "data: [DONE]") continue;
-
-              if (cleaned.startsWith("data: ")) {
-                try {
-                  const data = JSON.parse(cleaned.substring(6));
-                  const token = data.choices?.[0]?.delta?.content;
-                  if (token) {
-                    controller.enqueue(encoder.encode(token));
-                  }
-                } catch {
-                  // Ignore JSON parse errors on partial chunks
-                }
-              }
-            }
-          }
-          controller.close();
-        } catch (err) {
-          controller.error(err);
+        if (response.ok) {
+          return handleStreamResponse(response);
         }
-      },
-    });
+        console.warn(`Groq API failed with status ${response.status}. Trying OpenRouter...`);
+      } catch (err) {
+        console.warn("Groq fetch error:", err);
+      }
+    }
 
-    return new Response(stream, {
-      headers: {
-        "Content-Type": "text/event-stream; charset=utf-8",
-        "Cache-Control": "no-cache, no-transform",
-        Connection: "keep-alive",
-      },
-    });
+    // Attempt 2: OpenRouter
+    if (openRouterKey) {
+      try {
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${openRouterKey}`,
+            "HTTP-Referer": "https://kizevich.com",
+            "X-Title": "AI_Nikitka93 Portfolio Assistant",
+          },
+          body: JSON.stringify({
+            model: "meta-llama/llama-3.3-70b-instruct:free",
+            messages,
+            temperature: 0.7,
+            stream: true,
+          }),
+        });
+
+        if (response.ok) {
+          return handleStreamResponse(response);
+        }
+        console.warn(`OpenRouter API failed with status ${response.status}. Degrading to local fallback...`);
+      } catch (err) {
+        console.warn("OpenRouter fetch error:", err);
+      }
+    }
+
+    // Attempt 3: Local Fallback
+    console.warn("All LLM APIs failed. Degrading to local fallback.");
+    const query = message.toLowerCase();
+    const matched = fallbacks.find((f) =>
+      f.keywords.some((k) => query.includes(k))
+    );
+
+    const text = matched
+      ? matched.answer
+      : "Я цифровой клон Никиты. Мое нейросетевое ядро сейчас перегружено (ошибка API), но я все еще могу рассказать тебе о его пути электромонтера, о том, как он выжал 56μs на хакатоне NVIDIA без знания C++, о победе в Helix LabStory или отправить в калькулятор услуг (/services-calculator).";
+
+    return NextResponse.json({ text });
+
   } catch (error) {
     console.error("Assistant API Error:", error);
     const message = error instanceof Error ? error.message : "Internal server error";
