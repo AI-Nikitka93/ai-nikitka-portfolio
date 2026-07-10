@@ -170,18 +170,18 @@ export default async function HomePage() {
           <AvailabilityStatus mode="embedded" />
         </section>
 
-        {/* SECTION 3.5: Signature Proof Scanner */}
+        {/* SECTION 4: 'ГЛАВНОЕ ДОСТИЖЕНИЕ' & 'ПУТЬ РАЗВИТИЯ' (Interactive slider & horizontal timeline) */}
+        <AchievementsTimelineSection />
+
+        {/* SECTION 4.5: Signature Proof Scanner */}
         <section className="space-y-4">
           <ProofScanner />
         </section>
 
-        {/* SECTION 3.8: Market Opportunity Navigator */}
+        {/* SECTION 4.8: Market Opportunity Navigator */}
         <section className="space-y-4">
           <MarketOpportunityNavigator />
         </section>
-
-        {/* SECTION 4: 'ГЛАВНОЕ ДОСТИЖЕНИЕ' & 'ПУТЬ РАЗВИТИЯ' (Interactive slider & horizontal timeline) */}
-        <AchievementsTimelineSection />
 
         {/* SECTION 5: 'МОЯ ЛАБОРАТОРИЯ' workflow flow diagram */}
         <section className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8">
