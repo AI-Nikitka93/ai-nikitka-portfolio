@@ -28,13 +28,12 @@ export function WireframeBrain() {
   }, []);
 
   return (
-    <div className="relative w-full h-[260px] flex items-center justify-center overflow-hidden border border-border-subtle bg-[rgba(10,13,12,0.48)] rounded-panel">
-      {/* 1. Grid Background & Technical Overlay */}
-      <div className="absolute inset-0 signal-grid-panel opacity-[0.14] pointer-events-none" />
+    <div className="relative w-full h-[280px] flex items-center justify-center overflow-hidden">
+      {/* 1. Technical Overlay */}
       <div className="absolute inset-0 pointer-events-none z-10 opacity-[0.06] crt-overlay mix-blend-overlay" />
 
       {/* 2. Cybernetic radar rings */}
-      <div className="absolute w-[220px] h-[220px] rounded-full border border-accent/10 animate-[radar-pulse_6s_linear_infinite]" />
+      <div className="absolute w-[220px] h-[220px] rounded-full border border-accent/15 animate-[radar-pulse_6s_linear_infinite]" />
       <div className="absolute w-[140px] h-[140px] rounded-full border border-accent/5" />
 
       {/* 3. Wireframe 3D Brain Visual */}
@@ -85,14 +84,13 @@ export function WireframeBrain() {
       {/* 4. Scanning scanner line overlay & HUD tags */}
       <div className="absolute inset-x-0 h-[2px] bg-[linear-gradient(90deg,transparent,var(--color-accent),transparent)] opacity-60 pointer-events-none z-10 animate-[proof-scan_4000ms_ease-in-out_infinite]" />
       
-      <div className="absolute bottom-3 left-4 flex items-center gap-1.5 pointer-events-none">
-        <span className="h-1.5 w-1.5 rounded-full bg-accent animate-ping" />
-        <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-accent font-semibold">
-          AI ENGINE ACTIVATED
+      <div className="absolute bottom-1 inset-x-0 flex items-center justify-center gap-1.5 pointer-events-none">
+        <span className="font-mono text-[9px] uppercase tracking-[0.24em] text-accent font-semibold">
+          ➔ AI ENGINE ACTIVATED ➔
         </span>
       </div>
 
-      <div className="absolute top-3 right-4 font-mono text-[8px] tracking-wider text-titanium pointer-events-none">
+      <div className="absolute top-3 right-4 font-mono text-[8px] tracking-wider text-titanium/55 pointer-events-none">
         GRID_UNIT: [32-X]
       </div>
     </div>

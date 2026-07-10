@@ -12,7 +12,7 @@ import {
 import { DossierCard } from "@/components/dossier-card";
 import { JsonLdScript } from "@/components/json-ld-script";
 import { WireframeBrain } from "@/components/wireframe-brain";
-import { MarqueeTicker } from "@/components/marquee-ticker";
+import { AvailabilityStatus } from "@/components/availability-status";
 import { LaboratoryWorkflow } from "@/components/laboratory-workflow";
 import { ProofScanner } from "@/components/proof-scanner";
 import { MarketOpportunityNavigator } from "@/components/market-opportunity-navigator";
@@ -49,14 +49,14 @@ export default async function HomePage() {
         tabIndex={-1}
         className="mx-auto flex w-full max-w-[1440px] flex-1 flex-col gap-12 sm:gap-16 lg:gap-20 px-4 pb-20 pt-28 sm:px-6 lg:px-10 lg:pt-32"
       >
-        {/* SECTION 2: Hero Section (Left Copy, Right Stats Grid + Glowing SVG Brain) */}
+        {/* SECTION 2: Hero Section (Left Copy, Center Brain, Right Stats) */}
         <section 
-          className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr] xl:items-stretch" 
+          className="grid gap-6 lg:grid-cols-12 lg:items-stretch" 
           data-proof-hero="true"
         >
           
-          {/* Left Column: Headline copy & CTA */}
-          <div className="rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.08),rgba(18,24,22,0.88)_43%,rgba(10,13,12,0.96))] p-6 md:p-8 flex flex-col justify-between">
+          {/* Left Column: Headline copy & CTA (5 cols) */}
+          <div className="lg:col-span-5 rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.08),rgba(18,24,22,0.88)_43%,rgba(10,13,12,0.96))] p-6 md:p-8 flex flex-col justify-between min-h-[460px]">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-ping" />
@@ -72,7 +72,7 @@ export default async function HomePage() {
                 </span>
               </h1>
               
-              <p className="max-w-3xl text-sm leading-7 text-[rgba(214,207,191,0.85)] md:text-base md:leading-8">
+              <p className="max-w-3xl text-sm leading-7 text-[rgba(214,207,191,0.85)]">
                 Исследую. Проектирую. Внедряю. AI-продукты, автоматизацию и интеллектуальные мультиагентные системы, которые решают реальные задачи и меняют индустрию.
               </p>
 
@@ -119,15 +119,20 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Achievements & Glowing Wireframe Brain */}
-          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between gap-6">
+          {/* Middle Column: Glowing Wireframe Brain (4 cols) */}
+          <div className="lg:col-span-4 flex flex-col items-center justify-center min-h-[320px] lg:min-h-full">
+            <WireframeBrain />
+          </div>
+
+          {/* Right Column: Achievements (3 cols) */}
+          <div className="lg:col-span-3 rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between min-h-[460px]">
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-6">
                 ДОСТИЖЕНИЯ В ЦИФРАХ
               </p>
               
-              {/* 4-Column Stats Grid */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* Vertically stacked stats to match mockup */}
+              <div className="space-y-6">
                 {[
                   { value: "300+", label: "AI проектов реализовано", icon: Sparkles },
                   { value: "58", label: "Исследований и экспериментов", icon: Activity },
@@ -138,31 +143,30 @@ export default async function HomePage() {
                   return (
                     <div 
                       key={index} 
-                      className="border border-border-subtle/50 bg-[rgba(10,13,12,0.28)] rounded-panel p-4 flex items-center justify-between gap-3 hover:border-accent/30 transition-colors"
+                      className="flex items-center justify-between gap-3 group border-b border-border-subtle/20 pb-4 last:border-0 last:pb-0"
                     >
                       <div>
-                        <span className="font-mono text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+                        <span className="font-mono text-2xl font-bold tracking-tight text-foreground group-hover:text-accent transition-colors">
                           {stat.value}
                         </span>
                         <span className="block mt-1 text-[10px] leading-4 text-titanium">
                           {stat.label}
                         </span>
                       </div>
-                      <Icon size={18} className="text-accent flex-shrink-0" />
+                      <div className="h-8 w-8 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.4)] flex items-center justify-center text-accent group-hover:border-accent/40 transition-colors">
+                        <Icon size={14} />
+                      </div>
                     </div>
                   );
                 })}
               </div>
             </div>
-
-            {/* Glowing Wireframe Brain Visual */}
-            <WireframeBrain />
           </div>
         </section>
 
-        {/* SECTION 3: Infinite Marquee Ticker */}
-        <section className="-mx-4 sm:-mx-6 lg:-mx-10 my-2">
-          <MarqueeTicker />
+        {/* SECTION 3: Availability Status Marquee */}
+        <section className="my-2">
+          <AvailabilityStatus mode="embedded" />
         </section>
 
         {/* SECTION 3.5: Signature Proof Scanner */}
