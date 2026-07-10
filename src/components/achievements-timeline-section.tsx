@@ -115,16 +115,17 @@ export function AchievementsTimelineSection() {
 
   return (
     <section className="space-y-6">
-      <div className="grid gap-6 xl:grid-cols-2">
+      {/* 2-Column Grid Layout: Slider on Left, stacked Path & Quote on Right (matching design mockup) */}
+      <div className="grid gap-6 lg:grid-cols-[1.14fr_0.86fr] items-stretch">
         
-        {/* Left Card: Dynamic Awards Slider */}
+        {/* Left Column Card: Dynamic Awards Slider (Full Height) */}
         <div 
-          className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 grid sm:grid-cols-[1.22fr_0.78fr] gap-6 overflow-hidden relative min-h-[380px]"
+          className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 grid sm:grid-cols-[1.18fr_0.82fr] gap-6 overflow-hidden relative min-h-[420px]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className="flex flex-col justify-between h-full z-10">
-            <div className="space-y-3">
+            <div className="space-y-3.5">
               <div className="flex items-center justify-between">
                 <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent">
                   ГЛАВНЫЕ ДОСТИЖЕНИЯ
@@ -135,7 +136,7 @@ export function AchievementsTimelineSection() {
                       key={idx}
                       onClick={() => setActiveSlide(idx)}
                       className={`h-1.5 rounded-full transition-all duration-300 ${
-                        idx === activeSlide ? "w-4 bg-accent" : "w-1.5 bg-border-subtle hover:bg-accent/40"
+                        idx === activeSlide ? "w-4 bg-accent" : "w-1.5 bg-border-subtle/50 hover:bg-accent/40"
                       }`}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
@@ -151,7 +152,7 @@ export function AchievementsTimelineSection() {
                 {currentAward.titleAccent} {"//"} {currentAward.year}
               </p>
               
-              <p className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.78)] min-h-[72px] transition-all duration-300">
+              <p className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.82)] min-h-[72px] transition-all duration-300">
                 {currentAward.description}
               </p>
 
@@ -183,39 +184,45 @@ export function AchievementsTimelineSection() {
             </div>
           </div>
 
-          {/* Right Side: Image / Collage for Active Slide */}
-          <div className="relative rounded-panel overflow-hidden border border-border-subtle min-h-[180px] sm:min-h-full transition-all duration-500 bg-[rgba(10,13,12,0.4)] flex items-center justify-center p-3">
+          {/* Right Side of the Left Card: Large, fully visible Certificate/Poster Image */}
+          <div className="relative rounded-panel overflow-hidden border border-border-subtle min-h-[220px] sm:min-h-full transition-all duration-500 bg-[rgba(10,13,12,0.45)] flex items-center justify-center p-3 select-none">
             <div 
-              className="absolute inset-0 bg-cover bg-center opacity-12 blur-md pointer-events-none transition-all duration-500 scale-[1.01]"
+              className="absolute inset-0 bg-cover bg-center opacity-15 blur-lg pointer-events-none transition-all duration-500 scale-[1.05]"
               style={{
                 backgroundImage: `url('${currentAward.image}')`,
               }}
             />
-            {/* Overlay gradient mask to blend with the card background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none sm:block hidden z-10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,24,22,0.96)] via-transparent to-transparent pointer-events-none z-10" />
+            {/* Overlay gradient masks to blend with the card edges */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[rgba(18,24,22,0.92)] via-transparent to-transparent pointer-events-none sm:block hidden z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,24,22,0.92)] via-transparent to-transparent pointer-events-none z-10" />
             
-            <Image 
-              src={currentAward.image}
-              alt={currentAward.title}
-              width={400}
-              height={300}
-              className="relative z-0 max-h-[160px] sm:max-h-[260px] w-auto object-contain rounded drop-shadow-[0_12px_36px_rgba(0,0,0,0.8)] transition-all duration-500"
-            />
+            {/* Actual contain image for full readability */}
+            <div className="relative w-full h-full min-h-[200px] sm:min-h-[280px] z-0 flex items-center justify-center">
+              <Image 
+                src={currentAward.image}
+                alt={currentAward.title}
+                fill
+                sizes="(max-width: 640px) 100vw, 40vw"
+                className="object-contain rounded drop-shadow-[0_16px_40px_rgba(0,0,0,0.9)] transition-all duration-500 hover:scale-[1.03]"
+                priority
+              />
+            </div>
           </div>
 
         </div>
 
-        {/* Right Card: Responsive Horizontal Timeline Path */}
-        <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between min-h-[380px]">
-          <div>
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-6">
+        {/* Right Column Stack: Timeline (Top) + Quote (Bottom) (100% matched to mockup) */}
+        <div className="flex flex-col gap-6 justify-between items-stretch">
+          
+          {/* Card 1: Career Path Timeline */}
+          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 flex flex-col justify-center flex-1">
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-4">
               ПУТЬ РАЗВИТИЯ
             </p>
 
-            {/* Horizontal Timeline Container with scroll for small devices */}
-            <div className="relative mt-8 pt-4 pb-6 overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
-              <div className="min-w-[530px] lg:min-w-0 lg:w-full relative px-2">
+            {/* Horizontal Timeline Container */}
+            <div className="relative mt-4 pt-4 pb-4 overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
+              <div className="min-w-[550px] lg:min-w-0 lg:w-full relative px-2">
                 
                 {/* Horizontal line background */}
                 <div className="absolute top-[28px] left-[7.14%] right-[7.14%] h-[1.5px] bg-border-subtle/30" />
@@ -225,18 +232,18 @@ export function AchievementsTimelineSection() {
                 
                 <div className="grid grid-cols-7 gap-1 relative z-10">
                   {[
-                    { year: "2020", label1: "Электрик 5 разряда", label2: "Первые ИИ-опыты" },
-                    { year: "2021", label1: "Смена сферы", label2: "Переход в AI R&D" },
-                    { year: "2022", label1: "Запуск LabStory", label2: "Нейровидео и арт" },
-                    { year: "2023", label1: "Победы в конкурсах", label2: "R&D пайплайнов" },
+                    { year: "2020", label1: "Электрик 5 р.", label2: "ИИ-тесты" },
+                    { year: "2021", label1: "Смена сферы", label2: "Переход в AI" },
+                    { year: "2022", label1: "LabStory", label2: "Нейроарт" },
+                    { year: "2023", label1: "Обучение", label2: "R&D видео" },
                     { year: "2024", label1: "AI-агенты", label2: "Автоматизация" },
-                    { year: "2025", label1: "Мировые награды", label2: "ТОП-35 35AWARDS" },
-                    { year: "2026", label1: "Сейчас:", label2: "AI Core Architect", isCurrent: true }
+                    { year: "2025", label1: "35AWARDS", label2: "ТОП-35 в мире" },
+                    { year: "2026", label1: "Сейчас:", label2: "AI Architect", isCurrent: true }
                   ].map((node, idx) => (
                     <div key={idx} className="flex flex-col items-center text-center relative group">
                       
                       {/* Year above line */}
-                      <span className={`font-mono text-[10px] font-bold mb-3 transition-colors ${
+                      <span className={`font-mono text-[11px] font-bold mb-3 transition-colors ${
                         node.isCurrent ? "text-accent" : "text-titanium group-hover:text-accent"
                       }`}>
                         {node.year}
@@ -244,25 +251,25 @@ export function AchievementsTimelineSection() {
                       
                       {/* Dot on the line */}
                       {node.isCurrent ? (
-                        <div className="h-3.5 w-3.5 rounded-full bg-accent border-2 border-void-black z-10 shadow-[0_0_10px_#b7ff3c] relative animate-pulse flex items-center justify-center">
-                          <div className="h-1 w-1 rounded-full bg-void-black" />
+                        <div className="h-4 w-4 rounded-full bg-accent border-2 border-void-black z-10 shadow-[0_0_12px_#b7ff3c] relative animate-pulse flex items-center justify-center">
+                          <div className="h-1.5 w-1.5 rounded-full bg-void-black" />
                         </div>
                       ) : (
-                        <div className="h-2.5 w-2.5 rounded-full bg-[rgba(18,24,22,0.92)] border border-border-subtle z-10 group-hover:border-accent group-hover:bg-accent/40 transition-all duration-300" />
+                        <div className="h-3 w-3 rounded-full bg-[rgba(18,24,22,0.96)] border-2 border-border-subtle z-10 group-hover:border-accent group-hover:bg-accent/40 transition-all duration-300" />
                       )}
                       
-                      {/* Year Description below line */}
-                      <div className="mt-4 min-h-[44px]">
-                        <p className="text-[10px] leading-tight text-[rgba(214,207,191,0.85)] max-w-[85px] mx-auto text-balance">
+                      {/* Year Description below line (highly readable contrast) */}
+                      <div className="mt-4 min-h-[52px]">
+                        <p className="text-[11px] leading-tight max-w-[85px] mx-auto text-balance">
                           {node.isCurrent ? (
                             <>
-                              <span className="text-accent font-semibold block mb-0.5">{node.label1}</span>
-                              <span className="text-[9px] text-titanium leading-normal block">{node.label2}</span>
+                              <span className="text-accent font-bold block mb-0.5">{node.label1}</span>
+                              <span className="text-[10px] text-[rgba(214,207,191,0.7)] font-medium leading-normal block">{node.label2}</span>
                             </>
                           ) : (
                             <>
-                              <span className="block mb-0.5">{node.label1}</span>
-                              <span className="text-[9px] text-titanium leading-normal block">{node.label2}</span>
+                              <span className="text-[rgba(214,207,191,0.95)] font-bold block mb-0.5">{node.label1}</span>
+                              <span className="text-[10px] text-[rgba(214,207,191,0.62)] font-normal leading-normal block">{node.label2}</span>
                             </>
                           )}
                         </p>
@@ -274,25 +281,25 @@ export function AchievementsTimelineSection() {
 
               </div>
             </div>
-
           </div>
+
+          {/* Card 2: Deep Visionary Quote (Cancer Cure Mission) */}
+          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.32)] p-6 relative overflow-hidden flex flex-col justify-center flex-1 min-h-[160px]">
+            <div className="absolute top-4 left-4 text-accent/10 pointer-events-none">
+              <Quote size={40} />
+            </div>
+            
+            <blockquote className="relative z-10 text-xs sm:text-[13px] leading-6 text-[rgba(214,207,191,0.85)] pl-6 border-l-2 border-accent/40 italic">
+              «Генерация медиафайлов — это лишь эффектная демонстрация. Настоящая сила ИИ ещё не раскрыта. Я верю, что его главная миссия — спасать жизни и побеждать болезни. Моя долгосрочная цель — внести вклад в разработку ИИ-архитектур для поиска лекарства от онкологии. Технологии должны служить человечеству на самом глубоком уровне.»
+            </blockquote>
+            
+            <div className="mt-3 pl-6 text-right font-mono text-[9px] uppercase tracking-wider text-titanium">
+              — Никита Кизевич / <span className="text-accent font-semibold">AI ARCHITECT</span>
+            </div>
+          </div>
+
         </div>
 
-      </div>
-
-      {/* Bottom Quote Card */}
-      <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.32)] p-6 md:p-8 relative overflow-hidden">
-        <div className="absolute top-4 left-4 text-accent/10 pointer-events-none">
-          <Quote size={56} />
-        </div>
-        
-        <blockquote className="relative z-10 text-sm sm:text-base leading-7 text-[rgba(214,207,191,0.85)] max-w-4xl italic pl-6 border-l-2 border-accent/40">
-          «Генерация медиафайлов — это лишь эффектная демонстрация. Настоящая сила ИИ ещё не раскрыта. Я верю, что его главная миссия — спасать жизни и побеждать болезни. Моя долгосрочная цель — внести вклад в разработку ИИ-архитектур для поиска лекарства от онкологии. Технологии должны служить человечеству на самом глубоком уровне.»
-        </blockquote>
-        
-        <div className="mt-4 pl-6 text-right font-mono text-[9px] uppercase tracking-wider text-titanium">
-          — Никита Кизевич / <span className="text-accent font-semibold">AI ARCHITECT</span>
-        </div>
       </div>
     </section>
   );
