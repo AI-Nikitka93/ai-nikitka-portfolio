@@ -105,7 +105,7 @@ export default async function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/portfolio"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-accent bg-accent/8 px-5 py-3 text-sm font-bold text-accent transition-all hover:bg-accent hover:text-void-black hover:scale-[1.02] shadow-[0_0_15px_rgba(183,255,60,0.12)]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-accent/40 bg-accent/4 px-5 py-3 text-sm font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/18 hover:scale-[1.02] shadow-[0_0_12px_rgba(183,255,60,0.06)] hover:shadow-[0_0_25px_rgba(183,255,60,0.24)]"
               >
                 СМОТРЕТЬ ПРОЕКТЫ
                 <ArrowRight size={15} />
@@ -222,7 +222,7 @@ export default async function HomePage() {
                 <div className="mt-6 pt-4 border-t border-border-subtle/30">
                   <Link
                     href="/awards-credentials"
-                    className="inline-flex min-h-9 items-center justify-center gap-1.5 rounded-panel border border-accent bg-accent/8 px-4 py-2 text-xs font-bold text-accent hover:bg-accent hover:text-void-black hover:scale-[1.02] transition-all shadow-[0_0_10px_rgba(183,255,60,0.1)]"
+                    className="inline-flex min-h-9 items-center justify-center gap-1.5 rounded-panel border border-accent/40 bg-accent/4 px-4 py-2 text-xs font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/18 hover:scale-[1.02] shadow-[0_0_8px_rgba(183,255,60,0.05)] hover:shadow-[0_0_18px_rgba(183,255,60,0.2)]"
                   >
                     ПОДРОБНЕЕ
                   </Link>
@@ -499,7 +499,7 @@ export default async function HomePage() {
 
           <Link
             href="/links"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-panel border border-accent bg-accent/8 px-6 py-2.5 text-xs font-bold text-accent hover:bg-accent hover:text-void-black hover:scale-[1.02] transition-all shadow-[0_0_12px_rgba(183,255,60,0.1)]"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-panel border border-accent/40 bg-accent/4 px-6 py-2.5 text-xs font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/18 hover:scale-[1.02] shadow-[0_0_10px_rgba(183,255,60,0.06)] hover:shadow-[0_0_20px_rgba(183,255,60,0.22)]"
           >
             НАПИСАТЬ МНЕ <ArrowRight size={12} />
           </Link>
