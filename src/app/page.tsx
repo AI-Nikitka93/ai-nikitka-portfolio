@@ -268,14 +268,14 @@ export default async function HomePage() {
                 </div>
                 
                 <h4 className="text-sm font-semibold text-foreground">
-                  Создаю мультиагентную систему для автоматизации исследований
+                  Занимаюсь вайбкодингом и ИИ-дистрибуцией музыки
                 </h4>
 
                 <div className="grid grid-cols-3 gap-2 pt-2 text-center">
                   {[
-                    { label: "активных", value: "3" },
-                    { label: "экспериментов", value: "7" },
-                    { label: "моделей", value: "12" }
+                    { label: "Муз. артистов", value: "6" },
+                    { label: "Видео / Изобр.", value: "0" },
+                    { label: "Вайбкодинг", value: "250+" }
                   ].map((stat, idx) => (
                     <div key={idx} className="border border-border-subtle bg-[rgba(18,24,22,0.6)] rounded p-1.5">
                       <span className="font-mono text-[11px] font-bold text-accent block leading-none">
