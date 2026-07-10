@@ -1,5 +1,11 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 23:20:00 +03:00] Audit and Improve Accessibility/Responsiveness of About Page
+- Changed: Audited `/about` page. Restructured profile rows key-values as a semantic description list (`<dl>`, `<dt>`, `<dd>`), timeline list as an ordered list (`<ol>`, `<li>`), and current paths block as an unordered list (`<ul>`, `<li>`). Applied clear focus states (`focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent`) to action buttons and route links. Added proper accessibility landmarks/labels (`aria-label`, `aria-labelledby`, `aria-hidden`) and descriptive labels for external vs internal links.
+- Files: `src/app/about/page.tsx`, `AGENTS_HISTORY.md`
+- Verification: Clean compile (`npm run typecheck`), lint validation (`npm run lint`), successful static build (`npm run build`), and passing Zero-Trust Guardrails run.
+- Status: DONE.
+
 ## [2026-07-10 22:36:00 +03:00] Remove Selected Projects Section from Homepage
 - Changed: Removed the heavy "Selected Projects" card grid section from the Russian homepage (`src/app/page.tsx`) to make the landing layout significantly cleaner, leaving all project details exclusively on the dedicated `/portfolio` route (similar to the English summary page). Fixed all unused import and variable linting warnings.
 - Files: `src/app/page.tsx`, `AGENTS_HISTORY.md`
