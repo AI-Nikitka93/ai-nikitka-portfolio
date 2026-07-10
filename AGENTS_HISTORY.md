@@ -1,5 +1,11 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 12:35:00] Integrate AI Clone Chatbot and Deploy
+- **Изменения**: Добавлен полнофункциональный ИИ-клон Никиты с потоковым ответом (streaming) и ручной системой деградации до ключевых фраз (fallback) на случай ошибок/лимитов OpenRouter API (429/402). Навигационная ссылка «Контакты» заменена на «На связи», ведущую в чат. Внедрены API-ключи, и проект успешно развернут.
+- **Файлы**: `src/app/api/assistant/route.ts`, `src/components/site-assistant-panel.tsx`, `src/app/ai-assistant/page.tsx`, `src/lib/site.ts`, `src/app/page.tsx`, `.env.local`
+- **Верификация**: Выполнен тест API `test_assistant_api.js` на продакшене. Стриминг и отказоустойчивость работают штатно (200 OK с деградацией при лимитах).
+- **Статус**: DONE.
+
 ## [2026-07-10 11:52:00] Fix UI/UX Issues and Calibrate Performance Budgets
 - **Изменения**: Устранено дублирование `signalStrength` в карточках, исправлен класс безье в `scroll-reveal.tsx`, заменен цвет Powder Blue в калькуляторе и на карте этапов пути на Phosphor Lime/Raw Titanium, добавлена адаптивная сетка кнопок вместо перекрывающихся 3D-кнопок на мобильных экранах, добавлена поддержка `prefers-reduced-motion` в `scramble-text.tsx`, увеличен брейкпоинт десктопного меню с `2xl` на `lg`, применен лимит `maxLength` на поле брифа, и откалиброваны лимиты производительности под новый вес 8-й работы.
 - **Файлы**: `src/components/dossier-card.tsx`, `src/components/scroll-reveal.tsx`, `src/components/project-scope-estimator.tsx`, `src/components/career-path-scene.tsx`, `src/components/scramble-text.tsx`, `src/components/site-header.tsx`, `scripts/release-audit.mjs`
