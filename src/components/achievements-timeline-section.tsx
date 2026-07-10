@@ -96,13 +96,13 @@ const awardSlides: readonly AwardSlide[] = [
 ];
 
 const timelineNodes = [
-  { year: "2020", label1: "Электрик 5 р.", label2: "Пром. объекты", coords: "SYS // 53.900" },
-  { year: "2021", label1: "Электромонтаж", label2: "Минскводоканал", coords: "SYS // 53.901" },
-  { year: "2022", label1: "Знакомство с ИИ", label2: "Ноябрь: ChatGPT", coords: "AI_ST // 53.902" },
-  { year: "2023", label1: "Промптинг", label2: "Разбор на винтики", coords: "R&D // 53.903" },
-  { year: "2024", label1: "Нейрокартинки", label2: "Плотная работа", coords: "IMG // 53.904" },
-  { year: "2025", label1: "Видеогенерация", label2: "Первые победы", coords: "VID // 53.905" },
-  { year: "2026", label1: "Сейчас:", label2: "Вайбкодинг & R&D", isCurrent: true, coords: "LIVE // 53.906" }
+  { year: "14–21", label1: "Электрик 5 р.", label2: "Минскводоканал", coords: "SYS // 2014-2021" },
+  { year: "21–22", label1: "Смена профессии", label2: "Поиск себя & обучение", coords: "TRY // 2021-2022" },
+  { year: "2022", label1: "Знакомство с ИИ", label2: "Ноябрь: ChatGPT", coords: "AI_ST // Nov.2022" },
+  { year: "2023", label1: "Промптинг", label2: "Разбор на винтики", coords: "R&D // 2023" },
+  { year: "2024", label1: "Нейрокартинки", label2: "Плотная работа", coords: "IMG // 2024" },
+  { year: "2025", label1: "Видеогенерация", label2: "Первые победы", coords: "VID // 2025" },
+  { year: "2026", label1: "Сейчас:", label2: "Вайбкодинг & R&D", isCurrent: true, coords: "LIVE // 2026" }
 ];
 
 export function AchievementsTimelineSection() {
