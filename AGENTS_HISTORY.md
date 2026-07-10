@@ -1,5 +1,11 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 17:52:00 +03:00] Align 3-Column Hero Cards and Layout Heights
+- Changed: Adjusted grid layout alignment in the Hero section. Removed centering constraints on the middle column wrapper and added `lg:h-full` to the wireframe brain card, allowing it to stretch to the exact height of the left and right cards (511px). Harmonized the background color of the center card with the achievements card.
+- Files: `src/app/page.tsx`, `src/components/wireframe-brain.tsx`
+- Verification: Compiled successfully, tested local production server on port 3200, took Playwright screenshots verifying heights alignment, and ran the complete `npm run verify` suite (linting, typechecking, build, release audit, dependency audit) with Exit Code 0.
+- Status: DONE.
+
 ## [2026-07-10 17:48:00 +03:00] Overhaul 3D Brain Component & Integrated Tech HUD
 - Changed: Overhauled the wireframe brain component to feature a glowing 3D wireframe mesh with blending properties, an additive point vertex particles overlay, a custom tech-grid/coordinate CSS background, and a comprehensive SVG HUD overlay. The SVG overlay implements the rotating reticle orbit rings (clockwise & counter-clockwise), callout pointer lines, 4 corner indicators ("RESEARCH", "ARCHITECTURE", "EXPERIMENTS", "DEPLOYMENT"), and central glowing title badge enclosing "AI + NIKITKA".
 - Files: `src/components/wireframe-brain.tsx`

@@ -281,7 +281,7 @@ export function WireframeBrain() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-[380px] md:h-[400px] flex flex-col items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing select-none group rounded-shell border border-border-subtle bg-[rgba(10,14,12,0.6)]"
+      className="relative w-full h-[380px] md:h-[400px] lg:h-full flex flex-col items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing select-none group rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)]"
       style={{
         boxShadow: "inset 0 0 30px rgba(0,0,0,0.8)"
       }}

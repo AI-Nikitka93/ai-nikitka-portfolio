@@ -120,7 +120,7 @@ export default async function HomePage() {
           </div>
 
           {/* Middle Column: Glowing Wireframe Brain (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col items-center justify-center min-h-[320px] lg:min-h-full">
+          <div className="lg:col-span-4 flex flex-col min-h-[320px] lg:min-h-full">
             <WireframeBrain />
           </div>
 
