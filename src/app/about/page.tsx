@@ -242,7 +242,8 @@ export default function AboutPage() {
 
               <div className="mt-6 space-y-5">
                 {[
-                  ["sys.alias", "Никита Кизевич (AI_Nikitka93)"],
+                  ["sys.alias", "AI_Nikitka93 / Nikitka AI"],
+                  ["sys.name", "Никита Кизевич / Nikita Kizevich / Mikita Kizevich"],
                   ["sys.origin", "Минск / 1993"],
                   ["sys.focus", "ИИ-видео, изображения, сайты и автоматизация"],
                   ["sys.status", "ACTIVE_RUNNING (В непрерывных тестах)"]
