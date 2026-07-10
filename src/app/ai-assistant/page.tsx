@@ -17,9 +17,9 @@ import { SiteAssistantPanel } from "@/components/site-assistant-panel";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Помощник",
+  title: "На связи",
   description:
-    "Локальный помощник AI_Nikitka93 по сайту: подобрать раздел, работу, услугу, подтверждение или контакт.",
+    "ИИ-собеседник и цифровой клон Никиты Кизевича: ответит на вопросы, даст советы и ссылки или поможет связаться с автором.",
   path: "/ai-assistant",
 });
 
@@ -89,13 +89,12 @@ export default function AiAssistantPage() {
           </div>
 
           <div className="space-y-5">
-            <p className="signal-label">Локальный помощник</p>
+            <p className="signal-label">На связи</p>
             <h1 className="max-w-4xl text-balance text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.1] tracking-tight text-foreground">
-              Напишите вопрос — помощник покажет, куда перейти на сайте.
+              Интерактивный ИИ-собеседник. Цифровой клон Никиты.
             </h1>
             <p className="max-w-3xl text-base leading-8 text-[rgba(214,207,191,0.82)] md:text-lg md:leading-9">
-              Для HR, клиента или коллеги: спросите обычной фразой про работы, бюджет,
-              подтверждения или куда писать. Помощник дает короткий ответ и сразу ведет к действию.
+              Спросите обо всём: о его пути от электрика Минскводоканала к генерации видео, хакатонах, победах и работах. Бот ведет диалог как живой человек и сразу дает нужные контакты или ссылки.
             </p>
             <div className="flex flex-wrap gap-3">
               {["куда писать", "что открыть HR", "посчитать BYN", "найти дипломы"].map((item) => (

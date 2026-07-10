@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Calculator,
   CheckCircle2,
-  Mail,
   MessageCircle,
   PlugZap,
   Trophy,
@@ -59,11 +58,11 @@ const startRoutes = [
     icon: Calculator,
   },
   {
-    href: "/links",
+    href: "/ai-assistant",
     label: "Связь",
-    title: "Прямые контакты",
-    body: "Быстрая связь в Telegram, исходный код проектов на GitHub, профиль LinkedIn и внешние ресурсы.",
-    icon: Mail,
+    title: "ИИ-Собеседник",
+    body: "Интерактивный ИИ-клон Никиты: ответит на вопросы, даст советы и нужные ссылки или поможет связаться с автором.",
+    icon: MessageCircle,
   },
 ] as const;
 

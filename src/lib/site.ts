@@ -39,11 +39,11 @@ export const navigation = [
   { href: "/about", label: "О себе", shortLabel: "О себе" },
   { href: "/blog", label: "Блог", shortLabel: "Блог" },
   { href: "/services-calculator", label: "Калькулятор", shortLabel: "Проект" },
-  { href: "/ai-assistant", label: "Помощник", shortLabel: "Помощник" },
-  { href: "/links", label: "Контакты", shortLabel: "Контакты" },
+  { href: "/ai-assistant", label: "На связи", shortLabel: "Чат-ИИ" },
 ] as const;
 
 export const utilityNavigation = [
+  { href: "/links", label: "Контакты", shortLabel: "Контакты" },
   { href: "/awards-credentials", label: "Награды", shortLabel: "Награды" },
   { href: "/en", label: "English", shortLabel: "EN" },
   { href: "/privacy", label: "Приватность", shortLabel: "Privacy" },
