@@ -125,14 +125,14 @@ export default async function HomePage() {
           </div>
 
           {/* Right Column: Achievements (3 cols) */}
-          <div className="lg:col-span-3 rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between min-h-[460px]">
-            <div>
+          <div className="lg:col-span-3 rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-6 md:p-8 flex flex-col justify-between min-h-[460px] lg:min-h-full">
+            <div className="flex flex-col h-full flex-1">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent mb-6">
                 ДОСТИЖЕНИЯ В ЦИФРАХ
               </p>
               
-              {/* Vertically stacked stats to match mockup */}
-              <div className="space-y-6">
+              {/* Vertically distributed stats to eliminate empty bottom space */}
+              <div className="flex-1 flex flex-col justify-between gap-4">
                 {[
                   { value: "300+", label: "AI проектов реализовано", icon: Sparkles },
                   { value: "58", label: "Исследований и экспериментов", icon: Activity },
@@ -143,18 +143,18 @@ export default async function HomePage() {
                   return (
                     <div 
                       key={index} 
-                      className="flex items-center justify-between gap-3 group border-b border-border-subtle/20 pb-4 last:border-0 last:pb-0"
+                      className="flex items-center justify-between gap-3 group border-b border-border-subtle/20 pb-4 last:border-0 last:pb-0 flex-1 align-middle"
                     >
-                      <div>
-                        <span className="font-mono text-2xl font-bold tracking-tight text-foreground group-hover:text-accent transition-colors">
+                      <div className="flex flex-col justify-center">
+                        <span className="font-mono text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground group-hover:text-accent transition-colors">
                           {stat.value}
                         </span>
-                        <span className="block mt-1 text-[10px] leading-4 text-titanium">
+                        <span className="block mt-1.5 text-xs sm:text-sm font-medium leading-relaxed text-[rgba(214,207,191,0.85)]">
                           {stat.label}
                         </span>
                       </div>
-                      <div className="h-8 w-8 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.4)] flex items-center justify-center text-accent group-hover:border-accent/40 transition-colors">
-                        <Icon size={14} />
+                      <div className="h-10 w-10 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.4)] flex items-center justify-center text-accent group-hover:border-accent/40 transition-colors shrink-0">
+                        <Icon size={18} />
                       </div>
                     </div>
                   );
