@@ -244,7 +244,6 @@ export default function AboutPage() {
                 {[
                   ["sys.alias", "AI_Nikitka93 / Nikitka AI"],
                   ["sys.name", "Никита Кизевич / Nikita Kizevich / Mikita Kizevich"],
-                  ["sys.origin", "Минск / 1993"],
                   ["sys.focus", "ИИ-видео, изображения, сайты и автоматизация"],
                   ["sys.status", "ACTIVE_RUNNING (В непрерывных тестах)"]
                 ].map(([key, value]) => (
