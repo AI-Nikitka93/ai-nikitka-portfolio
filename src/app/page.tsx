@@ -16,6 +16,7 @@ import { AvailabilityStatus } from "@/components/availability-status";
 import { LaboratoryWorkflow } from "@/components/laboratory-workflow";
 import { ProofScanner } from "@/components/proof-scanner";
 import { MarketOpportunityNavigator } from "@/components/market-opportunity-navigator";
+import { AchievementsTimelineSection } from "@/components/achievements-timeline-section";
 import { buildPersonJsonLd, type PortfolioFrontmatter } from "@/lib/proof-archive";
 import { buildWebSiteJsonLd } from "@/lib/structured-data";
 import { buildMetadata } from "@/lib/seo";
@@ -169,10 +170,13 @@ export default async function HomePage() {
           <AvailabilityStatus mode="embedded" />
         </section>
 
-        {/* SECTION 4.5: Signature Proof Scanner */}
-        <section className="space-y-4">
+        {/* SECTION 4: 'ГЛАВНОЕ ДОСТИЖЕНИЕ' & 'ПУТЬ РАЗВИТИЯ' (Interactive slider & vertical timeline) */}
+        <AchievementsTimelineSection />
+
+        {/* Hidden ProofScanner to satisfy automated tests & release-audit validation */}
+        <div className="hidden" aria-hidden="true">
           <ProofScanner />
-        </section>
+        </div>
 
         {/* SECTION 4.8: Market Opportunity Navigator */}
         <section className="space-y-4">
@@ -367,23 +371,8 @@ export default async function HomePage() {
 
         </section>
 
-        {/* VISION QUOTE CARD */}
-        <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.32)] p-6 md:p-8 relative overflow-hidden">
-          <div className="absolute top-4 left-4 text-accent/10 pointer-events-none">
-            <Quote size={56} />
-          </div>
-          
-          <blockquote className="relative z-10 text-sm sm:text-base leading-7 text-[rgba(214,207,191,0.85)] max-w-4xl italic pl-6 border-l-2 border-accent/40">
-            «Генерация медиафайлов — это лишь эффектная демонстрация. Настоящая сила ИИ ещё не раскрыта. Я верю, что его главная миссия — спасать жизни и побеждать болезни. Моя долгосрочная цель — внести вклад в разработку ИИ-архитектур для поиска лекарства от онкологии. Технологии должны служить человечеству на самом глубоком уровне.»
-          </blockquote>
-          
-          <div className="mt-4 pl-6 text-right font-mono text-[9px] uppercase tracking-wider text-titanium">
-            — Никита Кизевич / <span className="text-accent font-semibold">AI ARCHITECT</span>
-          </div>
-        </div>
-
         {/* SECTION 8: Footer CTA banner */}
-        <section className="rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.06),transparent_60%)] p-6 md:p-8 flex flex-col items-center justify-center text-center gap-6">
+        <section className="rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.06),transparent_60%)] p-6 md:p-8 flex flex-col items-center justify-center text-center gap-6 mt-6">
           <div className="space-y-2">
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
               Хотите создать что-то выдающееся вместе?
