@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
         "X-Title": "AI_Nikitka93 Portfolio Assistant",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash:free",
+        model: "meta-llama/llama-3.3-70b-instruct:free",
         messages,
         temperature: 0.7,
         stream: true,
