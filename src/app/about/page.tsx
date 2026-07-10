@@ -244,8 +244,8 @@ export default function AboutPage() {
                 {[
                   ["sys.alias", "AI_Nikitka93 / Nikitka AI"],
                   ["sys.name", "Никита Кизевич / Nikita / Mikita Kizevich"],
-                  ["sys.clearance", "L4_PUBLIC_VERIFIED (Сертификаты и пруфы)"],
-                  ["sys.primary_stack", "Next.js 16 / React 19 / Python / WebGL"],
+                  ["sys.music_artists", "Nikitka AI, Niko Xian, NIKITAAL, Niquiano, Kezevix, NKVIS, Nikita Kizevich"],
+                  ["sys.neural_stack", "LLM (Claude 3.5, GPT-4o, Gemini) • Visual (Stable Diffusion, Midjourney, Runway, Luma, Minimax) • Audio (Suno, Udio)"],
                   ["sys.status", "ACTIVE_RUNNING // BIOTECH_PRO-BONO_OPEN"],
                   ["sys.last_build", "Passed (100% Автономная верификация)"]
                 ].map(([key, value]) => (
