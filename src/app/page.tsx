@@ -189,10 +189,10 @@ export default async function HomePage() {
                 </p>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
-                Здесь идеи превращаются в интеллектуальные продукты
+                Конвейер создания концептов в лаборатории
               </h3>
               <p className="text-xs sm:text-sm leading-6 text-[rgba(214,207,191,0.74)]">
-                Исследую новые подходы, тестирую гипотезы и создаю решения, опережающие время.
+                Каждый демонстрационный кейс в портфолио проходит полный цикл: от жесткого анализа до сборки кода агентами и длительного тестирования.
               </p>
             </div>
 

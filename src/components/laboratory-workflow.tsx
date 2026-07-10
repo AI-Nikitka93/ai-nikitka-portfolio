@@ -38,20 +38,20 @@ export const stepsData = [
 
 const translations = {
   ru: {
-    idea: { title: "ИДЕЯ", desc: "Генерация идей и гипотез" },
-    research: { title: "ИССЛЕДОВАНИЕ", desc: "Исследования и анализ" },
-    prototype: { title: "ПРОТОТИП", desc: "Прототипирование и тесты" },
-    train: { title: "ОБУЧЕНИЕ", desc: "Обучение моделей и алгоритмов" },
-    deploy: { title: "ВНЕДРЕНИЕ", desc: "Внедрение и масштабирование" },
-    impact: { title: "РЕЗУЛЬТАТ", desc: "Реальные результаты и польза" }
+    idea: { title: "ИДЕЯ", desc: "Поиск гипотезы и концепта проекта" },
+    research: { title: "АНАЛИЗ", desc: "Анализ аналогов и решений" },
+    prototype: { title: "ПРОМПТИНГ", desc: "Подбор промптов и ИИ-архитектуры" },
+    train: { title: "РАЗРАБОТКА", desc: "Запуск агентов, контроль и правки" },
+    deploy: { title: "ТЕСТИРОВАНИЕ", desc: "Длительная отладка и полировка" },
+    impact: { title: "ДЕМО-РЕЛИЗ", desc: "Публикация кейса в портфолио" }
   },
   en: {
-    idea: { title: "IDEA", desc: "Generating ideas and hypotheses" },
-    research: { title: "RESEARCH", desc: "Research and analysis" },
-    prototype: { title: "PROTOTYPE", desc: "Prototyping and testing" },
-    train: { title: "TRAINING", desc: "Training models and algorithms" },
-    deploy: { title: "DEPLOY", desc: "Deployment and scaling" },
-    impact: { title: "IMPACT", desc: "Real-world results and value" }
+    idea: { title: "IDEA", desc: "Concept generation & project hypothesis" },
+    research: { title: "ANALYSIS", desc: "Analyzing competitors and solutions" },
+    prototype: { title: "PROMPTING", desc: "Prompt assembly & AI structuring" },
+    train: { title: "DEVELOPMENT", desc: "Agent orchestration, audit & edits" },
+    deploy: { title: "TESTING", desc: "Deep debugging & manual verification" },
+    impact: { title: "DEMO RELEASE", desc: "Publishing reference code & portfolio" }
   }
 } as const;
 
