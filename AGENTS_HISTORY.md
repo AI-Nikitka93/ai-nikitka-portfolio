@@ -1,5 +1,11 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 17:48:00 +03:00] Overhaul 3D Brain Component & Integrated Tech HUD
+- Changed: Overhauled the wireframe brain component to feature a glowing 3D wireframe mesh with blending properties, an additive point vertex particles overlay, a custom tech-grid/coordinate CSS background, and a comprehensive SVG HUD overlay. The SVG overlay implements the rotating reticle orbit rings (clockwise & counter-clockwise), callout pointer lines, 4 corner indicators ("RESEARCH", "ARCHITECTURE", "EXPERIMENTS", "DEPLOYMENT"), and central glowing title badge enclosing "AI + NIKITKA".
+- Files: `src/components/wireframe-brain.tsx`
+- Verification: Successful TypeScript compilation (`npm run typecheck`), ESLint linting (`npm run lint`), Next.js static build (`npm run build`), static release audit (`npm run audit:release`), and local anti-laziness guardrails verification. All checks passed with Exit Code 0.
+- Status: DONE.
+
 ## [2026-07-10 16:43:00] Complete Homepage Visual Redesign and Validation
 - **Изменения**: Выполнен полный редизайн главной страницы по предоставленному скриншоту-макету. Реализована разметка Hero (Copy слева, 3D-мозг и цифры справа), добавлен детерминированный рендеринг SVG-мозга, бегущая строка с тегами (Marquee Ticker), визуальные этапы лаборатории (LaboratoryWorkflow), сопоставлены и выведены 4 избранных проекта с дипломами. Добавлены метаданные `data-proof-hero` и 3 верификационные ссылки на пруф-ассеты в первом экране для прохождения приемочных скриптов.
 - **Файлы**: `src/app/page.tsx`, `src/components/wireframe-brain.tsx`, `src/components/marquee-ticker.tsx`, `src/components/laboratory-workflow.tsx`, `src/components/site-footer.tsx`, `src/components/site-header.tsx`, `src/app/globals.css`
