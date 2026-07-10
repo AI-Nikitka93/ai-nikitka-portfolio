@@ -246,10 +246,10 @@ export function AchievementsTimelineSection() {
         </div>
 
         {/* Right Column Stack: Vertical HUD Timeline (Top) + Quote (Bottom) */}
-        <div className="flex flex-col gap-6 justify-between items-stretch">
+        <div className="flex flex-col gap-6 justify-start items-stretch">
           
           {/* Card 1: Vertical HUD Career Path Timeline */}
-          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-5 md:p-6 flex flex-col justify-between flex-1 relative overflow-hidden">
+          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.76)] p-5 md:p-6 flex flex-col justify-between relative overflow-hidden min-h-[380px]">
             {/* Tactical Grid Overlay & Corner Brackets */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(142,150,140,0.025)_1px,transparent_1px)] bg-[size:100%_12px] pointer-events-none" />
             <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-accent/40 pointer-events-none" />
@@ -271,13 +271,13 @@ export function AchievementsTimelineSection() {
             <div className="relative flex-1 flex flex-col justify-between py-1.5 pl-2 pr-1">
               
               {/* Vertical line background */}
-              <div className="absolute top-2 bottom-2 left-[53px] w-[1px] bg-border-subtle/30 pointer-events-none" />
+              <div className="absolute top-2 bottom-2 left-[69px] w-[1px] bg-border-subtle/30 pointer-events-none" />
               
               {/* Colored progress line leading to active current year (2026) */}
-              <div className="absolute top-2 bottom-2 left-[53px] w-[1px] bg-gradient-to-b from-accent/10 via-accent/40 to-accent pointer-events-none" />
+              <div className="absolute top-2 bottom-2 left-[69px] w-[1px] bg-gradient-to-b from-accent/10 via-accent/40 to-accent pointer-events-none" />
               
               {/* Vertical scanner laser sweep point */}
-              <div className="absolute left-[50px] w-2 h-2 -ml-0.5 rounded-full bg-accent animate-laser-sweep-vertical pointer-events-none shadow-[0_0_8px_#b7ff3c]" />
+              <div className="absolute left-[65px] w-2 h-2 -ml-0.5 rounded-full bg-accent animate-laser-sweep-vertical pointer-events-none shadow-[0_0_8px_#b7ff3c]" />
 
               {timelineNodes.map((node, idx) => {
                 const isHoveredNode = activeNode === idx;
@@ -292,7 +292,7 @@ export function AchievementsTimelineSection() {
                   >
                     
                     {/* Year on the left (IBM Plex Mono typography) */}
-                    <span className={`font-mono text-[11px] font-bold w-[38px] text-right pr-2 transition-colors duration-200 select-none ${
+                    <span className={`font-mono text-[11px] font-bold w-[54px] shrink-0 text-right pr-2.5 whitespace-nowrap transition-colors duration-200 select-none ${
                       node.isCurrent 
                         ? "text-accent drop-shadow-[0_0_5px_rgba(183,255,60,0.6)]" 
                         : isHoveredNode
@@ -303,7 +303,7 @@ export function AchievementsTimelineSection() {
                     </span>
                     
                     {/* Interactive Dot/HUD reticle in the middle */}
-                    <div className="w-[30px] flex justify-center z-10">
+                    <div className="w-[30px] shrink-0 flex justify-center z-10">
                       {node.isCurrent ? (
                         /* Currently Active Rotating HUD Crosshair node */
                         <div className="relative w-6 h-6 flex items-center justify-center">
@@ -365,7 +365,7 @@ export function AchievementsTimelineSection() {
           </div>
 
           {/* Card 2: Deep Visionary Quote (Cancer Cure Mission) */}
-          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.32)] p-6 relative overflow-hidden flex flex-col justify-center flex-1 min-h-[160px]">
+          <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.32)] p-6 relative overflow-hidden flex flex-col justify-center min-h-[140px]">
             <div className="absolute top-4 left-4 text-accent/10 pointer-events-none">
               <Quote size={40} />
             </div>
