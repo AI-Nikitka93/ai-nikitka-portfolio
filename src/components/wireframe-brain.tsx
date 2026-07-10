@@ -38,19 +38,19 @@ export function WireframeBrain() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     // 4. Ambient and Point Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.04);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.02);
     scene.add(ambientLight);
 
-    const mainLight = new THREE.DirectionalLight(0xb7ff3c, 0.6);
+    const mainLight = new THREE.DirectionalLight(0xb7ff3c, 0.7);
     mainLight.position.set(5, 5, 5);
     scene.add(mainLight);
 
-    const blueLight = new THREE.DirectionalLight(0x00ffff, 0.4);
+    const blueLight = new THREE.DirectionalLight(0x00ffff, 0.5);
     blueLight.position.set(-5, -5, -5);
     scene.add(blueLight);
 
-    const greenPointLight = new THREE.PointLight(0xb7ff3c, 1.0, 12);
-    greenPointLight.position.set(0, 0, 0); // Core glow
+    const greenPointLight = new THREE.PointLight(0xb7ff3c, 0.8, 8);
+    greenPointLight.position.set(0, 0, 0); // Core glow inside the translucent brain
     scene.add(greenPointLight);
 
     // 5. Brain Mesh & Particle Group
@@ -90,27 +90,37 @@ export function WireframeBrain() {
           if ((child as THREE.Mesh).isMesh) {
             const mesh = child as THREE.Mesh;
             
-            // Premium wireframe material with extremely subtle translucency and glow to prevent overexposure
+            // Translucent core material that blocks backfaces (depth occlusion) and catches light highlights
             mesh.material = new THREE.MeshStandardMaterial({
-              color: 0xb7ff3c,
-              wireframe: true,
+              color: 0x050806, // extremely dark green-black base
               transparent: true,
-              opacity: 0.03, // Set wireframe mesh material opacity to a very low value
-              roughness: 0.1,
+              opacity: 0.65, // semi-transparent core to block back-facing edges
+              roughness: 0.15,
               metalness: 0.9,
-              emissive: 0xb7ff3c,
-              emissiveIntensity: 0.2, // Lower emissive intensity to prevent solid blob rendering
-              blending: THREE.AdditiveBlending,
-              side: THREE.DoubleSide,
+              emissive: 0x050c07, // very subtle base self-glow
+              emissiveIntensity: 0.1,
+              side: THREE.FrontSide, // FrontSide only for depth occlusion of back wireframe
+              depthWrite: true,
             });
 
-            // Decimate / Sample Particles: Do not clone the entire geometry for particles.
-            // Sample every 12th vertex for clean spacing and delicate sparse point cloud.
+            // Create a clean, non-triangulated wireframe from mesh edges (creases)
+            const edgesGeometry = new THREE.EdgesGeometry(mesh.geometry, 15); // 15 degrees threshold
+            const lineMaterial = new THREE.LineBasicMaterial({
+              color: 0xb7ff3c,
+              transparent: true,
+              opacity: 0.35, // visible, high-tech lines
+              blending: THREE.AdditiveBlending,
+              depthWrite: false, // let lines render cleanly on top of the mesh
+            });
+            const lineSegments = new THREE.LineSegments(edgesGeometry, lineMaterial);
+            mesh.add(lineSegments);
+
+            // Sparse particle cloud (neural synapses)
             const positionAttr = mesh.geometry.attributes.position;
             if (positionAttr) {
               const count = positionAttr.count;
               const positions = [];
-              const step = 12; // Sample every 12th vertex for clean spacing
+              const step = 45; // Sparse sampling to show clear gaps and prevent blob rendering
               for (let v = 0; v < count; v += step) {
                 positions.push(positionAttr.getX(v), positionAttr.getY(v), positionAttr.getZ(v));
               }
@@ -119,11 +129,12 @@ export function WireframeBrain() {
               
               const pointsMaterial = new THREE.PointsMaterial({
                 color: 0xb7ff3c,
-                size: 0.016, // Delicate particle size
+                size: 0.025, // delicate but visible points
                 transparent: true,
-                opacity: 0.65, // Subtle, translucent opacity
+                opacity: 0.7,
                 sizeAttenuation: true,
                 blending: THREE.AdditiveBlending,
+                depthWrite: false,
               });
               const vertexParticles = new THREE.Points(sparseGeo, pointsMaterial);
               mesh.add(vertexParticles);
@@ -231,6 +242,11 @@ export function WireframeBrain() {
         brainGroup.position.y = Math.sin(elapsed * 1.5) * 0.08;
       }
 
+      // Soft breathing core glow representing neural activity
+      if (greenPointLight) {
+        greenPointLight.intensity = 0.5 + Math.sin(elapsed * 2.0) * 0.3;
+      }
+
       // Render scene
       renderer.render(scene, camera);
       animationFrameId = requestAnimationFrame(animate);
@@ -273,6 +289,15 @@ export function WireframeBrain() {
             mesh.material.forEach((material) => material.dispose());
           } else {
             mesh.material.dispose();
+          }
+        }
+        if ((object as THREE.Line).isLine) {
+          const line = object as THREE.Line;
+          line.geometry.dispose();
+          if (Array.isArray(line.material)) {
+            line.material.forEach((material) => material.dispose());
+          } else {
+            line.material.dispose();
           }
         }
         if ((object as THREE.Points).isPoints) {
