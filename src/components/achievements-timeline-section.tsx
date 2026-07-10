@@ -206,14 +206,14 @@ export function AchievementsTimelineSection() {
             </p>
 
             {/* Horizontal Timeline Container with scroll for small devices */}
-            <div className="relative mt-8 pt-4 pb-6 overflow-x-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
-              <div className="min-w-[620px] relative px-4">
+            <div className="relative mt-8 pt-4 pb-6 overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
+              <div className="min-w-[530px] lg:min-w-0 lg:w-full relative px-2">
                 
                 {/* Horizontal line background */}
-                <div className="absolute top-[28px] left-[7%] right-[7%] h-[1.5px] bg-border-subtle/30" />
+                <div className="absolute top-[28px] left-[7.14%] right-[7.14%] h-[1.5px] bg-border-subtle/30" />
                 
                 {/* Colored progress line leading to active current year (2026) */}
-                <div className="absolute top-[28px] left-[7%] right-[7%] h-[1.5px] bg-gradient-to-r from-accent/20 to-accent" />
+                <div className="absolute top-[28px] left-[7.14%] right-[7.14%] h-[1.5px] bg-gradient-to-r from-accent/20 to-accent" />
                 
                 <div className="grid grid-cols-7 gap-1 relative z-10">
                   {[
