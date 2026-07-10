@@ -201,12 +201,12 @@ export function CareerPathScene() {
         <div
           role="radiogroup"
           aria-label="Путь Никиты по этапам"
-          className="relative mt-5 min-h-[430px] overflow-hidden rounded-shell border border-border-subtle bg-[radial-gradient(circle_at_30%_18%,rgba(152,207,227,0.16),transparent_34%),linear-gradient(180deg,rgba(10,13,12,0.4),rgba(10,13,12,0.86))] md:min-h-[540px]"
+          className="relative mt-5 min-h-[430px] overflow-hidden rounded-shell border border-border-subtle bg-[radial-gradient(circle_at_30%_18%,rgba(183,255,60,0.12),transparent_34%),linear-gradient(180deg,rgba(10,13,12,0.4),rgba(10,13,12,0.86))] md:min-h-[540px] hidden md:block"
           style={{ perspective: "1200px" }}
         >
           <div
             aria-hidden="true"
-            className="absolute inset-x-8 bottom-12 top-10 rounded-[10px] border border-[rgba(152,207,227,0.18)] bg-[linear-gradient(rgba(142,150,140,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(142,150,140,0.1)_1px,transparent_1px)] bg-[length:36px_36px] opacity-80"
+            className="absolute inset-x-8 bottom-12 top-10 rounded-[10px] border border-accent/15 bg-[linear-gradient(rgba(142,150,140,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(142,150,140,0.1)_1px,transparent_1px)] bg-[length:36px_36px] opacity-80"
             style={{
               transform: "rotateX(58deg) rotateZ(-12deg) translateY(20px)",
               transformOrigin: "50% 78%",
@@ -216,7 +216,7 @@ export function CareerPathScene() {
               <polyline
                 points={careerPathSteps.map((step) => `${step.x},${step.y}`).join(" ")}
                 fill="none"
-                stroke="rgba(152,207,227,0.34)"
+                stroke="rgba(183,255,60,0.34)"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -229,7 +229,7 @@ export function CareerPathScene() {
             className="absolute bottom-5 left-5 right-5 h-2 rounded-full border border-border-subtle bg-[rgba(18,24,22,0.86)]"
           >
             <div
-              className="h-full rounded-full bg-[linear-gradient(90deg,rgba(152,207,227,0.92),rgba(255,106,42,0.72))]"
+              className="h-full rounded-full bg-[linear-gradient(90deg,var(--color-accent),var(--color-ember))]"
               style={{ width: `${railProgress}%` }}
             />
           </div>
@@ -254,7 +254,7 @@ export function CareerPathScene() {
                   onMouseEnter={() => setActiveStepId(step.id)}
                   className={`group relative flex h-16 w-16 items-center justify-center rounded-full border transition duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent md:h-20 md:w-20 ${
                     active
-                      ? "scale-105 border-accent bg-[rgba(152,207,227,0.2)] text-foreground shadow-[0_0_38px_rgba(152,207,227,0.22)]"
+                      ? "scale-105 border-accent bg-accent/15 text-foreground shadow-[0_0_38px_rgba(183,255,60,0.22)]"
                       : "border-border-subtle bg-[rgba(18,24,22,0.86)] text-titanium hover:border-accent hover:text-foreground"
                   }`}
                 >
@@ -269,13 +269,50 @@ export function CareerPathScene() {
                 <div
                   className={`mt-2 hidden min-w-28 rounded-[6px] border px-3 py-2 text-center text-xs font-semibold leading-5 md:block ${
                     active
-                      ? "border-accent bg-[rgba(152,207,227,0.12)] text-foreground"
+                      ? "border-accent bg-accent/8 text-foreground"
                       : "border-border-subtle bg-[rgba(10,13,12,0.72)] text-[rgba(214,207,191,0.72)]"
                   }`}
                 >
                   {step.shortTitle}
                 </div>
               </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile alternative: clean 2-column grid of buttons */}
+        <div 
+          role="radiogroup"
+          aria-label="Выбор этапа пути"
+          className="mt-5 grid grid-cols-2 gap-2 md:hidden"
+        >
+          {careerPathSteps.map((step, index) => {
+            const Icon = step.icon;
+            const active = step.id === activeStep.id;
+
+            return (
+              <button
+                key={step.id}
+                type="button"
+                role="radio"
+                aria-checked={active}
+                onClick={() => setActiveStepId(step.id)}
+                className={`flex min-h-12 items-center gap-2.5 rounded-panel border px-3 py-2 text-left transition duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent ${
+                  active
+                    ? "border-accent bg-accent/10 text-foreground shadow-[0_0_12px_rgba(183,255,60,0.1)]"
+                    : "border-border-subtle bg-[rgba(18,24,22,0.8)] text-titanium hover:border-accent hover:text-foreground"
+                }`}
+              >
+                <Icon size={14} className={active ? "text-accent" : "text-titanium"} />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-mono text-[8px] uppercase tracking-wider text-titanium leading-none">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="mt-1 block text-xs font-semibold truncate leading-none">
+                    {step.shortTitle}
+                  </span>
+                </span>
+              </button>
             );
           })}
         </div>
@@ -311,7 +348,7 @@ export function CareerPathScene() {
             </div>
           </div>
 
-          <div className="rounded-panel border border-[rgba(152,207,227,0.28)] bg-[rgba(152,207,227,0.08)] p-4">
+          <div className="rounded-panel border border-accent/24 bg-accent/8 p-4">
             <p className="signal-label text-accent">Что можно проверить</p>
             <div className="mt-3 grid gap-2">
               {activeStep.check.map((item) => (
@@ -326,7 +363,7 @@ export function CareerPathScene() {
 
         <Link
           href={activeStep.href}
-          className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-panel border border-accent px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-[rgba(152,207,227,0.1)]"
+          className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-panel border border-accent px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
         >
           {activeStep.cta}
           <ArrowRight size={15} />

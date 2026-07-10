@@ -181,7 +181,7 @@ export function DossierCard({ slug, frontmatter }: DossierCardProps) {
                   </div>
                 </div>
 
-                {frontmatter.signalStrength?.length ? (
+                {!isTextVariant && frontmatter.signalStrength?.length ? (
                   <div className="grid gap-2 border-t border-border-subtle pt-3">
                     {frontmatter.signalStrength.slice(0, 2).map((item, index) => (
                       <div

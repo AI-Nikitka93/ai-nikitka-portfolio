@@ -56,7 +56,7 @@ export function ScrollReveal({
   return (
     <div
       ref={domRef}
-      className={`${className} transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1)`}
+      className={`${className} transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]`}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "none" : "translateY(16px)",

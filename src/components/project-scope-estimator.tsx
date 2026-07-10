@@ -338,6 +338,7 @@ export function ProjectScopeEstimator() {
                 value={brief}
                 onChange={(event) => setBrief(event.target.value)}
                 rows={4}
+                maxLength={400}
                 placeholder="Например: нужен короткий ролик для презентации идеи, есть референсы и дедлайн через две недели."
                 className="min-h-28 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.5)] px-4 py-3 text-sm leading-7 text-foreground outline-none transition-colors placeholder:text-[rgba(214,207,191,0.45)] focus:border-accent"
               />
@@ -489,8 +490,8 @@ function SegmentedControl<T extends { id: string; label: string; note: string }>
           aria-checked={value === item.id}
           className={`min-h-20 rounded-panel border px-4 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent ${
             value === item.id
-              ? "border-[rgba(152,207,227,0.72)] bg-[rgba(152,207,227,0.1)]"
-              : "border-border-subtle bg-[rgba(18,24,22,0.48)] hover:border-[rgba(152,207,227,0.52)]"
+              ? "border-accent bg-accent/10"
+              : "border-border-subtle bg-[rgba(18,24,22,0.48)] hover:border-accent/40"
           }`}
         >
           <span className="flex items-start justify-between gap-3">

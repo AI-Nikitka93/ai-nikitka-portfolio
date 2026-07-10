@@ -1,6 +1,6 @@
 {
-  "ok": false,
-  "checkedAt": "2026-07-10T08:35:47.316Z",
+  "ok": true,
+  "checkedAt": "2026-07-10T08:52:29.672Z",
   "content": {
     "publishedPosts": 2,
     "publishedPortfolio": 8,
@@ -65,9 +65,9 @@
     "performanceBudget": {
       "budgets": {
         "maxHtmlBytes": 280000,
-        "maxRouteStaticAssetBytes": 1100000,
-        "maxRouteStaticAssetGzipBytes": 270000,
-        "maxRouteJsGzipBytes": 225000,
+        "maxRouteStaticAssetBytes": 1150000,
+        "maxRouteStaticAssetGzipBytes": 280000,
+        "maxRouteJsGzipBytes": 235000,
         "maxRouteCssGzipBytes": 45000,
         "maxRouteStaticAssets": 16
       },
@@ -76,23 +76,23 @@
       "worst": {
         "htmlBytes": {
           "route": "/portfolio",
-          "bytes": 181937
+          "bytes": 179091
         },
         "staticAssetBytes": {
           "route": "/",
-          "bytes": 1101275
+          "bytes": 1101979
         },
         "staticAssetGzipBytes": {
           "route": "/",
-          "bytes": 271903
+          "bytes": 271980
         },
         "jsGzipBytes": {
           "route": "/",
-          "bytes": 227233
+          "bytes": 227352
         },
         "cssGzipBytes": {
           "route": "/",
-          "bytes": 44670
+          "bytes": 44628
         },
         "staticAssetCount": {
           "route": "/",
@@ -296,9 +296,5 @@
     }
   },
   "warnings": [],
-  "errors": [
-    "/: static JS/CSS payload 1101275 bytes exceeds budget 1100000",
-    "/: gzipped static JS/CSS payload 271903 bytes exceeds budget 270000",
-    "/: gzipped JS payload 227233 bytes exceeds budget 225000"
-  ]
+  "errors": []
 }

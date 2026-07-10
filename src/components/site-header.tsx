@@ -51,7 +51,7 @@ export function SiteHeader() {
         <div
           className={`pointer-events-auto mx-auto rounded-shell border backdrop-blur-md transition-all duration-300 ${
             scrolled
-              ? "border-accent/70 bg-[rgba(18,24,22,0.92)]"
+              ? "border-accent/20 bg-[rgba(18,24,22,0.92)]"
               : "border-border-subtle bg-[rgba(18,24,22,0.78)]"
           }`}
         >
@@ -70,7 +70,7 @@ export function SiteHeader() {
               </div>
             </Link>
 
-            <div className="hidden min-w-0 items-center gap-3 2xl:flex">
+            <div className="hidden min-w-0 items-center gap-3 lg:flex">
               <div className="rounded-panel border border-border-subtle px-3 py-2">
                 <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-titanium">
                   {activeItem ? getRouteCopy(activeItem).shortLabel : "Route"}
@@ -123,7 +123,7 @@ export function SiteHeader() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-3 2xl:hidden">
+            <div className="flex items-center gap-3 lg:hidden">
               <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-titanium">
                 {activeItem ? getRouteCopy(activeItem).shortLabel : "Home"}
               </span>
@@ -162,7 +162,7 @@ export function SiteHeader() {
             <nav
               id="mobile-nav-panel"
               aria-label={isEnglishRoute ? "Mobile navigation" : "Мобильная навигация"}
-              className="border-t border-border-subtle px-3 pb-3 pt-2 2xl:hidden"
+              className="border-t border-border-subtle px-3 pb-3 pt-2 lg:hidden"
             >
               <div className="grid gap-2">
                 {mobileNavigation.map((item, index) => {

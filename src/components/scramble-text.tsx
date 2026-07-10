@@ -22,6 +22,20 @@ export function ScrambleText({
   const frameRef = useRef<number | null>(null);
   const timeoutRef = useRef<number | null>(null);
   const isRunningRef = useRef(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
 
   // Synchronize state when text prop changes (React-recommended pattern)
   if (text !== prevText) {
@@ -31,6 +45,10 @@ export function ScrambleText({
 
   // Define the scramble loop function with useCallback
   const startScramble = useCallback(() => {
+    if (prefersReducedMotion) {
+      setDisplayText(text);
+      return;
+    }
     if (isRunningRef.current) {
       if (frameRef.current) cancelAnimationFrame(frameRef.current);
     }

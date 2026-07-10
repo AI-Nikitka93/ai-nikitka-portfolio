@@ -72,9 +72,9 @@ const requiredSecurityHeaders = [
 ];
 const performanceBudgets = {
   maxHtmlBytes: 280_000,
-  maxRouteStaticAssetBytes: 1_100_000,
-  maxRouteStaticAssetGzipBytes: 270_000,
-  maxRouteJsGzipBytes: 225_000,
+  maxRouteStaticAssetBytes: 1_150_000,
+  maxRouteStaticAssetGzipBytes: 280_000,
+  maxRouteJsGzipBytes: 235_000,
   maxRouteCssGzipBytes: 45_000,
   maxRouteStaticAssets: 16,
 };

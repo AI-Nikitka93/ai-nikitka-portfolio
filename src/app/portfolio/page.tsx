@@ -246,7 +246,7 @@ export default async function PortfolioPage() {
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2">
               {metricEntries.map((entry, index) => (
                 <ScrollReveal key={entry.slug} delay={Math.min(index * 0.06, 0.16)}>
                   <DossierCard slug={entry.slug} frontmatter={entry.frontmatter} />
