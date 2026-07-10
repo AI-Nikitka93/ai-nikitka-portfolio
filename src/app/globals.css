@@ -33,6 +33,7 @@
   --font-sans: var(--font-manrope);
   --font-display: var(--font-space-grotesk);
   --font-mono: var(--font-ibm-plex-mono);
+  --color-void-black: var(--color-void-black);
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
   --color-surface: var(--color-surface);
