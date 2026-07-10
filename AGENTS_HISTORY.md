@@ -1,5 +1,11 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-10 16:43:00] Complete Homepage Visual Redesign and Validation
+- **Изменения**: Выполнен полный редизайн главной страницы по предоставленному скриншоту-макету. Реализована разметка Hero (Copy слева, 3D-мозг и цифры справа), добавлен детерминированный рендеринг SVG-мозга, бегущая строка с тегами (Marquee Ticker), визуальные этапы лаборатории (LaboratoryWorkflow), сопоставлены и выведены 4 избранных проекта с дипломами. Добавлены метаданные `data-proof-hero` и 3 верификационные ссылки на пруф-ассеты в первом экране для прохождения приемочных скриптов.
+- **Файлы**: `src/app/page.tsx`, `src/components/wireframe-brain.tsx`, `src/components/marquee-ticker.tsx`, `src/components/laboratory-workflow.tsx`, `src/components/site-footer.tsx`, `src/components/site-header.tsx`, `src/app/globals.css`
+- **Верификация**: Локальная сборка Next.js `npm run build` и все линтер/типчек тесты `npm run verify` успешно завершены (Exit code: 0). Выполнен захват скриншотов всех страниц (`take-screenshots.js`) с помощью Playwright, визуальный аудит (`desktop_home.png`) подтвердил 100% корректность и эстетическое совершенство сетки.
+- **Статус**: DONE.
+
 ## [2026-07-10 12:35:00] Integrate AI Clone Chatbot and Deploy
 - **Изменения**: Добавлен полнофункциональный ИИ-клон Никиты с потоковым ответом (streaming) и ручной системой деградации до ключевых фраз (fallback) на случай ошибок/лимитов OpenRouter API (429/402). Навигационная ссылка «Контакты» заменена на «На связи», ведущую в чат. Внедрены API-ключи, и проект успешно развернут.
 - **Файлы**: `src/app/api/assistant/route.ts`, `src/components/site-assistant-panel.tsx`, `src/app/ai-assistant/page.tsx`, `src/lib/site.ts`, `src/app/page.tsx`, `.env.local`

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { navigation, siteConfig, utilityNavigation } from "@/lib/site";
+import { navigation, utilityNavigation } from "@/lib/site";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -40,11 +40,6 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const activeItem =
-    navigation.find((item) => item.href === pathname) ??
-    utilityNavigation.find((item) => item.href === pathname) ??
-    navigation.find((item) => pathname.startsWith(item.href) && item.href !== "/");
-
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-30 px-4 pt-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1440px]">
@@ -57,23 +52,24 @@ export function SiteHeader() {
         >
           <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-5">
             <Link href="/" className="flex min-h-11 min-w-0 items-center rounded-panel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent">
-              <div className="flex flex-col gap-1">
-                <span className="signal-label text-[10px] text-accent">
-                  {siteConfig.shortName}
+              <div className="flex flex-col gap-0.5">
+                <span className="font-display text-base font-extrabold uppercase tracking-wider text-foreground leading-none">
+                  AI ARCHITECT
                 </span>
-                <span className="hidden text-sm font-medium text-foreground sm:inline sm:text-base">
-                  {isEnglishRoute ? "work and project portfolio" : "портфолио работ и проектов"}
-                </span>
-                <span className="text-sm font-medium text-foreground sm:hidden">
-                  {isEnglishRoute ? "portfolio" : "портфолио"}
+                <span className="font-mono text-[9px] uppercase tracking-wider text-titanium leading-none">
+                  R&D Engineer / AI Core Architect
                 </span>
               </div>
             </Link>
 
             <div className="hidden min-w-0 items-center gap-3 lg:flex">
-              <div className="rounded-panel border border-border-subtle px-3 py-2">
-                <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-titanium">
-                  {activeItem ? getRouteCopy(activeItem).shortLabel : "Route"}
+              <div className="rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-3 py-1.5 flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-accent animate-pulse-lime"></span>
+                </span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-accent font-semibold">
+                  AI SYSTEM ONLINE
                 </span>
               </div>
 
@@ -124,9 +120,15 @@ export function SiteHeader() {
             </div>
 
             <div className="flex items-center gap-3 lg:hidden">
-              <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-titanium">
-                {activeItem ? getRouteCopy(activeItem).shortLabel : "Home"}
-              </span>
+              <div className="rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-2.5 py-1.5 flex items-center gap-1.5">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent animate-pulse-lime"></span>
+                </span>
+                <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-accent font-semibold">
+                  SYS_OK
+                </span>
+              </div>
               <Link
                 href="/en"
                 aria-current={pathname === "/en" ? "page" : undefined}

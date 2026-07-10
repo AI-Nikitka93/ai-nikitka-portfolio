@@ -411,6 +411,61 @@ a {
   background-size: 100% 4px, 6px 100%;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes spin-brain-3d {
+  0% {
+    transform: rotateY(0deg) rotateX(15deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(-5deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(15deg);
+  }
+}
+
+.animate-spin-brain {
+  animation: spin-brain-3d 20s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes pulse-lime {
+  0%, 100% {
+    opacity: 0.35;
+    box-shadow: 0 0 4px var(--color-phosphor-lime);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 12px var(--color-phosphor-lime);
+  }
+}
+
+.animate-pulse-lime {
+  animation: pulse-lime 2s infinite ease-in-out;
+}
+
+.mask-horizontal-fade {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+
 
 @keyframes fade-in {
   from {
