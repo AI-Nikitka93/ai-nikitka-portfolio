@@ -36,7 +36,7 @@ async function run() {
     await page.setViewportSize({ width: 1920, height: 1080 });
     try {
       await page.goto(url, { waitUntil: 'networkidle', timeout: 10000 });
-    } catch (e) {
+    } catch {
       console.log(`Navigation to ${url} timed out/failed, continuing...`);
     }
     await page.waitForTimeout(1500);

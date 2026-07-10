@@ -81,7 +81,7 @@ export function ScrambleText({
     };
 
     frameRef.current = requestAnimationFrame(tick);
-  }, [text]);
+  }, [text, prefersReducedMotion]);
 
   useEffect(() => {
     timeoutRef.current = window.setTimeout(() => {
