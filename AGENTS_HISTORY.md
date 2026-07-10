@@ -1,5 +1,17 @@
 # История проекта (AGENTS_HISTORY.md)
 
+## [2026-07-11 02:37:00 +03:00] Integrate Framer Motion Stagger Entrance Animations on About Page
+- Changed: Designed and implemented high-fidelity stagger-reveal entry animations for Dossier Panel and Manifest Panel on the About page using Framer Motion. Created DossierPanel and ManifestPanel Client Components. The profile rows (using semantic `<dl>`, `<dt>`, `<dd>`) and manifest paragraphs stagger in smoothly with spring-physics. Standardized integration-level skill sliders to animate their width on load. Respects prefers-reduced-motion using `useReducedMotion()`, removing animations instantly. Integrated ScrambleText for confidential dossier subtitle decoding effect.
+- Files: `src/app/about/page.tsx`, `src/components/about-dossier-manifest.tsx`, `AGENTS_HISTORY.md`
+- Verification: Successful TypeScript compilation (`npm run typecheck`), linting (`npm run lint`), static build compilation (`npm run build`), release audit pass (`npm run audit:release`), and zero-trust guardrails validator pass.
+- Status: DONE.
+
+## [2026-07-11 02:33:00 +03:00] Optimize About Page Animations and Motion Reduction
+- Changed: Refactored the card scanline background animation to run completely on GPU-composited CSS transitions and transform properties with CSS container query units (`container-type: size;` and `transform: translateY(100cqh)`), eliminating layout shifts and repaints. Extended the `prefers-reduced-motion: reduce` query block to disable pulse/ping animations and hide moving scanlines/particles. Restored clean semantic HTML design without `framer-motion` to comply with the release audit bundle gate.
+- Files: `src/app/globals.css`, `src/app/about/page.tsx`, `package.json`
+- Verification: Successful ESLint pass (`npm run lint`), TypeScript compile check (`npm run typecheck`), production Next.js build compilation (`npm run build`), release audit validation (`npm run audit:release` showing Exit Code 0 with 0 warnings/errors), and Zero-Trust Guardrails run.
+- Status: DONE.
+
 ## [2026-07-10 23:20:00 +03:00] Audit and Improve Accessibility/Responsiveness of About Page
 - Changed: Audited `/about` page. Restructured profile rows key-values as a semantic description list (`<dl>`, `<dt>`, `<dd>`), timeline list as an ordered list (`<ol>`, `<li>`), and current paths block as an unordered list (`<ul>`, `<li>`). Applied clear focus states (`focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent`) to action buttons and route links. Added proper accessibility landmarks/labels (`aria-label`, `aria-labelledby`, `aria-hidden`) and descriptive labels for external vs internal links.
 - Files: `src/app/about/page.tsx`, `AGENTS_HISTORY.md`

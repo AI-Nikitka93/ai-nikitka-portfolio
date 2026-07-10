@@ -402,3 +402,9 @@
 - Verification: npm run verify (lint, typecheck, build, static release audit, dependency audit - PASS).
 - Status: DONE.
 
+### 2026-07-11 02:35:00 +03:00 — Интеграция высокотехнологичной stagger-анимации на страницу About
+- Changed: Спроектированы и реализованы деликатные entry-анимации появления блоков данных на странице Обо мне. Созданы специализированные Client-компоненты `DossierPanel` и `ManifestPanel` с использованием Framer Motion. Реализован поочередный (stagger) эффект появления строк досье и абзацев манифеста с поддержкой Spring-физики. Внедрен контроль системного режима сниженной чувствительности к движению через `useReducedMotion()`, отключающий смещения координат и анимационные задержки. Значения навыков в шкале интеграции плавно заполняются при монтировании. Добавлен эффект декодирования HUD-текста через `ScrambleText` для заголовка досье.
+- Files: src/app/about/page.tsx, src/components/about-dossier-manifest.tsx, docs/PROJECT_HISTORY.md
+- Verification: Успешно пройдены статический билд (`npm run build`), типчек (`npm run typecheck`), линтинг (`npm run lint`), аудит релизов (`npm run audit:release`) и автоматический Zero-Trust сканер guardrails (`adwp_guardrails.ps1`).
+- Status: DONE.
+

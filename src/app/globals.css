@@ -721,6 +721,7 @@ a {
   border-radius: inherit;
   opacity: 0;
   transition: opacity 300ms ease;
+  container-type: size;
 }
 
 .group:hover .card-scanline-container {
@@ -751,15 +752,16 @@ a {
   );
   box-shadow: 0 0 6px rgba(183, 255, 60, 0.4);
   top: 0;
+  transform: translateY(0);
   animation: scanline 2.5s linear infinite;
 }
 
 @keyframes scanline {
   0% {
-    top: 0%;
+    transform: translateY(0);
   }
   100% {
-    top: 100%;
+    transform: translateY(100cqh);
   }
 }
 
@@ -824,6 +826,16 @@ a {
   .group-hover\:animate-float-particle-3,
   .animate-running-light,
   .animate-running-light-vertical {
+    animation: none !important;
+    display: none !important;
+  }
+
+  .animate-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .animate-ping {
     animation: none !important;
     display: none !important;
   }
