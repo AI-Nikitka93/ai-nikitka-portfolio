@@ -88,7 +88,17 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      throw new Error(`OpenRouter API responded with status ${response.status}`);
+      console.warn(`OpenRouter API responded with status ${response.status}. Degrading to local fallback.`);
+      const query = message.toLowerCase();
+      const matched = fallbacks.find((f) =>
+        f.keywords.some((k) => query.includes(k))
+      );
+
+      const text = matched
+        ? matched.answer
+        : "Я цифровой клон Никиты. Мое нейросетевое ядро сейчас перегружено (ошибка API), но я все еще могу рассказать тебе о его пути электромонтера, о том, как он выжал 56μs на хакатоне NVIDIA без знания C++, о победе в Helix LabStory или отправить в калькулятор услуг (/services-calculator).";
+
+      return NextResponse.json({ text });
     }
 
     // Standard Next.js Route Handler Streaming
