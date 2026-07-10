@@ -242,13 +242,11 @@ export default function AboutPage() {
 
               <div className="mt-6 space-y-5">
                 {[
-                  ["sys.alias", "AI_Nikitka93 / Nikitka AI"],
-                  ["sys.name", "Никита Кизевич / Nikita / Mikita Kizevich"],
-                  ["sys.music_artists", "Nikitka AI, Niko Xian, NIKITAAL, Niquiano, Kezevix, NKVIS, Nikita Kizevich"],
-                  ["sys.neural_stack", "LLM (ChatGPT, Claude, Gemini, DeepSeek) • Visual (Nanobanano Pro, Midjourney v6, Runway, Luma, Minimax, ранее Imagen 3/4) • Audio (Suno, Udio)"],
-                  ["sys.status", "ACTIVE_RUNNING // BIOTECH_PRO-BONO_OPEN"],
-                  ["sys.ai_expenses", "0 USD / 0 BYN (Использование промо-лимитов и грантов)"],
-                  ["sys.last_build", "Passed (100% Автономная верификация)"]
+                  ["псевдонимы", "AI_Nikitka93 / Nikitka AI"],
+                  ["имя", "Никита Кизевич / Nikita / Mikita Kizevich"],
+                  ["исполнители", "Nikitka AI, Niko Xian, NIKITAAL, Niquiano, Kezevix, NKVIS, Nikita Kizevich"],
+                  ["ии-стек", "LLM (ChatGPT, Claude, Gemini, DeepSeek) • Visual (Nanobanano Pro, Midjourney v6, Runway, Luma, Minimax, ранее Imagen 3/4) • Audio (Suno, Udio)"],
+                  ["затраты на ии", "0 руб / 0 $ (за весь период по сей день)"]
                 ].map(([key, value]) => (
                   <div key={key} className="border-b border-border-subtle/40 pb-3 last:border-b-0">
                     <p className="font-mono text-[10px] tracking-[0.24em] text-titanium uppercase">{key}</p>
