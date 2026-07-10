@@ -45,7 +45,9 @@ export async function POST(req: NextRequest) {
   try {
     const { message, history = [] } = await req.json();
 
-    const apiKey = process.env.OPENROUTER_API_KEY;
+    const groqKey = process.env.GROQ_API_KEY;
+    const openRouterKey = process.env.OPENROUTER_API_KEY;
+    const apiKey = groqKey || openRouterKey;
 
     if (!apiKey) {
       // Rule-based fallback if no API key is present
@@ -61,7 +63,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ text });
     }
 
-    // Call OpenRouter with streaming enabled
+    // Call LLM with streaming enabled
     const messages = [
       { role: "system", content: systemPrompt },
       ...history.map((h: { role: string; content: string }) => ({
@@ -71,16 +73,25 @@ export async function POST(req: NextRequest) {
       { role: "user", content: message },
     ];
 
-    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    const isGroq = Boolean(groqKey);
+    const fetchUrl = isGroq
+      ? "https://api.groq.com/openai/v1/chat/completions"
+      : "https://openrouter.ai/api/v1/chat/completions";
+
+    const fetchHeaders: Record<string, string> = {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    };
+    if (!isGroq) {
+      fetchHeaders["HTTP-Referer"] = "https://kizevich.com";
+      fetchHeaders["X-Title"] = "AI_Nikitka93 Portfolio Assistant";
+    }
+
+    const response = await fetch(fetchUrl, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-        "HTTP-Referer": "https://kizevich.com",
-        "X-Title": "AI_Nikitka93 Portfolio Assistant",
-      },
+      headers: fetchHeaders,
       body: JSON.stringify({
-        model: "meta-llama/llama-3.3-70b-instruct:free",
+        model: isGroq ? "llama-3.3-70b-versatile" : "meta-llama/llama-3.3-70b-instruct:free",
         messages,
         temperature: 0.7,
         stream: true,
@@ -88,7 +99,7 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      console.warn(`OpenRouter API responded with status ${response.status}. Degrading to local fallback.`);
+      console.warn(`LLM API responded with status ${response.status}. Degrading to local fallback.`);
       const query = message.toLowerCase();
       const matched = fallbacks.find((f) =>
         f.keywords.some((k) => query.includes(k))
