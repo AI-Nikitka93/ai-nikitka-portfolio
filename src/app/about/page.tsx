@@ -179,25 +179,28 @@ export default function AboutPage() {
             {/* HUD Декоративная сетка */}
             <div className="absolute inset-0 signal-grid-panel opacity-10 pointer-events-none" />
             
-            <div className="flex items-center justify-between">
-              <p className="signal-label text-accent">Системный монитор</p>
+            <div className="flex items-center justify-between border-b border-border-subtle pb-3">
+              <p className="signal-label text-accent">КРАТКАЯ СВОДКА</p>
               <div className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                <span className="font-mono text-[9px] text-accent tracking-widest uppercase">LIVE</span>
+                <span className="font-mono text-[9px] text-accent tracking-widest uppercase">INFO</span>
               </div>
             </div>
-            
-            <div className="mt-4 grid gap-3">
+
+            <div className="mt-4 space-y-4">
               {[
-                ["Формат", "коротко и по делу"],
-                ["Локация", "Минск, Беларусь"],
-                ["Режим", "Агентная верификация"],
-              ].map(([label, value]) => (
-                <div key={label} className="rounded-panel border border-border-subtle bg-surface-muted/40 px-4 py-3 relative">
-                  <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-titanium">
-                    {label}
+                { label: "Специализация", val: "Вайбкодинг, R&D ИИ-систем, нейровидео и музыкальные релизы" },
+                { label: "Бэкграунд", val: "7 лет работы промышленным электриком 5-го разряда (до и выше 1000В) до перехода в ИИ" },
+                { label: "Локация", val: "Минск, Беларусь" },
+                { label: "Контактная линия", val: "Telegram: @AI_Nikitka93 / Email: nikitka9318@gmail.com" },
+              ].map((item, idx) => (
+                <div key={idx} className="space-y-1">
+                  <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-titanium block leading-none">
+                    {item.label}
+                  </span>
+                  <p className="text-xs leading-5 text-[rgba(214,207,191,0.85)]">
+                    {item.val}
                   </p>
-                  <p className="mt-1.5 font-mono text-sm tracking-normal text-foreground">{value}</p>
                 </div>
               ))}
             </div>
