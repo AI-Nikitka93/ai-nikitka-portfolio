@@ -245,6 +245,8 @@ export default function AboutPage() {
                   ["sys.alias", "AI_Nikitka93 / Nikitka AI"],
                   ["sys.name", "Никита Кизевич / Nikita Kizevich / Mikita Kizevich"],
                   ["sys.focus", "ИИ-видео, изображения, сайты и автоматизация"],
+                  ["sys.experience", "С ноября 2022 года (погружение в LLM и диффузионные модели)"],
+                  ["sys.mission", "R&D ИИ-систем для автоматизации и помощь в борьбе с болезнями"],
                   ["sys.status", "ACTIVE_RUNNING (В непрерывных тестах)"]
                 ].map(([key, value]) => (
                   <div key={key} className="border-b border-border-subtle/40 pb-3 last:border-b-0">
