@@ -277,11 +277,11 @@ export default async function HomePage() {
                     { label: "Видео / Изобр.", value: "0" },
                     { label: "Вайбкодинг", value: "250+" }
                   ].map((stat, idx) => (
-                    <div key={idx} className="border border-border-subtle bg-[rgba(18,24,22,0.6)] rounded p-1.5">
-                      <span className="font-mono text-[11px] font-bold text-accent block leading-none">
+                    <div key={idx} className="border border-border-subtle bg-[rgba(18,24,22,0.6)] rounded p-2 flex flex-col justify-center items-center min-h-[52px]">
+                      <span className="font-mono text-xs sm:text-sm font-bold text-accent block leading-none">
                         {stat.value}
                       </span>
-                      <span className="font-mono text-[8px] uppercase tracking-wide text-titanium mt-1 block">
+                      <span className="font-mono text-[9px] uppercase tracking-wider text-[rgba(214,207,191,0.85)] mt-1.5 block text-center leading-normal">
                         {stat.label}
                       </span>
                     </div>
