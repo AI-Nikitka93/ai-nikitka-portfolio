@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dossier Detail - Archival Void</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=Space+Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#c5c7c2",
+                        "on-tertiary": "#283500",
+                        "on-primary-fixed": "#1a1c19",
+                        "secondary-fixed-dim": "#c7c7be",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e0",
+                        "primary-container": "#050705",
+                        "on-secondary-container": "#b8b9b0",
+                        "outline": "#8f928c",
+                        "secondary": "#c7c7be",
+                        "primary-fixed-dim": "#c5c7c2",
+                        "on-primary-container": "#767974",
+                        "error": "#ffb4ab",
+                        "on-primary": "#2e312e",
+                        "tertiary": "#abd600",
+                        "on-surface-variant": "#c5c7c1",
+                        "outline-variant": "#444843",
+                        "on-surface": "#e5e2e0",
+                        "surface-bright": "#3a3938",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#161e00",
+                        "tertiary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#e2e3de",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#3c4d00",
+                        "on-primary-fixed-variant": "#454744",
+                        "on-secondary-fixed": "#1a1c16",
+                        "surface-tint": "#c5c7c2",
+                        "on-secondary": "#2f312b",
+                        "surface-container-high": "#2a2a29",
+                        "on-tertiary-container": "#678200",
+                        "secondary-fixed": "#e3e3d9",
+                        "surface-dim": "#141313",
+                        "surface-variant": "#353534",
+                        "secondary-container": "#484a43",
+                        "surface": "#141313",
+                        "on-error": "#690005",
+                        "tertiary-container": "#050800",
+                        "background": "#141313",
+                        "on-secondary-fixed-variant": "#464740",
+                        "tertiary-fixed-dim": "#abd600",
+                        "on-background": "#e5e2e0",
+                        "inverse-primary": "#5d5f5b",
+                        "surface-container-low": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "40px",
+                        "void-sm": "12px",
+                        "margin": "64px",
+                        "void-md": "32px",
+                        "void-lg": "80px",
+                        "void-xs": "4px",
+                        "void-xl": "160px"
+                    },
+                    "fontFamily": {
+                        "meta-sm": ["IBM Plex Mono"],
+                        "meta-xs": ["IBM Plex Mono"],
+                        "body-base": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "meta-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "meta-xs": ["10px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "300" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen selection:bg-tertiary selection:text-on-tertiary overflow-x-hidden">
+<!-- TopAppBar Component -->
+<header class="fixed w-full top-0 z-50 bg-transparent text-[#ccff00] font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] flex justify-between items-center px-24 py-12 cursor-none">
+<div class="text-[10px] font-bold tracking-widest text-[#f5f5f0]">AI_NIKITKA93</div>
+<div class="flex items-center gap-void-md">
+<span class="material-symbols-outlined text-[16px] hover:text-[#ccff00] transition-opacity duration-500 text-[#f5f5f0]" data-icon="settings">settings</span>
+</div>
+</header>
+<!-- SideNavBar Component -->
+<nav class="fixed left-0 top-0 h-full z-40 bg-transparent text-[#ccff00] font-['IBM_Plex_Mono'] text-[11px] tracking-tight flex flex-col gap-12 px-12 py-32 justify-center hidden md:flex">
+<div class="mb-void-lg">
+<div class="opacity-40">INDEX</div>
+<div class="opacity-40">V.0.93</div>
+</div>
+<!-- Active Tab: ARCHIVE based on Intent (Dossier Detail) -->
+<a class="text-[#ccff00] flex items-center gap-4 before:w-1 before:h-1 before:bg-[#ccff00] hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[14px]">folder_open</span>
+            ARCHIVE
+        </a>
+<a class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[14px]">blur_on</span>
+            VOID
+        </a>
+<a class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+            NEURAL
+        </a>
+<a class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+            LOGS
+        </a>
+</nav>
+<!-- Main Canvas / Void -->
+<main class="md:ml-margin pt-void-xl pb-void-xl px-margin flex flex-col items-center justify-center min-h-screen">
+<!-- Artifact Cluster: Hero Image -->
+<div class="w-full max-w-4xl flex flex-col gap-void-md mb-void-xl items-center text-center">
+<div class="w-full aspect-[21/9] bg-surface-container-lowest overflow-hidden relative group">
+<img class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="abstract monochromatic architectural visualization with sharp geometric lines and deep shadows creating a sense of an infinite empty space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0c23Q0uCkGuWKraOp-27xgOMD9s0Hw23PhvuGXD7lQraEwVBY2VLI1Td_7-sxNTUHQPMV9tI2HOT5Hxd0sURNR4vdYOQ3QFyLoXHoUICTEU74X8tt5IjUIC3Hm-v2dbn471kR-S7oZlzNYO2ynBjgAHh9NvfbhczTVxnkzR6x-8QD8i07zpcu-PTVKV-yb6qWXt88X9j9vYdG_cT_px3mkYekRH-RD5fkFSuXn3x8h9omK_dRgqNHVw4xq6c9Y4qe9DC45Rc88z1A"/>
+<div class="absolute bottom-void-sm right-void-sm font-meta-xs text-meta-xs text-on-surface-variant opacity-50">
+                    OBJ_ID: 9942.A
+                </div>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface max-w-3xl">
+                SUBJECT: ISOLATION METRICS IN NEURAL PATHWAYS
+            </h1>
+<div class="flex gap-void-lg font-meta-sm text-meta-sm text-on-surface-variant opacity-60">
+<span>DATE: 2044.11.02</span>
+<span>STATUS: CLASSIFIED</span>
+<span>AUTHOR: NIKITKA_CORE</span>
+</div>
+</div>
+<!-- Artifact Cluster: Data Blocks -->
+<div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-void-xl mb-void-xl">
+<!-- Text Artifact -->
+<div class="flex flex-col gap-void-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+                    OBSERVATION LOG
+                </h2>
+<div class="h-px w-8 bg-tertiary opacity-50"></div>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-lg">
+                    The initial divergence in sector 7-G indicated a structural anomaly within the foundational memory arrays. 
+                    Attempts to quantify the degradation rate were met with recursive feedback loops, suggesting an 
+                    intentional shielding mechanism rather than entropic decay.
+                </p>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-lg mt-void-sm">
+                    Further analysis requires isolation of the primary node and a systematic purge of peripheral data streams 
+                    to ensure unaffected baseline readings.
+                </p>
+</div>
+<!-- Visual Artifact -->
+<div class="flex flex-col gap-void-md items-start">
+<div class="w-full aspect-square bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="close up macro shot of dark textured surface resembling electronic pathways or microscopic cellular structures in monochromatic black and grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFmZ-wOtGxuoqqbRTd5InN0QjLqupUmJjs6WAnIabtLVkaK5RTC3vwrmy_ROy8xSo7mNONMzyW-5z2xK-XLZOKCFREqT00zPcYwjH5Q6FO1tCl3TskKENw3GvtRc1RpgQaMwR8wBK0cCFMoQ3xZ-ahUbO7ELqwScqKD02CMrhcXyo2pQo4byvHp1Ig3BriQctK8XPwQpqxZkGpm-f4mpVU5V1Ld7wT3wZs0aU4-ov4HFDmVNO0IidDefbIjK2xxqHyujd58nelhhhA"/>
+<!-- Crosshair accent -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4">
+<div class="absolute top-1/2 left-0 w-full h-px bg-tertiary"></div>
+<div class="absolute top-0 left-1/2 w-px h-full bg-tertiary"></div>
+</div>
+</div>
+<div class="font-meta-xs text-meta-xs text-on-surface-variant uppercase tracking-widest">
+                    FIG 1. Structural Anomaly Overlay
+                </div>
+</div>
+</div>
+<!-- Action / Input Artifact -->
+<div class="w-full max-w-2xl flex flex-col items-center text-center gap-void-md mt-void-lg">
+<div class="font-meta-sm text-meta-sm text-on-surface-variant">
+                INPUT REQUIRED FOR DECRYPTION
+            </div>
+<div class="flex items-center gap-2">
+<span class="font-meta-sm text-meta-sm text-on-surface">&gt;</span>
+<span class="font-meta-sm text-meta-sm text-on-surface border-b border-transparent min-w-[200px] text-left"></span>
+<div class="w-2 h-4 bg-tertiary animate-pulse"></div>
+</div>
+<button class="mt-void-lg font-meta-sm text-meta-sm text-on-surface hover:text-tertiary transition-colors duration-300 relative group">
+                EXECUTE PURGE PROTOCOL
+                <div class="absolute -bottom-1 left-0 w-full h-px bg-tertiary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</button>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="fixed bottom-0 w-full z-50 bg-transparent text-[#ccff00] font-['IBM_Plex_Mono'] text-[9px] opacity-30 flex justify-center items-center pb-12">
+<div class="flex gap-void-md items-center">
+<span>SYSTEM_STATUS: NOMINAL</span>
+<span class="w-1 h-1 bg-[#ccff00] rounded-full"></span>
+<a class="hover:opacity-100 transition-opacity text-[#f5f5f0]" href="#">ENCRYPTION_ACTIVE</a>
+</div>
+</footer>
+</body></html>

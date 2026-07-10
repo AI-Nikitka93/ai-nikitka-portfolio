@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Field Notes Monolith</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#343025",
+                      "primary": "#c6c6c6",
+                      "inverse-on-surface": "#313030",
+                      "on-primary-container": "#757575",
+                      "surface": "#131313",
+                      "on-surface-variant": "#cfc4c5",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-container-highest": "#353535",
+                      "inverse-surface": "#e5e2e1",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#151f00",
+                      "on-tertiary-container": "#627f00",
+                      "surface-tint": "#c6c6c6",
+                      "secondary": "#cdc6b6",
+                      "error": "#ffb4ab",
+                      "surface-container": "#20201f",
+                      "primary-container": "#000000",
+                      "secondary-fixed-dim": "#cdc6b6",
+                      "primary-fixed": "#e2e2e2",
+                      "on-background": "#e5e2e1",
+                      "on-tertiary": "#273500",
+                      "surface-dim": "#131313",
+                      "surface-variant": "#353535",
+                      "on-primary": "#303030",
+                      "outline-variant": "#4c4546",
+                      "inverse-primary": "#5e5e5e",
+                      "on-tertiary-fixed-variant": "#3a4d00",
+                      "on-secondary-container": "#beb8a8",
+                      "outline": "#988e90",
+                      "on-secondary-fixed": "#1e1b11",
+                      "on-primary-fixed": "#1b1b1b",
+                      "tertiary-fixed-dim": "#a7d700",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#4b473b",
+                      "secondary-container": "#4d493d",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-bright": "#393939",
+                      "error-container": "#93000a",
+                      "background": "#131313",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#474747",
+                      "secondary-fixed": "#e9e2d1",
+                      "tertiary": "#a7d700",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary-container": "#000000",
+                      "tertiary-fixed": "#bff50e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "32px",
+                      "slab-padding": "40px",
+                      "margin-edge": "64px",
+                      "block-gap": "128px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Space Grotesk"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "48px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex selection:bg-tertiary selection:text-on-tertiary font-body-md overflow-x-hidden">
+<!-- Shared Component: SideNavBar -->
+<nav class="hidden md:flex flex-col fixed left-0 top-0 h-full z-40 bg-[#D9D7D2] dark:bg-black border-r-8 border-black dark:border-stone-800 w-96 shadow-[40px_0px_0px_0px_rgba(0,0,0,0.4)] justify-between">
+<div class="flex flex-col w-full">
+<div class="px-8 py-12 border-b-8 border-black dark:border-stone-800">
+<h1 class="text-black dark:text-[#D9D7D2] font-black font-['Space_Grotesk'] uppercase text-xl tracking-widest">DIRECTORY</h1>
+<p class="text-black dark:text-[#D9D7D2] opacity-50 font-label-caps text-label-caps mt-2">V_93.0.1</p>
+</div>
+<div class="flex flex-col w-full mt-8 font-['Space_Grotesk'] uppercase text-xl font-bold tracking-widest">
+<a class="text-black dark:text-[#D9D7D2] px-8 py-10 w-full flex items-center gap-6 border-b-2 border-black/10 hover:bg-black hover:text-[#00FF42] dark:hover:bg-[#D9D7D2] dark:hover:text-black active:scale-[0.98] transition-all duration-75" href="#">
+<span class="material-symbols-outlined text-3xl">grid_view</span>
+                    INDEX
+                </a>
+<!-- Active State -->
+<a class="bg-[#00FF42] text-black px-8 py-10 w-full flex items-center gap-6 active:scale-[0.98] transition-transform duration-75 border-y-4 border-black dark:border-stone-800 my-[-2px] z-10 relative" href="#">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">layers</span>
+                    ARCHIVE
+                </a>
+<a class="text-black dark:text-[#D9D7D2] px-8 py-10 w-full flex items-center gap-6 border-b-2 border-black/10 hover:bg-black hover:text-[#00FF42] dark:hover:bg-[#D9D7D2] dark:hover:text-black active:scale-[0.98] transition-all duration-75" href="#">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+                    SENSORS
+                </a>
+<a class="text-black dark:text-[#D9D7D2] px-8 py-10 w-full flex items-center gap-6 border-b-2 border-black/10 hover:bg-black hover:text-[#00FF42] dark:hover:bg-[#D9D7D2] dark:hover:text-black active:scale-[0.98] transition-all duration-75" href="#">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+                    TERMINAL
+                </a>
+</div>
+</div>
+<div class="p-8 border-t-8 border-black dark:border-stone-800">
+<button class="w-full bg-[#D9D7D2] dark:bg-black text-[#00FF42] border-4 border-[#00FF42] py-6 font-['Space_Grotesk'] uppercase text-xl font-bold tracking-widest hover:bg-[#00FF42] hover:text-black transition-colors duration-75 active:scale-[0.98]">
+                INITIALIZE_CORE
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-grow flex flex-col md:ml-96 min-h-screen">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-[#D9D7D2] dark:bg-black docked full-width top border-b-4 border-black dark:border-[#D9D7D2] shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center w-full px-16 py-12 z-30 sticky top-0">
+<div class="text-5xl font-black text-black dark:text-[#D9D7D2] tracking-tighter font-['Space_Grotesk'] uppercase">
+                AI_NIKITKA93
+            </div>
+<button class="font-['Space_Grotesk'] uppercase tracking-tighter font-black text-[#00FF42] text-2xl border-4 border-[#00FF42] px-8 py-4 hover:bg-[#00FF42] hover:text-black transition-colors duration-75 active:translate-x-2 active:translate-y-2 active:shadow-none shadow-[8px_8px_0px_0px_#00FF42]">
+                CONNECT
+            </button>
+</header>
+<!-- Canvas -->
+<main class="p-gutter md:p-margin-edge flex-grow flex flex-col gap-block-gap bg-surface">
+<!-- Hero Title Slab -->
+<div class="w-full border-b-4 border-surface-container-highest pb-gutter">
+<h2 class="font-display-xl text-display-xl text-on-surface opacity-90 break-words leading-none">OBSERVATION<br/>LOGS</h2>
+<div class="flex items-center gap-4 mt-8">
+<span class="w-24 h-1 bg-tertiary block"></span>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Sector 4 // Sub-level Descent</p>
+</div>
+</div>
+<!-- Journal Entry: Heavy Slabs -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- Metadata Monolith (Sidebar) -->
+<aside class="xl:col-span-3 bg-surface-container border-2 border-outline-variant p-slab-padding shadow-[16px_16px_0px_0px_#0e0e0e] flex flex-col gap-12 sticky top-48">
+<div>
+<h3 class="font-label-caps text-label-caps text-outline uppercase border-b-2 border-outline-variant pb-2 mb-4">Entry Vector</h3>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">Coordinate Array 77.A</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Stable atmosphere detected. Minimal degradation in structural supports.</p>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-outline uppercase border-b-2 border-outline-variant pb-2 mb-4">Temporal Anchor</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">schedule</span>
+<span class="font-body-md text-body-md text-on-surface uppercase">T-Minus 14:00:00</span>
+</div>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-outline uppercase border-b-2 border-outline-variant pb-2 mb-4">Tags</h3>
+<div class="flex flex-wrap gap-4">
+<span class="px-3 py-1 bg-surface-container-high border border-outline-variant font-label-caps text-label-caps text-on-surface">STRUCTURAL</span>
+<span class="px-3 py-1 bg-surface-container-high border border-outline-variant font-label-caps text-label-caps text-on-surface">ANOMALY</span>
+</div>
+</div>
+</aside>
+<!-- Entry Content -->
+<article class="xl:col-span-9 flex flex-col gap-gutter">
+<div class="bg-surface-container border-t-8 border-surface-container-highest p-slab-padding">
+<p class="font-headline-md text-headline-md text-on-surface mb-8">The monolithic structures extending into the void exhibit a density previously unrecorded. Sound dampens rapidly, suggesting an absorptive material composition.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant columns-1 lg:columns-2 gap-8 leading-relaxed">
+                            Initial scans indicate that the architecture is not merely structural but functional, perhaps serving as a massive heat sink or computational matrix. The surface texture is rough, akin to unpolished basalt, yet it yields a faint electromagnetic hum when approached within 2 meters. Further descent is required to map the primary terminus. Lighting conditions remain poor; bioluminescent flares have been deployed at 50-meter intervals to establish a return vector.
+                        </p>
+</div>
+<!-- Image Slab Pedestal -->
+<figure class="relative w-full border-4 border-outline-variant bg-surface-container-lowest p-unit shadow-[24px_24px_0px_0px_#0e0e0e] group">
+<img alt="Harsh concrete brutalist architecture interior with deep shadows and harsh geometric lines" class="w-full h-auto object-cover grayscale opacity-80 group-hover:opacity-100 transition-opacity duration-500 filter contrast-125" data-alt="Harsh concrete brutalist architecture interior with deep shadows and harsh geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQIJzW6K3_uSg8ZN59FDVZD3duUyQoQGpJ8peVO6Y0io6usmkoW3ZCeNKev2f6klgH-MTw2LIou3wFH3l8EmuLgiXZEAqCS_frvCpG-iij-M6NlgIGhW-O5W4-eU2orAlkXeO26FpgvyvSGL_N1P-0Z0ynaB66ZkYdEYSwMC6JHBYcShXItII0ZAfIDQgVUS1T417gxs_KNewQEgBJoWvznUFPK1swacfCw_fPoFXzlWHMuzJ-kFfymBBtyAWLmuGZqfI7E14CVvM"/>
+<figcaption class="absolute bottom-4 left-4 bg-background border border-outline-variant px-4 py-2 font-label-caps text-label-caps text-on-surface uppercase backdrop-blur-sm bg-opacity-80">
+                            Fig 1. // Lower Level Atrium
+                        </figcaption>
+</figure>
+</article>
+</section>
+</main>
+</div>
+</body></html>

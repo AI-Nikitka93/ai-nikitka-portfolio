@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dossier Detail - Kinetic Grid</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#484a44",
+                        "background": "#111411",
+                        "surface": "#111411",
+                        "on-error": "#690005",
+                        "tertiary-container": "#dfe4dc",
+                        "on-secondary-fixed-variant": "#464742",
+                        "surface-container-low": "#191c19",
+                        "tertiary-fixed-dim": "#c3c8c0",
+                        "on-background": "#e1e3dd",
+                        "inverse-primary": "#506600",
+                        "surface-container-highest": "#333632",
+                        "on-tertiary-fixed-variant": "#434842",
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0c0f0c",
+                        "surface-tint": "#abd600",
+                        "on-secondary-fixed": "#1a1c18",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#111411",
+                        "on-tertiary-container": "#616660",
+                        "surface-container-high": "#282b27",
+                        "on-secondary": "#2f312c",
+                        "secondary-fixed": "#e3e3db",
+                        "surface-variant": "#333632",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c7bf",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "outline-variant": "#444933",
+                        "surface-bright": "#373a36",
+                        "on-surface": "#e1e3dd",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary-fixed": "#dfe4dc",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#181d18",
+                        "on-tertiary": "#2d322c",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7bf",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2e312e",
+                        "error-container": "#93000a",
+                        "surface-container": "#1d201d",
+                        "on-secondary-container": "#b8b9b2",
+                        "outline": "#8e9379",
+                        "inverse-surface": "#e1e3dd",
+                        "primary-container": "#c3f400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-md": "800px",
+                        "margin": "48px",
+                        "container-sm": "400px",
+                        "container-lg": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "display-vertical": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-vertical": ["120px", { "lineHeight": "100px", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .writing-vertical { writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); }
+        .grid-bg { background-image: linear-gradient(to right, #282b27 1px, transparent 1px), linear-gradient(to bottom, #282b27 1px, transparent 1px); background-size: 40px 40px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative grid-bg">
+<!-- TopAppBar Shell (Hidden on MD+, Nav is suppressed as this is a detail view, but keeping the structural header for the brand anchor) -->
+<header class="docked full-width top-0 border-b border-zinc-800 bg-zinc-950 flex justify-between items-center w-full px-6 h-20 z-50 md:hidden">
+<div class="text-2xl font-black text-lime-400 tracking-widest font-['Space_Grotesk'] uppercase tracking-tighter">AI_NIKITKA93</div>
+<div class="flex gap-4">
+<button class="text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 p-2">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 w-full max-w-[1600px] mx-auto relative mt-20 md:mt-0">
+<!-- SideNavBar (Hidden as this is a detail/focus view, acting as a structural spacer or suppressed based on rules. Suppressing actual nav, using margin to simulate the grid structure) -->
+<div class="hidden md:flex flex-col w-64 z-40 fixed left-0 top-0 h-screen border-r border-zinc-800 bg-zinc-950 divide-y divide-zinc-800 pt-8 pb-8">
+<div class="px-6 pb-8">
+<button class="flex items-center gap-2 text-zinc-400 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0 p-4 font-label-caps text-label-caps border border-zinc-800 w-full justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+                    RETURN_TO_CORE
+                 </button>
+</div>
+<div class="flex-1 flex items-center justify-center writing-vertical">
+<span class="font-display-vertical text-display-vertical text-zinc-900 opacity-50 uppercase tracking-tighter whitespace-nowrap">DOSSIER</span>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 relative min-h-screen p-6 md:p-12 lg:p-24 overflow-hidden">
+<!-- Structural Grid Lines for the Canvas -->
+<div class="absolute inset-0 pointer-events-none border-l border-zinc-800 ml-[10%]"></div>
+<div class="absolute inset-0 pointer-events-none border-l border-zinc-800 ml-[40%] hidden lg:block"></div>
+<div class="absolute inset-0 pointer-events-none border-l border-zinc-800 ml-[70%] hidden lg:block"></div>
+<div class="absolute top-[20%] left-0 right-0 pointer-events-none border-t border-zinc-800"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 h-full items-start">
+<!-- Vertical Title Anchor (Asymmetric) -->
+<div class="lg:col-span-1 hidden lg:flex flex-col h-full pt-32">
+<h1 class="writing-vertical font-display-vertical text-display-vertical text-primary tracking-tighter uppercase ml-auto">
+                        KINETIC<br/><span class="text-primary-container">GRID_09</span>
+</h1>
+</div>
+<!-- Main Data Block -->
+<div class="lg:col-span-6 flex flex-col gap-12 pt-12 lg:pt-32 relative">
+<!-- Mobile/Tablet Title -->
+<div class="lg:hidden mb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter">
+                            KINETIC<br/><span class="text-primary-container">GRID_09</span>
+</h1>
+</div>
+<!-- Hero Image / Glitch Block -->
+<div class="relative border border-zinc-800 bg-surface p-2 group">
+<div class="absolute -right-4 -bottom-4 border border-zinc-800 w-full h-full pointer-events-none z-[-1] bg-surface-container-low transition-transform duration-0 group-hover:translate-x-1 group-hover:translate-y-1"></div>
+<img alt="Abstract geometric data visualization with glowing green lines on dark background representing kinetic grid structure" class="w-full h-auto aspect-video object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-0" data-alt="Abstract geometric data visualization with glowing green lines on dark background representing kinetic grid structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArU_7YpWwOpk1iYgDtj48BKlCPsicfmpkX0wWDAHyQRDa4NkLzmw6H0MlmV4zZWauPGzjUDq3o6iX__KZWKPknBCRCUmJB5gWm2qMdzWfVbIoiA1bDMxOhRNT3a-pZcE9uhzerMEwI9UVNTX1KUVIq9FIq6nFGhGZZQOok8BfLCaGUnHuKafICsmT3uS0QlWGUzuIWxuF8NkdbFt9iiLlfqLdW4lHRFU2-9jdlZ26hYbAsoNwQjOeEVHDhgl1irv6sC2HY4sku7ZJh"/>
+<div class="absolute top-4 left-4 bg-primary-container text-background font-label-caps text-label-caps px-2 py-1 uppercase">
+                            STATUS: ACTIVE
+                        </div>
+</div>
+<!-- Metadata Overlaps -->
+<div class="flex flex-col gap-0 border border-zinc-800 bg-surface relative -mt-8 ml-8 w-11/12 z-20">
+<div class="absolute -right-2 -bottom-2 border border-zinc-800 w-full h-full pointer-events-none z-[-1] bg-surface-container-highest"></div>
+<div class="grid grid-cols-2 divide-x divide-zinc-800 border-b border-zinc-800">
+<div class="p-4 hover:bg-zinc-900 transition-colors duration-0">
+<div class="font-label-caps text-label-caps text-zinc-500 uppercase mb-1">ORIGIN_NODE</div>
+<div class="font-body-lg text-body-lg text-primary">SECTOR_7G</div>
+</div>
+<div class="p-4 hover:bg-zinc-900 transition-colors duration-0">
+<div class="font-label-caps text-label-caps text-zinc-500 uppercase mb-1">LATENCY</div>
+<div class="font-body-lg text-body-lg text-primary-container flex items-center gap-2">
+                                    0.04ms <div class="w-1 h-1 bg-primary-container animate-pulse"></div>
+</div>
+</div>
+</div>
+<div class="p-6 divide-y divide-zinc-800">
+<div class="py-4 first:pt-0 last:pb-0 flex justify-between items-center group">
+<span class="font-body-md text-body-md text-zinc-400 group-hover:text-primary transition-colors duration-0">ENCRYPTION_LAYER</span>
+<span class="font-body-md text-body-md text-primary bg-zinc-900 px-2 py-1 border border-zinc-800">AES-256-GCM</span>
+</div>
+<div class="py-4 first:pt-0 last:pb-0 flex justify-between items-center group">
+<span class="font-body-md text-body-md text-zinc-400 group-hover:text-primary transition-colors duration-0">BANDWIDTH_CAP</span>
+<span class="font-body-md text-body-md text-primary bg-zinc-900 px-2 py-1 border border-zinc-800">10TB/s</span>
+</div>
+<div class="py-4 first:pt-0 last:pb-0 flex justify-between items-center group">
+<span class="font-body-md text-body-md text-zinc-400 group-hover:text-primary transition-colors duration-0">ROUTING_PROTOCOL</span>
+<span class="font-body-md text-body-md text-primary bg-zinc-900 px-2 py-1 border border-zinc-800">OSPFv3_MOD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Info Block (Right Side) -->
+<div class="lg:col-span-5 flex flex-col gap-12 pt-12 lg:pt-64">
+<!-- Text Description Box -->
+<div class="border border-zinc-800 p-8 bg-surface relative">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary-container"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 uppercase tracking-tighter">OPERATIONAL<br/>PARAMETERS</h3>
+<p class="font-body-lg text-body-lg text-zinc-400 mb-6 text-justify">
+                            The Kinetic Grid utilizes an asymmetric routing lattice to bypass standard firewall protocols. Data is shattered into non-sequential packets and reassembled only at the verified termination node. Any interception attempt results in instant packet degradation.
+                         </p>
+<div class="flex gap-4 mt-8">
+<button class="bg-primary-container text-background font-label-caps text-label-caps px-6 py-3 uppercase border border-primary-container hover:bg-transparent hover:text-primary-container transition-all duration-0 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+                                 INITIATE_HANDSHAKE
+                             </button>
+</div>
+</div>
+<!-- Stream Logs -->
+<div class="border border-zinc-800 bg-surface">
+<div class="p-4 border-b border-zinc-800 bg-zinc-900 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-primary uppercase">SYS_LOG_DUMP</span>
+<span class="material-symbols-outlined text-zinc-500 text-sm" data-icon="sync">sync</span>
+</div>
+<div class="p-4 flex flex-col gap-2 font-['Space_Grotesk'] text-xs text-zinc-500 h-48 overflow-hidden relative">
+<div class="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-surface to-transparent z-10"></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:11]</span><span class="text-zinc-400">NODE_A1 CONNECTED</span></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:12]</span><span class="text-zinc-400">HANDSHAKE_VERIFIED</span></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:14]</span><span class="text-primary-container">DATA_STREAM_ACTIVE</span></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:15]</span><span class="text-zinc-400">PACKET_LOSS: 0.00%</span></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:18]</span><span class="text-error">WARNING: PROBE_DETECTED</span></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:19]</span><span class="text-zinc-400">REROUTING...</span></div>
+<div class="flex gap-4"><span class="text-zinc-700">[14:02:20]</span><span class="text-zinc-400">PATH_SECURED</span></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer Shell -->
+<footer class="border-t-2 border-lime-400 w-full bg-zinc-950 flex flex-col md:flex-row justify-between items-start p-12 gap-8 z-50 relative mt-auto">
+<div class="flex flex-col gap-2">
+<div class="text-lime-400 font-black font-['Space_Grotesk'] text-[10px] uppercase font-bold">AI_NIKITKA93</div>
+<div class="text-zinc-500 font-['Space_Grotesk'] text-[10px] uppercase font-bold">©2024 AI_NIKITKA93 // SWISS_MODERNISM_ENGINE</div>
+</div>
+<div class="flex gap-6">
+<a class="font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 hover:text-white transition-colors duration-0" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 hover:text-white transition-colors duration-0" href="#">LATTICE_API</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 hover:text-white transition-colors duration-0" href="#">CORE_DEBUG</a>
+</div>
+</footer>
+</body></html>

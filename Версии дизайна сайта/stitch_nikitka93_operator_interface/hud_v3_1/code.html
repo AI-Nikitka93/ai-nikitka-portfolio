@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>МЕДИА_СИСТЕМА // HUD_v4.2</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#0c141a",
+                        "outline-variant": "#3a4a49",
+                        "on-secondary-fixed-variant": "#43474e",
+                        "surface-container-highest": "#2e363c",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#dfe2eb",
+                        "on-primary-fixed": "#002020",
+                        "on-primary-container": "#007070",
+                        "primary": "#ffffff",
+                        "tertiary-container": "#dde3ec",
+                        "primary-fixed": "#00fbfb",
+                        "secondary-container": "#454950",
+                        "on-tertiary-fixed-variant": "#41474f",
+                        "on-tertiary-container": "#5f656d",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#dde3ec",
+                        "primary-fixed-dim": "#00dddd",
+                        "tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#004f4f",
+                        "on-tertiary": "#2b3138",
+                        "on-secondary-container": "#b5b8c1",
+                        "on-secondary-fixed": "#181c22",
+                        "on-error": "#690005",
+                        "surface-dim": "#0c141a",
+                        "on-secondary": "#2d3137",
+                        "surface-container-low": "#151d22",
+                        "outline": "#839493",
+                        "surface": "#0c141a",
+                        "surface-container": "#192126",
+                        "surface-container-lowest": "#070f15",
+                        "secondary-fixed-dim": "#c3c6cf",
+                        "on-surface-variant": "#b9cac9",
+                        "inverse-on-surface": "#293138",
+                        "on-primary": "#003737",
+                        "on-tertiary-fixed": "#161c23",
+                        "surface-container-high": "#232b31",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#00fbfb",
+                        "surface-tint": "#00dddd",
+                        "tertiary-fixed-dim": "#c1c7d0",
+                        "secondary": "#c3c6cf",
+                        "inverse-primary": "#006a6a",
+                        "on-surface": "#dbe3ec",
+                        "inverse-surface": "#dbe3ec",
+                        "on-background": "#dbe3ec",
+                        "surface-bright": "#323a40",
+                        "surface-variant": "#2e363c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "unit": "4px",
+                        "module-gap": "20px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["JetBrains Mono"],
+                        "data-viz": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-md": ["JetBrains Mono"],
+                        "body-lg": ["JetBrains Mono"],
+                        "headline-lg": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "data-viz": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-caps": ["11px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanlines-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: overlay;
+        }
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(58, 74, 73, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(58, 74, 73, 0.1) 1px, transparent 1px);
+        }
+        /* Custom scrollbar for HUD feel */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0c141a; }
+        ::-webkit-scrollbar-thumb { background: #3a4a49; }
+        ::-webkit-scrollbar-thumb:hover { background: #00dddd; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-sm text-body-sm h-screen overflow-hidden flex selection:bg-surface-tint selection:text-background relative">
+<div class="scanlines-overlay"></div>
+<!-- SideNavBar Component -->
+<nav class="flex flex-col h-full z-40 bg-[#161B22] docked left-0 w-20 border-r border-[#30363D] flat no-shadows flex-shrink-0 relative">
+<div class="flex flex-col items-center justify-center p-unit border-b border-[#30363D] pb-4 pt-6">
+<span class="text-cyan-500 font-bold font-mono text-[10px] tracking-widest text-center leading-tight">МОДУЛЬ_084</span>
+<span class="font-mono text-[8px] text-surface-tint opacity-70 tracking-widest text-center mt-1">ONLINE // СТАТУС_АКТИВЕН</span>
+</div>
+<div class="flex-1 flex flex-col pt-4 overflow-y-auto">
+<!-- Active Tab: ТЕРМИНАЛ -->
+<a class="bg-cyan-400 text-[#0D1117] shadow-[0_0_15px_rgba(0,255,255,0.6)] rounded-sm m-2 flex flex-col items-center justify-center py-3 scale-95 active:scale-90 transition-all cursor-pointer relative group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-mono text-[10px] tracking-widest mt-1 hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap shadow-[0_0_10px_rgba(0,255,255,0.1)]">ТЕРМИНАЛ</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 cursor-pointer relative group" href="#">
+<span class="material-symbols-outlined">lan</span>
+<span class="font-mono text-[10px] tracking-widest mt-1 hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap shadow-[0_0_10px_rgba(0,255,255,0.1)]">СЕТЬ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 cursor-pointer relative group" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-mono text-[10px] tracking-widest mt-1 hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap shadow-[0_0_10px_rgba(0,255,255,0.1)]">АРХИВ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 cursor-pointer relative group" href="#">
+<span class="material-symbols-outlined">database</span>
+<span class="font-mono text-[10px] tracking-widest mt-1 hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap shadow-[0_0_10px_rgba(0,255,255,0.1)]">БАЗА_ДАННЫХ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 cursor-pointer relative group" href="#">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-mono text-[10px] tracking-widest mt-1 hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap shadow-[0_0_10px_rgba(0,255,255,0.1)]">КОНФИГУРАЦИЯ</span>
+</a>
+</div>
+<div class="mt-auto border-t border-[#30363D] flex flex-col pb-4 pt-2">
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-error hover:border-l-4 transition-all scale-95 active:scale-90 cursor-pointer relative group hover:text-error" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-mono text-[10px] tracking-widest mt-1 hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-error text-error px-2 py-1 z-50 whitespace-nowrap shadow-[0_0_10px_rgba(255,0,0,0.2)]">ВЫХОД</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col h-full overflow-hidden relative grid-bg">
+<!-- TopAppBar Component -->
+<header class="flex justify-between items-center w-full px-6 h-12 bg-[#0D1117] text-cyan-400 docked full-width top-0 border-b border-[#30363D] shadow-[0_0_10px_rgba(0,255,255,0.1)] z-30 flex-shrink-0">
+<div class="flex items-center gap-8">
+<div class="font-mono font-black text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] text-lg tracking-widest uppercase">
+                    МЕДИА_СИСТЕМА // HUD_v4.2
+                </div>
+<nav class="hidden md:flex items-end h-full pt-4 gap-6 font-mono uppercase tracking-tighter text-xs">
+<!-- Active Link: ОБЗОР -->
+<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1 transition-all duration-150 ease-in-out cursor-pointer hover:bg-cyan-400/10 hover:text-cyan-400 h-full flex items-end" href="#">ОБЗОР</a>
+<!-- Inactive Links -->
+<a class="text-slate-500 hover:text-cyan-200 transition-colors pb-1 border-b-2 border-transparent transition-all duration-150 ease-in-out cursor-pointer hover:bg-cyan-400/10 hover:text-cyan-400 h-full flex items-end" href="#">АНАЛИТИКА</a>
+<a class="text-slate-500 hover:text-cyan-200 transition-colors pb-1 border-b-2 border-transparent transition-all duration-150 ease-in-out cursor-pointer hover:bg-cyan-400/10 hover:text-cyan-400 h-full flex items-end" href="#">ПОТОКИ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 text-cyan-400">
+<button class="transition-all duration-150 ease-in-out cursor-pointer text-slate-500 hover:text-cyan-200 hover:bg-cyan-400/10 p-1 rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<button class="transition-all duration-150 ease-in-out cursor-pointer text-slate-500 hover:text-cyan-200 hover:bg-cyan-400/10 p-1 rounded-sm flex items-center justify-center relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-surface-tint rounded-full shadow-[0_0_5px_rgba(0,221,221,0.8)]"></span>
+</button>
+<button class="transition-all duration-150 ease-in-out cursor-pointer text-slate-500 hover:text-cyan-200 hover:bg-cyan-400/10 p-1 rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</button>
+</div>
+</header>
+<!-- Main Dashboard Canvas -->
+<main class="flex-1 overflow-y-auto p-margin">
+<div class="max-w-[1800px] mx-auto h-full flex flex-col gap-module-gap pb-12">
+<!-- Top Row: Core Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-module-gap">
+<!-- Metric Block 1 -->
+<div class="bg-surface border border-outline-variant rounded p-4 relative overflow-hidden group hover:border-surface-tint hover:shadow-[0_0_15px_rgba(0,221,221,0.15)] transition-all">
+<div class="absolute top-0 right-0 w-8 h-8 bg-surface-container-highest flex items-center justify-center border-b border-l border-outline-variant rounded-bl">
+<span class="material-symbols-outlined text-surface-tint text-[16px]">memory</span>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-2">MOD_01 // CPU_LOAD</div>
+<div class="font-headline-lg text-headline-lg text-primary flex items-baseline gap-2">
+                            84.2 <span class="font-data-viz text-data-viz text-surface-tint">%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
+<div class="h-full bg-surface-tint w-[84%]" style="box-shadow: 0 0 8px rgba(0,221,221,0.8);"></div>
+</div>
+</div>
+<!-- Metric Block 2 -->
+<div class="bg-surface border border-outline-variant rounded p-4 relative overflow-hidden hover:border-surface-tint hover:shadow-[0_0_15px_rgba(0,221,221,0.15)] transition-all">
+<div class="absolute top-0 right-0 w-8 h-8 bg-surface-container-highest flex items-center justify-center border-b border-l border-outline-variant rounded-bl">
+<span class="material-symbols-outlined text-surface-tint text-[16px]">route</span>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-2">MOD_02 // NETWORK_I/O</div>
+<div class="font-headline-lg text-headline-lg text-primary flex items-baseline gap-2">
+                            1.2 <span class="font-data-viz text-data-viz text-surface-tint">TB/s</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-data-viz text-data-viz flex justify-between">
+<span>UP: 450 GB/s</span>
+<span>DWN: 750 GB/s</span>
+</div>
+</div>
+<!-- Metric Block 3 -->
+<div class="bg-surface border border-outline-variant rounded p-4 relative overflow-hidden hover:border-surface-tint hover:shadow-[0_0_15px_rgba(0,221,221,0.15)] transition-all md:col-span-2">
+<div class="flex justify-between items-start mb-4">
+<div class="font-label-caps text-label-caps text-on-surface-variant">MOD_03 // ACTIVE_PROCESSES</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error shadow-[0_0_5px_rgba(255,180,171,0.8)]"></span>
+<span class="font-data-viz text-data-viz text-error">1 CRITICAL</span>
+</div>
+</div>
+<div class="flex gap-2 flex-wrap">
+<span class="px-2 py-1 bg-surface-container-highest border border-outline-variant text-on-surface font-data-viz text-data-viz rounded flex items-center gap-1">
+<span class="text-surface-tint">&gt;</span> SYS_KERNEL_09
+                            </span>
+<span class="px-2 py-1 bg-surface-container-highest border border-outline-variant text-on-surface font-data-viz text-data-viz rounded flex items-center gap-1">
+<span class="text-surface-tint">&gt;</span> DATA_SYNC_V2
+                            </span>
+<span class="px-2 py-1 bg-surface-container-highest border border-outline-variant text-on-surface font-data-viz text-data-viz rounded flex items-center gap-1">
+<span class="text-surface-tint">&gt;</span> AUTH_GATEWAY
+                            </span>
+<span class="px-2 py-1 bg-error-container border border-error text-on-error-container font-data-viz text-data-viz rounded flex items-center gap-1">
+<span class="text-error">&gt;</span> SEC_BREACH_DETECT
+                            </span>
+</div>
+</div>
+</div>
+<!-- Middle Row: Complex Data -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-module-gap h-96">
+<!-- Main Chart Area -->
+<div class="md:col-span-8 bg-surface border border-outline-variant rounded flex flex-col relative overflow-hidden">
+<div class="border-b border-outline-variant p-3 flex justify-between items-center bg-surface-container-low">
+<div class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">monitoring</span>
+                                MOD_04 // TRAFFIC_ANALYSIS
+                            </div>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-tint text-background font-data-viz text-data-viz rounded shadow-[0_0_8px_rgba(0,221,221,0.4)]">LIVE</button>
+<button class="px-3 py-1 bg-surface-container-highest border border-outline-variant text-on-surface font-data-viz text-data-viz rounded hover:text-surface-tint transition-colors">1H</button>
+<button class="px-3 py-1 bg-surface-container-highest border border-outline-variant text-on-surface font-data-viz text-data-viz rounded hover:text-surface-tint transition-colors">24H</button>
+</div>
+</div>
+<div class="flex-1 p-4 relative">
+<!-- Abstract Representation of a Line Chart using borders/divs -->
+<div class="absolute inset-x-4 inset-y-4 border-l border-b border-outline-variant flex items-end">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="border-t border-outline-variant w-full h-0"></div>
+<div class="border-t border-outline-variant w-full h-0"></div>
+<div class="border-t border-outline-variant w-full h-0"></div>
+<div class="border-t border-outline-variant w-full h-0"></div>
+</div>
+<!-- Data Line (Simulated via SVG path) -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00dddd" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#00dddd" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,80 L10,75 L20,85 L30,60 L40,65 L50,40 L60,50 L70,20 L80,30 L90,10 L100,15 L100,100 L0,100 Z" fill="url(#chartGradient)"></path>
+<polyline fill="none" points="0,80 10,75 20,85 30,60 40,65 50,40 60,50 70,20 80,30 90,10 100,15" stroke="#00dddd" stroke-width="1.5" style="filter: drop-shadow(0 0 4px rgba(0,221,221,0.8));"></polyline>
+<!-- Data Point Marker -->
+<circle cx="90" cy="10" fill="#ffffff" r="2" stroke="#00dddd" stroke-width="1" style="filter: drop-shadow(0 0 6px #00dddd);"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Side Panel: Logs/Terminals -->
+<div class="md:col-span-4 bg-surface border border-outline-variant rounded flex flex-col">
+<div class="border-b border-outline-variant p-3 bg-surface-container-low flex justify-between items-center">
+<div class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+                                MOD_05 // SYSTEM_LOG
+                            </div>
+<span class="w-2 h-2 rounded-full bg-surface-tint opacity-80 animate-pulse shadow-[0_0_5px_rgba(0,221,221,0.5)]"></span>
+</div>
+<div class="flex-1 p-3 overflow-hidden flex flex-col font-data-viz text-data-viz text-on-surface-variant space-y-2">
+<div class="flex gap-2 hover:bg-surface-container-highest p-1 rounded transition-colors group">
+<span class="text-surface-tint opacity-70">14:02:11</span>
+<span class="text-on-surface">[INFO]</span>
+<span class="truncate">Node connection established 192.168.x.x</span>
+</div>
+<div class="flex gap-2 hover:bg-surface-container-highest p-1 rounded transition-colors group">
+<span class="text-surface-tint opacity-70">14:02:15</span>
+<span class="text-on-surface">[SYNC]</span>
+<span class="truncate">Data replication started on Volume_02</span>
+</div>
+<div class="flex gap-2 hover:bg-surface-container-highest p-1 rounded transition-colors group">
+<span class="text-surface-tint opacity-70">14:03:01</span>
+<span class="text-error">[WARN]</span>
+<span class="truncate text-error">Latency spike detected in sector 4</span>
+</div>
+<div class="flex gap-2 hover:bg-surface-container-highest p-1 rounded transition-colors group">
+<span class="text-surface-tint opacity-70">14:03:45</span>
+<span class="text-on-surface">[INFO]</span>
+<span class="truncate">Auth token refreshed for user SYS_ADMIN</span>
+</div>
+<div class="flex gap-2 hover:bg-surface-container-highest p-1 rounded transition-colors group">
+<span class="text-surface-tint opacity-70">14:04:12</span>
+<span class="text-on-surface">[EXEC]</span>
+<span class="truncate">Routine maintenance script init</span>
+</div>
+<div class="mt-auto pt-2 border-t border-outline-variant flex items-center gap-2 text-surface-tint">
+<span>&gt;</span>
+<input class="bg-transparent border-none p-0 text-surface-tint font-data-viz text-data-viz w-full focus:ring-0 placeholder:text-surface-tint/30" placeholder="Enter command..." readonly="" type="text" value="sys.status --verbose _"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Map & Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-module-gap h-64">
+<!-- Global Map Node -->
+<div class="bg-surface border border-outline-variant rounded flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full p-3 bg-gradient-to-b from-surface to-transparent z-10 flex justify-between items-center">
+<div class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-2 backdrop-blur-md px-2 py-1 rounded bg-surface/50">
+<span class="material-symbols-outlined text-[14px]">public</span>
+                                MOD_06 // GLOBAL_NODES
+                            </div>
+<div class="font-data-viz text-data-viz text-surface-tint backdrop-blur-md px-2 py-1 rounded bg-surface/50 border border-surface-tint/30">
+                                42 ACTIVE
+                            </div>
+</div>
+<div class="flex-1 w-full h-full relative bg-surface-container-lowest">
+<!-- Image visually representing a high-tech map with glowing nodes -->
+<img alt="World map" class="w-full h-full object-cover opacity-40 mix-blend-screen grayscale contrast-150" data-alt="High contrast dark digital world map with glowing cyan nodes and connection lines representing a global network infrastructure" data-location="Global Network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmy7TTULVQTPSEUJemHgJShHbHD0mQ1_TFJskq5pjR5T95y3dfq9OGJaI004LAZ70alC3ERvak9_rzn0-AzL_rDQ9fj3iiohPItxleWJpvq6EY6ebGn4Sv5ePRqkVow_NgqjOlLeZFoPIhgN6pbDUtgt20ReSsvg_Q3wpRLINY_Zr-gCm1Yrglk1A_fDcjHGlsVK446YchydxeGlLSlUa_nFjqeJW46K1TrdprSLCQqKMvRu5uiztQPoUJisuezperqJhzB_-WoENt"/>
+<!-- Overlay to tint it cyan -->
+<div class="absolute inset-0 bg-surface-tint mix-blend-color opacity-20"></div>
+<!-- Simulated Nodes -->
+<div class="absolute top-[30%] left-[20%] w-2 h-2 bg-surface-tint rounded-full shadow-[0_0_10px_#00dddd]"></div>
+<div class="absolute top-[40%] left-[45%] w-2 h-2 bg-surface-tint rounded-full shadow-[0_0_10px_#00dddd]"></div>
+<div class="absolute top-[25%] left-[70%] w-3 h-3 bg-surface-tint rounded-full shadow-[0_0_15px_#00dddd] border border-white"></div>
+<!-- Crosshair -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-surface-tint/30 rounded-full flex items-center justify-center pointer-events-none">
+<div class="w-1 h-2 bg-surface-tint/50 absolute top-0"></div>
+<div class="w-1 h-2 bg-surface-tint/50 absolute bottom-0"></div>
+<div class="w-2 h-1 bg-surface-tint/50 absolute left-0"></div>
+<div class="w-2 h-1 bg-surface-tint/50 absolute right-0"></div>
+<div class="w-1 h-1 bg-surface-tint rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Configuration Summary -->
+<div class="bg-surface border border-outline-variant rounded p-4 flex flex-col">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">dns</span>
+                            MOD_07 // SERVER_CLUSTER_STATUS
+                        </div>
+<div class="flex-1 flex flex-col gap-3 justify-center">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<span class="font-body-sm text-body-sm text-on-surface">CLUSTER_ALPHA</span>
+<div class="flex items-center gap-4">
+<span class="font-data-viz text-data-viz text-surface-tint">99.9% UPTIME</span>
+<div class="w-16 h-1 bg-surface-container-highest rounded"><div class="w-full h-full bg-surface-tint rounded"></div></div>
+</div>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<span class="font-body-sm text-body-sm text-on-surface">CLUSTER_BETA</span>
+<div class="flex items-center gap-4">
+<span class="font-data-viz text-data-viz text-on-surface-variant">85.2% UPTIME</span>
+<div class="w-16 h-1 bg-surface-container-highest rounded"><div class="w-[85%] h-full bg-on-surface-variant rounded"></div></div>
+</div>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant pb-2 opacity-50">
+<span class="font-body-sm text-body-sm text-on-surface">CLUSTER_GAMMA</span>
+<div class="flex items-center gap-4">
+<span class="font-data-viz text-data-viz text-error">OFFLINE</span>
+<div class="w-16 h-1 bg-surface-container-highest rounded"><div class="w-0 h-full bg-error rounded"></div></div>
+</div>
+</div>
+<div class="mt-2 flex gap-3">
+<button class="flex-1 bg-surface-container-highest border border-outline-variant hover:bg-surface-tint hover:text-background text-on-surface font-label-caps text-label-caps py-2 rounded transition-all hover:shadow-[0_0_10px_rgba(0,221,221,0.4)] flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">sync</span> SYNC ALL
+                                </button>
+<button class="flex-1 bg-transparent border border-surface-tint text-surface-tint hover:bg-surface-tint/10 font-label-caps text-label-caps py-2 rounded transition-all flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">add</span> NEW NODE
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

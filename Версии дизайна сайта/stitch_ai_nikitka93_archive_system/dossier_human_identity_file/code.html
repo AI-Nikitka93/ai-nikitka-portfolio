@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Human Identity File - Nikita Kizevich</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e4e3d6",
+                        "surface-dim": "#121414",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-tint": "#00e61a",
+                        "background": "#121414",
+                        "on-tertiary-container": "#b8291c",
+                        "surface": "#121414",
+                        "on-secondary-fixed": "#1b1c14",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-bright": "#383939",
+                        "outline": "#85967d",
+                        "inverse-surface": "#e3e2e2",
+                        "primary-fixed": "#76ff65",
+                        "error-container": "#93000a",
+                        "secondary-container": "#494a40",
+                        "surface-container-highest": "#343535",
+                        "on-background": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "on-primary-container": "#007206",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#343535",
+                        "on-primary-fixed-variant": "#005303",
+                        "on-surface-variant": "#baccb1",
+                        "secondary-fixed-dim": "#c8c7bb",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c7bb",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "inverse-primary": "#006e06",
+                        "on-secondary": "#303128",
+                        "primary-container": "#32ff32",
+                        "surface-container-high": "#292a2a",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-container": "#ffd3cc",
+                        "error": "#ffb4ab",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690000",
+                        "tertiary-fixed": "#ffdad4",
+                        "outline-variant": "#3c4b36",
+                        "primary-fixed-dim": "#00e61a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#920703",
+                        "on-primary-fixed": "#002201",
+                        "on-secondary-container": "#b9b9ad",
+                        "primary": "#eeffe4",
+                        "on-secondary-fixed-variant": "#47473e",
+                        "on-surface": "#e3e2e2",
+                        "on-primary": "#003a01"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-size": "24px",
+                        "unit": "4px",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-base": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-code": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-code": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .crt-scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(rgba(18, 20, 20, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.8;
+        }
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+            pointer-events: none;
+            z-index: 9998;
+        }
+        .flicker:hover {
+            animation: flicker 0.15s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.9; }
+        }
+        .block-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 14px;
+            background-color: #32ff32;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .stamp-overlay {
+            transform: rotate(-3deg);
+            border: 4px solid #b8291c;
+        }
+        .bg-crt-grid {
+            background-image: 
+                linear-gradient(rgba(133, 150, 125, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(133, 150, 125, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative font-body-base overflow-x-hidden pt-16 pb-8 pl-64">
+<!-- CRT Overlays -->
+<div class="crt-scanlines"></div>
+<div class="vignette"></div>
+<div class="fixed inset-0 bg-crt-grid z-[-1]"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950 dark:bg-black font-space-grotesk uppercase tracking-widest text-sm docked full-width top-0 border-b-4 border-zinc-800">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-black text-lime-400 dark:text-lime-400 tracking-tighter">THE_LIVING_ARCHIVE</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75 p-2" href="#">RU/EN_LOCALE</a>
+<a class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75 p-2" href="#">TIME_SYNC:04:22:11</a>
+<a class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75 p-2" href="#">STATUS:OK</a>
+</nav>
+<button class="text-lime-400 dark:text-lime-400 border-2 border-lime-400 px-4 py-2 hover:bg-lime-400 hover:text-black transition-colors duration-75">
+            TERMINATE_SESSION
+        </button>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 z-40 overflow-y-auto bg-zinc-950 dark:bg-black font-space-grotesk uppercase text-xs font-bold docked border-r-4 border-zinc-800 flex flex-col">
+<div class="p-6 border-b border-zinc-800/30 flex items-center gap-4">
+<div class="w-10 h-10 bg-zinc-800 border-2 border-lime-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-lime-400">admin_panel_settings</span>
+</div>
+<div>
+<div class="text-lime-400 font-black">ROOT_DIRECTORY</div>
+<div class="text-zinc-500 text-[10px]">MONOLITH_OS_v4.2</div>
+</div>
+</div>
+<nav class="flex-1 mt-4">
+<a class="bg-lime-400 text-black px-4 py-3 flex items-center gap-3 scale-[0.99] border-l-4 border-lime-400" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">database</span>
+                SECTOR_01:ARCHIVE
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined">security</span>
+                SECTOR_02:OPERATOR
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                SECTOR_03:TELEMETRY
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                SECTOR_04:COMMS
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<button class="w-full border-2 border-lime-400 text-lime-400 py-2 hover:bg-lime-400 hover:text-black transition-colors">
+                NEW_QUERY
+            </button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="p-8 max-w-6xl mx-auto z-10 relative">
+<!-- Header Section -->
+<div class="mb-12 border-b-2 border-outline-variant pb-4 flex justify-between items-end">
+<div>
+<h1 class="font-display-lg text-primary-fixed uppercase">Nikita Kizevich</h1>
+<p class="font-label-code text-on-surface-variant uppercase tracking-widest mt-2">[ SUBJECT_ID: NK-84-ALPHA ] <span class="block-cursor"></span></p>
+</div>
+<div class="text-right">
+<div class="font-label-code text-primary-fixed border border-primary-fixed px-2 py-1 inline-block mb-2">VERIFIED_HUMAN</div>
+<div class="font-body-sm text-on-surface-variant">LAST_SYNC: -0.003ms</div>
+</div>
+</div>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Profile Photo & Primary Stats -->
+<div class="md:col-span-1 space-y-6">
+<!-- Photo Card -->
+<div class="border-4 border-surface-bright bg-surface-container relative p-2">
+<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary-fixed-dim -translate-x-1 -translate-y-1"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-fixed-dim translate-x-1 -translate-y-1"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary-fixed-dim -translate-x-1 translate-y-1"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary-fixed-dim translate-x-1 translate-y-1"></div>
+<img alt="Monochromatic, high-contrast, grainy portrait of a serious male subject looking slightly off-camera, dramatic lighting, industrial background." class="w-full h-auto grayscale contrast-150 brightness-75 border border-surface-bright mix-blend-luminosity" data-alt="Monochromatic, high-contrast, grainy portrait of a serious male subject looking slightly off-camera, dramatic lighting, industrial background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-sxMl6GCKnV7EQbx9OPWTLCO6ol6Wo8JbJZvt7PcxX-OZ8GeNF9cPf85T9lc42ph6ryzpnPmCOefXhNi5IzGyJzplHtAuxcTBTtyKeRbtVYmboZySlkfZ72IoUAI2GkYnaa5uoZ7ryGd2XF2BgyCJ2V0X-m1FV8_8ejdP12XUydrn0bLrx_1zRsxReDAyhM1CPFxlQqXVG02KDkokP2pxCwPPxVJggdNAoJ0HLZZ0MMexyYkNOSBpv-PbmAwwYkFPLBvQtoHEODz"/>
+<div class="mt-4 font-label-code text-surface-tint border-t border-surface-bright pt-2 flex justify-between">
+<span>OPTICAL_SCAN</span>
+<span>[ MATCH ]</span>
+</div>
+<!-- Stamp -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 stamp-overlay p-2 bg-background/90 z-20 pointer-events-none">
+<span class="font-display-lg text-on-tertiary-container text-4xl uppercase tracking-tighter">HUMAN_LAYER</span>
+</div>
+</div>
+<!-- Bio Metrics -->
+<div class="border-2 border-surface-bright p-4 bg-surface-container-lowest">
+<h2 class="font-label-code text-secondary-fixed mb-4 border-b border-surface-bright pb-2">BIOMETRIC_DATA</h2>
+<ul class="font-body-sm text-on-surface space-y-3">
+<li class="flex justify-between items-center border-b border-dashed border-surface-bright pb-1">
+<span class="text-on-surface-variant">&gt; HEART_RATE</span>
+<span class="text-primary-fixed">68 BPM</span>
+</li>
+<li class="flex justify-between items-center border-b border-dashed border-surface-bright pb-1">
+<span class="text-on-surface-variant">&gt; CORTISOL_LVL</span>
+<span class="text-primary-fixed">NOMINAL</span>
+</li>
+<li class="flex justify-between items-center border-b border-dashed border-surface-bright pb-1">
+<span class="text-on-surface-variant">&gt; PUPIL_DILATION</span>
+<span class="text-primary-fixed">3.2mm</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant">&gt; NEURAL_SYNC</span>
+<span class="text-on-tertiary-container flicker">ERR_0x9A</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Details & Logs -->
+<div class="md:col-span-2 space-y-6">
+<!-- Identification Block -->
+<div class="border-2 border-surface-bright p-6 bg-surface-container relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container opacity-5 blur-3xl"></div>
+<h2 class="font-headline-md text-secondary-fixed mb-6 uppercase">Identity_Matrix</h2>
+<div class="grid grid-cols-2 gap-x-8 gap-y-6 font-body-sm">
+<div>
+<label class="block text-on-surface-variant font-label-code mb-1 border-b border-surface-bright inline-block">FULL_NAME</label>
+<div class="text-on-surface uppercase pt-1">Nikita Kizevich</div>
+</div>
+<div>
+<label class="block text-on-surface-variant font-label-code mb-1 border-b border-surface-bright inline-block">CLEARANCE_CODE</label>
+<div class="text-primary-fixed uppercase pt-1">L7-OMEGA</div>
+</div>
+<div>
+<label class="block text-on-surface-variant font-label-code mb-1 border-b border-surface-bright inline-block">ASSIGNMENT_SECTOR</label>
+<div class="text-on-surface uppercase pt-1">DEEP_STORAGE_NODE_04</div>
+</div>
+<div>
+<label class="block text-on-surface-variant font-label-code mb-1 border-b border-surface-bright inline-block">STATUS</label>
+<div class="text-primary-fixed uppercase pt-1 bg-primary-fixed/10 px-2 py-0.5 inline-block">ACTIVE_OPERATIVE</div>
+</div>
+</div>
+</div>
+<!-- History Log -->
+<div class="border-2 border-surface-bright p-6 bg-surface-container-lowest">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-md text-secondary-fixed uppercase">Access_Logs</h2>
+<button class="border border-outline-variant px-3 py-1 font-label-code text-on-surface-variant hover:bg-on-surface hover:text-surface transition-colors">
+                            EXPORT_DATA
+                        </button>
+</div>
+<div class="space-y-4 font-body-sm text-on-surface">
+<div class="flex gap-4 p-2 border-l-2 border-primary-fixed bg-surface-container">
+<span class="text-on-surface-variant w-32">08:44:12 EST</span>
+<span class="text-primary-fixed font-bold">[GRANT]</span>
+<span class="flex-1">Terminal Auth - Sector 4 Control</span>
+</div>
+<div class="flex gap-4 p-2 border-l-2 border-surface-bright">
+<span class="text-on-surface-variant w-32">04:12:05 EST</span>
+<span class="text-on-surface-variant">[PING]</span>
+<span class="flex-1">Biometric handshake verified</span>
+</div>
+<div class="flex gap-4 p-2 border-l-2 border-on-tertiary-container bg-error-container/10">
+<span class="text-on-surface-variant w-32">23:59:00 EST</span>
+<span class="text-on-tertiary-container font-bold">[DENY]</span>
+<span class="flex-1 text-on-surface-variant">Restricted Archive Access Attempted</span>
+</div>
+<div class="flex gap-4 p-2 border-l-2 border-surface-bright">
+<span class="text-on-surface-variant w-32">18:30:44 EST</span>
+<span class="text-on-surface-variant">[LOGOUT]</span>
+<span class="flex-1">Session Terminated by Host</span>
+</div>
+</div>
+</div>
+<!-- Terminal Input -->
+<div class="border-2 border-surface-bright p-4 bg-black">
+<div class="font-label-code text-surface-tint mb-2">AWAITING_INPUT...</div>
+<div class="flex items-center text-primary-fixed font-body-base">
+<span class="mr-2">&gt;</span>
+<input class="bg-transparent border-none outline-none focus:ring-0 w-full font-body-base text-primary-fixed placeholder-primary-fixed/30" placeholder="ENTER_COMMAND_" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full h-8 flex justify-between items-center px-4 z-50 pointer-events-none bg-zinc-950 dark:bg-black font-mono text-[10px] uppercase tracking-tighter docked border-t-2 border-zinc-800">
+<div class="text-zinc-600">
+            © 1984-2024 DEEP_STORAGE_MONOLITH. ALL_RIGHTS_RETAINED.
+        </div>
+<div class="flex gap-4">
+<span class="text-zinc-600">SYSTEM_LOGS</span>
+<span class="text-zinc-600">HARDWARE_STATE</span>
+<span class="text-zinc-600">ENCRYPTION_KEY</span>
+</div>
+</footer>
+</body></html>

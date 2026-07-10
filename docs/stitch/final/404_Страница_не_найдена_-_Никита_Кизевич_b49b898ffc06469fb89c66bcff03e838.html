@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - Путь не найден | Nikita Kizevich</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#490106",
+                        "on-tertiary-fixed": "#384046",
+                        "inverse-surface": "#f9f9fc",
+                        "on-tertiary-fixed-variant": "#545d63",
+                        "secondary-dim": "#8ea0b2",
+                        "on-surface": "#e0e6ed",
+                        "primary-dim": "#96baf5",
+                        "secondary-fixed": "#d3e4f9",
+                        "primary": "#a7c8ff",
+                        "secondary": "#8ea0b2",
+                        "on-secondary-fixed-variant": "#4d5d6e",
+                        "tertiary-fixed-dim": "#cdd5dc",
+                        "on-primary-container": "#b7d1ff",
+                        "tertiary-container": "#dce3eb",
+                        "inverse-on-surface": "#535557",
+                        "on-primary-fixed": "#154072",
+                        "secondary-fixed-dim": "#c5d6ea",
+                        "on-tertiary": "#535b61",
+                        "on-surface-variant": "#a6acb2",
+                        "on-secondary-container": "#b0c1d5",
+                        "surface-container": "#161a1e",
+                        "surface-container-low": "#111416",
+                        "on-error-container": "#ff9993",
+                        "error-dim": "#bb5551",
+                        "primary-container": "#1f477a",
+                        "inverse-primary": "#3b6094",
+                        "tertiary-fixed": "#dce3eb",
+                        "surface-bright": "#252d33",
+                        "on-primary": "#164073",
+                        "primary-fixed-dim": "#bed5ff",
+                        "on-primary-fixed-variant": "#375c91",
+                        "surface-container-lowest": "#000000",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#a7c8ff",
+                        "surface-container-high": "#1b2025",
+                        "on-background": "#e0e6ed",
+                        "on-secondary-fixed": "#304151",
+                        "on-secondary": "#102230",
+                        "tertiary": "#eaf2f9",
+                        "surface-variant": "#20262c",
+                        "on-tertiary-container": "#4b5359",
+                        "outline": "#70767c",
+                        "surface": "#0c0e10",
+                        "tertiary-dim": "#cdd5dc",
+                        "outline-variant": "#42494e",
+                        "error-container": "#7f2927",
+                        "secondary-container": "#2c3d4d",
+                        "surface-dim": "#0c0e10",
+                        "background": "#0c0e10",
+                        "surface-container-highest": "#20262c",
+                        "error": "#ee7d77"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c0e10;
+            color: #e0e6ed;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/30 min-h-screen flex flex-col">
+<!-- TopNavBar Suppression Check: 404 is a dead-end/focused journey, but we keep the brand identity shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0c0e10]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-bold tracking-tighter text-[#a7c8ff] font-headline" href="/">Nikita Kizevich</a>
+<div class="hidden md:flex items-center gap-8">
+<span class="font-label uppercase tracking-widest text-xs text-secondary-dim">System Status: Offline</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center px-6 pt-24 pb-12">
+<div class="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Visual Section: Abstract Geometric Bento -->
+<div class="lg:col-span-5 order-2 lg:order-1 relative">
+<div class="aspect-square relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/15 p-1">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+<!-- Empty State Illustration/Geometric Shapes -->
+<div class="w-full h-full flex items-center justify-center p-8">
+<div class="relative w-full h-full border border-outline-variant/20 rounded-lg flex items-center justify-center">
+<div class="absolute w-1/2 h-1/2 border-l border-t border-primary/20 top-4 left-4"></div>
+<div class="absolute w-1/2 h-1/2 border-r border-b border-primary/20 bottom-4 right-4"></div>
+<div class="flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-6xl text-secondary/30" style="font-variation-settings: 'FILL' 0;">database_off</span>
+<div class="font-label text-[10px] tracking-[0.2em] text-secondary/50 uppercase">Data Point Missing</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metadata floating tag -->
+<div class="absolute -bottom-4 -right-4 bg-surface-container-high px-4 py-3 rounded-lg border border-outline-variant/20 shadow-2xl backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-error animate-pulse"></div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Error_Code: 404_NULL_REFERENCE</span>
+</div>
+</div>
+</div>
+<!-- Text & Actions Section -->
+<div class="lg:col-span-7 order-1 lg:order-2 space-y-8">
+<header class="space-y-4">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label text-[10px] uppercase tracking-widest font-medium">System Response</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-extrabold font-headline tracking-tighter text-on-surface leading-tight">
+                        404 — Путь не найден
+                    </h1>
+<p class="text-xl lg:text-2xl font-headline text-primary font-medium">
+                        Запрашиваемый контекст отсутствует
+                    </p>
+</header>
+<div class="max-w-md">
+<p class="text-on-surface-variant leading-relaxed body-lg">
+                        Возможно, ссылка устарела или страница была перемещена в архив. Протоколы навигации требуют возврата в основную директорию или перенаправления к проектам.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+<!-- Primary CTA -->
+<a class="group relative px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full font-label text-xs uppercase tracking-widest font-bold flex items-center gap-2 transition-all hover:scale-[1.02] active:scale-95" href="/">
+                        На главную
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<!-- Secondary CTA -->
+<a class="px-8 py-4 bg-surface-container-highest border border-primary/20 text-on-surface rounded-full font-label text-xs uppercase tracking-widest font-bold flex items-center gap-2 hover:bg-surface-container-high transition-colors" href="/projects">
+                        К списку проектов
+                    </a>
+<!-- AI Assistant Button -->
+<button class="w-full md:w-auto px-8 py-4 bg-surface-container border border-outline-variant/30 text-secondary rounded-full font-label text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+                        Задать вопрос AI-ассистенту
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#1b2025]/30 bg-[#0c0e10]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-6">
+<div class="font-label uppercase tracking-widest text-xs text-secondary-dim">
+                © 2024 Nikita Kizevich. Precision in AI.
+            </div>
+<div class="flex gap-8">
+<a class="font-label uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">Telegram</a>
+<a class="font-label uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">GitHub</a>
+<a class="font-label uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">LinkedIn</a>
+<a class="font-label uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+<!-- Decorative Grid Background -->
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-20">
+<div class="absolute inset-0" style="background-image: radial-gradient(#1b2025 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface"></div>
+</div>
+</body></html>

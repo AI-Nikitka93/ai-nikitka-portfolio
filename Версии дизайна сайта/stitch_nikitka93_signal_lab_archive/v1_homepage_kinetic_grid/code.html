@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Concept 1: Kinetic Grid</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e9e2d1",
+                    "on-tertiary-fixed": "#1e1b11",
+                    "on-tertiary": "#343025",
+                    "surface": "#111413",
+                    "secondary": "#ffb59a",
+                    "tertiary-container": "#e9e2d1",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-secondary": "#5b1b00",
+                    "tertiary-fixed-dim": "#cdc6b6",
+                    "on-tertiary-fixed-variant": "#4b473b",
+                    "surface-container-highest": "#323534",
+                    "outline": "#8c947b",
+                    "primary-container": "#b0f734",
+                    "outline-variant": "#424935",
+                    "on-primary-fixed": "#121f00",
+                    "on-primary-container": "#4a6f00",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "inverse-surface": "#e1e3e1",
+                    "surface-container-lowest": "#0c0f0e",
+                    "on-tertiary-container": "#696457",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-bright": "#373a38",
+                    "surface-variant": "#323534",
+                    "on-primary-fixed-variant": "#334f00",
+                    "surface-container-high": "#282b29",
+                    "inverse-primary": "#456800",
+                    "tertiary": "#ffffff",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#96da06",
+                    "on-surface": "#e1e3e1",
+                    "primary": "#ffffff",
+                    "on-surface-variant": "#c2caaf",
+                    "secondary-container": "#cd4700",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#111413",
+                    "surface-container": "#1d201f",
+                    "inverse-on-surface": "#2e3130",
+                    "surface-tint": "#96da06",
+                    "surface-container-low": "#191c1b",
+                    "on-primary": "#223600",
+                    "primary-fixed": "#b0f734",
+                    "on-error": "#690005",
+                    "background": "#111413",
+                    "on-background": "#e1e3e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "unit": "4px",
+                    "margin": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Space Grotesk"
+                    ],
+                    "body-large": [
+                            "IBM Plex Mono"
+                    ],
+                    "label-tiny": [
+                            "IBM Plex Mono"
+                    ],
+                    "display-xl": [
+                            "Space Grotesk"
+                    ],
+                    "body-main": [
+                            "IBM Plex Mono"
+                    ],
+                    "metadata": [
+                            "IBM Plex Mono"
+                    ],
+                    "headline-md": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "110%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-large": [
+                            "18px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-tiny": [
+                            "10px",
+                            {
+                                    "lineHeight": "120%",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-xl": [
+                            "120px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-main": [
+                            "14px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "metadata": [
+                            "12px",
+                            {
+                                    "lineHeight": "140%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Tactical grid lines */
+        .grid-line-vertical {
+            width: 0.5px;
+            background-color: #8E968C; /* Raw Titanium */
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            opacity: 0.3;
+        }
+        .grid-line-horizontal {
+            height: 0.5px;
+            background-color: #8E968C;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            z-index: 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0D0C] text-[#e1e3e1] antialiased overflow-x-hidden min-h-screen relative">
+<!-- Global Grid Overlay -->
+<div class="fixed inset-0 pointer-events-none z-0 max-w-container-max mx-auto px-margin hidden md:block">
+<div class="relative w-full h-full">
+<div class="grid-line-vertical" style="left: 0%;"></div>
+<div class="grid-line-vertical" style="left: 25%;"></div>
+<div class="grid-line-vertical" style="left: 50%;"></div>
+<div class="grid-line-vertical" style="left: 75%;"></div>
+<div class="grid-line-vertical" style="right: 0%;"></div>
+</div>
+</div>
+<!-- TopNavBar -->
+<nav class="hidden md:flex flex-row justify-between items-center w-full px-10 h-16 max-w-full bg-[#0A0D0C] border-b-[0.5px] border-[#8E968C] fixed top-0 z-50">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C]">SIGNAL_LAB [V2.0]</div>
+<div class="flex gap-8">
+<!-- Active state logic applies to none here as this is a conceptual homepage/manifesto, not directly tied to a tab, but let's highlight SIGNALS as the closest intent -->
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-2 py-1 flex items-center" href="#">
+                ARCHIVE
+            </a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-2 py-1 flex items-center" href="#">
+                SIGNALS
+            </a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-2 py-1 flex items-center" href="#">
+                ATLAS
+            </a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-2 py-1 flex items-center" href="#">
+                TERMINAL
+            </a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#8E968C] hover:text-[#B7FF3C]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="text-[#B7FF3C] font-mono text-sm border border-[#8E968C] px-2 py-1 hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors cursor-pointer">
+                EN/RU
+            </div>
+</div>
+</nav>
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden md:flex fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex-col z-40 bg-[#0A0D0C] border-r-[0.5px] border-[#8E968C]">
+<div class="p-6 border-b-[0.5px] border-[#8E968C]">
+<div class="font-headline-md text-headline-md text-[#B7FF3C] mb-1 tracking-tight">OPERATOR_01</div>
+<div class="font-label-tiny text-label-tiny text-[#8E968C]">CLEARANCE: OMEGA</div>
+</div>
+<div class="flex-1 overflow-y-auto py-4 flex flex-col gap-2 px-2">
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined filled" style="font-variation-settings: 'FILL' 1;">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined">map</span>
+                MAP_ATLAS
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined">settings</span>
+                SETTINGS
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-16 md:pl-64 w-full min-h-screen relative z-10 flex flex-col">
+<!-- Hero / Manifesto Section (Asymmetric Layout) -->
+<section class="relative w-full min-h-[819px] flex flex-col justify-center px-4 md:px-margin py-20 border-b-[0.5px] border-[#8E968C]">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
+<!-- Background decorative elements -->
+<div class="absolute top-0 right-10 w-32 h-32 border border-[#8E968C] opacity-20 pointer-events-none md:block hidden"></div>
+<div class="absolute bottom-20 left-1/2 w-[1px] h-40 bg-[#B7FF3C] opacity-50 pointer-events-none"></div>
+<!-- Text Block (Spans 8 cols) -->
+<div class="col-span-1 md:col-span-8 z-10 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 mb-8 bg-[#161B19] px-3 py-1 border border-[#8E968C] w-max">
+<span class="w-2 h-2 bg-[#B7FF3C] block"></span>
+<span class="font-label-tiny text-label-tiny text-[#B7FF3C] uppercase tracking-widest">&gt; СТАТУС: АКТИВНО</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-tertiary tracking-tighter leading-none mb-6">
+                        ДАННЫЕ<br/>
+                        КАК <span class="text-[#B7FF3C]">ОРУЖИЕ</span>
+</h1>
+<p class="font-body-large text-body-large text-[#e1e3e1] max-w-2xl mt-8 pl-4 border-l-2 border-[#8E968C]">
+                        Мы трансформируем сырые потоки информации в структурированный интеллект. 
+                        Аналитика без компромиссов. Жесткая структура. Истина в каждом байте.
+                    </p>
+</div>
+<!-- Abstract Visual / Image Block (Spans 4 cols, overlapping) -->
+<div class="col-span-1 md:col-span-4 mt-12 md:mt-0 relative z-0 md:-ml-12 md:pt-20">
+<div class="w-full aspect-[3/4] border border-[#8E968C] relative bg-[#161B19] p-4 flex flex-col justify-between">
+<img alt="Abstract data visualization" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale mix-blend-screen" data-alt="abstract monochromatic satellite topography scan with vibrant lime green radar pulse overlays and severe contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnUyPimxSg600N1lCUu7R3BcOyxQV7FMhW9UmEpsVTH0PisLWFWuRZu8g2QvNIcFidklY6wtLCTwzLMxuhT6IJIOquOV79XtHhLI-1dQn7vqhh_L13oieBW5HraSkHK76HvbsB46d7mjBPJ3rR0ymCFptWh3WT7vwk2hDLy_mGGl1fCZVEblcjpRlkqtjzvK-UKBsSgYpb97atcROS9C1IPda2ycl8U5qbi8PynGzhtBWoYvarY1nLjQuQdr2O6QGb0IZfHFOiHTIE"/>
+<!-- Overlay UI elements -->
+<div class="relative z-10 flex justify-between items-start w-full border-b border-[#8E968C] pb-2">
+<span class="font-metadata text-metadata text-[#8E968C]">[ПОТОК_001]</span>
+<span class="material-symbols-outlined text-[#B7FF3C] text-sm">wifi_tethering</span>
+</div>
+<div class="relative z-10 self-end text-right">
+<div class="font-headline-lg text-headline-lg text-[#B7FF3C]">99.9%</div>
+<div class="font-label-tiny text-label-tiny text-[#8E968C] uppercase">Точность сигнала</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid / Data Modules Section -->
+<section class="w-full px-4 md:px-margin py-20 relative">
+<div class="max-w-container-max mx-auto w-full">
+<div class="flex items-end justify-between mb-12 border-b-[0.5px] border-[#8E968C] pb-4">
+<h2 class="font-headline-md text-headline-md text-tertiary">ОПЕРАТИВНАЯ СВОДКА</h2>
+<span class="font-mono text-xs text-[#8E968C]">ОБНОВЛЕНО: 14:02 MSK</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Module 1: Large Analytics Card -->
+<div class="col-span-1 md:col-span-8 bg-[#161B19] border border-[#8E968C] p-6 relative group overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[#B7FF3C]">open_in_new</span>
+</div>
+<div class="font-label-tiny text-label-tiny text-[#8E968C] mb-4">&gt; АНАЛИЗ ПАТТЕРНОВ</div>
+<div class="flex flex-col md:flex-row gap-8 items-end mt-12">
+<div class="flex-1">
+<div class="h-32 w-full flex items-end gap-2 border-b border-[#8E968C] pb-2">
+<!-- Conceptual Bar Chart -->
+<div class="w-1/6 bg-[#8E968C] h-[20%] transition-all hover:bg-[#B7FF3C]"></div>
+<div class="w-1/6 bg-[#8E968C] h-[45%] transition-all hover:bg-[#B7FF3C]"></div>
+<div class="w-1/6 bg-[#B7FF3C] h-[85%] relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 font-metadata text-metadata text-[#0A0D0C] bg-[#B7FF3C] px-1">PEAK</div>
+</div>
+<div class="w-1/6 bg-[#8E968C] h-[60%] transition-all hover:bg-[#B7FF3C]"></div>
+<div class="w-1/6 bg-[#8E968C] h-[30%] transition-all hover:bg-[#B7FF3C]"></div>
+<div class="w-1/6 bg-[#8E968C] h-[50%] transition-all hover:bg-[#B7FF3C]"></div>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<h3 class="font-headline-lg text-headline-lg text-tertiary mb-2">4,281</h3>
+<p class="font-metadata text-metadata text-[#8E968C]">Зафиксированных аномалий в текущем цикле.</p>
+</div>
+</div>
+</div>
+<!-- Module 2: Metadata Stack -->
+<div class="col-span-1 md:col-span-4 border border-[#8E968C] bg-[#161B19] flex flex-col">
+<div class="p-4 border-b border-[#8E968C] bg-[#0A0D0C]">
+<span class="font-label-tiny text-label-tiny text-[#B7FF3C]">&gt; ТЕКУЩИЙ УЗЕЛ</span>
+</div>
+<div class="flex-1 p-0">
+<table class="w-full text-left font-metadata text-metadata">
+<tbody>
+<tr class="border-b border-[#8E968C] hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors group">
+<td class="py-3 px-4 text-[#8E968C] group-hover:text-[#0A0D0C]">[ID_ОБЪЕКТА]</td>
+<td class="py-3 px-4 text-tertiary group-hover:text-[#0A0D0C] text-right">NX-7742</td>
+</tr>
+<tr class="border-b border-[#8E968C] hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors group">
+<td class="py-3 px-4 text-[#8E968C] group-hover:text-[#0A0D0C]">[ЛОКАЦИЯ]</td>
+<td class="py-3 px-4 text-tertiary group-hover:text-[#0A0D0C] text-right">СЕКТОР_B</td>
+</tr>
+<tr class="border-b border-[#8E968C] hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors group">
+<td class="py-3 px-4 text-[#8E968C] group-hover:text-[#0A0D0C]">[СТАТУС]</td>
+<td class="py-3 px-4 text-right flex justify-end items-center gap-2">
+<span class="w-2 h-2 bg-[#B7FF3C] block"></span>
+                                            ОНЛАЙН
+                                        </td>
+</tr>
+<tr class="hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors group">
+<td class="py-3 px-4 text-[#8E968C] group-hover:text-[#0A0D0C]">[УГРОЗА]</td>
+<td class="py-3 px-4 text-tertiary group-hover:text-[#0A0D0C] text-right">НИЗКАЯ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">dynamic_feed</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">FEED</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1 filled">radar</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">SIGNALS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">public</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">MAP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">USER</span>
+</a>
+</nav>
+</body></html>

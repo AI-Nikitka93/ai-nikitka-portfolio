@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Links Hub - NK-93</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#5e1229",
+                        "primary-container": "#32cd32",
+                        "primary-fixed": "#75ff68",
+                        "surface": "#0e150b",
+                        "outline-variant": "#3d4a39",
+                        "on-primary": "#003a03",
+                        "archive-bone": "#E5E4D2",
+                        "surface-bright": "#333c30",
+                        "primary-fixed-dim": "#4ce346",
+                        "on-surface-variant": "#bccbb4",
+                        "inverse-primary": "#006e0a",
+                        "inverse-surface": "#dce6d4",
+                        "tertiary": "#ffbcc7",
+                        "surface-container-lowest": "#081007",
+                        "secondary-fixed-dim": "#c8c7b6",
+                        "on-secondary": "#303125",
+                        "background": "#0e150b",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "secondary-container": "#47483a",
+                        "on-tertiary-fixed": "#3f0015",
+                        "on-primary-fixed": "#002201",
+                        "surface-container-highest": "#2f372b",
+                        "phosphor-bright": "#4AF626",
+                        "surface-container-high": "#242c21",
+                        "secondary-fixed": "#e4e3d1",
+                        "on-tertiary-container": "#79273d",
+                        "inverse-on-surface": "#2a3327",
+                        "tertiary-container": "#ff92a8",
+                        "surface-tint": "#4ce346",
+                        "on-secondary-fixed-variant": "#47483a",
+                        "surface-dim": "#0e150b",
+                        "primary": "#55ea4d",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary-fixed": "#1b1c11",
+                        "ember-alert": "#FF4500",
+                        "titanium-metal": "#565E5E",
+                        "on-primary-fixed-variant": "#005306",
+                        "on-secondary-container": "#b6b6a5",
+                        "on-background": "#dce6d4",
+                        "terminal-base": "#0A0E0A",
+                        "on-error": "#690005",
+                        "surface-container": "#1a2217",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#005105",
+                        "error": "#ffb4ab",
+                        "on-surface": "#dce6d4",
+                        "on-tertiary-fixed-variant": "#7c293f",
+                        "surface-container-low": "#161e13",
+                        "outline": "#869580",
+                        "secondary": "#c8c7b6",
+                        "surface-variant": "#2f372b",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "mono-data": ["IBM Plex Mono"],
+                        "mono-body": ["IBM Plex Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-data": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "mono-body": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'IBM Plex Mono', monospace; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-terminal-base text-archive-bone antialiased selection:bg-primary selection:text-terminal-base overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-stone-950 flex justify-between items-center w-full px-6 h-12 fixed top-0 left-0 right-0 z-50 border-b border-stone-800 font-mono uppercase tracking-tighter text-sm">
+<div class="text-lg font-bold text-lime-400 tracking-widest cursor-pointer active:opacity-80">AI_NIKITKA93</div>
+<nav class="hidden md:flex space-x-6 h-full items-end">
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 px-3 py-1 cursor-pointer active:opacity-80" href="#">SYSTEM</a>
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 px-3 py-1 cursor-pointer active:opacity-80" href="#">QUERY</a>
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 px-3 py-1 cursor-pointer active:opacity-80" href="#">LOGS</a>
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 px-3 py-1 cursor-pointer active:opacity-80" href="#">ARCHIVE</a>
+</nav>
+<div class="flex items-center space-x-6 text-stone-500">
+<span class="text-lime-400">[ RU ] | EN</span>
+<span>SYSTEM: ONLINE</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen fixed left-0 top-12 z-40 border-r border-stone-800 w-64 bg-stone-950 font-mono text-xs uppercase pt-6">
+<div class="px-6 mb-8">
+<div class="text-stone-500 tracking-widest text-[10px] mb-1">OPERATOR_01</div>
+<div class="text-lime-400">ID: NK-93</div>
+</div>
+<nav class="flex flex-col w-full">
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150 gap-3 border-l-2 border-transparent" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>TERMINAL</span>
+</a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150 gap-3 border-l-2 border-transparent" href="#">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>RESOURCES</span>
+</a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150 gap-3 border-l-2 border-transparent" href="#">
+<span class="material-symbols-outlined text-[18px]">database</span>
+<span>DATABASES</span>
+</a>
+<a class="bg-lime-400/10 text-lime-400 border-l-2 border-lime-400 flex items-center px-4 py-3 transition-all duration-150 gap-3" href="#">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>NETWORK</span>
+</a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150 gap-3 border-l-2 border-transparent" href="#">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+<span>SECURITY</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-64 mt-12 min-h-[calc(100vh-3rem)] p-margin flex flex-col gap-margin">
+<!-- Command Prompt Header -->
+<div class="font-mono-body text-mono-body text-primary flex items-center gap-3 border-b border-titanium-metal pb-gutter w-full">
+<span class="material-symbols-outlined">chevron_right</span>
+<span>init_route_hub --mode verbose</span>
+<span class="w-2 h-4 bg-primary inline-block"></span>
+</div>
+<!-- Meta Info -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-unit font-mono-data text-mono-data text-on-surface-variant w-full max-w-3xl">
+<div class="border border-titanium-metal p-2 bg-surface-container-lowest">
+<span class="text-titanium-metal block mb-1">STATUS</span>
+<span class="text-primary">[v] ACTIVE</span>
+</div>
+<div class="border border-titanium-metal p-2 bg-surface-container-lowest">
+<span class="text-titanium-metal block mb-1">NODES</span>
+<span>12 DETECTED</span>
+</div>
+<div class="border border-titanium-metal p-2 bg-surface-container-lowest">
+<span class="text-titanium-metal block mb-1">LATENCY</span>
+<span>~14ms AVG</span>
+</div>
+<div class="border border-titanium-metal p-2 bg-surface-container-lowest">
+<span class="text-titanium-metal block mb-1">PROTOCOL</span>
+<span>TCP/IP v6</span>
+</div>
+</div>
+<!-- Links Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-gutter w-full">
+<!-- Module: Git / Version Control -->
+<div class="border border-titanium-metal bg-surface-container p-gutter relative group h-full">
+<div class="absolute top-0 right-0 bg-titanium-metal text-terminal-base px-2 py-1 font-mono-data text-[10px] uppercase tracking-widest">
+                    VCS_ROOT
+                </div>
+<h2 class="font-label-caps text-label-caps text-archive-bone mb-6 mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">source</span>
+                    CODE REPOSITORIES
+                </h2>
+<div class="flex flex-col gap-1 font-mono-body text-mono-body">
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./github/main_core</span>
+</div>
+<span class="font-mono-data text-mono-data text-titanium-metal group-hover/link:text-terminal-base">[OK]</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./gitlab/internal_tools</span>
+</div>
+<span class="font-mono-data text-mono-data text-titanium-metal group-hover/link:text-terminal-base">[OK]</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./bitbucket/legacy_db</span>
+</div>
+<span class="font-mono-data text-mono-data text-ember-alert group-hover/link:text-terminal-base">[ERR]</span>
+</a>
+</div>
+</div>
+<!-- Module: Social Vectors -->
+<div class="border border-titanium-metal bg-surface-container p-gutter relative group h-full">
+<div class="absolute top-0 right-0 bg-titanium-metal text-terminal-base px-2 py-1 font-mono-data text-[10px] uppercase tracking-widest">
+                    EXT_NET
+                </div>
+<h2 class="font-label-caps text-label-caps text-archive-bone mb-6 mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">public</span>
+                    SOCIAL VECTORS
+                </h2>
+<div class="flex flex-col gap-1 font-mono-body text-mono-body">
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./twitter/stream</span>
+</div>
+<span class="font-mono-data text-mono-data text-titanium-metal group-hover/link:text-terminal-base">24ms</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./linkedin/professional</span>
+</div>
+<span class="font-mono-data text-mono-data text-titanium-metal group-hover/link:text-terminal-base">45ms</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./discord/comms_channel</span>
+</div>
+<span class="font-mono-data text-mono-data text-titanium-metal group-hover/link:text-terminal-base">12ms</span>
+</a>
+</div>
+</div>
+<!-- Module: Documentation -->
+<div class="border border-titanium-metal bg-surface-container p-gutter relative group h-full">
+<div class="absolute top-0 right-0 bg-titanium-metal text-terminal-base px-2 py-1 font-mono-data text-[10px] uppercase tracking-widest">
+                    SYS_DOCS
+                </div>
+<h2 class="font-label-caps text-label-caps text-archive-bone mb-6 mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+                    KNOWLEDGE BASE
+                </h2>
+<div class="flex flex-col gap-1 font-mono-body text-mono-body">
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>cat ./docs/architecture.md</span>
+</div>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>cat ./docs/api_reference.md</span>
+</div>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>tail -f ./logs/syslog</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Module: Deployed Apps (Spans 2 cols on wide) -->
+<div class="border border-titanium-metal bg-surface-container p-gutter relative group h-full lg:col-span-2 xl:col-span-3">
+<div class="absolute top-0 right-0 bg-titanium-metal text-terminal-base px-2 py-1 font-mono-data text-[10px] uppercase tracking-widest">
+                    PROD_ENV
+                </div>
+<h2 class="font-label-caps text-label-caps text-archive-bone mb-6 mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">dns</span>
+                    DEPLOYED NODES
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-gutter gap-y-2 font-mono-body text-mono-body">
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./app/frontend_web</span>
+</div>
+<span class="text-[10px] text-primary border border-primary px-1 group-hover/link:border-terminal-base group-hover/link:text-terminal-base">v2.4.1</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./app/backend_api</span>
+</div>
+<span class="text-[10px] text-primary border border-primary px-1 group-hover/link:border-terminal-base group-hover/link:text-terminal-base">v1.9.0</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./app/auth_service</span>
+</div>
+<span class="text-[10px] text-primary border border-primary px-1 group-hover/link:border-terminal-base group-hover/link:text-terminal-base">v3.0.2</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./app/worker_node_1</span>
+</div>
+<span class="text-[10px] text-primary border border-primary px-1 group-hover/link:border-terminal-base group-hover/link:text-terminal-base">v1.1.0</span>
+</a>
+<a class="group/link flex justify-between items-center p-2 border border-transparent hover:bg-primary hover:text-terminal-base hover:border-primary transition-none" href="#">
+<div class="flex items-center gap-3">
+<span class="text-titanium-metal group-hover/link:text-terminal-base opacity-50">&gt;</span>
+<span>./app/worker_node_2</span>
+</div>
+<span class="text-[10px] text-primary border border-primary px-1 group-hover/link:border-terminal-base group-hover/link:text-terminal-base">v1.1.0</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</body></html>

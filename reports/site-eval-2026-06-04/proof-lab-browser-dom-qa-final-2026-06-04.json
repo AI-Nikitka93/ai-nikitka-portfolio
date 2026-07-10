@@ -1,0 +1,388 @@
+{
+  "checkedAt": "2026-06-04T15:35:44.455Z",
+  "baseUrl": "http://127.0.0.1:3200",
+  "desktop": {
+    "home": {
+      "activeProofRadio": "judged narrative work / 2025Helix Be t FilmStory a embly",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 1440,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "clickedProofSecondRadio": true,
+      "kinomatikLinks": [
+        {
+          "bottom": 0,
+          "height": 0,
+          "text": "proof fir t / laureateКИНОМАТИК: file-backed AI-video кейс",
+          "top": 0,
+          "visible": false,
+          "width": 0
+        },
+        {
+          "bottom": -315,
+          "height": 158,
+          "text": "лауреат / 2026КИНОМАТИКоткрыть работу",
+          "top": -473,
+          "visible": true,
+          "width": 582
+        }
+      ],
+      "labNavLink": true,
+      "marketNavigator": false,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 4,
+      "proofScanner": true,
+      "proofScannerBounds": {
+        "bottom": 1291,
+        "height": 1112,
+        "left": 40,
+        "right": 1400,
+        "top": 179,
+        "visible": true,
+        "width": 1360
+      },
+      "scrollWidth": 1440,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "url": "/",
+      "viewport": {
+        "height": 1100,
+        "width": 1440
+      }
+    },
+    "lab": {
+      "activeProofRadio": "formal cultural review / 2026КИНОМАТИКConcept compre ion",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 1440,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "kinomatikLinks": [
+        {
+          "bottom": 2535,
+          "height": 46,
+          "text": "Открыть кейс",
+          "top": 2489,
+          "visible": true,
+          "width": 153
+        }
+      ],
+      "labNavLink": true,
+      "labTrackCards": 0,
+      "noHorizontalOverflow": true,
+      "proofLab": true,
+      "proofRadioCount": 4,
+      "proofScanner": true,
+      "proofScannerBounds": {
+        "bottom": 2589,
+        "height": 1176,
+        "left": 40,
+        "right": 1400,
+        "top": 1413,
+        "visible": true,
+        "width": 1360
+      },
+      "scrollWidth": 1440,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "sourceTraceText": true,
+      "title": "Lab | AI_Nikitka93",
+      "url": "/lab",
+      "viewport": {
+        "height": 1100,
+        "width": 1440
+      }
+    },
+    "assistant": {
+      "activeProofRadio": "",
+      "animatedTextAriaHidden": true,
+      "assistantPanelBounds": {
+        "bottom": 1919,
+        "height": 1282,
+        "left": 40,
+        "right": 1400,
+        "top": 637,
+        "visible": true,
+        "width": 1360
+      },
+      "assistantSourceCards": 3,
+      "bodyWidth": 1440,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "heroChipLinks": 4,
+      "kinomatikLinks": [],
+      "labNavLink": true,
+      "liveRegionTextLength": 0,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 0,
+      "proofScanner": false,
+      "proofScannerBounds": null,
+      "scrollWidth": 1440,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "title": "Помощник | AI_Nikitka93",
+      "url": "/ai-assistant",
+      "viewport": {
+        "height": 1100,
+        "width": 1440
+      }
+    }
+  },
+  "mobile": {
+    "home": {
+      "activeProofRadio": "formal cultural review / 2026КИНОМАТИКConcept compre ion",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 390,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "kinomatikLinks": [
+        {
+          "bottom": 627,
+          "height": 93,
+          "text": "proof fir t / laureateКИНОМАТИК: file-backed AI-video кейс",
+          "top": 534,
+          "visible": true,
+          "width": 308
+        },
+        {
+          "bottom": 1158,
+          "height": 244,
+          "text": "лауреат / 2026КИНОМАТИКоткрыть работу",
+          "top": 914,
+          "visible": true,
+          "width": 324
+        },
+        {
+          "bottom": 4612,
+          "height": 46,
+          "text": "Открыть кейс",
+          "top": 4566,
+          "visible": true,
+          "width": 274
+        }
+      ],
+      "labNavLink": true,
+      "mobileProofShortcutVisibleInFold": true,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 4,
+      "proofScanner": true,
+      "proofScannerBounds": {
+        "bottom": 4712,
+        "height": 2642,
+        "left": 16,
+        "right": 374,
+        "top": 2070,
+        "visible": true,
+        "width": 358
+      },
+      "scrollWidth": 390,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "url": "/",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visibleKinoLinkTops": [
+        534
+      ]
+    },
+    "portfolio": {
+      "activeProofRadio": "",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 390,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "compactIndexLinks": 17,
+      "heroProofLinks": 4,
+      "kinomatikLinks": [
+        {
+          "bottom": 831,
+          "height": 93,
+          "text": "LAUREATEКИНОМАТИКfile-backed + text-backed",
+          "top": 738,
+          "visible": true,
+          "width": 266
+        },
+        {
+          "bottom": 7872,
+          "height": 844,
+          "text": "SIG-04Основная работаneurovideo competitionфайл / изображениеСтатусфайл + текстГлавноеLAUREATEКИНОМАТИК — Laureate, Neur",
+          "top": 7028,
+          "visible": true,
+          "width": 358
+        },
+        {
+          "bottom": 12084,
+          "height": 183,
+          "text": "04 / SIG-04КИНОМАТИК — Laureate, Neurovideo CompetitionLAUREATEфайл + текст",
+          "top": 11901,
+          "visible": true,
+          "width": 356
+        }
+      ],
+      "labNavLink": true,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 0,
+      "proofScanner": false,
+      "proofScannerBounds": null,
+      "scrollWidth": 390,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "title": "Работы | AI_Nikitka93",
+      "url": "/portfolio",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "services": {
+      "activeProofRadio": "",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 390,
+      "calculatorBounds": {
+        "bottom": 5963,
+        "height": 4325,
+        "left": 16,
+        "right": 374,
+        "top": 1639,
+        "visible": true,
+        "width": 358
+      },
+      "caseStudySpine": false,
+      "kinomatikLinks": [],
+      "labNavLink": true,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 0,
+      "proofScanner": false,
+      "proofScannerBounds": null,
+      "quickChoiceVisibleInFold": true,
+      "scrollWidth": 390,
+      "serviceCheckboxCount": 5,
+      "serviceRadioCount": 19,
+      "skipText": "",
+      "sourceLinkMinHeight": 44,
+      "title": "Калькулятор услуг | AI_Nikitka93",
+      "url": "/services-calculator",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "assistant": {
+      "activeProofRadio": "",
+      "assistantHeroActionInFold": true,
+      "assistantPanelBounds": {
+        "bottom": 4473,
+        "height": 3255,
+        "left": 16,
+        "right": 374,
+        "top": 1218,
+        "visible": true,
+        "width": 358
+      },
+      "assistantSourceCards": 3,
+      "bodyWidth": 390,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "kinomatikLinks": [],
+      "labNavLink": true,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 0,
+      "proofScanner": false,
+      "proofScannerBounds": null,
+      "scrollWidth": 390,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "sourceCardsVisible": 3,
+      "title": "Помощник | AI_Nikitka93",
+      "url": "/ai-assistant",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "english": {
+      "activeProofRadio": "",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 390,
+      "calculatorBounds": null,
+      "caseStudySpine": false,
+      "englishHeader": true,
+      "kinomatikLinks": [
+        {
+          "bottom": 832,
+          "height": 142,
+          "text": "LAUREATEКИНОМАТИКConcept compre ion / file-backed + text-backed",
+          "top": 690,
+          "visible": true,
+          "width": 266
+        }
+      ],
+      "labNavLink": true,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 0,
+      "proofRailLinks": 3,
+      "proofScanner": false,
+      "proofScannerBounds": null,
+      "scrollWidth": 390,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "startWithProof": true,
+      "title": "English Summary | AI_Nikitka93",
+      "url": "/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "caseDetail": {
+      "activeProofRadio": "",
+      "assistantPanelBounds": null,
+      "assistantSourceCards": 0,
+      "bodyWidth": 390,
+      "calculatorBounds": null,
+      "caseStudySpine": true,
+      "kinomatikLinks": [],
+      "labNavLink": true,
+      "noHorizontalOverflow": true,
+      "proofLab": false,
+      "proofRadioCount": 0,
+      "proofScanner": false,
+      "proofScannerBounds": null,
+      "scrollWidth": 390,
+      "serviceCheckboxCount": 0,
+      "serviceRadioCount": 0,
+      "skipText": "",
+      "spineTextIncludesEvidence": true,
+      "title": "КИНОМАТИК — Laureate, Neurovideo Competition | Proof Archive | AI_Nikitka93",
+      "url": "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  "consoleErrors": []
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recovered Notes Log - THE LIVING ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e4e3d6",
+                        "surface-dim": "#121414",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-tint": "#00e61a",
+                        "background": "#121414",
+                        "on-tertiary-container": "#b8291c",
+                        "surface": "#121414",
+                        "on-secondary-fixed": "#1b1c14",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-bright": "#383939",
+                        "outline": "#85967d",
+                        "inverse-surface": "#e3e2e2",
+                        "primary-fixed": "#76ff65",
+                        "error-container": "#93000a",
+                        "secondary-container": "#494a40",
+                        "surface-container-highest": "#343535",
+                        "on-background": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "on-primary-container": "#007206",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#343535",
+                        "on-primary-fixed-variant": "#005303",
+                        "on-surface-variant": "#baccb1",
+                        "secondary-fixed-dim": "#c8c7bb",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c7bb",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "inverse-primary": "#006e06",
+                        "on-secondary": "#303128",
+                        "primary-container": "#32ff32",
+                        "surface-container-high": "#292a2a",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-container": "#ffd3cc",
+                        "error": "#ffb4ab",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690000",
+                        "tertiary-fixed": "#ffdad4",
+                        "outline-variant": "#3c4b36",
+                        "primary-fixed-dim": "#00e61a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#920703",
+                        "on-primary-fixed": "#002201",
+                        "on-secondary-container": "#b9b9ad",
+                        "primary": "#eeffe4",
+                        "on-secondary-fixed-variant": "#47473e",
+                        "on-surface": "#e3e2e2",
+                        "on-primary": "#003a01"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-size": "24px",
+                        "unit": "4px",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-base": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-code": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-code": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+        .vignette {
+            background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+            pointer-events: none;
+        }
+        .redacted {
+            background-color: #000;
+            color: #000;
+            user-select: none;
+        }
+        .crt-flicker {
+            animation: flicker 0.15s infinite;
+        }
+        @keyframes flicker {
+            0% { opacity: 0.98; }
+            50% { opacity: 0.95; }
+            100% { opacity: 0.99; }
+        }
+    </style>
+</head>
+<body class="bg-background text-primary font-body-base min-h-screen relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Global CRT Overlays -->
+<div class="fixed inset-0 scanlines z-50"></div>
+<div class="fixed inset-0 vignette z-50"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950 dark:bg-black border-b-4 border-zinc-800">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-lime-400 dark:text-lime-400 tracking-tighter uppercase font-space-grotesk tracking-widest text-sm">THE_LIVING_ARCHIVE</span>
+</div>
+<nav class="hidden md:flex gap-6">
+<a class="text-zinc-500 dark:text-zinc-600 font-space-grotesk uppercase tracking-widest text-sm hover:bg-lime-400 hover:text-black transition-colors duration-75" href="#">RU/EN_LOCALE</a>
+<a class="text-zinc-500 dark:text-zinc-600 font-space-grotesk uppercase tracking-widest text-sm hover:bg-lime-400 hover:text-black transition-colors duration-75" href="#">TIME_SYNC:04:22:11</a>
+<a class="text-zinc-500 dark:text-zinc-600 font-space-grotesk uppercase tracking-widest text-sm hover:bg-lime-400 hover:text-black transition-colors duration-75" href="#">STATUS:OK</a>
+</nav>
+<button class="text-lime-400 dark:text-lime-400 font-space-grotesk uppercase tracking-widest text-sm border-2 border-lime-400 px-4 py-1 hover:bg-lime-400 hover:text-black transition-colors duration-75">
+            TERMINATE_SESSION
+        </button>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 z-40 overflow-y-auto bg-zinc-950 dark:bg-black border-r-4 border-zinc-800 hidden md:flex flex-col pt-6">
+<div class="px-4 mb-8 flex flex-col gap-2">
+<div class="w-12 h-12 bg-zinc-800 border-2 border-lime-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-lime-400" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+<span class="text-lime-400 font-black font-space-grotesk uppercase text-xs">ROOT_DIRECTORY</span>
+<span class="text-zinc-500 font-space-grotesk uppercase text-[10px]">MONOLITH_OS_v4.2</span>
+</div>
+<div class="flex flex-col">
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 font-space-grotesk uppercase text-xs font-bold hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">database</span>
+                SECTOR_01:ARCHIVE
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 font-space-grotesk uppercase text-xs font-bold hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">security</span>
+                SECTOR_02:OPERATOR
+            </a>
+<a class="bg-lime-400 text-black px-4 py-3 flex items-center gap-3 font-space-grotesk uppercase text-xs font-bold scale-[0.99] border-l-4 border-lime-400 opacity-80 flickering-effect" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">analytics</span>
+                SECTOR_03:TELEMETRY
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 font-space-grotesk uppercase text-xs font-bold hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">terminal</span>
+                SECTOR_04:COMMS
+            </a>
+</div>
+<div class="mt-auto p-4">
+<button class="w-full border-2 border-lime-400 text-lime-400 py-2 font-space-grotesk uppercase text-xs font-bold hover:bg-lime-400 hover:text-black transition-colors">
+                NEW_QUERY
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-16 px-4 md:pl-72 md:pr-8 min-h-screen">
+<div class="max-w-4xl mx-auto flex flex-col gap-8">
+<!-- Page Header -->
+<div class="border-b-2 border-outline-variant pb-4 mb-4 flex justify-between items-end">
+<div>
+<h1 class="font-headline-md text-headline-md text-primary-fixed uppercase tracking-tight">Recovered Notes Log</h1>
+<p class="font-label-code text-label-code text-on-surface-variant mt-2">[ SYSTEM.ARCHIVE.RETRIEVAL_SEQ_092 ]</p>
+</div>
+<div class="flex gap-2 text-primary-fixed">
+<span class="material-symbols-outlined crt-flicker">warning</span>
+<span class="font-label-code text-label-code uppercase">Data Corruption Detected</span>
+</div>
+</div>
+<!-- Log Entries -->
+<div class="flex flex-col gap-6">
+<!-- Entry 1 -->
+<article class="border-2 border-outline-variant p-6 relative bg-surface-container-low group">
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-fixed-dim m-2 opacity-50"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary-fixed-dim m-2 opacity-50"></div>
+<header class="flex flex-wrap gap-4 mb-4 border-b border-dashed border-outline-variant pb-2">
+<span class="font-label-code text-label-code text-secondary">[ TIMESTAMP: 2024.10.14_08:42:01 ]</span>
+<span class="font-label-code text-label-code text-secondary">[ COORD: 47.6062°N, 122.3321°W ]</span>
+<span class="font-label-code text-label-code text-on-tertiary-container ml-auto">[ STATUS: VERIFIED ]</span>
+</header>
+<div class="font-body-base text-body-base text-primary space-y-4">
+<p>&gt; Initial descent sequence initiated. Atmospheric friction within expected parameters. Structural integrity holding at 98.4%.</p>
+<p>&gt; Telemetry data from <span class="redacted">SENSOR ARRAY ALPHA</span> shows unexpected spikes in localized electromagnetic fields. Investigating potential source.</p>
+<p>&gt; Visual confirmation of ground structures. They do not match pre-flight orbital scans. The architecture appears <span class="redacted">ORGANIC IN NATURE</span>. Awaiting further analysis from Command.</p>
+</div>
+</article>
+<!-- Entry 2 -->
+<article class="border-2 border-outline-variant p-6 relative bg-surface-container-low group">
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-fixed-dim m-2 opacity-50"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary-fixed-dim m-2 opacity-50"></div>
+<header class="flex flex-wrap gap-4 mb-4 border-b border-dashed border-outline-variant pb-2">
+<span class="font-label-code text-label-code text-secondary">[ TIMESTAMP: 2024.10.14_11:15:33 ]</span>
+<span class="font-label-code text-label-code text-secondary">[ COORD: 47.6101°N, 122.3410°W ]</span>
+<span class="font-label-code text-label-code text-error ml-auto crt-flicker">[ STATUS: PARTIAL LOSS ]</span>
+</header>
+<div class="font-body-base text-body-base text-primary space-y-4">
+<p>&gt; Contact with base lost at T+03:15:00. Comm channel flooded with static. Attempting to cycle through backup frequencies.</p>
+<p class="text-on-surface-variant italic">&gt; <span class="redacted">AAAAAAAAAAAAAAAAAAAAAAAAA</span></p>
+<p>&gt; Recovered auxiliary power to life support. External temperatures dropping rapidly. Need to establish a perimeter before cycle end.</p>
+</div>
+</article>
+<!-- Entry 3 -->
+<article class="border-2 border-error p-6 relative bg-surface-container-lowest overflow-hidden">
+<div class="absolute inset-0 bg-error/5 pointer-events-none"></div>
+<!-- Physical Stamp -->
+<div class="absolute top-4 right-4 border-4 border-error text-error font-headline-md text-headline-md uppercase px-2 py-1 rotate-[3deg] opacity-80 mix-blend-screen pointer-events-none">
+                        CLASSIFIED
+                    </div>
+<header class="flex flex-wrap gap-4 mb-4 border-b border-dashed border-error/50 pb-2 relative z-10">
+<span class="font-label-code text-label-code text-error">[ TIMESTAMP: UNKNOWN ]</span>
+<span class="font-label-code text-label-code text-error">[ COORD: OFFLINE ]</span>
+<span class="font-label-code text-label-code text-error ml-auto">[ STATUS: CORRUPT ]</span>
+</header>
+<div class="font-body-base text-body-base text-error/90 space-y-4 relative z-10">
+<p>&gt; <span class="redacted bg-error text-error">DATA FRAGMENT 0x7F</span> found in physical cache.</p>
+<p>&gt; They are not dormant. The monolith is reacting to <span class="redacted bg-error text-error">THE FREQUENCY</span>.</p>
+<p>&gt; Evacuation protocol <span class="bg-error text-black px-1 font-bold">DENIED</span>.</p>
+<p class="font-label-code text-label-code mt-4 border-t border-error/30 pt-2">&gt; END OF RECORD.</p>
+</div>
+</article>
+</div>
+<!-- Pagination/Loader -->
+<div class="flex justify-center mt-8">
+<button class="border-2 border-outline text-outline px-6 py-2 font-label-code text-label-code uppercase hover:bg-outline hover:text-background transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                    RETRIEVE_OLDER_LOGS
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full h-8 flex justify-between items-center px-4 z-50 pointer-events-none bg-zinc-950 dark:bg-black border-t-2 border-zinc-800">
+<span class="font-mono text-[10px] uppercase tracking-tighter text-zinc-600">© 1984-2024 DEEP_STORAGE_MONOLITH. ALL_RIGHTS_RETAINED.</span>
+<div class="flex gap-4 pointer-events-auto">
+<a class="font-mono text-[10px] uppercase tracking-tighter text-zinc-600 hover:text-lime-200" href="#">SYSTEM_LOGS</a>
+<a class="font-mono text-[10px] uppercase tracking-tighter text-zinc-600 hover:text-lime-200" href="#">HARDWARE_STATE</a>
+<a class="font-mono text-[10px] uppercase tracking-tighter text-zinc-600 hover:text-lime-200" href="#">ENCRYPTION_KEY</a>
+</div>
+</footer>
+</body></html>

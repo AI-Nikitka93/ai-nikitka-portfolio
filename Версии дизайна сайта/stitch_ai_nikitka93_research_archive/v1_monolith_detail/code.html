@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technical Monolith Dossier</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0d0f0d",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "surface-container-highest": "#333533",
+                        "on-secondary-fixed": "#1a1c19",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-tint": "#abd600",
+                        "secondary-fixed": "#e3e3de",
+                        "on-secondary": "#2f312e",
+                        "surface-container-high": "#282a28",
+                        "on-tertiary-container": "#636562",
+                        "surface-dim": "#121412",
+                        "surface-variant": "#333533",
+                        "secondary-container": "#484a46",
+                        "tertiary-container": "#e2e3de",
+                        "on-error": "#690005",
+                        "surface": "#121412",
+                        "background": "#121412",
+                        "on-secondary-fixed-variant": "#454744",
+                        "inverse-primary": "#506600",
+                        "on-background": "#e2e3df",
+                        "tertiary-fixed-dim": "#c6c7c3",
+                        "surface-container-low": "#1a1c1a",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7c2",
+                        "on-tertiary": "#2f312e",
+                        "inverse-on-surface": "#2f312f",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e201e",
+                        "primary-container": "#c3f400",
+                        "inverse-surface": "#e2e3df",
+                        "outline": "#8e9379",
+                        "on-secondary-container": "#b8b9b4",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary": "#c6c7c2",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary": "#ffffff",
+                        "surface-bright": "#383a37",
+                        "on-surface": "#e2e3df",
+                        "outline-variant": "#444933",
+                        "on-tertiary-fixed": "#1a1c1a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e3de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "gutter": "16px",
+                        "margin": "32px",
+                        "column-count": "12"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Mono"],
+                        "h2": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["11px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "data-mono": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "display-lg": ["84px", {"lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface antialiased h-screen w-full flex overflow-hidden selection:bg-primary-fixed selection:text-black">
+<!-- SideNavBar (Shared Component) -->
+<nav class="w-64 flex flex-col bg-[#080A08] rounded-none border-r border-[#F5F5F0] h-screen shrink-0 z-20">
+<!-- Header -->
+<div class="p-6 border-b border-[#F5F5F0]">
+<div class="text-[#F5F5F0] font-bold text-xl tracking-tight">OS_MONOLITH</div>
+<div class="font-label-caps text-label-caps text-[#F5F5F0] mt-1 opacity-70">V_1.0.9</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col flex-1 font-mono text-xs uppercase transition-none cursor-crosshair">
+<!-- Active Tab -->
+<a class="bg-[#CCFF00] text-black font-bold flex items-center gap-3 p-4 border-b border-[#F5F5F0]" href="#">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+                CORE
+            </a>
+<!-- Inactive Tabs -->
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+                NODES
+            </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+                STREAM
+            </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined text-[18px]">description</span>
+                LOGS
+            </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined text-[18px]">settings_input_component</span>
+                SYSTEM
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col min-w-0 relative">
+<!-- TopAppBar (Shared Component) -->
+<header class="flex justify-between items-center w-full h-16 bg-[#080A08] rounded-none border-b border-[#F5F5F0] shrink-0 z-10 font-['Space_Grotesk'] uppercase tracking-widest text-sm transition-none">
+<div class="text-2xl font-black tracking-tighter text-[#F5F5F0] px-4 flex items-center">
+                AI_NIKITKA_93
+            </div>
+<div class="flex items-center h-full">
+<!-- Search Bar Placeholder -->
+<div class="h-full flex items-center px-4 border-l border-[#F5F5F0]">
+<span class="material-symbols-outlined text-[#F5F5F0] text-[18px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-[#F5F5F0] placeholder-[#F5F5F0]/50 font-mono text-xs w-48 ml-2" placeholder="QUERY..." type="text"/>
+</div>
+<!-- Trailing Icons -->
+<button class="h-full px-4 border-l border-[#F5F5F0] text-[#F5F5F0] hover:bg-[#CCFF00] hover:text-black flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</button>
+<button class="h-full px-4 border-l border-[#F5F5F0] text-[#F5F5F0] hover:bg-[#CCFF00] hover:text-black flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<button class="h-full px-4 border-l border-[#F5F5F0] text-[#F5F5F0] hover:bg-[#CCFF00] hover:text-black flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Canvas (Dossier Detail) -->
+<main class="flex-1 overflow-y-auto bg-surface pb-12">
+<div class="grid grid-cols-12 gap-0 w-full max-w-[1600px] mx-auto">
+<!-- Hero Header Section -->
+<div class="col-span-12 grid grid-cols-12 border-b border-outline-variant">
+<div class="col-span-8 p-margin border-r border-outline-variant flex flex-col justify-end min-h-[240px]">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-4 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-fixed inline-block"></span>
+                            Primary Entity Profile
+                        </div>
+<h1 class="font-display-lg text-display-lg text-primary uppercase break-words leading-none">
+                            Monolith<br/>Alpha_VII
+                        </h1>
+</div>
+<div class="col-span-4 p-margin flex flex-col justify-end gap-2 bg-surface-container-lowest">
+<div class="font-label-caps text-label-caps text-secondary uppercase border-b border-outline-variant pb-1 mb-2">Entity Metadata</div>
+<div class="flex justify-between font-data-mono text-data-mono text-on-surface border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">UID</span>
+<span>0x99A-4B-77</span>
+</div>
+<div class="flex justify-between font-data-mono text-data-mono border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">STATUS</span>
+<span class="text-primary-fixed font-bold">OPERATIONAL</span>
+</div>
+<div class="flex justify-between font-data-mono text-data-mono border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">UPTIME</span>
+<span>99.998%</span>
+</div>
+<div class="flex justify-between font-data-mono text-data-mono border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">LAST_SYNC</span>
+<span>T-MINUS 12s</span>
+</div>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="col-span-12 grid grid-cols-12 border-b border-outline-variant">
+<!-- Left Column: Schematic & Status -->
+<div class="col-span-4 border-r border-outline-variant p-gutter flex flex-col gap-gutter bg-surface">
+<div class="font-label-caps text-label-caps text-secondary uppercase border-b border-outline-variant pb-1 flex justify-between items-center">
+<span>Topological Map</span>
+<span class="material-symbols-outlined text-[14px]">map</span>
+</div>
+<!-- Image Container with rigid styling -->
+<div class="w-full aspect-square border border-outline-variant relative bg-black overflow-hidden group cursor-crosshair">
+<!-- Overlay Grid Lines -->
+<div class="absolute inset-0 bg-[linear-gradient(rgba(195,244,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(195,244,0,0.05)_1px,transparent_1px)] bg-[size:20px_20px] z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:opacity-100 transition-opacity duration-0" data-alt="abstract high contrast black and white topographic lines resembling a digital landscape or circuit board pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCypy3pE40-C9M-6mgqaCQ9uWvxV96UnjwmOAXfE0qm5A8NBQ6ONwKEGKzozFP3mLgYTmQL2zMIj0kuADeDOofMstQ0-V8oh-k8DvamuHdkr3aqAThHLVh5ED7ZRlEUwwMNUJCcp1dUVj3977huaDa8IgOB8tXXTnuD8SNpVmAdOK-k2U55705RHwLA4mz8h3wCfWK4RxDw5tof8RGmBIj3qmWDKx9BuxQ_sF5ERvI6HL96PTV8TVbrlSIpAkAqDR1ydTuC8NUKllm1"/>
+<!-- Targeting reticle -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-primary-fixed/50 z-20 pointer-events-none"></div>
+<div class="absolute top-0 left-1/2 w-[1px] h-full bg-primary-fixed/50 z-20 pointer-events-none"></div>
+<div class="absolute bottom-2 right-2 bg-black/80 px-2 py-1 font-data-mono text-[10px] text-primary-fixed border border-primary-fixed/30 z-20">
+                                LOC: [45.1, -12.4]
+                            </div>
+</div>
+<!-- Secondary Data Block -->
+<div class="mt-4">
+<div class="font-label-caps text-label-caps text-secondary uppercase border-b border-outline-variant pb-1 mb-2">Resource Allocation</div>
+<div class="flex flex-col gap-2 font-data-mono text-data-mono">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-on-surface-variant text-[11px]">
+<span>MEMORY_BANK_A</span>
+<span>78%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest border border-outline-variant">
+<div class="h-full bg-primary-fixed w-[78%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-2">
+<div class="flex justify-between text-on-surface-variant text-[11px]">
+<span>MEMORY_BANK_B</span>
+<span>42%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest border border-outline-variant">
+<div class="h-full bg-on-surface w-[42%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Raw Data & Terminals -->
+<div class="col-span-8 flex flex-col">
+<!-- Specifications Table (Brutalist) -->
+<div class="p-gutter border-b border-outline-variant flex-1 bg-surface-container-lowest">
+<div class="font-label-caps text-label-caps text-secondary uppercase border-b border-outline-variant pb-1 mb-4 flex justify-between">
+<span>Hardware Specifications</span>
+<span class="material-symbols-outlined text-[14px]">dns</span>
+</div>
+<div class="grid grid-cols-2 gap-x-8 gap-y-0 font-data-mono text-data-mono text-on-surface">
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">Core Architecture</span>
+<span class="text-right">Quantum-X 64-bit</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">Instruction Set</span>
+<span class="text-right">x86_64_EXT</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">Base Clock</span>
+<span class="text-right">4.2 GHz</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">Boost Clock</span>
+<span class="text-right">5.8 GHz</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">L1 Cache</span>
+<span class="text-right">12 MB</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">L2 Cache</span>
+<span class="text-right">64 MB</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">Thermal Design Power</span>
+<span class="text-right">165 W</span>
+</div>
+<div class="py-3 border-b border-outline-variant flex justify-between items-center group hover:bg-surface-container-high px-2 -mx-2">
+<span class="text-on-surface-variant">Max Operating Temp</span>
+<span class="text-right">95°C</span>
+</div>
+</div>
+</div>
+<!-- Live Terminal Block -->
+<div class="p-gutter bg-[#080A08] h-64 overflow-hidden relative border-t border-outline-variant">
+<div class="absolute top-0 right-0 p-2 font-label-caps text-[9px] text-on-surface-variant bg-surface-container-lowest border-l border-b border-outline-variant">
+                                TTY_STREAM_01
+                            </div>
+<div class="font-data-mono text-[12px] text-primary-fixed leading-relaxed opacity-90 h-full flex flex-col justify-end pb-2">
+<div>[SYS] Initializing boot sequence... OK</div>
+<div>[SYS] Loading kernel modules... DONE</div>
+<div>[NET] Establishing secure handshake with NODES...</div>
+<div>[NET] Handshake established. Latency: 4ms</div>
+<div>[CORE] Allocating thread pool... 1024 threads ready.</div>
+<div>[WARN] Minor thermal variance in Sector 4. Compensating...</div>
+<div>[SYS] System running at optimal capacity.</div>
+<div class="mt-2 flex items-center">
+<span class="mr-2">root@monolith:~#</span>
+<span class="w-2 h-3 bg-primary-fixed inline-block animate-pulse"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="fixed bottom-0 left-64 right-0 flex justify-between items-center px-4 py-1 bg-[#080A08] rounded-none border-t border-[#F5F5F0] z-30 transition-none font-mono text-[10px] tracking-tight">
+<div class="text-[#F5F5F0]">
+            STATUS: STABLE // DIAG_CODE: 0x00213
+        </div>
+<div class="flex gap-6">
+<a class="text-[#F5F5F0] hover:text-[#CCFF00]" href="#">0x01_RESET</a>
+<a class="text-[#F5F5F0] hover:text-[#CCFF00]" href="#">0x02_DEBUG</a>
+<a class="text-[#F5F5F0] hover:text-[#CCFF00]" href="#">0x03_VOID</a>
+</div>
+</footer>
+</body></html>

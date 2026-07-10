@@ -1,0 +1,1408 @@
+{
+  "baseUrl": "http://127.0.0.1:3200",
+  "checkedAt": "2026-06-01T14:06:37.621Z",
+  "routes": [
+    "/",
+    "/portfolio",
+    "/portfolio/sig-01-35awards-ai-imaging-field-results",
+    "/portfolio/sig-02-labstory-helix-best-animated-film",
+    "/portfolio/sig-03-labstory-helix-technical-mastery",
+    "/portfolio/sig-04-fashion-week-neurovideo",
+    "/portfolio/sig-05-minimax-agent-challenge-2025",
+    "/portfolio/sig-06-vk-recsys-top-9-percent",
+    "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+    "/about",
+    "/blog",
+    "/blog/proof-led-portfolio",
+    "/blog/prompt-first-workflow",
+    "/services-calculator",
+    "/ai-assistant",
+    "/awards-credentials",
+    "/links",
+    "/en",
+    "/404",
+    "/not-existing-release-check"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "forbiddenCopyPatterns": [
+    "осталось наполнить",
+    "Здесь будут",
+    "пустая заглушка",
+    "Field Notes",
+    "Field Note",
+    "Surface Status",
+    "Route Shell",
+    "route-specific",
+    "route shell"
+  ],
+  "results": [
+    {
+      "viewport": "desktop",
+      "route": "/",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 34,
+      "h1s": [
+        "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Портфолио Никиты Кизевича: AI-видео, генеративная графика, проекты, работы и заметки.",
+      "ogDescription": "Портфолио Никиты Кизевича: AI-видео, генеративная графика, проекты, работы и заметки.",
+      "ogImage": "https://kizevich.com/opengraph-image",
+      "ogTitle": "AI_Nikitka93 — портфолио работ и проектов",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 32,
+      "h1s": [
+        "Семь главных работ и результатов."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Главные работы и результаты AI_Nikitka93: AI-видео, генеративная графика и технические проекты.",
+      "ogDescription": "Главные работы и результаты AI_Nikitka93: AI-видео, генеративная графика и технические проекты.",
+      "ogImage": "https://kizevich.com/portfolio/opengraph-image",
+      "ogTitle": "Работы | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Работы | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "35AWARDS — AI Imaging Field Results"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Signal marker для AI-image работ в 35AWARDS season 10: top-10 в Living Creatures и Undocumented Events плюс top-1% в Landscape.",
+      "ogDescription": "Signal marker для AI-image работ в 35AWARDS season 10: top-10 в Living Creatures и Undocumented Events плюс top-1% в Landscape.",
+      "ogImage": "https://kizevich.com/portfolio/sig-01-35awards-ai-imaging-field-results/opengraph-image",
+      "ogTitle": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-01-35awards-ai-imaging-field-results"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-02-labstory-helix-best-animated-film",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-02-labstory-helix-best-animated-film",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "LabStory / Helix — Best Animated Film"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Signal marker для judged AI-video работы, которая в конкурсе Helix / LabStory вышла из режима эксперимента в audience-facing narrative work.",
+      "ogDescription": "Signal marker для judged AI-video работы, которая в конкурсе Helix / LabStory вышла из режима эксперимента в audience-facing narrative work.",
+      "ogImage": "https://kizevich.com/portfolio/sig-02-labstory-helix-best-animated-film/opengraph-image",
+      "ogTitle": "LabStory / Helix — Best Animated Film | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "LabStory / Helix — Best Animated Film | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-02-labstory-helix-best-animated-film"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-03-labstory-helix-technical-mastery",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-03-labstory-helix-technical-mastery",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "LabStory / Helix — Technical Mastery"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Signal marker для technical fluency внутри AI-video workflow, признанной отдельно от финальной работы в Helix / LabStory.",
+      "ogDescription": "Signal marker для technical fluency внутри AI-video workflow, признанной отдельно от финальной работы в Helix / LabStory.",
+      "ogImage": "https://kizevich.com/portfolio/sig-03-labstory-helix-technical-mastery/opengraph-image",
+      "ogTitle": "LabStory / Helix — Technical Mastery | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "LabStory / Helix — Technical Mastery | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-03-labstory-helix-technical-mastery"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-04-fashion-week-neurovideo",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-04-fashion-week-neurovideo",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 20,
+      "h1s": [
+        "Страница не найдена."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Запрошенное досье недоступно в архиве.",
+      "ogDescription": "Запрошенное досье недоступно в архиве.",
+      "ogImage": "https://kizevich.com/portfolio/sig-04-fashion-week-neurovideo/opengraph-image",
+      "ogTitle": "Досье не найдено | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "noindex, nofollow",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Досье не найдено | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-04-fashion-week-neurovideo"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-05-minimax-agent-challenge-2025",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 19,
+      "h1s": [
+        "MiniMax Agent Challenge 2025 — Multi-Agent Production Run"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Proof artifact для high-volume agent run с более чем пятьюдесятью итерациями через code, analysis и utility use cases.",
+      "ogDescription": "Proof artifact для high-volume agent run с более чем пятьюдесятью итерациями через code, analysis и utility use cases.",
+      "ogImage": "https://kizevich.com/portfolio/sig-05-minimax-agent-challenge-2025/opengraph-image",
+      "ogTitle": "MiniMax Agent Challenge 2025 — Multi-Agent Production Run | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "MiniMax Agent Challenge 2025 — Multi-Agent Production Run | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-05-minimax-agent-challenge-2025"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-06-vk-recsys-top-9-percent",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 20,
+      "h1s": [
+        "VK RecSys Challenge — TOP-9% Result"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Подтвержденный артефакт для cold-start recommendation-задачи, завершенной с результатом top-9% через prompt-guided ML-итерацию.",
+      "ogDescription": "Подтвержденный артефакт для cold-start recommendation-задачи, завершенной с результатом top-9% через prompt-guided ML-итерацию.",
+      "ogImage": "https://kizevich.com/portfolio/sig-06-vk-recsys-top-9-percent/opengraph-image",
+      "ogTitle": "VK RecSys Challenge — TOP-9% Result | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "VK RecSys Challenge — TOP-9% Result | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-06-vk-recsys-top-9-percent"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 19,
+      "h1s": [
+        "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Proof artifact для leaderboard-результата внутри low-level GPU optimization challenge на базе NVIDIA Blackwell и NVFP4 kernel constraints.",
+      "ogDescription": "Proof artifact для leaderboard-результата внутри low-level GPU optimization challenge на базе NVIDIA Blackwell и NVFP4 kernel constraints.",
+      "ogImage": "https://kizevich.com/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon/opengraph-image",
+      "ogTitle": "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/about",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/about",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 24,
+      "h1s": [
+        "Никита Кизевич — автор проекта AI_Nikitka93."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Никита Кизевич — автор проекта AI_Nikitka93. Здесь коротко и понятно собраны основные факты, опыт и ссылки, по которым можно проверить работы.",
+      "ogDescription": "Никита Кизевич — автор проекта AI_Nikitka93. Здесь коротко и понятно собраны основные факты, опыт и ссылки, по которым можно проверить работы.",
+      "ogImage": "https://kizevich.com/about/opengraph-image",
+      "ogTitle": "Никита Кизевич | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Никита Кизевич | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/about"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/blog",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/blog",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 20,
+      "h1s": [
+        "Заметки о работе: что получилось, что не получилось и что оказалось полезным."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Блог AI_Nikitka93: короткие заметки о работе, экспериментах, видео, графике и новых инструментах.",
+      "ogDescription": "Блог AI_Nikitka93: короткие заметки о работе, экспериментах, видео, графике и новых инструментах.",
+      "ogImage": "https://kizevich.com/blog/opengraph-image",
+      "ogTitle": "Блог | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Блог | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/blog"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/blog/proof-led-portfolio",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/blog/proof-led-portfolio",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "Почему портфолио собрано вокруг подтверждений"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Короткая заметка о том, почему главная страница не должна обещать больше, чем показывают работы, дипломы и публичные результаты.",
+      "ogDescription": "Короткая заметка о том, почему главная страница не должна обещать больше, чем показывают работы, дипломы и публичные результаты.",
+      "ogImage": "https://kizevich.com/opengraph-image",
+      "ogTitle": "Почему портфолио собрано вокруг подтверждений | Блог | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Почему портфолио собрано вокруг подтверждений | Блог | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/blog/proof-led-portfolio"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/blog/prompt-first-workflow",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/blog/prompt-first-workflow",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "Prompt-first workflow без магии и инфо-шума"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Как читать подход AI_Nikitka93: не как обещание заменить команду, а как практику постановки задач, отбора инструментов и доведения артефактов до результата.",
+      "ogDescription": "Как читать подход AI_Nikitka93: не как обещание заменить команду, а как практику постановки задач, отбора инструментов и доведения артефактов до результата.",
+      "ogImage": "https://kizevich.com/opengraph-image",
+      "ogTitle": "Prompt-first workflow без магии и инфо-шума | Блог | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Prompt-first workflow без магии и инфо-шума | Блог | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/blog/prompt-first-workflow"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/services-calculator",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/services-calculator",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 42,
+      "h1s": [
+        "Сначала задача, материалы и срок. Потом честный класс сложности."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Калькулятор услуг AI_Nikitka93: выберите формат задачи, материалы, срок и получите честный класс сложности без выдуманного прайса.",
+      "ogDescription": "Калькулятор услуг AI_Nikitka93: выберите формат задачи, материалы, срок и получите честный класс сложности без выдуманного прайса.",
+      "ogImage": "https://kizevich.com/services-calculator/opengraph-image",
+      "ogTitle": "Калькулятор услуг | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Калькулятор услуг | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/services-calculator"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/ai-assistant",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/ai-assistant",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 29,
+      "h1s": [
+        "Локальный помощник по сайту, который не выходит за публичные факты."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Локальный помощник AI_Nikitka93 по сайту: подобрать раздел, работу, услугу, подтверждение или контакт без выдуманных фактов.",
+      "ogDescription": "Локальный помощник AI_Nikitka93 по сайту: подобрать раздел, работу, услугу, подтверждение или контакт без выдуманных фактов.",
+      "ogImage": "https://kizevich.com/ai-assistant/opengraph-image",
+      "ogTitle": "Помощник | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Помощник | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/ai-assistant"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/awards-credentials",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/awards-credentials",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 21,
+      "h1s": [
+        "Подтверждения собраны в два слоя: главные кейсы в портфолио и фоновая база здесь."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Награды, дипломы, сертификаты и фоновые подтверждения AI_Nikitka93 без перегруза первого слоя портфолио.",
+      "ogDescription": "Награды, дипломы, сертификаты и фоновые подтверждения AI_Nikitka93 без перегруза первого слоя портфолио.",
+      "ogImage": "https://kizevich.com/awards-credentials/opengraph-image",
+      "ogTitle": "Награды и подтверждения | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Награды и подтверждения | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/awards-credentials"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/links",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/links",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 24,
+      "h1s": [
+        "Публичные маршруты к архиву, автору и внешним узлам подтверждения."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Публичные маршруты, профили и контактные каналы, связанные с AI_Nikitka93 и слоем верификации автора.",
+      "ogDescription": "Публичные маршруты, профили и контактные каналы, связанные с AI_Nikitka93 и слоем верификации автора.",
+      "ogImage": "https://kizevich.com/links/opengraph-image",
+      "ogTitle": "Связи | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Связи | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/links"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/en",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/en",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 23,
+      "h1s": [
+        "Nikita Kizevich / AI_Nikitka93: proof-led AI video, visual and prototype work."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "English summary for AI_Nikitka93: proof-led portfolio of Nikita Kizevich, AI video, generative visuals, agent prototypes and technical experiments.",
+      "ogDescription": "English summary for AI_Nikitka93: proof-led portfolio of Nikita Kizevich, AI video, generative visuals, agent prototypes and technical experiments.",
+      "ogImage": "https://kizevich.com/en/opengraph-image",
+      "ogTitle": "English Summary | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "English Summary | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/en"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/404",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/404",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 20,
+      "h1s": [
+        "Страница не найдена."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogImage": "https://kizevich.com/404/opengraph-image",
+      "ogTitle": "Страница не найдена | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "noindex",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Страница не найдена | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/404"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/not-existing-release-check",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/404",
+      "clientWidth": 1440,
+      "emptyInteractive": [],
+      "focusableCount": 20,
+      "h1s": [
+        "Страница не найдена."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogImage": "https://kizevich.com/404/opengraph-image",
+      "ogTitle": "Страница не найдена | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 1568,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "noindex",
+      "scrollWidth": 1440,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Страница не найдена | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/not-existing-release-check"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 28,
+      "h1s": [
+        "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Портфолио Никиты Кизевича: AI-видео, генеративная графика, проекты, работы и заметки.",
+      "ogDescription": "Портфолио Никиты Кизевича: AI-видео, генеративная графика, проекты, работы и заметки.",
+      "ogImage": "https://kizevich.com/opengraph-image",
+      "ogTitle": "AI_Nikitka93 — портфолио работ и проектов",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 26,
+      "h1s": [
+        "Семь главных работ и результатов."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Главные работы и результаты AI_Nikitka93: AI-видео, генеративная графика и технические проекты.",
+      "ogDescription": "Главные работы и результаты AI_Nikitka93: AI-видео, генеративная графика и технические проекты.",
+      "ogImage": "https://kizevich.com/portfolio/opengraph-image",
+      "ogTitle": "Работы | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "source-trace"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "source-trace"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "source-trace"
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Работы | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 12,
+      "h1s": [
+        "35AWARDS — AI Imaging Field Results"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Signal marker для AI-image работ в 35AWARDS season 10: top-10 в Living Creatures и Undocumented Events плюс top-1% в Landscape.",
+      "ogDescription": "Signal marker для AI-image работ в 35AWARDS season 10: top-10 в Living Creatures и Undocumented Events плюс top-1% в Landscape.",
+      "ogImage": "https://kizevich.com/portfolio/sig-01-35awards-ai-imaging-field-results/opengraph-image",
+      "ogTitle": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-01-35awards-ai-imaging-field-results"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-02-labstory-helix-best-animated-film",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-02-labstory-helix-best-animated-film",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 12,
+      "h1s": [
+        "LabStory / Helix — Best Animated Film"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Signal marker для judged AI-video работы, которая в конкурсе Helix / LabStory вышла из режима эксперимента в audience-facing narrative work.",
+      "ogDescription": "Signal marker для judged AI-video работы, которая в конкурсе Helix / LabStory вышла из режима эксперимента в audience-facing narrative work.",
+      "ogImage": "https://kizevich.com/portfolio/sig-02-labstory-helix-best-animated-film/opengraph-image",
+      "ogTitle": "LabStory / Helix — Best Animated Film | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "LabStory / Helix — Best Animated Film | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-02-labstory-helix-best-animated-film"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-03-labstory-helix-technical-mastery",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-03-labstory-helix-technical-mastery",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 12,
+      "h1s": [
+        "LabStory / Helix — Technical Mastery"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Signal marker для technical fluency внутри AI-video workflow, признанной отдельно от финальной работы в Helix / LabStory.",
+      "ogDescription": "Signal marker для technical fluency внутри AI-video workflow, признанной отдельно от финальной работы в Helix / LabStory.",
+      "ogImage": "https://kizevich.com/portfolio/sig-03-labstory-helix-technical-mastery/opengraph-image",
+      "ogTitle": "LabStory / Helix — Technical Mastery | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "LabStory / Helix — Technical Mastery | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-03-labstory-helix-technical-mastery"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-04-fashion-week-neurovideo",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-04-fashion-week-neurovideo",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 14,
+      "h1s": [
+        "Страница не найдена."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Запрошенное досье недоступно в архиве.",
+      "ogDescription": "Запрошенное досье недоступно в архиве.",
+      "ogImage": "https://kizevich.com/portfolio/sig-04-fashion-week-neurovideo/opengraph-image",
+      "ogTitle": "Досье не найдено | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "noindex, nofollow",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Досье не найдено | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-04-fashion-week-neurovideo"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-05-minimax-agent-challenge-2025",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 13,
+      "h1s": [
+        "MiniMax Agent Challenge 2025 — Multi-Agent Production Run"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Proof artifact для high-volume agent run с более чем пятьюдесятью итерациями через code, analysis и utility use cases.",
+      "ogDescription": "Proof artifact для high-volume agent run с более чем пятьюдесятью итерациями через code, analysis и utility use cases.",
+      "ogImage": "https://kizevich.com/portfolio/sig-05-minimax-agent-challenge-2025/opengraph-image",
+      "ogTitle": "MiniMax Agent Challenge 2025 — Multi-Agent Production Run | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "MiniMax Agent Challenge 2025 — Multi-Agent Production Run | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-05-minimax-agent-challenge-2025"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-06-vk-recsys-top-9-percent",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 14,
+      "h1s": [
+        "VK RecSys Challenge — TOP-9% Result"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Подтвержденный артефакт для cold-start recommendation-задачи, завершенной с результатом top-9% через prompt-guided ML-итерацию.",
+      "ogDescription": "Подтвержденный артефакт для cold-start recommendation-задачи, завершенной с результатом top-9% через prompt-guided ML-итерацию.",
+      "ogImage": "https://kizevich.com/portfolio/sig-06-vk-recsys-top-9-percent/opengraph-image",
+      "ogTitle": "VK RecSys Challenge — TOP-9% Result | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "VK RecSys Challenge — TOP-9% Result | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-06-vk-recsys-top-9-percent"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 13,
+      "h1s": [
+        "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Proof artifact для leaderboard-результата внутри low-level GPU optimization challenge на базе NVIDIA Blackwell и NVFP4 kernel constraints.",
+      "ogDescription": "Proof artifact для leaderboard-результата внутри low-level GPU optimization challenge на базе NVIDIA Blackwell и NVFP4 kernel constraints.",
+      "ogImage": "https://kizevich.com/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon/opengraph-image",
+      "ogTitle": "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry | Proof Archive | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/about",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/about",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "Никита Кизевич — автор проекта AI_Nikitka93."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Никита Кизевич — автор проекта AI_Nikitka93. Здесь коротко и понятно собраны основные факты, опыт и ссылки, по которым можно проверить работы.",
+      "ogDescription": "Никита Кизевич — автор проекта AI_Nikitka93. Здесь коротко и понятно собраны основные факты, опыт и ссылки, по которым можно проверить работы.",
+      "ogImage": "https://kizevich.com/about/opengraph-image",
+      "ogTitle": "Никита Кизевич | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Никита Кизевич | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/about"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/blog",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/blog",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 14,
+      "h1s": [
+        "Заметки о работе: что получилось, что не получилось и что оказалось полезным."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Блог AI_Nikitka93: короткие заметки о работе, экспериментах, видео, графике и новых инструментах.",
+      "ogDescription": "Блог AI_Nikitka93: короткие заметки о работе, экспериментах, видео, графике и новых инструментах.",
+      "ogImage": "https://kizevich.com/blog/opengraph-image",
+      "ogTitle": "Блог | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Блог | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/blog"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/blog/proof-led-portfolio",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/blog/proof-led-portfolio",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 12,
+      "h1s": [
+        "Почему портфолио собрано вокруг подтверждений"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Короткая заметка о том, почему главная страница не должна обещать больше, чем показывают работы, дипломы и публичные результаты.",
+      "ogDescription": "Короткая заметка о том, почему главная страница не должна обещать больше, чем показывают работы, дипломы и публичные результаты.",
+      "ogImage": "https://kizevich.com/opengraph-image",
+      "ogTitle": "Почему портфолио собрано вокруг подтверждений | Блог | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Почему портфолио собрано вокруг подтверждений | Блог | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/blog/proof-led-portfolio"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/blog/prompt-first-workflow",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/blog/prompt-first-workflow",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 12,
+      "h1s": [
+        "Prompt-first workflow без магии и инфо-шума"
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Как читать подход AI_Nikitka93: не как обещание заменить команду, а как практику постановки задач, отбора инструментов и доведения артефактов до результата.",
+      "ogDescription": "Как читать подход AI_Nikitka93: не как обещание заменить команду, а как практику постановки задач, отбора инструментов и доведения артефактов до результата.",
+      "ogImage": "https://kizevich.com/opengraph-image",
+      "ogTitle": "Prompt-first workflow без магии и инфо-шума | Блог | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Prompt-first workflow без магии и инфо-шума | Блог | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/blog/prompt-first-workflow"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/services-calculator",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/services-calculator",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 36,
+      "h1s": [
+        "Сначала задача, материалы и срок. Потом честный класс сложности."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Калькулятор услуг AI_Nikitka93: выберите формат задачи, материалы, срок и получите честный класс сложности без выдуманного прайса.",
+      "ogDescription": "Калькулятор услуг AI_Nikitka93: выберите формат задачи, материалы, срок и получите честный класс сложности без выдуманного прайса.",
+      "ogImage": "https://kizevich.com/services-calculator/opengraph-image",
+      "ogTitle": "Калькулятор услуг | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Калькулятор услуг | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/services-calculator"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/ai-assistant",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/ai-assistant",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 23,
+      "h1s": [
+        "Локальный помощник по сайту, который не выходит за публичные факты."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Локальный помощник AI_Nikitka93 по сайту: подобрать раздел, работу, услугу, подтверждение или контакт без выдуманных фактов.",
+      "ogDescription": "Локальный помощник AI_Nikitka93 по сайту: подобрать раздел, работу, услугу, подтверждение или контакт без выдуманных фактов.",
+      "ogImage": "https://kizevich.com/ai-assistant/opengraph-image",
+      "ogTitle": "Помощник | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Помощник | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/ai-assistant"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/awards-credentials",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/awards-credentials",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 15,
+      "h1s": [
+        "Подтверждения собраны в два слоя: главные кейсы в портфолио и фоновая база здесь."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Награды, дипломы, сертификаты и фоновые подтверждения AI_Nikitka93 без перегруза первого слоя портфолио.",
+      "ogDescription": "Награды, дипломы, сертификаты и фоновые подтверждения AI_Nikitka93 без перегруза первого слоя портфолио.",
+      "ogImage": "https://kizevich.com/awards-credentials/opengraph-image",
+      "ogTitle": "Награды и подтверждения | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Награды и подтверждения | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/awards-credentials"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/links",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/links",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 18,
+      "h1s": [
+        "Публичные маршруты к архиву, автору и внешним узлам подтверждения."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Публичные маршруты, профили и контактные каналы, связанные с AI_Nikitka93 и слоем верификации автора.",
+      "ogDescription": "Публичные маршруты, профили и контактные каналы, связанные с AI_Nikitka93 и слоем верификации автора.",
+      "ogImage": "https://kizevich.com/links/opengraph-image",
+      "ogTitle": "Связи | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Связи | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/links"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/en",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/en",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 17,
+      "h1s": [
+        "Nikita Kizevich / AI_Nikitka93: proof-led AI video, visual and prototype work."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "English summary for AI_Nikitka93: proof-led portfolio of Nikita Kizevich, AI video, generative visuals, agent prototypes and technical experiments.",
+      "ogDescription": "English summary for AI_Nikitka93: proof-led portfolio of Nikita Kizevich, AI video, generative visuals, agent prototypes and technical experiments.",
+      "ogImage": "https://kizevich.com/en/opengraph-image",
+      "ogTitle": "English Summary | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "English Summary | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/en"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/404",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/404",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 14,
+      "h1s": [
+        "Страница не найдена."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogImage": "https://kizevich.com/404/opengraph-image",
+      "ogTitle": "Страница не найдена | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "noindex",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Страница не найдена | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/404"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/not-existing-release-check",
+      "brokenImages": [],
+      "canonical": "https://kizevich.com/404",
+      "clientWidth": 390,
+      "emptyInteractive": [],
+      "focusableCount": 14,
+      "h1s": [
+        "Страница не найдена."
+      ],
+      "hasHorizontalOverflow": false,
+      "lang": "ru",
+      "metaDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogDescription": "Запрошенная страница портфолио AI_Nikitka93 недоступна.",
+      "ogImage": "https://kizevich.com/404/opengraph-image",
+      "ogTitle": "Страница не найдена | AI_Nikitka93",
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "robots": "noindex",
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "staleCopyFound": false,
+      "targetBlankMissingRel": [],
+      "title": "Страница не найдена | AI_Nikitka93",
+      "titleFitsViewport": true,
+      "url": "http://127.0.0.1:3200/not-existing-release-check"
+    }
+  ],
+  "logs": [],
+  "ignoredLogs": 1
+}

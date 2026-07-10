@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>АРХИВ-СЕКТОР - Query Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#323631",
+                        "error": "#ffb4ab",
+                        "background": "#101410",
+                        "outline-variant": "#3c4b35",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-container": "#dcded9",
+                        "primary": "#efffe3",
+                        "primary-fixed": "#79ff5b",
+                        "on-primary-container": "#107100",
+                        "on-primary-fixed": "#022100",
+                        "secondary-fixed": "#d3e4fe",
+                        "secondary-container": "#3a4a5f",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "tertiary-fixed": "#e1e3de",
+                        "primary-fixed-dim": "#2ae500",
+                        "tertiary": "#f9faf5",
+                        "on-tertiary-container": "#5f625e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#095300",
+                        "on-tertiary": "#2e312e",
+                        "on-secondary-container": "#a9bad3",
+                        "surface": "#101410",
+                        "surface-container": "#1d211c",
+                        "surface-container-lowest": "#0b0f0b",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#101410",
+                        "on-secondary": "#213145",
+                        "surface-container-low": "#191d18",
+                        "outline": "#85967c",
+                        "on-primary": "#053900",
+                        "on-tertiary-fixed": "#191c19",
+                        "surface-container-high": "#272b26",
+                        "on-surface-variant": "#baccb0",
+                        "inverse-on-surface": "#2d312c",
+                        "secondary": "#b7c8e1",
+                        "inverse-primary": "#106e00",
+                        "on-surface": "#e0e4dc",
+                        "inverse-surface": "#e0e4dc",
+                        "on-background": "#e0e4dc",
+                        "surface-bright": "#363a35",
+                        "surface-variant": "#323631",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#39ff14",
+                        "surface-tint": "#2ae500",
+                        "tertiary-fixed-dim": "#c5c7c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "12px",
+                        "unit": "4px",
+                        "gutter": "1px",
+                        "container-padding": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["IBM Plex Mono"],
+                        "code-dense": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"],
+                        "label-caps": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "code-dense": ["13px", { "lineHeight": "120%", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["18px", { "lineHeight": "120%", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        /* Custom scrollbar for technical look */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-lowest');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.primary-container');
+        }
+        .scanline-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.1) 50%,
+                rgba(0,0,0,0.1)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen overflow-hidden selection:bg-primary-container selection:text-black">
+<div class="scanline-overlay"></div>
+<!-- TopNavBar Web -->
+<header class="hidden md:flex bg-stone-950 font-mono uppercase tracking-tighter text-xs flex justify-between items-center w-full px-3 h-12 max-w-full border-b border-stone-800 shrink-0">
+<div class="flex items-center gap-6">
+<span class="text-lg font-black text-[#39FF14] tracking-widest">АРХИВ-СЕКТОР</span>
+<nav class="flex items-center h-full gap-4">
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">ТЕРМИНАЛ</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">ЛОГИ</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">СТАТУС</a>
+<a class="text-[#39FF14] border-b border-[#39FF14] pb-1 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">АНАЛИЗ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container border border-stone-800 px-2 py-1">
+<span class="material-symbols-outlined text-[14px] text-stone-500 mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-primary-container placeholder-stone-600 text-xs w-32 font-mono p-0" placeholder="ПОИСК..." type="text" value="Q-RESULT"/>
+</div>
+<div class="flex gap-2">
+<button class="text-stone-500 hover:text-[#39FF14] transition-none p-1"><span class="material-symbols-outlined text-[18px]">settings_input_component</span></button>
+<button class="text-stone-500 hover:text-[#39FF14] transition-none p-1"><span class="material-symbols-outlined text-[18px]">terminal</span></button>
+</div>
+<button class="border border-[#39FF14] text-[#39FF14] px-3 py-1 hover:bg-[#39FF14] hover:text-black transition-none font-bold">ВХОД</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar Web -->
+<nav class="hidden md:flex flex-col h-full border-r border-stone-800 bg-stone-950 h-screen w-64 shrink-0">
+<div class="p-4 border-b border-stone-800 flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-highest border border-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400 text-[18px]">person</span>
+</div>
+<div>
+<div class="text-lg font-bold text-[#39FF14] font-headline-md font-headline-md">SEC-01</div>
+<div class="font-mono text-[11px] leading-tight uppercase text-stone-500">LN-402</div>
+</div>
+</div>
+<div class="flex-1 py-2 flex flex-col font-mono text-[11px] leading-tight uppercase gap-1">
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">folder_managed</span> РЕЕСТР
+                </a>
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">database</span> ОБЪЕКТЫ
+                </a>
+<a class="bg-stone-900 border-l-4 border-[#39FF14] text-[#39FF14] py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">history_edu</span> АРХИВ
+                </a>
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">settings_ethernet</span> СИСТЕМА
+                </a>
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">build</span> УТИЛИТЫ
+                </a>
+</div>
+<div class="p-4 border-t border-stone-800">
+<button class="w-full border border-stone-600 bg-stone-900 text-stone-300 py-2 hover:border-[#39FF14] hover:text-[#39FF14] transition-none font-mono text-[11px] uppercase tracking-wider mb-4">НОВЫЙ ЗАПРОС</button>
+<a class="text-stone-400 hover:text-error flex items-center gap-3 font-mono text-[11px] uppercase transition-none" href="#">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span> ВЫХОД
+                </a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 flex flex-col min-w-0 bg-surface overflow-y-auto">
+<!-- Terminal Header -->
+<div class="border-b border-outline-variant bg-surface-container-low p-4 shrink-0">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary-container uppercase">QUERY RESULTS: DOSSIERS</h1>
+<p class="font-code-dense text-code-dense text-on-surface-variant mt-1">EXC-TIME: 0.042s | MATCHES: 3 | SECTOR: ALPHA</p>
+</div>
+<div class="flex gap-2">
+<div class="border border-outline-variant px-2 py-1 font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 bg-primary-container rounded-none block"></span> STATUS: OK
+                        </div>
+</div>
+</div>
+<div class="font-code-dense text-code-dense text-outline mt-2 border-t border-outline-variant pt-2">
+                    &gt; SELECT * FROM archive.dossiers WHERE tags IN ('VK RecSys', 'MiniMax', 'NVIDIA') ORDER BY relevance DESC;
+                </div>
+</div>
+<!-- Data Grid Canvas -->
+<div class="flex-1 p-margin flex flex-col gap-gutter bg-outline-variant">
+<!-- Row 1: VK RecSys -->
+<div class="bg-surface-container flex flex-col md:flex-row border border-outline-variant hover:bg-surface-container-high transition-none relative group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container hidden group-hover:block"></div>
+<div class="p-3 w-full md:w-48 border-b md:border-b-0 md:border-r border-outline-variant shrink-0 flex flex-col justify-between">
+<div>
+<div class="font-label-caps text-label-caps text-primary-container mb-1">ID: VK-RCS-09</div>
+<div class="font-headline-md text-headline-md text-on-surface uppercase truncate">VK RecSys</div>
+</div>
+<div class="mt-4">
+<span class="inline-block border border-primary-container text-primary-container font-label-caps text-[9px] px-1 py-0.5 uppercase">TOP-9%</span>
+</div>
+</div>
+<div class="p-3 flex-1 grid grid-cols-1 md:grid-cols-3 gap-gutter bg-outline-variant">
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">СУБЪЕКТ</span>
+<span class="font-code-dense text-code-dense text-on-surface">АЛГОРИТМ РЕКОМЕНДАЦИЙ</span>
+</div>
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">СТАТУС</span>
+<span class="font-code-dense text-code-dense text-primary-container">АКТИВЕН / ВЫСОКИЙ ПРИОРИТЕТ</span>
+</div>
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">МЕТРИКА УСПЕХА</span>
+<span class="font-code-dense text-code-dense text-on-surface">ВОШЕЛ В TOP 9% УЧАСТНИКОВ</span>
+</div>
+</div>
+<div class="p-3 w-full md:w-32 border-t md:border-t-0 md:border-l border-outline-variant flex items-center justify-center shrink-0 bg-surface-container-lowest">
+<button class="border border-outline-variant text-on-surface-variant px-4 py-2 font-label-caps text-label-caps hover:border-primary-container hover:text-primary-container transition-none w-full flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">visibility</span> ФАЙЛ
+                         </button>
+</div>
+</div>
+<!-- Row 2: MiniMax -->
+<div class="bg-surface-container flex flex-col md:flex-row border border-outline-variant hover:bg-surface-container-high transition-none relative group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container hidden group-hover:block"></div>
+<div class="p-3 w-full md:w-48 border-b md:border-b-0 md:border-r border-outline-variant shrink-0 flex flex-col justify-between">
+<div>
+<div class="font-label-caps text-label-caps text-outline mb-1">ID: MMX-50-X</div>
+<div class="font-headline-md text-headline-md text-on-surface uppercase truncate">MiniMax</div>
+</div>
+<div class="mt-4">
+<span class="inline-block border border-outline text-outline font-label-caps text-[9px] px-1 py-0.5 uppercase">RANK: 50+</span>
+</div>
+</div>
+<div class="p-3 flex-1 grid grid-cols-1 md:grid-cols-3 gap-gutter bg-outline-variant">
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">СУБЪЕКТ</span>
+<span class="font-code-dense text-code-dense text-on-surface">МОДЕЛЬ ОЦЕНКИ</span>
+</div>
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">СТАТУС</span>
+<span class="font-code-dense text-code-dense text-on-surface">АРХИВИРОВАН</span>
+</div>
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">РЕЗУЛЬТАТ</span>
+<span class="font-code-dense text-code-dense text-on-surface">ПОЗИЦИЯ В ТОП-50 ДОСТИГНУТА</span>
+</div>
+</div>
+<div class="p-3 w-full md:w-32 border-t md:border-t-0 md:border-l border-outline-variant flex items-center justify-center shrink-0 bg-surface-container-lowest">
+<button class="border border-outline-variant text-on-surface-variant px-4 py-2 font-label-caps text-label-caps hover:border-primary-container hover:text-primary-container transition-none w-full flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">visibility</span> ФАЙЛ
+                         </button>
+</div>
+</div>
+<!-- Row 3: NVIDIA -->
+<div class="bg-surface-container flex flex-col md:flex-row border border-outline-variant hover:bg-surface-container-high transition-none relative group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container hidden group-hover:block"></div>
+<div class="p-3 w-full md:w-48 border-b md:border-b-0 md:border-r border-outline-variant shrink-0 flex flex-col justify-between">
+<div>
+<div class="font-label-caps text-label-caps text-outline mb-1">ID: NVD-064</div>
+<div class="font-headline-md text-headline-md text-on-surface uppercase truncate">NVIDIA</div>
+</div>
+<div class="mt-4">
+<span class="inline-block border border-outline text-outline font-label-caps text-[9px] px-1 py-0.5 uppercase">RANK: #64</span>
+</div>
+</div>
+<div class="p-3 flex-1 grid grid-cols-1 md:grid-cols-3 gap-gutter bg-outline-variant">
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">СУБЪЕКТ</span>
+<span class="font-code-dense text-code-dense text-on-surface">АППАРАТНОЕ УСКОРЕНИЕ</span>
+</div>
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">СТАТУС</span>
+<span class="font-code-dense text-code-dense text-on-surface">ЗАВЕРШЕН</span>
+</div>
+<div class="bg-surface p-2 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-1">ПОКАЗАТЕЛЬ</span>
+<span class="font-code-dense text-code-dense text-on-surface">ИНДЕКС ПРОИЗВОДИТЕЛЬНОСТИ 64</span>
+</div>
+</div>
+<div class="p-3 w-full md:w-32 border-t md:border-t-0 md:border-l border-outline-variant flex items-center justify-center shrink-0 bg-surface-container-lowest">
+<button class="border border-outline-variant text-on-surface-variant px-4 py-2 font-label-caps text-label-caps hover:border-primary-container hover:text-primary-container transition-none w-full flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">visibility</span> ФАЙЛ
+                         </button>
+</div>
+</div>
+</div>
+<!-- End of Data Marker -->
+<div class="p-2 border-t border-outline-variant bg-surface-container-lowest text-center">
+<span class="font-code-dense text-[10px] text-outline uppercase tracking-widest">--- END OF STREAM ---</span>
+</div>
+<!-- Footer (Desktop Only) -->
+<footer class="hidden md:flex bg-stone-950 font-mono text-[9px] uppercase fixed bottom-0 w-full border-t border-stone-800 flex justify-between items-center px-4 py-1 h-8 w-full z-50">
+<div class="text-stone-600">© 2024 ЦЕНТРАЛЬНЫЙ УЗЕЛ СВЯЗИ. КОРПУС-Г</div>
+<div class="flex gap-4">
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПРОТОКОЛ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПОДДЕРЖКА</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

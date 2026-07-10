@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Operator Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#dfe4de",
+                        "tertiary-container": "#dfe4de",
+                        "tertiary-fixed-dim": "#c3c8c2",
+                        "on-secondary": "#333028",
+                        "on-background": "#dfe4db",
+                        "inverse-primary": "#506600",
+                        "on-secondary-fixed": "#1e1c14",
+                        "on-primary-container": "#556d00",
+                        "background": "#10150f",
+                        "secondary": "#cbc6ba",
+                        "surface-container-highest": "#313630",
+                        "tertiary": "#ffffff",
+                        "on-secondary-container": "#bab5a9",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#dfe4db",
+                        "on-error": "#690005",
+                        "secondary-container": "#4a473e",
+                        "outline": "#8e9379",
+                        "surface-variant": "#313630",
+                        "outline-variant": "#444933",
+                        "on-tertiary": "#2c322e",
+                        "primary-container": "#c3f400",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2c322c",
+                        "surface-container": "#1c211b",
+                        "surface": "#10150f",
+                        "surface-container-low": "#181d17",
+                        "on-surface": "#dfe4db",
+                        "primary-fixed": "#c3f400",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#161e00",
+                        "surface-container-lowest": "#0a0f0a",
+                        "on-tertiary-container": "#606661",
+                        "on-primary": "#283500",
+                        "on-tertiary-fixed": "#181d19",
+                        "surface-bright": "#353b34",
+                        "secondary-fixed": "#e8e2d6",
+                        "surface-container-high": "#262b25",
+                        "surface-dim": "#10150f",
+                        "on-surface-variant": "#c4c9ac",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary-fixed-dim": "#cbc6ba",
+                        "on-secondary-fixed-variant": "#4a473e",
+                        "surface-tint": "#abd600",
+                        "on-tertiary-fixed-variant": "#434844"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-columns": "12",
+                        "stack-lg": "4rem",
+                        "margin": "2rem",
+                        "unit": "4px",
+                        "gutter": "1rem",
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "metadata-sm": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "metadata-lg": ["IBM Plex Mono"],
+                        "label": ["IBM Plex Mono"],
+                        "headline-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "metadata-sm": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "metadata-lg": ["14px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label": ["10px", { "lineHeight": "1.0", "fontWeight": "600" }],
+                        "headline-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #000; color: #dfe4db; }
+        ::selection { background-color: #c3f400; color: #000; }
+        textarea:focus { outline: none; }
+    </style>
+</head>
+<body class="antialiased min-h-screen relative font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-black dark:bg-black fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-20 border-b border-zinc-800 scale-100 no-ease">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-[#CCFF00] font-['Space_Grotesk'] font-bold tracking-tight uppercase">AI_Nikitka93</span>
+</div>
+<div class="flex items-center">
+<button class="font-['Space_Grotesk'] font-bold tracking-tight uppercase text-zinc-500 hover:text-[#CCFF00] transition-colors duration-75">
+                RU / EN
+            </button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-black dark:bg-black fixed left-0 top-20 w-72 h-[calc(100vh-80px)] flex flex-col pt-12 border-r border-zinc-800 font-['IBM_Plex_Mono'] text-sm tracking-widest uppercase cursor-crosshair z-40">
+<div class="px-8 pb-12">
+<h2 class="text-zinc-500 mb-2">INDEX</h2>
+<div class="text-[#CCFF00]">V.093_RESEARCH</div>
+</div>
+<ul class="flex flex-col w-full">
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none gap-4" href="#">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+                    01/ ARCHIVE
+                </a>
+</li>
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none gap-4" href="#">
+<span class="material-symbols-outlined text-[18px]">account_box</span>
+                    02/ DOSSIER
+                </a>
+</li>
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none gap-4" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+                    03/ LOGS
+                </a>
+</li>
+<li>
+<a class="bg-[#CCFF00] text-black px-4 py-2 flex items-center justify-start gap-4" href="#">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+                    04/ OPERATOR
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-72 mt-20 mb-[72px] min-h-[calc(100vh-152px)] p-12 bg-black flex flex-col">
+<!-- Header Section -->
+<div class="w-full border-b border-zinc-800 pb-stack-sm mb-stack-md flex justify-between items-end">
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Operator Input Surface</h1>
+<div class="flex gap-4">
+<div class="border border-outline-variant px-2 py-1 flex items-center">
+<span class="font-metadata-sm text-metadata-sm text-outline uppercase">SYS: ONLINE</span>
+</div>
+</div>
+</div>
+<!-- Grid Layout for Content -->
+<div class="grid grid-cols-12 gap-gutter flex-grow">
+<!-- Metadata Column (Titanium colored) -->
+<aside class="col-span-3 flex flex-col gap-stack-md pr-8 border-r border-zinc-800 h-full">
+<div class="flex flex-col gap-1">
+<span class="font-label text-label text-outline-variant uppercase">Operator ID</span>
+<span class="font-metadata-sm text-metadata-sm text-outline uppercase">OP-93.A_PRIME</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-label text-outline-variant uppercase">Session Start</span>
+<span class="font-metadata-sm text-metadata-sm text-outline uppercase">2024.10.24 // 08:42:11Z</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-label text-outline-variant uppercase">Uplink Status</span>
+<span class="font-metadata-sm text-metadata-sm text-primary-container uppercase">Encrypted_OK</span>
+</div>
+<div class="mt-auto pb-4">
+<div class="w-full h-px bg-zinc-800 mb-4"></div>
+<span class="font-label text-label text-outline-variant block mb-2">Protocol Directives</span>
+<p class="font-metadata-sm text-metadata-sm text-outline text-opacity-70 leading-relaxed">
+                        Input must follow exact structural parameters. Extraneous phrasing will be parsed and discarded. Maintain high restraint.
+                    </p>
+</div>
+</aside>
+<!-- Active Input Area -->
+<section class="col-span-9 pl-8 flex flex-col h-full relative">
+<div class="flex-grow flex flex-col relative group">
+<label class="font-metadata-sm text-metadata-sm text-outline uppercase mb-2 flex justify-between w-full" for="operator-input">
+<span>&gt;_ Awaiting Command Sequence</span>
+<span class="text-outline-variant">Chars: 0 / 2048</span>
+</label>
+<textarea class="w-full h-full min-h-[500px] bg-transparent border-b border-zinc-800 text-on-surface font-body-md text-body-md p-0 pb-4 resize-none transition-colors duration-150 focus:border-primary-container focus:text-primary-container" id="operator-input" placeholder="Initialize query..." spellcheck="false"></textarea>
+</div>
+<!-- Action Bar -->
+<div class="mt-8 flex justify-end items-center gap-4 border-t border-zinc-800 pt-6">
+<button class="font-metadata-sm text-metadata-sm uppercase px-6 py-2 border border-outline text-outline hover:bg-zinc-900 transition-none">
+                        Clear Buffer
+                    </button>
+<button class="font-metadata-sm text-metadata-sm uppercase px-8 py-2 border border-outline text-outline hover:bg-primary-container hover:text-black hover:border-primary-container transition-none flex items-center gap-2">
+                        Execute <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black dark:bg-black fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 border-t border-zinc-800 font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest text-zinc-600 transition-none">
+<div>© AI_NIKITKA93 // ARCHIVAL_PROTOCOL</div>
+<div class="flex gap-8">
+<span class="hover:text-zinc-100 cursor-default">STATUS: OK</span>
+<span class="hover:text-zinc-100 cursor-default">V_93.0.1</span>
+</div>
+</footer>
+</body></html>

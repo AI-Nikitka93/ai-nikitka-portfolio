@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Overload Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .cyber-grid {
+            background-image: 
+                linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .scanline-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(0, 240, 255, 0.3);
+            opacity: 0.3;
+            animation: scanline 6s linear infinite;
+            pointer-events: none;
+            z-index: 40;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+
+        .matrix-bg {
+            background: radial-gradient(circle at center, #0e0e0e 0%, #050505 100%);
+        }
+
+        .glitch-hover:hover {
+            box-shadow: 2px 2px 0 var(--color-secondary-container);
+            transform: translate(-1px, -1px);
+        }
+
+        .terminal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .terminal-scroll::-webkit-scrollbar-track {
+            background: rgba(0, 240, 255, 0.05);
+            border-left: 1px solid var(--color-primary-container);
+        }
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: var(--color-primary-container);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#810081",
+                        "tertiary-container": "#d9d9d9",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "secondary-container": "#fe00fe",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#ffd7f5",
+                        "on-tertiary-container": "#5d5f5f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#5b005b",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#380038",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe9",
+                        "primary-fixed": "#7df4ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary": "#f5f5f5",
+                        "surface-bright": "#3a3939",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b494b",
+                        "on-primary-container": "#006970",
+                        "primary-fixed-dim": "#00dbe9",
+                        "secondary": "#ffabf3",
+                        "on-primary": "#00363a",
+                        "error": "#ffb4ab",
+                        "primary-container": "#00f0ff",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#849495",
+                        "on-secondary-container": "#500050",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "primary": "#dbfcff",
+                        "on-primary-fixed": "#002022",
+                        "secondary-fixed-dim": "#ffabf3",
+                        "on-tertiary": "#2f3131"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "grid-unit": "4px",
+                        "margin": "24px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "mono-label": ["monospace"],
+                        "data-dense": ["monospace"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-sm": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["24px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "mono-label": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "data-dense": ["10px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#050505] text-on-background matrix-bg cyber-grid min-h-screen selection:bg-secondary-container selection:text-white">
+<div class="scanline-effect"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 flex justify-between items-center w-full px-2 h-12 bg-black/90 dark:bg-[#050505] text-cyan-400 dark:text-[#00F0FF] font-mono uppercase tracking-tighter text-sm border-b border-[#00F0FF] border-b-2 border-cyan-500/50 shadow-[0_0_15px_rgba(0,240,255,0.2)] z-50 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">AI_NIKITKA93</span>
+</div>
+<!-- Desktop Nav Cluster -->
+<nav class="hidden md:flex items-center h-full">
+<a class="h-full flex items-center px-4 text-cyan-700 hover:bg-cyan-500 hover:text-black transition-all duration-75" href="#">DOSSIER</a>
+<a class="h-full flex items-center px-4 text-magenta-500 font-bold hover:bg-cyan-500 hover:text-black transition-all duration-75 skew-x-12 scale-95 transition-transform bg-primary-container/10 border-b-2 border-magenta-500 animate-[pulse_2s_ease-in-out_infinite]" href="#">CONSOLE</a>
+<a class="h-full flex items-center px-4 text-cyan-700 hover:bg-cyan-500 hover:text-black transition-all duration-75" href="#">PLANNING</a>
+<a class="h-full flex items-center px-4 text-cyan-700 hover:bg-cyan-500 hover:text-black transition-all duration-75" href="#">FIELD_NOTES</a>
+</nav>
+<button class="font-mono-label text-mono-label border border-primary-container/50 px-2 py-1 hover:bg-cyan-500 hover:text-black transition-all duration-75 text-primary-container">
+            RU/EN
+        </button>
+</header>
+<!-- Main Canvas: Full-screen Translucent Terminal -->
+<main class="pt-16 pb-20 md:pb-6 px-4 md:px-8 min-h-screen flex flex-col max-w-container-max mx-auto w-full relative z-10">
+<div class="flex-1 flex flex-col border border-primary-container bg-surface-container-lowest/80 backdrop-blur-sm shadow-[0_0_15px_rgba(0,240,255,0.15)] relative overflow-hidden group">
+<!-- Terminal Header -->
+<div class="flex justify-between items-center px-3 py-2 border-b border-primary-container bg-primary-container/5">
+<div class="flex items-center gap-3">
+<span class="font-mono-label text-mono-label text-primary-container bg-primary-container/20 px-2 py-0.5 border border-primary-container/30">[SYS_TERMINAL_OVERRIDE]</span>
+<span class="font-mono-label text-mono-label text-primary-container/50 hidden sm:inline">UPLINK: ACTIVE</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-secondary-container rounded-full animate-pulse shadow-[0_0_5px_#fe00fe]"></div>
+<span class="font-mono-label text-mono-label text-secondary-container tracking-widest">CRITICAL_MONITORING</span>
+</div>
+</div>
+<!-- Terminal Scroll Area -->
+<div class="flex-1 p-4 font-data-dense text-data-dense text-primary-container overflow-y-auto terminal-scroll flex flex-col gap-1.5 opacity-90">
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:11.401</span>
+<span class="w-16 text-primary-container shrink-0">[INIT]</span>
+<span class="break-all">NEURAL_LINK_ESTABLISHED_SECTOR_7G</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:11.892</span>
+<span class="w-16 text-primary-container shrink-0">[INFO]</span>
+<span class="break-all">COMMENCING_DATA_INGESTION_STREAM_ALPHA...</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:12.100</span>
+<span class="w-16 text-secondary-container shrink-0">[WARN]</span>
+<span class="break-all text-secondary-container">ANOMALOUS_PACKET_DETECTED_NODE_XYZ_889</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:12.550</span>
+<span class="w-16 text-primary-container shrink-0">[INFO]</span>
+<span class="break-all">QUARANTINE_PROTOCOL_ENGAGED. ISOLATING_NODE.</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:13.001</span>
+<span class="w-16 text-primary-container shrink-0">[INFO]</span>
+<span class="break-all">SCANNING_MEMORY_BANKS [||||||||||||      ] 64%</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:14.220</span>
+<span class="w-16 text-secondary-container font-bold shrink-0">[ERR ]</span>
+<span class="break-all text-secondary-container bg-secondary-container/10 px-1 border border-secondary-container/30">MEMORY_FAULT_AT_ADDRESS_0x00F8A9. ATTEMPTING_RECOVERY.</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:15.100</span>
+<span class="w-16 text-primary-container shrink-0">[INFO]</span>
+<span class="break-all">RECOVERY_SUCCESSFUL. DATA_INTEGRITY_VERIFIED.</span>
+</div>
+<div class="flex hover:bg-primary-container/10 px-1 py-0.5 transition-colors">
+<span class="w-24 opacity-50 shrink-0">14:02:15.800</span>
+<span class="w-16 text-primary-container shrink-0">[INFO]</span>
+<span class="break-all">AWAITING_OPERATOR_INPUT_OVERRIDE...</span>
+</div>
+<!-- Ghost lines for aesthetic -->
+<div class="flex px-1 py-0.5 opacity-30 mt-4">
+<span class="w-24 shrink-0">--:--:--.---</span>
+<span class="w-16 shrink-0">[....]</span>
+<span>........................................</span>
+</div>
+</div>
+<!-- Interactive Command Line -->
+<div class="border-t border-primary-container bg-surface-container-lowest p-2 sm:p-3 flex items-center gap-2 group-hover:shadow-[0_0_10px_var(--color-primary-container)] transition-shadow">
+<span class="font-mono-label text-mono-label text-secondary-container pl-1">root@AI_NIKITKA93:~#</span>
+<input autocomplete="off" class="flex-1 bg-transparent border-none outline-none font-data-dense text-data-dense text-primary-container focus:ring-0 p-0 placeholder:text-primary-container/30" placeholder="enter command sequence..." spellcheck="false" type="text" value="execute sys_override --force-bypass"/>
+<button class="font-mono-label text-mono-label px-4 py-1.5 border border-primary-container text-primary-container hover:bg-primary-container hover:text-[#050505] glitch-hover transition-all uppercase tracking-widest hidden sm:block">
+                    Execute
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-black dark:bg-[#050505] border-t border-[#00F0FF] border-t-2 shadow-[0_-5px_15px_rgba(0,240,255,0.3)] font-mono text-[9px] font-bold tracking-widest">
+<a class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white flex-1 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">folder_shared</span>
+<span>DOSSIER</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-cyan-400 text-black p-1 shadow-[0_0_10px_#00F0FF] border-r-4 border-magenta-500 border-l-2 animate-pulse hover:bg-magenta-500/20 hover:text-white flex-1 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1 text-black">terminal</span>
+<span>CONSOLE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white flex-1 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">event_note</span>
+<span>PLANNING</span>
+</a>
+<a class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white flex-1 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span>FIELD_NOTES</span>
+</a>
+</nav>
+</body></html>

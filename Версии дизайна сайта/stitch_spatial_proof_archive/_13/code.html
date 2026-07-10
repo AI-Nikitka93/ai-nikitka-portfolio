@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Routes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#101509",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary": "#cdc6b6",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#504157",
+                        "surface-container-high": "#272c1f",
+                        "surface-container-highest": "#323629",
+                        "surface-bright": "#363b2d",
+                        "outline-variant": "#424935",
+                        "on-background": "#e0e5d1",
+                        "surface-container": "#1d2115",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#4d493d",
+                        "primary-container": "#b0f734",
+                        "inverse-surface": "#e0e5d1",
+                        "on-tertiary-fixed": "#23172a",
+                        "archive-bone": "#D6CFBF",
+                        "phosphor-lime": "#B7FF3C",
+                        "raw-titanium": "#8E968C",
+                        "primary-fixed": "#b0f734",
+                        "on-tertiary-container": "#6f5f76",
+                        "on-primary-fixed": "#121f00",
+                        "void-black": "#0A0D0C",
+                        "background": "#101509",
+                        "on-secondary-fixed": "#1e1b11",
+                        "on-secondary-fixed-variant": "#4b473b",
+                        "tertiary": "#ffffff",
+                        "surface-tint": "#96da06",
+                        "surface-variant": "#323629",
+                        "tertiary-fixed-dim": "#d4c0db",
+                        "secondary-fixed-dim": "#cdc6b6",
+                        "surface-container-low": "#191d11",
+                        "tertiary-container": "#f0dcf7",
+                        "inverse-primary": "#456800",
+                        "surface-dim": "#101509",
+                        "on-surface": "#e0e5d1",
+                        "on-surface-variant": "#c2caaf",
+                        "ember-orange": "#FF6A2A",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#f0dcf7",
+                        "primary-fixed-dim": "#96da06",
+                        "primary": "#ffffff",
+                        "on-secondary": "#343025",
+                        "on-tertiary": "#392b40",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e9e2d1",
+                        "inverse-on-surface": "#2d3225",
+                        "on-primary-container": "#4a6f00",
+                        "on-primary": "#223600",
+                        "carbon-fog": "#161B19",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#beb8a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "sm": "8px",
+                        "margin": "40px",
+                        "unit": "4px",
+                        "xl": "48px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-metadata": ["IBM Plex Mono"],
+                        "mono-id": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-regular": ["Space Grotesk"],
+                        "header-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "mono-label": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "mono-metadata": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "mono-id": ["11px", { "lineHeight": "1", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-regular": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "header-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0D0C; /* void-black */
+            color: #e0e5d1; /* on-surface */
+        }
+        .dossier-card {
+            background: linear-gradient(145deg, #161B19, #0A0D0C);
+            border: 1px solid #2a332d;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.02);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .dossier-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at top right, rgba(183,255,60,0.1), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .dossier-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: rgba(183,255,60,0.5);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.9), 0 0 20px rgba(183,255,60,0.1), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+        .dossier-card:hover::after {
+            opacity: 1;
+        }
+        .node-pulse {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #424935;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dossier-card:hover .node-pulse {
+            background-color: #B7FF3C;
+            box-shadow: 0 0 10px #B7FF3C, 0 0 20px #B7FF3C;
+        }
+        .glow-text {
+            text-shadow: 0 0 5px rgba(183,255,60,0.5);
+        }
+    </style>
+</head>
+<body class="font-body-regular text-body-regular min-h-screen flex flex-col antialiased selection:bg-phosphor-lime selection:text-void-black">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-10 h-16 bg-[#000000] dark:bg-[#000000] docked full-width top-0 border-b border-[#2A2A2A] flat no-shadows shadow-[0_0_10px_rgba(183,255,60,0.1)]">
+<div class="flex items-center gap-4">
+<span class="text-[#B7FF3C] font-bold text-lg tracking-tighter">AI_Nikitka93</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#A1A1A1] hover:text-[#B7FF3C] transition-colors cursor-pointer text-sm">fingerprint</span>
+<span class="material-symbols-outlined text-[#A1A1A1] hover:text-[#B7FF3C] transition-colors cursor-pointer text-sm">settings_input_component</span>
+</div>
+<button class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-[#B7FF3C] hover:opacity-80 cursor-crosshair">EN/RU</button>
+</div>
+</header>
+<!-- SideNavBar (Web Only) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full z-40 pt-20 flex-col justify-between bg-[#000000]/90 backdrop-blur-xl dark:bg-[#000000]/90 docked h-full border-r border-[#2A2A2A] w-64 border-r border-neutral-800 flat no-shadows">
+<div class="flex flex-col">
+<div class="px-6 py-4 mb-4 border-b border-neutral-800">
+<div class="flex items-center gap-3 mb-2">
+<img alt="Operator AI_Nikitka93 Avatar" class="w-10 h-10 rounded-none border border-[#B7FF3C] grayscale" data-alt="Cyberpunk stylized abstract digital avatar portrait with scanlines and static noise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOj4IUNyZHDv1YU9fb8ycmQa7qWRIKwGwonPRZIwioi4qeuPFiWXKke8aihhW8RMRlGwTjUb_VbvLSoXIkOJU-rvp2tlq5cOzw5xJXcfvdFa9hgRVtP1CYjg9MPqxM2_a3w-EfQfNpN80q8CM4TyxhQji7J6Ipx6anabJZGfZ0XDjUF9YCmYl5iKcQt6jZstScVv2O_fUyQmWAnypguoLGbX7A2AdowVnjmIIQpS9oGIONYH554gPykYbn63uDW8GiLOwYvUe_Wow"/>
+<div class="flex flex-col">
+<span class="font-mono-id text-mono-id text-[#B7FF3C] tracking-widest uppercase">OPERATOR_STATUS</span>
+<span class="font-mono-metadata text-mono-metadata text-[#A1A1A1] uppercase">ACTIVE_SESSION_093</span>
+</div>
+</div>
+</div>
+<ul class="flex flex-col font-['IBM_Plex_Mono'] text-[10px] tracking-widest uppercase">
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">home</span> Entrance
+                </li>
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">folder_managed</span> Archive
+                </li>
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">center_focus_strong</span> Focus
+                </li>
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">face</span> Human
+                </li>
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span> Journal
+                </li>
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">ads_click</span> Briefing
+                </li>
+<li class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">terminal</span> Console
+                </li>
+<li class="bg-[#1A1A1A] text-[#B7FF3C] border-l-4 border-[#B7FF3C] py-4 px-6 flex items-center gap-4 cursor-crosshair opacity-80 translate-x-1 transition-transform">
+<span class="material-symbols-outlined text-[16px]">hub</span> Routes
+                </li>
+</ul>
+</div>
+<div class="px-6 py-6 border-t border-neutral-800">
+<button class="w-full border border-[#B7FF3C] text-[#B7FF3C] font-mono-label text-mono-label py-2 px-4 hover:bg-[#B7FF3C] hover:text-void-black transition-colors uppercase flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">rocket_launch</span> INITIATE_UPLINK
+            </button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 pt-16 md:ml-64 p-margin">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<div class="mb-xl border-b border-raw-titanium/30 pb-lg">
+<div class="flex items-baseline gap-4 mb-2">
+<h1 class="font-display-lg text-display-lg text-archive-bone tracking-tighter uppercase">КОНТАКТНЫЕ_УЗЛЫ</h1>
+<span class="font-mono-metadata text-mono-metadata text-phosphor-lime">STATUS: ONLINE</span>
+</div>
+<p class="font-body-regular text-body-regular text-raw-titanium max-w-2xl">Доступные порталы для связи и передачи данных. Выберите узел для маршрутизации сигнала.</p>
+</div>
+<!-- Bento Grid - Links -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Github Module -->
+<a class="dossier-card p-8 flex flex-col justify-between group h-56 block backdrop-blur-sm" href="#">
+<div class="absolute top-6 right-6 font-mono-id text-[10px] text-raw-titanium/50 group-hover:text-phosphor-lime/70 tracking-widest transition-colors z-10">SYS.NODE.GH-01</div>
+<div class="flex items-start justify-between z-10">
+<div class="p-3 bg-void-black/50 rounded-lg border border-raw-titanium/10 group-hover:border-phosphor-lime/30 transition-colors">
+<span class="material-symbols-outlined text-3xl text-archive-bone group-hover:text-phosphor-lime transition-colors">code_blocks</span>
+</div>
+</div>
+<div class="mt-auto z-10">
+<h3 class="font-display-lg text-2xl text-archive-bone group-hover:text-white transition-colors tracking-tight">GITHUB</h3>
+<p class="font-mono-metadata text-xs text-raw-titanium/70 mt-2 uppercase tracking-wider">Репозитории и код</p>
+</div>
+<div class="node-pulse"></div>
+</a>
+<!-- Telegram Module -->
+<a class="dossier-card p-8 flex flex-col justify-between group h-56 block backdrop-blur-sm" href="#">
+<div class="absolute top-6 right-6 font-mono-id text-[10px] text-raw-titanium/50 group-hover:text-phosphor-lime/70 tracking-widest transition-colors z-10">SYS.NODE.TG-02</div>
+<div class="flex items-start justify-between z-10">
+<div class="p-3 bg-void-black/50 rounded-lg border border-raw-titanium/10 group-hover:border-phosphor-lime/30 transition-colors">
+<span class="material-symbols-outlined text-3xl text-archive-bone group-hover:text-phosphor-lime transition-colors">send</span>
+</div>
+</div>
+<div class="mt-auto z-10">
+<h3 class="font-display-lg text-2xl text-archive-bone group-hover:text-white transition-colors tracking-tight">TELEGRAM</h3>
+<p class="font-mono-metadata text-xs text-raw-titanium/70 mt-2 uppercase tracking-wider">Быстрая связь</p>
+</div>
+<div class="node-pulse"></div>
+</a>
+<!-- LinkedIn Module -->
+<a class="dossier-card p-8 flex flex-col justify-between group h-56 block backdrop-blur-sm" href="#">
+<div class="absolute top-6 right-6 font-mono-id text-[10px] text-raw-titanium/50 group-hover:text-phosphor-lime/70 tracking-widest transition-colors z-10">SYS.NODE.IN-03</div>
+<div class="flex items-start justify-between z-10">
+<div class="p-3 bg-void-black/50 rounded-lg border border-raw-titanium/10 group-hover:border-phosphor-lime/30 transition-colors">
+<span class="material-symbols-outlined text-3xl text-archive-bone group-hover:text-phosphor-lime transition-colors">work</span>
+</div>
+</div>
+<div class="mt-auto z-10">
+<h3 class="font-display-lg text-2xl text-archive-bone group-hover:text-white transition-colors tracking-tight">LINKEDIN</h3>
+<p class="font-mono-metadata text-xs text-raw-titanium/70 mt-2 uppercase tracking-wider">Профессиональный профиль</p>
+</div>
+<div class="node-pulse"></div>
+</a>
+<!-- Email Module (Wider) -->
+<a class="dossier-card p-8 flex flex-col justify-between group h-56 block backdrop-blur-sm md:col-span-2" href="#">
+<div class="absolute top-6 right-6 font-mono-id text-[10px] text-raw-titanium/50 group-hover:text-phosphor-lime/70 tracking-widest transition-colors z-10">SYS.NODE.EM-04</div>
+<div class="flex items-start justify-between z-10">
+<div class="p-3 bg-void-black/50 rounded-lg border border-raw-titanium/10 group-hover:border-phosphor-lime/30 transition-colors">
+<span class="material-symbols-outlined text-3xl text-archive-bone group-hover:text-phosphor-lime transition-colors">mail</span>
+</div>
+</div>
+<div class="mt-auto z-10">
+<h3 class="font-display-lg text-2xl text-archive-bone group-hover:text-white transition-colors tracking-tight">SECURE_EMAIL</h3>
+<p class="font-mono-metadata text-xs text-raw-titanium/70 mt-2 uppercase tracking-wider">Официальные запросы</p>
+</div>
+<div class="node-pulse"></div>
+</a>
+<!-- Twitter/X Module -->
+<a class="dossier-card p-8 flex flex-col justify-between group h-56 block backdrop-blur-sm" href="#">
+<div class="absolute top-6 right-6 font-mono-id text-[10px] text-raw-titanium/50 group-hover:text-phosphor-lime/70 tracking-widest transition-colors z-10">SYS.NODE.TW-05</div>
+<div class="flex items-start justify-between z-10">
+<div class="p-3 bg-void-black/50 rounded-lg border border-raw-titanium/10 group-hover:border-phosphor-lime/30 transition-colors">
+<span class="material-symbols-outlined text-3xl text-archive-bone group-hover:text-phosphor-lime transition-colors">tag</span>
+</div>
+</div>
+<div class="mt-auto z-10">
+<h3 class="font-display-lg text-2xl text-archive-bone group-hover:text-white transition-colors tracking-tight">X_NETWORK</h3>
+<p class="font-mono-metadata text-xs text-raw-titanium/70 mt-2 uppercase tracking-wider">Краткие сводки</p>
+</div>
+<div class="node-pulse"></div>
+</a>
+</div>
+</div>
+</main>
+</body></html>

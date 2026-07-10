@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scope Briefing - Monolith</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#343025",
+                        "primary": "#c6c6c6",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-container": "#757575",
+                        "surface": "#131313",
+                        "on-surface-variant": "#cfc4c5",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353535",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#151f00",
+                        "on-tertiary-container": "#627f00",
+                        "surface-tint": "#c6c6c6",
+                        "secondary": "#cdc6b6",
+                        "error": "#ffb4ab",
+                        "surface-container": "#20201f",
+                        "primary-container": "#000000",
+                        "secondary-fixed-dim": "#cdc6b6",
+                        "primary-fixed": "#e2e2e2",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary": "#273500",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353535",
+                        "on-primary": "#303030",
+                        "outline-variant": "#4c4546",
+                        "inverse-primary": "#5e5e5e",
+                        "on-tertiary-fixed-variant": "#3a4d00",
+                        "on-secondary-container": "#beb8a8",
+                        "outline": "#988e90",
+                        "on-secondary-fixed": "#1e1b11",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed-dim": "#a7d700",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#4b473b",
+                        "secondary-container": "#4d493d",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "error-container": "#93000a",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#474747",
+                        "secondary-fixed": "#e9e2d1",
+                        "tertiary": "#a7d700",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#000000",
+                        "tertiary-fixed": "#bff50e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "slab-padding": "40px",
+                        "margin-edge": "64px",
+                        "block-gap": "128px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["48px", { "lineHeight": "110%", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "display-xl": ["120px", { "lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-['Space_Grotesk'] overflow-x-hidden relative">
+<!-- Background Texture -->
+<div class="fixed inset-0 z-0 pointer-events-none opacity-20 mix-blend-overlay">
+<img alt="Dark brutalist concrete wall texture with dramatic shadows" class="w-full h-full object-cover" data-alt="Dark concrete brutalist architectural texture with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWSum_EqhzvXX9EKZ8KVBRZEclG27P3yU9ycNfyLkLXI41VnVsbUVbux_Hd5vgmHpB0HZM8jGe7DYfLnzbdSD3rLb9Q3cnJ8SM2uhN_gHxySNh98MmIzrDCCkvvFuq08-jTFJ3qqB9MCRjnrwr2ntuJeAgHxnJbbHLSx1xiTvOfV84SMlsvKXcQgaSjuFUpQLJaq6m41NEDj0YCXanzIcKHLu3kdG4XfsSHWCP0nyu6k1IqSXuiB6h-EIcRJOihvSLFkgRMrXcVxs"/>
+</div>
+<!-- SideNavBar (from JSON) -->
+<nav class="flex flex-col fixed left-0 top-0 h-full z-40 bg-[#D9D7D2] dark:bg-black w-96 border-r-8 border-black dark:border-stone-800 shadow-[40px_0px_0px_0px_rgba(0,0,0,0.4)]">
+<div class="p-8 pb-16">
+<h1 class="text-5xl font-black text-black dark:text-[#D9D7D2] tracking-tighter">DIRECTORY</h1>
+<p class="font-['Space_Grotesk'] uppercase text-xl font-bold tracking-widest text-[#00FF42] mt-2">V_93.0.1</p>
+</div>
+<div class="flex-1 flex flex-col font-['Space_Grotesk'] uppercase text-xl font-bold tracking-widest">
+<!-- INDEX: Inactive -->
+<a class="text-black dark:text-[#D9D7D2] px-8 py-10 w-full flex items-center gap-6 border-b-2 border-black/10 hover:bg-black hover:text-[#00FF42] dark:hover:bg-[#D9D7D2] dark:hover:text-black active:scale-[0.98] transition-transform duration-75" href="#">
+<span class="material-symbols-outlined text-[32px]">grid_view</span>
+                INDEX
+            </a>
+<!-- ARCHIVE: Inactive -->
+<a class="text-black dark:text-[#D9D7D2] px-8 py-10 w-full flex items-center gap-6 border-b-2 border-black/10 hover:bg-black hover:text-[#00FF42] dark:hover:bg-[#D9D7D2] dark:hover:text-black active:scale-[0.98] transition-transform duration-75" href="#">
+<span class="material-symbols-outlined text-[32px]">layers</span>
+                ARCHIVE
+            </a>
+<!-- SENSORS: Inactive -->
+<a class="text-black dark:text-[#D9D7D2] px-8 py-10 w-full flex items-center gap-6 border-b-2 border-black/10 hover:bg-black hover:text-[#00FF42] dark:hover:bg-[#D9D7D2] dark:hover:text-black active:scale-[0.98] transition-transform duration-75" href="#">
+<span class="material-symbols-outlined text-[32px]">architecture</span>
+                SENSORS
+            </a>
+<!-- TERMINAL: Active (Intent match for Scope/Briefing) -->
+<a class="bg-[#00FF42] text-black px-8 py-10 w-full flex items-center gap-6 active:scale-[0.98] transition-transform duration-75" href="#">
+<span class="material-symbols-outlined text-[32px]">terminal</span>
+                TERMINAL
+            </a>
+</div>
+<div class="p-8 mt-auto">
+<button class="w-full py-6 border-4 border-[#00FF42] text-[#00FF42] font-['Space_Grotesk'] uppercase text-xl font-bold tracking-widest hover:bg-[#00FF42] hover:text-black transition-colors duration-75">
+                INITIALIZE_CORE
+            </button>
+</div>
+</nav>
+<!-- TopAppBar (from JSON) -->
+<header class="fixed left-96 w-[calc(100%-384px)] top-0 z-30 flex justify-between items-center px-16 py-12 bg-[#D9D7D2] dark:bg-black border-b-4 border-black dark:border-[#D9D7D2] shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
+<div class="text-5xl font-black text-black dark:text-[#D9D7D2] tracking-tighter">
+            AI_NIKITKA93
+        </div>
+<div class="hidden">
+<!-- Search hidden per JSON -->
+</div>
+<button class="font-['Space_Grotesk'] uppercase tracking-tighter font-black text-[#00FF42] text-2xl hover:bg-[#00FF42] hover:text-black transition-colors duration-75 px-6 py-3 border-2 border-transparent active:translate-x-2 active:translate-y-2 active:shadow-none transition-all">
+            CONNECT
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-96 pt-[180px] p-margin-edge w-[calc(100%-384px)] min-h-screen relative z-10">
+<div class="max-w-[1800px] mx-auto grid grid-cols-12 gap-gutter">
+<!-- Header Slab -->
+<div class="col-span-12 mb-block-gap mt-16">
+<h1 class="font-display-xl text-display-xl text-primary uppercase">SCOPE // BRIEFING</h1>
+<p class="font-body-lg text-body-lg text-secondary mt-8 max-w-4xl border-l-4 border-tertiary pl-6">
+                    Establish structural parameters for upcoming operational phase. All inputs are logged to the monolith core. Awaiting command directives.
+                </p>
+</div>
+<!-- Intake Step 1: Objective -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-highest p-slab-padding shadow-[20px_20px_0px_0px_rgba(0,0,0,0.8)] mb-gutter border border-outline-variant/30">
+<div class="flex items-center gap-6 border-b-2 border-outline-variant pb-6 mb-8">
+<span class="font-display-xl text-[80px] leading-none text-tertiary font-bold tracking-tighter opacity-80">01</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase">PRIMARY OBJECTIVE</h2>
+</div>
+<div class="mt-4">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase">Define Mission Parameters</label>
+<textarea class="w-full bg-surface border-2 border-outline text-primary font-body-lg text-body-lg p-8 focus:border-tertiary focus:outline-none focus:shadow-[12px_12px_0px_0px_rgba(167,215,0,0.15)] transition-all min-h-[300px] resize-none uppercase" placeholder="ENTER TACTICAL DIRECTIVE..."></textarea>
+</div>
+</div>
+<!-- Intake Step 2: Assets (Bento Style) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter mb-gutter">
+<div class="bg-surface-container-high p-slab-padding shadow-[16px_16px_0px_0px_rgba(0,0,0,0.8)] h-full border border-outline-variant/30 flex flex-col">
+<div class="flex items-center gap-4 border-b-2 border-outline-variant pb-6 mb-8">
+<span class="font-display-xl text-[64px] leading-none text-tertiary font-bold tracking-tighter opacity-80">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">ASSETS</h2>
+</div>
+<div class="flex-1 space-y-8 mt-4">
+<label class="flex items-center gap-6 group cursor-pointer bg-surface p-4 border border-outline-variant hover:border-tertiary transition-colors">
+<div class="w-10 h-10 border-2 border-outline group-hover:border-tertiary flex items-center justify-center transition-colors bg-surface-container">
+<span class="material-symbols-outlined text-transparent group-hover:text-tertiary text-[24px]">check</span>
+</div>
+<span class="font-body-lg text-body-lg text-secondary group-hover:text-primary uppercase tracking-widest">AERIAL RECON</span>
+</label>
+<label class="flex items-center gap-6 group cursor-pointer bg-surface p-4 border border-outline-variant hover:border-tertiary transition-colors">
+<div class="w-10 h-10 border-2 border-tertiary flex items-center justify-center transition-colors bg-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[24px]">check</span>
+</div>
+<span class="font-body-lg text-body-lg text-primary uppercase tracking-widest">GROUND SENSORS</span>
+</label>
+<label class="flex items-center gap-6 group cursor-pointer bg-surface p-4 border border-outline-variant hover:border-tertiary transition-colors">
+<div class="w-10 h-10 border-2 border-outline group-hover:border-tertiary flex items-center justify-center transition-colors bg-surface-container">
+<span class="material-symbols-outlined text-transparent group-hover:text-tertiary text-[24px]">check</span>
+</div>
+<span class="font-body-lg text-body-lg text-secondary group-hover:text-primary uppercase tracking-widest">ORBITAL RELAY</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Intake Step 3: Constraints -->
+<div class="col-span-12 bg-surface-container p-slab-padding shadow-[24px_24px_0px_0px_rgba(0,0,0,0.9)] mb-block-gap border border-outline-variant/30">
+<div class="flex items-center gap-6 border-b-2 border-outline-variant pb-6 mb-12">
+<span class="font-display-xl text-[80px] leading-none text-tertiary font-bold tracking-tighter opacity-80">03</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase">CONSTRAINTS</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="bg-surface p-8 border-l-4 border-outline focus-within:border-tertiary transition-colors">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase tracking-widest">TIMEFRAME (WEEKS)</label>
+<input class="w-full bg-transparent border-none text-primary font-display-xl text-[80px] p-0 focus:outline-none focus:ring-0 uppercase placeholder-outline-variant" type="text" value="08"/>
+</div>
+<div class="bg-surface p-8 border-l-4 border-outline focus-within:border-tertiary transition-colors">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase tracking-widest">BUDGET CLASSIFICATION</label>
+<input class="w-full bg-transparent border-none text-primary font-display-xl text-[80px] p-0 focus:outline-none focus:ring-0 uppercase placeholder-outline-variant" type="text" value="CLASS A"/>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="col-span-12 flex justify-end pb-32">
+<button class="bg-primary text-primary-container font-headline-md text-headline-md px-24 py-12 hover:bg-tertiary transition-colors shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:translate-x-2 active:shadow-none flex items-center gap-8 uppercase font-bold tracking-tighter">
+                    ENGAGE PROTOCOL
+                    <span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'wght' 700;">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

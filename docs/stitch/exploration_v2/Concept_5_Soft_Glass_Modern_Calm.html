@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 | Никита Кизевич - Архитектор ИИ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Space+Grotesk:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#465d68",
+                    "surface-container-low": "#111418",
+                    "tertiary-container": "#cde6f4",
+                    "primary-fixed-dim": "#a5ddf2",
+                    "background": "#0c0e11",
+                    "surface": "#0c0e11",
+                    "on-tertiary-fixed": "#2b424d",
+                    "on-secondary-fixed": "#29434e",
+                    "on-secondary-container": "#a8c3d1",
+                    "surface-container-highest": "#20262e",
+                    "surface-container-high": "#1b2027",
+                    "primary-fixed": "#b6ebff",
+                    "on-primary-container": "#a1d9ee",
+                    "on-tertiary-fixed-variant": "#475f6a",
+                    "secondary": "#87a2af",
+                    "on-error": "#490106",
+                    "tertiary-fixed-dim": "#bfd8e5",
+                    "on-primary-fixed": "#004656",
+                    "inverse-surface": "#f9f9fd",
+                    "error-dim": "#bb5551",
+                    "secondary-fixed": "#cbe7f5",
+                    "error-container": "#7f2927",
+                    "primary-dim": "#8ac1d5",
+                    "on-background": "#e0e6f1",
+                    "tertiary-fixed": "#cde6f4",
+                    "on-surface-variant": "#a5abb6",
+                    "secondary-fixed-dim": "#bdd9e6",
+                    "on-primary": "#004657",
+                    "surface-bright": "#252d36",
+                    "surface-container": "#161a1f",
+                    "on-primary-fixed-variant": "#286274",
+                    "on-tertiary-container": "#3e5560",
+                    "on-secondary": "#06232d",
+                    "surface-container-lowest": "#000000",
+                    "surface-variant": "#20262e",
+                    "primary": "#98cfe3",
+                    "tertiary-dim": "#bfd8e5",
+                    "outline": "#707680",
+                    "secondary-dim": "#87a2af",
+                    "inverse-on-surface": "#535559",
+                    "inverse-primary": "#2d6678",
+                    "on-secondary-fixed-variant": "#455f6b",
+                    "secondary-container": "#253f4a",
+                    "tertiary": "#e0f4ff",
+                    "error": "#ee7d77",
+                    "on-error-container": "#ff9993",
+                    "outline-variant": "#424851",
+                    "on-surface": "#e0e6f1",
+                    "surface-tint": "#98cfe3",
+                    "surface-dim": "#0c0e11",
+                    "primary-container": "#094d5f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Space Grotesk", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #0c0e11;
+            color: #e0e6f1;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(32, 38, 46, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0c0e11]/60 backdrop-blur-xl no-line-rule tonal-shift-via-opacity">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="font-['Newsreader'] italic text-2xl text-[#98cfe3]">AI_Nikitka93</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Newsreader'] text-lg font-medium tracking-tight text-[#87a2af] hover:text-[#98cfe3] transition-colors" href="#">Обо мне</a>
+<a class="font-['Newsreader'] text-lg font-medium tracking-tight text-[#87a2af] hover:text-[#98cfe3] transition-colors" href="#">Проекты</a>
+<a class="font-['Newsreader'] text-lg font-medium tracking-tight text-[#87a2af] hover:text-[#98cfe3] transition-colors" href="#">Услуги</a>
+<a class="font-['Newsreader'] text-lg font-medium tracking-tight text-[#87a2af] hover:text-[#98cfe3] transition-colors" href="#">Блог</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-medium text-sm hover:opacity-90 active:scale-95 transition-all">Связаться</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-8 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-primary text-xs font-['Space_Grotesk'] tracking-wider">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        ИССЛЕДОВАТЕЛЬ ИИ
+                    </div>
+<h1 class="font-headline text-6xl md:text-8xl leading-[1.1] tracking-tight">
+                        Архитектура <br/>
+<span class="italic text-primary">интеллекта</span>
+</h1>
+<p class="font-body text-lg text-secondary max-w-xl leading-relaxed">
+                        Никита Кизевич. Проектирую сложные системы на базе LLM, превращая сырые данные в структурированные знания и автономные решения.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-medium transition-all hover:shadow-xl hover:shadow-primary/10">Посмотреть проекты</button>
+<button class="px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-medium hover:bg-surface-container transition-all">Узнать больше</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-full bg-gradient-to-tr from-primary/20 to-transparent absolute -inset-4 blur-3xl opacity-50 animate-pulse"></div>
+<div class="relative rounded-2xl overflow-hidden glass-card p-4 border border-outline-variant/10">
+<img alt="Digital architecture representation" class="w-full aspect-[4/5] object-cover rounded-xl" data-alt="Abstract cinematic 3D render of flowing liquid metal mercury texture with soft teal and slate blue lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMbALDmiUBwFaBEtSoBigaYNq80u9H-Q31_gXeyUyZNM2CVXNo4xeDwihW3blIdwCPIc_V9bK3NPvTnLJNd8SzeJ6BMmI84LaLH-MDqT6lvOeNlRWqoJwMtrDZyUrVnbAfegQ_CBUuTDll6hBqg_LSBBpTbnJontSa3P2pyQAo2koA0VGdMFuytOto7v71cuyQnvfEDT3XoVhXmZWnU-r1MgURYjKyFOxCGc07dt6xIe87SxNG4S1MG7N_GPG8-ZUoIcshlIedGTk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof Bar -->
+<section class="py-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+<span class="font-['Space_Grotesk'] text-xl tracking-tighter">TECH_CRUNCH</span>
+<span class="font-['Space_Grotesk'] text-xl tracking-tighter">AI_RESEARCH_ORG</span>
+<span class="font-['Space_Grotesk'] text-xl tracking-tighter">QUANTUM_LABS</span>
+<span class="font-['Space_Grotesk'] text-xl tracking-tighter">NEURAL_WORKS</span>
+<span class="font-['Space_Grotesk'] text-xl tracking-tighter">CYBER_NET</span>
+</div>
+</section>
+<!-- What I Do (Bento Grid) -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-4xl mb-4 text-primary">Специализация</h2>
+<p class="font-body text-secondary max-w-2xl">Глубокое погружение в технологии будущего через призму академической точности и практического применения.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6">neurology</span>
+<h3 class="font-headline text-3xl mb-4">Разработка LLM-агентов</h3>
+<p class="font-body text-secondary leading-relaxed max-w-md">Создание автономных систем, способных рассуждать, планировать и выполнять сложные многоэтапные задачи без участия человека.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex gap-4">
+<span class="px-3 py-1 bg-surface-variant rounded-full text-xs font-label">RAG</span>
+<span class="px-3 py-1 bg-surface-variant rounded-full text-xs font-label">Auto-GPT</span>
+<span class="px-3 py-1 bg-surface-variant rounded-full text-xs font-label">Chain-of-Thought</span>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6">database</span>
+<h3 class="font-headline text-3xl mb-4">Data Архитектура</h3>
+<p class="font-body text-secondary leading-relaxed">Оптимизация векторов и графовых баз данных для мгновенного поиска смыслов.</p>
+</div>
+<div class="mt-8 flex justify-end">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6">science</span>
+<h3 class="font-headline text-3xl mb-4">AI Аудит</h3>
+<p class="font-body text-secondary leading-relaxed">Оценка безопасности и эффективности существующих ИИ-решений в бизнесе.</p>
+</div>
+<div class="mt-8 flex justify-end">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<div class="md:col-span-2 bg-primary-container/20 p-10 rounded-2xl flex flex-col md:flex-row gap-8 items-center border border-primary/10">
+<div class="flex-1">
+<h3 class="font-headline text-3xl mb-4 text-primary">Интеграция ИИ в Workflow</h3>
+<p class="font-body text-secondary leading-relaxed mb-6">Бесшовная встройка нейросетей в ваши текущие бизнес-процессы, от CRM до управления производством.</p>
+<button class="text-primary font-medium flex items-center gap-2 hover:gap-4 transition-all">Узнать методологию <span class="material-symbols-outlined">north_east</span></button>
+</div>
+<div class="w-full md:w-1/3 aspect-video rounded-xl glass-card overflow-hidden">
+<img alt="Technology background" class="w-full h-full object-cover opacity-50" data-alt="Microchip circuit board close up with soft neon blue and teal lighting reflecting on metallic surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfSaI1Muk1IO30oljx316mr1u1SSPFbv4fvNcE3cPfuUPb8mJ72xMVQMRtGbUDdJNLdvQ6EdmWVlVG6ak8pzccNZCSBZIqRNNCzTZz6TzSX0HViTAoDfGqXbaOPmim1PunRktmO_jCsy0WlkGjiGXeXITvpfr42x3q0RsBAmifSlAUyfeuEE77xiBJmibvvpyc0whpZOERC0qWLBUKotTB_SFUhzz_O-EifgeVn_0CKyY-Xz756Jt7jAdaSXB_BZsYeXhsrNe7FTY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-4xl mb-4">Избранные проекты</h2>
+<p class="font-body text-secondary">Реальные кейсы внедрения и исследовательские прототипы.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="p-3 rounded-full border border-outline-variant hover:bg-surface transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-3 rounded-full border border-outline-variant bg-surface-container-highest"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="space-y-6 group">
+<div class="aspect-[16/10] rounded-2xl overflow-hidden bg-surface-container relative">
+<img alt="Project A" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Digital representation of complex data networks as glowing nodes and links in a dark blue abstract space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIpqvPIZowyNNFd0eERdouEN0WXe4-HQacfzwnYOTDKdYkLG7ymqPcUCmtMVZhTic1Xc9HufqElqVpzBu6XeQ27wplcKl8s1PEGvL13lRehV8SF6kBNIlyUEkHdwp_VLdIcXkVTpZgwEKOLc7RANfg-mYjwmFSsphDq6u6UvjP_GoLBMIYXlENg_-jejbwEKeAmA_eHQW1_oABcylXtSLTTKETXV3Ge1V2mF4srHgWmy_lff7chEty3d9OCdORa7bHVGRJNJgtCg4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-medium flex items-center gap-2">Смотреть детали <span class="material-symbols-outlined">open_in_new</span></span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl group-hover:text-primary transition-colors">CognitiveOS</h3>
+<p class="font-body text-secondary mt-1">ОС для управления умным домом на базе локальных LLM.</p>
+</div>
+<span class="font-label text-xs text-primary-dim border border-primary/30 px-3 py-1 rounded-full">2024</span>
+</div>
+</div>
+<div class="space-y-6 group">
+<div class="aspect-[16/10] rounded-2xl overflow-hidden bg-surface-container relative">
+<img alt="Project B" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract generative art featuring soft spherical bubbles floating in a dark, atmospheric teal space with grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI1ebxdUpQ5V46Cbroqrm15XESbTnpe1IKpCQH-uPIsolPMIQsqI-yxJEkphE418lSa7hBI86MN5JdTWt_I964QlFhUAPCmuBQ7xZww3l01XBD3bZ9Nr-VbaQZLLWsMebK_x1TLZ604siC2MydsEdjYQlehWJVpg2qyVHQL1epYncxvq41u6jwmwvUMXkuIkPp2pqXav-2F_5VrXVQZECcRIKrV0TjDvRqWPNrWj2wdSGIvUhW-ZKZQwC9sOFfY0l5kfLLvJtIDjc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-medium flex items-center gap-2">Смотреть детали <span class="material-symbols-outlined">open_in_new</span></span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl group-hover:text-primary transition-colors">DeepInsight Research</h3>
+<p class="font-body text-secondary mt-1">Инструмент для автоматического анализа научных публикаций.</p>
+</div>
+<span class="font-label text-xs text-primary-dim border border-primary/30 px-3 py-1 rounded-full">2023</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calculator Preview -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="glass-card rounded-3xl p-12 overflow-hidden relative">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline text-4xl mb-6">Рассчитайте внедрение</h2>
+<p class="font-body text-secondary mb-10 leading-relaxed text-lg">
+                            Используйте наш интерактивный калькулятор, чтобы оценить потенциальную экономию и стоимость разработки ИИ-системы под ваши задачи.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body">Оценка серверных мощностей</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body">Стоимость токенов API</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body">Прогноз ROI за 12 месяцев</span>
+</div>
+</div>
+<button class="mt-12 px-8 py-4 bg-primary text-on-primary rounded-xl font-bold flex items-center gap-3">
+                            Перейти к калькулятору
+                            <span class="material-symbols-outlined">calculate</span>
+</button>
+</div>
+<div class="relative bg-surface/50 border border-outline-variant/20 rounded-2xl p-8">
+<div class="space-y-6">
+<div class="h-2 w-24 bg-primary/20 rounded-full"></div>
+<div class="space-y-3">
+<div class="h-10 bg-surface-container rounded-lg border border-outline-variant/10"></div>
+<div class="h-10 bg-surface-container rounded-lg border border-outline-variant/10"></div>
+<div class="h-10 bg-primary/20 rounded-lg border border-primary/20"></div>
+</div>
+<div class="pt-6 border-t border-outline-variant/10 grid grid-cols-3 gap-4">
+<div class="h-16 bg-surface-container rounded-xl"></div>
+<div class="h-16 bg-surface-container rounded-xl"></div>
+<div class="h-16 bg-surface-container rounded-xl"></div>
+</div>
+<div class="h-10 bg-primary text-on-primary rounded-lg flex items-center justify-center text-xs font-bold uppercase tracking-widest">Расчитать</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Assistant Block -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<div class="mb-12">
+<div class="inline-block p-4 rounded-full bg-primary/10 mb-6">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h2 class="font-headline text-4xl mb-4">Поговорите с моим цифровым аватаром</h2>
+<p class="font-body text-secondary">Я обучил ИИ на своих статьях и проектах, чтобы он мог ответить на ваши вопросы 24/7.</p>
+</div>
+<div class="glass-card rounded-2xl p-2 border border-outline-variant/10 flex flex-col h-[400px]">
+<div class="flex-1 p-6 overflow-y-auto space-y-4">
+<div class="flex justify-start">
+<div class="bg-surface-container-low text-on-surface p-4 rounded-2xl rounded-bl-none max-w-[80%] text-left text-sm border border-outline-variant/10">
+                                Здравствуйте! Я — AI-ассистент Никиты. Чем могу помочь вам сегодня? Могу рассказать о его опыте в RAG или показать портфолио.
+                            </div>
+</div>
+<div class="flex justify-end">
+<div class="bg-primary text-on-primary p-4 rounded-2xl rounded-br-none max-w-[80%] text-left text-sm">
+                                Привет! Расскажи подробнее про проект CognitiveOS.
+                            </div>
+</div>
+<div class="flex justify-start">
+<div class="bg-surface-container-low text-on-surface p-4 rounded-2xl rounded-bl-none max-w-[80%] text-left text-sm border border-outline-variant/10 animate-pulse">
+                                Генерирую ответ...
+                            </div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-high rounded-b-2xl border-t border-outline-variant/10 flex gap-2">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2" placeholder="Задайте вопрос..." type="text"/>
+<button class="bg-primary p-2 rounded-lg text-on-primary hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+<h2 class="font-headline text-4xl text-primary">Блог исследователя</h2>
+<a class="font-label text-sm text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#">ВСЕ ЗАПИСИ <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<article class="space-y-4">
+<div class="font-label text-xs text-outline mb-2">12 МАЯ 2024 • 5 МИН</div>
+<h3 class="font-headline text-2xl hover:text-primary transition-colors cursor-pointer">Будущее LLM: почему чат-боты уходят в прошлое</h3>
+<p class="font-body text-secondary text-sm leading-relaxed">Разбор концепции "тихих" ИИ-агентов, которые работают в фоне вашей операционной системы...</p>
+</article>
+<article class="space-y-4">
+<div class="font-label text-xs text-outline mb-2">04 МАЯ 2024 • 8 МИН</div>
+<h3 class="font-headline text-2xl hover:text-primary transition-colors cursor-pointer">Векторные базы данных: просто о сложном</h3>
+<p class="font-body text-secondary text-sm leading-relaxed">Как научить нейросеть помнить терабайты информации без переобучения основной модели...</p>
+</article>
+<article class="space-y-4">
+<div class="font-label text-xs text-outline mb-2">28 АПР 2024 • 12 МИН</div>
+<h3 class="font-headline text-2xl hover:text-primary transition-colors cursor-pointer">Этика ИИ в корпоративной среде</h3>
+<p class="font-body text-secondary text-sm leading-relaxed">Где проходит грань между автоматизацией и потерей контроля над бизнес-процессами...</p>
+</article>
+</div>
+</section>
+<!-- Awards Strip -->
+<section class="py-16 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-center gap-12 text-outline">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-label text-xs uppercase tracking-widest">AI Innovator 2023</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="font-label text-xs uppercase tracking-widest">Forbes 30 Under 30 Nominee</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label text-xs uppercase tracking-widest">Master of Neural Systems</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">stars</span>
+<span class="font-label text-xs uppercase tracking-widest">Top Developer 2024</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0c0e11] w-full py-16 border-t-0 tonal-shift-from-surface-to-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<div class="space-y-6">
+<div class="font-['Newsreader'] text-xl text-[#98cfe3]">AI_Nikitka93</div>
+<p class="font-['Inter'] text-sm tracking-[-0.01em] text-[#87a2af] max-w-sm leading-relaxed">
+                    Проектирование будущего требует смелости и точности. Помогаю бизнесу и исследователям находить ответы в мире больших данных.
+                </p>
+<div class="text-[#87a2af] font-['Inter'] text-xs">
+                    © 2024 Никита Кизевич. Исследователь и архитектор ИИ.
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-8 md:justify-items-end">
+<div class="flex flex-col gap-4">
+<h4 class="font-label text-xs text-primary tracking-widest uppercase">Контакты</h4>
+<a class="text-[#87a2af] hover:text-[#98cfe3] underline-offset-4 hover:underline transition-all font-['Inter'] text-sm" href="#">Telegram</a>
+<a class="text-[#87a2af] hover:text-[#98cfe3] underline-offset-4 hover:underline transition-all font-['Inter'] text-sm" href="#">Email</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label text-xs text-primary tracking-widest uppercase">Профиль</h4>
+<a class="text-[#87a2af] hover:text-[#98cfe3] underline-offset-4 hover:underline transition-all font-['Inter'] text-sm" href="#">GitHub</a>
+<a class="text-[#87a2af] hover:text-[#98cfe3] underline-offset-4 hover:underline transition-all font-['Inter'] text-sm" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,20 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "h1": "AI-видео, графика и рабочие AI-прототипы.",
+  "horizontalOverflow": false,
+  "scrollWidth": 1440,
+  "clientWidth": 1440,
+  "proofHeroVisible": true,
+  "proofHeroTop": 128,
+  "proofHeroBottom": 616.796875,
+  "proofImageCount": 3,
+  "loadedProofImages": 3,
+  "roleCards": [
+    "HR",
+    "Заказчику",
+    "Специалисту"
+  ]
+}

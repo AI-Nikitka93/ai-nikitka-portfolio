@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dossier Detail - VK RecSys Challenge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#101509",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary": "#cdc6b6",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#504157",
+                        "surface-container-high": "#272c1f",
+                        "surface-container-highest": "#323629",
+                        "surface-bright": "#363b2d",
+                        "outline-variant": "#424935",
+                        "on-background": "#e0e5d1",
+                        "surface-container": "#1d2115",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#4d493d",
+                        "primary-container": "#b0f734",
+                        "inverse-surface": "#e0e5d1",
+                        "on-tertiary-fixed": "#23172a",
+                        "archive-bone": "#D6CFBF",
+                        "phosphor-lime": "#B7FF3C",
+                        "raw-titanium": "#8E968C",
+                        "primary-fixed": "#b0f734",
+                        "on-tertiary-container": "#6f5f76",
+                        "on-primary-fixed": "#121f00",
+                        "void-black": "#0A0D0C",
+                        "background": "#101509",
+                        "on-secondary-fixed": "#1e1b11",
+                        "on-secondary-fixed-variant": "#4b473b",
+                        "tertiary": "#ffffff",
+                        "surface-tint": "#96da06",
+                        "surface-variant": "#323629",
+                        "tertiary-fixed-dim": "#d4c0db",
+                        "secondary-fixed-dim": "#cdc6b6",
+                        "surface-container-low": "#191d11",
+                        "tertiary-container": "#f0dcf7",
+                        "inverse-primary": "#456800",
+                        "surface-dim": "#101509",
+                        "on-surface": "#e0e5d1",
+                        "on-surface-variant": "#c2caaf",
+                        "ember-orange": "#FF6A2A",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#f0dcf7",
+                        "primary-fixed-dim": "#96da06",
+                        "primary": "#ffffff",
+                        "on-secondary": "#343025",
+                        "on-tertiary": "#392b40",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e9e2d1",
+                        "inverse-on-surface": "#2d3225",
+                        "on-primary-container": "#4a6f00",
+                        "on-primary": "#223600",
+                        "carbon-fog": "#161B19",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#beb8a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "sm": "8px",
+                        "margin": "40px",
+                        "unit": "4px",
+                        "xl": "48px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-metadata": ["IBM Plex Mono"],
+                        "mono-id": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-regular": ["Space Grotesk"],
+                        "header-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "mono-label": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "mono-metadata": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "mono-id": ["11px", { "lineHeight": "1", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-regular": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "header-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #050806; color: #e0e5d1; }
+        .grid-bg {
+            background-image: linear-gradient(to right, rgba(142, 150, 140, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(142, 150, 140, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(183,255,60,0.6), 0 0 40px rgba(183,255,60,0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#050806] font-body-regular min-h-screen relative grid-bg overflow-x-hidden">
+<!-- Top Navigation Suppressed (Task-focused/Detail view) -->
+<header class="fixed top-0 left-0 w-full z-50 p-lg flex justify-between items-center pointer-events-none">
+<a class="pointer-events-auto flex items-center gap-sm text-raw-titanium hover:text-phosphor-lime transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-mono-label text-mono-label">RETURN TO ARCHIVE</span>
+</a>
+<div class="text-right pointer-events-auto">
+<div class="font-mono-id text-mono-id text-phosphor-lime">AI_Nikitka93</div>
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium">DOSSIER_VIEW_ACTIVE</div>
+</div>
+</header>
+<main class="pt-32 px-margin pb-xl max-w-[1440px] mx-auto min-h-screen flex flex-col justify-center relative z-10">
+<div class="grid grid-cols-12 gap-gutter items-start">
+<!-- Left Rail: Metadata -->
+<div class="col-span-12 md:col-span-3 flex flex-col gap-xl">
+<div class="space-y-sm">
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium uppercase">Subject ID</div>
+<div class="font-mono-label text-mono-label text-archive-bone">VK-REC-094</div>
+</div>
+<div class="space-y-sm">
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium uppercase">Chronology</div>
+<div class="font-mono-label text-mono-label text-archive-bone">2024</div>
+</div>
+<div class="space-y-sm">
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium uppercase">Classification</div>
+<div class="inline-flex items-center gap-xs px-sm py-[2px] border border-phosphor-lime text-phosphor-lime font-mono-metadata text-mono-metadata bg-phosphor-lime/5">
+<span class="w-[6px] h-[6px] bg-phosphor-lime animate-pulse"></span>
+                        VERIFIED
+                    </div>
+</div>
+<div class="space-y-sm">
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium uppercase">Domain</div>
+<div class="font-mono-label text-mono-label text-archive-bone">Machine Learning / RecSys</div>
+</div>
+</div>
+<!-- Main Content: Title & Metric -->
+<div class="col-span-12 md:col-span-9 flex flex-col gap-lg">
+<h1 class="font-display-xl text-display-xl text-tertiary uppercase leading-none tracking-tighter">
+                    VK RecSys<br/>Challenge
+                </h1>
+<div class="flex flex-col gap-sm mt-lg">
+<div class="font-mono-metadata text-mono-metadata text-phosphor-lime uppercase tracking-widest flex items-center gap-sm">
+<span class="material-symbols-outlined text-[16px]">bar_chart</span>
+                        Final Standing Indicator
+                    </div>
+<div class="font-mono-id text-[140px] leading-none text-phosphor-lime glow-text font-bold">
+                        TOP-9%
+                    </div>
+</div>
+<!-- Archive Note & Visualization -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mt-xl">
+<div class="bg-[#0a0d0a] border border-[#1a2118] p-lg relative group overflow-hidden">
+<div class="absolute top-sm right-sm font-mono-id text-mono-id text-raw-titanium">LOG_01</div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-md">Operator Analysis</h3>
+<p class="font-body-regular text-body-regular text-on-surface-variant">
+                            Участие в соревновании по рекомендательным системам от VK. Задача заключалась в предсказании вероятности взаимодействия пользователя с контентом на основе исторических данных. Применены ансамбли моделей градиентного бустинга и нейросетевые подходы для извлечения признаков. Результат подтверждает высокую компетенцию в обработке разреженных данных и настройке ML-пайплайнов в условиях ограниченного времени.
+                        </p>
+</div>
+<div class="bg-[#0a0d0a] border border-[#1a2118] p-lg relative min-h-[200px] flex flex-col justify-between">
+<div class="absolute top-sm right-sm font-mono-id text-mono-id text-raw-titanium">TELEMETRY</div>
+<div class="font-mono-metadata text-mono-metadata text-phosphor-lime mb-md flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-phosphor-lime animate-ping"></span>
+    Evidence Status: Active Signal
+</div>
+<!-- Abstract Tactical Visualization -->
+<div class="flex-1 w-full flex items-end gap-[2px] opacity-70">
+<div class="w-full h-[20%] bg-[#1a2118]"></div>
+<div class="w-full h-[35%] bg-[#1a2118]"></div>
+<div class="w-full h-[25%] bg-[#1a2118]"></div>
+<div class="w-full h-[50%] bg-[#1a2118]"></div>
+<div class="w-full h-[45%] bg-[#1a2118]"></div>
+<div class="w-full h-[60%] bg-[#1a2118]"></div>
+<div class="w-full h-[80%] bg-phosphor-lime shadow-[0_0_12px_rgba(183,255,60,0.8)]"></div>
+<div class="w-full h-[75%] bg-[#1a2118]"></div>
+<div class="w-full h-[65%] bg-[#1a2118]"></div>
+<div class="w-full h-[40%] bg-[#1a2118]"></div>
+</div>
+<div class="w-full border-t border-[#1a2118] mt-sm pt-xs flex justify-between font-mono-metadata text-[10px] text-raw-titanium">
+<span>EPOCH_0</span>
+<span>EPOCH_FINAL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

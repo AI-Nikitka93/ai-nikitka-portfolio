@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technical Monolith - Verifier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-family: 'Material Symbols Outlined';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 24px;
+                line-height: 1;
+                letter-spacing: normal;
+                text-transform: none;
+                display: inline-block;
+                white-space: nowrap;
+                word-wrap: normal;
+                direction: ltr;
+                -webkit-font-feature-settings: 'liga';
+                -webkit-font-smoothing: antialiased;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0d0f0d",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "surface-container-highest": "#333533",
+                        "on-secondary-fixed": "#1a1c19",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-tint": "#abd600",
+                        "secondary-fixed": "#e3e3de",
+                        "on-secondary": "#2f312e",
+                        "surface-container-high": "#282a28",
+                        "on-tertiary-container": "#636562",
+                        "surface-dim": "#121412",
+                        "surface-variant": "#333533",
+                        "secondary-container": "#484a46",
+                        "tertiary-container": "#e2e3de",
+                        "on-error": "#690005",
+                        "surface": "#121412",
+                        "background": "#121412",
+                        "on-secondary-fixed-variant": "#454744",
+                        "inverse-primary": "#506600",
+                        "on-background": "#e2e3df",
+                        "tertiary-fixed-dim": "#c6c7c3",
+                        "surface-container-low": "#1a1c1a",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7c2",
+                        "on-tertiary": "#2f312e",
+                        "inverse-on-surface": "#2f312f",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e201e",
+                        "primary-container": "#c3f400",
+                        "inverse-surface": "#e2e3df",
+                        "outline": "#8e9379",
+                        "on-secondary-container": "#b8b9b4",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary": "#c6c7c2",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary": "#ffffff",
+                        "surface-bright": "#383a37",
+                        "on-surface": "#e2e3df",
+                        "outline-variant": "#444933",
+                        "on-tertiary-fixed": "#1a1c1a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e3de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "gutter": "16px",
+                        "margin": "32px",
+                        "column-count": "12"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Mono"],
+                        "h2": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "data-mono": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-hidden selection:bg-primary-fixed selection:text-black">
+<div class="flex h-screen w-full">
+<!-- SideNavBar -->
+<aside class="bg-[#080A08] rounded-none border-r border-[#F5F5F0] h-screen w-64 flex flex-col z-20">
+<div class="p-4 border-b border-[#F5F5F0]">
+<div class="text-[#F5F5F0] font-bold text-lg">OS_MONOLITH</div>
+<div class="font-mono text-xs uppercase text-[#F5F5F0] opacity-70 mt-1">V_1.0.9</div>
+</div>
+<nav class="flex-1 overflow-y-auto font-mono text-xs uppercase transition-none cursor-crosshair">
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+                    CORE
+                </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+                    NODES
+                </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+                    STREAM
+                </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                    LOGS
+                </a>
+<a class="bg-[#CCFF00] text-black font-bold flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+                    SYSTEM
+                </a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<div class="flex flex-col flex-1 relative h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#080A08] rounded-none border-b border-[#F5F5F0] flex justify-between items-center w-full h-16 z-10 shrink-0">
+<div class="text-2xl font-black tracking-tighter text-[#F5F5F0] px-4 font-['Space_Grotesk'] uppercase tracking-widest text-sm">
+                    AI_NIKITKA_93
+                </div>
+<div class="flex items-center gap-4 px-4 text-[#CCFF00]">
+<button class="hover:bg-[#CCFF00] hover:text-black p-2 transition-none">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+<button class="hover:bg-[#CCFF00] hover:text-black p-2 transition-none">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="hover:bg-[#CCFF00] hover:text-black p-2 transition-none">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto p-margin pb-24 bg-background">
+<div class="max-w-[1440px] mx-auto w-full flex flex-col gap-margin">
+<!-- Header Section -->
+<div class="border-b border-secondary-fixed pb-gutter mb-gutter">
+<div class="font-label-caps text-label-caps text-secondary-fixed mb-base uppercase">// IDENTITY VERIFICATION</div>
+<h1 class="font-display-lg text-display-lg text-primary uppercase break-words hyphens-auto">RATIONAL <br/> MONOLITH</h1>
+<p class="font-data-mono text-data-mono text-secondary-fixed mt-gutter max-w-2xl">
+                            SYSTEM DESIGNATION: OMEGA-PROTOCOL. STRUCTURAL INTEGRITY VERIFIED. AESTHETIC DIRECTIVE: CONTROLLED POWER. REJECTING DECORATIVE ABSTRACTION IN FAVOR OF RAW DATA DENSITY AND LOGICAL HIERARCHY.
+                        </p>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Main Text Column -->
+<div class="col-span-12 md:col-span-8 flex flex-col gap-gutter">
+<div class="border border-secondary-fixed bg-surface-container-lowest">
+<div class="border-b border-secondary-fixed p-base px-gutter flex justify-between items-center bg-surface-container-high">
+<span class="font-label-caps text-label-caps text-secondary-fixed">DOCUMENT // 001_A</span>
+<span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="article">article</span>
+</div>
+<div class="p-gutter font-body-md text-body-md text-on-surface">
+<h2 class="font-h2 text-h2 text-primary mb-gutter border-b border-secondary-fixed pb-base inline-block">ARCHITECTURAL DOCTRINE</h2>
+<p class="mb-gutter text-justify">
+                                        This system is engineered for maximum throughput and minimal cognitive friction for expert operators. We have discarded the conventional paradigms of consumer interfaces. There are no shadows to comfort the eye, no gradients to simulate warmth. We operate in a purely flat, schematic environment where every pixel must justify its existence through utility.
+                                    </p>
+<p class="mb-gutter text-justify">
+                                        The rigid 12-column grid is an absolute constraint. Components do not float; they dock. Spatial relationships are defined exclusively by high-contrast demarcations. Information density is prioritized over whitespace. When you interact with this monolith, you are interfacing directly with its logic gates.
+                                    </p>
+</div>
+</div>
+<div class="border border-secondary-fixed p-gutter bg-surface flex items-center justify-center relative overflow-hidden h-64">
+<img alt="Technical schematic showing complex circuit board traces and glowing connections in stark monochrome green" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-screen grayscale" data-alt="Macro photography of a highly dense circuit board with illuminated neon green traces against a pitch black background, stark industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACKTe1kuVoOR-QDEyNaeBfATxoPac0l4ioSYPUWsfwgvfla58ehlTpeQ_7RGnz6-1I9WEbnrm3NotC10j_4AVqdrIHh7uVuvjpfFQXgTjDhwH41PlPHQ_CkFWTLvKwcgKo4Ayxx-DIbMel2-3S5JJ-0bwRJpZbvYS72iTnGx4itVSv9LGVTSQCDZlkra9wN9CgqCW6q9RAR37x9YBssU6BNOYmcXIB3NoMUQQAUgtYB3iI6AcMhQ0M8Myv4DbK_FoMxMK6EfkaiYIl"/>
+<div class="relative z-10 text-center border border-primary-fixed bg-background p-4 shadow-none">
+<div class="font-h1 text-h1 text-primary-fixed uppercase">ZERO DEPTH</div>
+<div class="font-label-caps text-label-caps text-secondary-fixed tracking-widest mt-2">PURE SURFACE RENDERING</div>
+</div>
+</div>
+</div>
+<!-- Sidebar / Meta Column -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
+<!-- Status Card -->
+<div class="border border-secondary-fixed bg-surface">
+<div class="border-b border-secondary-fixed p-base px-gutter font-label-caps text-label-caps text-secondary-fixed flex justify-between">
+<span>SYSTEM_STATUS</span>
+<span>[ACTIVE]</span>
+</div>
+<div class="p-gutter flex flex-col gap-base font-data-mono text-data-mono text-on-surface">
+<div class="flex justify-between border-b border-surface-variant pb-1">
+<span class="text-secondary-fixed">CPU_LOAD</span>
+<span class="text-primary-fixed">12.4%</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant pb-1">
+<span class="text-secondary-fixed">MEM_ALLOC</span>
+<span>4096 MB</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant pb-1">
+<span class="text-secondary-fixed">LATENCY</span>
+<span>4ms</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant pb-1">
+<span class="text-secondary-fixed">NODES_SYNC</span>
+<span>99.9%</span>
+</div>
+</div>
+</div>
+<!-- Controls -->
+<div class="border border-secondary-fixed bg-surface p-gutter">
+<div class="font-label-caps text-label-caps text-secondary-fixed mb-gutter">MANUAL_OVERRIDE</div>
+<div class="flex flex-col gap-4">
+<button class="w-full border border-secondary-fixed bg-transparent text-secondary-fixed hover:bg-primary-fixed hover:text-black hover:border-primary-fixed font-data-mono text-data-mono py-2 uppercase transition-none text-left px-4 flex justify-between items-center">
+                                         INIT_DIAGNOSTIC
+                                         <span class="material-symbols-outlined text-sm" data-icon="play_arrow">play_arrow</span>
+</button>
+<button class="w-full border border-secondary-fixed bg-transparent text-secondary-fixed hover:bg-primary-fixed hover:text-black hover:border-primary-fixed font-data-mono text-data-mono py-2 uppercase transition-none text-left px-4 flex justify-between items-center">
+                                         PURGE_CACHE
+                                         <span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-64 right-0 flex justify-between items-center px-4 py-1 bg-[#080A08] rounded-none border-t border-[#F5F5F0] z-30">
+<div class="font-mono text-[10px] tracking-tight text-[#CCFF00]">
+                    STATUS: STABLE // DIAG_CODE: 0x00213
+                </div>
+<div class="flex gap-4 font-mono text-[10px] tracking-tight text-[#F5F5F0]">
+<a class="hover:text-[#CCFF00] transition-none" href="#">0x01_RESET</a>
+<a class="hover:text-[#CCFF00] transition-none" href="#">0x02_DEBUG</a>
+<a class="hover:text-[#CCFF00] transition-none" href="#">0x03_VOID</a>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>АРХИВ-СЕКТОР // ТЕРМИНАЛ СВЯЗИ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#323631",
+                        "error": "#ffb4ab",
+                        "background": "#101410",
+                        "outline-variant": "#3c4b35",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-container": "#dcded9",
+                        "primary": "#efffe3",
+                        "primary-fixed": "#79ff5b",
+                        "on-primary-container": "#107100",
+                        "on-primary-fixed": "#022100",
+                        "secondary-fixed": "#d3e4fe",
+                        "secondary-container": "#3a4a5f",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "tertiary-fixed": "#e1e3de",
+                        "primary-fixed-dim": "#2ae500",
+                        "tertiary": "#f9faf5",
+                        "on-tertiary-container": "#5f625e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#095300",
+                        "on-tertiary": "#2e312e",
+                        "on-secondary-container": "#a9bad3",
+                        "surface": "#101410",
+                        "surface-container": "#1d211c",
+                        "surface-container-lowest": "#0b0f0b",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#101410",
+                        "on-secondary": "#213145",
+                        "surface-container-low": "#191d18",
+                        "outline": "#85967c",
+                        "on-primary": "#053900",
+                        "on-tertiary-fixed": "#191c19",
+                        "surface-container-high": "#272b26",
+                        "on-surface-variant": "#baccb0",
+                        "inverse-on-surface": "#2d312c",
+                        "secondary": "#b7c8e1",
+                        "inverse-primary": "#106e00",
+                        "on-surface": "#e0e4dc",
+                        "inverse-surface": "#e0e4dc",
+                        "on-background": "#e0e4dc",
+                        "surface-bright": "#363a35",
+                        "surface-variant": "#323631",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#39ff14",
+                        "surface-tint": "#2ae500",
+                        "tertiary-fixed-dim": "#c5c7c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "12px",
+                        "unit": "4px",
+                        "gutter": "1px",
+                        "container-padding": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["IBM Plex Mono"],
+                        "code-dense": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"],
+                        "label-caps": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "code-dense": ["13px", { "lineHeight": "120%", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["18px", { "lineHeight": "120%", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Terminal specific animations and overrides to ensure brutalist feel */
+        * { border-radius: 0 !important; } /* Force brutalist edges */
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+        }
+        .blinking-cursor { animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        /* Custom Ultra-thin Scrollbar */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: #101410; }
+        ::-webkit-scrollbar-thumb { background: #3c4b35; }
+        ::-webkit-scrollbar-thumb:hover { background: #39ff14; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen flex selection:bg-primary-container selection:text-background overflow-hidden relative">
+<!-- Global Scanline Overlay -->
+<div class="pointer-events-none fixed inset-0 scanline z-50 opacity-50 mix-blend-multiply"></div>
+<!-- JSON Component: SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r border-stone-800 bg-stone-950 shrink-0 z-40">
+<!-- Header -->
+<div class="p-4 border-b border-stone-800 flex items-center gap-3">
+<div class="w-10 h-10 bg-stone-900 border border-stone-800 flex items-center justify-center overflow-hidden">
+<img alt="User Terminal Profile" class="w-full h-full object-cover opacity-70 grayscale mix-blend-screen" data-alt="Abstract green glowing digital circuits and data nodes in dark cyberspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDnSmRaVM3Q0f19PlHWSdYdh_CtK9nRMorzaJ9ZB5WPKplR3ibMOpUTcS-b8ZFovHoNl7ijbsJhZFkCE2dIl27z9oPqjG_SP39iRlxzBjt5Tw__JpYaV9xNj1htYzEKT__dtUbpbvXVYrOiapt5faygP9r1I11dIalNyDbH2fATN8sxgNBsyIBi0Q_XFJ5LffJoWTICqbtJQaRZ-mVdh7EWF2l-3b90UZPn4_0gceQM0KdEyT9hUXHzznr8mB__JhBotuGK__mI71l"/>
+</div>
+<div>
+<h2 class="text-lg font-bold text-[#39FF14] font-headline-md uppercase tracking-tight">SEC-01</h2>
+<p class="font-mono text-[11px] leading-tight uppercase text-stone-500">LN-402</p>
+</div>
+</div>
+<!-- CTA -->
+<div class="p-4 border-b border-stone-800">
+<button class="w-full py-2 px-4 bg-stone-900 border border-[#39FF14] text-[#39FF14] font-mono text-[11px] leading-tight uppercase hover:bg-[#39FF14] hover:text-black transition-colors cursor-pointer active:invert">
+                НОВЫЙ ЗАПРОС
+            </button>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 overflow-y-auto py-2">
+<!-- Active Item (Semantic Match: Home/Dashboard -> РЕЕСТР) -->
+<a class="flex items-center gap-3 bg-stone-900 border-l-4 border-[#39FF14] text-[#39FF14] py-3 px-4 font-mono text-[11px] leading-tight uppercase cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_managed</span>
+<span>РЕЕСТР</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 font-mono text-[11px] leading-tight uppercase hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">database</span>
+<span>ОБЪЕКТЫ</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 font-mono text-[11px] leading-tight uppercase hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span>АРХИВ</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 font-mono text-[11px] leading-tight uppercase hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">settings_ethernet</span>
+<span>СИСТЕМА</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 font-mono text-[11px] leading-tight uppercase hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">build</span>
+<span>УТИЛИТЫ</span>
+</a>
+</nav>
+<!-- Footer Actions -->
+<div class="p-4 border-t border-stone-800">
+<a class="flex items-center gap-3 text-stone-400 py-2 px-4 font-mono text-[11px] leading-tight uppercase hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">power_settings_new</span>
+<span>ВЫХОД</span>
+</a>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 flex flex-col h-screen min-w-0 bg-background relative z-30">
+<!-- JSON Component: TopNavBar -->
+<header class="flex justify-between items-center w-full px-3 h-12 max-w-full docked full-width top-0 border-b border-stone-800 bg-stone-950 shrink-0">
+<!-- Brand -->
+<div class="flex items-center gap-4">
+<span class="text-lg font-black text-[#39FF14] tracking-widest font-headline-md uppercase">АРХИВ-СЕКТОР</span>
+</div>
+<!-- Navigation (Hidden on mobile per rules) -->
+<nav class="hidden md:flex h-full items-end gap-6">
+<!-- Active Item: ТЕРМИНАЛ -->
+<a class="text-[#39FF14] border-b border-[#39FF14] pb-1 font-mono uppercase tracking-tighter text-xs transition-none active:bg-[#39FF14] active:text-black" href="#">ТЕРМИНАЛ</a>
+<a class="text-stone-500 font-mono uppercase tracking-tighter text-xs pb-1 border-b border-transparent hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">ЛОГИ</a>
+<a class="text-stone-500 font-mono uppercase tracking-tighter text-xs pb-1 border-b border-transparent hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">СТАТУС</a>
+<a class="text-stone-500 font-mono uppercase tracking-tighter text-xs pb-1 border-b border-transparent hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">АНАЛИЗ</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center border border-stone-800 bg-stone-900 px-2 h-7 w-48">
+<span class="text-[#39FF14] text-[10px] mr-2">&gt;</span>
+<input class="bg-transparent border-none p-0 text-[10px] text-stone-400 focus:ring-0 w-full font-mono uppercase placeholder-stone-600 outline-none" placeholder="ПОИСК..." type="text"/>
+</div>
+<div class="flex items-center gap-2 text-stone-500">
+<button class="hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black p-1 flex"><span class="material-symbols-outlined text-[18px]">settings_input_component</span></button>
+<button class="hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black p-1 flex"><span class="material-symbols-outlined text-[18px]">terminal</span></button>
+</div>
+<button class="border border-[#39FF14] text-[#39FF14] px-3 h-7 font-mono uppercase tracking-tighter text-xs hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center justify-center">
+                    ВХОД
+                </button>
+</div>
+</header>
+<!-- Canvas Content: Structured Command Surface -->
+<div class="flex-1 overflow-y-auto p-margin flex flex-col gap-margin relative">
+<!-- Intro Panel (Neural Link) -->
+<section class="border border-outline-variant bg-surface-container-low p-0 flex flex-col md:flex-row relative group">
+<div class="absolute top-0 right-0 p-2 opacity-30 text-primary-container font-code-dense text-[10px]">AUTH_NODE_0x8F</div>
+<div class="flex-1 p-6 border-b md:border-b-0 md:border-r border-outline-variant flex flex-col justify-center bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-surface-container-high to-transparent">
+<h1 class="font-headline-lg text-headline-lg text-primary-container uppercase mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+                        ПРЯМАЯ НЕЙРОННАЯ СВЯЗЬ
+                    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                        Инициализация протокола глубокого погружения. Доступ к терминалу подтвержден. Биометрические показатели стабильны. Ожидание ввода команд локального оператора.
+                    </p>
+<div class="mt-4 flex items-center gap-2 font-code-dense text-code-dense text-primary-fixed-dim">
+<span class="text-outline-variant">&gt;</span> root@archive-node:~# <span class="blinking-cursor">_</span>
+</div>
+</div>
+<div class="w-full md:w-64 p-4 flex flex-col gap-4 justify-center bg-surface-container-highest">
+<div>
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant mb-1">
+<span>СИНХРОНИЗАЦИЯ</span>
+<span class="text-primary-container">98.4%</span>
+</div>
+<div class="h-1 w-full bg-surface">
+<div class="h-full bg-primary-container w-[98.4%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant mb-1">
+<span>ШИФРОВАНИЕ (AES-256)</span>
+<span class="text-primary-container">АКТИВНО</span>
+</div>
+<div class="h-1 w-full bg-surface">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-2 h-2 bg-primary-container"></div>
+<span class="font-label-caps text-label-caps text-primary-container">СОЕДИНЕНИЕ УСТАНОВЛЕНО</span>
+</div>
+</div>
+</section>
+<!-- Alias Verification Grid (Bento Style Data Nodes) -->
+<section class="flex-1 flex flex-col">
+<div class="flex justify-between items-end mb-2 px-1">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase flex items-center gap-2">
+                        СЕТКА ВЕРИФИКАЦИИ АЛИАСОВ
+                    </h2>
+<span class="font-code-dense text-code-dense text-outline-variant">LIVE_STREAM // 45 MS PING</span>
+</div>
+<!-- Heavy Grid Container -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter bg-outline-variant border border-outline-variant">
+<!-- Node 1 -->
+<div class="bg-surface-container p-4 hover:bg-surface-container-high transition-none relative group">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-outline">memory</span>
+<span class="bg-surface border border-outline-variant px-1 font-code-dense text-[10px] text-on-surface-variant">ID: 44-X9</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary-container uppercase mb-1">OPERATOR_NULL</h3>
+<div class="font-code-dense text-code-dense text-on-surface-variant mb-4">УРОВЕНЬ ДОСТУПА: Α (АЛЬФА)</div>
+<div class="flex justify-between items-center border-t border-outline-variant pt-2 mt-auto">
+<span class="font-label-caps text-label-caps text-outline">ПОСЛ. ПИНГ: 0.02s</span>
+<span class="font-label-caps text-label-caps text-primary-container bg-surface px-1">АВТОРИЗОВАН</span>
+</div>
+</div>
+<!-- Node 2 (Warning state) -->
+<div class="bg-surface-container p-4 hover:bg-surface-container-high transition-none relative group">
+<div class="absolute inset-0 border border-transparent group-hover:border-error pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-error">warning</span>
+<span class="bg-surface border border-outline-variant px-1 font-code-dense text-[10px] text-on-surface-variant">ID: 12-V2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-error uppercase mb-1">GHOST_IN_SHELL</h3>
+<div class="font-code-dense text-code-dense text-on-surface-variant mb-4">УРОВЕНЬ ДОСТУПА: Γ (ГАММА)</div>
+<div class="flex justify-between items-center border-t border-outline-variant pt-2 mt-auto">
+<span class="font-label-caps text-label-caps text-outline">ПОСЛ. ПИНГ: 14.5s</span>
+<span class="font-label-caps text-label-caps text-error bg-surface px-1">АНОМАЛИЯ</span>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container p-4 hover:bg-surface-container-high transition-none relative group">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-outline">sensors</span>
+<span class="bg-surface border border-outline-variant px-1 font-code-dense text-[10px] text-on-surface-variant">ID: 88-K1</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">DATA_MINER_X</h3>
+<div class="font-code-dense text-code-dense text-on-surface-variant mb-4">УРОВЕНЬ ДОСТУПА: Β (БЕТА)</div>
+<div class="flex justify-between items-center border-t border-outline-variant pt-2 mt-auto">
+<span class="font-label-caps text-label-caps text-outline">ПОСЛ. ПИНГ: 1.2s</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface px-1">ОЖИДАНИЕ</span>
+</div>
+</div>
+<!-- Node 4 (Data Stream) -->
+<div class="bg-surface-container p-4 hover:bg-surface-container-high transition-none relative group md:col-span-2 lg:col-span-1 xl:col-span-1 flex flex-col">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container pointer-events-none"></div>
+<div class="flex justify-between items-center mb-2 border-b border-outline-variant pb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ПОТОК ЖУРНАЛА</span>
+<span class="material-symbols-outlined text-primary-container text-[16px] animate-pulse">radio_button_checked</span>
+</div>
+<div class="flex-1 overflow-hidden flex flex-col gap-1 font-code-dense text-[10px] text-on-surface-variant opacity-70">
+<div class="truncate"><span class="text-primary-container">[SYS]</span> Обновление таблицы маршрутизации... OK</div>
+<div class="truncate"><span class="text-outline">[NET]</span> Пакет отброшен (ID: 0x44F9)</div>
+<div class="truncate"><span class="text-error">[SEC]</span> Попытка подбора ключа отражена.</div>
+<div class="truncate"><span class="text-primary-container">[SYS]</span> Дамп памяти завершен. 450MB.</div>
+<div class="truncate"><span class="text-outline">[USR]</span> Алиас GHOST_IN_SHELL изменил вектор.</div>
+<div class="truncate mt-auto text-primary-container">&gt; Чтение буфера...</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Filler to ensure scroll capability if needed -->
+<div class="h-8"></div>
+</div>
+<!-- JSON Component: Footer -->
+<!-- Adjusted from 'fixed bottom-0 w-full' to fit within the main flex container structurally, maintaining the visual intent -->
+<footer class="flex justify-between items-center px-4 py-1 h-8 w-full border-t border-stone-800 bg-stone-950 shrink-0 mt-auto">
+<span class="font-mono text-[9px] uppercase text-stone-600 hidden md:block">
+                © 2024 ЦЕНТРАЛЬНЫЙ УЗЕЛ СВЯЗИ. КОРПУС-Г
+            </span>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+<a class="font-mono text-[9px] uppercase text-stone-600 hover:text-[#39FF14] transition-none" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+<a class="font-mono text-[9px] uppercase text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПРОТОКОЛ</a>
+<a class="font-mono text-[9px] uppercase text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПОДДЕРЖКА</a>
+</div>
+</footer>
+</main>
+</body></html>

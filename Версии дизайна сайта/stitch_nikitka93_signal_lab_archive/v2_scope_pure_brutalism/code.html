@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Technical Specs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e9e2d1",
+                      "on-tertiary-fixed": "#1e1b11",
+                      "on-tertiary": "#343025",
+                      "surface": "#111413",
+                      "secondary": "#ffb59a",
+                      "tertiary-container": "#e9e2d1",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#802a00",
+                      "secondary-fixed": "#ffdbcf",
+                      "on-secondary": "#5b1b00",
+                      "tertiary-fixed-dim": "#cdc6b6",
+                      "on-tertiary-fixed-variant": "#4b473b",
+                      "surface-container-highest": "#323534",
+                      "outline": "#8c947b",
+                      "primary-container": "#b0f734",
+                      "outline-variant": "#424935",
+                      "on-primary-fixed": "#121f00",
+                      "on-primary-container": "#4a6f00",
+                      "secondary-fixed-dim": "#ffb59a",
+                      "inverse-surface": "#e1e3e1",
+                      "surface-container-lowest": "#0c0f0e",
+                      "on-tertiary-container": "#696457",
+                      "on-secondary-container": "#fffbff",
+                      "on-secondary-fixed": "#380d00",
+                      "surface-bright": "#373a38",
+                      "surface-variant": "#323534",
+                      "on-primary-fixed-variant": "#334f00",
+                      "surface-container-high": "#282b29",
+                      "inverse-primary": "#456800",
+                      "tertiary": "#ffffff",
+                      "error-container": "#93000a",
+                      "primary-fixed-dim": "#96da06",
+                      "on-surface": "#e1e3e1",
+                      "primary": "#ffffff",
+                      "on-surface-variant": "#c2caaf",
+                      "secondary-container": "#cd4700",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#111413",
+                      "surface-container": "#1d201f",
+                      "inverse-on-surface": "#2e3130",
+                      "surface-tint": "#96da06",
+                      "surface-container-low": "#191c1b",
+                      "on-primary": "#223600",
+                      "primary-fixed": "#b0f734",
+                      "on-error": "#690005",
+                      "background": "#111413",
+                      "on-background": "#e1e3e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "margin": "40px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-large": [
+                              "IBM Plex Mono"
+                      ],
+                      "label-tiny": [
+                              "IBM Plex Mono"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-main": [
+                              "IBM Plex Mono"
+                      ],
+                      "metadata": [
+                              "IBM Plex Mono"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-large": [
+                              "18px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-tiny": [
+                              "10px",
+                              {
+                                      "lineHeight": "120%",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-main": [
+                              "14px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "metadata": [
+                              "12px",
+                              {
+                                      "lineHeight": "140%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-[#0A0D0C] text-on-background min-h-screen flex flex-col md:flex-row">
+<!-- TopNavBar (Web & Mobile, but distinct layout styles usually, here fixed top for simplicity if needed, but using SideNav for main nav as per pure brutalism app feel. We will include it as requested by JSON but hidden on md since SideNav is present, wait JSON says docked full-width top-0. Let's stack TopNav and SideNav properly. SideNav is left-0 top-16. -->
+<!-- TopNavBar -->
+<header class="bg-[#0A0D0C] text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase docked full-width top-0 border-b-[0.5px] border-[#8E968C] flat no shadows flex justify-between items-center w-full px-10 h-16 max-w-full fixed z-50">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C]">SIGNAL_LAB [V2.0]</div>
+<nav class="hidden md:flex gap-8 h-full items-center">
+<a class="text-[#8E968C] font-mono h-full flex items-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">ARCHIVE</a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] opacity-80 h-full flex items-center px-4" href="#">SIGNALS</a>
+<a class="text-[#8E968C] font-mono h-full flex items-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">ATLAS</a>
+<a class="text-[#8E968C] font-mono h-full flex items-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">TERMINAL</a>
+</nav>
+<div class="flex items-center gap-4">
+<!-- Search on right -->
+<span class="material-symbols-outlined hover:text-white cursor-pointer">search</span>
+<span class="font-mono text-xs border border-[#8E968C] px-2 py-1">EN/RU</span>
+</div>
+</header>
+<!-- SideNavBar (Web) -->
+<aside class="hidden md:flex bg-[#0A0D0C] text-[#B7FF3C] font-mono text-xs uppercase docked left-0 h-full border-r-[0.5px] border-[#8E968C] flat no shadows fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex flex-col z-40">
+<div class="p-6 border-b-[0.5px] border-[#8E968C]">
+<div class="font-bold text-white mb-1">OPERATOR_01</div>
+<div class="text-[#8E968C]">CLEARANCE: OMEGA</div>
+</div>
+<nav class="flex-1 flex flex-col pt-4">
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C]" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 border-shift on hover" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C]" href="#">
+<span class="material-symbols-outlined">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C]" href="#">
+<span class="material-symbols-outlined">map</span>
+                MAP_ATLAS
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C]" href="#">
+<span class="material-symbols-outlined">settings</span>
+                SETTINGS
+            </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 mt-16 md:ml-64 p-margin grid grid-cols-12 gap-gutter">
+<!-- Header Section -->
+<div class="col-span-12 mb-8 border-b-[0.5px] border-[#8E968C] pb-4">
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase">Спецификация Сигналов</h1>
+<p class="font-body-large text-body-large text-[#8E968C] mt-2">ТЕХНИЧЕСКИЙ ФОРМАТ. УРОВЕНЬ ДОСТУПА: ОМЕГА.</p>
+</div>
+<!-- Metadata Block (3 cols) -->
+<div class="col-span-12 md:col-span-3">
+<div class="bg-[#161B19] border border-[#8E968C] p-4 font-metadata text-metadata">
+<div class="flex justify-between border-b-[0.5px] border-[#8E968C] pb-2 mb-2">
+<span class="text-[#8E968C]">[ID_ОБЪЕКТА]</span>
+<span class="text-primary">OBJ-9482</span>
+</div>
+<div class="flex justify-between border-b-[0.5px] border-[#8E968C] pb-2 mb-2">
+<span class="text-[#8E968C]">[СТАТУС]</span>
+<span class="flex items-center gap-2 text-[#B7FF3C]">
+<span class="w-2 h-2 bg-[#B7FF3C] inline-block"></span> АКТИВЕН
+                    </span>
+</div>
+<div class="flex justify-between border-b-[0.5px] border-[#8E968C] pb-2 mb-2">
+<span class="text-[#8E968C]">[ЛОКАЦИЯ]</span>
+<span class="text-primary">СЕКТОР 7G</span>
+</div>
+<div class="flex justify-between pb-2">
+<span class="text-[#8E968C]">[ВРЕМЯ_UTC]</span>
+<span class="text-primary">14:02:44.09</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-6 flex flex-col gap-4">
+<button class="border border-[#8E968C] text-[#8E968C] font-body-main text-body-main uppercase py-3 text-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] hover:border-[#B7FF3C] transition-colors">
+                    ВЫГРУЗИТЬ ДАННЫЕ
+                </button>
+<button class="border border-[#8E968C] text-[#8E968C] font-body-main text-body-main uppercase py-3 text-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] hover:border-[#B7FF3C] transition-colors">
+                    АНАЛИЗ СПЕКТРА
+                </button>
+</div>
+</div>
+<!-- Data Grid (9 cols) -->
+<div class="col-span-12 md:col-span-9 flex flex-col gap-8">
+<!-- Visual Data Block -->
+<div class="relative w-full h-64 border border-[#8E968C] bg-[#161B19] overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;q=80')] bg-cover bg-center opacity-30 grayscale mix-blend-luminosity" data-alt="Abstract rendering of digital signal waves or server racks in high contrast black and white"></div>
+<!-- Crosshairs / Reticle -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-full h-[0.5px] bg-[#B7FF3C] absolute"></div>
+<div class="h-full w-[0.5px] bg-[#B7FF3C] absolute"></div>
+<div class="w-16 h-16 border border-[#B7FF3C] rounded-full flex items-center justify-center">
+<span class="w-2 h-2 bg-[#B7FF3C] animate-pulse"></span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 font-label-tiny text-label-tiny text-[#B7FF3C] bg-[#0A0D0C] px-2 py-1 border border-[#B7FF3C]">
+                    &gt; ВИЗУАЛИЗАЦИЯ: АКТИВНА
+                </div>
+</div>
+<!-- Technical Table -->
+<div class="w-full border border-[#8E968C] bg-[#161B19]">
+<div class="grid grid-cols-4 font-label-tiny text-label-tiny text-[#8E968C] uppercase border-b border-[#8E968C] bg-[#0A0D0C]">
+<div class="p-3 border-r border-[#8E968C]">МЕТРИКА</div>
+<div class="p-3 border-r border-[#8E968C]">ЗНАЧЕНИЕ</div>
+<div class="p-3 border-r border-[#8E968C]">ОТКЛОНЕНИЕ</div>
+<div class="p-3">СТАТУС</div>
+</div>
+<div class="grid grid-cols-4 font-body-main text-body-main text-primary border-b border-[#8E968C]">
+<div class="p-3 border-r border-[#8E968C] font-mono">ЧАСТОТА_01</div>
+<div class="p-3 border-r border-[#8E968C] font-mono text-[#B7FF3C]">450.89 MHz</div>
+<div class="p-3 border-r border-[#8E968C] font-mono">+0.02%</div>
+<div class="p-3 flex items-center gap-2">
+<span class="w-2 h-2 bg-[#B7FF3C] inline-block"></span> OK
+                    </div>
+</div>
+<div class="grid grid-cols-4 font-body-main text-body-main text-primary border-b border-[#8E968C]">
+<div class="p-3 border-r border-[#8E968C] font-mono">АМПЛИТУДА_02</div>
+<div class="p-3 border-r border-[#8E968C] font-mono">12.4 dBm</div>
+<div class="p-3 border-r border-[#8E968C] font-mono text-[#ffb4ab]">-1.45%</div>
+<div class="p-3 flex items-center gap-2">
+<span class="w-2 h-2 bg-[#ffb4ab] inline-block"></span> ВАРНИНГ
+                    </div>
+</div>
+<div class="grid grid-cols-4 font-body-main text-body-main text-primary">
+<div class="p-3 border-r border-[#8E968C] font-mono">ШУМ_03</div>
+<div class="p-3 border-r border-[#8E968C] font-mono">0.08 N/A</div>
+<div class="p-3 border-r border-[#8E968C] font-mono">0.00%</div>
+<div class="p-3 flex items-center gap-2">
+<span class="w-2 h-2 bg-[#8E968C] inline-block"></span> НОРМА
+                    </div>
+</div>
+</div>
+<!-- Input Field Area -->
+<div class="mt-4">
+<label class="font-label-tiny text-label-tiny text-[#8E968C] uppercase block mb-2">КОММЕНТАРИЙ ОПЕРАТОРА</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-[#8E968C] text-primary font-body-main text-body-main focus:ring-0 focus:border-[#B7FF3C] px-0 py-2 placeholder-[#323534]" placeholder="Введите данные анализа..." type="text"/>
+<div class="absolute right-0 bottom-2 w-2 h-4 bg-[#B7FF3C] animate-pulse"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] text-[#B7FF3C] font-mono text-[10px] tracking-tighter docked border-t-[0.5px] border-[#8E968C] flat no shadows">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined">dynamic_feed</span>
+            FEED
+        </a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 w-full h-full bg-[#161B19]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">radar</span>
+            SIGNALS
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined">public</span>
+            MAP
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+            USER
+        </a>
+</nav>
+</body></html>

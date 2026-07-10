@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>АРХИВ-СЕКТОР</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#323631",
+                        "error": "#ffb4ab",
+                        "background": "#101410",
+                        "outline-variant": "#3c4b35",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-container": "#dcded9",
+                        "primary": "#efffe3",
+                        "primary-fixed": "#79ff5b",
+                        "on-primary-container": "#107100",
+                        "on-primary-fixed": "#022100",
+                        "secondary-fixed": "#d3e4fe",
+                        "secondary-container": "#3a4a5f",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "tertiary-fixed": "#e1e3de",
+                        "primary-fixed-dim": "#2ae500",
+                        "tertiary": "#f9faf5",
+                        "on-tertiary-container": "#5f625e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#095300",
+                        "on-tertiary": "#2e312e",
+                        "on-secondary-container": "#a9bad3",
+                        "surface": "#101410",
+                        "surface-container": "#1d211c",
+                        "surface-container-lowest": "#0b0f0b",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#101410",
+                        "on-secondary": "#213145",
+                        "surface-container-low": "#191d18",
+                        "outline": "#85967c",
+                        "on-primary": "#053900",
+                        "on-tertiary-fixed": "#191c19",
+                        "surface-container-high": "#272b26",
+                        "on-surface-variant": "#baccb0",
+                        "inverse-on-surface": "#2d312c",
+                        "secondary": "#b7c8e1",
+                        "inverse-primary": "#106e00",
+                        "on-surface": "#e0e4dc",
+                        "inverse-surface": "#e0e4dc",
+                        "on-background": "#e0e4dc",
+                        "surface-bright": "#363a35",
+                        "surface-variant": "#323631",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#39ff14",
+                        "surface-tint": "#2ae500",
+                        "tertiary-fixed-dim": "#c5c7c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "12px",
+                        "unit": "4px",
+                        "gutter": "1px",
+                        "container-padding": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["IBM Plex Mono"],
+                        "code-dense": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"],
+                        "label-caps": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "code-dense": ["13px", { "lineHeight": "120%", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["18px", { "lineHeight": "120%", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            margin: 0;
+            overflow: hidden; /* App-like layout */
+        }
+        /* Scanline effect */
+        .scanlines::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 50;
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+            opacity: 0.15;
+        }
+        /* Custom thin scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-highest');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline');
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.primary-container');
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen scanlines font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-stone-950 font-mono uppercase tracking-tighter text-xs docked full-width top-0 border-b border-stone-800 border-b border-stone-800 flat no shadows flex justify-between items-center w-full px-3 h-12 max-w-full z-40 relative flex-shrink-0">
+<div class="flex items-center gap-4">
+<div class="text-lg font-black text-[#39FF14] tracking-widest">АРХИВ-СЕКТОР</div>
+<nav class="hidden md:flex items-center gap-6 h-full">
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">ТЕРМИНАЛ</a>
+<a class="text-[#39FF14] border-b border-[#39FF14] pb-1 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2 mt-1" href="#">ЛОГИ</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">СТАТУС</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black flex items-center h-full px-2" href="#">АНАЛИЗ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 h-full">
+<div class="flex items-center gap-2 h-full text-stone-500">
+<button class="hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black h-full px-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">settings_input_component</span>
+</button>
+<button class="hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black h-full px-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+<button class="text-[#39FF14] hover:bg-stone-900 transition-none active:bg-[#39FF14] active:text-black border border-[#39FF14] px-4 py-1 text-xs">ВХОД</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden relative z-10">
+<!-- SideNavBar -->
+<nav class="bg-stone-950 font-mono text-[11px] leading-tight uppercase h-screen w-64 border-r border-stone-800 border-r border-stone-800 flat no shadows flex flex-col h-full border-r border-stone-800 flex-shrink-0 hidden md:flex">
+<div class="p-4 border-b border-stone-800 flex items-center gap-3">
+<div class="w-8 h-8 bg-stone-800 flex items-center justify-center border border-stone-600">
+<span class="material-symbols-outlined text-stone-400 text-[16px]">account_box</span>
+</div>
+<div>
+<div class="text-lg font-bold text-[#39FF14]">SEC-01</div>
+<div class="text-stone-500">LN-402</div>
+</div>
+</div>
+<div class="p-4 border-b border-stone-800">
+<button class="w-full bg-[#39FF14] text-black py-2 text-center font-bold hover:bg-white active:invert transition-none">НОВЫЙ ЗАПРОС</button>
+</div>
+<div class="flex-1 flex flex-col py-2">
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">folder_managed</span> РЕЕСТР
+                </a>
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">database</span> ОБЪЕКТЫ
+                </a>
+<a class="bg-stone-900 border-l-4 border-[#39FF14] text-[#39FF14] py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">history_edu</span> АРХИВ
+                </a>
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">settings_ethernet</span> СИСТЕМА
+                </a>
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">build</span> УТИЛИТЫ
+                </a>
+</div>
+<div class="border-t border-stone-800">
+<a class="text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span> ВЫХОД
+                </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-background p-margin flex flex-col gap-margin pb-[44px]">
+<!-- Context Header -->
+<div class="border border-outline-variant bg-surface-container p-3 flex justify-between items-end relative overflow-hidden">
+<div class="absolute top-1 right-1 text-on-surface-variant opacity-30 text-[9px]">IDX: 0x8F9A2</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-1 uppercase">Системные Логи</h1>
+<div class="font-code-dense text-code-dense text-primary-container flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container inline-block"></span>
+                        АКТИВНЫЙ МОНИТОРИНГ [ПОТОК_АЛЬФА]
+                    </div>
+</div>
+<div class="text-right">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-1">СИНХРОНИЗАЦИЯ</div>
+<div class="font-code-dense text-code-dense text-on-surface">T-MINUS 00:00:14</div>
+</div>
+</div>
+<!-- Log Grid -->
+<div class="flex-1 border border-outline-variant bg-surface-container-lowest flex flex-col">
+<!-- Grid Header -->
+<div class="grid grid-cols-12 gap-gutter bg-surface-container border-b border-outline-variant p-2 font-label-caps text-label-caps text-on-surface-variant sticky top-0 z-20">
+<div class="col-span-2 pl-2">ВРЕМЯ</div>
+<div class="col-span-2">КОД СОБЫТИЯ</div>
+<div class="col-span-1">УРОВЕНЬ</div>
+<div class="col-span-5">ДЕТАЛИ ТРАНЗАКЦИИ</div>
+<div class="col-span-2 text-right pr-2">ИСТОЧНИК</div>
+</div>
+<!-- Log Entries -->
+<div class="flex-1 overflow-y-auto font-code-dense text-code-dense">
+<!-- Entry 1: Critical -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant p-2 hover:bg-surface-container-low transition-colors group">
+<div class="col-span-2 pl-2 text-on-surface-variant group-hover:text-on-surface">14:02:44.091</div>
+<div class="col-span-2 text-error">ERR-0994-X</div>
+<div class="col-span-1 flex items-center">
+<span class="bg-error-container text-on-error border border-error px-1 text-[10px] leading-none py-0.5">КРИТ</span>
+</div>
+<div class="col-span-5 text-on-surface truncate pr-4">Отклонение телеметрии узла С-4. Превышение допустимого порога радиации.</div>
+<div class="col-span-2 text-right pr-2 text-on-surface-variant">SENS_CORE_4</div>
+</div>
+<!-- Entry 2: Normal -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant p-2 hover:bg-surface-container-low transition-colors group">
+<div class="col-span-2 pl-2 text-on-surface-variant group-hover:text-on-surface">14:02:40.112</div>
+<div class="col-span-2 text-primary-container">SYS-0100-A</div>
+<div class="col-span-1 flex items-center">
+<span class="text-on-surface-variant border border-outline-variant px-1 text-[10px] leading-none py-0.5">ИНФО</span>
+</div>
+<div class="col-span-5 text-on-surface truncate pr-4">Синхронизация пакетов данных завершена успешно. Хэш: 0x9A4F...</div>
+<div class="col-span-2 text-right pr-2 text-on-surface-variant">NET_SYNC</div>
+</div>
+<!-- Entry 3: Warning -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant p-2 hover:bg-surface-container-low transition-colors group">
+<div class="col-span-2 pl-2 text-on-surface-variant group-hover:text-on-surface">14:02:35.880</div>
+<div class="col-span-2 text-[#FFD700]">WRN-4041-B</div>
+<div class="col-span-1 flex items-center">
+<span class="text-[#FFD700] border border-[#FFD700] px-1 text-[10px] leading-none py-0.5">ПРЕД</span>
+</div>
+<div class="col-span-5 text-on-surface truncate pr-4">Задержка ответа от вторичного хранилища. Повторная попытка (1/3).</div>
+<div class="col-span-2 text-right pr-2 text-on-surface-variant">STRG_BACKUP</div>
+</div>
+<!-- Entry 4: Selected/Active -->
+<div class="grid grid-cols-12 gap-gutter border border-primary-container bg-surface-container-high p-2 group relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="col-span-2 pl-3 text-primary-container">14:02:12.005</div>
+<div class="col-span-2 text-on-surface">AUTH-221-Z</div>
+<div class="col-span-1 flex items-center">
+<span class="bg-primary-container text-on-primary border border-primary-container px-1 text-[10px] leading-none py-0.5">ДОСТУП</span>
+</div>
+<div class="col-span-5 text-on-surface">
+                            Авторизация терминала SEC-01. Запрос на выгрузку архива.
+                            <div class="mt-2 p-2 bg-surface border border-outline-variant text-[11px] text-on-surface-variant break-all">
+                                &gt; PARSING PAYLOAD...<br/>
+                                &gt; USER_ID: LN-402<br/>
+                                &gt; CLEARANCE: LEVEL_4<br/>
+                                &gt; GRANT_STATUS: OK
+                            </div>
+</div>
+<div class="col-span-2 text-right pr-2 text-on-surface-variant">SEC_GATE</div>
+</div>
+<!-- Entry 5: Normal -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant p-2 hover:bg-surface-container-low transition-colors group">
+<div class="col-span-2 pl-2 text-on-surface-variant group-hover:text-on-surface">14:01:59.442</div>
+<div class="col-span-2 text-primary-container">SYS-0100-A</div>
+<div class="col-span-1 flex items-center">
+<span class="text-on-surface-variant border border-outline-variant px-1 text-[10px] leading-none py-0.5">ИНФО</span>
+</div>
+<div class="col-span-5 text-on-surface truncate pr-4">Плановая очистка кэша сектора B. Освобождено 4.2TB.</div>
+<div class="col-span-2 text-right pr-2 text-on-surface-variant">MAINT_ROUTINE</div>
+</div>
+<!-- Simulated padding for scrolling -->
+<div class="h-20"></div>
+</div>
+</div>
+<!-- Command Line Input -->
+<div class="border border-outline-variant bg-surface flex items-center p-2 font-code-dense text-code-dense shrink-0">
+<span class="text-primary-container mr-2">&gt;</span>
+<input class="bg-transparent border-none outline-none text-on-surface flex-1 focus:ring-0 p-0 uppercase placeholder:text-on-surface-variant/30" placeholder="ВВЕДИТЕ КОМАНДУ ИЛИ ЗАПРОС..." type="text"/>
+<span class="w-2 h-4 bg-primary-container animate-pulse ml-1 inline-block"></span>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-stone-950 font-mono text-[9px] uppercase fixed bottom-0 w-full border-t border-stone-800 border-t border-stone-800 flat no shadows flex justify-between items-center px-4 py-1 h-8 w-full z-50">
+<div class="text-stone-600">© 2024 ЦЕНТРАЛЬНЫЙ УЗЕЛ СВЯЗИ. КОРПУС-Г</div>
+<div class="flex gap-4">
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПРОТОКОЛ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПОДДЕРЖКА</a>
+</div>
+</footer>
+</body></html>

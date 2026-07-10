@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 // Proof Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#3b0900",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary": "#283500",
+                      "inverse-on-surface": "#313030",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary": "#ffffff",
+                      "on-tertiary": "#601400",
+                      "outline-variant": "#444933",
+                      "secondary-container": "#484949",
+                      "primary-container": "#c3f400",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#353534",
+                      "tertiary-fixed-dim": "#ffb5a0",
+                      "on-secondary-fixed-variant": "#464747",
+                      "on-tertiary-container": "#bc3000",
+                      "primary-fixed": "#c3f400",
+                      "primary-fixed-dim": "#abd600",
+                      "background": "#131313",
+                      "tertiary-fixed": "#ffdbd1",
+                      "on-primary-fixed": "#161e00",
+                      "on-surface-variant": "#c4c9ac",
+                      "on-tertiary-fixed-variant": "#872000",
+                      "inverse-primary": "#506600",
+                      "surface-variant": "#353534",
+                      "error": "#ffb4ab",
+                      "on-secondary-container": "#b8b8b8",
+                      "surface-dim": "#131313",
+                      "surface-container": "#201f1f",
+                      "surface-bright": "#393939",
+                      "surface": "#131313",
+                      "outline": "#8e9379",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container-high": "#2a2a2a",
+                      "secondary": "#c7c6c6",
+                      "tertiary-container": "#ffdbd1",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-background": "#e5e2e1",
+                      "on-secondary": "#2f3131",
+                      "on-surface": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#3c4d00",
+                      "secondary-fixed": "#e3e2e2",
+                      "surface-tint": "#abd600",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-primary-container": "#556d00",
+                      "on-error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "module-padding": "20px",
+                      "unit": "4px",
+                      "gutter": "16px",
+                      "overlap-offset": "-12px",
+                      "margin": "24px"
+              },
+              "fontFamily": {
+                      "label-mono": [
+                              "IBM Plex Mono"
+                      ],
+                      "h1-display": [
+                              "Space Grotesk"
+                      ],
+                      "data-heavy": [
+                              "IBM Plex Mono"
+                      ],
+                      "h2-headline": [
+                              "Space Grotesk"
+                      ],
+                      "h3-subhead": [
+                              "Space Grotesk"
+                      ],
+                      "body-technical": [
+                              "IBM Plex Mono"
+                      ]
+              },
+              "fontSize": {
+                      "label-mono": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h1-display": [
+                              "72px",
+                              {
+                                      "lineHeight": "0.9",
+                                      "letterSpacing": "-0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "data-heavy": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "h2-headline": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h3-subhead": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-technical": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Mobile Top Navigation -->
+<nav class="md:hidden sticky top-0 w-full z-50 bg-zinc-950 flex justify-between items-center px-6 py-3 border-b-2 border-zinc-800 flat-no-shadows">
+<div class="text-[#CCFF00] font-['Space_Grotesk'] uppercase tracking-tighter text-xl font-black tracking-widest">NIKITKA_93 // INTEL_CORE</div>
+<div class="flex space-x-4">
+<button class="text-zinc-500 hover:text-zinc-200 transition-colors duration-100 stepped-animation-100ms"><span class="material-symbols-outlined">sensors</span></button>
+<button class="text-zinc-500 hover:text-zinc-200 transition-colors duration-100 stepped-animation-100ms"><span class="material-symbols-outlined">memory</span></button>
+<button class="text-zinc-500 hover:text-zinc-200 transition-colors duration-100 stepped-animation-100ms"><span class="material-symbols-outlined">terminal</span></button>
+</div>
+</nav>
+<div class="md:hidden flex overflow-x-auto border-b-2 border-zinc-800 bg-zinc-950 font-['Space_Grotesk'] uppercase tracking-tighter px-6">
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900 transition-colors duration-100 py-3 px-4 stepped-animation-100ms" href="#">DOSSIER</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900 transition-colors duration-100 py-3 px-4 stepped-animation-100ms" href="#">INTEL</a>
+<a class="text-[#CCFF00] border-b-2 border-[#CCFF00] pb-1 py-3 px-4 hover:bg-zinc-900 transition-colors duration-100 stepped-animation-100ms" href="#">ARCHIVE</a>
+</div>
+<!-- Web Side Navigation -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full w-64 flex-col z-40 bg-zinc-950 border-r-2 border-zinc-800 flat-tonal-stacking font-['IBM_Plex_Mono'] text-xs font-bold uppercase">
+<div class="p-6 border-b border-zinc-800 flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-high border-2 border-zinc-500 flex-shrink-0">
+<img alt="SYSTEM_OPERATOR_AVATAR" class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="abstract geometric sharp angles wireframe glowing matrix low poly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh-pgwkSDenjvwV2ilUvP4yDeRizT1vRNh3Kw9IS4UDeBXifeGHmHEUS90INM59W0SHajbG0BEi8CWLqeCEZ0RzpgrC5i-Go_EY9UOyLlJXZTmSTa5tcq93zdvwOqkNCzaAt6WllDeXqDl9iJ4in9PBG701YInVH-8yOE7l5XTc-uMkXjhiUilP3fu2rar_mVbGfZnRMzkgRK7kkGFAKotxxCtd5wgGfAu-9vz604OEH4AL621ejmdtq9N9oiV_olz_OFPJ51r_O7v"/>
+</div>
+<div>
+<div class="text-lg font-black text-zinc-100">AI_NIKITKA</div>
+<div class="text-zinc-500">V_93.0.42</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-4">
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined">fingerprint</span> IDENTITY
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined">polyline</span> ROUTES
+            </a>
+<a class="flex items-center gap-3 bg-[#CCFF00] text-black p-3 m-1 border-2 border-black hover:border-zinc-500 hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_shared</span> DOSSIER
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined">analytics</span> COUNTERS
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined">query_stats</span> STATUS
+            </a>
+</div>
+<div class="p-4 border-t border-zinc-800">
+<button class="w-full bg-[#CCFF00] text-black py-3 mb-4 font-bold border-2 border-transparent hover:bg-transparent hover:text-[#CCFF00] hover:border-[#CCFF00] transition-colors instant-selection">
+                INITIATE_SEQUENCE
+            </button>
+<a class="flex items-center gap-3 text-zinc-400 p-2 border border-transparent hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined text-[16px]">terminal</span> TERMINAL
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-2 border border-transparent hover:text-zinc-100 instant-selection" href="#">
+<span class="material-symbols-outlined text-[16px]">logout</span> LOGOUT
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 p-margin min-h-screen flex flex-col gap-margin">
+<header class="border-b-2 border-surface-container-high pb-4 mb-4">
+<h1 class="font-h1-display text-h1-display text-on-background uppercase break-words">АРХИВ ДОКАЗАТЕЛЬСТВ</h1>
+<p class="font-body-technical text-body-technical text-on-surface-variant mt-2 max-w-2xl">ИНДЕКСИРОВАНО 7 ИЗОЛИРОВАННЫХ ФАЙЛОВ. ДОСТУП РАЗРЕШЕН. УРОВЕНЬ УГРОЗЫ: КРИТИЧЕСКИЙ.</p>
+</header>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-unit auto-rows-[160px]">
+<!-- Bento 1: Проект Обсидиан (Wide) -->
+<div class="col-span-1 md:col-span-8 row-span-2 bg-surface-container border-2 border-surface-container-highest relative group p-module-padding flex flex-col justify-between overflow-hidden">
+<div class="absolute inset-0 opacity-10 mix-blend-screen pointer-events-none" data-alt="cyberpunk server room dark monolithic structures glowing neon green lines" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCo70Qsz_EHB-BIgPe4w_ey60BpQJy3tq-RcygPYG_Zjl4LvcF32oxpM-R84uwfTJMnsc2rM2vrHEZGrcLPx9Zll0-h7nJfHBFYDV7KKqMgxBdMC9e_uFrH5qHmiv8oTIVN2IGt3cQAcp1Tlm5yYs4LrupcsWAnoUqo50Jmq8rD4QVbwc6xzAvxV_DHEFVVEJ2a_YsMvbI6opjvUvTK_O_QzWwtJspS5uN0qM15qdzt2dCk5E91LnRDLDtMeuJX1t7Us6dPTieKdPej'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10 flex justify-between items-start">
+<span class="font-label-mono text-label-mono bg-primary-container text-on-primary-container px-2 py-1">ID-01</span>
+<span class="material-symbols-outlined text-primary-container">shield_locked</span>
+</div>
+<div class="relative z-10 mt-auto">
+<h2 class="font-h2-headline text-h2-headline text-on-background mb-2">Проект Обсидиан</h2>
+<div class="flex gap-4 font-label-mono text-label-mono text-secondary">
+<span class="border border-surface-container-highest px-2 py-1">СТАТУС: АКТИВЕН</span>
+<span class="border border-surface-container-highest px-2 py-1">ЦИКЛОВ: 4920</span>
+</div>
+</div>
+</div>
+<!-- Bento 2: Протокол Эхо (Tall) -->
+<div class="col-span-1 md:col-span-4 row-span-3 bg-surface-container-low border border-outline-variant p-module-padding flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 opacity-5 font-h1-display text-[200px] leading-none pointer-events-none">E</div>
+<div>
+<div class="flex justify-between items-center border-b border-surface-container-highest pb-2 mb-4">
+<h3 class="font-h3-subhead text-h3-subhead text-on-background">Протокол Эхо</h3>
+<div class="w-3 h-3 bg-error animate-pulse"></div>
+</div>
+<p class="font-body-technical text-body-technical text-on-surface-variant">Рекурсивный анализ акустических сигнатур. Обнаружены аномалии в секторе 7G.</p>
+</div>
+<div class="font-data-heavy text-data-heavy text-error mt-4">
+                    РАССИНХРОНИЗАЦИЯ 94.2%
+                </div>
+</div>
+<!-- Bento 3: Нексус Кор (Compact) -->
+<div class="col-span-1 md:col-span-4 row-span-1 bg-surface border border-outline-variant p-module-padding flex items-center gap-4 hover:border-primary-container transition-colors">
+<div class="bg-surface-container-highest p-3 border border-surface-container-high">
+<span class="material-symbols-outlined text-primary-fixed">dns</span>
+</div>
+<div>
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-1">ЯДРО СИСТЕМЫ</div>
+<div class="font-data-heavy text-data-heavy text-on-background">Нексус Кор</div>
+</div>
+</div>
+<!-- Bento 4: Анализ Крах (Compact metric) -->
+<div class="col-span-1 md:col-span-4 row-span-1 bg-surface-container-lowest border border-error p-module-padding relative">
+<div class="absolute top-0 right-0 w-8 h-8 bg-error border-l border-b border-error flex items-center justify-center">
+<span class="material-symbols-outlined text-on-error text-[16px]">warning</span>
+</div>
+<div class="font-label-mono text-label-mono text-error mb-2">Анализ Крах</div>
+<div class="font-h2-headline text-h2-headline text-on-background">CRITICAL</div>
+<div class="w-full h-1 bg-surface-container-high mt-4">
+<div class="h-full bg-error w-11/12"></div>
+</div>
+</div>
+<!-- Bento 5: Объект Зета (Square) -->
+<div class="col-span-1 md:col-span-4 row-span-2 bg-surface-container border border-surface-container-high p-module-padding flex flex-col">
+<div class="flex-1 border-2 border-dashed border-surface-container-highest flex items-center justify-center mb-4 relative overflow-hidden">
+<img alt="Object Zeta scan" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40 grayscale" data-alt="abstract glitch art distorted 3d mesh scan wireframe dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0t5A7XLgrKYk9mWSC8SRE8eNwXfH6fcPPrSfTUZKCVRmVpNzzgS9LNIlyWt2d_P22R-6-BzjjJJh36TFVMT26sARzibFU_UK9zifC7zqfZeGc-Mc7nUC3zSylBPLbiRTSPxYEo3TvwrYBWPjHgDeuK_vBwZgnz2nscSSyFhfcuzwXKeFT-aP7rYdar7OXM-ofhm-I44uyxhqiEbBo7hiz9cpQyarLaGYjU8rgL5KTSqxV-44F7QCkbQF8V9qKYPIY5wFkVCEtSfDA"/>
+<span class="material-symbols-outlined text-4xl text-on-surface-variant z-10">biotech</span>
+</div>
+<h3 class="font-data-heavy text-data-heavy text-on-background">Объект Зета</h3>
+<div class="font-label-mono text-label-mono text-secondary mt-1">ОЖИДАНИЕ ИДЕНТИФИКАЦИИ</div>
+</div>
+<!-- Bento 6: Вангард Интел (Wide) -->
+<div class="col-span-1 md:col-span-8 row-span-1 bg-surface border-t border-b border-surface-container-highest p-module-padding flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="text-primary-container font-h2-headline text-h2-headline">VI</div>
+<div>
+<h3 class="font-h3-subhead text-h3-subhead text-on-background">Вангард Интел</h3>
+<p class="font-body-technical text-body-technical text-on-surface-variant">Сводка разведданных внешнего периметра.</p>
+</div>
+</div>
+<button class="border border-outline px-4 py-2 font-label-mono text-label-mono text-on-background hover:bg-surface-container-highest transition-colors uppercase">
+                    РАСШИФРОВАТЬ
+                </button>
+</div>
+<!-- Bento 7: Схемотехника V2 (Square) -->
+<div class="col-span-1 md:col-span-4 row-span-2 bg-surface-container-highest border-l-4 border-primary-container p-module-padding relative overflow-hidden">
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: radial-gradient(#8e9379 1px, transparent 1px); background-size: 16px 16px;"></div>
+<h3 class="font-h3-subhead text-h3-subhead text-on-background relative z-10 mb-4">Схемотехника V2</h3>
+<div class="space-y-unit relative z-10 font-label-mono text-label-mono">
+<div class="flex justify-between border-b border-surface-container-high py-2 text-on-surface">
+<span>УЗЕЛ А</span>
+<span class="text-primary-container">ОПТИМАЛЬНО</span>
+</div>
+<div class="flex justify-between border-b border-surface-container-high py-2 text-on-surface">
+<span>УЗЕЛ Б</span>
+<span class="text-primary-container">ОПТИМАЛЬНО</span>
+</div>
+<div class="flex justify-between border-b border-surface-container-high py-2 text-on-surface">
+<span>ШИНА ДАННЫХ</span>
+<span class="text-error">ПЕРЕГРУЗКА</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

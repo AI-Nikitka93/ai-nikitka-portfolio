@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operator Surface</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#c5c7c2",
+                      "on-tertiary": "#283500",
+                      "on-primary-fixed": "#1a1c19",
+                      "secondary-fixed-dim": "#c7c7be",
+                      "error-container": "#93000a",
+                      "inverse-on-surface": "#313030",
+                      "surface-container": "#201f1f",
+                      "inverse-surface": "#e5e2e0",
+                      "primary-container": "#050705",
+                      "on-secondary-container": "#b8b9b0",
+                      "outline": "#8f928c",
+                      "secondary": "#c7c7be",
+                      "primary-fixed-dim": "#c5c7c2",
+                      "on-primary-container": "#767974",
+                      "error": "#ffb4ab",
+                      "on-primary": "#2e312e",
+                      "tertiary": "#abd600",
+                      "on-surface-variant": "#c5c7c1",
+                      "outline-variant": "#444843",
+                      "on-surface": "#e5e2e0",
+                      "surface-bright": "#3a3938",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#161e00",
+                      "tertiary-fixed": "#c3f400",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-fixed": "#e2e3de",
+                      "surface-container-highest": "#353534",
+                      "on-tertiary-fixed-variant": "#3c4d00",
+                      "on-primary-fixed-variant": "#454744",
+                      "on-secondary-fixed": "#1a1c16",
+                      "surface-tint": "#c5c7c2",
+                      "on-secondary": "#2f312b",
+                      "surface-container-high": "#2a2a29",
+                      "on-tertiary-container": "#678200",
+                      "secondary-fixed": "#e3e3d9",
+                      "surface-dim": "#141313",
+                      "surface-variant": "#353534",
+                      "secondary-container": "#484a43",
+                      "surface": "#141313",
+                      "on-error": "#690005",
+                      "tertiary-container": "#050800",
+                      "background": "#141313",
+                      "on-secondary-fixed-variant": "#464740",
+                      "tertiary-fixed-dim": "#abd600",
+                      "on-background": "#e5e2e0",
+                      "inverse-primary": "#5d5f5b",
+                      "surface-container-low": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "40px",
+                      "void-sm": "12px",
+                      "margin": "64px",
+                      "void-md": "32px",
+                      "void-lg": "80px",
+                      "void-xs": "4px",
+                      "void-xl": "160px"
+              },
+              "fontFamily": {
+                      "meta-sm": [
+                              "IBM Plex Mono"
+                      ],
+                      "meta-xs": [
+                              "IBM Plex Mono"
+                      ],
+                      "body-base": [
+                              "Space Grotesk"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "meta-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "meta-xs": [
+                              "10px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-base": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "300"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: normal;
+          text-transform: none;
+          display: inline-block;
+          white-space: nowrap;
+          word-wrap: normal;
+          direction: ltr;
+          -webkit-font-feature-settings: 'liga';
+          -webkit-font-smoothing: antialiased;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-hidden selection:bg-[#ccff00] selection:text-background">
+<!-- TopAppBar -->
+<header class="bg-transparent flex justify-between items-center w-full px-[24px] py-[12px] absolute w-full top-0 z-50">
+<div class="text-[10px] font-bold tracking-widest text-[#f5f5f0] uppercase">
+            AI_NIKITKA93
+        </div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#f5f5f0] hover:text-[#ccff00] transition-opacity duration-500 cursor-none" style="font-variation-settings: 'FILL' 0;">
+                settings
+            </span>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-transparent fixed left-0 top-0 h-full flex flex-col gap-[12px] px-[12px] py-[32px] justify-center z-40 w-32">
+<div class="flex flex-col gap-8 w-full font-['IBM_Plex_Mono'] text-[11px] tracking-tight">
+<!-- ARCHIVE -->
+<a class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">folder_open</span>
+<span class="uppercase">ARCHIVE</span>
+</a>
+<!-- VOID -->
+<a class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">blur_on</span>
+<span class="uppercase">VOID</span>
+</a>
+<!-- NEURAL (Active) -->
+<a class="text-[#ccff00] flex items-center gap-4 before:w-1 before:h-1 before:bg-[#ccff00] transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">psychology</span>
+<span class="uppercase">NEURAL</span>
+</a>
+<!-- LOGS -->
+<a class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">terminal</span>
+<span class="uppercase">LOGS</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full h-screen flex flex-col items-center justify-center relative">
+<!-- Input Area Container -->
+<div class="flex items-center gap-void-md max-w-4xl w-full px-void-xl">
+<!-- Prompt Indicator -->
+<div class="font-meta-sm text-meta-sm text-on-surface opacity-50 shrink-0 select-none">
+                AWAITING_INPUT
+            </div>
+<!-- Central Input -->
+<input autocomplete="off" autofocus="" class="w-full bg-transparent border-none outline-none ring-0 focus:ring-0 p-0 m-0 font-display-xl text-display-xl text-on-surface caret-[#ccff00] placeholder:opacity-0 focus:placeholder:opacity-0" placeholder="" spellcheck="false" type="text"/>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-transparent fixed bottom-0 w-full flex justify-center items-center pb-[12px] z-50 pointer-events-none">
+<div class="font-['IBM_Plex_Mono'] text-[9px] opacity-30 text-[#f5f5f0] flex gap-void-md uppercase tracking-widest">
+<span>SYSTEM_STATUS: NOMINAL</span>
+<span>ENCRYPTION_ACTIVE</span>
+</div>
+</footer>
+</body></html>

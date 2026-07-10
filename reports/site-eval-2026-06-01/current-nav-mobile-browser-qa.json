@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-06-01T15:41:23.085Z",
+  "url": "http://127.0.0.1:3200/links",
+  "title": "Связи | AI_Nikitka93",
+  "menuButtonExists": true,
+  "menuExpanded": "true",
+  "mobilePanelExists": true,
+  "currentLinks": [
+    {
+      "text": "07Контакты",
+      "href": "/links",
+      "hiddenByCss": false
+    },
+    {
+      "text": "07Контакты",
+      "href": "/links",
+      "hiddenByCss": false
+    }
+  ],
+  "hasLinksCurrent": true,
+  "hasWrongCurrent": false,
+  "horizontalOverflow": false
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 Operator Interface</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#ff5625",
+                        "on-tertiary": "#353024",
+                        "tertiary-fixed-dim": "#cec6b5",
+                        "on-surface": "#dce4e9",
+                        "on-secondary-container": "#541100",
+                        "error-container": "#93000a",
+                        "on-primary": "#283500",
+                        "surface-bright": "#323a3f",
+                        "surface": "#0d1418",
+                        "on-primary-fixed": "#161e00",
+                        "on-secondary": "#601400",
+                        "on-primary-container": "#556d00",
+                        "surface-container-lowest": "#080f13",
+                        "inverse-on-surface": "#2a3136",
+                        "surface-tint": "#abd600",
+                        "on-secondary-fixed": "#3b0900",
+                        "surface-container": "#192125",
+                        "on-tertiary-fixed": "#1f1b11",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "surface-container-high": "#232b2f",
+                        "on-tertiary-container": "#6a6456",
+                        "surface-container-low": "#151d21",
+                        "on-tertiary-fixed-variant": "#4c463a",
+                        "surface-dim": "#0d1418",
+                        "tertiary-container": "#ebe2d0",
+                        "primary-container": "#c3f400",
+                        "on-background": "#dce4e9",
+                        "outline": "#8e9379",
+                        "secondary": "#ffb5a0",
+                        "background": "#0d1418",
+                        "surface-variant": "#2e363a",
+                        "surface-container-highest": "#2e363a",
+                        "primary-fixed": "#c3f400",
+                        "inverse-surface": "#dce4e9",
+                        "inverse-primary": "#506600",
+                        "outline-variant": "#444933",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "primary": "#ffffff",
+                        "primary-fixed-dim": "#abd600",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#872000",
+                        "tertiary-fixed": "#ebe2d0",
+                        "secondary-fixed": "#ffdbd1",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "12px",
+                        "unit": "4px",
+                        "margin-page": "32px",
+                        "module-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Space Grotesk"],
+                        "body-main": ["Space Grotesk"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "ui-label": ["IBM Plex Mono"],
+                        "h1-editorial": ["Space Grotesk"],
+                        "h2-module": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "ui-label": ["12px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                        "h1-editorial": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "h2-module": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bento-card {
+            background-color: #161616;
+            border: 1px solid rgba(113, 121, 126, 0.3);
+            position: relative;
+        }
+        .bento-card.active-module {
+            border-top: 2px solid #CCFF00;
+        }
+        .ui-label-pos {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+        }
+        /* Hide scrollbar for cleaner bento look */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(113, 121, 126, 0.5); border-radius: 2px; }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-on-background font-body-main text-body-main antialiased h-screen w-screen overflow-hidden flex">
+<!-- SideNavBar -->
+<nav class="bg-[#161616] text-[#CCFF00] font-['IBM_Plex_Mono'] text-xs uppercase tracking-tighter h-screen w-20 md:w-64 border-r border-zinc-500/30 fixed left-0 top-0 flex flex-col z-40">
+<div class="p-6 border-b border-zinc-500/30 hidden md:flex flex-col items-center gap-4">
+<img alt="Operator AI_Nikitka93 Avatar" class="w-16 h-16 rounded-full border border-zinc-500/50 object-cover grayscale opacity-80" data-alt="Stylized high-contrast portrait of an android wearing tactical gear in deep shadow with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_gqd6q7pY0FAAvXe4lKK7vs4dI92VriEoWTOXkmM64SphCSH7TYTWtXXxupBlTy_3oe9_PEjlMZ7lrii9ab1QRp_uviIF2Jq-BUt4_UwyZ2fBxETkJP8SQCWSiVmSQPyxKmFHMmGSWhgqwKWFQA_1z-eV2N5fU9VAOUbkol-Paap-eEr1aVItucUPPXeiDJ9JTvsS091fMt-ug6JbvL3rrsXfeZ0R9-Z6zQkKjIUuscaNsxRt8JivRaUgasSF32DzjhEac9MJjanw"/>
+<div class="text-center">
+<div class="text-[#CCFF00] font-bold text-sm tracking-widest">OPERATOR_01</div>
+<div class="text-zinc-500 text-[10px] mt-1">STATUS: ACTIVE</div>
+</div>
+</div>
+<div class="flex flex-col flex-1 py-4 space-y-1">
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center px-6 py-4 gap-4 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">fingerprint</span>
+<span class="hidden md:inline">Identity</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center px-6 py-4 gap-4 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+<span class="hidden md:inline">Routes</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center px-6 py-4 gap-4 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">folder_open</span>
+<span class="hidden md:inline">Dossier</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center px-6 py-4 gap-4 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">analytics</span>
+<span class="hidden md:inline">Counters</span>
+</a>
+<a class="bg-[#222222] text-[#CCFF00] border-l-2 border-[#CCFF00] translate-x-1 transition-transform flex items-center px-6 py-4 gap-4" href="#">
+<span class="material-symbols-outlined text-lg">sensors</span>
+<span class="hidden md:inline">Status</span>
+</a>
+</div>
+<div class="p-4 mt-auto border-t border-zinc-500/30 hidden md:block">
+<button class="w-full bg-zinc-800/50 text-zinc-300 border border-zinc-500/30 py-3 text-xs tracking-widest hover:bg-[#CCFF00] hover:text-[#0A0A0A] transition-colors">
+                CONNECT_NODE
+            </button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col ml-20 md:ml-64 h-screen relative">
+<!-- TopNavBar -->
+<header class="bg-zinc-950/90 backdrop-blur-xl docked full-width top-0 border-b border-zinc-500/30 flex justify-between items-center w-full px-6 py-4 z-50 absolute">
+<div class="flex items-center gap-8">
+<div class="text-xl font-black text-[#CCFF00] tracking-widest font-['Space_Grotesk'] uppercase">AI_NIKITKA93</div>
+<nav class="hidden lg:flex gap-6">
+<a class="text-zinc-500 font-medium hover:text-zinc-200 font-['Space_Grotesk'] tracking-tight uppercase text-sm" href="#">Dossier</a>
+<a class="text-[#CCFF00] border-b border-[#CCFF00] pb-1 font-['Space_Grotesk'] tracking-tight uppercase text-sm scale-95 opacity-80" href="#">Intel</a>
+<a class="text-zinc-500 font-medium hover:text-zinc-200 font-['Space_Grotesk'] tracking-tight uppercase text-sm" href="#">Archive</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex rounded-full border border-zinc-500/50 p-1 bg-zinc-900 overflow-hidden font-data-mono text-[10px]">
+<button class="px-3 py-1 bg-[#CCFF00] text-[#0A0A0A] rounded-full font-bold">EN</button>
+<button class="px-3 py-1 text-zinc-500 hover:text-zinc-300">RU</button>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded border border-zinc-500/30 flex items-center justify-center text-zinc-400 hover:bg-zinc-800/50 transition-colors duration-150">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</button>
+<button class="w-10 h-10 rounded border border-zinc-500/30 flex items-center justify-center text-zinc-400 hover:bg-zinc-800/50 transition-colors duration-150">
+<span class="material-symbols-outlined text-sm">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Bento Canvas -->
+<main class="flex-1 mt-[72px] p-gutter overflow-y-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[minmax(140px,auto)]">
+<!-- Assistant Core Module (Span 8) -->
+<div class="bento-card active-module md:col-span-8 md:row-span-3 p-module-padding pt-12 flex flex-col justify-between">
+<div class="ui-label-pos font-ui-label text-ui-label text-zinc-400"><span class="text-[#FF4500] mr-1">●</span>CORE_INTERFACE</div>
+<div class="flex-1 w-full bg-[#0A0A0A] border border-zinc-500/20 mb-4 relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 50% 50%, #CCFF00 0%, transparent 60%);"></div>
+<img alt="Abstract Data Core" class="w-full h-full object-cover mix-blend-screen opacity-50" data-alt="Abstract 3d render of glowing green wireframe topology lines intersecting in dark void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFrCaWyLVYV1bB6O1MVeJXM85aiqmHvPyIk_WRDIDCjl8GOj5S6G6foXx0ZNVF2DYnrPndCH7sIdrXQNNcGFq-pUZb-UcEeaX7fZh0yI1uDBnTmPRC7TwpuJchWatiWx6MUOhvoHp_Za6yNmLgdFKZurWovhVqe6IqIxJgCMAsds_SMnkHjzpPb72B5JG92MPNKGsnB3hEnNR0B3TUpJLPnYwcQiB-5XHuRuxGOkAw7K1OZpUC3K2JCKztk4sQFAoey3oP_8MoA6J_"/>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-h1-editorial text-h1-editorial text-[#CCFF00] tracking-widest drop-shadow-[0_0_15px_rgba(204,255,0,0.5)]">AI_NK93</span>
+<span class="font-data-mono text-data-mono text-zinc-400 mt-2">PROCESSING CLUSTER NOMINAL</span>
+</div>
+</div>
+<div class="flex justify-between items-end gap-4 border-t border-zinc-500/30 pt-4">
+<div class="flex-1 font-data-mono text-[10px] text-zinc-500 leading-tight">
+                            &gt; SYS_OP: NORMAL<br/>
+                            &gt; UPTIME: 9482h 12m<br/>
+                            &gt; SYNC_RATE: 99.98%
+                        </div>
+<div class="flex gap-2">
+<button class="bg-[#CCFF00] text-[#0A0A0A] px-6 py-2 font-body-main font-bold text-sm tracking-wide hover:bg-white transition-colors">ENGAGE</button>
+<button class="border border-[#71797E]/50 text-[#E3DAC9] px-6 py-2 font-body-main text-sm tracking-wide hover:bg-[#222222] transition-colors">ISOLATE</button>
+</div>
+</div>
+</div>
+<!-- Live Logs (Span 4) -->
+<div class="bento-card md:col-span-4 md:row-span-3 p-module-padding pt-12 flex flex-col">
+<div class="ui-label-pos font-ui-label text-ui-label text-zinc-400">COMMS_LOG</div>
+<div class="flex-1 bg-[#0A0A0A] border border-zinc-500/20 p-4 font-data-mono text-[11px] text-zinc-400 overflow-y-hidden relative">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none z-10"></div>
+<div class="space-y-2 opacity-80 flex flex-col justify-end h-full">
+<p><span class="text-zinc-600">[14:02:11]</span> NODE_77 requires auth bypass.</p>
+<p><span class="text-zinc-600">[14:02:14]</span> Auth granted. Packets routing.</p>
+<p class="text-red-400/80"><span class="text-zinc-600">[14:03:01]</span> WARN: Latency spike sector 4.</p>
+<p><span class="text-zinc-600">[14:03:05]</span> Re-routing through proxy A9.</p>
+<p><span class="text-zinc-600">[14:04:22]</span> Handshake established.</p>
+<p class="text-[#CCFF00]"><span class="text-zinc-600">[14:05:00]</span> <span class="animate-pulse">Awaiting Operator input_</span></p>
+</div>
+</div>
+<div class="mt-4 flex">
+<input class="w-full bg-transparent border-b border-[#71797E]/30 focus:border-[#CCFF00] outline-none text-data-mono font-data-mono py-2 text-[#CCFF00] placeholder-zinc-600" placeholder="CMD &gt;_" type="text"/>
+</div>
+</div>
+<!-- Telemetry (Span 3) -->
+<div class="bento-card md:col-span-3 md:row-span-2 p-module-padding pt-12">
+<div class="ui-label-pos font-ui-label text-ui-label text-zinc-400">TELEMETRY</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-[#71797E]/30 pb-2">
+<span class="font-data-mono text-xs text-zinc-500">01 CPU_LOAD</span>
+<span class="font-data-mono text-sm text-zinc-200">84%</span>
+</div>
+<div class="flex justify-between items-center border-b border-[#71797E]/30 pb-2">
+<span class="font-data-mono text-xs text-zinc-500">02 MEM_ALLOC</span>
+<span class="font-data-mono text-sm text-zinc-200">64TB</span>
+</div>
+<div class="flex justify-between items-center border-b border-[#71797E]/30 pb-2">
+<span class="font-data-mono text-xs text-zinc-500">03 NET_IN</span>
+<span class="font-data-mono text-sm text-[#CCFF00]">1.2 PB/s</span>
+</div>
+<div class="flex justify-between items-center pb-2">
+<span class="font-data-mono text-xs text-zinc-500">04 THERMAL</span>
+<span class="font-data-mono text-sm text-red-400">89°C</span>
+</div>
+</div>
+</div>
+<!-- Network Map (Span 5) -->
+<div class="bento-card md:col-span-5 md:row-span-2 p-module-padding pt-12 flex flex-col">
+<div class="ui-label-pos font-ui-label text-ui-label text-zinc-400">NODE_TOPOLOGY</div>
+<div class="flex-1 bg-[#0A0A0A] border border-zinc-500/20 relative overflow-hidden group cursor-crosshair">
+<img alt="Hardware Circuit Board" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity grayscale contrast-125" data-alt="Macro photography of complex green circuit board traces and microchips with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeOsp1JlBABj-q4ymBzGNRH09pr8c6xrrY4Y9lyXtd9bUIddJGeyWUE6w_hMyFy7VK3q3MfDoBhJGJdDy75o432t8p0iTF5qD9OcL3xk-0bcdLKVefWya9xqoQMvbAuotSFbAhpOEpSGihTLYGyEb5fpLkjrgYQEzKAthNOdevWhm0mkiOJTgwg2GKDnmJonWt-6h5BHHwAS7rFdqObvyEesP6E8SKc9xKZfszp6DP717chKtD2JUgcS83brujzSz8OyWaIWHyX3KV"/>
+<div class="absolute inset-0 bg-[#CCFF00]/5 mix-blend-overlay"></div>
+<!-- UI Overlay markers -->
+<div class="absolute top-1/4 left-1/3 w-2 h-2 bg-[#CCFF00] rounded-full shadow-[0_0_8px_#CCFF00] animate-pulse"></div>
+<div class="absolute top-1/2 left-2/3 w-2 h-2 bg-red-500 rounded-full shadow-[0_0_8px_red]"></div>
+<div class="absolute bottom-1/3 left-1/2 w-1.5 h-1.5 bg-zinc-400 rounded-full"></div>
+</div>
+</div>
+<!-- Directives (Span 4) -->
+<div class="bento-card md:col-span-4 md:row-span-2 p-module-padding pt-12 overflow-hidden">
+<div class="ui-label-pos font-ui-label text-ui-label text-zinc-400">ACTIVE_DIRECTIVES</div>
+<ul class="font-data-mono text-xs space-y-3 mt-2">
+<li class="flex gap-3 text-zinc-300">
+<span class="text-[#CCFF00] opacity-70">01</span>
+<span class="truncate">Monitor sector 7G for anomaly signatures.</span>
+</li>
+<li class="flex gap-3 text-zinc-300">
+<span class="text-zinc-600">02</span>
+<span class="truncate">Recompile dossier sub-routines.</span>
+</li>
+<li class="flex gap-3 text-zinc-300">
+<span class="text-zinc-600">03</span>
+<span class="truncate line-through opacity-50">Establish uplink with orbital command.</span>
+</li>
+<li class="flex gap-3 text-zinc-300">
+<span class="text-zinc-600">04</span>
+<span class="truncate">Purge cache buffer B-12.</span>
+</li>
+</ul>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Field Notes - Archival Protocol</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "tertiary-fixed": "#dfe4de",
+                            "tertiary-container": "#dfe4de",
+                            "tertiary-fixed-dim": "#c3c8c2",
+                            "on-secondary": "#333028",
+                            "on-background": "#dfe4db",
+                            "inverse-primary": "#506600",
+                            "on-secondary-fixed": "#1e1c14",
+                            "on-primary-container": "#556d00",
+                            "background": "#10150f",
+                            "secondary": "#cbc6ba",
+                            "surface-container-highest": "#313630",
+                            "tertiary": "#ffffff",
+                            "on-secondary-container": "#bab5a9",
+                            "error": "#ffb4ab",
+                            "error-container": "#93000a",
+                            "inverse-surface": "#dfe4db",
+                            "on-error": "#690005",
+                            "secondary-container": "#4a473e",
+                            "outline": "#8e9379",
+                            "surface-variant": "#313630",
+                            "outline-variant": "#444933",
+                            "on-tertiary": "#2c322e",
+                            "primary-container": "#c3f400",
+                            "on-error-container": "#ffdad6",
+                            "inverse-on-surface": "#2c322c",
+                            "surface-container": "#1c211b",
+                            "surface": "#10150f",
+                            "surface-container-low": "#181d17",
+                            "on-surface": "#dfe4db",
+                            "primary-fixed": "#c3f400",
+                            "on-primary-fixed-variant": "#3c4d00",
+                            "primary": "#ffffff",
+                            "on-primary-fixed": "#161e00",
+                            "surface-container-lowest": "#0a0f0a",
+                            "on-tertiary-container": "#606661",
+                            "on-primary": "#283500",
+                            "on-tertiary-fixed": "#181d19",
+                            "surface-bright": "#353b34",
+                            "secondary-fixed": "#e8e2d6",
+                            "surface-container-high": "#262b25",
+                            "surface-dim": "#10150f",
+                            "on-surface-variant": "#c4c9ac",
+                            "primary-fixed-dim": "#abd600",
+                            "secondary-fixed-dim": "#cbc6ba",
+                            "on-secondary-fixed-variant": "#4a473e",
+                            "surface-tint": "#abd600",
+                            "on-tertiary-fixed-variant": "#434844"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "grid-columns": "12",
+                            "stack-lg": "4rem",
+                            "margin": "2rem",
+                            "unit": "4px",
+                            "gutter": "1rem",
+                            "stack-sm": "0.5rem",
+                            "stack-md": "1.5rem"
+                    },
+                    "fontFamily": {
+                            "body-md": ["Space Grotesk", "sans-serif"],
+                            "metadata-sm": ["IBM Plex Mono", "monospace"],
+                            "headline-md": ["Space Grotesk", "sans-serif"],
+                            "body-lg": ["Space Grotesk", "sans-serif"],
+                            "headline-lg": ["Space Grotesk", "sans-serif"],
+                            "metadata-lg": ["IBM Plex Mono", "monospace"],
+                            "label": ["IBM Plex Mono", "monospace"],
+                            "headline-xl": ["Space Grotesk", "sans-serif"]
+                    },
+                    "fontSize": {
+                            "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                            "metadata-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                            "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                            "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                            "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                            "metadata-lg": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                            "label": ["10px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                            "headline-xl": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-black dark:bg-black font-['Space_Grotesk'] font-bold tracking-tight uppercase docked full-width top-0 border-b border-zinc-800 flat no shadows fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-20">
+<div class="text-2xl font-black text-[#CCFF00]">
+            AI_Nikitka93
+        </div>
+<div class="text-[#CCFF00] font-['Space_Grotesk'] font-bold tracking-tight uppercase">
+<span class="text-[#CCFF00] underline decoration-2 underline-offset-4 cursor-pointer">RU</span>
+<span class="text-zinc-500 mx-2">/</span>
+<span class="text-zinc-500 hover:text-[#CCFF00] transition-colors duration-75 cursor-pointer">EN</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-black dark:bg-black font-['IBM_Plex_Mono'] text-sm tracking-widest uppercase docked full-height left-0 border-r border-zinc-800 flat no shadows fixed left-0 top-20 w-72 h-[calc(100vh-80px)] flex flex-col pt-12 z-40">
+<div class="px-4 mb-8">
+<h2 class="text-zinc-500 text-xs tracking-widest mb-1">INDEX</h2>
+<p class="text-[#CCFF00] text-xs opacity-70">V.093_RESEARCH</p>
+</div>
+<ul class="flex flex-col w-full">
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined mr-3 text-lg">folder_open</span>
+                    01/ ARCHIVE
+                </a>
+</li>
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined mr-3 text-lg">account_box</span>
+                    02/ DOSSIER
+                </a>
+</li>
+<li>
+<a class="bg-[#CCFF00] text-black px-4 py-2 flex items-center justify-start cursor-crosshair" href="#">
+<span class="material-symbols-outlined mr-3 text-lg">terminal</span>
+                    03/ LOGS
+                </a>
+</li>
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined mr-3 text-lg">support_agent</span>
+                    04/ OPERATOR
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-72 mt-20 mb-[88px] p-12 min-h-[calc(100vh-168px)]">
+<!-- Header Section -->
+<header class="mb-stack-lg border-b border-outline-variant pb-stack-md">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-sm uppercase">Field Notes</h1>
+<div class="grid grid-cols-12 gap-gutter text-on-surface-variant font-metadata-sm text-metadata-sm uppercase">
+<div class="col-span-12 md:col-span-6">
+                    SYSTEM STATUS: NORMAL | LAST SYNC: 14:02:00 UTC
+                </div>
+<div class="col-span-12 md:col-span-6 md:text-right">
+                    QUERY_PARAMETERS: ACTIVE
+                </div>
+</div>
+</header>
+<!-- Swiss Table Layout for Notes -->
+<div class="w-full">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline pb-2 mb-4 font-metadata-sm text-metadata-sm uppercase text-on-surface-variant">
+<div class="col-span-1 text-on-surface-variant">IDX</div>
+<div class="col-span-2 text-on-surface-variant">TIMESTAMP</div>
+<div class="col-span-6 text-on-surface-variant">SUBJECT / SNIPPET</div>
+<div class="col-span-3 text-on-surface-variant text-right">METADATA</div>
+</div>
+<!-- List Item 001 -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant py-4 hover:bg-surface-container-high transition-none group">
+<div class="col-span-1 font-metadata-lg text-metadata-lg text-secondary">
+                    001
+                </div>
+<div class="col-span-2 font-metadata-sm text-metadata-sm text-on-surface-variant flex flex-col justify-start pt-1">
+<span>2024.10.24</span>
+<span>08:15:42</span>
+</div>
+<div class="col-span-6 pr-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-primary-fixed transition-none">Observation Parameter Alpha</h3>
+<p class="font-metadata-sm text-metadata-sm text-on-surface-variant leading-relaxed">
+                        Initial readings indicate a slight deviation in the magnetic flux containment field. Recalibrated sensors to baseline metrics. Variance noted at sector 7G. Further monitoring required before physical intervention.
+                    </p>
+</div>
+<div class="col-span-3 flex flex-col items-end gap-2 pt-1">
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">STATUS: VERIFIED</span>
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">TAG: SENSOR_DATA</span>
+</div>
+</div>
+<!-- List Item 002 -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant py-4 hover:bg-surface-container-high transition-none group">
+<div class="col-span-1 font-metadata-lg text-metadata-lg text-secondary">
+                    002
+                </div>
+<div class="col-span-2 font-metadata-sm text-metadata-sm text-on-surface-variant flex flex-col justify-start pt-1">
+<span>2024.10.24</span>
+<span>11:30:00</span>
+</div>
+<div class="col-span-6 pr-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-primary-fixed transition-none">Structural Integrity Assessment</h3>
+<p class="font-metadata-sm text-metadata-sm text-on-surface-variant leading-relaxed">
+                        Visual inspection of primary load-bearing columns completed. Micro-fractures detected on column C-4. Uploading macro-photography scans to core database. Requesting immediate material analysis protocol execution.
+                    </p>
+</div>
+<div class="col-span-3 flex flex-col items-end gap-2 pt-1">
+<span class="inline-block border border-error px-2 py-1 font-label text-label text-error uppercase">STATUS: ALERT</span>
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">TAG: STRUCTURAL</span>
+</div>
+</div>
+<!-- List Item 003 -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant py-4 hover:bg-surface-container-high transition-none group">
+<div class="col-span-1 font-metadata-lg text-metadata-lg text-secondary">
+                    003
+                </div>
+<div class="col-span-2 font-metadata-sm text-metadata-sm text-on-surface-variant flex flex-col justify-start pt-1">
+<span>2024.10.23</span>
+<span>22:05:11</span>
+</div>
+<div class="col-span-6 pr-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-primary-fixed transition-none">System Architecture Drift</h3>
+<p class="font-metadata-sm text-metadata-sm text-on-surface-variant leading-relaxed">
+                        Automated sweep identified unauthorized protocol handshakes originating from node 44. Traffic isolated and dumped to secure server for dissection. No data exfiltration detected. Suspect latent code execution.
+                    </p>
+</div>
+<div class="col-span-3 flex flex-col items-end gap-2 pt-1">
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">STATUS: ISOLATED</span>
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">TAG: NETWORK_SEC</span>
+</div>
+</div>
+<!-- List Item 004 -->
+<div class="grid grid-cols-12 gap-gutter border-b border-outline-variant py-4 hover:bg-surface-container-high transition-none group">
+<div class="col-span-1 font-metadata-lg text-metadata-lg text-secondary">
+                    004
+                </div>
+<div class="col-span-2 font-metadata-sm text-metadata-sm text-on-surface-variant flex flex-col justify-start pt-1">
+<span>2024.10.22</span>
+<span>14:45:20</span>
+</div>
+<div class="col-span-6 pr-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-primary-fixed transition-none">Routine Maintenance Cycle</h3>
+<p class="font-metadata-sm text-metadata-sm text-on-surface-variant leading-relaxed">
+                        Standard diagnostics run on all primary auxiliary systems. Firmware updated to version 9.4.1. Cache cleared. Operative efficiency improved by 4.2%.
+                    </p>
+</div>
+<div class="col-span-3 flex flex-col items-end gap-2 pt-1">
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">STATUS: COMPLETE</span>
+<span class="inline-block border border-outline px-2 py-1 font-label text-label text-on-surface uppercase">TAG: MAINTENANCE</span>
+</div>
+</div>
+</div>
+<!-- Load More Button -->
+<div class="mt-stack-md flex justify-start">
+<button class="border border-secondary text-secondary px-6 py-2 font-metadata-sm text-metadata-sm uppercase tracking-widest hover:bg-primary-fixed hover:text-on-primary-fixed hover:border-primary-fixed transition-none">
+                LOAD_PREVIOUS_ENTRIES
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black dark:bg-black font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest docked full-width bottom-0 border-t border-zinc-800 flat no shadows fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6">
+<div class="text-zinc-600">
+            © AI_NIKITKA93 // ARCHIVAL_PROTOCOL
+        </div>
+<div class="flex gap-8">
+<a class="text-zinc-600 hover:text-zinc-100 transition-none" href="#">STATUS: OK</a>
+<a class="text-zinc-600 hover:text-zinc-100 transition-none" href="#">V_93.0.1</a>
+</div>
+</footer>
+</body></html>

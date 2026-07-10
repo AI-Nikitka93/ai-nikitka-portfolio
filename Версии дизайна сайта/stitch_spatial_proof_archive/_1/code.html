@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Field Notes - AI_Nikitka93</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#101509",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary": "#cdc6b6",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#504157",
+                        "surface-container-high": "#272c1f",
+                        "surface-container-highest": "#323629",
+                        "surface-bright": "#363b2d",
+                        "outline-variant": "#424935",
+                        "on-background": "#e0e5d1",
+                        "surface-container": "#1d2115",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#4d493d",
+                        "primary-container": "#b0f734",
+                        "inverse-surface": "#e0e5d1",
+                        "on-tertiary-fixed": "#23172a",
+                        "archive-bone": "#D6CFBF",
+                        "phosphor-lime": "#B7FF3C",
+                        "raw-titanium": "#8E968C",
+                        "primary-fixed": "#b0f734",
+                        "on-tertiary-container": "#6f5f76",
+                        "on-primary-fixed": "#121f00",
+                        "void-black": "#0A0D0C",
+                        "background": "#101509",
+                        "on-secondary-fixed": "#1e1b11",
+                        "on-secondary-fixed-variant": "#4b473b",
+                        "tertiary": "#ffffff",
+                        "surface-tint": "#96da06",
+                        "surface-variant": "#323629",
+                        "tertiary-fixed-dim": "#d4c0db",
+                        "secondary-fixed-dim": "#cdc6b6",
+                        "surface-container-low": "#191d11",
+                        "tertiary-container": "#f0dcf7",
+                        "inverse-primary": "#456800",
+                        "surface-dim": "#101509",
+                        "on-surface": "#e0e5d1",
+                        "on-surface-variant": "#c2caaf",
+                        "ember-orange": "#FF6A2A",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#f0dcf7",
+                        "primary-fixed-dim": "#96da06",
+                        "primary": "#ffffff",
+                        "on-secondary": "#343025",
+                        "on-tertiary": "#392b40",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e9e2d1",
+                        "inverse-on-surface": "#2d3225",
+                        "on-primary-container": "#4a6f00",
+                        "on-primary": "#223600",
+                        "carbon-fog": "#161B19",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#beb8a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "sm": "8px",
+                        "margin": "40px",
+                        "unit": "4px",
+                        "xl": "48px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-metadata": ["IBM Plex Mono"],
+                        "mono-id": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-regular": ["Space Grotesk"],
+                        "header-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "mono-label": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "mono-metadata": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "mono-id": ["11px", { "lineHeight": "1", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-regular": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "header-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { 
+            background-color: theme('colors.void-black'); 
+            color: theme('colors.on-surface'); 
+            background-image: 
+                linear-gradient(rgba(183, 255, 60, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(183, 255, 60, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .dossier-card {
+            background: linear-gradient(160deg, rgba(22, 27, 25, 0.85) 0%, rgba(10, 13, 12, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.8);
+            transform: perspective(1200px) translateZ(0) rotateX(1deg);
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .dossier-card:hover {
+            transform: perspective(1200px) translateZ(20px) rotateX(0deg) translateY(-4px);
+            border-color: theme('colors.phosphor-lime');
+            box-shadow: inset 0 1px 0 rgba(183, 255, 60, 0.2), 0 30px 50px -15px rgba(0, 0, 0, 0.9), 0 0 20px rgba(183, 255, 60, 0.05);
+        }
+        .dossier-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(142, 150, 140, 0.3), transparent);
+        }
+        .console-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1em;
+            background-color: theme('colors.phosphor-lime');
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-void-black text-on-surface min-h-screen overflow-x-hidden selection:bg-phosphor-lime selection:text-void-black flex font-body-regular text-body-regular">
+<!-- SideNavBar (WEB) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full z-40 pt-20 flex-col justify-between bg-[#000000]/90 backdrop-blur-xl dark:bg-[#000000]/90 border-r border-[#2A2A2A] w-64 border-r border-neutral-800 flat no-shadows">
+<div class="flex flex-col w-full">
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Entrance
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="folder_managed">folder_managed</span>
+                Archive
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="center_focus_strong">center_focus_strong</span>
+                Focus
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="face">face</span>
+                Human
+            </a>
+<a class="bg-[#1A1A1A] text-[#B7FF3C] border-l-4 border-[#B7FF3C] py-4 px-6 flex items-center gap-4 Active: translate-x-1 transition-transform hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+                Journal
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+                Briefing
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                Console
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+                Routes
+            </a>
+</div>
+<div class="p-6 border-t border-[#2A2A2A]">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Operator AI_Nikitka93 Avatar" class="w-10 h-10 rounded-full grayscale opacity-80" data-alt="abstract high-tech digital avatar face with grid lines and cold blue tones, minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUAZSiUY6fPgZMZY2EcscLqDHOrXHdkvpqeMiYa72a1ZGL4bZ3MemsCVLvTF2ZCJ4Y_SPqB8hRq5I660x_KD8x_b_o3T07UajD_EjgHZYNpZIQztyh4cmdE8AWcv1N_oBtUYpeMD2KUtwN9r2XEhsgNjd2nob_ByvAe-8b0UjGt5IDYaCxv6mPrfVR1Bxlv27bbYKDaJ3TWh9ftme3Cm4K5zIYhs2qybrrxdnwrOG-Rp-tiStr104zGPNOzlLghdru6xQbrJRB9MU"/>
+<div>
+<div class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-[#B7FF3C]">OPERATOR_STATUS</div>
+<div class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-[#A1A1A1]">ACTIVE_SESSION_093</div>
+</div>
+</div>
+<button class="w-full py-2 border border-[#B7FF3C] text-[#B7FF3C] font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:bg-[#B7FF3C] hover:text-void-black transition-colors uppercase">INITIATE_UPLINK</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 relative min-h-screen z-10">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 md:left-64 right-0 z-[100] flex justify-between items-center px-10 h-16 bg-[#000000]/80 backdrop-blur-md dark:bg-[#000000]/80 docked full-width top-0 border-b border-[#2A2A2A] 1px solid border-neutral-800 flat no-shadows shadow-[0_0_10px_rgba(183,255,60,0.1)]">
+<div class="text-[#B7FF3C] font-bold text-lg tracking-tighter">AI_Nikitka93</div>
+<div class="flex items-center gap-6">
+<div class="text-[#B7FF3C] font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold">EN/RU</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#A1A1A1] hover:text-[#B7FF3C] transition-colors cursor-pointer" data-icon="fingerprint">fingerprint</span>
+<span class="material-symbols-outlined text-[#A1A1A1] hover:text-[#B7FF3C] transition-colors cursor-pointer" data-icon="settings_input_component">settings_input_component</span>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<div class="pt-32 px-margin pb-24 max-w-[1600px] mx-auto">
+<!-- Header Section -->
+<div class="mb-16 border-b border-raw-titanium/30 pb-8 relative">
+<div class="absolute right-0 top-0 font-mono-id text-mono-id text-raw-titanium tracking-widest opacity-50">SEC_LEVEL_04 // LOC_VAULT_7</div>
+<h1 class="font-display-xl text-display-xl text-archive-bone mb-4 uppercase drop-shadow-[0_0_15px_rgba(214,207,191,0.2)]">Полевые Заметки</h1>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium max-w-2xl">
+                    &gt; АНАЛИЗ СРЕДЫ: АКТИВЕН<br/>
+                    &gt; СБОР ДАННЫХ: РЕЖИМ ОПЕРАТОРА<br/>
+                    &gt; ПОСЛЕДНЯЯ СИНХРОНИЗАЦИЯ: T-MINUS 12h
+                </p>
+</div>
+<!-- Bento Grid - Field Notes -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- System Console Module -->
+<div class="md:col-span-12 lg:col-span-8 border border-raw-titanium/40 p-8 dossier-card relative mb-8 rounded-sm">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">ID: LOG_ENTRY_NEW</div>
+<div class="flex items-center gap-2 mb-6 border-b border-raw-titanium/20 pb-4">
+<span class="material-symbols-outlined text-phosphor-lime" data-icon="terminal">terminal</span>
+<span class="font-mono-label text-mono-label text-phosphor-lime uppercase">Консоль Оператора</span>
+</div>
+<div class="font-mono-metadata text-mono-metadata text-archive-bone/80 space-y-2 mb-6">
+<p>[SYS] Ввод новой записи...</p>
+<p class="text-phosphor-lime">&gt; Ожидание ввода оператора<span class="console-cursor"></span></p>
+</div>
+<textarea class="w-full bg-void-black/50 border border-raw-titanium/40 p-4 font-mono-metadata text-mono-metadata text-archive-bone focus:outline-none focus:border-phosphor-lime/70 focus:bg-void-black/80 resize-none h-32 transition-colors" placeholder="Начать запись..."></textarea>
+<div class="mt-4 flex justify-end">
+<button class="px-6 py-2 border border-phosphor-lime/80 text-phosphor-lime font-mono-label text-mono-label uppercase hover:bg-phosphor-lime hover:text-void-black transition-all duration-300 shadow-[0_0_10px_rgba(183,255,60,0.1)] hover:shadow-[0_0_15px_rgba(183,255,60,0.4)]">Сохранить</button>
+</div>
+</div>
+<!-- Status Module -->
+<div class="md:col-span-12 lg:col-span-4 border border-raw-titanium/40 p-8 dossier-card relative mb-8 flex flex-col justify-between rounded-sm">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">SYS_STAT</div>
+<div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-6 flex items-center gap-2"><span class="material-symbols-outlined text-raw-titanium text-lg" data-icon="database">database</span> Статус Архива</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-raw-titanium/20 pb-2">
+<span class="font-mono-metadata text-mono-metadata text-raw-titanium">Активные записи</span>
+<span class="font-mono-id text-mono-id text-phosphor-lime">142</span>
+</div>
+<div class="flex justify-between items-center border-b border-raw-titanium/20 pb-2">
+<span class="font-mono-metadata text-mono-metadata text-raw-titanium">Фрагментация</span>
+<span class="font-mono-id text-mono-id text-ember-orange drop-shadow-[0_0_5px_rgba(255,106,42,0.4)]">12%</span>
+</div>
+<div class="flex justify-between items-center border-b border-raw-titanium/20 pb-2">
+<span class="font-mono-metadata text-mono-metadata text-raw-titanium">Уровень шифрования</span>
+<span class="font-mono-id text-mono-id text-archive-bone">AES-256</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<div class="h-1 w-full bg-void-black relative overflow-hidden border border-raw-titanium/20">
+<div class="absolute top-0 left-0 h-full bg-phosphor-lime w-[88%] shadow-[0_0_10px_rgba(183,255,60,0.5)]"></div>
+</div>
+<div class="text-right mt-2 font-mono-id text-mono-id text-raw-titanium">ЁМКОСТЬ: 88%</div>
+</div>
+</div>
+<!-- Note Dossier 1 -->
+<div class="md:col-span-12 lg:col-span-4 border border-raw-titanium/40 p-6 dossier-card relative rounded-sm group">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">REC_409</div>
+<div class="mb-4">
+<span class="inline-block px-2 py-1 bg-void-black border border-raw-titanium/50 text-archive-bone font-mono-metadata text-mono-metadata uppercase text-[10px] tracking-wider">Наблюдение</span>
+</div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-4 group-hover:text-phosphor-lime transition-colors duration-300">Аномалия Сектора B</h3>
+<p class="font-body-regular text-body-regular text-raw-titanium mb-6 line-clamp-3">Зафиксировано отклонение температурного режима на уровне подуровня 3. Возможна утечка охлаждающей жидкости или сбой сенсора.</p>
+<div class="flex justify-between items-end border-t border-raw-titanium/20 pt-4 mt-auto">
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium">
+<div>ДАТА: 2023.10.24</div>
+<div>КОД: ALPHA-7</div>
+</div>
+<button class="text-phosphor-lime font-mono-label text-mono-label uppercase hover:underline underline-offset-4 opacity-80 hover:opacity-100">Детали</button>
+</div>
+</div>
+<!-- Note Dossier 2 -->
+<div class="md:col-span-12 lg:col-span-4 border border-raw-titanium/40 p-6 dossier-card relative rounded-sm group">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">REC_408</div>
+<div class="mb-4">
+<span class="inline-block px-2 py-1 bg-void-black border border-ember-orange/50 text-ember-orange font-mono-metadata text-mono-metadata uppercase text-[10px] tracking-wider shadow-[0_0_8px_rgba(255,106,42,0.15)]">Инцидент</span>
+</div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-4 group-hover:text-phosphor-lime transition-colors duration-300">Сбой Синхронизации</h3>
+<p class="font-body-regular text-body-regular text-raw-titanium mb-6 line-clamp-3">Временная потеря связи с узлом связи Омега. Требуется ручная калибровка антенного массива в секторе внешней связи.</p>
+<div class="flex justify-between items-end border-t border-raw-titanium/20 pt-4 mt-auto">
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium">
+<div>ДАТА: 2023.10.23</div>
+<div>КОД: ERR-892</div>
+</div>
+<button class="text-phosphor-lime font-mono-label text-mono-label uppercase hover:underline underline-offset-4 opacity-80 hover:opacity-100">Детали</button>
+</div>
+</div>
+<!-- Image Dossier -->
+<div class="md:col-span-12 lg:col-span-4 border border-raw-titanium/40 p-4 dossier-card relative rounded-sm">
+<div class="absolute top-6 right-6 font-mono-id text-mono-id text-void-black bg-phosphor-lime px-2 py-1 z-10 shadow-[0_0_10px_rgba(183,255,60,0.3)]">VISUAL_EVIDENCE</div>
+<div class="h-48 bg-void-black mb-4 relative overflow-hidden border border-raw-titanium/30">
+<img alt="Server rack corridor" class="w-full h-full object-cover opacity-70 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 hover:scale-105 transition-all duration-700 ease-in-out" data-alt="dark dramatic view of server racks in a narrow high-tech corridor with glowing green lights and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHiQHp0_593BEe51TraEGTOglHHTV-D8IgNZfaGpgSeOf2NGwMyQtLoHn2u7e0meyoMX-GPGo2B9epgHMlr9QKdMKQZJxL0RGiKoBEULDm7I8i9WiKLx0ysryOmg067n8r_za_2ETg_2IZKu8kYoAcJHZMrzF0wgZwhCCmNjyf_JYYu14ojDX1n5qWHYRLE-ajIF8fgNSCUNDw0S-jnAFRDicYIjpo-KM-5FasxkhSN7spr6Ei_V-Oc34qNtjeQwpPJtftlkqQhz8"/>
+<div class="absolute inset-0 border border-raw-titanium/10 pointer-events-none"></div>
+</div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-2">Узел Связи Омега</h3>
+<div class="font-mono-metadata text-mono-metadata text-raw-titanium border-t border-raw-titanium/20 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]" data-icon="videocam">videocam</span> Снимок с камеры: CAM-04
+                    </div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

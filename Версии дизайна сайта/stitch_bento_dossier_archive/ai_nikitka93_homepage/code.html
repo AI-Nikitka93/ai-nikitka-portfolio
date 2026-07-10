@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#ff5625",
+                        "on-tertiary": "#353024",
+                        "tertiary-fixed-dim": "#cec6b5",
+                        "on-surface": "#dce4e9",
+                        "on-secondary-container": "#541100",
+                        "error-container": "#93000a",
+                        "on-primary": "#283500",
+                        "surface-bright": "#323a3f",
+                        "surface": "#0d1418",
+                        "on-primary-fixed": "#161e00",
+                        "on-secondary": "#601400",
+                        "on-primary-container": "#556d00",
+                        "surface-container-lowest": "#080f13",
+                        "inverse-on-surface": "#2a3136",
+                        "surface-tint": "#abd600",
+                        "on-secondary-fixed": "#3b0900",
+                        "surface-container": "#192125",
+                        "on-tertiary-fixed": "#1f1b11",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "surface-container-high": "#232b2f",
+                        "on-tertiary-container": "#6a6456",
+                        "surface-container-low": "#151d21",
+                        "on-tertiary-fixed-variant": "#4c463a",
+                        "surface-dim": "#0d1418",
+                        "tertiary-container": "#ebe2d0",
+                        "primary-container": "#c3f400",
+                        "on-background": "#dce4e9",
+                        "outline": "#8e9379",
+                        "secondary": "#ffb5a0",
+                        "background": "#0d1418",
+                        "surface-variant": "#2e363a",
+                        "surface-container-highest": "#2e363a",
+                        "primary-fixed": "#c3f400",
+                        "inverse-surface": "#dce4e9",
+                        "inverse-primary": "#506600",
+                        "outline-variant": "#444933",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "primary": "#ffffff",
+                        "primary-fixed-dim": "#abd600",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#872000",
+                        "tertiary-fixed": "#ebe2d0",
+                        "secondary-fixed": "#ffdbd1",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "12px",
+                        "unit": "4px",
+                        "margin-page": "32px",
+                        "module-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": [
+                            "Space Grotesk"
+                        ],
+                        "body-main": [
+                            "Space Grotesk"
+                        ],
+                        "data-mono": [
+                            "IBM Plex Mono"
+                        ],
+                        "ui-label": [
+                            "IBM Plex Mono"
+                        ],
+                        "h1-editorial": [
+                            "Space Grotesk"
+                        ],
+                        "h2-module": [
+                            "Space Grotesk"
+                        ]
+                    },
+                    "fontSize": {
+                        "display-lg": [
+                            "64px",
+                            {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.04em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-main": [
+                            "16px",
+                            {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "data-mono": [
+                            "14px",
+                            {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "ui-label": [
+                            "12px",
+                            {
+                                "lineHeight": "1.0",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "h1-editorial": [
+                            "40px",
+                            {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "h2-module": [
+                            "24px",
+                            {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="bg-[#161616] text-[#CCFF00] font-['IBM_Plex_Mono'] text-xs uppercase tracking-tighter h-screen w-20 md:w-64 border-r border-zinc-500/30 flat no shadows fixed left-0 top-0 flex flex-col z-40">
+<div class="p-6 border-b border-zinc-500/30 hidden md:block">
+<h1 class="text-[#CCFF00] font-bold text-lg mb-2">OPERATOR_01</h1>
+<p class="text-zinc-500">STATUS: ACTIVE</p>
+</div>
+<div class="p-4 border-b border-zinc-500/30 md:hidden flex justify-center">
+<span class="text-[#CCFF00] font-bold text-xl">OP</span>
+</div>
+<div class="flex-1 overflow-y-auto py-4 flex flex-col gap-2">
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center gap-4 px-6 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">fingerprint</span>
+<span class="hidden md:inline">Identity</span>
+</a>
+<a class="bg-[#222222] text-[#CCFF00] border-l-2 border-[#CCFF00] hover:border-r hover:border-zinc-500/50 flex items-center gap-4 px-6 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">alt_route</span>
+<span class="hidden md:inline">Routes</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center gap-4 px-6 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">folder_open</span>
+<span class="hidden md:inline">Dossier</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center gap-4 px-6 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">analytics</span>
+<span class="hidden md:inline">Counters</span>
+</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/30 hover:border-r hover:border-zinc-500/50 flex items-center gap-4 px-6 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">sensors</span>
+<span class="hidden md:inline">Status</span>
+</a>
+</div>
+<div class="p-6 border-t border-zinc-500/30 mt-auto hidden md:block">
+<button class="w-full bg-primary-fixed text-on-primary font-body-main py-2 rounded-none font-bold hover:bg-primary-fixed-dim transition-colors uppercase">
+                CONNECT_NODE
+            </button>
+</div>
+<div class="p-4 border-t border-zinc-500/30 mt-auto md:hidden flex justify-center">
+<button class="w-10 h-10 bg-primary-fixed text-on-primary rounded-none flex items-center justify-center hover:bg-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-sm">wifi_tethering</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-20 md:ml-64 flex-1 flex flex-col min-h-screen relative">
+<!-- TopNavBar (Web Only) -->
+<header class="bg-zinc-950/90 backdrop-blur-xl text-[#CCFF00] font-['Space_Grotesk'] tracking-tight uppercase docked full-width top-0 border-b border-zinc-500/30 flat no shadows flex justify-between items-center w-full px-6 py-4 z-50 hidden md:flex sticky">
+<div class="flex items-center gap-8">
+<div class="text-xl font-black text-[#CCFF00] tracking-widest">AI_NIKITKA93</div>
+<nav class="flex items-center gap-6">
+<a class="text-zinc-500 font-medium hover:text-zinc-200 hover:bg-zinc-800/50 transition-colors duration-150 py-1" href="#">Dossier</a>
+<a class="text-zinc-500 font-medium hover:text-zinc-200 hover:bg-zinc-800/50 transition-colors duration-150 py-1" href="#">Intel</a>
+<a class="text-[#CCFF00] border-b border-[#CCFF00] pb-1 hover:bg-zinc-800/50 transition-colors duration-150" href="#">Archive</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="text-zinc-500 hover:text-zinc-200 transition-colors">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="text-zinc-500 hover:text-zinc-200 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<button class="font-data-mono text-sm border border-zinc-500/30 px-3 py-1 text-[#CCFF00] hover:bg-zinc-800/50 transition-colors">
+                    RU/EN
+                </button>
+</div>
+</header>
+<!-- Bento Canvas -->
+<div class="p-gutter md:p-margin-page flex-1 grid grid-cols-12 gap-gutter auto-rows-[minmax(120px,auto)] pb-24">
+<!-- Hero Manifesto (Col Span 8) -->
+<div class="col-span-12 lg:col-span-8 row-span-3 bg-[#161616] border border-zinc-500/30 border-t-[#CCFF00] p-module-padding flex flex-col relative overflow-hidden group">
+<div class="absolute top-4 left-4 font-ui-label text-xs text-[#71797E] uppercase flex items-center gap-2">
+<span>MAN01</span>
+<div class="w-1.5 h-1.5 rounded-full bg-[#FF4500]"></div>
+</div>
+<div class="mt-8 flex-1 flex flex-col justify-center max-w-2xl relative z-10">
+<h1 class="font-display-lg text-display-lg text-tertiary mb-6">
+                        SYSTEM ARCHITECTURE REFINED FOR THE NEW EPOCH.
+                    </h1>
+<p class="font-body-main text-body-main text-zinc-400 max-w-xl">
+                        Operating at the intersection of raw data streams and engineered perception. The protocol is active.
+                    </p>
+</div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-zinc-800/20 to-transparent pointer-events-none"></div>
+</div>
+<!-- Identity Split (Col Span 4) -->
+<div class="col-span-12 lg:col-span-4 row-span-2 bg-[#161616] border border-zinc-500/30 p-module-padding flex flex-col relative group hover:bg-[#222222] transition-colors">
+<div class="font-ui-label text-xs text-[#71797E] uppercase mb-4">ID_MATRIX</div>
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex items-center gap-4 pb-4 border-b border-zinc-500/30">
+<div class="w-12 h-12 bg-zinc-800 flex items-center justify-center border border-zinc-500/30">
+<span class="material-symbols-outlined text-[#CCFF00]">memory</span>
+</div>
+<div>
+<div class="font-data-mono text-xs text-zinc-500">CLASS</div>
+<div class="font-body-main font-bold text-tertiary">NEURAL_OPERATIVE</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="font-data-mono text-xs text-zinc-500 mb-1">CURRENT_DIRECTIVE</div>
+<div class="font-body-main text-zinc-300 leading-tight">Observe, analyze, and synthesize structural anomalies in sector 7G.</div>
+</div>
+</div>
+</div>
+<!-- Signal Counters (Col Span 4) -->
+<div class="col-span-12 lg:col-span-4 row-span-1 bg-[#161616] border border-zinc-500/30 p-module-padding flex flex-col relative">
+<div class="font-ui-label text-xs text-[#71797E] uppercase mb-4">TELEMETRY</div>
+<div class="flex-1 flex justify-between items-end pb-2 border-b border-[#CCFF00]/50">
+<div>
+<div class="font-data-mono text-xs text-zinc-500">ACTIVE_NODES</div>
+<div class="font-data-mono text-3xl text-[#CCFF00] font-bold">1,024</div>
+</div>
+<span class="material-symbols-outlined text-zinc-500">router</span>
+</div>
+</div>
+<!-- Route Index (Col Span 4) -->
+<div class="col-span-12 lg:col-span-4 row-span-2 bg-[#161616] border border-zinc-500/30 p-module-padding flex flex-col relative">
+<div class="font-ui-label text-xs text-[#71797E] uppercase mb-4">NAV_ROUTES</div>
+<div class="flex-1 flex flex-col gap-2">
+<div class="flex items-center justify-between pb-2 border-b border-zinc-500/30 group cursor-pointer hover:border-[#CCFF00]/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="font-data-mono text-xs text-zinc-500">01</span>
+<span class="font-body-main text-sm text-tertiary group-hover:text-[#CCFF00] transition-colors">Primary Nexus</span>
+</div>
+<span class="material-symbols-outlined text-xs text-zinc-500 group-hover:text-[#CCFF00]">arrow_forward</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-zinc-500/30 group cursor-pointer hover:border-[#CCFF00]/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="font-data-mono text-xs text-zinc-500">02</span>
+<span class="font-body-main text-sm text-tertiary group-hover:text-[#CCFF00] transition-colors">Data Lake Alpha</span>
+</div>
+<span class="material-symbols-outlined text-xs text-zinc-500 group-hover:text-[#CCFF00]">arrow_forward</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-zinc-500/30 group cursor-pointer hover:border-[#CCFF00]/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="font-data-mono text-xs text-zinc-500">03</span>
+<span class="font-body-main text-sm text-tertiary group-hover:text-[#CCFF00] transition-colors">Security Audit</span>
+</div>
+<span class="material-symbols-outlined text-xs text-zinc-500 group-hover:text-[#CCFF00]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Featured Dossier (Col Span 4) -->
+<div class="col-span-12 lg:col-span-4 row-span-2 bg-[#161616] border border-zinc-500/30 p-0 flex flex-col relative overflow-hidden group">
+<div class="absolute top-4 left-4 font-ui-label text-xs text-[#71797E] uppercase z-10 mix-blend-difference">IMG_RECORD_A</div>
+<div class="h-32 bg-zinc-800 w-full relative">
+<img alt="Abstract architectural rendering with sharp angles and high contrast lighting in greyscale" class="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:opacity-100 transition-opacity" data-alt="Abstract architectural rendering with sharp angles and high contrast lighting in greyscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtKk21UDndTvlS4B5iDARLQSmAkXmjV4AkBH60Zoh6IHPprhjgIKJJ--MiQfjC1w1gXvlNvwxCGMsIeLiUEWyXujyvmKuyFAbdvLfsmsyviaQHmcgm0efaYvFaqIp8ALubvWJGX6X5TrWVqJQsr2feL6X6gVBH5U5aNUdn9gdhH-7lnU8jOnVBYWQ81oEOrpOE9Wqk3kgHSTKy6GrW-IFiFBz2-ZolrQIHv4uwR2d5p7tvWOTFxBU9TSb6qhk80AbatG9O2M5hQ3RT"/>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-h2-module text-lg text-tertiary mb-1">Structure Collapse Analysis</h3>
+<p class="font-data-mono text-xs text-zinc-500">Ref: 7G-ALPHA-99</p>
+</div>
+<button class="text-left font-data-mono text-xs text-[#CCFF00] mt-4 flex items-center gap-2 hover:text-white transition-colors">
+                        ACCESS FILE <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Archive Status (Col Span 4) -->
+<div class="col-span-12 lg:col-span-4 row-span-2 bg-[#161616] border border-zinc-500/30 p-module-padding flex flex-col relative justify-center items-center text-center group hover:bg-[#222222] transition-colors cursor-pointer">
+<div class="absolute top-4 left-4 font-ui-label text-xs text-[#71797E] uppercase">ARCHIVE_STATE</div>
+<span class="material-symbols-outlined text-4xl text-zinc-600 mb-4 group-hover:text-[#CCFF00] transition-colors">inventory_2</span>
+<div class="font-body-main font-bold text-tertiary">SYSTEM ARCHIVE</div>
+<div class="font-data-mono text-xs text-zinc-500 mt-1">99.9% INTEGRITY</div>
+</div>
+</div>
+</main>
+</body></html>

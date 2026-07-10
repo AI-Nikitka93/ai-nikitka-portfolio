@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DOSSIER_REPR_07</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#ffb4a8",
+                      "tertiary-fixed": "#ffdbd1",
+                      "on-surface-variant": "#c3caac",
+                      "error": "#ffb4ab",
+                      "surface-bright": "#3a3939",
+                      "secondary-fixed": "#ffdad4",
+                      "primary-fixed": "#b8f600",
+                      "on-tertiary": "#601400",
+                      "on-tertiary-container": "#bc3000",
+                      "surface-tint": "#a1d800",
+                      "surface-container": "#201f1f",
+                      "outline": "#8d9479",
+                      "inverse-primary": "#4b6700",
+                      "tertiary-container": "#ffdbd1",
+                      "background": "#131313",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-container": "#ff9a8a",
+                      "on-primary-fixed-variant": "#384e00",
+                      "on-primary-fixed": "#141f00",
+                      "secondary-container": "#920703",
+                      "on-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-container": "#b8f600",
+                      "surface-container-lowest": "#0e0e0e",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "on-secondary-fixed": "#410000",
+                      "surface-variant": "#353534",
+                      "on-secondary": "#690000",
+                      "tertiary-fixed-dim": "#ffb5a0",
+                      "surface": "#131313",
+                      "on-error": "#690005",
+                      "on-primary": "#263500",
+                      "surface-container-highest": "#353534",
+                      "tertiary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb4a8",
+                      "on-tertiary-fixed": "#3b0900",
+                      "primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#872000",
+                      "on-primary-container": "#506e00",
+                      "primary-fixed-dim": "#a1d800",
+                      "inverse-on-surface": "#313030",
+                      "inverse-surface": "#e5e2e1",
+                      "outline-variant": "#434933",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#920703"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "xs": "8px",
+                      "sm": "16px",
+                      "md": "24px",
+                      "lg": "48px",
+                      "border-thick": "4px",
+                      "border-thin": "2px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "h1": [
+                              "Space Grotesk"
+                      ],
+                      "h2": [
+                              "Space Grotesk"
+                      ],
+                      "metadata": [
+                              "IBM Plex Mono"
+                      ],
+                      "label-bold": [
+                              "IBM Plex Mono"
+                      ],
+                      "body": [
+                              "IBM Plex Mono"
+                      ],
+                      "h3": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "h1": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h2": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "metadata": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h3": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-zinc-950 text-[#BFFF00] font-mono uppercase tracking-tighter text-sm docked full-width top-0 border-b-4 border-[#BFFF00] flex justify-between items-center w-full px-6 py-4 max-w-none shadow-[4px_4px_0px_0px_rgba(191,255,0,1)] relative z-50">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-[#BFFF00] border-2 border-[#BFFF00] px-2 py-1">AI_NIKITKA93</span>
+</div>
+<nav class="hidden md:flex gap-2">
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-[#BFFF00] hover:bg-zinc-800 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">01_HOME</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-[#BFFF00] hover:bg-zinc-800 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">02_ARCHIVE</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-[#BFFF00] hover:bg-zinc-800 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">03_LOGS</a>
+<a class="bg-[#BFFF00] text-zinc-950 font-bold px-3 py-1 hover:text-zinc-950 hover:bg-[#BFFF00] cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">04_INTEL</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-[#BFFF00] hover:bg-zinc-800 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all hidden md:block">RU/EN</button>
+<button class="bg-[#BFFF00] text-zinc-950 font-bold px-3 py-1 hover:text-zinc-950 hover:bg-[#BFFF00] cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                ACCESS_TERMINAL
+            </button>
+</div>
+</header>
+<main class="flex-grow p-sm md:p-md lg:p-lg grid grid-cols-1 lg:grid-cols-12 gap-md items-start">
+<!-- Header Section -->
+<div class="col-span-1 lg:col-span-12 border-b-border-thick border-outline pb-sm mb-sm flex flex-col gap-xs">
+<div class="flex items-center gap-sm">
+<span class="font-metadata text-metadata bg-error text-on-error px-xs py-base border-border-thin border-error-container uppercase font-bold tracking-widest">[DOSSIER_REPR_07]</span>
+<span class="font-metadata text-metadata text-error uppercase font-bold tracking-widest animate-pulse">ALERT_STATUS: CRITICAL</span>
+</div>
+<h1 class="font-h1 text-h1 text-primary break-words uppercase">DOSSIER_REPR_07</h1>
+</div>
+<!-- Main Image/Metric Block -->
+<div class="col-span-1 lg:col-span-8 border-border-thick border-outline p-xs bg-surface-container-low shadow-[8px_8px_0px_0px_#920703]">
+<div class="border-border-thin border-outline p-base bg-surface-container relative">
+<div class="absolute top-sm left-sm bg-surface-container-high px-xs py-base border-border-thin border-outline flex items-center gap-2 z-10">
+<span class="material-symbols-outlined text-primary-container text-sm">visibility</span>
+<span class="font-metadata text-metadata text-primary-container">LIVE_FEED_01</span>
+</div>
+<img alt="Satellite Target" class="w-full h-auto object-cover grayscale contrast-150 brightness-75 mix-blend-luminosity border-border-thin border-outline" data-alt="Harsh, high-contrast black and white satellite imagery of an industrial complex, glitching slightly, cyberpunk aesthetic, harsh shadows, stark lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiXkV0j3gfdi0TkY_eOiDo3DQ39CSTwq7iXoz9WpGXpkH2uPbb7ZKyTDlU4yNWvnDgioFKZxRXupxluvWd0VrwUd5CxFlVPUSPoaNsrmnFqFLolBNTpgIm7LqvLXKwXZnPm-V8FCcqAJHuCF4em0jbo0Qwjm5xtPnpew6Sm38z7FegfldI3Z7Oj_0o2UiaVzUVldwDyqzNlFTQvGZqFHD3t89IcmaBTJFnrICHD80sZe21InegthfwOuaVXHNiOT9gxIFjohp7oDk"/>
+<div class="mt-sm grid grid-cols-2 md:grid-cols-4 gap-xs">
+<div class="border-border-thin border-outline p-xs bg-surface-container-highest">
+<span class="font-metadata text-metadata text-on-surface-variant block mb-base uppercase">X_COORD</span>
+<span class="font-label-bold text-label-bold text-primary">34.0522° N</span>
+</div>
+<div class="border-border-thin border-outline p-xs bg-surface-container-highest">
+<span class="font-metadata text-metadata text-on-surface-variant block mb-base uppercase">Y_COORD</span>
+<span class="font-label-bold text-label-bold text-primary">118.2437° W</span>
+</div>
+<div class="border-border-thin border-outline p-xs bg-surface-container-highest">
+<span class="font-metadata text-metadata text-on-surface-variant block mb-base uppercase">THREAT_LVL</span>
+<span class="font-label-bold text-label-bold text-error">OMEGA</span>
+</div>
+<div class="border-border-thin border-outline p-xs bg-surface-container-highest">
+<span class="font-metadata text-metadata text-on-surface-variant block mb-base uppercase">EST_HOSTILES</span>
+<span class="font-label-bold text-label-bold text-primary">UNKNOWN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Metadata Stack -->
+<div class="col-span-1 lg:col-span-4 flex flex-col gap-sm">
+<div class="border-border-thick border-outline p-sm bg-surface-container-low">
+<h3 class="font-h3 text-h3 text-primary mb-md uppercase border-b-border-thin border-outline pb-xs">Entity Metadata</h3>
+<div class="flex flex-col gap-sm">
+<div class="flex justify-between items-center border-b-border-thin border-surface-variant pb-xs">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">ORIGIN</span>
+<span class="font-label-bold text-label-bold text-error bg-error-container px-xs py-base border-border-thin border-error">REDACTED</span>
+</div>
+<div class="flex justify-between items-center border-b-border-thin border-surface-variant pb-xs">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">CLEARANCE</span>
+<span class="font-label-bold text-label-bold text-primary-container bg-surface-container-highest px-xs py-base border-border-thin border-primary-container">TOP_LEVEL</span>
+</div>
+<div class="flex justify-between items-center border-b-border-thin border-surface-variant pb-xs">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">STATUS</span>
+<span class="font-label-bold text-label-bold text-primary-container bg-surface-container-highest px-xs py-base border-border-thin border-primary-container">VERIFIED</span>
+</div>
+<div class="flex justify-between items-center border-b-border-thin border-surface-variant pb-xs">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">LAST_UPDATE</span>
+<span class="font-label-bold text-label-bold text-primary">T-04:32:11</span>
+</div>
+</div>
+</div>
+<div class="border-border-thick border-error p-sm bg-surface-container-low shadow-[4px_4px_0px_0px_#93000a]">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h3 class="font-h3 text-h3 text-error uppercase">Action Required</h3>
+</div>
+<p class="font-body text-body text-on-surface mb-sm">Immediate containment protocols must be enacted. Proceed with extreme prejudice. Awaiting executive override code.</p>
+<div class="flex flex-col gap-xs">
+<button class="bg-error text-on-error font-label-bold text-label-bold px-md py-sm border-border-thin border-error-container hover:bg-on-error hover:text-error transition-colors uppercase flex justify-center items-center gap-2 active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0px_0px_#93000a] active:shadow-none">
+<span class="material-symbols-outlined">lock_open</span>
+                        AUTHORIZE CONTAINMENT
+                    </button>
+<button class="bg-surface-container text-primary font-label-bold text-label-bold px-md py-sm border-border-thin border-outline hover:bg-outline hover:text-surface-container transition-colors uppercase flex justify-center items-center gap-2 active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0px_0px_#8d9479] active:shadow-none">
+<span class="material-symbols-outlined">download</span>
+                        DUMP LOGS
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 text-[#BFFF00] font-mono text-[10px] leading-tight uppercase docked full-width bottom-0 border-t-4 border-[#BFFF00] flex flex-col md:flex-row justify-between items-center w-full px-6 py-2 gap-4 z-50">
+<div>
+<span>SYSTEM_ID: AI_NIKITKA93 // TIMESTAMP: 2024.10.27_14:02:55_UTC</span>
+</div>
+<div class="flex gap-4">
+<a class="text-zinc-500 hover:text-[#BFFF00]" href="#">ENCRYPTED_LINE</a>
+<a class="text-zinc-500 hover:text-[#BFFF00]" href="#">MAINFRAME_STATUS</a>
+<a class="text-zinc-500 hover:text-[#BFFF00]" href="#">UPTIME_99.9%</a>
+</div>
+</footer>
+</body></html>

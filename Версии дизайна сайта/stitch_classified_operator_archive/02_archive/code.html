@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - Proof Archive</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#ffb4a8",
+                    "tertiary-fixed": "#ffdbd1",
+                    "on-surface-variant": "#c3caac",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed": "#ffdad4",
+                    "primary-fixed": "#b8f600",
+                    "on-tertiary": "#601400",
+                    "on-tertiary-container": "#bc3000",
+                    "surface-tint": "#a1d800",
+                    "surface-container": "#201f1f",
+                    "outline": "#8d9479",
+                    "inverse-primary": "#4b6700",
+                    "tertiary-container": "#ffdbd1",
+                    "background": "#131313",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#ff9a8a",
+                    "on-primary-fixed-variant": "#384e00",
+                    "on-primary-fixed": "#141f00",
+                    "secondary-container": "#920703",
+                    "on-surface": "#e5e2e1",
+                    "on-background": "#e5e2e1",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-container": "#b8f600",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error-container": "#93000a",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#410000",
+                    "surface-variant": "#353534",
+                    "on-secondary": "#690000",
+                    "tertiary-fixed-dim": "#ffb5a0",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "on-primary": "#263500",
+                    "surface-container-highest": "#353534",
+                    "tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb4a8",
+                    "on-tertiary-fixed": "#3b0900",
+                    "primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#872000",
+                    "on-primary-container": "#506e00",
+                    "primary-fixed-dim": "#a1d800",
+                    "inverse-on-surface": "#313030",
+                    "inverse-surface": "#e5e2e1",
+                    "outline-variant": "#434933",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#920703"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "xs": "8px",
+                    "sm": "16px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "border-thick": "4px",
+                    "border-thin": "2px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "h1": [
+                            "Space Grotesk"
+                    ],
+                    "h2": [
+                            "Space Grotesk"
+                    ],
+                    "metadata": [
+                            "IBM Plex Mono"
+                    ],
+                    "label-bold": [
+                            "IBM Plex Mono"
+                    ],
+                    "body": [
+                            "IBM Plex Mono"
+                    ],
+                    "h3": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "h1": [
+                            "72px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "h2": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "metadata": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h3": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-zinc-950 docked full-width top-0 border-b-4 border-[#BFFF00] flat shadow-[4px_4px_0px_0px_rgba(191,255,0,1)] z-50 relative">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-none">
+<!-- Brand Logo -->
+<div class="text-2xl font-black text-[#BFFF00] border-2 border-[#BFFF00] px-2 py-1 font-mono uppercase tracking-tighter text-sm">
+                AI_NIKITKA93
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-4">
+<a class="font-mono uppercase tracking-tighter text-sm text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">01_HOME</a>
+<!-- Active State Applied Here -->
+<a class="font-mono uppercase tracking-tighter text-sm bg-[#BFFF00] text-zinc-950 font-bold px-3 py-1 hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">02_ARCHIVE</a>
+<a class="font-mono uppercase tracking-tighter text-sm text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">03_LOGS</a>
+<a class="font-mono uppercase tracking-tighter text-sm text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">04_INTEL</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="font-mono uppercase tracking-tighter text-sm text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all hidden md:block">
+                    RU/EN
+                </button>
+<button class="font-mono uppercase tracking-tighter text-sm text-[#BFFF00] border-2 border-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+                    ACCESS_TERMINAL
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow p-sm md:p-md lg:p-lg flex flex-col gap-md">
+<!-- Header Block -->
+<div class="border-[4px] border-outline bg-surface-container p-sm md:p-md shadow-[8px_8px_0px_0px_#93000a] relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&amp;w=2071&amp;auto=format&amp;fit=crop')] opacity-10 mix-blend-overlay pointer-events-none" data-alt="abstract dark textured concrete surface with subtle grid lines"></div>
+<div class="relative z-10 flex flex-col gap-xs">
+<span class="font-metadata text-metadata text-primary-fixed uppercase tracking-widest">[SYS_QUERY: ALL_RECORDS]</span>
+<h1 class="font-h1 text-h1 text-on-surface uppercase">Proof Archive</h1>
+<p class="font-body text-body text-on-surface-variant max-w-2xl mt-xs">
+                    Rigid evidence slabs retrieved from deep sector scanning. Authorization level 4 required for manipulation. Tampering will be logged.
+                </p>
+</div>
+</div>
+<!-- Bento Grid: 7 Dossiers -->
+<div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[250px] gap-base">
+<!-- Card 1: Image (2x2) -->
+<div class="md:col-span-2 md:row-span-2 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<!-- System Label -->
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [DOSSIER_099]
+                </div>
+<!-- Watermark -->
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[120px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<!-- Image -->
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-60 group-hover:opacity-80 transition-opacity duration-300 z-0" data-alt="grainy night vision shot of a brutalist concrete data center glowing with faint green LED lights and thick cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTOLhdCHL2Gj3s0pBJj5Cr3P2H-2vfehuNnu8uQml4cxSeZKQyxo3ydZNlSEioZZU3QkJC62wUVLLu4oFDTcEih8F2CNMJ4DeA5Fy--hC7q4kVO5Aw2RZq46Yz6R5hE4_8XhIlYiTx2Vse5bcdLby0a5jjE3eR6BZawC-E0XtCIBNl1yE0fvPErVglTvOYJtjy1yBUtEToxnSDXWqT_BTUCyDb1nNWr50er89SUfjkQCQdbZKyPJU1GOWELWKLupSHRAS-TanFsFs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10"></div>
+<!-- Content -->
+<div class="relative z-20 mt-auto p-sm border-t-[4px] border-surface-bright bg-background/90 backdrop-blur-sm flex flex-col gap-xs">
+<div class="flex justify-between items-center border-b-[2px] border-surface-bright pb-base">
+<span class="font-metadata text-metadata text-primary-fixed">ID: SURVEILLANCE_NODE_A</span>
+<span class="font-metadata text-metadata text-error">STATUS: OFFLINE</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface uppercase">Facility Breach Alpha</h3>
+<p class="font-body text-body text-on-surface-variant text-sm line-clamp-2">Initial perimeter compromise detected at 0400 hours. Multi-spectrum analysis indicates thermal cloaking technology was utilized.</p>
+</div>
+</div>
+<!-- Card 2: Text/Panel (1x1) -->
+<div class="md:col-span-1 md:row-span-1 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [CTRL_PANEL]
+                </div>
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[60px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<div class="relative z-20 p-sm pt-xl h-full flex flex-col gap-xs">
+<div class="flex flex-col gap-base border-b-[2px] border-surface-bright pb-xs">
+<div class="flex justify-between font-metadata text-metadata text-on-surface-variant uppercase">
+<span>Mainframe Load</span>
+<span>87%</span>
+</div>
+<div class="w-full h-2 border-[2px] border-outline bg-background overflow-hidden">
+<div class="h-full bg-error w-[87%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-base border-b-[2px] border-surface-bright pb-xs">
+<div class="flex justify-between font-metadata text-metadata text-on-surface-variant uppercase">
+<span>Network Integrity</span>
+<span>42%</span>
+</div>
+<div class="w-full h-2 border-[2px] border-outline bg-background overflow-hidden">
+<div class="h-full bg-secondary-container w-[42%]"></div>
+</div>
+</div>
+<div class="mt-auto font-metadata text-metadata text-primary-fixed flex items-center gap-xs">
+<span class="w-2 h-2 bg-primary-fixed animate-pulse"></span>
+                        SYSTEM DEGRADED
+                    </div>
+</div>
+</div>
+<!-- Card 3: Image (1x2) -->
+<div class="md:col-span-1 md:row-span-2 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [SUBJECT_G]
+                </div>
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[80px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-70 group-hover:scale-105 transition-transform duration-700 z-0" data-alt="close up of a metallic cyborg arm interfacing with a dense tangled server rack, sharp focus on glowing blue cables and metal joints" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh76n26FwtHjGUItG2wFKNN2mg6jcpApwVQ4IsHPyG2Enp8xFDFDyQw00LCBVxo8ECO9Hg30znxPu8NggID3GyfpUCBuQiHuxUl6Iup5NXihFe18HyvIIj5TkdOTwnvS5i2hUCuYMkOAZR0wbi-WRPrB9gMsaLo5XC7DtmQD4W3jkGgm5KwcniVsIkU9oa0ZdBwgd-gBCMYsf1MEHxGjOW_2vXxCPTjhQ8YhOPpvMIEHvVAD2Wqj1xJQcjCfhQX51BxqeVL3IAChw"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background z-10"></div>
+<div class="relative z-20 mt-auto p-sm bg-background/90 border-t-[4px] border-surface-bright flex flex-col gap-xs">
+<span class="font-metadata text-metadata text-outline">CLASS: CYBERNETIC</span>
+<h3 class="font-h3 text-h3 text-on-surface uppercase text-lg">Hardware Sync</h3>
+<div class="font-metadata text-metadata text-primary-fixed mt-xs bg-surface-container p-base border-[2px] border-outline text-center">
+                        UPLINK ESTABLISHED
+                    </div>
+</div>
+</div>
+<!-- Card 4: Text/Table (1x1) -->
+<div class="md:col-span-1 md:row-span-1 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [INTERCEPT]
+                </div>
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[60px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<div class="relative z-20 p-sm pt-xl h-full flex flex-col overflow-hidden">
+<table class="w-full text-left font-metadata text-metadata border-collapse">
+<thead>
+<tr class="bg-primary-container text-on-primary-container">
+<th class="border-[2px] border-surface-bright p-base uppercase">TS_HEX</th>
+<th class="border-[2px] border-surface-bright p-base uppercase">VECTOR</th>
+</tr>
+</thead>
+<tbody class="text-on-surface-variant">
+<tr>
+<td class="border-[2px] border-surface-bright p-base">0x8F2A</td>
+<td class="border-[2px] border-surface-bright p-base text-error">NULL_PTR</td>
+</tr>
+<tr>
+<td class="border-[2px] border-surface-bright p-base">0x9C1B</td>
+<td class="border-[2px] border-surface-bright p-base">FWD_PASS</td>
+</tr>
+<tr>
+<td class="border-[2px] border-surface-bright p-base">0xA34F</td>
+<td class="border-[2px] border-surface-bright p-base text-primary-fixed">ACK_RCV</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Card 5: Image (2x1) -->
+<div class="md:col-span-2 md:row-span-1 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [ZONE_RESTRICTED]
+                </div>
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[100px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-60 z-0" data-alt="aerial drone footage of an abandoned industrial complex covered in toxic glowing green moss under a heavy grey sky, harsh shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi-tYE3K-UK-brdWJ7Xkr3BJIqZYYP-qCdjQqRm5VygcfRL4dDqdxlrnZWrmM8IQ_-nSi_h9ljr6w6Zv0hu3R7GwFqw1HIxB6us1fqWrtAJGiSHOQFiqXYGoj1TmDxj5M2lIGuoKeyBkXnUHyHjfUbgJMmEFmhuISypufGa19IoH7ZAXlkvKxCsw6rU82MS8KNCBdDJvXtBicgJ7JESc4Ob3_BuJurb-Rjdmk0CYwHa70q0dxslR3IdZxWN_EeiXciW-c5tWAaKSk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10"></div>
+<div class="relative z-20 p-sm mt-auto w-full md:w-1/2 bg-background/80 border-r-[4px] border-t-[4px] border-surface-bright h-full flex flex-col justify-end">
+<span class="font-metadata text-metadata text-primary-fixed">SECTOR 7G</span>
+<h3 class="font-h3 text-h3 text-on-surface uppercase text-xl leading-none mt-xs">Contamination Zone</h3>
+</div>
+</div>
+<!-- Card 6: Text/Leaderboard (1x1) -->
+<div class="md:col-span-1 md:row-span-1 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [LEADERBOARD]
+                </div>
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[60px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<div class="relative z-20 p-sm pt-xl h-full flex flex-col gap-xs overflow-hidden">
+<div class="flex justify-between items-center border-b-[2px] border-outline pb-base font-metadata text-metadata text-on-surface uppercase">
+<span>Operative</span>
+<span>Yield</span>
+</div>
+<ul class="flex flex-col gap-base font-body text-body text-sm">
+<li class="flex justify-between items-center text-primary-fixed">
+<span><span class="font-bold mr-2">1.</span>NEXUS_9</span>
+<span class="bg-primary-container text-on-primary-container px-1 text-xs font-metadata">99.9%</span>
+</li>
+<li class="flex justify-between items-center text-on-surface">
+<span><span class="font-bold mr-2 text-outline">2.</span>VOID_WALKER</span>
+<span class="bg-surface-bright text-on-surface px-1 text-xs font-metadata border-[1px] border-outline">84.2%</span>
+</li>
+<li class="flex justify-between items-center text-on-surface-variant">
+<span><span class="font-bold mr-2 text-outline">3.</span>SILENT_RUN</span>
+<span class="bg-surface-bright text-on-surface-variant px-1 text-xs font-metadata border-[1px] border-outline">71.0%</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Card 7: Image (1x1) -->
+<div class="md:col-span-1 md:row-span-1 relative overflow-hidden border-[4px] border-surface-bright bg-surface-container flex flex-col group shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-base border-r-[4px] border-b-[4px] border-surface-bright z-20">
+                    [ARTIFACT]
+                </div>
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 transform -rotate-12">
+<span class="font-h1 text-[60px] text-error font-bold leading-none select-none">CONFIDENTIAL</span>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80 z-0" data-alt="a glowing hyper-cube artifact resting on a scratched titanium pedestal in a dark sterile laboratory with harsh spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYd_RkwkYp00rNATCEKZSiU5lNfCl6reALMhCXibecFT6RlZQ7MgFiy8l4z3xyUiqL80kB259tqiNPd3T7c45dZn7bVLaLN6YdEgOqJlGTbjHt1aS3jlaiXk1Ya9D6p3VNLDTC8rmme1tDfDrUINDsfTYSKgOll9DZEaec5chzT8U326acIhDDdBV4DaVsncj1JSUhIBokCWTe0exrnRDcBl7VijS4dj1_EPokCywIowRvE2sNik8VU50k_Two3QIEf1QxKMN_F4M"/>
+<div class="absolute inset-0 border-[4px] border-error mix-blend-overlay z-10 pointer-events-none"></div>
+<div class="relative z-20 mt-auto bg-background/90 border-t-[4px] border-surface-bright p-sm text-center">
+<span class="font-metadata text-metadata text-error animate-pulse block">CRITICAL ASSET</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-zinc-950 docked full-width bottom-0 border-t-4 border-[#BFFF00] flat z-50 relative mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 py-2 gap-4">
+<div class="font-mono text-[10px] leading-tight uppercase text-[#BFFF00]">
+                SYSTEM_ID: AI_NIKITKA93 // TIMESTAMP: 2024.10.27_14:02:55_UTC
+            </div>
+<nav class="flex gap-4">
+<a class="font-mono text-[10px] leading-tight uppercase text-zinc-500 hover:text-[#BFFF00]" href="#">ENCRYPTED_LINE</a>
+<a class="font-mono text-[10px] leading-tight uppercase text-zinc-500 hover:text-[#BFFF00]" href="#">MAINFRAME_STATUS</a>
+<a class="font-mono text-[10px] leading-tight uppercase text-zinc-500 hover:text-[#BFFF00]" href="#">UPTIME_99.9%</a>
+</nav>
+</div>
+</footer>
+</body></html>

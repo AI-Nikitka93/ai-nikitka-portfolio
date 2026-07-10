@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - ARCHIVE</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0c0f04",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "background": "#111508",
+                        "surface": "#111508",
+                        "inverse-primary": "#506600",
+                        "error": "#ffb4ab",
+                        "on-background": "#e2e4cf",
+                        "surface-container-high": "#282b1d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "outline": "#8e9379",
+                        "on-tertiary": "#21323e",
+                        "surface-container-low": "#1a1d10",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "outline-variant": "#444933",
+                        "surface-container": "#1e2113",
+                        "surface-tint": "#abd600",
+                        "surface-bright": "#373b2c",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#111508",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#333627",
+                        "error-container": "#93000a",
+                        "surface-variant": "#333627",
+                        "inverse-on-surface": "#2f3223",
+                        "on-tertiary-container": "#556774",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary-fixed-dim": "#abd600",
+                        "on-primary-container": "#556d00",
+                        "on-primary-fixed": "#161e00",
+                        "on-secondary-container": "#b8b8b8",
+                        "primary-container": "#c3f400",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "secondary-container": "#484949",
+                        "primary": "#ffffff",
+                        "secondary": "#c7c6c6",
+                        "inverse-surface": "#e2e4cf",
+                        "tertiary-fixed": "#d2e5f5",
+                        "on-surface": "#e2e4cf",
+                        "on-primary": "#283500",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "tertiary-container": "#d2e5f5",
+                        "primary-fixed": "#c3f400",
+                        "tertiary-fixed-dim": "#b6c9d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "column_count": "12",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-data": ["IBM Plex Mono", "monospace"],
+                        "body-md": ["Space Grotesk", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "mono-label": ["IBM Plex Mono", "monospace"],
+                        "display-xl": ["Space Grotesk", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "mono-data": ["14px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-label": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-xl": ["80px", { "lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0c0f04; color: #ffffff; }
+        ::selection { background-color: #c3f400; color: #000; }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-primary min-h-screen selection:bg-primary-container selection:text-black">
+<!-- TopAppBar -->
+<header class="fixed top-0 flex justify-between items-center px-8 h-16 w-full z-50 bg-black border-b border-[#CCFF00]">
+<div class="text-2xl font-black text-[#CCFF00] tracking-tighter">AI_NIKITKA93</div>
+<div class="font-['Space_Grotesk'] font-bold uppercase tracking-widest text-[#CCFF00]">RU / EN</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-16 flex flex-col h-[calc(100vh-64px)] w-64 bg-black border-r border-white/20 z-40 hidden md:flex">
+<div class="p-6 border-b border-white/20">
+<h2 class="font-['IBM_Plex_Mono'] text-sm tracking-tighter text-[#CCFF00] font-bold">DIRECTORY</h2>
+<p class="font-['IBM_Plex_Mono'] text-[10px] text-white/50 mt-1">V.1.0.4-BETA</p>
+</div>
+<div class="flex-grow overflow-y-auto font-['IBM_Plex_Mono'] text-sm tracking-tighter">
+<a class="bg-[#CCFF00] text-black font-bold flex items-center px-4 py-3 group" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+                01/ ARCHIVE
+            </a>
+<a class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black transition-colors duration-0 group" href="#">
+<span class="material-symbols-outlined mr-3">folder_open</span>
+                02/ DOSSIER
+            </a>
+<a class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black transition-colors duration-0 group" href="#">
+<span class="material-symbols-outlined mr-3">format_list_numbered</span>
+                03/ INDEX
+            </a>
+<a class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black transition-colors duration-0 group" href="#">
+<span class="material-symbols-outlined mr-3">terminal</span>
+                04/ SYSTEM
+            </a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-16 pb-16 md:ml-64 w-full md:w-[calc(100%-16rem)]">
+<div class="p-margin">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-margin">
+<div class="md:col-span-12 border-b border-outline pb-gutter">
+<h1 class="font-display-xl text-display-xl text-primary break-words">PROOF_ARCHIVE</h1>
+<div class="flex gap-4 mt-4">
+<span class="border border-outline px-2 py-1 font-mono-label text-mono-label text-primary-container uppercase">Status: Immutable</span>
+<span class="border border-outline px-2 py-1 font-mono-label text-mono-label text-secondary uppercase">Hash: 0x9f8b...3a2c</span>
+</div>
+</div>
+</div>
+<!-- Metric Posters -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-margin">
+<div class="md:col-span-3 border border-outline bg-surface-container-high p-6 flex flex-col justify-between aspect-square hover:bg-surface-variant transition-none">
+<div class="font-mono-label text-mono-label text-secondary">METRIC_ALPHA</div>
+<div class="font-display-xl text-display-xl text-primary-container mt-auto">94.2</div>
+<div class="font-mono-data text-mono-data text-on-surface border-t border-outline-variant pt-2 mt-4">CONFIDENCE_INDEX</div>
+</div>
+<div class="md:col-span-3 border border-outline bg-surface-container-high p-6 flex flex-col justify-between aspect-square hover:bg-surface-variant transition-none">
+<div class="font-mono-label text-mono-label text-secondary">METRIC_BETA</div>
+<div class="font-display-xl text-display-xl text-primary-container mt-auto">0.08</div>
+<div class="font-mono-data text-mono-data text-on-surface border-t border-outline-variant pt-2 mt-4">DEVIATION_RATE</div>
+</div>
+<div class="md:col-span-3 border border-outline bg-surface-container-high p-6 flex flex-col justify-between aspect-square hover:bg-surface-variant transition-none">
+<div class="font-mono-label text-mono-label text-secondary">METRIC_GAMMA</div>
+<div class="font-display-xl text-display-xl text-primary-container mt-auto">12K</div>
+<div class="font-mono-data text-mono-data text-on-surface border-t border-outline-variant pt-2 mt-4">DATA_POINTS</div>
+</div>
+<div class="md:col-span-3 border border-outline bg-primary-container p-6 flex flex-col justify-between aspect-square text-black transition-none">
+<div class="font-mono-label text-mono-label text-on-primary-fixed-variant">SYSTEM_STATUS</div>
+<div class="font-display-xl text-display-xl text-black mt-auto">OPT</div>
+<div class="font-mono-data text-mono-data text-black border-t border-on-primary-fixed-variant pt-2 mt-4">ALL_SYSTEMS_NOMINAL</div>
+</div>
+</div>
+<!-- Dossier Modules -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-margin">
+<div class="md:col-span-6 border border-outline bg-surface-container-low">
+<div class="border-b border-outline p-4 bg-surface-container flex justify-between items-center">
+<span class="font-mono-label text-mono-label text-primary">SUBJECT_DOSSIER_01</span>
+<span class="material-symbols-outlined text-secondary text-sm">fingerprint</span>
+</div>
+<div class="p-4 font-mono-data text-mono-data text-on-surface">
+<div class="flex justify-between border-b border-outline-variant py-3">
+<span class="text-secondary">IDENTIFIER</span>
+<span class="text-primary">E-774-OMEGA</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant py-3">
+<span class="text-secondary">CLASSIFICATION</span>
+<span class="text-primary-container">LEVEL_5_RESTRICTED</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant py-3">
+<span class="text-secondary">LAST_KNOWN_LOC</span>
+<span class="text-primary">SECTOR_7G</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="text-secondary">OBSERVATION</span>
+<span class="text-primary text-right max-w-[60%]">SUBJECT EXHIBITS ANOMALOUS BEHAVIOR PATTERNS DURING LUNAR CYCLES.</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 border border-outline bg-surface-container-low">
+<div class="border-b border-outline p-4 bg-surface-container flex justify-between items-center">
+<span class="font-mono-label text-mono-label text-primary">SUBJECT_DOSSIER_02</span>
+<span class="material-symbols-outlined text-secondary text-sm">radar</span>
+</div>
+<div class="p-4 font-mono-data text-mono-data text-on-surface">
+<div class="flex justify-between border-b border-outline-variant py-3">
+<span class="text-secondary">IDENTIFIER</span>
+<span class="text-primary">K-112-SIGMA</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant py-3">
+<span class="text-secondary">CLASSIFICATION</span>
+<span class="text-primary">LEVEL_2_CLEARED</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant py-3">
+<span class="text-secondary">LAST_KNOWN_LOC</span>
+<span class="text-primary">GRID_REF_A1</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="text-secondary">OBSERVATION</span>
+<span class="text-primary text-right max-w-[60%]">STANDARD OPERATING PROCEDURE MAINTAINED. NO DEVIATIONS RECORDED.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Evidence Plates -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-12 mb-4">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase border-b border-outline pb-2">EVIDENCE_PLATES</h2>
+</div>
+<div class="md:col-span-4 border border-outline p-2 bg-surface-container-lowest">
+<div class="aspect-[4/3] w-full overflow-hidden bg-surface-container-high border border-outline-variant relative">
+<img alt="Evidence A" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform duration-500" data-alt="stark black and white high contrast photograph of brutalist concrete architecture geometric shapes harsh shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhXj4SEmpnTlwQxJP3xJAe06C5aVSiMyusKoioZIkLyMKba-pZErk6tj70N7A3rJ9i-OXQWztIHG9xtQKLon5RxSfLa-UaJn66H4mGaxUG6iXNe_SykSjtJpKyDk7IwgfbXidkN_LpDzoREG2QDqJHxORvIJpRPagYcQsAUqoHpX0TT-NjZLVGbkigA6qj1c2XtQW4g3P1Ceep7gv3GlkamXOLERJSEbCpa-NbNBgPuC7wyyHgNQi3kirS8Pq3JFX1d9H44M1WXwYy"/>
+<div class="absolute top-2 right-2 bg-black text-primary px-2 py-1 font-mono-label text-[10px] border border-outline">REF: A-1</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline">
+<div class="font-mono-label text-mono-label text-primary-container mb-1">PLATE_01 // STRUCTURAL_ANALYSIS</div>
+<p class="font-mono-data text-mono-data text-secondary text-xs">MATERIAL STRESS DETECTED AT SEAM 4B. STRUCTURAL INTEGRITY COMPROMISED BY 14%.</p>
+</div>
+</div>
+<div class="md:col-span-4 border border-outline p-2 bg-surface-container-lowest">
+<div class="aspect-[4/3] w-full overflow-hidden bg-surface-container-high border border-outline-variant relative">
+<img alt="Evidence B" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform duration-500" data-alt="close up black and white macro shot of complex metallic machinery gears and circuits high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK_P53vxLa2RGvGp4B6AlZdSLmV9HRlVj4J8BnS3GI7NjxT5YWw5A-TeAEV_sWK7tAo4o27ORMU2YCx-Z8j16s_a8IyrqPYXeFw-if2o4pFT8cYk9aQllgdKEFp96l-4V5kyc6GhwQ1lvgRULfouvbPtCbi9na2Ror0mPc9EFEiFQzUpWL0bO8B_k-QgfoFAgZZW7UGsggBMt7ZCWibUeVDBW7nL4elX2MWGZYB0DA3rV8cenuZZv6-2csjZoYcJDiU1Bf__rMy0OS"/>
+<div class="absolute top-2 right-2 bg-black text-primary px-2 py-1 font-mono-label text-[10px] border border-outline">REF: B-2</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline">
+<div class="font-mono-label text-mono-label text-primary-container mb-1">PLATE_02 // COMPONENT_WEAR</div>
+<p class="font-mono-data text-mono-data text-secondary text-xs">MICRO-FRACTURES OBSERVED ON PRIMARY DRIVE GEAR. RECOMMEND IMMEDIATE REPLACEMENT.</p>
+</div>
+</div>
+<div class="md:col-span-4 border border-outline p-2 bg-surface-container-lowest">
+<div class="aspect-[4/3] w-full overflow-hidden bg-surface-container-high border border-outline-variant relative">
+<img alt="Evidence C" class="w-full h-full object-cover filter grayscale contrast-125 hover:scale-105 transition-transform duration-500" data-alt="grainy black and white security camera footage still of an empty long corridor with harsh fluorescent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuF_tcPoaMIQTIJi0bHBGLfvo5yNRCilnXu-frAkmhpofbbabh_13oy7MVMyb_PA5sMcxBAjgCHmrsxX7qRVtv5sAIQHkSSDcLfG4Yjf9AcUx0d8otiXf1fxZcQvUoTXLb3CVUmIpqALqSE3qth2nOLzX2YvYzlVNgykj5KhLwBz1I3AKPvQfLVoxp_zE4nEa7A_MZOXbHzJmmEUFmUWjb2fxGV3GVIvay8rDQfgm0lSu1UyC1HWrv38vrO-3zIoSzavt2z_lHkqVG"/>
+<div class="absolute top-2 right-2 bg-black text-primary px-2 py-1 font-mono-label text-[10px] border border-outline">REF: C-3</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline">
+<div class="font-mono-label text-mono-label text-primary-container mb-1">PLATE_03 // PERIMETER_BREACH</div>
+<p class="font-mono-data text-mono-data text-secondary text-xs">UNAUTHORIZED ACCESS DETECTED AT 0400 HOURS. NO VISUAL CONFIRMATION OF SUBJECT.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full px-8 py-2 flex justify-between items-center z-50 bg-black border-t border-white/20">
+<div class="font-['IBM_Plex_Mono'] text-[10px] uppercase text-[#CCFF00]">
+            © 2024 AI_NIKITKA93 // CORE_PROTOCOL_V4
+        </div>
+<div class="flex gap-6 font-['IBM_Plex_Mono'] text-[10px] uppercase text-white/60">
+<span class="hover:text-[#CCFF00]">ST_STATUS: OK</span>
+<span class="hover:text-[#CCFF00]">LATENCY: 12MS</span>
+<span class="hover:text-[#CCFF00]">SEC: ENCRYPTED</span>
+</div>
+</footer>
+</body></html>

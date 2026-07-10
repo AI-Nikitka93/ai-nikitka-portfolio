@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Chamber - Journal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&amp;family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffffff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#334f00",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-container": "#ffd9dc",
+                        "surface-container-low": "#191d11",
+                        "tertiary-fixed": "#ffd9dc",
+                        "surface-bright": "#363b2d",
+                        "error-container": "#93000a",
+                        "background": "#101509",
+                        "primary-fixed-dim": "#96da06",
+                        "tertiary-fixed-dim": "#ffb2ba",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary-container": "#474746",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-surface": "#e0e5d1",
+                        "on-tertiary-fixed-variant": "#910030",
+                        "on-primary-fixed": "#121f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-background": "#e0e5d1",
+                        "primary-fixed": "#b0f734",
+                        "on-primary": "#223600",
+                        "surface-variant": "#323629",
+                        "surface-dim": "#101509",
+                        "on-tertiary": "#67001f",
+                        "inverse-primary": "#456800",
+                        "outline-variant": "#424935",
+                        "secondary": "#c8c6c5",
+                        "surface-tint": "#96da06",
+                        "primary-container": "#b0f734",
+                        "surface-container": "#1d2115",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#323629",
+                        "on-tertiary-fixed": "#400010",
+                        "inverse-surface": "#e0e5d1",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#c90045",
+                        "on-secondary": "#313030",
+                        "on-primary-container": "#4a6f00",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2d3225",
+                        "surface": "#101509",
+                        "surface-container-high": "#272c1f",
+                        "on-surface-variant": "#c2caaf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "64px",
+                        "base": "4px",
+                        "margin": "32px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "lg": "40px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "code-xs": ["IBM Plex Mono"],
+                        "meta-sm": ["IBM Plex Mono"],
+                        "body-lg": ["IBM Plex Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "code-xs": ["10px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "meta-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Global Scanline Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950/90 dark:bg-zinc-950/90 backdrop-blur-md text-[#B7FF3C] docked full-width border-b-2 border-[#B7FF3C] shadow-[0_0_20px_rgba(183,255,60,0.3)]">
+<!-- Offset for SideNav -->
+<div class="flex items-center gap-4 ml-64">
+<span class="text-[#B7FF3C] font-black tracking-[0.2em] font-['Space_Grotesk'] uppercase animate-pulse">SYSTEM_CHAMBER_v.93</span>
+</div>
+<div class="flex items-center gap-4">
+<!-- Search Bar placeholder -->
+<div class="relative flex items-center border-b border-[#B7FF3C]/50 px-2 py-1 w-48">
+<span class="material-symbols-outlined text-[#B7FF3C]/50 text-sm mr-2">search</span>
+<span class="font-['IBM_Plex_Mono'] text-xs text-[#B7FF3C]/50 uppercase tracking-widest">Query...</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 text-zinc-500 p-1 flex items-center justify-center">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 text-zinc-500 p-1 flex items-center justify-center">
+<span class="material-symbols-outlined">settings_input_component</span>
+</button>
+<button class="hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 text-zinc-500 p-1 flex items-center justify-center">
+<span class="material-symbols-outlined">sensors</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full flex flex-col z-40 overflow-y-auto scrollbar-hide bg-zinc-950 dark:bg-zinc-900/50 text-[#B7FF3C] w-64 border-r-2 border-[#B7FF3C]/40 flat no-shadows relative after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] after:bg-[length:100%_2px,3px_100%] after:pointer-events-none">
+<div class="p-6 mt-16 mb-4 border-b border-[#B7FF3C]/20">
+<div class="w-12 h-12 mb-3 border border-[#B7FF3C] bg-black relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" data-alt="Glitch-distorted abstract green and black digital noise pattern resembling a corrupted interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4o_SEBLAbo5AUsLFglv6G7PM6_z4hZwH1HpW1LC9S658ZQMT9kpQfGLKNXG5bh9EtOqWdRGcfdJKFE6X8nTPhFgzLZCztHZ-w7htqxpJHTTLbiXlIxwt-Bs9oFUDqsdqMEw5BEyVQWNk8Gw0CDb30WjLi8-Gtkja0Nkk5JYkcjKY4mXEU0EhPhyV-JIZvnw0ha2dF_XL7XBoPCxLkc2jLYYDX_kAM8FhRTu1ofdxZjduXVA5Q4JoHWz-DZfJ0U8kOvYgOLrw2s9Y"/>
+</div>
+<h2 class="font-['Space_Grotesk'] text-[#B7FF3C] font-bold text-lg leading-none">AI_Nikitka93</h2>
+<p class="font-['Space_Grotesk'] text-[10px] font-black tracking-widest mt-1 text-[#B7FF3C]/70">0x-442_LEVEL_ACCESS</p>
+</div>
+<div class="flex-1 flex flex-col font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase">
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">login</span> ENTRANCE
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">inventory_2</span> ARCHIVE
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">center_focus_strong</span> FOCUS
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">person</span> HUMAN
+            </a>
+<!-- Active Tab -->
+<a class="bg-[#B7FF3C] text-black flex items-center gap-3 px-4 py-3 m-2 rounded-none skew-x-[-12deg] transition-transform" href="#">
+<span class="material-symbols-outlined fill-icon skew-x-[12deg]">menu_book</span>
+<span class="skew-x-[12deg]">JOURNAL</span>
+</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">assignment</span> BRIEFING
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">terminal</span> CONSOLE
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75" href="#">
+<span class="material-symbols-outlined">map</span> ROUTES
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-20 px-12 z-10 relative">
+<!-- Header Section -->
+<div class="mb-xl border-b border-primary-fixed-dim/30 pb-sm flex justify-between items-end">
+<div>
+<span class="font-code-xs text-code-xs text-primary-fixed-dim uppercase tracking-widest mb-2 block">[ SECTOR 7 // ARCHIVE EXTRACT ]</span>
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase">Field Notes</h1>
+</div>
+<div class="text-right font-meta-sm text-meta-sm text-outline-variant flex flex-col gap-1">
+<span>ENTRIES: 1,402</span>
+<span class="text-primary-fixed animate-pulse">STATUS: SYNCED</span>
+</div>
+</div>
+<!-- 12-Column Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter relative">
+<!-- Structural Wireframe Lines (Decorative) -->
+<div class="absolute top-0 bottom-0 left-1/3 w-px bg-outline-variant/20 -z-10 hidden md:block"></div>
+<div class="absolute top-0 bottom-0 right-1/3 w-px bg-outline-variant/20 -z-10 hidden md:block"></div>
+<!-- Main Log Entry (Col Span 8) -->
+<article class="col-span-12 md:col-span-8 border border-primary-fixed/50 bg-surface-container-low p-md relative group">
+<!-- Glitch Corner -->
+<div class="absolute -top-1 -left-1 w-2 h-2 bg-primary-fixed"></div>
+<!-- ID Tag -->
+<div class="absolute top-0 right-0 bg-primary-fixed/10 border-b border-l border-primary-fixed/50 px-3 py-1 font-code-xs text-code-xs text-primary-fixed">
+                    [ ID: 0x-A1B2 ]
+                </div>
+<header class="mb-md mt-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tight mb-xs">Observation Alpha-9</h2>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">schedule</span> T-MINUS 04:22:10
+                    </p>
+</header>
+<div class="aspect-video relative overflow-hidden border border-outline-variant mb-md grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover opacity-70 mix-blend-luminosity" data-alt="Dark, atmospheric server room with rows of glowing green lights reflecting on polished black floors, high tech industrial feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-dAxiNkbKE4F6sJ1-LUuovjQHiAJRTmI7q5OdjUERh20ygUv83Po0yumMC0utsE9mWSSfeqHOXJ_FYZm30WBvQz_Gy-VE24PHdPLAW8vbckeUkhCgmnCSCPWrxYLvVPqliBFPI6EWwQHfLKf-FDG2pRbIoHyhWvMiF1WuF9PzLPElw5S78i3vop_J1NJr-Zf0s_HtC9oGJflR8Or6GMpbYWiTxhfuFSBWvBTdFXhlyFxJt2AUy9qp6q9VjBqwkX7CoKAh6eAzpbk"/>
+<div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0)_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface space-y-4">
+<p>Initial scans indicate severe structural dissonance in the primary data corridor. The harmonic frequency is off by approximately 0.04Hz, leading to micro-fractures in the visual output matrix.</p>
+<p class="pl-4 border-l-2 border-primary-fixed-dim/50 text-on-surface-variant font-code-xs text-[12px]">
+                        &gt; Attempted recalibration at 0300hrs.<br/>
+                        &gt; Result: Negative. Resonance loop remains open.
+                    </p>
+</div>
+</article>
+<!-- Side Logs / Diagnostics (Col Span 4) -->
+<aside class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
+<!-- Quick Note Card -->
+<div class="border border-outline-variant bg-surface-container p-sm relative translate-x-1">
+<div class="font-code-xs text-code-xs text-on-surface-variant mb-2">[ QUICK_LOG ]</div>
+<p class="font-body-md text-body-md text-on-surface">Subject exhibits unpredictable thermal spikes during rendering phases. Recommend isolating node 44.</p>
+</div>
+<!-- Status Panel -->
+<div class="border border-error/50 bg-error-container/10 p-sm relative -translate-x-1">
+<div class="absolute top-2 right-2 w-2 h-2 bg-error rounded-none animate-ping"></div>
+<h3 class="font-headline-md text-headline-md text-error mb-2 uppercase">Warning: Sector Unstable</h3>
+<ul class="font-meta-sm text-meta-sm text-on-error-container space-y-2">
+<li class="flex justify-between border-b border-error/20 pb-1">
+<span>INTEGRITY</span> <span>42%</span>
+</li>
+<li class="flex justify-between border-b border-error/20 pb-1">
+<span>PACKET LOSS</span> <span>18.4%</span>
+</li>
+</ul>
+</div>
+<!-- Image Fragment -->
+<div class="border border-outline bg-surface-container p-2 flex-1 relative">
+<div class="font-code-xs text-code-xs text-outline absolute top-4 left-4 z-10 mix-blend-difference text-white">[ FRAGMENT_A ]</div>
+<img class="w-full h-full object-cover grayscale contrast-150" data-alt="Abstract macro shot of cracked glass or crystalline structure with dark green and black hues, sharp edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYWnAue_J2QA3LWPTvuafzR6qnGRdYPfwlgdL9mWYkR6HKAAoDVmGnAUVQBdjQDuq1SmFBfwFgeC9ZvC5SjS4-8m34C9ibLd6l6ujlVo_LIMCsSKecKH63Uhm5YaH39bOPUJWC9Z5BVBsFOGSAfireO4-pcn2i5Q5Sacl-60jAEa9hqS6evO120ABD2bCTFdIzRb0Xui8k3ZN4-JlM-2AlkTNcNX1bpNOLcFz_n6FQr9gCgAg06pupfxi2ao1xIinSm1-jtoLw-Og"/>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-8 py-1 h-8 bg-black/80 backdrop-blur-xl border-t border-[#B7FF3C]/30 text-[#B7FF3C] font-['Space_Grotesk'] text-[8px] uppercase tracking-widest no-shadows">
+<div class="opacity-50 font-bold">NC_SYS</div>
+<div class="text-zinc-700 flex gap-6">
+<span class="hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-colors cursor-pointer">LATENCY_12MS</span>
+<span class="hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-colors cursor-pointer">PORT_8080</span>
+<span class="hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-colors cursor-pointer">X_LINK_STABLE</span>
+</div>
+<div class="brightness-150">[ STATUS: SECURE ] © 2024 NEURAL_CHAMBER</div>
+<!-- Animated Scanline purely in CSS via gradient if needed, but keeping it simple as per JSON style instructions -->
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#B7FF3C]/50 animate-[pulse_2s_ease-in-out_infinite]"></div>
+</footer>
+</body></html>

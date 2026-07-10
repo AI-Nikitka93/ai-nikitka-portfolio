@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Нейро-Связи</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#c3c8bf",
+                        "primary-container": "#0a0f0a",
+                        "on-secondary-fixed": "#141f00",
+                        "surface": "#121414",
+                        "inverse-on-surface": "#303031",
+                        "on-primary": "#2c322c",
+                        "surface-container-highest": "#343535",
+                        "secondary-fixed-dim": "#a1d800",
+                        "surface-variant": "#343535",
+                        "on-secondary-fixed-variant": "#384e00",
+                        "on-surface-variant": "#c5c7c1",
+                        "on-surface": "#e3e2e2",
+                        "on-tertiary": "#5e1700",
+                        "surface-dim": "#121414",
+                        "secondary-fixed": "#b9f612",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "on-tertiary-container": "#e04300",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "surface-container": "#1f2020",
+                        "inverse-primary": "#5a6059",
+                        "on-secondary-container": "#4d6a00",
+                        "error-container": "#93000a",
+                        "secondary": "#f2ffcf",
+                        "tertiary-container": "#220400",
+                        "tertiary-fixed": "#ffdbd0",
+                        "tertiary": "#ffb59e",
+                        "outline-variant": "#444843",
+                        "inverse-surface": "#e3e2e2",
+                        "on-primary-fixed": "#181d17",
+                        "on-background": "#e3e2e2",
+                        "surface-container-low": "#1b1c1c",
+                        "surface-bright": "#383939",
+                        "primary": "#c3c8bf",
+                        "secondary-container": "#b3f000",
+                        "outline": "#8f928c",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c3c8bf",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#292a2a",
+                        "primary-fixed": "#dfe4db",
+                        "on-secondary": "#253500",
+                        "on-primary-fixed-variant": "#434842",
+                        "on-tertiary-fixed-variant": "#852400",
+                        "surface-container-lowest": "#0d0e0f",
+                        "on-primary-container": "#777d75",
+                        "background": "#121414"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "safe-area": "32px",
+                        "flow-sm": "12px",
+                        "flow-md": "24px",
+                        "flow-xs": "4px",
+                        "flow-xl": "80px",
+                        "flow-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Mono"],
+                        "metadata-mono": ["IBM Plex Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["11px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "metadata-mono": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Organic Background utilities */
+        .ambient-glow {
+            background: radial-gradient(circle at center, rgba(185,246,18,0.08) 0%, rgba(18,20,20,0) 70%);
+        }
+        .organic-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        .glass-membrane {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md relative overflow-x-hidden">
+<!-- Atmospheric Deep-Sea / Bio-Digital Background Layers -->
+<div class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-secondary-fixed/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-tertiary/5 blur-[150px] rounded-full pointer-events-none"></div>
+<div class="fixed top-[40%] left-[30%] w-[30vw] h-[30vw] ambient-glow blur-[80px] pointer-events-none"></div>
+<!-- Semantic Shell: SideNavBar (Web - Desktop) -->
+<nav class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 h-screen w-64 border-r border-lime-900/20 bg-[#0a0f0a]/80 backdrop-blur-xl font-['Space_Grotesk'] uppercase tracking-widest text-xs shadow-[10px_0_30px_rgba(0,0,0,0.8)] ease-in-out duration-500">
+<div class="p-8 pb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/50 flex items-center justify-center mb-4 overflow-hidden shadow-[0_0_15px_rgba(185,246,18,0.2)]">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="memory">memory</span>
+</div>
+<h1 class="text-lime-400 font-black text-lg tracking-tight normal-case">AI_Nikitka93</h1>
+<p class="text-stone-500 text-[10px] mt-1 normal-case tracking-normal">Sentient Interface v1.0</p>
+</div>
+<div class="flex-1 mt-8 flex flex-col gap-2">
+<a class="flex items-center gap-4 text-stone-600 py-3 px-6 hover:text-lime-200 hover:bg-white/5 transition-all duration-700" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span>Field Notes</span>
+</a>
+<a class="flex items-center gap-4 text-stone-600 py-3 px-6 hover:text-lime-200 hover:bg-white/5 transition-all duration-700" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span>Scope</span>
+</a>
+<a class="flex items-center gap-4 bg-lime-500/10 text-lime-400 rounded-r-full py-3 px-6 border-l-4 border-lime-400 shadow-[0_0_15px_rgba(163,230,53,0.2)]" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span>Links</span>
+</a>
+</div>
+<div class="p-8">
+<button class="w-full py-3 px-4 border border-lime-900/50 rounded-full text-lime-400 flex items-center justify-center gap-2 hover:bg-white/5 transition-all duration-700">
+<span class="material-symbols-outlined text-[16px]" data-icon="sync">sync</span>
+<span class="normal-case">Initialize Sync</span>
+</button>
+</div>
+</nav>
+<!-- Semantic Shell: TopAppBar (Web - Tablet focus, hidden on lg where SideNav takes over, hidden on mobile where BottomNav takes over) -->
+<header class="hidden md:flex lg:hidden fixed top-0 left-0 w-full z-50 justify-between items-center px-8 py-4 bg-[#0a0f0a]/60 backdrop-blur-2xl border-b border-lime-900/30 shadow-[0_4px_30px_rgba(0,0,0,0.5)] font-['Space_Grotesk'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.5)]">
+            AI_NIKITKA93
+        </div>
+<nav class="flex items-center gap-8">
+<a class="text-stone-500 hover:text-lime-200 transition-colors duration-500 hover:bg-lime-500/5 hover:text-lime-300 transition-all duration-300 px-3 py-2 rounded-md" href="#">Field Notes</a>
+<a class="text-stone-500 hover:text-lime-200 transition-colors duration-500 hover:bg-lime-500/5 hover:text-lime-300 transition-all duration-300 px-3 py-2 rounded-md" href="#">Scope</a>
+<a class="text-lime-400 font-bold border-b-2 border-lime-400 pb-1" href="#">Links</a>
+</nav>
+<div class="flex items-center gap-4 text-lime-400">
+<button class="scale-98 active:scale-95 transition-transform hover:bg-lime-500/5 hover:text-lime-300 transition-all duration-300 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<button class="scale-98 active:scale-95 transition-transform hover:bg-lime-500/5 hover:text-lime-300 transition-all duration-300 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+</div>
+</header>
+<!-- Semantic Shell: BottomNavBar (Mobile) -->
+<nav class="lg:hidden md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-[#0a0f0a]/40 backdrop-blur-3xl docked full-width bottom-0 rounded-t-[40px] border-t border-lime-500/20 shadow-[0_-10px_40px_rgba(0,0,0,0.9)] font-['Space_Grotesk'] text-[10px] font-bold uppercase">
+<a class="flex flex-col items-center justify-center text-stone-500 p-3 hover:text-ember-400 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="description">description</span>
+<span>Notes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 p-3 hover:text-ember-400 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="biotech">biotech</span>
+<span>Scope</span>
+</a>
+<a class="flex flex-col items-center justify-center text-lime-400 bg-lime-400/10 rounded-full p-3 shadow-[0_0_20px_rgba(163,230,53,0.3)]" href="#">
+<span class="material-symbols-outlined mb-1 text-lime-400" data-icon="account_tree">account_tree</span>
+<span class="text-lime-400">Network</span>
+</a>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 md:pt-32 lg:pt-safe-area pb-32 lg:pb-safe-area px-safe-area lg:ml-64 relative z-10 flex flex-col items-center min-h-screen">
+<!-- Header Section -->
+<header class="w-full max-w-6xl mb-flow-xl text-left relative z-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-secondary-fixed/20 mb-6">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed shadow-[0_0_8px_rgba(185,246,18,0.8)]"></div>
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider">Системные Узлы</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-4">Нейро-Связи</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Топология внешних директорий и протоколов симбиотического доступа. Выберите узел для инициализации подключения.
+            </p>
+</header>
+<!-- Neural Web Visualization Area -->
+<div class="w-full max-w-6xl relative">
+<!-- SVG Mycelial Connectors (Background) -->
+<svg class="absolute inset-0 w-full h-[800px] pointer-events-none opacity-40" fill="none" preserveaspectratio="none" viewbox="0 0 1000 800">
+<defs>
+<lineargradient id="glow-line" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#b9f612" stop-opacity="0.1"></stop>
+<stop offset="50%" stop-color="#b9f612" stop-opacity="0.5"></stop>
+<stop offset="100%" stop-color="#b9f612" stop-opacity="0.1"></stop>
+</lineargradient>
+</defs>
+<!-- Central routing paths -->
+<path class="blur-[1px]" d="M500,400 Q300,100 200,200" fill="none" stroke="url(#glow-line)" stroke-width="2"></path>
+<path d="M500,400 Q800,200 700,100" fill="none" stroke="url(#glow-line)" stroke-width="1.5"></path>
+<path d="M500,400 C400,600 200,500 250,700" fill="none" stroke="url(#glow-line)" stroke-width="2"></path>
+<path class="blur-[0.5px]" d="M500,400 Q700,700 850,600" fill="none" stroke="url(#glow-line)" stroke-width="1"></path>
+<path d="M200,200 Q400,0 700,100" fill="none" stroke="rgba(185,246,18,0.1)" stroke-dasharray="4 4" stroke-width="1"></path>
+</svg>
+<!-- Organic Bento/Cluster Layout -->
+<div class="relative w-full min-h-[800px] flex flex-col md:block">
+<!-- Center Primary Node -->
+<a class="group md:absolute top-[35%] left-[50%] md:-translate-x-1/2 md:-translate-y-1/2 z-20 w-full md:w-[320px] mb-6 md:mb-0 block" href="#">
+<div class="bg-surface/60 glass-membrane p-flow-md rounded-xl rounded-tl-full rounded-br-full border border-secondary-fixed/30 shadow-[0_0_40px_rgba(185,246,18,0.1)] hover:bg-surface/80 transition-all duration-500 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 bg-secondary-fixed/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center border border-secondary-fixed/50 mb-4 group-hover:scale-110 transition-transform duration-500 shadow-[inset_0_0_20px_rgba(185,246,18,0.2)]">
+<span class="material-symbols-outlined text-[32px] text-secondary-fixed" data-icon="all_inclusive" data-weight="fill">all_inclusive</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-[24px] mb-2">Ядро Синхронизации</h3>
+<p class="font-metadata-mono text-metadata-mono text-on-surface-variant">Центральный хаб био-метрик и потоков данных.</p>
+</div>
+</a>
+<!-- Satellite Node 1 (Top Left) -->
+<a class="group md:absolute top-[5%] left-[10%] z-10 w-full md:w-[260px] mb-6 md:mb-0 block" href="#">
+<div class="bg-surface-container/50 glass-membrane p-flow-sm rounded-lg rounded-tr-[3rem] rounded-bl-xl border border-outline-variant/30 hover:border-secondary-fixed/40 transition-all duration-500 relative">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center border border-outline/20">
+<span class="material-symbols-outlined text-secondary" data-icon="folder_special">folder_special</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-background text-[18px]">Архив Памяти</h3>
+</div>
+<p class="font-metadata-mono text-metadata-mono text-on-surface-variant text-[11px] leading-relaxed">Исторические слепки сознания и фрагменты кода.</p>
+<div class="mt-4 flex gap-2">
+<span class="px-2 py-1 bg-surface-bright rounded text-[9px] font-label-caps text-on-surface-variant border border-outline/10">Read-Only</span>
+</div>
+</div>
+</a>
+<!-- Satellite Node 2 (Top Right) -->
+<a class="group md:absolute top-[8%] right-[5%] z-10 w-full md:w-[280px] mb-6 md:mb-0 block" href="#">
+<div class="bg-surface-container-low/60 glass-membrane p-flow-md rounded-[2rem] rounded-bl-none border border-outline-variant/20 hover:border-secondary-fixed/40 transition-all duration-500 relative">
+<div class="absolute top-4 right-4 w-1.5 h-1.5 rounded-full bg-secondary-fixed shadow-[0_0_5px_rgba(185,246,18,1)]"></div>
+<div class="flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" data-icon="sensors">sensors</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-background text-[18px] mb-1">Сенсорные Узлы</h3>
+<p class="font-metadata-mono text-metadata-mono text-on-surface-variant text-[11px]">Телеметрия внешней среды в реальном времени.</p>
+</div>
+</div>
+</div>
+</a>
+<!-- Satellite Node 3 (Bottom Left) -->
+<a class="group md:absolute bottom-[10%] left-[15%] z-10 w-full md:w-[300px] mb-6 md:mb-0 block" href="#">
+<div class="bg-surface-container/40 glass-membrane p-flow-md rounded-xl rounded-br-[4rem] border border-outline-variant/30 hover:border-secondary-fixed/50 transition-all duration-500 relative overflow-hidden">
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-secondary-fixed/10 transition-colors duration-700"></div>
+<h3 class="font-body-lg text-body-lg text-on-background text-[20px] mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed/70" data-icon="api">api</span>
+                            Внешние Протоколы
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-[14px]">Шлюзы для взаимодействия с не-биологическими системами.</p>
+<div class="w-full h-[1px] bg-gradient-to-r from-secondary-fixed/20 to-transparent mt-4"></div>
+</div>
+</a>
+<!-- Satellite Node 4 (Bottom Right) -->
+<a class="group md:absolute bottom-[20%] right-[10%] z-10 w-full md:w-[250px] block" href="#">
+<div class="bg-surface/50 glass-membrane p-flow-sm rounded-[2rem] border border-outline-variant/20 hover:border-primary/40 transition-all duration-500 flex flex-col items-center text-center relative">
+<div class="w-12 h-12 mb-3 bg-surface-container rounded-full flex items-center justify-center border border-outline/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="vital_signs">vital_signs</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-background text-[16px] mb-1">Био-Телеметрия</h3>
+<span class="font-label-caps text-label-caps text-secondary px-3 py-1 bg-secondary-fixed/10 rounded-full border border-secondary-fixed/20 mt-2">Active Stream</span>
+</div>
+</a>
+</div>
+</div>
+</main>
+</body></html>

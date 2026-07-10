@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-06-04T13:10:11.931Z",
+  "baseUrl": "http://127.0.0.1:3200/",
+  "results": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "expected": "hr",
+      "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/reports/site-eval-2026-06-04/market-opportunity-navigator-desktop-2026-06-04.png",
+      "consoleEntries": [],
+      "active": "hr",
+      "patterns": [
+        "proof-first case navigation",
+        "AI assistant intake",
+        "services calculator"
+      ],
+      "sectionHeight": 816,
+      "viewportWidth": 1440,
+      "documentScrollWidth": 1425,
+      "hasHorizontalOverflow": false,
+      "overflowNodes": []
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 920
+      },
+      "expected": "creator",
+      "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/reports/site-eval-2026-06-04/market-opportunity-navigator-mobile-viewport-2026-06-04.png",
+      "consoleEntries": [],
+      "active": "creator",
+      "patterns": [
+        "proof-first case navigation",
+        "AI assistant intake",
+        "services calculator"
+      ],
+      "sectionHeight": 2576,
+      "viewportWidth": 390,
+      "documentScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "overflowNodes": [],
+      "skipLinkHiddenState": {
+        "focus": false,
+        "rectY": -54,
+        "transform": "matrix(1, 0, 0, 1, 0, -70.4)"
+      }
+    }
+  ]
+}

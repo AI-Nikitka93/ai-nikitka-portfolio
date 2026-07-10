@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Досье: Объект 404 - DEEP PULSE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#2a3400",
+                        "tertiary": "#ffffff",
+                        "surface-container-highest": "#353535",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c17",
+                        "secondary-fixed-dim": "#95d3ba",
+                        "on-tertiary-fixed-variant": "#464741",
+                        "primary-container": "#caf300",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#002117",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c7bf",
+                        "on-secondary": "#003829",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "surface-container-low": "#1b1b1b",
+                        "outline-variant": "#444932",
+                        "on-secondary-fixed-variant": "#0b513d",
+                        "primary-fixed-dim": "#b0d500",
+                        "on-primary-container": "#596c00",
+                        "inverse-on-surface": "#303030",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-container": "#63655e",
+                        "surface-container": "#1f1f1f",
+                        "surface-tint": "#b0d500",
+                        "outline": "#8f9378",
+                        "inverse-primary": "#536600",
+                        "secondary": "#95d3ba",
+                        "on-surface-variant": "#c5c9ac",
+                        "tertiary-fixed": "#e3e3da",
+                        "surface-bright": "#393939",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#2f312b",
+                        "primary-fixed": "#caf300",
+                        "secondary-fixed": "#b0f0d6",
+                        "secondary-container": "#0b513d",
+                        "on-primary-fixed": "#171e00",
+                        "on-surface": "#e2e2e2",
+                        "on-background": "#e2e2e2",
+                        "tertiary-container": "#e3e3da",
+                        "on-secondary-container": "#83c2a9",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "on-primary-fixed-variant": "#3e4c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "glass-padding": "32px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-edge": "40px"
+                    },
+                    "fontFamily": {
+                        "data-mono": ["IBM Plex Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-sm": ["Inter"],
+                        "body-base": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-mono": ["14px", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "450"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            filter: drop-shadow(0 0 10px rgba(212, 255, 0, 0.6));
+        }
+        .deep-shadow {
+            box-shadow: 0 20px 40px rgba(6, 78, 59, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-base overflow-x-hidden relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background Layers -->
+<div class="fixed inset-0 pointer-events-none z-[-2] bg-surface-lowest"></div>
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-30" style="background: radial-gradient(circle at 70% 30%, #064e3b 0%, transparent 60%), radial-gradient(circle at 20% 80%, #0b513d 0%, transparent 50%); filter: blur(120px);"></div>
+<!-- SideNavBar (Hidden on Mobile) -->
+<nav class="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 z-40 flex-col items-center py-8 w-20 gap-8 bg-black/60 backdrop-blur-2xl rounded-r-[40px] border-r border-white/10 h-[921px] my-auto shadow-[10px_0_30px_rgba(0,0,0,0.5)]">
+<div class="text-[#d4ff00] font-black tracking-tighter writing-vertical-rl transform rotate-180 mb-4 font-headline-md text-headline-md">DP</div>
+<div class="flex flex-col gap-6 w-full items-center">
+<a class="text-white/40 hover:text-[#d4ff00] p-3 transition-all hover:scale-110 flex justify-center items-center group relative" href="#" title="Главная">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</a>
+<a class="bg-[#d4ff00] text-black rounded-full p-3 shadow-[0_0_15px_rgba(212,255,0,0.8)] flex justify-center items-center group relative hover:scale-110 transition-transform" href="#" title="Архив">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+</a>
+<a class="text-white/40 hover:text-[#d4ff00] p-3 transition-all hover:scale-110 flex justify-center items-center group relative" href="#" title="Верификатор">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</a>
+<a class="text-white/40 hover:text-[#d4ff00] p-3 transition-all hover:scale-110 flex justify-center items-center group relative" href="#" title="Заметки">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</a>
+<a class="text-white/40 hover:text-[#d4ff00] p-3 transition-all hover:scale-110 flex justify-center items-center group relative" href="#" title="Область">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+</a>
+<a class="text-white/40 hover:text-[#d4ff00] p-3 transition-all hover:scale-110 flex justify-center items-center group relative" href="#" title="Ссылки">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+</a>
+</div>
+<div class="mt-auto">
+<img alt="Operator Avatar" class="w-10 h-10 rounded-full border border-primary-container/50 object-cover grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-300" data-alt="High contrast low key portrait of a cyberpunk operator looking serious, green neon rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8vi6PHjLr5wuZk4eGBHt96nQUvhtrbUYfkQ9KLMWa_BeR0pgU2mTjQb72FTqAWx95QvOYPtGgbYd-yX03LnaCvJ6gZfkZMwDY2bE3Pg9tbmS0OqoGQpqkbjzU-4wt_9yCT78e9VKvT2ZqyeQRPCr2GlTBHbZsuKshMnnEEC1Dzo6TA7btwEqo270-0plKlVAQmyfRyKolkT0OE-WhHlsHzYP2DFic7dYWZcwztqtbTBgoRhtHvH7gbpkE09OaRy_DHvwWiQoc3xk"/>
+</div>
+</nav>
+<!-- TopNavBar (Mobile Only) -->
+<nav class="md:hidden fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-black/40 backdrop-blur-xl border-b border-white/10">
+<div class="text-2xl font-bold tracking-tighter text-[#d4ff00] drop-shadow-[0_0_8px_rgba(212,255,0,0.6)] font-headline-md">DEEP PULSE</div>
+<button class="text-[#d4ff00]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-20 md:pt-12 md:pl-32 pr-4 md:pr-12 max-w-[1440px] mx-auto min-h-screen flex flex-col gap-8">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-4">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-data-mono text-data-mono text-primary-container px-2 py-1 rounded border border-primary-container/30 bg-primary-container/10">ID: 404-X</span>
+<span class="font-data-mono text-data-mono text-secondary px-2 py-1 rounded border border-secondary/30 bg-secondary/10 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        АКТИВЕН
+                    </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-tertiary mb-2">Объект "Морфеус"</h1>
+<p class="font-data-mono text-data-mono text-on-surface-variant max-w-2xl">Сводка данных по поведенческим паттернам и аномалиям в нейронной структуре сектора 7.</p>
+</div>
+<div class="flex gap-4">
+<button class="glass-panel text-tertiary px-6 py-3 rounded-lg font-data-mono text-data-mono hover:bg-white/5 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                    ЭКСПОРТ
+                </button>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-data-mono text-data-mono font-bold hover:shadow-[0_0_20px_rgba(202,243,0,0.4)] transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">edit</span>
+                    РЕДАКТИРОВАТЬ
+                </button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-min">
+<!-- Visual Core Pod (Spans 4 cols on Web) -->
+<div class="glass-panel rounded-2xl p-6 md:col-span-4 flex flex-col gap-6 deep-shadow relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-50"></div>
+<div class="flex justify-between items-center relative z-10">
+<h2 class="font-headline-md text-headline-md text-primary-container">Визуальный срез</h2>
+<span class="material-symbols-outlined text-on-surface-variant">visibility</span>
+</div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden border border-white/10 z-10">
+<img alt="Abstract neural pattern" class="w-full h-full object-cover mix-blend-screen opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Abstract glowing neon green fluid shapes resembling a neural network on a deep black background, highly detailed macro shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLui3Kk-VOMAfMHgxWO3zasvL5sT75pY-qUNtxH52tRy52Lh-CqmZPi8TSFa9bRQ702h-vAylJfY7RhVvbErEc8NmXN_0Ybvf8Sb2MZ-dUIlZLDPc8MF5jkkMWQhAKMbgyMn0wV121U-DWoaMz6sS6BR_C4Aaq5-tYmILAS8aGYXhXfnF1zNiLStlzAI8OOgXkgN6TWi397EQMPWXPRvfClpIjAJqzezMtKQoWX6_I9qXgnykibqiJBGKQP8ebwLIjhspHGv40KCE"/>
+<!-- Overlay Grid -->
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE5LjkgMjBMMTkuOS4xIDE5LjkuMVYuMSIvPjxwYXRoIGQ9Ik0uMSAxOS45SDE5LjkiLz48L3N2Zz4=')] opacity-20 bg-[length:20px_20px]"></div>
+<!-- Crosshairs -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-primary-container/50 rounded-full flex items-center justify-center pointer-events-none">
+<div class="w-1 h-1 bg-primary-container rounded-full neon-glow"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-auto relative z-10">
+<div>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-[10px]">СИГНАТУРА</div>
+<div class="font-data-mono text-data-mono text-tertiary">ALFA-90</div>
+</div>
+<div>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-[10px]">СТАТУС СЕТИ</div>
+<div class="font-data-mono text-data-mono text-secondary">СИНХРОНИЗИРОВАНО</div>
+</div>
+</div>
+</div>
+<!-- Metadata Matrix (Spans 8 cols) -->
+<div class="md:col-span-8 flex flex-col gap-6">
+<!-- Top Row of Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="glass-panel rounded-2xl p-6 deep-shadow border-t-2 border-t-primary-container/50">
+<div class="font-data-mono text-data-mono text-on-surface-variant mb-2">ЧАСТОТА ПУЛЬСАЦИЙ</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-xl text-headline-lg text-tertiary">142</span>
+<span class="font-data-mono text-data-mono text-primary-container">Hz</span>
+</div>
+<div class="mt-4 w-full h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[75%] neon-glow"></div>
+</div>
+</div>
+<div class="glass-panel rounded-2xl p-6 deep-shadow border-t-2 border-t-secondary/50">
+<div class="font-data-mono text-data-mono text-on-surface-variant mb-2">УРОВЕНЬ УГРОЗЫ</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-xl text-headline-lg text-tertiary">НИЗКИЙ</span>
+</div>
+<div class="mt-4 flex gap-1">
+<div class="h-1 flex-1 bg-secondary rounded-full"></div>
+<div class="h-1 flex-1 bg-secondary/20 rounded-full"></div>
+<div class="h-1 flex-1 bg-secondary/20 rounded-full"></div>
+<div class="h-1 flex-1 bg-secondary/20 rounded-full"></div>
+</div>
+</div>
+<div class="glass-panel rounded-2xl p-6 deep-shadow border-t-2 border-t-white/20">
+<div class="font-data-mono text-data-mono text-on-surface-variant mb-2">ВРЕМЯ КОНТАКТА</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-xl text-headline-lg text-tertiary">04:22</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">ЧАС</span>
+</div>
+<div class="mt-4 font-data-mono text-data-mono text-xs text-on-surface-variant">
+                            ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: 12:04:SS
+                        </div>
+</div>
+</div>
+<!-- Deep Data Timeline -->
+<div class="glass-panel rounded-2xl p-6 deep-shadow flex-1">
+<h3 class="font-headline-md text-headline-md text-tertiary mb-6">Хронология событий</h3>
+<div class="space-y-6 relative before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-gradient-to-b before:from-primary-container before:to-transparent">
+<!-- Event Item -->
+<div class="relative pl-10">
+<div class="absolute left-1.5 top-1.5 w-3 h-3 bg-primary-container rounded-full neon-glow -translate-x-1/2"></div>
+<div class="flex justify-between items-start mb-1">
+<div class="font-data-mono text-data-mono text-primary-container">ПЕРВЫЙ КОНТАКТ</div>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-sm">24.10.2024 / 14:00</div>
+</div>
+<p class="text-on-surface-variant text-sm font-body-base">Зафиксирован всплеск активности в узле B-42. Инициализация протокола слежения.</p>
+</div>
+<!-- Event Item -->
+<div class="relative pl-10">
+<div class="absolute left-1.5 top-1.5 w-2 h-2 bg-secondary rounded-full -translate-x-1/2"></div>
+<div class="flex justify-between items-start mb-1">
+<div class="font-data-mono text-data-mono text-secondary">СБОР ДАННЫХ</div>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-sm">25.10.2024 / 09:15</div>
+</div>
+<p class="text-on-surface-variant text-sm font-body-base">Успешное извлечение метаданных из периферийных систем. Аномалий не обнаружено.</p>
+</div>
+<!-- Event Item -->
+<div class="relative pl-10">
+<div class="absolute left-1.5 top-1.5 w-2 h-2 bg-white/30 rounded-full -translate-x-1/2"></div>
+<div class="flex justify-between items-start mb-1">
+<div class="font-data-mono text-data-mono text-white/70">ОЖИДАНИЕ ВВОДА</div>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-sm">--.--.---- / --:--</div>
+</div>
+<p class="text-on-surface-variant/50 text-sm font-body-base italic">Требуется подтверждение оператора для глубокого сканирования.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Notes Pod (Spans full width below) -->
+<div class="md:col-span-12 glass-panel rounded-2xl p-6 deep-shadow mt-4">
+<div class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-primary-container">terminal</span>
+<h2 class="font-headline-md text-headline-md text-tertiary">Архивные заметки</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-black/30 p-4 rounded-xl border border-white/5 font-data-mono text-data-mono text-on-surface-variant hover:border-primary-container/30 transition-colors cursor-crosshair">
+<span class="text-primary-container block mb-2">&gt; query_log_01</span>
+                        Объект демонстрирует необычную способность к обходу стандартных фильтров. Рекомендуется повысить чувствительность сенсоров в смежных секторах.
+                    </div>
+<div class="bg-black/30 p-4 rounded-xl border border-white/5 font-data-mono text-data-mono text-on-surface-variant hover:border-primary-container/30 transition-colors cursor-crosshair">
+<span class="text-secondary block mb-2">&gt; analysis_res_final</span>
+                        Структура кода напоминает ранние прототипы проекта "Икар". Требуется дальнейшее изучение исходных библиотек.
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-12 gap-4 border-t border-[#d4ff00]/20 drop-shadow-[0_-10px_20px_rgba(6,78,59,0.2)] bg-transparent mt-20 max-w-[1440px] mx-auto md:pl-32">
+<div class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-[#d4ff00]">
+            © 2024 DEEP PULSE // НЕЙРОННАЯ СЕТЬ
+        </div>
+<div class="flex gap-6">
+<a class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-white/30 hover:text-white transition-colors hover:glow-sm" href="#">Конфиденциальность</a>
+<a class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-white/30 hover:text-white transition-colors hover:glow-sm" href="#">Протокол</a>
+<a class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-white/30 hover:text-white transition-colors hover:glow-sm" href="#">Терминал</a>
+</div>
+</footer>
+</body></html>

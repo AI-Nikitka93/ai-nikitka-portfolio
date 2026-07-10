@@ -1,0 +1,111 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "documentWidth": 1425,
+  "bodyWidth": 1425,
+  "horizontalOverflow": false,
+  "h1": {
+    "text": "AI_Nikitka93: проверяемые AI-работы Никиты Кизевича.",
+    "rect": {
+      "x": 81,
+      "y": 205.796875,
+      "width": 768,
+      "height": 180,
+      "top": 205.796875,
+      "right": 849,
+      "bottom": 385.796875,
+      "left": 81
+    },
+    "opacity": "1",
+    "visibleAboveFold": true
+  },
+  "proof": {
+    "rect": {
+      "x": 924.328125,
+      "y": 169,
+      "width": 419.671875,
+      "height": 516.796875,
+      "top": 169,
+      "right": 1344,
+      "bottom": 685.796875,
+      "left": 924.328125
+    },
+    "opacity": "1",
+    "visibleAboveFold": true
+  },
+  "links": [
+    {
+      "text": "Laureate / 2026КИНОМАТИКоткрыть досье",
+      "href": "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition"
+    },
+    {
+      "text": "Best film / 2025LabStory / Helixоткрыть досье",
+      "href": "/portfolio/sig-02-labstory-helix-best-animated-film"
+    },
+    {
+      "text": "AI imaging / 202535AWARDSоткрыть досье",
+      "href": "/portfolio/sig-01-35awards-ai-imaging-field-results"
+    }
+  ],
+  "images": [
+    {
+      "alt": "КИНОМАТИК: proof asset preview",
+      "src": "http://127.0.0.1:3200/_next/image?url=%2Fproof-assets%2Fsig-04-kinomatik.jpg&w=640&q=75",
+      "complete": true,
+      "naturalWidth": 230,
+      "naturalHeight": 325,
+      "box": {
+        "x": 955.328125,
+        "y": 296.796875,
+        "width": 180.515625,
+        "height": 130,
+        "top": 296.796875,
+        "right": 1135.84375,
+        "bottom": 426.796875,
+        "left": 955.328125
+      },
+      "visibleAboveFold": true,
+      "objectFit": "contain"
+    },
+    {
+      "alt": "LabStory / Helix: proof asset preview",
+      "src": "http://127.0.0.1:3200/_next/image?url=%2Fproof-assets%2Fsig-02-helix-film.png&w=96&q=75",
+      "complete": true,
+      "naturalWidth": 96,
+      "naturalHeight": 54,
+      "box": {
+        "x": 955.328125,
+        "y": 466.796875,
+        "width": 94,
+        "height": 74,
+        "top": 466.796875,
+        "right": 1049.328125,
+        "bottom": 540.796875,
+        "left": 955.328125
+      },
+      "visibleAboveFold": true,
+      "objectFit": "contain"
+    },
+    {
+      "alt": "35AWARDS: proof asset preview",
+      "src": "http://127.0.0.1:3200/_next/image?url=%2Fproof-assets%2Fsig-01-35awards.jpg&w=96&q=75",
+      "complete": true,
+      "naturalWidth": 96,
+      "naturalHeight": 136,
+      "box": {
+        "x": 955.328125,
+        "y": 580.796875,
+        "width": 94,
+        "height": 74,
+        "top": 580.796875,
+        "right": 1049.328125,
+        "bottom": 654.796875,
+        "left": 955.328125
+      },
+      "visibleAboveFold": true,
+      "objectFit": "contain"
+    }
+  ]
+}

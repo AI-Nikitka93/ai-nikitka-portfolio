@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SUBJECT_7X - DOSSIER</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0c0f04",
+                    "secondary-fixed": "#e3e2e2",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "background": "#111508",
+                    "surface": "#111508",
+                    "inverse-primary": "#506600",
+                    "error": "#ffb4ab",
+                    "on-background": "#e2e4cf",
+                    "surface-container-high": "#282b1d",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#464747",
+                    "outline": "#8e9379",
+                    "on-tertiary": "#21323e",
+                    "surface-container-low": "#1a1d10",
+                    "tertiary": "#ffffff",
+                    "on-surface-variant": "#c4c9ac",
+                    "outline-variant": "#444933",
+                    "surface-container": "#1e2113",
+                    "surface-tint": "#abd600",
+                    "surface-bright": "#373b2c",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "surface-dim": "#111508",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#333627",
+                    "error-container": "#93000a",
+                    "surface-variant": "#333627",
+                    "inverse-on-surface": "#2f3223",
+                    "on-tertiary-container": "#556774",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "primary-fixed-dim": "#abd600",
+                    "on-primary-container": "#556d00",
+                    "on-primary-fixed": "#161e00",
+                    "on-secondary-container": "#b8b8b8",
+                    "primary-container": "#c3f400",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "secondary-container": "#484949",
+                    "primary": "#ffffff",
+                    "secondary": "#c7c6c6",
+                    "inverse-surface": "#e2e4cf",
+                    "tertiary-fixed": "#d2e5f5",
+                    "on-surface": "#e2e4cf",
+                    "on-primary": "#283500",
+                    "on-secondary": "#2f3131",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "tertiary-container": "#d2e5f5",
+                    "primary-fixed": "#c3f400",
+                    "tertiary-fixed-dim": "#b6c9d8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "column_count": "12",
+                    "margin": "32px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "mono-data": [
+                            "IBM Plex Mono"
+                    ],
+                    "body-md": [
+                            "Space Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Space Grotesk"
+                    ],
+                    "mono-label": [
+                            "IBM Plex Mono"
+                    ],
+                    "display-xl": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "mono-data": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "mono-label": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-xl": [
+                            "80px",
+                            {
+                                    "lineHeight": "0.9",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Custom structural enforcements for Brutalist layout */
+        .border-structural {
+            border-color: #8e9379; /* theme outline */
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-background min-h-screen flex flex-col overflow-x-hidden selection:bg-primary-fixed selection:text-black">
+<!-- TopAppBar -->
+<header class="bg-black text-[#CCFF00] font-['Space_Grotesk'] font-bold uppercase tracking-widest flex justify-between items-center px-8 h-16 w-full z-50 fixed top-0 border-b border-[#CCFF00]">
+<div class="text-2xl font-black text-[#CCFF00] tracking-tighter">AI_NIKITKA93</div>
+<div class="hidden"></div>
+<div class="text-white/80 hover:bg-[#CCFF00] hover:text-black transition-colors duration-0 px-2 py-1 cursor-pointer">RU / EN</div>
+</header>
+<div class="flex flex-1 pt-16">
+<!-- SideNavBar -->
+<nav class="bg-black text-[#CCFF00] font-['IBM_Plex_Mono'] text-sm tracking-tighter fixed left-0 top-16 flex flex-col h-[calc(100vh-64px)] w-64 border-r border-white/20 z-40 hidden md:flex">
+<div class="p-6 border-b border-white/20">
+<div class="text-[#CCFF00] font-bold text-lg">DIRECTORY</div>
+<div class="text-white/60 text-xs mt-1">V.1.0.4-BETA</div>
+</div>
+<ul class="flex flex-col w-full flex-1">
+<li class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black cursor-pointer transition-none">
+<span class="material-symbols-outlined mr-3 text-lg" style="font-variation-settings: 'FILL' 0;">inventory_2</span>
+                    01/ ARCHIVE
+                </li>
+<!-- ACTIVE NAV ITEM -->
+<li class="bg-[#CCFF00] text-black font-bold flex items-center px-4 py-3 cursor-pointer transition-none border-b border-white/10">
+<span class="material-symbols-outlined mr-3 text-lg" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+                    02/ DOSSIER
+                </li>
+<li class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black cursor-pointer transition-none">
+<span class="material-symbols-outlined mr-3 text-lg" style="font-variation-settings: 'FILL' 0;">format_list_numbered</span>
+                    03/ INDEX
+                </li>
+<li class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black cursor-pointer transition-none">
+<span class="material-symbols-outlined mr-3 text-lg" style="font-variation-settings: 'FILL' 0;">terminal</span>
+                    04/ SYSTEM
+                </li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full md:ml-64 px-gutter md:px-margin pb-32">
+<!-- Structural Grid Container -->
+<div class="grid grid-cols-12 gap-gutter max-w-[1600px] mx-auto mt-margin">
+<!-- Header Block: Spans full width -->
+<div class="col-span-12 border-b border-outline pb-8 mb-8 flex flex-col md:flex-row justify-between items-end gap-8">
+<div>
+<h2 class="font-mono-label text-mono-label text-outline mb-2">IDENTIFIER LOG</h2>
+<h1 class="font-display-xl text-display-xl text-tertiary uppercase tracking-tighter">SUBJECT_7X</h1>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-3 h-3 bg-primary-fixed block"></span>
+<span class="font-mono-label text-mono-label text-primary-fixed tracking-widest">STATUS: CONTAINED</span>
+</div>
+<p class="font-mono-data text-mono-data text-on-surface-variant text-right max-w-sm">
+                            CLEARANCE LEVEL: UMBRA<br/>
+                            LAST UPDATE: 2024.10.24 // 04:22:19 UTC
+                        </p>
+</div>
+</div>
+<!-- Primary Data Row: Asymmetrical Split -->
+<!-- Left Column: Scan/Image (Span 5) -->
+<div class="col-span-12 md:col-span-5 flex flex-col gap-8 border-r-0 md:border-r border-outline pr-0 md:pr-gutter">
+<div class="border border-outline p-2 relative group">
+<div class="absolute top-0 left-0 w-2 h-2 bg-primary-fixed m-2 z-10"></div>
+<img alt="Scan Visualization" class="w-full h-auto object-cover grayscale opacity-80 mix-blend-screen filter contrast-150" data-alt="high contrast thermal or lidar scan of a human silhouette in deep green and black tones, abstract technological distortion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-24DVVyUiFtYpR_ykAwe1XvK21Wwtq1ALEwJSSUiskltTIIuU9gbA4REsbRXEGVMGeqHjT3p8yU2Y5IDsUa28lvLIYsyGaMrVDlTdQ4zw1Z6E9OtRbkJLRfNx06utlvTdaqmlNAG8A8stUpWYTkVLkrLs0zl2prjImUgY5_NWKaPEzl0KNk3J9D2dKAVfFX98nbz2b5zkPxye5cjMnXbYkdbWqr6iee0jQsvGSul9WVQLsIK32BafocCkCi_mq6BngPFF6D-yRaY"/>
+<div class="p-2 border-t border-outline mt-2 flex justify-between">
+<span class="font-mono-label text-mono-label text-outline">FIG. 1 // BIOMETRIC_CAPTURE</span>
+<span class="font-mono-label text-mono-label text-outline">REF: 88-A9</span>
+</div>
+</div>
+<!-- Minor Metadata Grid within Left Col -->
+<div class="grid grid-cols-2 gap-px bg-outline">
+<div class="bg-surface-container-lowest p-4">
+<div class="font-mono-label text-mono-label text-outline mb-1">ORIGIN</div>
+<div class="font-mono-data text-mono-data text-on-background">SECTOR_4</div>
+</div>
+<div class="bg-surface-container-lowest p-4">
+<div class="font-mono-label text-mono-label text-outline mb-1">CLASS</div>
+<div class="font-mono-data text-mono-data text-on-background">ANOMALOUS</div>
+</div>
+<div class="bg-surface-container-lowest p-4">
+<div class="font-mono-label text-mono-label text-outline mb-1">MASS_KG</div>
+<div class="font-mono-data text-mono-data text-on-background">78.4</div>
+</div>
+<div class="bg-surface-container-lowest p-4">
+<div class="font-mono-label text-mono-label text-outline mb-1">TEMP_C</div>
+<div class="font-mono-data text-mono-data text-primary-fixed">39.2 [ELEVATED]</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Text/Analysis (Span 7) -->
+<div class="col-span-12 md:col-span-7 flex flex-col gap-8">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-tertiary border-b border-outline pb-4 mb-4">OBSERVATION_LOG</h3>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-4 column-count-1">
+<p>
+                                Subject exhibits non-standard neurological patterns consistent with prolonged exposure to [REDACTED] frequencies. Motor functions operate at a 14% efficiency surplus compared to baseline human metrics.
+                            </p>
+<p>
+                                Structural integrity of the skeletal matrix shows signs of micro-fractures that are actively healing at an accelerated rate. The cellular regeneration process emits a faint luminescent signature detectable only via spectrum analysis (See FIG. 1).
+                            </p>
+</div>
+</div>
+<!-- Tabular Data Block -->
+<div class="mt-8 border-t border-outline">
+<div class="font-mono-label text-mono-label text-primary-fixed py-2 mb-4">RAW_TELEMETRY_STREAM</div>
+<div class="flex flex-col font-mono-data text-mono-data w-full border border-outline">
+<div class="flex border-b border-outline bg-surface-container text-outline">
+<div class="w-1/4 p-3 border-r border-outline">TIMESTAMP</div>
+<div class="w-1/4 p-3 border-r border-outline">SENSOR_ID</div>
+<div class="w-1/4 p-3 border-r border-outline">READING</div>
+<div class="w-1/4 p-3">VARIANCE</div>
+</div>
+<div class="flex border-b border-outline hover:bg-surface-container-high transition-colors">
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">T-04:00</div>
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">ALPHA_9</div>
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">440.1 Hz</div>
+<div class="w-1/4 p-3 text-primary-fixed">+0.4%</div>
+</div>
+<div class="flex border-b border-outline hover:bg-surface-container-high transition-colors">
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">T-04:15</div>
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">ALPHA_9</div>
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">441.8 Hz</div>
+<div class="w-1/4 p-3 text-primary-fixed">+0.8%</div>
+</div>
+<div class="flex hover:bg-surface-container-high transition-colors">
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">T-04:30</div>
+<div class="w-1/4 p-3 border-r border-outline text-on-surface-variant">BETA_2</div>
+<div class="w-1/4 p-3 border-r border-outline text-error">ERR_NULL</div>
+<div class="w-1/4 p-3 text-error">--</div>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="mt-auto pt-8 flex gap-4">
+<button class="bg-primary-fixed text-black font-mono-label text-mono-label px-8 py-4 hover:bg-white transition-colors duration-0 uppercase tracking-widest">
+                            INITIATE PURGE
+                        </button>
+<button class="border border-outline text-outline font-mono-label text-mono-label px-8 py-4 hover:bg-outline hover:text-black transition-colors duration-0 uppercase tracking-widest">
+                            LOCK RECORD
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-black text-white font-['IBM_Plex_Mono'] text-[10px] uppercase fixed bottom-0 left-0 w-full px-8 py-2 flex justify-between items-center z-40 border-t border-white/20">
+<div class="text-[#CCFF00]">© 2024 AI_NIKITKA93 // CORE_PROTOCOL_V4</div>
+<div class="flex gap-6 text-white/60">
+<span class="hover:text-[#CCFF00] transition-none cursor-default">ST_STATUS: OK</span>
+<span class="hover:text-[#CCFF00] transition-none cursor-default">LATENCY: 12MS</span>
+<span class="hover:text-[#CCFF00] transition-none cursor-default">SEC: ENCRYPTED</span>
+</div>
+</footer>
+</body></html>

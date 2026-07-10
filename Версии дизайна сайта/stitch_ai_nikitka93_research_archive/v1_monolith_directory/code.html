@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technical Monolith - Directory Index</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0d0f0d",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "surface-container-highest": "#333533",
+                        "on-secondary-fixed": "#1a1c19",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-tint": "#abd600",
+                        "secondary-fixed": "#e3e3de",
+                        "on-secondary": "#2f312e",
+                        "surface-container-high": "#282a28",
+                        "on-tertiary-container": "#636562",
+                        "surface-dim": "#121412",
+                        "surface-variant": "#333533",
+                        "secondary-container": "#484a46",
+                        "tertiary-container": "#e2e3de",
+                        "on-error": "#690005",
+                        "surface": "#121412",
+                        "background": "#121412",
+                        "on-secondary-fixed-variant": "#454744",
+                        "inverse-primary": "#506600",
+                        "on-background": "#e2e3df",
+                        "tertiary-fixed-dim": "#c6c7c3",
+                        "surface-container-low": "#1a1c1a",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7c2",
+                        "on-tertiary": "#2f312e",
+                        "inverse-on-surface": "#2f312f",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e201e",
+                        "primary-container": "#c3f400",
+                        "inverse-surface": "#e2e3df",
+                        "outline": "#8e9379",
+                        "on-secondary-container": "#b8b9b4",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary": "#c6c7c2",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary": "#ffffff",
+                        "surface-bright": "#383a37",
+                        "on-surface": "#e2e3df",
+                        "outline-variant": "#444933",
+                        "on-tertiary-fixed": "#1a1c1a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e3de"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "base": "4px",
+                        "gutter": "16px",
+                        "margin": "32px",
+                        "column-count": "12"
+                    },
+                    fontFamily: {
+                        "label-caps": ["IBM Plex Mono"],
+                        "h2": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "label-caps": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "data-mono": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for brutalist feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121412;
+            border-left: 1px solid #333533;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333533;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8e9379;
+        }
+    </style>
+</head>
+<body class="bg-[#080A08] text-[#F5F5F0] overflow-hidden flex h-screen font-body-md selection:bg-primary-fixed selection:text-black">
+<!-- SideNavBar -->
+<nav class="bg-[#080A08] text-[#CCFF00] font-mono text-xs uppercase rounded-none border-r border-[#F5F5F0] h-screen border-b border-[#F5F5F0] flat no shadows transition-none cursor-crosshair w-64 flex flex-col flex-shrink-0 z-20">
+<!-- Header -->
+<div class="p-6 border-b border-[#F5F5F0]">
+<div class="text-[#F5F5F0] font-bold text-xl tracking-tighter">OS_MONOLITH</div>
+<div class="text-[#F5F5F0] opacity-50 mt-1">V_1.0.9</div>
+</div>
+<!-- Navigation Tabs -->
+<div class="flex flex-col flex-1">
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+                CORE
+            </a>
+<a class="bg-[#CCFF00] text-black font-bold flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+                NODES
+            </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+                STREAM
+            </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-[18px]">description</span>
+                LOGS
+            </a>
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-[18px]">settings_input_component</span>
+                SYSTEM
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex flex-col flex-1 relative min-w-0 bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#080A08] text-[#CCFF00] font-['Space_Grotesk'] uppercase tracking-widest text-sm rounded-none border-b border-[#F5F5F0] flat no shadows transition-none flex justify-between items-center w-full h-16 flex-shrink-0 z-10">
+<div class="text-2xl font-black tracking-tighter text-[#F5F5F0] px-4">
+                AI_NIKITKA_93
+            </div>
+<div class="flex items-center h-full">
+<!-- Search Bar Placeholder -->
+<div class="h-full border-l border-[#F5F5F0] flex items-center px-4 hover:bg-[#CCFF00] hover:text-black cursor-crosshair transition-none group text-[#F5F5F0]">
+<span class="material-symbols-outlined mr-2 group-hover:text-black">search</span>
+<span class="opacity-50 font-mono text-xs">QUERY_INIT</span>
+</div>
+<!-- Trailing Icons -->
+<div class="flex h-full">
+<button class="h-full px-4 border-l border-[#F5F5F0] hover:bg-[#CCFF00] hover:text-black text-[#F5F5F0] flex items-center justify-center transition-none cursor-crosshair">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="h-full px-4 border-l border-[#F5F5F0] hover:bg-[#CCFF00] hover:text-black text-[#F5F5F0] flex items-center justify-center transition-none cursor-crosshair">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="h-full px-4 border-l border-[#F5F5F0] hover:bg-[#CCFF00] hover:text-black text-[#F5F5F0] flex items-center justify-center transition-none cursor-crosshair">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto pb-12 p-margin">
+<!-- Context Header -->
+<div class="mb-margin border-b border-surface-variant pb-gutter">
+<div class="flex items-end justify-between mb-2">
+<h1 class="font-h1 text-h1 text-primary-fixed uppercase tracking-tight">Directory_Index</h1>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-right">
+<div>LATENCY: 12ms</div>
+<div>NODE: EU_WEST_01</div>
+</div>
+</div>
+<p class="font-data-mono text-data-mono text-on-surface w-2/3">
+                    [SYSTEM_MSG] Aggregated index of active nodes, structural entities, and logical pathways within the current operational sector. Access is restricted by clearance level.
+                </p>
+</div>
+<!-- Brutalist Grid -->
+<!-- Using background gap to create 1px borders everywhere -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-surface-variant border border-surface-variant">
+<!-- Card 1 -->
+<div class="bg-background group hover:bg-surface-container-low transition-none flex flex-col min-h-[240px]">
+<!-- Header Strip -->
+<div class="border-b border-surface-variant px-4 py-2 flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface-variant">[DIR_01]</span>
+<span class="text-primary-fixed flex items-center gap-1"><span class="w-1.5 h-1.5 bg-primary-fixed rounded-none inline-block"></span> ACTIVE</span>
+</div>
+<!-- Body -->
+<div class="p-6 flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-[32px] text-outline mb-4 group-hover:text-primary-fixed transition-none">folder_data</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-2 uppercase">Neural_Assets</h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant">Compiled cognitive models and training datasets. Volatile storage.</p>
+</div>
+<!-- Meta Strip -->
+<div class="border-t border-surface-variant px-4 py-2 font-data-mono text-data-mono text-on-surface flex justify-between bg-surface-container-lowest">
+<span>SIZE: 4.2TB</span>
+<span>LVL: 04</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-background group hover:bg-surface-container-low transition-none flex flex-col min-h-[240px]">
+<div class="border-b border-surface-variant px-4 py-2 flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface-variant">[DIR_02]</span>
+<span class="text-primary-fixed flex items-center gap-1"><span class="w-1.5 h-1.5 bg-primary-fixed rounded-none inline-block"></span> ACTIVE</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-[32px] text-outline mb-4 group-hover:text-primary-fixed transition-none">cable</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-2 uppercase">Routing_Tables</h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant">Static and dynamic network topology definitions.</p>
+</div>
+<div class="border-t border-surface-variant px-4 py-2 font-data-mono text-data-mono text-on-surface flex justify-between bg-surface-container-lowest">
+<span>SIZE: 12GB</span>
+<span>LVL: 02</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-background group hover:bg-surface-container-low transition-none flex flex-col min-h-[240px]">
+<div class="border-b border-surface-variant px-4 py-2 flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface-variant">[DIR_03]</span>
+<span class="text-outline flex items-center gap-1"><span class="w-1.5 h-1.5 bg-outline rounded-none inline-block"></span> ARCHIVE</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-center opacity-70 group-hover:opacity-100 transition-none">
+<span class="material-symbols-outlined text-[32px] text-outline mb-4 group-hover:text-primary-fixed transition-none">inventory_2</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-2 uppercase">Legacy_Logs</h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant">Cold storage system event records prior to epoch 164.</p>
+</div>
+<div class="border-t border-surface-variant px-4 py-2 font-data-mono text-data-mono text-on-surface flex justify-between bg-surface-container-lowest">
+<span>SIZE: 89TB</span>
+<span>LVL: 01</span>
+</div>
+</div>
+<!-- Card 4 (Spans 2 columns on lg) -->
+<div class="bg-background group hover:bg-surface-container-low transition-none flex flex-col min-h-[240px] lg:col-span-2 border-t lg:border-t-0 border-surface-variant">
+<div class="border-b border-surface-variant px-4 py-2 flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface-variant">[DIR_04]</span>
+<span class="text-error flex items-center gap-1"><span class="w-1.5 h-1.5 bg-error rounded-none inline-block"></span> DEGRADED</span>
+</div>
+<div class="p-6 flex-1 flex flex-row items-center gap-6">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[64px] text-error mb-4 transition-none">warning</span>
+</div>
+<div>
+<h2 class="font-h2 text-h2 text-error mb-2 uppercase">Security_Manifests</h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant max-w-xl">Critical alert. Sector integrity compromised. Partial data loss detected in cryptographic key indexes. Awaiting manual override.</p>
+</div>
+</div>
+<div class="border-t border-surface-variant px-4 py-2 font-data-mono text-data-mono text-on-surface flex justify-between bg-error-container text-on-error-container">
+<span>STATUS: URGENT</span>
+<span>LVL: 05</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-background group hover:bg-surface-container-low transition-none flex flex-col min-h-[240px]">
+<div class="border-b border-surface-variant px-4 py-2 flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface-variant">[DIR_05]</span>
+<span class="text-primary-fixed flex items-center gap-1"><span class="w-1.5 h-1.5 bg-primary-fixed rounded-none inline-block"></span> ACTIVE</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-[32px] text-outline mb-4 group-hover:text-primary-fixed transition-none">group_work</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-2 uppercase">User_Registry</h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant">Biometric hash tables and permission matrices.</p>
+</div>
+<div class="border-t border-surface-variant px-4 py-2 font-data-mono text-data-mono text-on-surface flex justify-between bg-surface-container-lowest">
+<span>SIZE: 840MB</span>
+<span>LVL: 03</span>
+</div>
+</div>
+</div>
+<!-- Pagination / Action Strip -->
+<div class="mt-gutter border border-surface-variant flex font-data-mono text-data-mono text-on-surface">
+<button class="flex-1 py-3 text-center border-r border-surface-variant hover:bg-primary-fixed hover:text-black transition-none uppercase">
+                    Load_Previous
+                </button>
+<div class="px-6 py-3 bg-surface-container flex items-center justify-center">
+                    [01 / 14]
+                </div>
+<button class="flex-1 py-3 text-center border-l border-surface-variant hover:bg-primary-fixed hover:text-black transition-none uppercase">
+                    Load_Next
+                </button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-[#080A08] text-[#CCFF00] font-mono text-[10px] tracking-tight rounded-none border-t border-[#F5F5F0] border-l border-[#F5F5F0] flat no shadows fixed bottom-0 left-64 right-0 flex justify-between items-center px-4 py-1 z-30">
+<div class="uppercase">
+            STATUS: STABLE // DIAG_CODE: 0x00213
+        </div>
+<div class="flex gap-4">
+<a class="text-[#F5F5F0] hover:text-[#CCFF00] transition-none uppercase" href="#">0x01_RESET</a>
+<a class="text-[#F5F5F0] hover:text-[#CCFF00] transition-none uppercase" href="#">0x02_DEBUG</a>
+<a class="text-[#F5F5F0] hover:text-[#CCFF00] transition-none uppercase" href="#">0x03_VOID</a>
+</div>
+</footer>
+</body></html>

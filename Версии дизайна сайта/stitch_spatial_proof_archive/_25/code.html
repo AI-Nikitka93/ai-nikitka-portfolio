@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operator Console: AI_Nikitka93</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#101509",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary": "#cdc6b6",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#504157",
+                        "surface-container-high": "#272c1f",
+                        "surface-container-highest": "#323629",
+                        "surface-bright": "#363b2d",
+                        "outline-variant": "#424935",
+                        "on-background": "#e0e5d1",
+                        "surface-container": "#1d2115",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#4d493d",
+                        "primary-container": "#b0f734",
+                        "inverse-surface": "#e0e5d1",
+                        "on-tertiary-fixed": "#23172a",
+                        "archive-bone": "#D6CFBF",
+                        "phosphor-lime": "#B7FF3C",
+                        "raw-titanium": "#8E968C",
+                        "primary-fixed": "#b0f734",
+                        "on-tertiary-container": "#6f5f76",
+                        "on-primary-fixed": "#121f00",
+                        "void-black": "#0A0D0C",
+                        "background": "#101509",
+                        "on-secondary-fixed": "#1e1b11",
+                        "on-secondary-fixed-variant": "#4b473b",
+                        "tertiary": "#ffffff",
+                        "surface-tint": "#96da06",
+                        "surface-variant": "#323629",
+                        "tertiary-fixed-dim": "#d4c0db",
+                        "secondary-fixed-dim": "#cdc6b6",
+                        "surface-container-low": "#191d11",
+                        "tertiary-container": "#f0dcf7",
+                        "inverse-primary": "#456800",
+                        "surface-dim": "#101509",
+                        "on-surface": "#e0e5d1",
+                        "on-surface-variant": "#c2caaf",
+                        "ember-orange": "#FF6A2A",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#f0dcf7",
+                        "primary-fixed-dim": "#96da06",
+                        "primary": "#ffffff",
+                        "on-secondary": "#343025",
+                        "on-tertiary": "#392b40",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e9e2d1",
+                        "inverse-on-surface": "#2d3225",
+                        "on-primary-container": "#4a6f00",
+                        "on-primary": "#223600",
+                        "carbon-fog": "#161B19",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#beb8a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "sm": "8px",
+                        "margin": "40px",
+                        "unit": "4px",
+                        "xl": "48px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-metadata": ["IBM Plex Mono"],
+                        "mono-id": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-regular": ["Space Grotesk"],
+                        "header-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "mono-label": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "mono-metadata": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "mono-id": ["11px", { "lineHeight": "1", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-regular": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "header-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .rotate-y-subtle {
+            transform: rotateY(2deg);
+        }
+    </style>
+</head>
+<body class="bg-void-black text-on-surface min-h-screen font-body-regular overflow-hidden flex cursor-crosshair">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-10 h-16 bg-[#000000] dark:bg-[#000000] docked full-width border-b border-[#2A2A2A] 1px solid border-neutral-800 flat no-shadows shadow-[0_0_10px_rgba(183,255,60,0.1)]">
+<div class="text-[#B7FF3C] font-bold text-lg tracking-tighter">
+            AI_Nikitka93
+        </div>
+<div class="flex items-center gap-6">
+<span class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-[#B7FF3C]">EN/RU</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#B7FF3C] hover:text-[#B7FF3C] hover:bg-[#1A1A1A] transition-all duration-300 opacity-80 cursor-crosshair p-1 rounded-sm" data-icon="fingerprint">fingerprint</span>
+<span class="material-symbols-outlined text-[#B7FF3C] hover:text-[#B7FF3C] hover:bg-[#1A1A1A] transition-all duration-300 opacity-80 cursor-crosshair p-1 rounded-sm" data-icon="settings_input_component">settings_input_component</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full z-40 pt-20 flex flex-col justify-between bg-[#000000]/90 backdrop-blur-xl dark:bg-[#000000]/90 docked border-r border-[#2A2A2A] w-64 border-neutral-800 flat no-shadows hidden md:flex">
+<div class="px-6 pb-6 border-b border-raw-titanium/20 mb-4">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-carbon-fog border border-phosphor-lime flex items-center justify-center relative overflow-hidden group">
+<img alt="Operator AI_Nikitka93 Avatar" class="w-full h-full object-cover mix-blend-luminosity opacity-80" data-alt="Abstract cybernetic green glowing core in dark void, high contrast, technical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXGz_o4tMqOvNjlpRky_93q5lE3LbKpR2GUv8lgRQhk-iF8-j1r-MWQenB-zutffUZh1sCYObC5ZC2kvUtyUeFjC9ssAsQd43_b_K70QVWZEJE06BNQoDOeZ5itfUxAW-53LKMzYJB9_yxpxtnzyNLB3-wHb-W17WhcEQv0vzD0L557ExsQI2UyTQRt4JwrQUbCKPaIE_2tvF2eIgAV-nXGIjDc666FTEEdcRSn4k-Qloy8p-DJv0MadwZ1N_iEEIa7kSm3gGjSJA"/>
+<div class="absolute inset-0 bg-phosphor-lime/10"></div>
+</div>
+<div>
+<h2 class="font-mono-metadata text-mono-metadata text-phosphor-lime uppercase tracking-widest">OPERATOR_STATUS</h2>
+<p class="font-mono-id text-mono-id text-raw-titanium">ACTIVE_SESSION_093</p>
+</div>
+</div>
+</div>
+<ul class="flex-1 overflow-y-auto space-y-1">
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="home">home</span>Entrance</a></li>
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="folder_managed">folder_managed</span>Archive</a></li>
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="center_focus_strong">center_focus_strong</span>Focus</a></li>
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="face">face</span>Human</a></li>
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>Journal</a></li>
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>Briefing</a></li>
+<li><a class="bg-[#1A1A1A] text-[#B7FF3C] border-l-4 border-[#B7FF3C] py-4 px-6 flex items-center gap-4 font-['IBM_Plex_Mono'] text-[10px] tracking-widest translate-x-1 transition-transform" href="#"><span class="material-symbols-outlined" data-icon="terminal">terminal</span>Console</a></li>
+<li><a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 font-['IBM_Plex_Mono'] text-[10px] tracking-widest hover:text-[#B7FF3C] transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="hub">hub</span>Routes</a></li>
+</ul>
+<div class="p-6">
+<button class="w-full border border-phosphor-lime text-phosphor-lime font-mono-label text-mono-label py-2 px-4 hover:bg-phosphor-lime hover:text-void-black transition-colors uppercase">
+                INITIATE_UPLINK
+            </button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 ml-0 md:ml-64 pt-16 h-screen flex flex-col relative perspective-1000 p-margin bg-void-black">
+<!-- Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(to_right,#8E968C_1px,transparent_1px),linear-gradient(to_bottom,#8E968C_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+<div class="flex-1 grid grid-cols-12 gap-gutter relative z-10">
+<!-- System Logs Module -->
+<section class="col-span-12 lg:col-span-8 flex flex-col h-full bg-carbon-fog border border-raw-titanium/30 p-lg relative rotate-y-subtle transform-origin-left">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">SYS_ID: LOG_STREAM_0X9A</div>
+<header class="mb-lg border-b border-raw-titanium/20 pb-4">
+<h1 class="font-display-lg text-display-lg text-archive-bone">ОПЕРАЦИОННЫЙ ЖУРНАЛ</h1>
+<div class="flex gap-4 mt-2">
+<span class="inline-flex items-center gap-1 font-mono-label text-mono-label bg-phosphor-lime/10 text-phosphor-lime px-2 py-1 border border-phosphor-lime/30">
+<span class="w-2 h-2 rounded-full bg-phosphor-lime animate-pulse"></span>
+                            СТАТУС: АКТИВЕН
+                        </span>
+<span class="inline-flex items-center gap-1 font-mono-label text-mono-label text-raw-titanium border border-raw-titanium/30 px-2 py-1">
+                            ПОДКЛЮЧЕНИЕ: ЗАЩИЩЕНО
+                        </span>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto font-mono-metadata text-mono-metadata text-phosphor-lime space-y-2 pr-4 scrollbar-thin scrollbar-thumb-raw-titanium/30 scrollbar-track-transparent">
+<p class="opacity-70">[10:04:22] Инициализация протоколов безопасности... ОК</p>
+<p class="opacity-70">[10:04:23] Синхронизация с узлом Нидерланды... УСТАНОВЛЕНО</p>
+<p class="opacity-70">[10:04:25] Загрузка лингвистического модуля (RU)... 100%</p>
+<p class="opacity-70">[10:04:28] Проверка целостности данных... 1 НЕСООТВЕТСТВИЕ ИГНОРИРОВАНО</p>
+<p class="text-ember-orange">[10:05:01] ВНИМАНИЕ: Обнаружена аномалия в секторе 7G.</p>
+<p>[10:05:05] Запуск диагностической утилиты...</p>
+<p>[10:05:12] Перехват зашифрованного пакета. Декодирование...</p>
+<p class="opacity-70">...</p>
+<p class="opacity-70">...</p>
+<p>[10:06:44] Ожидание ввода оператора.</p>
+</div>
+<!-- CLI Input -->
+<div class="mt-4 pt-4 border-t border-raw-titanium/20 flex items-center gap-2">
+<span class="font-mono-metadata text-mono-metadata text-phosphor-lime">AI_Nikitka93@sys:~#</span>
+<input autocomplete="off" class="flex-1 bg-transparent border-none focus:ring-0 font-mono-metadata text-mono-metadata text-archive-bone placeholder-raw-titanium/50 p-0" placeholder="Введите команду..." type="text"/>
+<span class="w-2 h-4 bg-phosphor-lime cursor-blink"></span>
+</div>
+</section>
+<!-- Side Tactical Modules -->
+<section class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<!-- Vital Stats -->
+<div class="bg-carbon-fog border border-raw-titanium/30 p-lg relative">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">SYS_ID: VITAL_01</div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-6">СИСТЕМНЫЕ ПОКАЗАТЕЛИ</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-mono-metadata text-mono-metadata text-raw-titanium mb-1">
+<span>НАГРУЗКА ЦП</span>
+<span class="text-phosphor-lime">42%</span>
+</div>
+<div class="h-1 bg-void-black w-full relative">
+<div class="absolute top-0 left-0 h-full bg-phosphor-lime w-[42%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-metadata text-mono-metadata text-raw-titanium mb-1">
+<span>ПАМЯТЬ</span>
+<span class="text-phosphor-lime">78%</span>
+</div>
+<div class="h-1 bg-void-black w-full relative">
+<div class="absolute top-0 left-0 h-full bg-phosphor-lime w-[78%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-metadata text-mono-metadata text-raw-titanium mb-1">
+<span>СЕТЕВАЯ АКТИВНОСТЬ</span>
+<span class="text-ember-orange">ВЫСОКАЯ</span>
+</div>
+<div class="h-1 bg-void-black w-full flex gap-[2px]">
+<div class="h-full bg-ember-orange w-1/5"></div>
+<div class="h-full bg-ember-orange w-1/5"></div>
+<div class="h-full bg-ember-orange w-1/5"></div>
+<div class="h-full bg-ember-orange w-1/5 opacity-30"></div>
+<div class="h-full bg-ember-orange w-1/5 opacity-30"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Targets / Dossier snippet -->
+<div class="flex-1 bg-carbon-fog border border-raw-titanium/30 p-lg relative flex flex-col">
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium">SYS_ID: TGT_LST</div>
+<h3 class="font-header-md text-header-md text-archive-bone mb-4">АКТИВНЫЕ ЦЕЛИ</h3>
+<ul class="flex-1 space-y-3 overflow-y-auto">
+<li class="border border-raw-titanium/20 p-sm hover:border-phosphor-lime/50 transition-colors cursor-crosshair">
+<div class="flex justify-between items-start">
+<span class="font-mono-metadata text-mono-metadata text-phosphor-lime">ОБЪЕКТ АЛЬФА</span>
+<span class="material-symbols-outlined text-raw-titanium text-[16px]" data-icon="my_location">my_location</span>
+</div>
+<div class="font-mono-id text-mono-id text-raw-titanium mt-2">КООРДИНАТЫ: НЕИЗВЕСТНО</div>
+</li>
+<li class="border border-ember-orange/30 bg-ember-orange/5 p-sm cursor-crosshair">
+<div class="flex justify-between items-start">
+<span class="font-mono-metadata text-mono-metadata text-ember-orange">ОБЪЕКТ БЕТА</span>
+<span class="material-symbols-outlined text-ember-orange text-[16px]" data-icon="warning">warning</span>
+</div>
+<div class="font-mono-id text-mono-id text-raw-titanium mt-2">СТАТУС: КРИТИЧЕСКИЙ</div>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</main>
+</body></html>

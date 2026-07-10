@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#3b0900",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#283500",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#ffffff",
+                        "on-tertiary": "#601400",
+                        "outline-variant": "#444933",
+                        "secondary-container": "#484949",
+                        "primary-container": "#c3f400",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#ffb5a0",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-tertiary-container": "#bc3000",
+                        "primary-fixed": "#c3f400",
+                        "primary-fixed-dim": "#abd600",
+                        "background": "#131313",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-primary-fixed": "#161e00",
+                        "on-surface-variant": "#c4c9ac",
+                        "on-tertiary-fixed-variant": "#872000",
+                        "inverse-primary": "#506600",
+                        "surface-variant": "#353534",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#b8b8b8",
+                        "surface-dim": "#131313",
+                        "surface-container": "#201f1f",
+                        "surface-bright": "#393939",
+                        "surface": "#131313",
+                        "outline": "#8e9379",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c7c6c6",
+                        "tertiary-container": "#ffdbd1",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-background": "#e5e2e1",
+                        "on-secondary": "#2f3131",
+                        "on-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "secondary-fixed": "#e3e2e2",
+                        "surface-tint": "#abd600",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-primary-container": "#556d00",
+                        "on-error-container": "#ffdad6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "module-padding": "20px",
+                        "unit": "4px",
+                        "gutter": "16px",
+                        "overlap-offset": "-12px",
+                        "margin": "24px"
+                    },
+                    fontFamily: {
+                        "label-mono": ["IBM Plex Mono"],
+                        "h1-display": ["Space Grotesk"],
+                        "data-heavy": ["IBM Plex Mono"],
+                        "h2-headline": ["Space Grotesk"],
+                        "h3-subhead": ["Space Grotesk"],
+                        "body-technical": ["IBM Plex Mono"]
+                    },
+                    fontSize: {
+                        "label-mono": ["11px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "h1-display": ["72px", { lineHeight: "0.9", letterSpacing: "-0.05em", fontWeight: "700" }],
+                        "data-heavy": ["18px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "h2-headline": ["40px", { lineHeight: "1.0", letterSpacing: "-0.03em", fontWeight: "600" }],
+                        "h3-subhead": ["24px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "500" }],
+                        "body-technical": ["14px", { lineHeight: "1.5", letterSpacing: "0em", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 4px; /* Strict 4px hard-grid */
+        }
+        .module-border {
+            border: 1px solid var(--tw-colors-secondary);
+        }
+        .module-border-active {
+            border: 2px solid var(--tw-colors-primary-container);
+        }
+        .overlap-layer {
+            position: relative;
+            z-index: 10;
+            margin-left: var(--tw-spacing-overlap-offset);
+            margin-top: var(--tw-spacing-overlap-offset);
+        }
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row font-body-technical selection:bg-primary-container selection:text-black">
+<!-- TopNavBar (Web/Mobile) -->
+<nav class="hidden md:flex bg-zinc-950 font-['Space_Grotesk'] uppercase tracking-tighter border-b-2 border-zinc-800 flex justify-between items-center w-full px-6 py-3 z-50 fixed top-0 left-0 w-full">
+<div class="text-xl font-black text-[#CCFF00] tracking-widest">NIKITKA_93 // INTEL_CORE</div>
+<div class="flex gap-6">
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-100" href="#">DOSSIER</a>
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-100" href="#">INTEL</a>
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors duration-100" href="#">ARCHIVE</a>
+</div>
+<div class="flex items-center gap-4 text-[#CCFF00]">
+<span class="font-label-mono text-label-mono bg-zinc-900 px-2 py-1 border border-zinc-800">RU/EN</span>
+<span class="material-symbols-outlined hover:bg-zinc-900 transition-colors duration-100 p-1">sensors</span>
+<span class="material-symbols-outlined hover:bg-zinc-900 transition-colors duration-100 p-1">memory</span>
+<span class="material-symbols-outlined hover:bg-zinc-900 transition-colors duration-100 p-1">terminal</span>
+</div>
+</nav>
+<!-- SideNavBar (Web) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full flex flex-col z-40 bg-zinc-950 font-['IBM_Plex_Mono'] text-xs font-bold uppercase w-64 border-r-2 border-zinc-800 pt-[60px]">
+<div class="p-6 border-b border-zinc-800">
+<div class="flex items-center gap-4 mb-4">
+<img alt="SYSTEM_OPERATOR_AVATAR" class="w-12 h-12 border border-zinc-500 grayscale" data-alt="High contrast black and white close up of a retro futuristic cybernetic sensor eye lens reflecting neon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrFKBK3KydV1dgw6QzMzwiTDgml9KYjMkUovYZ81YeOLGH14aduEKKBcYqRFbVtCS9Go1-nJgrXvCcKXUDonGlDyzmCi23I95ofz7SQX3HBibTeF6kh1Jnu5xZfIBi2m5Zd2gzxeCRAg-06QkH4Lp9PYz_hWB6KJz3G3OpD2Ra5kiwzBvvUYo7oIroWRcA2iei6f77omh7w1V16uS1wYnpVy1Vu3e0w9wx-dFJ9cZFCmL8sBmIN3Jpc1IBVNz2fNA83ShYfS33Wb3s"/>
+<div>
+<div class="text-lg font-black text-zinc-100">AI_NIKITKA</div>
+<div class="text-zinc-500 text-[10px]">V_93.0.42</div>
+</div>
+</div>
+<button class="w-full bg-[#CCFF00] text-black py-2 font-bold hover:bg-white transition-colors duration-100 border border-black">INITIATE_SEQUENCE</button>
+</div>
+<nav class="flex-1 overflow-y-auto py-4">
+<a class="flex items-center gap-3 bg-[#CCFF00] text-black p-3 m-1 border-2 border-black" href="#">
+<span class="material-symbols-outlined">fingerprint</span>
+                IDENTITY
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 transition-colors duration-100" href="#">
+<span class="material-symbols-outlined">polyline</span>
+                ROUTES
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 transition-colors duration-100" href="#">
+<span class="material-symbols-outlined">folder_shared</span>
+                DOSSIER
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 transition-colors duration-100" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                COUNTERS
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-3 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 transition-colors duration-100" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+                STATUS
+            </a>
+</nav>
+<div class="p-4 border-t border-zinc-800">
+<a class="flex items-center gap-3 text-zinc-400 p-2 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 transition-colors duration-100" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                TERMINAL
+            </a>
+<a class="flex items-center gap-3 text-zinc-400 p-2 m-1 border border-transparent hover:border-zinc-500 hover:text-zinc-100 transition-colors duration-100" href="#">
+<span class="material-symbols-outlined">logout</span>
+                LOGOUT
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full md:pl-64 pt-[60px] md:pt-[70px] min-h-screen bg-surface p-unit md:p-gutter">
+<div class="bento-grid max-w-[1440px] mx-auto w-full h-full">
+<!-- Hero Manifesto Tile -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-low module-border-active p-module-padding relative min-h-[300px] flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 right-0 p-2 flex gap-2">
+<span class="font-label-mono text-label-mono text-primary-container bg-surface-container-highest px-2 py-1 border border-outline">SYS_STATE: NOMINAL</span>
+<span class="font-label-mono text-label-mono text-error bg-error-container px-2 py-1 border border-error">AUTH: REQ</span>
+</div>
+<div class="z-10 mt-8">
+<h1 class="font-h1-display text-h1-display text-on-surface uppercase break-words">СИСТЕМНАЯ АРХИТЕКТУРА НОВОЙ ЭПОХИ</h1>
+</div>
+<div class="flex justify-between items-end z-10 mt-8">
+<p class="font-body-technical text-body-technical text-on-surface-variant max-w-md">
+                        Инициализация протоколов базового уровня. Доступ к директориям предоставлен.
+                    </p>
+<button class="bg-primary-container text-on-primary-fixed font-data-heavy text-data-heavy px-6 py-3 border-2 border-transparent hover:bg-transparent hover:border-primary-container hover:text-primary-container transition-all duration-100">
+                        ВВОД
+                    </button>
+</div>
+<!-- Background decorative element -->
+<div class="absolute -bottom-20 -right-20 text-[200px] text-surface-container opacity-50 font-h1-display pointer-events-none select-none">
+                    93
+                </div>
+</div>
+<!-- Identity Split Tile -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-high module-border p-module-padding flex flex-col gap-unit">
+<div class="flex justify-between items-start border-b border-outline-variant pb-2 mb-2">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Operator_01</span>
+<span class="material-symbols-outlined text-on-surface-variant">fingerprint</span>
+</div>
+<div class="flex-1 flex flex-col justify-center items-center">
+<div class="relative w-full aspect-square max-w-[200px] border border-outline bg-surface-container-lowest overflow-hidden">
+<img alt="Abstract architectural geometric concrete structure" class="w-full h-full object-cover grayscale opacity-80 mix-blend-screen" data-alt="Brutalist concrete architecture with harsh angular shadows in high contrast black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8fycD-QbST6SCtyLoSEPmZJ5IQoJiTE028DT64_pHtcyur98V4pcWWhiky278A29jM07Ew-Ywx9nE2vDVFlAzHGOxxh3ZMbsT1G8S5sFbI2JaKHTH04PAWFzQjUWauwaHeF5ug8qvRlQst47Zk7UYqUo2PGzP8LMpVejMPR_G4ZeAJJTSi09uYYApZ2-vOfxL3dI-zGurKbMroAxtbx1gchoJW0FfW5IDAPuQNfcPuFqiFgyNjeUhQBzB4MmKhrL2xVxn2Ks3eRoc"/>
+<!-- Glitch overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary-container/10 to-transparent mix-blend-overlay"></div>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 border border-primary-container">
+<span class="font-label-mono text-label-mono text-primary-container">ID: 0x9A4F</span>
+</div>
+</div>
+</div>
+<div class="mt-4 grid grid-cols-2 gap-2">
+<div class="bg-surface-container p-2 border border-outline-variant">
+<div class="font-label-mono text-[9px] text-on-surface-variant mb-1">УРОВЕНЬ</div>
+<div class="font-data-heavy text-data-heavy text-on-surface">ALPHA_C</div>
+</div>
+<div class="bg-surface-container p-2 border border-outline-variant">
+<div class="font-label-mono text-[9px] text-on-surface-variant mb-1">СТАТУС</div>
+<div class="font-data-heavy text-data-heavy text-on-surface">АКТИВЕН</div>
+</div>
+</div>
+</div>
+<!-- Route Index Tile -->
+<div class="col-span-12 md:col-span-6 lg:col-span-3 bg-surface-container module-border p-module-padding flex flex-col">
+<div class="flex justify-between items-start border-b border-outline-variant pb-2 mb-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Маршрутизация</span>
+<span class="material-symbols-outlined text-on-surface-variant">polyline</span>
+</div>
+<div class="flex-1 flex flex-col gap-2">
+<div class="flex justify-between items-center p-2 border border-outline bg-surface hover:bg-surface-container-highest transition-colors cursor-pointer">
+<span class="font-body-technical text-body-technical text-on-surface">/УЗЕЛ_АЛЬФА</span>
+<span class="material-symbols-outlined text-primary-container text-sm">arrow_forward</span>
+</div>
+<div class="flex justify-between items-center p-2 border border-outline bg-surface hover:bg-surface-container-highest transition-colors cursor-pointer">
+<span class="font-body-technical text-body-technical text-on-surface">/УЗЕЛ_БЕТА</span>
+<span class="material-symbols-outlined text-primary-container text-sm">arrow_forward</span>
+</div>
+<div class="flex justify-between items-center p-2 border border-outline bg-surface hover:bg-surface-container-highest transition-colors cursor-pointer opacity-50">
+<span class="font-body-technical text-body-technical text-on-surface">/УЗЕЛ_ГАММА</span>
+<span class="material-symbols-outlined text-error text-sm">block</span>
+</div>
+<div class="flex justify-between items-center p-2 border border-outline bg-surface hover:bg-surface-container-highest transition-colors cursor-pointer">
+<span class="font-body-technical text-body-technical text-on-surface">/УЗЕЛ_ДЕЛЬТА</span>
+<span class="material-symbols-outlined text-primary-container text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Counters & Signals Tile -->
+<div class="col-span-12 md:col-span-6 lg:col-span-5 bg-surface-container-low module-border p-module-padding flex flex-col">
+<div class="flex justify-between items-start border-b border-outline-variant pb-2 mb-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Сигналы (Real-time)</span>
+<span class="material-symbols-outlined text-on-surface-variant">analytics</span>
+</div>
+<div class="grid grid-cols-2 gap-4 flex-1">
+<div class="bg-surface border border-outline p-4 flex flex-col justify-between relative overflow-hidden">
+<span class="font-label-mono text-label-mono text-on-surface-variant">ПОТОК_ДАННЫХ</span>
+<span class="font-h2-headline text-h2-headline text-primary-container mt-2">4.2<span class="text-sm">Tb/s</span></span>
+<!-- Simple bar graph visual -->
+<div class="absolute bottom-0 left-0 w-full h-8 flex items-end gap-1 px-1 opacity-30">
+<div class="w-full bg-primary-container h-full"></div>
+<div class="w-full bg-primary-container h-3/4"></div>
+<div class="w-full bg-primary-container h-1/2"></div>
+<div class="w-full bg-primary-container h-5/6"></div>
+<div class="w-full bg-primary-container h-1/4"></div>
+</div>
+</div>
+<div class="bg-surface border border-outline p-4 flex flex-col justify-between relative overflow-hidden">
+<span class="font-label-mono text-label-mono text-on-surface-variant">НАГРУЗКА_ЦП</span>
+<span class="font-h2-headline text-h2-headline text-error mt-2">98<span class="text-sm">%</span></span>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-error w-[98%]"></div>
+</div>
+</div>
+<div class="bg-surface border border-outline p-4 flex flex-col justify-between col-span-2">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-mono text-label-mono text-on-surface-variant">АКТИВНЫЕ_СОЕДИНЕНИЯ</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="flex justify-between items-end">
+<span class="font-h3-subhead text-h3-subhead text-on-surface">1,024</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant bg-surface-container-highest px-2 py-1">+12% ЗА ЧАС</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Archive Status Tile -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-high module-border p-module-padding flex flex-col relative">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&amp;w=600&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity grayscale" data-alt="Massive rows of server racks in a dark data center with stark lighting"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start border-b border-outline-variant pb-2 mb-4">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Архивный Статус</span>
+<span class="material-symbols-outlined text-on-surface-variant">folder_special</span>
+</div>
+<div class="flex-1 flex flex-col justify-center gap-4">
+<div class="border border-outline bg-surface p-3 flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">sd_storage</span>
+</div>
+<div>
+<div class="font-data-heavy text-data-heavy text-on-surface">БЛОК_01</div>
+<div class="font-label-mono text-label-mono text-primary-container">СИНХРОНИЗИРОВАН</div>
+</div>
+</div>
+<div class="border border-outline bg-surface p-3 flex items-center gap-4">
+<div class="w-12 h-12 bg-error-container flex items-center justify-center border border-error">
+<span class="material-symbols-outlined text-error">warning</span>
+</div>
+<div>
+<div class="font-data-heavy text-data-heavy text-on-surface">БЛОК_02</div>
+<div class="font-label-mono text-label-mono text-error">ПОВРЕЖДЕН</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

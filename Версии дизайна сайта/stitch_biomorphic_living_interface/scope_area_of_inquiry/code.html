@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Область Познания</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#c3c8bf",
+                      "primary-container": "#0a0f0a",
+                      "on-secondary-fixed": "#141f00",
+                      "surface": "#121414",
+                      "inverse-on-surface": "#303031",
+                      "on-primary": "#2c322c",
+                      "surface-container-highest": "#343535",
+                      "secondary-fixed-dim": "#a1d800",
+                      "surface-variant": "#343535",
+                      "on-secondary-fixed-variant": "#384e00",
+                      "on-surface-variant": "#c5c7c1",
+                      "on-surface": "#e3e2e2",
+                      "on-tertiary": "#5e1700",
+                      "surface-dim": "#121414",
+                      "secondary-fixed": "#b9f612",
+                      "on-tertiary-fixed": "#3a0b00",
+                      "on-tertiary-container": "#e04300",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#ffb59e",
+                      "surface-container": "#1f2020",
+                      "inverse-primary": "#5a6059",
+                      "on-secondary-container": "#4d6a00",
+                      "error-container": "#93000a",
+                      "secondary": "#f2ffcf",
+                      "tertiary-container": "#220400",
+                      "tertiary-fixed": "#ffdbd0",
+                      "tertiary": "#ffb59e",
+                      "outline-variant": "#444843",
+                      "inverse-surface": "#e3e2e2",
+                      "on-primary-fixed": "#181d17",
+                      "on-background": "#e3e2e2",
+                      "surface-container-low": "#1b1c1c",
+                      "surface-bright": "#383939",
+                      "primary": "#c3c8bf",
+                      "secondary-container": "#b3f000",
+                      "outline": "#8f928c",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#c3c8bf",
+                      "error": "#ffb4ab",
+                      "surface-container-high": "#292a2a",
+                      "primary-fixed": "#dfe4db",
+                      "on-secondary": "#253500",
+                      "on-primary-fixed-variant": "#434842",
+                      "on-tertiary-fixed-variant": "#852400",
+                      "surface-container-lowest": "#0d0e0f",
+                      "on-primary-container": "#777d75",
+                      "background": "#121414"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "safe-area": "32px",
+                      "flow-sm": "12px",
+                      "flow-md": "24px",
+                      "flow-xs": "4px",
+                      "flow-xl": "80px",
+                      "flow-lg": "48px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "IBM Plex Mono"
+                      ],
+                      "metadata-mono": [
+                              "IBM Plex Mono"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "metadata-mono": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background overflow-x-hidden min-h-screen antialiased selection:bg-secondary-fixed/30 selection:text-secondary-fixed">
+<!-- Ambient Background Signals -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute top-[10%] left-[20%] w-[40rem] h-[40rem] bg-secondary-container/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[20%] right-[10%] w-[30rem] h-[30rem] bg-secondary-fixed/5 rounded-full blur-[100px]"></div>
+</div>
+<!-- TopAppBar (Visible on mid-sized screens) -->
+<nav class="hidden md:flex lg:hidden bg-[#0a0f0a]/60 backdrop-blur-2xl font-['Space_Grotesk'] tracking-tight border-b border-lime-500/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] fixed top-0 left-0 w-full z-50 justify-between items-center px-8 py-4">
+<div class="text-2xl font-bold tracking-tighter text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.5)]">AI_NIKITKA93</div>
+<ul class="flex gap-8 items-center">
+<li class="text-stone-500 hover:text-lime-200 transition-colors duration-500 scale-98 active:scale-95 transition-transform hover:bg-lime-500/5 hover:text-lime-300 transition-all duration-300 px-3 py-1 rounded-lg">Field Notes</li>
+<li class="text-lime-400 font-bold border-b-2 border-lime-400 pb-1 px-3 py-1">Scope</li>
+<li class="text-stone-500 hover:text-lime-200 transition-colors duration-500 scale-98 active:scale-95 transition-transform hover:bg-lime-500/5 hover:text-lime-300 transition-all duration-300 px-3 py-1 rounded-lg">Links</li>
+</ul>
+<div class="flex gap-4 text-lime-400">
+<span class="material-symbols-outlined hover:text-lime-200 transition-colors cursor-pointer">sensors</span>
+<span class="material-symbols-outlined hover:text-lime-200 transition-colors cursor-pointer">terminal</span>
+</div>
+</nav>
+<!-- SideNavBar (Visible on large screens) -->
+<nav class="hidden lg:flex flex-col bg-[#0a0f0a]/80 backdrop-blur-xl border-r border-lime-900/20 shadow-[10px_0_30px_rgba(0,0,0,0.8)] font-['Space_Grotesk'] uppercase tracking-widest text-xs fixed left-0 top-0 h-full z-40 w-64">
+<div class="p-8 flex flex-col items-center border-b border-lime-900/20 text-center relative">
+<div class="absolute inset-0 bg-secondary-fixed/5 blur-xl rounded-full"></div>
+<img class="w-20 h-20 rounded-full mb-4 border border-lime-500/30 object-cover relative z-10" data-alt="abstract glowing green liquid drop in dark space organic biological computing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBD_cQN0L2TH-9UXp9FfNjK5-Li7x5Z3uWgHL_mvBngijRdcOVK5_mqBihwBuC_dHkpj2rQ-8vMGpz_Ub42qKWsy9VwJkUts769ZsFCMjlQAddWRJDzegwwG0B9wOCB6TfTiKCQzCjoCbj94yJ57I1TdCg_OwnnSkmaWAEk6WrI0AsX-EyfdKDdZnAMwr6ONre1FDD-5oRLrEt-o4C6nbWmCU8Ht8DStNYcoQE8u0q90_iAgtCyTOES86j-o7dUe8niWzyrStoIDI"/>
+<h2 class="text-lime-400 font-black text-lg relative z-10">AI_Nikitka93</h2>
+<p class="text-stone-500 text-[10px] mt-1 relative z-10">Sentient Interface v1.0</p>
+</div>
+<div class="flex-1 py-8 flex flex-col gap-2 relative">
+<!-- Internal Glow Tonal Shift logic handled by container bg/blur -->
+<a class="flex items-center gap-4 text-stone-600 py-3 px-6 hover:text-lime-200 hover:bg-white/5 transition-all duration-700 ease-in-out duration-500 relative group" href="#">
+<span class="material-symbols-outlined text-lg group-hover:text-lime-300 transition-colors">biotech</span>
+<span class="tracking-widest">Field Notes</span>
+</a>
+<a class="flex items-center gap-4 bg-lime-500/10 text-lime-400 rounded-r-full py-3 px-6 border-l-4 border-lime-400 shadow-[0_0_15px_rgba(163,230,53,0.2)] ease-in-out duration-500" href="#">
+<span class="material-symbols-outlined text-lg">visibility</span>
+<span class="tracking-widest">Scope</span>
+</a>
+<a class="flex items-center gap-4 text-stone-600 py-3 px-6 hover:text-lime-200 hover:bg-white/5 transition-all duration-700 ease-in-out duration-500 relative group" href="#">
+<span class="material-symbols-outlined text-lg group-hover:text-lime-300 transition-colors">hub</span>
+<span class="tracking-widest">Links</span>
+</a>
+</div>
+<div class="p-6 mt-auto">
+<button class="w-full py-3 px-4 border border-lime-500/30 text-lime-400 rounded-full hover:bg-lime-500/10 hover:shadow-[0_0_20px_rgba(163,230,53,0.2)] transition-all duration-500 tracking-widest text-[10px]">
+                Initialize Sync
+            </button>
+</div>
+</nav>
+<!-- BottomNavBar (Visible on mobile) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-[#0a0f0a]/40 backdrop-blur-3xl rounded-t-[40px] border-t border-lime-500/20 shadow-[0_-10px_40px_rgba(0,0,0,0.9)] font-['Space_Grotesk'] text-[10px] font-bold uppercase">
+<a class="flex flex-col items-center justify-center text-stone-500 p-3 hover:text-lime-200 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">description</span>
+<span>Notes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-lime-400 bg-lime-400/10 rounded-full p-3 shadow-[0_0_20px_rgba(163,230,53,0.3)] relative" href="#">
+<div class="absolute inset-0 bg-lime-400/5 blur-md rounded-full pointer-events-none"></div>
+<span class="material-symbols-outlined mb-1">biotech</span>
+<span>Scope</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 p-3 hover:text-lime-200 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">account_tree</span>
+<span>Network</span>
+</a>
+</nav>
+<!-- Main Canvas -->
+<main class="relative z-10 pt-[100px] pb-[120px] lg:pt-safe-area lg:pl-64 lg:pb-safe-area min-h-screen px-safe-area md:px-12 flex flex-col items-center">
+<!-- Header Area -->
+<header class="w-full max-w-7xl mb-flow-xl text-center lg:text-left mt-flow-lg">
+<div class="inline-flex items-center gap-3 bg-surface-container-low border border-surface-variant rounded-full px-4 py-2 mb-flow-md">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed shadow-[0_0_8px_rgba(185,246,18,0.6)]"></div>
+<span class="font-label-caps text-label-caps text-secondary-fixed">СЕНСОРНАЯ СЕТЬ АКТИВНА</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-flow-sm">Область Познания</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto lg:mx-0">
+                Нейро-символические мембраны загружены. Выберите органический кластер данных для погружения в специфику анализа.
+            </p>
+</header>
+<!-- Floating Modules Area (Asymmetric Layout) -->
+<div class="w-full max-w-7xl relative h-[800px] lg:h-[600px] flex-grow">
+<!-- Central Node (Large) -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 lg:w-80 lg:h-80 bg-surface-container/40 backdrop-blur-2xl rounded-full border border-surface-variant flex flex-col items-center justify-center hover:bg-surface-container/60 hover:border-secondary-fixed/40 transition-all duration-700 group shadow-[inset_0_0_20px_rgba(185,246,18,0.05),0_10px_40px_rgba(0,0,0,0.5)] cursor-pointer z-30">
+<div class="absolute inset-0 bg-secondary-fixed/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl pointer-events-none"></div>
+<span class="material-symbols-outlined text-secondary-fixed text-6xl mb-flow-md group-hover:scale-110 transition-transform duration-700" style="font-variation-settings: 'FILL' 1;">psychiatry</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface text-center leading-none tracking-tighter mb-2 group-hover:text-secondary-fixed transition-colors duration-500">Синтез<br/>Данных</h3>
+<span class="font-metadata-mono text-metadata-mono text-on-surface-variant">Ядро обработки</span>
+</div>
+<!-- Peripheral Node 1 (Top Left) -->
+<div class="absolute top-[5%] left-[5%] lg:top-[10%] lg:left-[15%] w-48 h-48 bg-surface-container-low/60 backdrop-blur-xl rounded-full border border-surface-variant flex flex-col items-center justify-center hover:bg-surface-container/80 hover:border-secondary-fixed/30 transition-all duration-700 group shadow-[0_10px_30px_rgba(0,0,0,0.4)] cursor-pointer z-20">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary-fixed text-3xl mb-3 transition-colors duration-500">biotech</span>
+<h3 class="font-body-md text-body-md text-on-surface group-hover:text-secondary-fixed transition-colors duration-500 text-center">Кибер-<br/>биология</h3>
+</div>
+<!-- Peripheral Node 2 (Bottom Right) -->
+<div class="absolute bottom-[10%] right-[5%] lg:bottom-[15%] lg:right-[15%] w-56 h-56 bg-surface-container/50 backdrop-blur-xl rounded-full border border-surface-variant flex flex-col items-center justify-center hover:bg-surface-container/90 hover:border-secondary-fixed/50 transition-all duration-700 group shadow-[0_10px_30px_rgba(0,0,0,0.4)] cursor-pointer z-20">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary-fixed text-4xl mb-3 transition-colors duration-500">network_node</span>
+<h3 class="font-body-md text-body-md text-on-surface group-hover:text-secondary-fixed transition-colors duration-500 text-center">Анализ<br/>Паттернов</h3>
+<div class="absolute -right-4 top-1/4 w-2 h-2 rounded-full bg-secondary-fixed shadow-[0_0_10px_rgba(185,246,18,0.8)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<!-- Small Node (Top Right) -->
+<div class="absolute top-[20%] right-[10%] lg:top-[5%] lg:right-[30%] w-32 h-32 bg-surface-container-lowest/80 backdrop-blur-md rounded-full border border-surface-variant flex flex-col items-center justify-center hover:border-secondary-fixed/30 transition-all duration-500 group shadow-[0_5px_20px_rgba(0,0,0,0.3)] cursor-pointer z-10">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary-fixed text-2xl mb-1 transition-colors duration-500">language</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-on-surface transition-colors duration-500">Лингвистика</span>
+</div>
+<!-- Small Node (Bottom Left) -->
+<div class="absolute bottom-[20%] left-[10%] lg:bottom-[5%] lg:left-[30%] w-36 h-36 bg-surface-container-lowest/80 backdrop-blur-md rounded-full border border-surface-variant flex flex-col items-center justify-center hover:border-secondary-fixed/30 transition-all duration-500 group shadow-[0_5px_20px_rgba(0,0,0,0.3)] cursor-pointer z-10">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary-fixed text-2xl mb-1 transition-colors duration-500">all_inclusive</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-on-surface transition-colors duration-500">Квант. Логика</span>
+</div>
+<!-- Connection Lines (Visual suggestion via gradient paths) -->
+<svg aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-20">
+<path class="hidden lg:block" d="M 300,200 Q 500,300 700,400" fill="none" stroke="url(#limeGradient)" stroke-dasharray="4 4" stroke-width="1"></path>
+<defs>
+<lineargradient id="limeGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#b9f612" stop-opacity="0"></stop>
+<stop offset="50%" stop-color="#b9f612" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#b9f612" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</main>
+</body></html>

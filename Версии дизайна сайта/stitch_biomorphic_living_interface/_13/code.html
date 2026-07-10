@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 | Эфирный Поток</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffb59e",
+                    "on-primary-container": "#521300",
+                    "inverse-surface": "#e3e3de",
+                    "inverse-on-surface": "#2f312e",
+                    "surface-container-low": "#1a1c19",
+                    "outline-variant": "#5c4037",
+                    "on-secondary-fixed-variant": "#614000",
+                    "surface-dim": "#121411",
+                    "on-secondary-fixed": "#281800",
+                    "surface-variant": "#333532",
+                    "surface-container-lowest": "#0d0f0c",
+                    "error-container": "#93000a",
+                    "primary-container": "#ff571a",
+                    "surface-container-high": "#292a27",
+                    "on-error": "#690005",
+                    "surface": "#121411",
+                    "tertiary-fixed-dim": "#b6caca",
+                    "on-secondary": "#442c00",
+                    "primary": "#ffb59e",
+                    "on-tertiary-fixed": "#0c1e1f",
+                    "secondary-fixed-dim": "#f0be74",
+                    "tertiary": "#b6caca",
+                    "surface-container-highest": "#333532",
+                    "on-primary": "#5e1700",
+                    "on-tertiary-fixed-variant": "#384a4a",
+                    "tertiary-container": "#819494",
+                    "on-primary-fixed-variant": "#852400",
+                    "on-secondary-container": "#e0b067",
+                    "on-error-container": "#ffdad6",
+                    "background": "#121411",
+                    "secondary-container": "#644200",
+                    "on-primary-fixed": "#3a0b00",
+                    "on-background": "#e3e3de",
+                    "on-surface": "#e3e3de",
+                    "secondary": "#f0be74",
+                    "on-surface-variant": "#e6beb2",
+                    "tertiary-fixed": "#d2e7e6",
+                    "on-tertiary": "#223433",
+                    "primary-fixed": "#ffdbd0",
+                    "secondary-fixed": "#ffddb0",
+                    "surface-bright": "#383a36",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1e201d",
+                    "surface-tint": "#ffb59e",
+                    "on-tertiary-container": "#1b2d2d",
+                    "inverse-primary": "#ae3200",
+                    "outline": "#ad897e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "container-max": "1440px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-edge": "40px"
+            },
+            "fontFamily": {
+                    "code": [
+                            "IBM Plex Mono"
+                    ],
+                    "label": [
+                            "IBM Plex Mono"
+                    ],
+                    "h3": [
+                            "Space Grotesk"
+                    ],
+                    "body-lg": [
+                            "Space Grotesk"
+                    ],
+                    "body-md": [
+                            "Space Grotesk"
+                    ],
+                    "h1": [
+                            "Space Grotesk"
+                    ],
+                    "h2": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "code": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "h3": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "300"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h1": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "300"
+                            }
+                    ],
+                    "h2": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "300"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Organic Blur Blobs - CSS only, no JS/animations per requirements */
+        .blob-bg-1 {
+            background: radial-gradient(circle, rgba(255, 87, 26, 0.15) 0%, rgba(13, 15, 12, 0) 70%);
+        }
+        .blob-bg-2 {
+            background: radial-gradient(circle, rgba(240, 190, 116, 0.1) 0%, rgba(13, 15, 12, 0) 70%);
+        }
+        .blob-bg-3 {
+            background: radial-gradient(circle, rgba(129, 148, 148, 0.08) 0%, rgba(13, 15, 12, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- JSON Component: TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/20 backdrop-blur-[20px] border-b border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-xl font-bold text-white tracking-widest uppercase font-['Space_Grotesk'] tracking-tight">
+                Эфирный Поток
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight">
+<a class="text-orange-600 dark:text-[#ff4d00] font-semibold border-b border-[#ff4d00] pb-1 ease-in-out transform active:scale-95" href="#">Главная</a>
+<a class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 px-4 py-2" href="#">Архив</a>
+<a class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 px-4 py-2" href="#">Досье</a>
+<a class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 px-4 py-2" href="#">Верификатор</a>
+<a class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 px-4 py-2" href="#">Заметки</a>
+<a class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 px-4 py-2" href="#">Масштаб</a>
+<a class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 px-4 py-2" href="#">Ссылки</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 p-2">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="text-zinc-400 hover:text-white transition-colors hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 p-2">
+<span class="material-symbols-outlined">blur_on</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow relative">
+<!-- Hero Section: Ethereal Flow -->
+<header class="relative min-h-screen flex flex-col justify-center pt-32 pb-section-gap px-margin-edge overflow-hidden">
+<!-- Background Mist/Blobs -->
+<div class="absolute top-0 left-0 w-[1000px] h-[1000px] blob-bg-1 rounded-full mix-blend-screen filter blur-[120px] -translate-x-1/3 -translate-y-1/4 pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-[800px] h-[800px] blob-bg-2 rounded-full mix-blend-screen filter blur-[140px] translate-x-1/4 translate-y-1/4 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] blob-bg-3 rounded-full mix-blend-screen filter blur-[160px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+<div class="relative z-10 max-w-container-max mx-auto w-full flex flex-col items-center text-center">
+<!-- Tag -->
+<div class="mb-8 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(255,87,26,0.8)]"></div>
+<span class="font-label text-label text-secondary uppercase tracking-[0.15em]">Система Активна</span>
+</div>
+<!-- Hero Typography -->
+<h1 class="font-h1 text-h1 text-on-surface mb-4 drop-shadow-[0_0_40px_rgba(255,181,158,0.15)] relative">
+<span class="block text-primary-fixed-dim">AI_Nikitka93</span>
+<span class="block mt-2 opacity-90">Никита Кизевич</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12 opacity-80">
+                    Погружение в эфирный поток данных. Пространство, где технологическая строгость растворяется в органической текучестью био-цифрового реализма.
+                </p>
+<!-- Primary CTA -->
+<a class="group relative inline-flex items-center justify-center px-10 py-5 font-label text-label text-surface-lowest uppercase tracking-wider bg-primary-container hover:bg-primary transition-all duration-500 rounded-full overflow-hidden shadow-[0_0_30px_rgba(255,87,26,0.2)] hover:shadow-[0_0_50px_rgba(255,87,26,0.4)]" href="#">
+<span class="relative z-10 flex items-center gap-3">
+                        Открыть Архив
+                        <span class="material-symbols-outlined text-[18px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+<div class="absolute inset-0 bg-white/20 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+</a>
+</div>
+</header>
+<!-- Asymmetric Bento Grid Section -->
+<section class="py-section-gap px-margin-edge max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[minmax(300px,auto)]">
+<!-- Feature Card 1 (Large) -->
+<div class="col-span-1 md:col-span-8 bg-[rgba(255,255,255,0.02)] backdrop-blur-[20px] border border-white/5 rounded-2xl p-12 hover:border-primary/20 transition-all duration-700 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[40px] mb-8 block drop-shadow-[0_0_15px_rgba(255,181,158,0.3)]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Глубокая Диффузия</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Отказ от жестких рамок. Интерфейс дышит и трансформируется, используя мягкие градиенты и многослойность для создания ощущения естественной среды обитания информации.
+                    </p>
+</div>
+<!-- Feature Card 2 (Small Vertical) -->
+<div class="col-span-1 md:col-span-4 bg-[rgba(255,255,255,0.02)] backdrop-blur-[20px] border border-white/5 rounded-2xl p-8 flex flex-col justify-end relative overflow-hidden group hover:border-secondary/20 transition-all duration-700">
+<div class="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full filter blur-[50px] translate-x-1/4 -translate-y-1/4 group-hover:bg-secondary/20 transition-all duration-700"></div>
+<span class="material-symbols-outlined text-secondary text-[32px] mb-6 block" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+<h3 class="font-h3 text-[28px] text-on-surface mb-3 leading-tight">Синхронизация<br/>Потока</h3>
+<div class="h-[1px] w-full bg-gradient-to-r from-secondary-container to-transparent mt-4"></div>
+</div>
+<!-- Feature Card 3 (Small Horizontal) -->
+<div class="col-span-1 md:col-span-5 bg-[rgba(255,255,255,0.02)] backdrop-blur-[20px] border border-white/5 rounded-2xl p-8 flex items-center gap-6 relative overflow-hidden group hover:border-tertiary/20 transition-all duration-700">
+<div class="w-16 h-16 rounded-full bg-tertiary-container/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[28px]">biotech</span>
+</div>
+<div>
+<h4 class="font-code text-code text-on-surface mb-2">Био-Метрика</h4>
+<p class="font-body-md text-[14px] text-on-surface-variant">Анализ органических данных в реальном времени.</p>
+</div>
+</div>
+<!-- Feature Card 4 (Medium Interactive) -->
+<div class="col-span-1 md:col-span-7 bg-[rgba(255,255,255,0.02)] backdrop-blur-[20px] border border-white/5 rounded-2xl p-8 relative overflow-hidden group flex flex-col justify-between hover:bg-[rgba(255,255,255,0.04)] transition-colors duration-500">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-outline text-[32px]">hub</span>
+<span class="font-code text-[10px] uppercase text-outline-variant tracking-widest border border-white/10 px-2 py-1 rounded">Узел 01</span>
+</div>
+<div>
+<h3 class="font-h3 text-[24px] text-on-surface mb-2">Нейронная Сеть</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Связи формируются спонтанно, образуя сложные, но интуитивно понятные паттерны доступа к архиву.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Decorative subtle line before footer -->
+<div class="w-full max-w-container-max mx-auto h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent mt-section-gap"></div>
+</main>
+<!-- JSON Component: Footer -->
+<footer class="bg-transparent w-full mt-[120px] pb-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center px-12 gap-8 max-w-[1920px] mx-auto z-10 relative">
+<div class="font-['Space_Grotesk'] text-sm font-light text-zinc-500">
+            © 2024 Эфирный Поток. Био-цифровой реализм.
+        </div>
+<div class="flex flex-wrap justify-center gap-8 font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em]">
+<a class="text-zinc-600 hover:text-[#ff4d00] transition-opacity opacity-80 hover:opacity-100 duration-700" href="#">Манифест</a>
+<a class="text-zinc-600 hover:text-[#ff4d00] transition-opacity opacity-80 hover:opacity-100 duration-700" href="#">Конфиденциальность</a>
+<a class="text-zinc-600 hover:text-[#ff4d00] transition-opacity opacity-80 hover:opacity-100 duration-700" href="#">Связь</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Scope Planning</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#4a6f00",
+                        "on-tertiary-fixed": "#1e1b11",
+                        "primary-fixed": "#b0f734",
+                        "error-container": "#93000a",
+                        "secondary-container": "#cd4700",
+                        "surface-container-highest": "#313634",
+                        "on-background": "#dfe4e0",
+                        "surface-container": "#1c211f",
+                        "surface": "#0f1412",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-container-low": "#181d1b",
+                        "surface-bright": "#353a38",
+                        "inverse-surface": "#dfe4e0",
+                        "outline": "#8c947b",
+                        "secondary-fixed": "#ffdbcf",
+                        "surface-dim": "#0f1412",
+                        "surface-container-lowest": "#0a0f0d",
+                        "surface-tint": "#96da06",
+                        "background": "#0f1412",
+                        "on-tertiary-container": "#696457",
+                        "on-primary-fixed": "#121f00",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "primary": "#ffffff",
+                        "on-surface": "#dfe4e0",
+                        "on-primary": "#223600",
+                        "on-tertiary": "#343025",
+                        "tertiary-fixed": "#e9e2d1",
+                        "outline-variant": "#424935",
+                        "primary-fixed-dim": "#96da06",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#4b473b",
+                        "secondary": "#ffb59a",
+                        "tertiary-fixed-dim": "#cdc6b6",
+                        "inverse-primary": "#456800",
+                        "on-secondary": "#5b1b00",
+                        "primary-container": "#b0f734",
+                        "surface-container-high": "#262b29",
+                        "inverse-on-surface": "#2c312f",
+                        "tertiary-container": "#e9e2d1",
+                        "error": "#ffb4ab",
+                        "tertiary": "#ffffff",
+                        "surface-variant": "#313634",
+                        "on-surface-variant": "#c2caaf",
+                        "on-primary-fixed-variant": "#334f00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "island-padding": "32px",
+                        "xl": "48px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "data-mono": ["IBM Plex Mono"],
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "body-main": ["Inter"],
+                        "ui-label": ["IBM Plex Mono"],
+                        "h3": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-mono": ["14px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "h1": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-main": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "ui-label": ["13px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h3": ["32px", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-island {
+                @apply bg-surface-container/40 backdrop-blur-[40px] border-t border-l border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)];
+            }
+            .luminous-edge {
+                @apply border-t border-l border-primary-fixed/30;
+            }
+            .input-ghost {
+                @apply w-full bg-transparent border-0 border-b border-outline/30 text-on-surface font-body-main text-body-main px-0 py-sm focus:ring-0 focus:border-primary-fixed transition-colors;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-main min-h-screen flex flex-col antialiased relative overflow-x-hidden selection:bg-primary-fixed selection:text-background">
+<!-- Atmospheric Background Layers (Carbon Fog over Void Black) -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute inset-0 bg-background"></div>
+<div class="absolute top-0 left-1/4 w-[800px] h-[800px] bg-surface-container-highest/20 rounded-full blur-[120px] mix-blend-screen opacity-50"></div>
+<div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary-fixed/5 rounded-full blur-[100px] mix-blend-screen"></div>
+<!-- 4px Baseline Grid Overlay (subtle) -->
+<div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100%_4px] pointer-events-none"></div>
+</div>
+<!-- TopAppBar (Web & Tablet) -->
+<nav class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-12 h-20 bg-[#0A0D0C]/40 backdrop-blur-[40px] border-b border-[#E0E0E0]/20 border-t-[1px] border-l-[1px] border-white/10">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-[#B7FF3C] text-[24px]">memory</span>
+<span class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-xl text-[#B7FF3C] tracking-widest">NEURAL_DOSS_V1.0</span>
+</div>
+<!-- Web Navigation Cluster -->
+<div class="flex items-center gap-xl h-full">
+<a class="h-full flex items-center text-[#808080] font-data-mono text-data-mono hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 px-md" href="#">Dossier</a>
+<a class="h-full flex items-center text-[#808080] font-data-mono text-data-mono hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 px-md" href="#">Console</a>
+<a class="h-full flex items-center text-[#D9D9D9] font-bold border-b border-[#B7FF3C] shadow-[0_0_10px_#B7FF3C] scale-[0.99] transition-all duration-300 px-md font-data-mono text-data-mono" href="#">Planning</a>
+<a class="h-full flex items-center text-[#808080] font-data-mono text-data-mono hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 px-md" href="#">Field_Notes</a>
+</div>
+<div class="flex items-center">
+<span class="font-['IBM_Plex_Mono'] text-ui-label text-[#808080] tracking-widest cursor-pointer hover:text-[#B7FF3C] transition-colors">RU / EN</span>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="relative z-10 flex-grow flex flex-col items-center justify-center pt-[120px] pb-[100px] px-lg md:px-xl">
+<!-- Content Container (Max width for form flow) -->
+<div class="w-full max-w-[800px] flex flex-col gap-xl">
+<!-- Progress Island -->
+<div class="w-full glass-island rounded-lg p-lg flex flex-col gap-md">
+<div class="flex justify-between items-center mb-sm">
+<span class="font-ui-label text-ui-label text-on-surface-variant tracking-widest">СИСТЕМНАЯ ЗАГРУЗКА</span>
+<span class="font-data-mono text-data-mono text-primary-fixed animate-pulse">[ 45% ]</span>
+</div>
+<div class="flex items-center w-full gap-sm">
+<!-- Step 1: Complete -->
+<div class="flex-1 h-[2px] bg-primary-fixed/50 relative">
+<div class="absolute inset-y-0 left-0 bg-primary-fixed w-full"></div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex-1 h-[2px] bg-surface-container-highest relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary-fixed w-[45%] shadow-[0_0_10px_theme(colors.primary-fixed)]"></div>
+</div>
+<!-- Step 3: Pending -->
+<div class="flex-1 h-[2px] bg-surface-container-highest"></div>
+</div>
+<div class="flex justify-between w-full mt-xs">
+<span class="font-ui-label text-ui-label text-outline text-[10px]">01_ИНИЦИАЛИЗАЦИЯ</span>
+<span class="font-ui-label text-ui-label text-primary-fixed text-[10px] text-center">02_ПАРАМЕТРЫ_ИИ</span>
+<span class="font-ui-label text-ui-label text-outline text-[10px] text-right">03_РАЗВЕРТЫВАНИЕ</span>
+</div>
+</div>
+<!-- Main Form Island -->
+<div class="w-full glass-island rounded-xl p-island-padding relative group">
+<!-- Decorative Corner Crosshairs -->
+<div class="absolute top-md left-md w-unit h-unit border-t border-l border-outline/30"></div>
+<div class="absolute top-md right-md w-unit h-unit border-t border-r border-outline/30"></div>
+<div class="absolute bottom-md left-md w-unit h-unit border-b border-l border-outline/30"></div>
+<div class="absolute bottom-md right-md w-unit h-unit border-b border-r border-outline/30"></div>
+<!-- Header -->
+<div class="mb-xl flex flex-col gap-sm">
+<div class="flex items-center gap-sm mb-xs">
+<div class="w-2 h-2 bg-primary-fixed animate-pulse"></div>
+<span class="font-data-mono text-data-mono text-primary-fixed tracking-widest uppercase">Ввод данных</span>
+</div>
+<h1 class="font-h2 text-h2 text-on-surface">Конфигурация Модуля</h1>
+<p class="font-body-main text-body-main text-on-surface-variant max-w-lg">Определите базовые операционные параметры для новой нейросетевой сущности.</p>
+</div>
+<!-- Form Fields -->
+<form class="flex flex-col gap-lg">
+<!-- Field Row: Name & ID -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div class="flex flex-col gap-xs relative">
+<label class="font-ui-label text-ui-label text-outline uppercase tracking-wider">Идентификатор сущности</label>
+<input class="input-ghost text-primary-fixed font-data-mono text-lg" readonly="" type="text" value="AI_Nikitka93"/>
+<span class="absolute right-0 bottom-sm material-symbols-outlined text-outline/50 text-[16px]">lock</span>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-ui-label text-ui-label text-outline uppercase tracking-wider">Рабочее название <span class="text-error">*</span></label>
+<input class="input-ghost" placeholder="Введите название проекта..." type="text"/>
+</div>
+</div>
+<!-- Field Row: Autonomy Level (Segmented Control) -->
+<div class="flex flex-col gap-md mt-sm">
+<label class="font-ui-label text-ui-label text-outline uppercase tracking-wider">Уровень автономности протокола</label>
+<div class="flex flex-col md:flex-row w-full gap-sm">
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="autonomy" type="radio" value="low"/>
+<div class="px-md py-sm border border-outline/20 text-center font-data-mono text-data-mono text-on-surface-variant hover:bg-surface-container transition-all peer-checked:border-primary-fixed peer-checked:text-primary-fixed peer-checked:bg-primary-fixed/5">
+                                    I. Ведомый
+                                </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="autonomy" type="radio" value="med"/>
+<div class="px-md py-sm border border-outline/20 text-center font-data-mono text-data-mono text-on-surface-variant hover:bg-surface-container transition-all peer-checked:border-primary-fixed peer-checked:text-primary-fixed peer-checked:bg-primary-fixed/5 peer-checked:shadow-[inset_0_0_10px_rgba(176,247,52,0.1)]">
+                                    II. Полуавтономный
+                                </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="autonomy" type="radio" value="high"/>
+<div class="px-md py-sm border border-outline/20 text-center font-data-mono text-data-mono text-on-surface-variant hover:bg-surface-container transition-all peer-checked:border-primary-fixed peer-checked:text-primary-fixed peer-checked:bg-primary-fixed/5">
+                                    III. Директивный
+                                </div>
+</label>
+</div>
+</div>
+<!-- Field Row: Directives -->
+<div class="flex flex-col gap-xs mt-sm">
+<label class="font-ui-label text-ui-label text-outline uppercase tracking-wider flex justify-between">
+<span>Базовые директивы</span>
+<span class="text-[10px] text-outline/50">OPTIONAL</span>
+</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container/20 border border-outline/20 rounded text-on-surface font-body-main text-body-main p-md focus:ring-0 focus:border-primary-fixed focus:bg-surface-container/40 transition-all resize-none placeholder-outline/30" placeholder="Опишите первичные задачи и ограничения..." rows="3"></textarea>
+<div class="absolute bottom-md right-md text-outline/30">
+<span class="material-symbols-outlined text-[18px]">keyboard_command_key</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col md:flex-row justify-end items-center gap-md mt-xl pt-lg border-t border-outline/10">
+<button class="w-full md:w-auto px-xl py-sm bg-transparent border border-outline/30 text-on-surface font-ui-label text-ui-label uppercase tracking-widest hover:bg-surface-container transition-colors" type="button">
+                            Отмена
+                        </button>
+<button class="w-full md:w-auto px-xl py-sm bg-primary-fixed text-background font-ui-label text-ui-label uppercase tracking-widest hover:shadow-[0_0_15px_theme(colors.primary-fixed)] transition-all flex items-center justify-center gap-sm" type="button">
+                            Сохранить и далее
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 h-16 bg-[#0A0D0C]/40 backdrop-blur-[40px] rounded-none border-t border-[#E0E0E0]/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1">folder_open</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Dossier</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1">terminal</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Console</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] pt-2 w-1/4 h-full scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Planning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Field_Notes</span>
+</a>
+</nav>
+</body></html>

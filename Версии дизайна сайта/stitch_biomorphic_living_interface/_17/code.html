@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Заметки - Эфирный Поток</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffb59e",
+                    "on-primary-container": "#521300",
+                    "inverse-surface": "#e3e3de",
+                    "inverse-on-surface": "#2f312e",
+                    "surface-container-low": "#1a1c19",
+                    "outline-variant": "#5c4037",
+                    "on-secondary-fixed-variant": "#614000",
+                    "surface-dim": "#121411",
+                    "on-secondary-fixed": "#281800",
+                    "surface-variant": "#333532",
+                    "surface-container-lowest": "#0d0f0c",
+                    "error-container": "#93000a",
+                    "primary-container": "#ff571a",
+                    "surface-container-high": "#292a27",
+                    "on-error": "#690005",
+                    "surface": "#121411",
+                    "tertiary-fixed-dim": "#b6caca",
+                    "on-secondary": "#442c00",
+                    "primary": "#ffb59e",
+                    "on-tertiary-fixed": "#0c1e1f",
+                    "secondary-fixed-dim": "#f0be74",
+                    "tertiary": "#b6caca",
+                    "surface-container-highest": "#333532",
+                    "on-primary": "#5e1700",
+                    "on-tertiary-fixed-variant": "#384a4a",
+                    "tertiary-container": "#819494",
+                    "on-primary-fixed-variant": "#852400",
+                    "on-secondary-container": "#e0b067",
+                    "on-error-container": "#ffdad6",
+                    "background": "#121411",
+                    "secondary-container": "#644200",
+                    "on-primary-fixed": "#3a0b00",
+                    "on-background": "#e3e3de",
+                    "on-surface": "#e3e3de",
+                    "secondary": "#f0be74",
+                    "on-surface-variant": "#e6beb2",
+                    "tertiary-fixed": "#d2e7e6",
+                    "on-tertiary": "#223433",
+                    "primary-fixed": "#ffdbd0",
+                    "secondary-fixed": "#ffddb0",
+                    "surface-bright": "#383a36",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1e201d",
+                    "surface-tint": "#ffb59e",
+                    "on-tertiary-container": "#1b2d2d",
+                    "inverse-primary": "#ae3200",
+                    "outline": "#ad897e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "container-max": "1440px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-edge": "40px"
+            },
+            "fontFamily": {
+                    "code": [
+                            "IBM Plex Mono"
+                    ],
+                    "label": [
+                            "IBM Plex Mono"
+                    ],
+                    "h3": [
+                            "Space Grotesk"
+                    ],
+                    "body-lg": [
+                            "Space Grotesk"
+                    ],
+                    "body-md": [
+                            "Space Grotesk"
+                    ],
+                    "h1": [
+                            "Space Grotesk"
+                    ],
+                    "h2": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "code": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "h3": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "300"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h1": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "300"
+                            }
+                    ],
+                    "h2": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "300"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121411; /* Fallback for background token */
+        }
+        /* Custom scrollbar for ethereal feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 181, 158, 0.2);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 181, 158, 0.4);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .soft-glow-hover:hover {
+            box-shadow: 0 0 20px 0 rgba(255, 181, 158, 0.1);
+            border-color: rgba(255, 181, 158, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden min-h-screen relative font-body-md text-body-md flex flex-col">
+<!-- Ethereal Background Blobs -->
+<div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary/10 blur-[120px] mix-blend-screen opacity-50"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-tertiary/10 blur-[150px] mix-blend-screen opacity-40"></div>
+</div>
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/20 backdrop-blur-[20px] border-b border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] font-['Space_Grotesk'] tracking-tight">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<!-- Brand -->
+<div class="text-xl font-bold text-white tracking-widest uppercase cursor-pointer">
+                Эфирный Поток
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-zinc-400 hover:text-white transition-colors ease-in-out transform active:scale-95" href="#">Главная</a>
+<a class="text-zinc-400 hover:text-white transition-colors ease-in-out transform active:scale-95" href="#">Архив</a>
+<a class="text-zinc-400 hover:text-white transition-colors ease-in-out transform active:scale-95" href="#">Досье</a>
+<a class="text-zinc-400 hover:text-white transition-colors ease-in-out transform active:scale-95" href="#">Верификатор</a>
+<a class="text-orange-600 dark:text-[#ff4d00] font-semibold border-b border-[#ff4d00] pb-1 ease-in-out transform active:scale-95" href="#">Заметки</a>
+<a class="text-zinc-400 hover:text-white transition-colors ease-in-out transform active:scale-95" href="#">Масштаб</a>
+<a class="text-zinc-400 hover:text-white transition-colors ease-in-out transform active:scale-95" href="#">Ссылки</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-2 text-orange-600 dark:text-[#ff4d00]">
+<button class="p-2 hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="p-2 hover:bg-white/5 rounded-full transition-all duration-500 ease-in-out transform active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined">blur_on</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex-grow pt-[140px] px-margin-edge md:px-12 pb-section-gap w-full max-w-container-max mx-auto">
+<!-- Page Header -->
+<header class="mb-gutter md:mb-[64px] flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-code text-code text-primary mb-2 block opacity-80">/ FIELD_RECORDS / 08.24</span>
+<h1 class="font-h1 text-h1 text-on-surface">Полевые Заметки</h1>
+</div>
+<!-- Contextual Action / Filter (Soft Glass Button) -->
+<button class="glass-card px-6 py-3 rounded-full border border-outline-variant text-on-surface hover:border-primary transition-colors duration-500 flex items-center gap-2 self-start md:self-auto soft-glow-hover">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">tune</span>
+<span class="font-label text-label uppercase tracking-widest text-on-surface-variant">Фильтрация</span>
+</button>
+</header>
+<!-- Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-min">
+<!-- Featured Note (Spans 8 cols) -->
+<article class="md:col-span-8 glass-card border border-white/5 rounded-xl p-8 flex flex-col justify-between soft-glow-hover transition-all duration-700 group cursor-pointer overflow-hidden relative min-h-[400px]">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container/50 to-transparent z-0 pointer-events-none"></div>
+<div class="relative z-10 flex justify-between items-start mb-12">
+<div class="flex gap-2">
+<span class="font-label text-label px-2 py-1 bg-surface-container-highest border border-outline/30 rounded text-primary">#НАБЛЮДЕНИЕ</span>
+<span class="font-label text-label px-2 py-1 bg-surface-container-highest border border-outline/30 rounded text-on-surface-variant">СЕКТОР_А</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row gap-8 items-end">
+<div class="flex-grow">
+<h2 class="font-h3 text-h3 text-on-surface mb-4 group-hover:text-primary-fixed-dim transition-colors">Аномалия био-свечения в нижних уровнях</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant opacity-80">Первичный анализ выявил нестандартную реакцию флоры на присутствие эфирных флуктуаций. Свечение пульсирует не ритмично, а реагируя на звуковые волны низкой частоты.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant/30 flex-shrink-0 relative">
+<img alt="macro photography of bioluminescent moss glowing faintly with cyan and orange light in deep shadow" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 scale-100 group-hover:scale-105 transform" data-alt="macro photography of bioluminescent moss glowing faintly with cyan and orange light in deep shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf5UqGjjU34jz-mQsE4pCfxg4OrT4oGPebjPpDXQ58qVf4ahOWiqGfi1erPYnKrdZXeKduUyWF0_-_Rabg0Cu0O2uyoNBYmIlFH5W63xO_C7IxeFaYJI64MZqAIIOH0rcvOPkipeRgjNYvbiY1z5WDdsq1XI4NjH82XJMVq-Cid6H7bhgxauVfmTp7T67mq9BCRijtrSAhLtX75IorVqa0y7LkhtMLBna9JW47J_JMBWhokOtm2h05nsL7BdxAU1ypqcPTOXYOtoY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60 pointer-events-none"></div>
+</div>
+</div>
+</article>
+<!-- Quick Text Note (Spans 4 cols) -->
+<article class="md:col-span-4 glass-card border border-white/5 rounded-xl p-8 flex flex-col soft-glow-hover transition-all duration-500 hover:bg-surface-container-low/40">
+<div class="flex items-center gap-3 mb-6 border-b border-outline-variant/20 pb-4">
+<div class="w-2 h-2 rounded-full bg-error blur-[1px]"></div>
+<span class="font-code text-code text-on-surface-variant uppercase">Фрагмент_091</span>
+</div>
+<h3 class="font-h3 text-[24px] leading-tight text-on-surface mb-6 opacity-90">Синхронизация потоков прервана.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">При попытке слияния данных из архива и текущего буфера произошел резонансный сбой. Требуется ручная калибровка ядра.</p>
+<div class="mt-8 flex justify-between items-center text-on-surface-variant/50">
+<span class="font-code text-[12px]">14:22 // ОФФЛАЙН</span>
+<span class="material-symbols-outlined text-[18px]">signal_disconnected</span>
+</div>
+</article>
+<!-- Visual Asset Note (Spans 4 cols) -->
+<article class="md:col-span-4 glass-card border border-white/5 rounded-xl overflow-hidden soft-glow-hover transition-all duration-500 group relative aspect-square md:aspect-auto h-full min-h-[300px]">
+<img alt="abstract liquid fluid art with soft flowing waves of grey, dark green, and muted orange gradients" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700" data-alt="abstract liquid fluid art with soft flowing waves of grey, dark green, and muted orange gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGnECrTWL7jT7IUvRGex1ZoBVSlx2RDFfYGPhawa2Jr3IY7LnTboGle4DntcHVMLjdD3unn9FO74lDBCc4qKESP1dajN67hEr52arcPPvafspHCZT6rcqLkEYgVXMwTU4nZv_sat6cRBY0mIOJmowhMmNiesk9OkzL0L-V6P-YFSAQpkeThWs_bbGb2j3IK90RIA7Oauk5vzQuKIeeVJXo-_qIdEOhX3_-MdW412H5R0RHrBAjbfXUBIKBjxTZq0ikbLO09hod900"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-full p-6">
+<span class="font-label text-label px-2 py-1 bg-black/50 backdrop-blur-md border border-white/10 rounded text-secondary-fixed-dim mb-3 inline-block">#ТЕКСТУРА</span>
+<h3 class="font-body-lg text-body-lg text-on-surface">Анализ вязкости среды</h3>
+</div>
+</article>
+<!-- Data Stream Note (Spans 8 cols) -->
+<article class="md:col-span-8 glass-card border border-white/5 rounded-xl p-8 soft-glow-hover transition-all duration-500 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-grow w-full">
+<div class="flex justify-between items-center mb-6">
+<span class="font-code text-code text-tertiary">~ ТЕЛЕМЕТРИЯ</span>
+<span class="material-symbols-outlined text-tertiary animate-pulse">sensors</span>
+</div>
+<div class="space-y-4 font-code text-code text-on-surface-variant">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span>Уровень дисперсии</span>
+<span class="text-on-surface">42.8%</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span>Коэффициент преломления</span>
+<span class="text-on-surface">1.404</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span>Температура ядра</span>
+<span class="text-primary-fixed-dim">302.1 K</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-[200px] h-[150px] relative border border-outline-variant/30 rounded-lg overflow-hidden flex items-center justify-center bg-surface-container-highest/20">
+<!-- Abstract representation of data -->
+<div class="absolute w-[150%] h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent transform -rotate-12 opacity-50"></div>
+<div class="absolute w-[150%] h-[1px] bg-gradient-to-r from-transparent via-tertiary to-transparent transform rotate-12 opacity-50"></div>
+<span class="font-label text-label text-on-surface-variant z-10 bg-surface/80 px-2 py-1 rounded backdrop-blur-sm">График скрыт</span>
+</div>
+</article>
+</div>
+<!-- Load More Action -->
+<div class="mt-16 flex justify-center">
+<button class="font-label text-label uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors flex flex-col items-center gap-2 group">
+<span>Загрузить архив</span>
+<span class="w-[1px] h-8 bg-outline-variant group-hover:bg-primary transition-colors duration-500"></span>
+</button>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-[120px] pb-12 bg-transparent border-t border-white/5 relative z-10 font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-8 max-w-[1920px] mx-auto opacity-80 hover:opacity-100 duration-700">
+<!-- Copyright -->
+<div class="text-sm font-light text-zinc-500">
+                © 2024 Эфирный Поток. Био-цифровой реализм.
+            </div>
+<!-- Links -->
+<div class="flex gap-8">
+<a class="text-zinc-600 hover:text-[#ff4d00] transition-opacity" href="#">Манифест</a>
+<a class="text-zinc-600 hover:text-[#ff4d00] transition-opacity" href="#">Конфиденциальность</a>
+<a class="text-zinc-600 hover:text-[#ff4d00] transition-opacity" href="#">Связь</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SYSTEM_CHAMBER_v.93 - Proof Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffffff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#334f00",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-container": "#ffd9dc",
+                        "surface-container-low": "#191d11",
+                        "tertiary-fixed": "#ffd9dc",
+                        "surface-bright": "#363b2d",
+                        "error-container": "#93000a",
+                        "background": "#101509",
+                        "primary-fixed-dim": "#96da06",
+                        "tertiary-fixed-dim": "#ffb2ba",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary-container": "#474746",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-surface": "#e0e5d1",
+                        "on-tertiary-fixed-variant": "#910030",
+                        "on-primary-fixed": "#121f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-background": "#e0e5d1",
+                        "primary-fixed": "#b0f734",
+                        "on-primary": "#223600",
+                        "surface-variant": "#323629",
+                        "surface-dim": "#101509",
+                        "on-tertiary": "#67001f",
+                        "inverse-primary": "#456800",
+                        "outline-variant": "#424935",
+                        "secondary": "#c8c6c5",
+                        "surface-tint": "#96da06",
+                        "primary-container": "#b0f734",
+                        "surface-container": "#1d2115",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#323629",
+                        "on-tertiary-fixed": "#400010",
+                        "inverse-surface": "#e0e5d1",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#c90045",
+                        "on-secondary": "#313030",
+                        "on-primary-container": "#4a6f00",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2d3225",
+                        "surface": "#101509",
+                        "surface-container-high": "#272c1f",
+                        "on-surface-variant": "#c2caaf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "64px",
+                        "base": "4px",
+                        "margin": "32px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "lg": "40px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "code-xs": ["IBM Plex Mono"],
+                        "meta-sm": ["IBM Plex Mono"],
+                        "body-lg": ["IBM Plex Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "code-xs": ["10px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "meta-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glitch-flicker { animation: flicker 0.15s infinite; }
+        @keyframes flicker { 0% { opacity: 1; } 50% { opacity: 0.8; transform: translate(1px, -1px); } 100% { opacity: 1; } }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .scanline-bg { background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md scanline-bg relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-6 h-16 bg-zinc-950/90 dark:bg-zinc-950/90 backdrop-blur-md full-width top-0 border-b-2 border-b-2 border-[#B7FF3C] shadow-[0_0_20px_rgba(183,255,60,0.3)]">
+<div class="flex items-center gap-xs">
+<span class="text-[#B7FF3C] font-black tracking-[0.2em] animate-pulse font-headline-md text-headline-md">SYSTEM_CHAMBER_v.93</span>
+</div>
+<!-- Top Nav Links (from SideNav logic but for web) -->
+<div class="flex gap-sm">
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">login</span>ENTRANCE
+            </a>
+<a class="bg-[#B7FF3C] text-black flex items-center gap-2 px-4 py-2 m-1 rounded-none skew-x-[-12deg] transition-transform font-code-xs text-code-xs tracking-widest Active: skew-x-0 duration-150 Active: scale-95 duration-75 glitch-flicker" href="#">
+<span class="material-symbols-outlined text-[14px] skew-x-[12deg]">inventory_2</span><span class="skew-x-[12deg]">ARCHIVE</span>
+</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">center_focus_strong</span>FOCUS
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">person</span>HUMAN
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>JOURNAL
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">assignment</span>BRIEFING
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">terminal</span>CONSOLE
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-2 px-4 py-2 hover:bg-[#B7FF3C]/20 hover:text-[#B7FF3C] hover:translate-x-2 transition-all duration-75 font-code-xs text-code-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-[14px]">map</span>ROUTES
+            </a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="text-zinc-500 hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 p-xs">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="text-zinc-500 hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 p-xs">
+<span class="material-symbols-outlined">settings_input_component</span>
+</button>
+<button class="text-zinc-500 hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 p-xs">
+<span class="material-symbols-outlined">sensors</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<nav class="md:hidden fixed left-0 top-0 h-full flex flex-col z-40 overflow-y-auto scrollbar-hide bg-zinc-950 dark:bg-zinc-900/50 h-screen w-64 border-r-2 border-r-2 border-[#B7FF3C]/40 flat no-shadows relative after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] after:bg-[length:100%_2px,3px_100%] after:pointer-events-none">
+<div class="p-6 border-b border-[#B7FF3C]/20">
+<div class="flex items-center gap-sm mb-4">
+<img alt="Glitch-distorted neural profile interface" class="w-10 h-10 border border-[#B7FF3C]" data-alt="Glitch-distorted neural profile interface, cyberpunk aesthetic, high contrast green and black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi7S7Vlf-9uyq9cI0cWvJDvmcdHDkkC-YcmXqeCFcQtetWuYPrvy2VQ-sJt8vIvakG4x_iwSl5dIJNLgd1256cOhqH7StQew39AJ35uKe1PT_5UYcmWoDWCJQWipw_t5jcSutVbA1oVpcIdr_TP4Gt0uRpKgteBlM1jRXxgVKVWv7pP8SmPKML58Wg4SdIjb8RuntkvR1Ege0oDW_jEq00fKVdfkYMKCQAzBPor97tzuUMUw-ailf5TTXFxoBSCheUmpXrNp3K16Q"/>
+<div>
+<h2 class="font-headline-md text-headline-md text-[#B7FF3C] font-bold text-lg leading-tight">AI_Nikitka93</h2>
+<p class="font-code-xs text-code-xs text-[#B7FF3C]/70 tracking-widest">0x-442_LEVEL_ACCESS</p>
+</div>
+</div>
+</div>
+<div class="flex-1 py-4">
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">login</span>ENTRANCE
+            </a>
+<a class="bg-[#B7FF3C] text-black flex items-center gap-3 px-4 py-3 m-2 rounded-none skew-x-[-12deg] transition-transform font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase Active: skew-x-0 duration-150" href="#">
+<span class="material-symbols-outlined skew-x-[12deg]">inventory_2</span><span class="skew-x-[12deg]">ARCHIVE</span>
+</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">center_focus_strong</span>FOCUS
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">person</span>HUMAN
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">menu_book</span>JOURNAL
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">assignment</span>BRIEFING
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">terminal</span>CONSOLE
+            </a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-['Space_Grotesk'] text-[10px] font-black tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">map</span>ROUTES
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="pt-[80px] md:pt-[100px] pb-[60px] px-6 md:px-margin max-w-7xl mx-auto md:ml-0 md:w-full min-h-screen">
+<header class="mb-xl border-b border-outline-variant pb-md relative">
+<div class="absolute right-0 top-0 text-primary-fixed-dim font-code-xs text-code-xs opacity-50">
+                [ DIR: /root/dossiers/ ]
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-xs tracking-tighter">
+                PROOF <span class="text-primary-fixed glitch-flicker inline-block">ARCHIVE</span>
+</h1>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant max-w-2xl border-l-2 border-primary-fixed pl-sm">
+                ACCESSING SECURE DOSSIERS. 7 RECORDS FOUND. DATA INTEGRITY: 94.2%.
+            </p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[minmax(180px,auto)]">
+<!-- 35AWARDS - Featured Image Module -->
+<article class="md:col-span-8 md:row-span-2 border border-outline-variant bg-surface-container/40 relative group overflow-hidden transition-all duration-300 hover:border-primary-fixed/50 hover:shadow-[0_0_15px_rgba(183,255,60,0.1)]">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-primary-fixed-dim z-10 bg-black/60 px-2 py-1 border border-primary-fixed/30 backdrop-blur-sm">
+                    ID: 0x-35A
+                </div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent z-0"></div>
+<img alt="35AWARDS" class="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Retro computer terminal screen showing green phosphor text, close up, tech noir aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOvZm4XtCz5D8W8DaG0tXjLQfjwhEIoqasBJIkONuqgApta_gx2QEtUk7KQ8o9wUghYPlaA0fMZBdZQjLLp5_0e71nuXmjR8W4BsT8Pr60aQLObSGe15Gm6-FVoNezdHm6Pywt77kfGW9lMi4DXTQW7QM_QBAbJUneuAx5kD_NodnoSbwpPZZPy6Pyo_s0IGSLhg98BXLDfJmLWncxHKzkZxCAZrZ69sJeNJb8cvGC-hDXRzzZjn3rFswmXpeGsAIg_5gvIoVcQ_c"/>
+<div class="absolute bottom-0 left-0 p-md z-10 w-full border-t border-outline-variant bg-surface-container-high/80 backdrop-blur-md">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-code-xs text-code-xs text-primary-container px-2 py-1 border border-primary-container/40 inline-block mb-xs">[ STATUS: VERIFIED ]</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">35AWARDS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">International photography competition data integration. High-resolution asset pipeline successfully deployed.</p>
+</div>
+<button class="w-10 h-10 border border-primary-fixed text-primary-fixed flex items-center justify-center hover:bg-primary-fixed hover:text-black transition-colors shrink-0">
+<span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- LabStory/Helix - Text Heavy -->
+<article class="md:col-span-4 md:row-span-1 border border-outline-variant bg-surface-container relative p-sm group hover:border-primary-fixed/50">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-primary-fixed-dim">ID: 0x-LBH</div>
+<div class="h-full flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">biotech</span>
+<span class="font-meta-sm text-meta-sm text-on-surface-variant">LabStory/Helix</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs leading-tight">Genetic Sequence Analyzer</h3>
+</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant space-y-1 border-l border-outline-variant pl-xs">
+<p>&gt; ALGORITHM: OPTIMIZED</p>
+<p>&gt; LATENCY: 4MS</p>
+<p>&gt; SEVERITY: LOW</p>
+</div>
+</div>
+</article>
+<!-- КИНОМАТИК - Mixed -->
+<article class="md:col-span-4 md:row-span-1 border border-outline-variant bg-surface-container/60 relative p-sm group hover:border-primary-fixed/50 overflow-hidden">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-primary-fixed-dim z-10">ID: 0x-KNM</div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-20 pointer-events-none mix-blend-screen">
+<img alt="Film reel" class="w-full h-full object-cover" data-alt="Abstract distorted film reel strips, glitch art style, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdez7fLhk2fZuhP6fJeEPN_qYqx7LXnrD03F8Y4ED--4zZ_nENL5FT1LfIP9ycis1c4ZJQOPanrR2XWGhMJ-Gtmt3JD0gz3l0Csdx9c8wZJx8rmGD-Hrer3q6eXUPUTBg-5R14qKrPnBK6-zv0xo3DEmF2szKTNhoKTpK_dVBSFpoeA9AIQsMFK4YHEY1CNWgfyPlvFrJNTGOuW93G6_I4kxOmarK0hcrHzgBTporSOnaPq88OEs6K4BKjwCRlCP7AKAeNzUSyEaU"/>
+</div>
+<div class="h-full flex flex-col justify-between relative z-10 w-2/3">
+<div>
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">movie</span>
+<span class="font-meta-sm text-meta-sm text-on-surface-variant">КИНОМАТИК</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight">Cinematic Logic Engine</h3>
+</div>
+</div>
+</article>
+<!-- MiniMax 2025 - Data Focus -->
+<article class="md:col-span-3 md:row-span-1 border border-outline-variant bg-surface-container relative p-sm translate-y-2 group hover:border-primary-fixed/50 hover:-translate-y-0 transition-transform">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-primary-fixed-dim">ID: 0x-MMX</div>
+<div class="h-full flex flex-col justify-center items-center text-center">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">MiniMax 2025</h3>
+<div class="text-4xl font-bold text-primary-fixed tracking-tighter mb-1">99.9%</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase">Efficacy Rate</span>
+</div>
+</article>
+<!-- VK RecSys - Code Block -->
+<article class="md:col-span-5 md:row-span-1 border border-outline-variant bg-surface-container-lowest relative p-sm group hover:border-primary-fixed/50">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-primary-fixed-dim">ID: 0x-VKR</div>
+<h3 class="font-meta-sm text-meta-sm text-on-surface-variant mb-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">schema</span> VK RecSys
+                 </h3>
+<div class="bg-surface-dim border border-outline-variant/50 p-2 font-code-xs text-code-xs text-on-surface-variant overflow-hidden h-24">
+<pre class="opacity-70">def optimize_recommendations(user_id):
+  matrix = load_sparse_tensors()
+  weights = apply_attention(matrix)
+  return filter_noise(weights, threshold=0.85)
+                    </pre>
+</div>
+</article>
+<!-- NVIDIA Blackwell - Hero Module -->
+<article class="md:col-span-4 md:row-span-1 border border-outline-variant bg-surface-container/80 relative overflow-hidden group hover:border-primary-fixed/50">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-primary-fixed-dim z-10 bg-black/60 px-2 py-1">ID: 0x-NVB</div>
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-fixed/10 via-surface-dim to-surface-dim"></div>
+</div>
+<div class="relative z-10 p-sm h-full flex flex-col justify-between border-l-4 border-primary-fixed">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">memory</span>
+<span class="font-meta-sm text-meta-sm text-on-surface-variant">HARDWARE_PROFILE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tighter">NVIDIA Blackwell</h3>
+</div>
+<div class="flex gap-2">
+<span class="font-code-xs text-code-xs text-black bg-primary-fixed px-2 py-1">ARCH: B200</span>
+<span class="font-code-xs text-code-xs text-primary-fixed border border-primary-fixed px-2 py-1">TENSOR_CORE</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-8 py-1 h-8 bg-black/80 backdrop-blur-xl docked full-width bottom-0 border-t border-t border-[#B7FF3C]/30 no-shadows font-['Space_Grotesk'] text-[8px] uppercase tracking-widest text-[#B7FF3C]">
+<div class="flex items-center gap-4">
+<span class="text-[#B7FF3C] opacity-50">[ STATUS: SECURE ] © 2024 NEURAL_CHAMBER</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-zinc-700 hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-all" href="#">LATENCY_12MS</a>
+<a class="text-zinc-700 hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-all" href="#">PORT_8080</a>
+<a class="text-zinc-700 hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-all" href="#">X_LINK_STABLE</a>
+</div>
+<!-- Scanning horizontal line simulation via CSS border/gradient could go here if pure CSS, omitting complex animation per rules -->
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#B7FF3C]/50 to-transparent opacity-50"></div>
+</footer>
+</body></html>

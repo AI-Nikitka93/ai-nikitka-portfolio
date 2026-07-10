@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - Scope Intake</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#484a44",
+                        "background": "#111411",
+                        "surface": "#111411",
+                        "on-error": "#690005",
+                        "tertiary-container": "#dfe4dc",
+                        "on-secondary-fixed-variant": "#464742",
+                        "surface-container-low": "#191c19",
+                        "tertiary-fixed-dim": "#c3c8c0",
+                        "on-background": "#e1e3dd",
+                        "inverse-primary": "#506600",
+                        "surface-container-highest": "#333632",
+                        "on-tertiary-fixed-variant": "#434842",
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0c0f0c",
+                        "surface-tint": "#abd600",
+                        "on-secondary-fixed": "#1a1c18",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#111411",
+                        "on-tertiary-container": "#616660",
+                        "surface-container-high": "#282b27",
+                        "on-secondary": "#2f312c",
+                        "secondary-fixed": "#e3e3db",
+                        "surface-variant": "#333632",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c7bf",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "outline-variant": "#444933",
+                        "surface-bright": "#373a36",
+                        "on-surface": "#e1e3dd",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary-fixed": "#dfe4dc",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#181d18",
+                        "on-tertiary": "#2d322c",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7bf",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2e312e",
+                        "error-container": "#93000a",
+                        "surface-container": "#1d201d",
+                        "on-secondary-container": "#b8b9b2",
+                        "outline": "#8e9379",
+                        "inverse-surface": "#e1e3dd",
+                        "primary-container": "#c3f400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-md": "800px",
+                        "margin": "48px",
+                        "container-sm": "400px",
+                        "container-lg": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "display-vertical": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-vertical": ["120px", { "lineHeight": "100px", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #111411; color: #e1e3dd; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+        
+        /* Grid background for structural feel */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(142, 147, 121, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(142, 147, 121, 0.1) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased bg-grid min-h-screen flex flex-col md:flex-row">
+<!-- SideNavBar (Web) / TopAppBar (Mobile) Semantic Mapping: Intent -> SYS_DUMP as it's an intake form -->
+<div class="hidden md:flex flex-col w-64 z-40 bg-zinc-950 fixed left-0 top-20 h-[calc(100vh-80px)] border-r border-zinc-800 divide-y divide-zinc-800 flat no shadows offset-outlines-4px">
+<div class="p-6">
+<div class="text-on-surface font-label-caps text-label-caps tracking-widest mb-1">OPERATOR_V1</div>
+<div class="text-lime-400 font-label-caps text-label-caps opacity-70">STATUS_ACTIVE</div>
+</div>
+<div class="flex-1 overflow-y-auto font-['Space_Grotesk'] font-medium text-xs tracking-widest">
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4">psychology</span>
+                NEURAL_NET
+            </a>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4">grid_view</span>
+                FLUID_GRID
+            </a>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4">align_horizontal_left</span>
+                ASYMMETRIC_LOG
+            </a>
+<a class="bg-lime-400 text-zinc-950 font-black flex items-center p-4" href="#">
+<span class="material-symbols-outlined mr-4">memory</span>
+                SYS_DUMP
+            </a>
+</div>
+<div class="mt-auto">
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0 font-['Space_Grotesk'] font-medium text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined mr-4">logout</span>
+                LOGOUT
+            </a>
+</div>
+</div>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 h-20 bg-zinc-950 docked full-width top-0 border-b border-zinc-800 divide-x divide-zinc-800 flat no shadows structural layering via 1px lines fixed z-50">
+<div class="flex items-center pr-6">
+<span class="text-2xl font-black text-lime-400 tracking-widest">AI_NIKITKA93</span>
+</div>
+<nav class="hidden md:flex flex-1 items-center px-6 gap-8 font-['Space_Grotesk'] font-bold uppercase tracking-tighter">
+<a class="text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 px-2 py-1" href="#">STREAMS</a>
+<a class="text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 px-2 py-1" href="#">LATTICE</a>
+<a class="text-lime-400 border-b-2 border-lime-400 pb-1 px-2 py-1" href="#">CORE</a>
+</nav>
+<div class="flex items-center pl-6 gap-4 text-lime-400">
+<button class="p-2 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 rounded-none"><span class="material-symbols-outlined">sensors</span></button>
+<button class="p-2 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 rounded-none"><span class="material-symbols-outlined">terminal</span></button>
+<button class="p-2 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 rounded-none"><span class="material-symbols-outlined">settings</span></button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 mt-20 md:ml-64 p-6 md:p-12 relative overflow-x-hidden">
+<!-- Header Section -->
+<div class="mb-16 border-l-2 border-primary-container pl-6 relative">
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase break-words w-full lg:w-3/4">
+                PROJECT SCOPE INTAKE
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 w-full md:w-1/2">
+                Define the parameters for the new kinetic grid implementation. All fields require precise mathematical constraints.
+            </p>
+</div>
+<!-- Form Layout - Asymmetric Grid -->
+<form class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative">
+<!-- Left Column: Core Parameters -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Input Block 1 -->
+<div class="border border-outline bg-surface-container-low p-6 relative group">
+<div class="absolute top-0 right-0 p-2 text-outline-variant group-hover:text-primary-container transition-none">
+<span class="material-symbols-outlined">grid_4x4</span>
+</div>
+<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Node Designation</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary-container focus:ring-0 text-on-surface font-body-lg text-body-lg px-0 py-2 placeholder-on-surface-variant transition-none" placeholder="e.g. ALPHA_NEXUS_01" type="text"/>
+</div>
+<!-- Input Block 2: Overlapping -->
+<div class="border border-outline bg-surface-container p-6 relative translate-x-4 md:translate-x-8 -mt-4 z-10 shadow-[4px_4px_0px_0px_#444933]">
+<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Dimensional Constraints</label>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest block mb-1">X-Axis Limit</span>
+<input class="w-full bg-surface-container-highest border-0 border-b border-outline focus:border-primary-container focus:ring-0 text-primary-container font-headline-md text-headline-md px-2 py-1 text-right" placeholder="1024" type="number"/>
+</div>
+<div>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest block mb-1">Y-Axis Limit</span>
+<input class="w-full bg-surface-container-highest border-0 border-b border-outline focus:border-primary-container focus:ring-0 text-primary-container font-headline-md text-headline-md px-2 py-1 text-right" placeholder="768" type="number"/>
+</div>
+</div>
+</div>
+<!-- Input Block 3: Textarea -->
+<div class="border border-outline bg-surface-container-low p-6 relative">
+<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Kinetic Logic Description</label>
+<textarea class="w-full bg-transparent border border-outline focus:border-primary-container focus:ring-0 text-on-surface font-body-md text-body-md p-3 resize-none transition-none" placeholder="Define interaction rules and velocity vectors..." rows="4"></textarea>
+<div class="flex justify-end mt-2 gap-2">
+<span class="border border-outline px-2 py-1 font-label-caps text-[10px] text-on-surface-variant">OPTIONAL</span>
+<span class="border border-outline px-2 py-1 font-label-caps text-[10px] text-primary-container">RAW_TEXT</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Settings & Metadata -->
+<div class="lg:col-span-5 space-y-8 lg:translate-y-12">
+<!-- Status Select -->
+<div class="border border-outline bg-surface p-6">
+<label class="block font-label-caps text-label-caps text-on-surface mb-4 uppercase flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container inline-block"></span>
+                        Priority Level
+                    </label>
+<div class="space-y-2">
+<label class="flex items-center p-3 border border-outline hover:border-primary-container cursor-pointer transition-none group">
+<input checked="" class="form-radio text-primary-container border-outline focus:ring-0 bg-transparent" name="priority" type="radio"/>
+<span class="ml-3 font-body-md text-body-md text-on-surface group-hover:text-primary-container">CRITICAL_PATH</span>
+</label>
+<label class="flex items-center p-3 border border-outline hover:border-primary-container cursor-pointer transition-none group">
+<input class="form-radio text-primary-container border-outline focus:ring-0 bg-transparent" name="priority" type="radio"/>
+<span class="ml-3 font-body-md text-body-md text-on-surface group-hover:text-primary-container">BACKGROUND_TASK</span>
+</label>
+<label class="flex items-center p-3 border border-outline hover:border-primary-container cursor-pointer transition-none group opacity-50">
+<input class="form-radio text-primary-container border-outline focus:ring-0 bg-transparent" disabled="" name="priority" type="radio"/>
+<span class="ml-3 font-body-md text-body-md text-on-surface">DEPRECATED_FLOW</span>
+</label>
+</div>
+</div>
+<!-- Toggles -->
+<div class="border border-outline bg-surface-container-lowest p-6 flex flex-col gap-4">
+<div class="flex justify-between items-center border-b border-outline pb-4">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Asymmetric Rendering</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest border border-outline peer-focus:ring-0 peer-checked:bg-primary-container peer-checked:border-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:border-outline after:border after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:after:bg-surface"></div>
+</label>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Force Dark Mode Matrix</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest border border-outline peer-focus:ring-0 peer-checked:bg-primary-container peer-checked:border-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:border-outline after:border after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:after:bg-surface"></div>
+</label>
+</div>
+</div>
+<!-- Submit Action -->
+<div class="pt-8">
+<button class="w-full bg-primary-container text-surface font-headline-md text-headline-md py-4 px-6 border-2 border-primary-container hover:bg-surface hover:text-primary-container transition-none flex justify-between items-center uppercase shadow-[8px_8px_0px_0px_#8e9379]" type="button">
+<span>INITIALIZE_SEQUENCE</span>
+<span class="material-symbols-outlined text-3xl">arrow_forward</span>
+</button>
+<button class="w-full mt-4 bg-transparent text-on-surface-variant font-label-caps text-label-caps py-3 border border-outline hover:bg-on-surface-variant hover:text-surface transition-none uppercase" type="button">
+                        ABORT_OPERATION
+                    </button>
+</div>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="md:ml-64 mt-auto border-t-2 border-lime-400 w-full flex flex-col md:flex-row justify-between items-start p-12 gap-8 bg-zinc-950 font-['Space_Grotesk'] text-[10px] uppercase font-bold text-lime-400 z-50">
+<div>
+<span class="text-lime-400 font-black">©2024 AI_NIKITKA93 // SWISS_MODERNISM_ENGINE</span>
+</div>
+<div class="flex gap-6 flex-wrap">
+<a class="text-zinc-500 hover:text-white transition-none" href="#">TERMINAL</a>
+<a class="text-lime-400 underline hover:text-white transition-none" href="#">LATTICE_API</a>
+<a class="text-zinc-500 hover:text-white transition-none" href="#">CORE_DEBUG</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-06-01T15:36:30.992Z",
+  "url": "http://127.0.0.1:3200/",
+  "title": "AI_Nikitka93 — портфолио работ и проектов",
+  "reducedMotionRuleCount": 1,
+  "cssSupportsReducedMotion": true,
+  "currentPrefersReducedMotion": false,
+  "reducedMotionRules": [
+    {
+      "conditionText": "(prefers-reduced-motion: reduce)",
+      "cssText": "@media (prefers-reduced-motion: reduce) {\n  html { scroll-behavior: auto !important; }\n  *, ::before, ::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }\n  .interactive-surface:hover, .interactive-surface:focus-within { transform: none; }\n  .skip-link { transition: none; }\n}",
+      "ruleCount": 4
+    }
+  ],
+  "skipLinkExists": true,
+  "mainTargetExists": true,
+  "mainTabIndex": "-1",
+  "horizontalOverflow": false
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#490106",
+                    "on-tertiary-fixed": "#384046",
+                    "inverse-surface": "#f9f9fc",
+                    "on-tertiary-fixed-variant": "#545d63",
+                    "secondary-dim": "#8ea0b2",
+                    "on-surface": "#e0e6ed",
+                    "primary-dim": "#96baf5",
+                    "secondary-fixed": "#d3e4f9",
+                    "primary": "#a7c8ff",
+                    "secondary": "#8ea0b2",
+                    "on-secondary-fixed-variant": "#4d5d6e",
+                    "tertiary-fixed-dim": "#cdd5dc",
+                    "on-primary-container": "#b7d1ff",
+                    "tertiary-container": "#dce3eb",
+                    "inverse-on-surface": "#535557",
+                    "on-primary-fixed": "#154072",
+                    "secondary-fixed-dim": "#c5d6ea",
+                    "on-tertiary": "#535b61",
+                    "on-surface-variant": "#a6acb2",
+                    "on-secondary-container": "#b0c1d5",
+                    "surface-container": "#161a1e",
+                    "surface-container-low": "#111416",
+                    "on-error-container": "#ff9993",
+                    "error-dim": "#bb5551",
+                    "primary-container": "#1f477a",
+                    "inverse-primary": "#3b6094",
+                    "tertiary-fixed": "#dce3eb",
+                    "surface-bright": "#252d33",
+                    "on-primary": "#164073",
+                    "primary-fixed-dim": "#bed5ff",
+                    "on-primary-fixed-variant": "#375c91",
+                    "surface-container-lowest": "#000000",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-tint": "#a7c8ff",
+                    "surface-container-high": "#1b2025",
+                    "on-background": "#e0e6ed",
+                    "on-secondary-fixed": "#304151",
+                    "on-secondary": "#102230",
+                    "tertiary": "#eaf2f9",
+                    "surface-variant": "#20262c",
+                    "on-tertiary-container": "#4b5359",
+                    "outline": "#70767c",
+                    "surface": "#0c0e10",
+                    "tertiary-dim": "#cdd5dc",
+                    "outline-variant": "#42494e",
+                    "error-container": "#7f2927",
+                    "secondary-container": "#2c3d4d",
+                    "surface-dim": "#0c0e10",
+                    "background": "#0c0e10",
+                    "surface-container-highest": "#20262c",
+                    "error": "#ee7d77"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c0e10;
+            color: #e0e6ed;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0c0e10]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#a7c8ff] font-headline">Nikita Kizevich</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Обо мне</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Проекты</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Услуги</a>
+<a class="text-[#a7c8ff] font-semibold border-b-2 border-[#a7c8ff] pb-1 font-headline tracking-tight" href="#">Блог</a>
+</div>
+<button class="bg-gradient-to-br from-[#a7c8ff] to-[#1f477a] text-[#164073] px-6 py-2 rounded-full font-label text-sm font-bold uppercase tracking-widest hover:scale-95 transition-transform active:opacity-80">
+                Связаться
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary">Архив мысли</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-on-surface mb-6">Блог и мысли</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl font-body leading-relaxed">
+                Заметки об AI и системной архитектуре. Анализ технологий через призму практического внедрения и оптимизации.
+            </p>
+</header>
+<!-- Category Navigation -->
+<div class="flex flex-wrap gap-3 mb-12">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-label text-xs font-bold uppercase tracking-widest transition-all">Все</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-secondary hover:text-primary transition-all font-label text-xs font-bold uppercase tracking-widest">LLM</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-secondary hover:text-primary transition-all font-label text-xs font-bold uppercase tracking-widest">Архитектура</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-secondary hover:text-primary transition-all font-label text-xs font-bold uppercase tracking-widest">Автоматизация</button>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Featured Article (Large Card) -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="aspect-[16/9] w-full relative overflow-hidden">
+<img alt="RAG Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Abstract visualization of neural network architecture with glowing connections and data nodes in deep blue and silver tones, professional technical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoIEApR0-ygd4LLR3lbpX0L48GBl-ipUPb0OlBpt3Jm__5oTpmhocWmlmApPRs_Ue8Qrefkaq-rjcHhNQnV21FMU_LFPal6toqYpXUiGEVVJqk_zTLgBgos5C41Sim4XmZ15gWt2xtCToIwd-tBTHbfcLK8Hm2mi100qnCvCDR-7cOpFMSPOjWq56-UOTl8zjsxKI0bygsLwZoJLhBXny3_NBmaUVs_n-bSXn8PcixlvYb1tSkBx3JLUbse6pek4RdKZL78NNNS40"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6">
+<span class="bg-surface-bright/80 backdrop-blur-md px-3 py-1 rounded text-[10px] font-label font-bold uppercase tracking-[0.15em] text-primary flex items-center gap-2">
+<span class="w-1 h-1 rounded-full bg-primary"></span> Proof Verified
+                        </span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 mb-4">
+<time class="font-label text-xs text-secondary uppercase tracking-widest">14 Марта 2024</time>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-label text-xs text-secondary uppercase tracking-widest">12 мин чтения</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold font-headline tracking-tight text-on-surface mb-4 group-hover:text-primary transition-colors">Почему RAG — это будущее корпоративного AI</h2>
+<p class="text-on-surface-variant font-body mb-8 line-clamp-2 max-w-2xl">
+                        Разбираем, почему простая дообученная модель проигрывает Retrieval-Augmented Generation в задачах работы с корпоративными знаниями и как построить масштабируемый пайплайн.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label text-sm font-bold uppercase tracking-widest group-hover:gap-4 transition-all" href="#">
+                        Читать статью <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="bg-surface-container rounded-lg p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-secondary-dim bg-secondary-container/30 px-2 py-1 rounded">Optimization</span>
+<span class="material-symbols-outlined text-secondary opacity-50 group-hover:opacity-100 transition-opacity">memory</span>
+</div>
+<h3 class="text-xl font-bold font-headline tracking-tight text-on-surface mb-3">Эффективный Fine-tuning</h3>
+<p class="text-sm text-on-surface-variant font-body line-clamp-3">
+                        Методы LoRA и QLoRA: как дообучать модели на потребительском железе без потери качества инференса.
+                    </p>
+</div>
+<div class="mt-8">
+<time class="block font-label text-[10px] text-outline uppercase tracking-widest mb-4">02 Марта 2024</time>
+<a class="text-primary font-label text-xs font-bold uppercase tracking-widest" href="#">Подробнее</a>
+</div>
+</div>
+<!-- Side Card 2 -->
+<div class="bg-surface-container rounded-lg p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-secondary-dim bg-secondary-container/30 px-2 py-1 rounded">DevStack</span>
+<span class="material-symbols-outlined text-secondary opacity-50 group-hover:opacity-100 transition-opacity">terminal</span>
+</div>
+<h3 class="text-xl font-bold font-headline tracking-tight text-on-surface mb-3">Мой стек для AI-агентов</h3>
+<p class="text-sm text-on-surface-variant font-body line-clamp-3">
+                        От LangGraph до CrewAI: обзор инструментов, которые я использую для создания автономных рабочих процессов.
+                    </p>
+</div>
+<div class="mt-8">
+<time class="block font-label text-[10px] text-outline uppercase tracking-widest mb-4">25 Февраля 2024</time>
+<a class="text-primary font-label text-xs font-bold uppercase tracking-widest" href="#">Подробнее</a>
+</div>
+</div>
+<!-- Small Content Card (Full width on small, 1/3 on large) -->
+<div class="bg-surface-container rounded-lg p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-secondary-dim bg-secondary-container/30 px-2 py-1 rounded">Ethics</span>
+<span class="material-symbols-outlined text-secondary opacity-50 group-hover:opacity-100 transition-opacity">gavel</span>
+</div>
+<h3 class="text-xl font-bold font-headline tracking-tight text-on-surface mb-3">Этика в LLM</h3>
+<p class="text-sm text-on-surface-variant font-body line-clamp-3">
+                        Где проходит граница между помощью и подменой человеческого труда, и как минимизировать галлюцинации.
+                    </p>
+</div>
+<div class="mt-8">
+<time class="block font-label text-[10px] text-outline uppercase tracking-widest mb-4">18 Февраля 2024</time>
+<a class="text-primary font-label text-xs font-bold uppercase tracking-widest" href="#">Подробнее</a>
+</div>
+</div>
+<!-- CTA Bento Box -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary-container/20 to-surface-container rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-8 group">
+<div class="max-w-md">
+<h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface mb-2">Следите за обновлениями</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">
+                        Делюсь техническими инсайтами и разборами новых архитектур в реальном времени. Без спама, только системный подход.
+                    </p>
+</div>
+<a class="whitespace-nowrap flex items-center gap-3 bg-[#a7c8ff] text-[#164073] px-8 py-4 rounded-full font-label text-sm font-bold uppercase tracking-widest hover:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">send</span>
+                    Подписаться в Telegram
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#1b2025]/30 bg-[#0c0e10] dark:bg-[#0c0e10]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-6">
+<div class="font-label text-xs uppercase tracking-widest text-[#8ea0b2]">
+                © 2024 Nikita Kizevich. Precision in AI.
+            </div>
+<div class="flex gap-8">
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label text-xs uppercase tracking-widest" href="#">Telegram</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label text-xs uppercase tracking-widest" href="#">GitHub</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label text-xs uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label text-xs uppercase tracking-widest" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

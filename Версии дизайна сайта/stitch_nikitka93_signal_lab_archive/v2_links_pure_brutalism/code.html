@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIGNAL_LAB [V2.0] - Directory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e9e2d1",
+                      "on-tertiary-fixed": "#1e1b11",
+                      "on-tertiary": "#343025",
+                      "surface": "#111413",
+                      "secondary": "#ffb59a",
+                      "tertiary-container": "#e9e2d1",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#802a00",
+                      "secondary-fixed": "#ffdbcf",
+                      "on-secondary": "#5b1b00",
+                      "tertiary-fixed-dim": "#cdc6b6",
+                      "on-tertiary-fixed-variant": "#4b473b",
+                      "surface-container-highest": "#323534",
+                      "outline": "#8c947b",
+                      "primary-container": "#b0f734",
+                      "outline-variant": "#424935",
+                      "on-primary-fixed": "#121f00",
+                      "on-primary-container": "#4a6f00",
+                      "secondary-fixed-dim": "#ffb59a",
+                      "inverse-surface": "#e1e3e1",
+                      "surface-container-lowest": "#0c0f0e",
+                      "on-tertiary-container": "#696457",
+                      "on-secondary-container": "#fffbff",
+                      "on-secondary-fixed": "#380d00",
+                      "surface-bright": "#373a38",
+                      "surface-variant": "#323534",
+                      "on-primary-fixed-variant": "#334f00",
+                      "surface-container-high": "#282b29",
+                      "inverse-primary": "#456800",
+                      "tertiary": "#ffffff",
+                      "error-container": "#93000a",
+                      "primary-fixed-dim": "#96da06",
+                      "on-surface": "#e1e3e1",
+                      "primary": "#ffffff",
+                      "on-surface-variant": "#c2caaf",
+                      "secondary-container": "#cd4700",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#111413",
+                      "surface-container": "#1d201f",
+                      "inverse-on-surface": "#2e3130",
+                      "surface-tint": "#96da06",
+                      "surface-container-low": "#191c1b",
+                      "on-primary": "#223600",
+                      "primary-fixed": "#b0f734",
+                      "on-error": "#690005",
+                      "background": "#111413",
+                      "on-background": "#e1e3e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "margin": "40px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-large": [
+                              "IBM Plex Mono"
+                      ],
+                      "label-tiny": [
+                              "IBM Plex Mono"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-main": [
+                              "IBM Plex Mono"
+                      ],
+                      "metadata": [
+                              "IBM Plex Mono"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-large": [
+                              "18px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-tiny": [
+                              "10px",
+                              {
+                                      "lineHeight": "120%",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-main": [
+                              "14px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "metadata": [
+                              "12px",
+                              {
+                                      "lineHeight": "140%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #0A0D0C;
+            color: #e1e3e1;
+        }
+        .brutal-border {
+            border: 0.5px solid #8E968C;
+        }
+        .brutal-border-b {
+            border-bottom: 0.5px solid #8E968C;
+        }
+        .brutal-border-t {
+            border-top: 0.5px solid #8E968C;
+        }
+        .brutal-border-r {
+            border-right: 0.5px solid #8E968C;
+        }
+        .bg-void {
+            background-color: #0A0D0C;
+        }
+        .bg-carbon {
+            background-color: #161B19;
+        }
+        .text-phosphor {
+            color: #B7FF3C;
+        }
+        .bg-phosphor {
+            background-color: #B7FF3C;
+        }
+        .text-titanium {
+            color: #8E968C;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-main text-body-main selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="hidden md:flex justify-between items-center w-full px-10 h-16 max-w-full bg-[#0A0D0C] docked full-width top-0 brutal-border-b z-50">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase">
+            SIGNAL_LAB [V2.0]
+        </div>
+<nav class="flex gap-8">
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">ARCHIVE</a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">SIGNALS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">ATLAS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">TERMINAL</a>
+</nav>
+<div class="font-['Space_Grotesk'] tracking-tighter uppercase text-[#B7FF3C] hover:opacity-80 cursor-pointer">
+            RU/EN
+        </div>
+</header>
+<div class="flex flex-1 pt-0 md:pt-16">
+<!-- SideNavBar -->
+<aside class="hidden md:flex fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex-col z-40 bg-[#0A0D0C] brutal-border-r">
+<div class="p-6 brutal-border-b mb-4">
+<div class="font-headline-md text-headline-md text-[#B7FF3C]">ОПЕРАТОР_01</div>
+<div class="font-label-tiny text-label-tiny text-[#8E968C] mt-1 uppercase">ДОСТУП: ОМЕГА</div>
+</div>
+<nav class="flex-1 flex flex-col font-mono text-xs uppercase">
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">grid_view</span>
+                    ПАНЕЛЬ
+                </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 border-l-4 border-[#B7FF3C]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sensors</span>
+                    СИГНАЛЫ
+                </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">table_chart</span>
+                    ДАННЫЕ
+                </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">map</span>
+                    КАРТА
+                </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all mt-auto mb-4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+                    НАСТРОЙКИ
+                </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-margin grid grid-cols-12 gap-gutter mb-16 md:mb-0">
+<!-- Header Module -->
+<div class="col-span-12 mb-8 border-l-2 border-[#B7FF3C] pl-4">
+<h1 class="font-display-xl text-display-xl text-phosphor uppercase">ДИРЕКТОРИЯ</h1>
+<p class="font-body-large text-body-large text-titanium mt-2 max-w-2xl">КОМПАКТНЫЙ ТАБЛИЧНЫЙ СПИСОК АКТИВНЫХ СИГНАЛОВ. СТРУКТУРИРОВАНО ПО УРОВНЮ УГРОЗЫ И ВРЕМЕНИ ПОСТУПЛЕНИЯ.</p>
+</div>
+<!-- Tabular Directory Block -->
+<div class="col-span-12 bg-carbon brutal-border">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-4 p-4 brutal-border-b font-label-tiny text-label-tiny text-titanium uppercase">
+<div class="col-span-2">ID_СИГНАЛА</div>
+<div class="col-span-2">СТАТУС</div>
+<div class="col-span-3">ВЕКТОР_АТАКИ</div>
+<div class="col-span-3">ЛОКАЦИЯ</div>
+<div class="col-span-2 text-right">ВРЕМЯ(UTC)</div>
+</div>
+<!-- Table Rows -->
+<a class="grid grid-cols-12 gap-4 p-4 brutal-border-b hover:bg-void transition-colors group cursor-pointer items-center" href="#">
+<div class="col-span-2 font-metadata text-metadata text-phosphor">&gt; SIG-001</div>
+<div class="col-span-2 flex items-center gap-2">
+<div class="w-2 h-2 bg-phosphor"></div>
+<span class="font-metadata text-metadata uppercase">АКТИВЕН</span>
+</div>
+<div class="col-span-3 font-metadata text-metadata uppercase">DDoS_АНАМАЛИЯ</div>
+<div class="col-span-3 font-metadata text-metadata text-titanium uppercase">СЕРВЕР_0XF</div>
+<div class="col-span-2 text-right font-metadata text-metadata">14:02:11</div>
+</a>
+<a class="grid grid-cols-12 gap-4 p-4 brutal-border-b hover:bg-void transition-colors group cursor-pointer items-center" href="#">
+<div class="col-span-2 font-metadata text-metadata text-on-surface">&gt; SIG-002</div>
+<div class="col-span-2 flex items-center gap-2">
+<div class="w-2 h-2 bg-error"></div>
+<span class="font-metadata text-metadata uppercase">КРИТИЧЕСКИЙ</span>
+</div>
+<div class="col-span-3 font-metadata text-metadata uppercase">УТЕЧКА_ДАННЫХ</div>
+<div class="col-span-3 font-metadata text-metadata text-titanium uppercase">БД_ПОЛЬЗОВАТЕЛЕЙ</div>
+<div class="col-span-2 text-right font-metadata text-metadata">13:45:00</div>
+</a>
+<a class="grid grid-cols-12 gap-4 p-4 brutal-border-b hover:bg-void transition-colors group cursor-pointer items-center" href="#">
+<div class="col-span-2 font-metadata text-metadata text-on-surface">&gt; SIG-003</div>
+<div class="col-span-2 flex items-center gap-2">
+<div class="w-2 h-2 bg-[#8E968C]"></div>
+<span class="font-metadata text-metadata text-titanium uppercase">ЗАКРЫТ</span>
+</div>
+<div class="col-span-3 font-metadata text-metadata uppercase text-titanium">ВТОРЖЕНИЕ_В_ПЕРИМЕТР</div>
+<div class="col-span-3 font-metadata text-metadata text-titanium/50 uppercase">ВНЕШНИЙ_ШЛЮЗ</div>
+<div class="col-span-2 text-right font-metadata text-metadata text-titanium">11:20:55</div>
+</a>
+</div>
+<!-- Metadata Sidebar Block -->
+<div class="col-span-12 md:col-span-4 mt-8 md:mt-0 md:col-start-9 border-t-2 md:border-t-0 md:border-l-2 border-[#8E968C] pt-8 md:pt-0 md:pl-8">
+<div class="font-label-tiny text-label-tiny text-[#B7FF3C] uppercase mb-4">&gt; СВОДКА_СИСТЕМЫ</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center brutal-border-b pb-2">
+<span class="font-metadata text-metadata text-[#8E968C]">[АКТИВНЫЕ_УЗЛЫ]</span>
+<span class="font-metadata text-metadata text-on-surface">1,024</span>
+</div>
+<div class="flex justify-between items-center brutal-border-b pb-2">
+<span class="font-metadata text-metadata text-[#8E968C]">[ПОТЕРИ_ПАКЕТОВ]</span>
+<span class="font-metadata text-metadata text-error">0.02%</span>
+</div>
+<div class="flex justify-between items-center brutal-border-b pb-2">
+<span class="font-metadata text-metadata text-[#8E968C]">[СИЛА_СИГНАЛА]</span>
+<span class="font-metadata text-metadata text-[#B7FF3C]">ОПТИМАЛЬНАЯ</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">dynamic_feed</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">ЛЕНТА</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 hover:bg-[#161B19] w-full h-full bg-carbon" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">radar</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">СИГНАЛЫ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">public</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">КАРТА</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+<span class="font-mono text-[10px] tracking-tighter uppercase">АГЕНТ</span>
+</a>
+</nav>
+</body></html>

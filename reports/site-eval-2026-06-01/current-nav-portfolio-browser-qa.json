@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-06-01T15:40:49.378Z",
+  "url": "http://127.0.0.1:3200/portfolio",
+  "title": "Работы | AI_Nikitka93",
+  "currentLinks": [
+    {
+      "text": "02Работы",
+      "href": "/portfolio",
+      "hiddenByCss": false
+    }
+  ],
+  "hasPortfolioCurrent": true,
+  "hasWrongCurrent": false,
+  "horizontalOverflow": false
+}

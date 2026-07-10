@@ -1,0 +1,34 @@
+{
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 960
+    },
+    "h1": "Напишите вопрос — помощник покажет нужный маршрут по сайту.",
+    "inputExists": true,
+    "inputValue": "Я HR. Что открыть первым?",
+    "answerCompleteEnough": true,
+    "liveTextLength": 231,
+    "liveRegionPolite": true,
+    "matrixPanelVisible": true,
+    "horizontalOverflow": false,
+    "scrollWidth": 1425,
+    "clientWidth": 1425
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "h1": "Напишите вопрос — помощник покажет нужный маршрут по сайту.",
+    "inputExists": true,
+    "inputValue": "Я HR. Что открыть первым?",
+    "answerCompleteEnough": true,
+    "liveTextLength": 231,
+    "liveRegionPolite": true,
+    "matrixPanelVisible": true,
+    "horizontalOverflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390
+  }
+}

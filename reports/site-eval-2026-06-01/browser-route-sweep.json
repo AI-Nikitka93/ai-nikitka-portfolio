@@ -1,0 +1,2725 @@
+[
+  {
+    "route": "/",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nГЛАВНАЯ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nГЛАВНАЯ\n\nНикита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.\n\nЭто портфолио о реальных проектах и экспериментах: AI-видео, генеративная графика, технические задачи и заметки по ходу работы.\n\nСмотреть работы\nОткрыть",
+      "brokenImages": [
+        {
+          "alt": "LabStory / Helix — Technical Mastery",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-03-helix-tech.png&w=3840&q=75"
+        }
+      ],
+      "h1": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 180,
+          "cw": 768,
+          "h": 180,
+          "sh": 188,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+          "w": 768
+        },
+        {
+          "ch": 160,
+          "cw": 563,
+          "h": 160,
+          "sh": 163,
+          "sw": 563,
+          "tag": "h2",
+          "text": "Главная страница нужна только для входа. Все основное разнесено по отдельным разделам.",
+          "w": 563
+        },
+        {
+          "ch": 40,
+          "cw": 146,
+          "h": 40,
+          "sh": 43,
+          "sw": 146,
+          "tag": "p",
+          "text": "07",
+          "w": 146
+        },
+        {
+          "ch": 40,
+          "cw": 146,
+          "h": 40,
+          "sh": 43,
+          "sw": 146,
+          "tag": "p",
+          "text": "04",
+          "w": 146
+        },
+        {
+          "ch": 40,
+          "cw": 146,
+          "h": 40,
+          "sh": 43,
+          "sw": 146,
+          "tag": "p",
+          "text": "03",
+          "w": 146
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 4109,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 16,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Все работы",
+          "w": 96
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/portfolio",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nРАБОТЫ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nРАБОТЫ\n\nСемь главных работ и результатов.\n\nЗдесь собраны проекты и результаты, с которых лучше всего начинать знакомство с тем, что я делаю: AI-видео, визуальные работы и технические задачи.\n\nЧТО ЗДЕСЬ СОБРАНО\n\nТолько главные работы и са",
+      "brokenImages": [
+        {
+          "alt": "LabStory / Helix — Technical Mastery",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-03-helix-tech.png&w=3840&q=75"
+        },
+        {
+          "alt": "КИНОМАТИК — Laureate, Neurovideo Competition",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-04-kinomatik.jpg&w=3840&q=75"
+        },
+        {
+          "alt": "LabStory / Helix — Best Animated Film",
+          "complete": false,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-02-helix-film.png&w=3840&q=75"
+        },
+        {
+          "alt": "LabStory / Helix — Technical Mastery",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-03-helix-tech.png&w=3840&q=75"
+        },
+        {
+          "alt": "КИНОМАТИК — Laureate, Neurovideo Competition",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-04-kinomatik.jpg&w=3840&q=75"
+        }
+      ],
+      "h1": "Семь главных работ и результатов.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 120,
+          "cw": 768,
+          "h": 120,
+          "sh": 128,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Семь главных работ и результатов.",
+          "w": 768
+        },
+        {
+          "ch": 40,
+          "cw": 393,
+          "h": 40,
+          "sh": 43,
+          "sw": 393,
+          "tag": "p",
+          "text": "07",
+          "w": 393
+        },
+        {
+          "ch": 40,
+          "cw": 393,
+          "h": 40,
+          "sh": 43,
+          "sw": 393,
+          "tag": "p",
+          "text": "04",
+          "w": 393
+        },
+        {
+          "ch": 40,
+          "cw": 393,
+          "h": 40,
+          "sh": 43,
+          "sw": 393,
+          "tag": "p",
+          "text": "03",
+          "w": 393
+        },
+        {
+          "ch": 120,
+          "cw": 345,
+          "h": 120,
+          "sh": 123,
+          "sw": 345,
+          "tag": "h2",
+          "text": "Здесь важен не постер, а сам результат.",
+          "w": 345
+        },
+        {
+          "ch": 60,
+          "cw": 207,
+          "h": 60,
+          "sh": 69,
+          "sw": 207,
+          "tag": "p",
+          "text": "50+",
+          "w": 207
+        },
+        {
+          "ch": 45,
+          "cw": 98,
+          "h": 45,
+          "sh": 45,
+          "sw": 101,
+          "tag": "span",
+          "text": "только текстовое подтверждение",
+          "w": 98
+        },
+        {
+          "ch": 60,
+          "cw": 207,
+          "h": 60,
+          "sh": 69,
+          "sw": 207,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 207
+        },
+        {
+          "ch": 45,
+          "cw": 98,
+          "h": 45,
+          "sh": 45,
+          "sw": 101,
+          "tag": "span",
+          "text": "только текстовое подтверждение",
+          "w": 98
+        },
+        {
+          "ch": 60,
+          "cw": 207,
+          "h": 60,
+          "sh": 69,
+          "sw": 207,
+          "tag": "p",
+          "text": "#64",
+          "w": 207
+        },
+        {
+          "ch": 45,
+          "cw": 98,
+          "h": 45,
+          "sh": 45,
+          "sw": 101,
+          "tag": "span",
+          "text": "только текстовое подтверждение",
+          "w": 98
+        },
+        {
+          "ch": 15,
+          "cw": 39,
+          "h": 15,
+          "sh": 15,
+          "sw": 104,
+          "tag": "p",
+          "text": "Подтверждение",
+          "w": 39
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 8102,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Работы | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/about",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nО СЕБЕ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nО СЕБЕ\n\nНикита Кизевич — автор проекта AI_Nikitka93.\n\nЗдесь коротко и простыми словами: кто стоит за проектом, откуда взялся интерес к этой теме, чем подтверждается опыт и где можно посмотреть работы.\n\nОткрыть досье\nСсылки и контакты\n\nКО",
+      "brokenImages": [],
+      "h1": "Никита Кизевич — автор проекта AI_Nikitka93.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 120,
+          "cw": 768,
+          "h": 120,
+          "sh": 128,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Никита Кизевич — автор проекта AI_Nikitka93.",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 2878,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Никита Кизевич | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/blog",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nБЛОГ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nFIELD\n\n00\n\nБЛОГ\n\nЗаметки о работе: что получилось, что не получилось и что оказалось полезным.\n\nЗдесь будут короткие заметки о том, что дало реальный результат в AI-видео, генеративной графике и новых инструментах. Не поток ради активности",
+      "brokenImages": [],
+      "h1": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 100,
+          "tag": "p",
+          "text": "00",
+          "w": 95
+        },
+        {
+          "ch": 240,
+          "cw": 668,
+          "h": 240,
+          "sh": 248,
+          "sw": 668,
+          "tag": "h1",
+          "text": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+          "w": 668
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 1862,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Блог | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/services-calculator",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nПРОЕКТ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nIN\n\n04\n\nОБСУДИТЬ ПРОЕКТ\n\nСначала нужно понять задачу, сроки и результат. Только потом можно честно оценить объем работы.\n\nЗдесь нет случайных пакетов и выдуманных цен. Сначала собирается задача, потом ограничения, и только после этого ст",
+      "brokenImages": [],
+      "h1": "Сначала нужно понять задачу, сроки и результат. Только потом можно честно оценить объем работы.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 100,
+          "tag": "p",
+          "text": "04",
+          "w": 95
+        },
+        {
+          "ch": 360,
+          "cw": 589,
+          "h": 360,
+          "sh": 368,
+          "sw": 589,
+          "tag": "h1",
+          "text": "Сначала нужно понять задачу, сроки и результат. Только потом можно честно оценить объем работы.",
+          "w": 589
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 2270,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Обсудить проект | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/ai-assistant",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nПОМОЩНИК\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nOP\n\n93\n\nПОМОЩНИК\n\nЭто отдельная страница помощника, а не замена всему сайту.\n\nЕго задача проста: понять вопрос, показать нужный раздел и не мешать, если ответ уже есть на отдельной странице с работами, блогом, контактами или информацие",
+      "brokenImages": [],
+      "h1": "Это отдельная страница помощника, а не замена всему сайту.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 100,
+          "tag": "p",
+          "text": "93",
+          "w": 95
+        },
+        {
+          "ch": 300,
+          "cw": 558,
+          "h": 300,
+          "sh": 308,
+          "sw": 558,
+          "tag": "h1",
+          "text": "Это отдельная страница помощника, а не замена всему сайту.",
+          "w": 558
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 1989,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Помощник | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/links",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nКОНТАКТЫ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nDIR\n\n05\n\nСВЯЗИ\n\nПубличные маршруты к архиву, автору и внешним узлам подтверждения.\n\nЭто не стена логотипов. Здесь собраны понятные маршруты: где смотреть работы, где читать рабочий поток, а куда лучше идти уже с конкретным запросом.\n\nС",
+      "brokenImages": [],
+      "h1": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 100,
+          "tag": "p",
+          "text": "05",
+          "w": 95
+        },
+        {
+          "ch": 300,
+          "cw": 471,
+          "h": 300,
+          "sh": 308,
+          "sw": 471,
+          "tag": "h1",
+          "text": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+          "w": 471
+        },
+        {
+          "ch": 30,
+          "cw": 52,
+          "h": 30,
+          "sh": 30,
+          "sw": 78,
+          "tag": "p",
+          "text": "сигнальный поток",
+          "w": 52
+        },
+        {
+          "ch": 48,
+          "cw": 759,
+          "h": 48,
+          "sh": 54,
+          "sw": 759,
+          "tag": "h2",
+          "text": "Telegram",
+          "w": 759
+        },
+        {
+          "ch": 30,
+          "cw": 52,
+          "h": 30,
+          "sh": 30,
+          "sw": 125,
+          "tag": "p",
+          "text": "верифицированный профиль",
+          "w": 52
+        },
+        {
+          "ch": 48,
+          "cw": 280,
+          "h": 48,
+          "sh": 54,
+          "sw": 280,
+          "tag": "h2",
+          "text": "LinkedIn",
+          "w": 280
+        },
+        {
+          "ch": 48,
+          "cw": 280,
+          "h": 48,
+          "sh": 54,
+          "sw": 280,
+          "tag": "h2",
+          "text": "YouTube",
+          "w": 280
+        },
+        {
+          "ch": 30,
+          "cw": 52,
+          "h": 30,
+          "sh": 30,
+          "sw": 101,
+          "tag": "p",
+          "text": "узел подтверждения",
+          "w": 52
+        },
+        {
+          "ch": 48,
+          "cw": 759,
+          "h": 48,
+          "sh": 54,
+          "sw": 759,
+          "tag": "h2",
+          "text": "35AWARDS",
+          "w": 759
+        },
+        {
+          "ch": 48,
+          "cw": 759,
+          "h": 48,
+          "sh": 54,
+          "sw": 759,
+          "tag": "h2",
+          "text": "Email",
+          "w": 759
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 2245,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Связи | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/awards-credentials",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nROUTE\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nГЛУБОКАЯ ПОЛКА\n\nГлавный архив остается компактным. Остальные подтверждения уходят на глубокую полку и не спорят за первый экран.\n\nЭто не запасная галерея и не dump-страница сертификатов. Здесь живет supporting layer: фоновые курсы, вторич",
+      "brokenImages": [],
+      "h1": "Главный архив остается компактным. Остальные подтверждения уходят на глубокую полку и не спорят за первый экран.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 300,
+          "cw": 768,
+          "h": 300,
+          "sh": 308,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Главный архив остается компактным. Остальные подтверждения уходят на глубокую полку и не спорят за первый экран.",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 1653,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Глубокая полка | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+    "viewport": "desktop",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nРАБОТЫ\n01Главная\n02Работы\n03О себе\n04Блог\n05Обсудить проект\n06Помощник\n07Контакты\n\nSIG-01\n\n35AWARDS — AI Imaging Field Results\n\nАртефакт зафиксирован. 35AWARDS season 10. AI-image работы удержали позицию во внешнем международном поле: top-10 в Living Creatures и Undocumented Events, top-1% в Landscape. Фокус: prompt co",
+      "brokenImages": [],
+      "h1": "35AWARDS — AI Imaging Field Results",
+      "hasHorizontalOverflow": false,
+      "heroTop": 128,
+      "overflowText": [
+        {
+          "ch": 120,
+          "cw": 768,
+          "h": 120,
+          "sh": 128,
+          "sw": 768,
+          "tag": "h1",
+          "text": "35AWARDS — AI Imaging Field Results",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientWidth": 1425,
+        "scrollHeight": 3125,
+        "scrollWidth": 1425
+      },
+      "smallTargets": [
+        {
+          "h": 36,
+          "href": "/",
+          "tag": "a",
+          "text": "01Главная",
+          "w": 106
+        },
+        {
+          "h": 36,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "02Работы",
+          "w": 101
+        },
+        {
+          "h": 36,
+          "href": "/about",
+          "tag": "a",
+          "text": "03О себе",
+          "w": 96
+        },
+        {
+          "h": 36,
+          "href": "/blog",
+          "tag": "a",
+          "text": "04Блог",
+          "w": 81
+        },
+        {
+          "h": 36,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "05Обсудить проект",
+          "w": 167
+        },
+        {
+          "h": 36,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "06Помощник",
+          "w": 123
+        },
+        {
+          "h": 36,
+          "href": "/links",
+          "tag": "a",
+          "text": "07Контакты",
+          "w": 114
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nГЛАВНАЯ\n\nГЛАВНАЯ\n\nНикита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.\n\nЭто портфолио о реальных проектах и экспериментах: AI-видео, генеративная графика, технические задачи и заметки по ходу работы.\n\nСмотреть работы\nОткрыть страницу о себе\n\nИМЯ ПРОЕКТА\n\nAI_Nikitka93\n\nПубличное имя проекта, под кот",
+      "brokenImages": [
+        {
+          "alt": "LabStory / Helix — Technical Mastery",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-03-helix-tech.png&w=3840&q=75"
+        }
+      ],
+      "h1": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 174,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 174
+        },
+        {
+          "ch": 240,
+          "cw": 293,
+          "h": 240,
+          "sh": 243,
+          "sw": 293,
+          "tag": "h1",
+          "text": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+          "w": 293
+        },
+        {
+          "ch": 40,
+          "cw": 259,
+          "h": 40,
+          "sh": 43,
+          "sw": 259,
+          "tag": "p",
+          "text": "07",
+          "w": 259
+        },
+        {
+          "ch": 40,
+          "cw": 259,
+          "h": 40,
+          "sh": 43,
+          "sw": 259,
+          "tag": "p",
+          "text": "04",
+          "w": 259
+        },
+        {
+          "ch": 40,
+          "cw": 259,
+          "h": 40,
+          "sh": 43,
+          "sw": 259,
+          "tag": "p",
+          "text": "03",
+          "w": 259
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 8502,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 174
+        },
+        {
+          "h": 16,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Все работы",
+          "w": 343
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/portfolio",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nРАБОТЫ\n\nРАБОТЫ\n\nСемь главных работ и результатов.\n\nЗдесь собраны проекты и результаты, с которых лучше всего начинать знакомство с тем, что я делаю: AI-видео, визуальные работы и технические задачи.\n\nЧТО ЗДЕСЬ СОБРАНО\n\nТолько главные работы и самые сильные результаты, чтобы страницу было легко читать и быстро понять, ч",
+      "brokenImages": [
+        {
+          "alt": "LabStory / Helix — Technical Mastery",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-03-helix-tech.png&w=3840&q=75"
+        },
+        {
+          "alt": "КИНОМАТИК — Laureate, Neurovideo Competition",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-04-kinomatik.jpg&w=3840&q=75"
+        },
+        {
+          "alt": "LabStory / Helix — Best Animated Film",
+          "complete": false,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-02-helix-film.png&w=3840&q=75"
+        },
+        {
+          "alt": "LabStory / Helix — Technical Mastery",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-03-helix-tech.png&w=3840&q=75"
+        },
+        {
+          "alt": "КИНОМАТИК — Laureate, Neurovideo Competition",
+          "complete": false,
+          "naturalHeight": 0,
+          "naturalWidth": 0,
+          "src": "/_next/image?url=%2Fproof-assets%2Fsig-04-kinomatik.jpg&w=3840&q=75"
+        }
+      ],
+      "h1": "Семь главных работ и результатов.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 183,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 183
+        },
+        {
+          "ch": 120,
+          "cw": 293,
+          "h": 120,
+          "sh": 123,
+          "sw": 293,
+          "tag": "h1",
+          "text": "Семь главных работ и результатов.",
+          "w": 293
+        },
+        {
+          "ch": 40,
+          "cw": 259,
+          "h": 40,
+          "sh": 43,
+          "sw": 259,
+          "tag": "p",
+          "text": "07",
+          "w": 259
+        },
+        {
+          "ch": 40,
+          "cw": 259,
+          "h": 40,
+          "sh": 43,
+          "sw": 259,
+          "tag": "p",
+          "text": "04",
+          "w": 259
+        },
+        {
+          "ch": 40,
+          "cw": 259,
+          "h": 40,
+          "sh": 43,
+          "sw": 259,
+          "tag": "p",
+          "text": "03",
+          "w": 259
+        },
+        {
+          "ch": 120,
+          "cw": 293,
+          "h": 120,
+          "sh": 123,
+          "sw": 293,
+          "tag": "h2",
+          "text": "Здесь важен не постер, а сам результат.",
+          "w": 293
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "50+",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "#64",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "50+",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "#64",
+          "w": 275
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 17940,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 183
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Работы | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/about",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nО СЕБЕ\n\nО СЕБЕ\n\nНикита Кизевич — автор проекта AI_Nikitka93.\n\nЗдесь коротко и простыми словами: кто стоит за проектом, откуда взялся интерес к этой теме, чем подтверждается опыт и где можно посмотреть работы.\n\nОткрыть досье\nСсылки и контакты\n\nКОРОТКО\n\nФОРМАТ\n\nкоротко и по делу\n\nГЛАВНОЕ\n\nреальный автор проекта\n\nЗАЧЕМ СТ",
+      "brokenImages": [],
+      "h1": "Никита Кизевич — автор проекта AI_Nikitka93.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 190,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 190
+        },
+        {
+          "ch": 120,
+          "cw": 293,
+          "h": 120,
+          "sh": 123,
+          "sw": 293,
+          "tag": "h1",
+          "text": "Никита Кизевич — автор проекта AI_Nikitka93.",
+          "w": 293
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 6495,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 190
+        },
+        {
+          "h": 44,
+          "href": null,
+          "tag": "button",
+          "text": "Открыть меню",
+          "w": 41
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Никита Кизевич | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/blog",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nБЛОГ\n\nFIELD\n\n00\n\nБЛОГ\n\nЗаметки о работе: что получилось, что не получилось и что оказалось полезным.\n\nЗдесь будут короткие заметки о том, что дало реальный результат в AI-видео, генеративной графике и новых инструментах. Не поток ради активности, а рабочие выводы, которые помогают понять метод.\n\nИНДЕКС\n\nОПУБЛИКОВАНО\n\n0",
+      "brokenImages": [],
+      "h1": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 201,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 201
+        },
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "00",
+          "w": 343
+        },
+        {
+          "ch": 200,
+          "cw": 343,
+          "h": 200,
+          "sh": 203,
+          "sw": 343,
+          "tag": "h1",
+          "text": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+          "w": 343
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 4132,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 201
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Блог | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/services-calculator",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nПРОЕКТ\n\nIN\n\n04\n\nОБСУДИТЬ ПРОЕКТ\n\nСначала нужно понять задачу, сроки и результат. Только потом можно честно оценить объем работы.\n\nЗдесь нет случайных пакетов и выдуманных цен. Сначала собирается задача, потом ограничения, и только после этого становится понятен реальный объем работы.\n\nОКНО ОТВЕТА\n\nВХОДНОЙ КАНАЛ\n\nTelegr",
+      "brokenImages": [],
+      "h1": "Сначала нужно понять задачу, сроки и результат. Только потом можно честно оценить объем работы.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 183,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 183
+        },
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "04",
+          "w": 343
+        },
+        {
+          "ch": 240,
+          "cw": 343,
+          "h": 240,
+          "sh": 243,
+          "sw": 343,
+          "tag": "h1",
+          "text": "Сначала нужно понять задачу, сроки и результат. Только потом можно честно оценить объем работы.",
+          "w": 343
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 4516,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 183
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Обсудить проект | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/ai-assistant",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nПОМОЩНИК\n\nOP\n\n93\n\nПОМОЩНИК\n\nЭто отдельная страница помощника, а не замена всему сайту.\n\nЕго задача проста: понять вопрос, показать нужный раздел и не мешать, если ответ уже есть на отдельной странице с работами, блогом, контактами или информацией обо мне.\n\nЧТО ОН ДЕЛАЕТ\n\nПОМОГАЕТ НАЙТИ\n\nработы, блог, страницу обо мне и",
+      "brokenImages": [],
+      "h1": "Это отдельная страница помощника, а не замена всему сайту.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 165,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 165
+        },
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "93",
+          "w": 343
+        },
+        {
+          "ch": 160,
+          "cw": 343,
+          "h": 160,
+          "sh": 163,
+          "sw": 343,
+          "tag": "h1",
+          "text": "Это отдельная страница помощника, а не замена всему сайту.",
+          "w": 343
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 4659,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 165
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Помощник | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/links",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nКОНТАКТЫ\n\nDIR\n\n05\n\nСВЯЗИ\n\nПубличные маршруты к архиву, автору и внешним узлам подтверждения.\n\nЭто не стена логотипов. Здесь собраны понятные маршруты: где смотреть работы, где читать рабочий поток, а куда лучше идти уже с конкретным запросом.\n\nСТАТУС ДИРЕКТОРИИ\n\nАКТИВНЫЕ УЗЛЫ\n\n05\n\nРЕЖИМ\n\nнаблюдение / верификация / конт",
+      "brokenImages": [],
+      "h1": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 165,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 165
+        },
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "05",
+          "w": 343
+        },
+        {
+          "ch": 200,
+          "cw": 343,
+          "h": 200,
+          "sh": 203,
+          "sw": 343,
+          "tag": "h1",
+          "text": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+          "w": 343
+        },
+        {
+          "ch": 40,
+          "cw": 293,
+          "h": 40,
+          "sh": 43,
+          "sw": 293,
+          "tag": "h2",
+          "text": "Telegram",
+          "w": 293
+        },
+        {
+          "ch": 40,
+          "cw": 293,
+          "h": 40,
+          "sh": 43,
+          "sw": 293,
+          "tag": "h2",
+          "text": "LinkedIn",
+          "w": 293
+        },
+        {
+          "ch": 40,
+          "cw": 293,
+          "h": 40,
+          "sh": 43,
+          "sw": 293,
+          "tag": "h2",
+          "text": "YouTube",
+          "w": 293
+        },
+        {
+          "ch": 40,
+          "cw": 293,
+          "h": 40,
+          "sh": 43,
+          "sw": 293,
+          "tag": "h2",
+          "text": "35AWARDS",
+          "w": 293
+        },
+        {
+          "ch": 40,
+          "cw": 293,
+          "h": 40,
+          "sh": 43,
+          "sw": 293,
+          "tag": "h2",
+          "text": "Email",
+          "w": 293
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 5115,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 165
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Связи | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/awards-credentials",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nHOME\n\nГЛУБОКАЯ ПОЛКА\n\nГлавный архив остается компактным. Остальные подтверждения уходят на глубокую полку и не спорят за первый экран.\n\nЭто не запасная галерея и не dump-страница сертификатов. Здесь живет supporting layer: фоновые курсы, вторичные подтверждения, дубли ceremony-файлов и будущие source traces, которые до",
+      "brokenImages": [],
+      "h1": "Главный архив остается компактным. Остальные подтверждения уходят на глубокую полку и не спорят за первый экран.",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 201,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 201
+        },
+        {
+          "ch": 360,
+          "cw": 293,
+          "h": 360,
+          "sh": 363,
+          "sw": 293,
+          "tag": "h1",
+          "text": "Главный архив остается компактным. Остальные подтверждения уходят на глубокую полку и не спорят за первый экран.",
+          "w": 293
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 3268,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 201
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "Глубокая полка | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  },
+  {
+    "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+    "viewport": "mobile",
+    "metric": {
+      "bodySample": "AI_NIKITKA93\nпортфолио работ и проектов\nРАБОТЫ\n\nSIG-01\n\n35AWARDS — AI Imaging Field Results\n\nАртефакт зафиксирован. 35AWARDS season 10. AI-image работы удержали позицию во внешнем международном поле: top-10 в Living Creatures и Undocumented Events, top-1% в Landscape. Фокус: prompt control, image direction, visual narrative под внешним просмотром.\n\nСТАТУС ПО",
+      "brokenImages": [],
+      "h1": "35AWARDS — AI Imaging Field Results",
+      "hasHorizontalOverflow": false,
+      "heroTop": 112,
+      "overflowText": [
+        {
+          "ch": 20,
+          "cw": 183,
+          "h": 20,
+          "sh": 20,
+          "sw": 204,
+          "tag": "span",
+          "text": "портфолио работ и проектов",
+          "w": 183
+        },
+        {
+          "ch": 120,
+          "cw": 293,
+          "h": 120,
+          "sh": 123,
+          "sw": 293,
+          "tag": "h1",
+          "text": "35AWARDS — AI Imaging Field Results",
+          "w": 293
+        }
+      ],
+      "scroll": {
+        "clientWidth": 375,
+        "scrollHeight": 5038,
+        "scrollWidth": 375
+      },
+      "smallTargets": [
+        {
+          "h": 41,
+          "href": "/",
+          "tag": "a",
+          "text": "AI_Nikitka93портфолио работ и проектов",
+          "w": 183
+        },
+        {
+          "h": 38,
+          "href": "/",
+          "tag": "a",
+          "text": "Главная",
+          "w": 84
+        },
+        {
+          "h": 38,
+          "href": "/portfolio",
+          "tag": "a",
+          "text": "Работы",
+          "w": 79
+        },
+        {
+          "h": 38,
+          "href": "/about",
+          "tag": "a",
+          "text": "О себе",
+          "w": 75
+        },
+        {
+          "h": 38,
+          "href": "/blog",
+          "tag": "a",
+          "text": "Блог",
+          "w": 59
+        },
+        {
+          "h": 38,
+          "href": "/services-calculator",
+          "tag": "a",
+          "text": "Обсудить проект",
+          "w": 145
+        },
+        {
+          "h": 38,
+          "href": "/ai-assistant",
+          "tag": "a",
+          "text": "Помощник",
+          "w": 101
+        },
+        {
+          "h": 38,
+          "href": "/links",
+          "tag": "a",
+          "text": "Контакты",
+          "w": 92
+        }
+      ],
+      "title": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": []
+  }
+]

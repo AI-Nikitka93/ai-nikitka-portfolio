@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personnel Verification - AI_NIKITKA93</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#ffb4a8",
+                      "tertiary-fixed": "#ffdbd1",
+                      "on-surface-variant": "#c3caac",
+                      "error": "#ffb4ab",
+                      "surface-bright": "#3a3939",
+                      "secondary-fixed": "#ffdad4",
+                      "primary-fixed": "#b8f600",
+                      "on-tertiary": "#601400",
+                      "on-tertiary-container": "#bc3000",
+                      "surface-tint": "#a1d800",
+                      "surface-container": "#201f1f",
+                      "outline": "#8d9479",
+                      "inverse-primary": "#4b6700",
+                      "tertiary-container": "#ffdbd1",
+                      "background": "#131313",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-container": "#ff9a8a",
+                      "on-primary-fixed-variant": "#384e00",
+                      "on-primary-fixed": "#141f00",
+                      "secondary-container": "#920703",
+                      "on-surface": "#e5e2e1",
+                      "on-background": "#e5e2e1",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-container": "#b8f600",
+                      "surface-container-lowest": "#0e0e0e",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "on-secondary-fixed": "#410000",
+                      "surface-variant": "#353534",
+                      "on-secondary": "#690000",
+                      "tertiary-fixed-dim": "#ffb5a0",
+                      "surface": "#131313",
+                      "on-error": "#690005",
+                      "on-primary": "#263500",
+                      "surface-container-highest": "#353534",
+                      "tertiary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb4a8",
+                      "on-tertiary-fixed": "#3b0900",
+                      "primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#872000",
+                      "on-primary-container": "#506e00",
+                      "primary-fixed-dim": "#a1d800",
+                      "inverse-on-surface": "#313030",
+                      "inverse-surface": "#e5e2e1",
+                      "outline-variant": "#434933",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#920703"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "xs": "8px",
+                      "sm": "16px",
+                      "md": "24px",
+                      "lg": "48px",
+                      "border-thick": "4px",
+                      "border-thin": "2px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "h1": [
+                              "Space Grotesk"
+                      ],
+                      "h2": [
+                              "Space Grotesk"
+                      ],
+                      "metadata": [
+                              "IBM Plex Mono"
+                      ],
+                      "label-bold": [
+                              "IBM Plex Mono"
+                      ],
+                      "body": [
+                              "IBM Plex Mono"
+                      ],
+                      "h3": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "h1": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "h2": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "metadata": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h3": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .grid-bg {
+            background-size: 20px 20px;
+            background-image: 
+                linear-gradient(to right, rgba(141, 148, 121, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(141, 148, 121, 0.1) 1px, transparent 1px);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(184, 246, 0, 0.1) 51%, transparent 100%);
+            background-size: 100% 4px;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body text-body grid-bg">
+<!-- TopAppBar -->
+<nav class="bg-zinc-950 font-mono uppercase tracking-tighter text-sm flex justify-between items-center w-full px-6 py-4 max-w-none docked full-width top-0 border-b-4 border-[#BFFF00] sticky z-50">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-black text-[#BFFF00] border-2 border-[#BFFF00] px-2 py-1">AI_NIKITKA93</span>
+<div class="hidden md:flex gap-2">
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair" href="#">01_HOME</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair" href="#">02_ARCHIVE</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair" href="#">03_LOGS</a>
+<a class="bg-[#BFFF00] text-zinc-950 font-bold px-3 py-1 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">04_INTEL</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#BFFF00] hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair border-2 border-[#BFFF00] px-3 py-1 transition-colors">ACCESS_TERMINAL</button>
+<span class="text-[#BFFF00]">RU/EN</span>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow p-sm md:p-md lg:p-lg max-w-7xl mx-auto w-full">
+<!-- Header -->
+<div class="mb-lg border-b-[4px] border-outline pb-sm">
+<h1 class="font-h1 text-h1 text-primary uppercase">[ PERSONNEL_VERIFICATION ]</h1>
+<p class="font-metadata text-metadata text-on-surface-variant mt-base uppercase">Accessing restricted biometrics // Clearance Level: Alpha</p>
+</div>
+<!-- Verification Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-md items-start">
+<!-- Left Side: Identification Photo -->
+<div class="lg:col-span-4 flex flex-col gap-sm">
+<div class="border-[4px] border-surface-variant bg-surface-container-low p-base relative group">
+<span class="absolute top-0 left-0 bg-surface-variant text-on-surface font-metadata text-metadata px-2 py-1 uppercase z-10">[ IMG_DATA_STREAM ]</span>
+<div class="relative w-full aspect-[3/4] border-[2px] border-outline overflow-hidden bg-surface-container">
+<img alt="Subject Photo" class="w-full h-full object-cover opacity-80 mix-blend-luminosity grayscale" data-alt="high contrast black and white portrait of a person with technical overlays and glitch artifacts, cyberpunk aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuseN2ltM_et2vSYUXbr9L33c1pHqqPFoBirlV5pjnx10lwxMhFntRJOAxliJBGgFfg3Fbi_uYODpPMAo4jAbOVa1ZyM-LHS2xA23HQjPdOR2G-QvbRd5pipmA3WawSaJ57DUOt1VBZ0_c-t6i6vTfQshkR0eMB3dlHAmWJUhYJZPvZtgnsnHoWWYmwBpbZq4xotYG1gH9zpOfZpRTlyFVhPP_szrzxrk4ypMgl5F2Db6TUo_jZYRqt2_QOIP3__KTHxQI3Bl-3_M"/>
+<div class="absolute inset-0 scanline pointer-events-none"></div>
+<!-- Target Reticle Overlay -->
+<div class="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-primary-fixed"></div>
+<div class="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-primary-fixed"></div>
+<div class="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-primary-fixed"></div>
+<div class="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-primary-fixed"></div>
+<!-- Status Overlays -->
+<div class="absolute bottom-4 left-4 flex flex-col gap-1">
+<span class="bg-primary-fixed text-on-primary-fixed font-metadata text-metadata px-2 py-0.5 uppercase">MATCH: 99.8%</span>
+<span class="bg-surface-variant text-on-surface font-metadata text-metadata px-2 py-0.5 uppercase border border-outline">STATUS: ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="border-[2px] border-outline bg-surface-container p-sm">
+<h3 class="font-label-bold text-label-bold text-primary mb-sm uppercase border-b-[2px] border-outline pb-xs">BIOMETRIC_SIGNATURE</h3>
+<div class="space-y-2">
+<div class="flex justify-between border-b-[2px] border-surface-variant pb-1">
+<span class="font-metadata text-metadata text-on-surface-variant">HEIGHT</span>
+<span class="font-metadata text-metadata text-on-surface">182CM</span>
+</div>
+<div class="flex justify-between border-b-[2px] border-surface-variant pb-1">
+<span class="font-metadata text-metadata text-on-surface-variant">BLOOD_TYPE</span>
+<span class="font-metadata text-metadata text-on-surface">O-NEG</span>
+</div>
+<div class="flex justify-between border-b-[2px] border-surface-variant pb-1">
+<span class="font-metadata text-metadata text-on-surface-variant">RETINA_SCAN</span>
+<span class="font-metadata text-metadata text-primary-fixed">VERIFIED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Data -->
+<div class="lg:col-span-8 flex flex-col gap-md">
+<!-- Subject Dossier -->
+<div class="border-[4px] border-surface-variant bg-surface-container-low relative">
+<div class="bg-surface-variant px-sm py-xs border-b-[4px] border-surface-variant flex justify-between items-center">
+<h2 class="font-h3 text-h3 text-on-surface uppercase m-0">[ DOSSIER_FILE_X99 ]</h2>
+<span class="material-symbols-outlined text-on-surface">fingerprint</span>
+</div>
+<div class="p-sm grid grid-cols-1 md:grid-cols-2 gap-sm">
+<div class="space-y-4">
+<div>
+<label class="font-metadata text-metadata text-on-surface-variant block uppercase">DESIGNATION</label>
+<div class="font-label-bold text-label-bold text-primary border-[2px] border-outline p-xs bg-surface-container uppercase">Operative_N93</div>
+</div>
+<div>
+<label class="font-metadata text-metadata text-on-surface-variant block uppercase">CURRENT_LOCATION</label>
+<div class="font-label-bold text-label-bold text-primary border-[2px] border-outline p-xs bg-surface-container uppercase">SECTOR_4_GRID_B</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<label class="font-metadata text-metadata text-on-surface-variant block uppercase">CLEARANCE</label>
+<div class="font-label-bold text-label-bold text-primary border-[2px] border-outline p-xs bg-surface-container uppercase text-error">LEVEL_ALPHA_RESTRICTED</div>
+</div>
+<div>
+<label class="font-metadata text-metadata text-on-surface-variant block uppercase">LAST_MAINFRAME_SYNC</label>
+<div class="font-label-bold text-label-bold text-primary border-[2px] border-outline p-xs bg-surface-container uppercase">T-MINUS_04:12:00</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Proficiencies -->
+<div class="border-[4px] border-surface-variant bg-surface-container-low relative">
+<div class="bg-surface-variant px-sm py-xs border-b-[4px] border-surface-variant">
+<h2 class="font-h3 text-h3 text-on-surface uppercase m-0">[ TECHNICAL_PROFICIENCIES ]</h2>
+</div>
+<div class="p-sm">
+<div class="flex flex-wrap gap-xs">
+<span class="font-metadata text-metadata text-on-primary-fixed bg-primary-fixed px-xs py-1 border-[2px] border-primary-fixed uppercase">SYSTEM_ARCHITECTURE</span>
+<span class="font-metadata text-metadata text-on-primary-fixed bg-primary-fixed px-xs py-1 border-[2px] border-primary-fixed uppercase">CRYPTOGRAPHY</span>
+<span class="font-metadata text-metadata text-on-surface bg-surface-container px-xs py-1 border-[2px] border-outline uppercase">NEURAL_NETWORKS</span>
+<span class="font-metadata text-metadata text-on-surface bg-surface-container px-xs py-1 border-[2px] border-outline uppercase">DATA_EXTRACTION</span>
+<span class="font-metadata text-metadata text-on-surface bg-surface-container px-xs py-1 border-[2px] border-outline uppercase">HARDWARE_BYPASS</span>
+</div>
+</div>
+</div>
+<!-- Verification Logs -->
+<div class="border-[4px] border-surface-variant bg-surface-container-low relative flex-grow">
+<div class="bg-surface-variant px-sm py-xs border-b-[4px] border-surface-variant flex justify-between items-center">
+<h2 class="font-h3 text-h3 text-on-surface uppercase m-0">[ ACCESS_LOGS ]</h2>
+<span class="material-symbols-outlined text-on-surface">terminal</span>
+</div>
+<div class="p-sm">
+<table class="w-full text-left border-collapse border-[2px] border-outline">
+<thead>
+<tr class="bg-primary-fixed text-on-primary-fixed border-b-[2px] border-outline font-metadata text-metadata uppercase">
+<th class="p-xs border-r-[2px] border-outline">TIMESTAMP</th>
+<th class="p-xs border-r-[2px] border-outline">NODE</th>
+<th class="p-xs border-r-[2px] border-outline">ACTION</th>
+<th class="p-xs">STATUS</th>
+</tr>
+</thead>
+<tbody class="font-metadata text-metadata text-on-surface">
+<tr class="border-b-[2px] border-outline bg-surface-container">
+<td class="p-xs border-r-[2px] border-outline">24.10.27_12:44</td>
+<td class="p-xs border-r-[2px] border-outline">MAIN_GATE</td>
+<td class="p-xs border-r-[2px] border-outline">BIOMETRIC_AUTH</td>
+<td class="p-xs text-primary-fixed">SUCCESS</td>
+</tr>
+<tr class="border-b-[2px] border-outline">
+<td class="p-xs border-r-[2px] border-outline">24.10.27_10:12</td>
+<td class="p-xs border-r-[2px] border-outline">SERVER_RM_4</td>
+<td class="p-xs border-r-[2px] border-outline">KEYCARD_SWIPE</td>
+<td class="p-xs text-primary-fixed">SUCCESS</td>
+</tr>
+<tr class="border-b-[2px] border-outline bg-surface-container">
+<td class="p-xs border-r-[2px] border-outline">24.10.26_23:59</td>
+<td class="p-xs border-r-[2px] border-outline">TERMINAL_B</td>
+<td class="p-xs border-r-[2px] border-outline">REMOTE_ACCESS</td>
+<td class="p-xs text-error">DENIED</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 font-mono text-[10px] leading-tight uppercase flex flex-col md:flex-row justify-between items-center w-full px-6 py-2 gap-4 docked full-width bottom-0 border-t-4 border-[#BFFF00] mt-auto">
+<div class="text-[#BFFF00]">SYSTEM_ID: AI_NIKITKA93 // TIMESTAMP: 2024.10.27_14:02:55_UTC</div>
+<div class="flex gap-4">
+<a class="text-zinc-500 hover:text-[#BFFF00] transition-colors" href="#">ENCRYPTED_LINE</a>
+<a class="text-zinc-500 hover:text-[#BFFF00] transition-colors" href="#">MAINFRAME_STATUS</a>
+<a class="text-zinc-500 hover:text-[#BFFF00] transition-colors" href="#">UPTIME_99.9%</a>
+</div>
+</footer>
+</body></html>

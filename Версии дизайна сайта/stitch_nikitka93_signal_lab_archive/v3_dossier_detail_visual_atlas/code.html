@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Concept 3: Visual Atlas</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom scrollbar for technical feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0D0C;
+            border-left: 0.5px solid #8E968C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8E968C;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B7FF3C;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e9e2d1",
+                        "on-tertiary-fixed": "#1e1b11",
+                        "on-tertiary": "#343025",
+                        "surface": "#111413",
+                        "secondary": "#ffb59a",
+                        "tertiary-container": "#e9e2d1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-secondary": "#5b1b00",
+                        "tertiary-fixed-dim": "#cdc6b6",
+                        "on-tertiary-fixed-variant": "#4b473b",
+                        "surface-container-highest": "#323534",
+                        "outline": "#8c947b",
+                        "primary-container": "#b0f734",
+                        "outline-variant": "#424935",
+                        "on-primary-fixed": "#121f00",
+                        "on-primary-container": "#4a6f00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "inverse-surface": "#e1e3e1",
+                        "surface-container-lowest": "#0c0f0e",
+                        "on-tertiary-container": "#696457",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-bright": "#373a38",
+                        "surface-variant": "#323534",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-high": "#282b29",
+                        "inverse-primary": "#456800",
+                        "tertiary": "#ffffff",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#96da06",
+                        "on-surface": "#e1e3e1",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c2caaf",
+                        "secondary-container": "#cd4700",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#111413",
+                        "surface-container": "#1d201f",
+                        "inverse-on-surface": "#2e3130",
+                        "surface-tint": "#96da06",
+                        "surface-container-low": "#191c1b",
+                        "on-primary": "#223600",
+                        "primary-fixed": "#b0f734",
+                        "on-error": "#690005",
+                        "background": "#111413",
+                        "on-background": "#e1e3e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "margin": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "body-large": ["IBM Plex Mono"],
+                        "label-tiny": ["IBM Plex Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-main": ["IBM Plex Mono"],
+                        "metadata": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-large": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-tiny": ["10px", { "lineHeight": "120%", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "display-xl": ["120px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-main": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "metadata": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0A0D0C] text-on-surface font-body-main text-body-main antialiased selection:bg-primary-fixed selection:text-[#0A0D0C]">
+<!-- TopNavBar -->
+<header class="fixed z-50 flex justify-between items-center w-full px-10 h-16 max-w-full bg-[#0A0D0C] border-b-[0.5px] border-[#8E968C] opacity-80 hidden md:flex">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase">SIGNAL_LAB [V2.0]</span>
+<nav class="flex h-full gap-6">
+<a class="h-16 flex items-center text-[#8E968C] font-mono hover:text-[#0A0D0C] hover:bg-[#B7FF3C] transition-colors duration-100 px-2" href="#">ARCHIVE</a>
+<a class="h-16 flex items-center text-[#8E968C] font-mono hover:text-[#0A0D0C] hover:bg-[#B7FF3C] transition-colors duration-100 px-2" href="#">SIGNALS</a>
+<a class="h-16 flex items-center text-[#B7FF3C] border-b-2 border-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase px-2 hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100" href="#">ATLAS</a>
+<a class="h-16 flex items-center text-[#8E968C] font-mono hover:text-[#0A0D0C] hover:bg-[#B7FF3C] transition-colors duration-100 px-2" href="#">TERMINAL</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase text-sm">EN/RU</span>
+<button class="text-[#8E968C] hover:text-[#B7FF3C] transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<!-- TopNavBar Mobile Fallback (Simplified) -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-[#0A0D0C] border-b-[0.5px] border-[#8E968C] h-14 flex items-center justify-between px-4">
+<span class="text-lg font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk']">SIGNAL_LAB</span>
+<button class="text-[#8E968C]">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden md:flex fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex-col z-40 bg-[#0A0D0C] border-r-[0.5px] border-[#8E968C]">
+<div class="p-6 border-b-[0.5px] border-[#8E968C]">
+<div class="font-mono text-xs uppercase text-[#B7FF3C] mb-1">OPERATOR_01</div>
+<div class="font-mono text-xs uppercase text-[#8E968C]">CLEARANCE: OMEGA</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-4 flex flex-col font-mono text-xs uppercase">
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="grid_view">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="sensors">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="table_chart">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="map" style="font-variation-settings: 'FILL' 1;">map</span>
+                MAP_ATLAS
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all mt-auto border-t-[0.5px] border-[#8E968C]" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="settings">settings</span>
+                SETTINGS
+            </a>
+</nav>
+</aside>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">FEED</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined" data-icon="radar">radar</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">SIGNALS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined" data-icon="public" style="font-variation-settings: 'FILL' 1;">public</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">MAP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">USER</span>
+</a>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-14 md:pt-16 md:ml-64 pb-20 md:pb-8 min-h-screen">
+<!-- Breadcrumb / Utility Bar -->
+<div class="px-margin py-4 border-b-[0.5px] border-[#8E968C] flex justify-between items-center bg-[#161B19]">
+<a class="text-[#8E968C] hover:text-[#B7FF3C] font-label-tiny text-label-tiny flex items-center gap-2 uppercase tracking-widest transition-colors" href="#">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_back">arrow_back</span>
+                ВОЗВРАТ В АТЛАС
+            </a>
+<div class="flex gap-4">
+<span class="font-label-tiny text-label-tiny text-[#8E968C] border-[0.5px] border-[#8E968C] px-2 py-1">&gt; ЗАПИСЬ: 0x8F9A</span>
+<span class="font-label-tiny text-label-tiny text-[#0A0D0C] bg-[#B7FF3C] px-2 py-1">СТАТУС: ВЫПОЛНЕНО</span>
+</div>
+</div>
+<div class="p-margin max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Article Header -->
+<div class="col-span-1 md:col-span-12 mb-8 border-b-[0.5px] border-[#8E968C] pb-8">
+<h1 class="font-headline-lg text-headline-lg text-white mb-4">ВЫЗОВ АГЕНТА MINIMAX: АНАЛИЗ ПОВЕДЕНИЯ</h1>
+<p class="font-body-large text-body-large text-[#8E968C] max-w-4xl">
+                    Глубокий разбор алгоритмических паттернов и стратегий принятия решений автономного агента в симулированной среде высокой сложности. Техническое подтверждение стабильности системы.
+                </p>
+</div>
+<!-- Left Metadata Sidebar -->
+<div class="col-span-1 md:col-span-3 space-y-8">
+<div class="border-[0.5px] border-[#8E968C] bg-[#161B19] p-4">
+<h3 class="font-label-tiny text-label-tiny text-[#B7FF3C] border-b-[0.5px] border-[#8E968C] pb-2 mb-4 uppercase">&gt; МЕТАДАННЫЕ ДОСЬЕ</h3>
+<table class="w-full font-metadata text-metadata text-left">
+<tbody><tr class="border-b-[0.5px] border-[#424935]">
+<td class="py-2 text-[#8E968C]">ID_ОБЪЕКТА</td>
+<td class="py-2 text-white text-right">MNMX-099</td>
+</tr>
+<tr class="border-b-[0.5px] border-[#424935]">
+<td class="py-2 text-[#8E968C]">ДАТА_СИМУЛЯЦИИ</td>
+<td class="py-2 text-white text-right">2023.10.24</td>
+</tr>
+<tr class="border-b-[0.5px] border-[#424935]">
+<td class="py-2 text-[#8E968C]">СРЕДА</td>
+<td class="py-2 text-white text-right">GRID_NULL</td>
+</tr>
+<tr class="border-b-[0.5px] border-[#424935]">
+<td class="py-2 text-[#8E968C]">ВЕРСИЯ_ЯДРА</td>
+<td class="py-2 text-white text-right">v4.2.1-beta</td>
+</tr>
+<tr>
+<td class="py-2 text-[#8E968C]">АВТОР</td>
+<td class="py-2 text-[#B7FF3C] text-right">СИСТЕМА</td>
+</tr>
+</tbody></table>
+</div>
+<div class="border-[0.5px] border-[#8E968C] bg-[#0A0D0C] p-4 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-[#B7FF3C] to-transparent opacity-20"></div>
+<h3 class="font-label-tiny text-label-tiny text-white mb-2 uppercase">Статус Оптимизации</h3>
+<div class="flex gap-1 h-2 w-full mt-4">
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#424935]"></div>
+<div class="flex-1 bg-[#424935]"></div>
+</div>
+<div class="flex justify-between font-metadata text-metadata text-[#8E968C] mt-2">
+<span>СХОДИМОСТЬ</span>
+<span>68.4%</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="col-span-1 md:col-span-9 space-y-gutter">
+<!-- Hero Image Block -->
+<div class="relative border-[0.5px] border-[#8E968C] bg-[#161B19] group">
+<img alt="Code terminal" class="w-full h-auto aspect-video object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500" data-alt="abstract complex glowing technical network graph on black background, neon green connections, high contrast, digital forensic visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnda4LB3J8DaYprpNPl3C5qDC9sbDBhlcjjHcrejT9BCGgNXBKnYZssw1Jn244FwTbwIYnQszexHy4kbn7Qmyq35bxHGSgcmEu4GK_ussbpWdbG6X9mAoCnKpzIyETZoVsMbrtK01qUyQpruqjWxBNrxZFhL2tZHfDASI2PrlGt0KjtNo3E_YEPtenKpGC5E5X0Nv0be9pdXflLYmkKehj34Qu3PeYqfXmIgpNQ967yIvjg2GxURgi7J1kEBKsPvZ1Ib2iFiBR6pnf"/>
+<!-- Annotations Overlay -->
+<div class="absolute top-4 left-4 border-[0.5px] border-[#B7FF3C] bg-[#0A0D0C]/80 p-2 backdrop-blur-sm">
+<span class="font-label-tiny text-label-tiny text-[#B7FF3C] flex items-center gap-1">
+<span class="w-2 h-2 bg-[#B7FF3C] block"></span> FIG 01. СЕТЕВОЙ ГРАФ
+                        </span>
+</div>
+<div class="absolute bottom-4 right-4 flex gap-2">
+<button class="border-[0.5px] border-inverse-surface text-inverse-surface hover:bg-[#B7FF3C] hover:text-[#0A0D0C] hover:border-[#B7FF3C] px-4 py-2 font-body-main text-body-main uppercase transition-colors">
+<span class="material-symbols-outlined text-[16px] align-middle mr-1" data-icon="zoom_in">zoom_in</span> УВЕЛИЧИТЬ
+                        </button>
+</div>
+<!-- Technical Lines -->
+<div class="absolute top-1/2 left-0 w-full h-[0.5px] bg-[#B7FF3C] opacity-30 pointer-events-none"></div>
+<div class="absolute left-1/3 top-0 h-full w-[0.5px] bg-[#B7FF3C] opacity-30 pointer-events-none"></div>
+</div>
+<!-- Text Content -->
+<div class="prose prose-invert max-w-none font-body-main text-body-main text-[#e1e3e1] columns-1 md:columns-2 gap-8">
+<p class="mb-4">
+                        Агент MiniMax, развернутый в изолированной песочнице <strong>GRID_NULL</strong>, продемонстрировал нетипичные паттерны оценки ветвей дерева решений. В отличие от стандартного альфа-бета отсечения, алгоритм инициировал создание спекулятивных суб-окружений для симуляции маловероятных сценариев.
+                    </p>
+<p class="mb-4">
+                        На <span class="text-[#B7FF3C]">РИСУНКЕ 01</span> показана плотность вычислительных узлов в моменты пиковой нагрузки. Заметна кластеризация вокруг узлов с высокой энтропией, что указывает на эвристику, отдающую приоритет исследованию зон неопределенности над немедленным увеличением оценочной функции.
+                    </p>
+<p class="mb-4">
+<span class="border-l-2 border-[#B7FF3C] pl-4 block text-[#8E968C] italic">
+                            "Отклонение от оптимального пути составило 14%, однако устойчивость к внешним возмущениям возросла на 89%. Агент жертвует эффективностью ради безопасности."
+                        </span>
+</p>
+</div>
+<!-- Bento Grid for Data Exhibits -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+<!-- Exhibit A -->
+<div class="border-[0.5px] border-[#8E968C] bg-[#161B19] p-4 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-tiny text-label-tiny text-[#8E968C] uppercase">Экспонат А</span>
+<span class="material-symbols-outlined text-[#B7FF3C]" data-icon="memory">memory</span>
+</div>
+<img alt="Circuit board" class="w-full h-48 object-cover mb-4 grayscale hover:grayscale-0 transition-all border-[0.5px] border-[#424935]" data-alt="close up macro shot of green computer circuit board with microscopic glowing red pathways, brutalist tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDntxamP6dAMjnrcivhpEoXDElcPUCXrG3ql_YPeGRbVOmJ9sS8swrQ0OWHHiYpMHQuc9on52qX-0csnu1VORkzP9vYt5oODnAblN03pn24NceZTXL9lkBMo-4DKuX4nFzZCR3PzoAKRs3GAw6d30kzC9EpRTAY38VZudRradWbUMtE5_4i-gAByaSqmlnlzxdP5rTMgwJuU4kel20Xn1kVIfZ2ovqnTdINo67ElX7f0lAxH05UwuixuE-_aE-0ncXGEBZoZY97DzGp"/>
+<p class="font-metadata text-metadata text-[#8E968C]">
+                            Аномалия в распределении памяти. Выделенные сектора показывают фрагментацию кэша при глубоком поиске.
+                        </p>
+</div>
+<!-- Exhibit B -->
+<div class="border-[0.5px] border-[#8E968C] bg-[#0A0D0C] p-4 flex flex-col justify-between relative">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiM0MjQ5MzUiLz48L3N2Zz4=')] opacity-20 pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="font-label-tiny text-label-tiny text-[#8E968C] uppercase">Лог Терминала</span>
+<div class="w-2 h-2 bg-[#B7FF3C] animate-pulse"></div>
+</div>
+<div class="font-body-large text-body-large text-[#B7FF3C] relative z-10 space-y-2">
+<div class="flex justify-between"><span class="text-[#8E968C]">&gt;</span> <span>INIT_EVAL()</span></div>
+<div class="flex justify-between"><span class="text-[#8E968C]">&gt;</span> <span>DEPTH=12</span></div>
+<div class="flex justify-between"><span class="text-[#8E968C]">&gt;</span> <span>PRUNING...</span></div>
+<div class="flex justify-between"><span class="text-[#8E968C]">&gt;</span> <span class="text-[#ffb4ab]">ERR_TIMEOUT</span></div>
+</div>
+<div class="mt-4 pt-4 border-t-[0.5px] border-[#424935] relative z-10">
+<p class="font-metadata text-metadata text-[#8E968C]">
+                                Принудительное прерывание на глубине 12 из-за превышения лимита времени (t &gt; 5000ms).
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

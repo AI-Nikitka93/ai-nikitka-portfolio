@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIGNAL_LAB // ПАНЕЛЬ УПРАВЛЕНИЯ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e9e2d1",
+                    "on-tertiary-fixed": "#1e1b11",
+                    "on-tertiary": "#343025",
+                    "surface": "#111413",
+                    "secondary": "#ffb59a",
+                    "tertiary-container": "#e9e2d1",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-secondary": "#5b1b00",
+                    "tertiary-fixed-dim": "#cdc6b6",
+                    "on-tertiary-fixed-variant": "#4b473b",
+                    "surface-container-highest": "#323534",
+                    "outline": "#8c947b",
+                    "primary-container": "#b0f734",
+                    "outline-variant": "#424935",
+                    "on-primary-fixed": "#121f00",
+                    "on-primary-container": "#4a6f00",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "inverse-surface": "#e1e3e1",
+                    "surface-container-lowest": "#0c0f0e",
+                    "on-tertiary-container": "#696457",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-bright": "#373a38",
+                    "surface-variant": "#323534",
+                    "on-primary-fixed-variant": "#334f00",
+                    "surface-container-high": "#282b29",
+                    "inverse-primary": "#456800",
+                    "tertiary": "#ffffff",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#96da06",
+                    "on-surface": "#e1e3e1",
+                    "primary": "#ffffff",
+                    "on-surface-variant": "#c2caaf",
+                    "secondary-container": "#cd4700",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#111413",
+                    "surface-container": "#1d201f",
+                    "inverse-on-surface": "#2e3130",
+                    "surface-tint": "#96da06",
+                    "surface-container-low": "#191c1b",
+                    "on-primary": "#223600",
+                    "primary-fixed": "#b0f734",
+                    "on-error": "#690005",
+                    "background": "#111413",
+                    "on-background": "#e1e3e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "unit": "4px",
+                    "margin": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Space Grotesk"
+                    ],
+                    "body-large": [
+                            "IBM Plex Mono"
+                    ],
+                    "label-tiny": [
+                            "IBM Plex Mono"
+                    ],
+                    "display-xl": [
+                            "Space Grotesk"
+                    ],
+                    "body-main": [
+                            "IBM Plex Mono"
+                    ],
+                    "metadata": [
+                            "IBM Plex Mono"
+                    ],
+                    "headline-md": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "110%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-large": [
+                            "18px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-tiny": [
+                            "10px",
+                            {
+                                    "lineHeight": "120%",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-xl": [
+                            "120px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-main": [
+                            "14px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "metadata": [
+                            "12px",
+                            {
+                                    "lineHeight": "140%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Brutalist global overrides to enforce sharp corners and raw aesthetic */
+        * { border-radius: 0 !important; }
+        body { background-color: #111413; color: #e1e3e1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="antialiased min-h-screen bg-background text-on-background selection:bg-surface-tint selection:text-background">
+<!-- TopNavBar -->
+<header class="fixed bg-[#0A0D0C] font-['Space_Grotesk'] tracking-tighter uppercase docked full-width top-0 border-b-[0.5px] border-[#8E968C] flex justify-between items-center w-full px-10 h-16 max-w-full z-50">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C]">
+            SIGNAL_LAB [V2.0]
+        </div>
+<nav class="hidden md:flex items-center h-full gap-8">
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-full px-4" href="#">ARCHIVE</a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] opacity-80 flex items-center h-full px-4" href="#">SIGNALS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-full px-4" href="#">ATLAS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-full px-4" href="#">TERMINAL</a>
+</nav>
+<div class="text-[#B7FF3C] font-mono text-sm cursor-pointer hover:bg-[#B7FF3C] hover:text-[#0A0D0C] px-2 py-1 transition-colors">
+            EN/RU
+        </div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex bg-[#0A0D0C] text-[#B7FF3C] font-mono text-xs uppercase docked left-0 h-full border-r-[0.5px] border-[#8E968C] fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex-col z-40">
+<div class="p-6 border-b-[0.5px] border-[#8E968C]">
+<div class="text-on-background font-bold mb-1">OPERATOR_01</div>
+<div class="text-[#8E968C] text-[10px]">CLEARANCE: OMEGA</div>
+</div>
+<nav class="flex-1 flex flex-col py-4">
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 border-l-4 border-[#B7FF3C]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-100" href="#">
+<span class="material-symbols-outlined">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-100" href="#">
+<span class="material-symbols-outlined">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-100" href="#">
+<span class="material-symbols-outlined">map</span>
+                MAP_ATLAS
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-100 mt-auto border-t-[0.5px] border-[#8E968C]" href="#">
+<span class="material-symbols-outlined">settings</span>
+                SETTINGS
+            </a>
+</nav>
+</aside>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] font-mono text-[10px] tracking-tighter docked border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1">dynamic_feed</span>
+            FEED
+        </a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 w-full bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">radar</span>
+            SIGNALS
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1">public</span>
+            MAP
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+            USER
+        </a>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-16 pb-20 md:pb-0 md:ml-64 min-h-screen flex flex-col">
+<!-- Hero Massive Headline -->
+<section class="border-b-[0.5px] border-outline px-6 md:px-margin py-12 md:py-24 bg-surface-container-lowest relative overflow-hidden">
+<!-- Decorative grid lines -->
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: linear-gradient(#8c947b 1px, transparent 1px), linear-gradient(90deg, #8c947b 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="relative z-10 flex flex-col gap-6 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="w-3 h-3 bg-surface-tint"></span>
+<span class="font-metadata text-metadata text-surface-tint uppercase tracking-widest">&gt; СИСТЕМА АКТИВНА</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary break-words leading-none">ГЛОБАЛЬНЫЙ<br/><span class="text-outline">МОНИТОРИНГ</span></h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-3xl mt-4">
+                    СБОР И АНАЛИЗ СЫРЫХ ДАННЫХ В РЕАЛЬНОМ ВРЕМЕНИ. ДОСТУП К КРИТИЧЕСКИМ ИНФРАСТРУКТУРНЫМ УЗЛАМ ПОДТВЕРЖДЕН.
+                </p>
+</div>
+</section>
+<!-- Data Grid Layout -->
+<section class="flex-1 p-6 md:p-margin max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-unit">
+<!-- Left Block: Data Stream (8 cols) -->
+<div class="md:col-span-8 border-[0.5px] border-outline bg-surface flex flex-col h-[600px]">
+<div class="border-b-[0.5px] border-outline p-4 flex justify-between items-center bg-surface-container-highest">
+<h2 class="font-headline-md text-headline-md text-primary text-xl">&gt; ПОТОК СИГНАЛОВ</h2>
+<span class="font-metadata text-metadata text-outline border-[0.5px] border-outline px-2 py-1">LIVE REC</span>
+</div>
+<div class="flex-1 overflow-auto">
+<table class="w-full text-left border-collapse">
+<thead class="font-label-tiny text-label-tiny text-on-surface-variant border-b-[0.5px] border-outline sticky top-0 bg-surface">
+<tr>
+<th class="p-4 font-normal uppercase">[ID_ОБЪЕКТА]</th>
+<th class="p-4 font-normal uppercase">СТАТУС</th>
+<th class="p-4 font-normal uppercase">ВЕКТОР</th>
+<th class="p-4 font-normal uppercase text-right">ПИНГ</th>
+</tr>
+</thead>
+<tbody class="font-body-main text-body-main text-primary">
+<!-- Row 1 -->
+<tr class="border-b-[0.5px] border-outline hover:bg-surface-container transition-colors">
+<td class="p-4 font-mono text-surface-tint">OBJ-8921</td>
+<td class="p-4 flex items-center gap-2"><span class="w-2 h-2 bg-surface-tint"></span> АКТИВЕН</td>
+<td class="p-4">СЕВЕР [55.75° N]</td>
+<td class="p-4 text-right">12 мс</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b-[0.5px] border-outline hover:bg-surface-container transition-colors">
+<td class="p-4 font-mono">OBJ-8922</td>
+<td class="p-4 flex items-center gap-2"><span class="w-2 h-2 bg-outline"></span> ОЖИДАНИЕ</td>
+<td class="p-4 text-on-surface-variant">ВОСТОК [55.75° N]</td>
+<td class="p-4 text-right text-on-surface-variant">45 мс</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b-[0.5px] border-outline hover:bg-surface-container transition-colors bg-error-container/10">
+<td class="p-4 font-mono text-error">OBJ-8923</td>
+<td class="p-4 flex items-center gap-2 text-error"><span class="w-2 h-2 bg-error"></span> ТРЕВОГА</td>
+<td class="p-4 text-error">ЮГ [55.74° N]</td>
+<td class="p-4 text-right text-error font-bold">ERR</td>
+</tr>
+<!-- Row 4 -->
+<tr class="border-b-[0.5px] border-outline hover:bg-surface-container transition-colors">
+<td class="p-4 font-mono">OBJ-8924</td>
+<td class="p-4 flex items-center gap-2"><span class="w-2 h-2 bg-surface-tint"></span> АКТИВЕН</td>
+<td class="p-4">ЗАПАД [55.76° N]</td>
+<td class="p-4 text-right">08 мс</td>
+</tr>
+<!-- Row 5 -->
+<tr class="border-b-[0.5px] border-outline hover:bg-surface-container transition-colors">
+<td class="p-4 font-mono">OBJ-8925</td>
+<td class="p-4 flex items-center gap-2"><span class="w-2 h-2 bg-outline"></span> ОЖИДАНИЕ</td>
+<td class="p-4 text-on-surface-variant">ЦЕНТР [55.75° N]</td>
+<td class="p-4 text-right text-on-surface-variant">112 мс</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Right Block: Metadata / System Status (4 cols) -->
+<div class="md:col-span-4 flex flex-col gap-unit">
+<!-- Metrics Card -->
+<div class="border-[0.5px] border-outline bg-surface-container-lowest p-6 flex flex-col gap-6">
+<div class="font-label-tiny text-label-tiny text-outline uppercase">СВОДКА СИСТЕМЫ</div>
+<div class="flex flex-col gap-4">
+<div>
+<div class="font-metadata text-metadata text-on-surface-variant mb-1">НАГРУЗКА ЦП</div>
+<div class="flex items-center gap-4">
+<div class="flex-1 h-2 bg-surface-container-high flex">
+<div class="w-3/4 bg-surface-tint border-r-[1px] border-surface-container-lowest"></div>
+<div class="w-1/4"></div>
+</div>
+<span class="font-body-large text-body-large text-surface-tint">74%</span>
+</div>
+</div>
+<div>
+<div class="font-metadata text-metadata text-on-surface-variant mb-1">ЦЕЛОСТНОСТЬ СЕТИ</div>
+<div class="flex items-center gap-4">
+<div class="flex-1 h-2 bg-surface-container-high flex">
+<div class="w-[98%] bg-surface-tint border-r-[1px] border-surface-container-lowest"></div>
+</div>
+<span class="font-body-large text-body-large text-primary">98%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Console Output Simulate -->
+<div class="border-[0.5px] border-outline bg-surface flex-1 flex flex-col">
+<div class="border-b-[0.5px] border-outline p-3 bg-surface-container-highest font-label-tiny text-label-tiny text-primary flex justify-between">
+<span>&gt;_ КОНСОЛЬ ОПЕРАТОРА</span>
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+</div>
+<div class="p-4 font-mono text-metadata text-outline overflow-hidden flex flex-col gap-1">
+<p>&gt; init connection...</p>
+<p>&gt; connection established.</p>
+<p>&gt; fetching geodata... [OK]</p>
+<p>&gt; analyzing packet headers...</p>
+<p class="text-surface-tint">&gt; WARNING: high latency detected on node 4.</p>
+<p>&gt; rerouting traffic...</p>
+<p class="text-primary">&gt; SYSTEM STABLE.</p>
+<div class="mt-4 flex items-center">
+<span class="text-surface-tint mr-2">&gt;</span>
+<span class="w-2 h-4 bg-surface-tint animate-pulse"></span>
+</div>
+</div>
+</div>
+<!-- Brutalist Button -->
+<button class="w-full border-[1px] border-outline bg-background text-primary font-body-main text-body-main uppercase py-4 hover:bg-surface-tint hover:text-background transition-colors border-b-4 hover:border-b-[1px] hover:mt-[3px] active:bg-primary-fixed active:border-primary-fixed duration-75">
+                    ИНИЦИИРОВАТЬ СКАНИРОВАНИЕ
+                </button>
+</div>
+</section>
+</main>
+</body></html>

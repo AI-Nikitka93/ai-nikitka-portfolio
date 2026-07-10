@@ -1,0 +1,22 @@
+- generic [active] [ref=e1] [box=0,0,1425,4300]:
+  - generic [ref=e2] [box=0,0,1425,4300]:
+    - link "Перейти к содержанию" [ref=e3] [cursor=pointer] [box=16,-54,207,44]:
+      - /url: "#main-content"
+    - banner [box=0,0,1425,87]:
+      - generic [ref=e5] [box=33,17,1359,69]:
+        - link "AI_Nikitka93 портфолио работ и проектов" [ref=e334] [cursor=pointer] [box=53,29,233,45]:
+          - /url: /
+        - generic [ref=e10] [box=427,29,945,44]
+    - main [ref=e36] [box=0,0,1425,3980]:
+      - generic [ref=e39] [box=81,169,1263,517]:
+        - generic [ref=e40] [box=81,169,811,411]
+        - generic [ref=e49] [box=924,169,420,517]
+      - generic [ref=e80] [box=40,767,1345,3133]:
+        - generic [ref=e82] [box=40,767,1345,898]
+        - generic [ref=e141] [box=40,1688,1345,1608]
+        - generic [ref=e275] [box=40,3321,1345,579]
+    - contentinfo [ref=e305] [box=0,4044,1425,256]:
+      - generic [ref=e307] [box=73,4069,1279,166]:
+        - generic [ref=e308] [box=73,4069,570,166]
+        - generic [ref=e315] [box=667,4135,686,100]
+  - alert [ref=e326] [box=-1,4299,1,1]

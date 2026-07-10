@@ -1,0 +1,102 @@
+{
+  "desktopHome": {
+    "checks": {
+      "footerWorks": true,
+      "humanNavigator": true,
+      "newHero": true,
+      "startBlock": true
+    },
+    "clientWidth": 1718,
+    "hasOldJargon": false,
+    "oldJargonMatches": [],
+    "overflowX": false,
+    "scrollWidth": 1718,
+    "title": "AI_Nikitka93 — портфолио работ и проектов",
+    "url": "/",
+    "screenshotPath": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\home-human-copy-desktop-1280-2026-06-04.png",
+    "screenshotOk": false,
+    "screenshotError": "Timed out running CDP command \"Page.captureScreenshot\" for tab 1"
+  },
+  "about": {
+    "checks": {
+      "electricianPath": true,
+      "humanIntro": true
+    },
+    "clientWidth": 1280,
+    "hasOldJargon": false,
+    "oldJargonMatches": [],
+    "overflowX": false,
+    "scrollWidth": 1280,
+    "title": "Никита Кизевич | AI_Nikitka93",
+    "url": "/about",
+    "screenshotPath": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\about-human-copy-desktop-1280-2026-06-04.png",
+    "screenshotOk": true
+  },
+  "kinomatik": {
+    "checks": {
+      "humanText": true,
+      "spine": true,
+      "title": true
+    },
+    "clientWidth": 1280,
+    "hasOldJargon": false,
+    "oldJargonMatches": [],
+    "overflowX": false,
+    "scrollWidth": 1280,
+    "title": "КИНОМАТИК — лауреат конкурса нейросетевого видео | Работы | AI_Nikitka93",
+    "url": "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+    "screenshotPath": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\kinomatik-human-copy-desktop-1280-2026-06-04.png",
+    "screenshotOk": true
+  },
+  "mobileHome": {
+    "checks": {
+      "mobileWork": true,
+      "newHero": true
+    },
+    "clientWidth": 390,
+    "hasOldJargon": false,
+    "oldJargonMatches": [],
+    "overflowX": false,
+    "scrollWidth": 390,
+    "title": "AI_Nikitka93 — портфолио работ и проектов",
+    "url": "/",
+    "screenshotPath": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\home-human-copy-mobile-390-2026-06-04.png",
+    "screenshotOk": true
+  },
+  "console": [],
+  "desktopHomeRetry": {
+    "clientWidth": 1280,
+    "scrollWidth": 1280,
+    "overflowX": false,
+    "hasNewHero": true,
+    "hasOldJargon": false,
+    "screenshotOk": true,
+    "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/reports/site-eval-2026-06-04/home-human-copy-desktop-retry-1280-2026-06-04.png",
+    "note": "Retry after viewport settled; original desktop home screenshot timed out before viewport override applied."
+  },
+  "headerAfterFix": {
+    "width1280": {
+      "clientWidth": 1280,
+      "desktopNavVisible": true,
+      "enFullyInsideViewport": true,
+      "hasNewHero": true,
+      "hasOldJargon": false,
+      "headerText": "AI_Nikitka93портфолио работ и проектовпортфолиоГлавная01Главная02Работы03Lab04О себе05Блог06Калькулятор07Помощник08КонтактыENГлавнаяEN",
+      "menuButtonVisible": true,
+      "overflowX": false,
+      "scrollWidth": 1280,
+      "screenshotPath": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\home-human-copy-header-1280-2026-06-04.png"
+    },
+    "width1718": {
+      "clientWidth": 1718,
+      "desktopNavVisible": true,
+      "enFullyInsideViewport": true,
+      "hasNewHero": true,
+      "hasOldJargon": false,
+      "headerText": "AI_Nikitka93портфолио работ и проектовпортфолиоГлавная01Главная02Работы03Lab04О себе05Блог06Калькулятор07Помощник08КонтактыENГлавнаяEN",
+      "menuButtonVisible": true,
+      "overflowX": false,
+      "scrollWidth": 1718
+    }
+  }
+}

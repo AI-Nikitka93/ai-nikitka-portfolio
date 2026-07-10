@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#490106",
+                    "on-tertiary-fixed": "#384046",
+                    "inverse-surface": "#f9f9fc",
+                    "on-tertiary-fixed-variant": "#545d63",
+                    "secondary-dim": "#8ea0b2",
+                    "on-surface": "#e0e6ed",
+                    "primary-dim": "#96baf5",
+                    "secondary-fixed": "#d3e4f9",
+                    "primary": "#a7c8ff",
+                    "secondary": "#8ea0b2",
+                    "on-secondary-fixed-variant": "#4d5d6e",
+                    "tertiary-fixed-dim": "#cdd5dc",
+                    "on-primary-container": "#b7d1ff",
+                    "tertiary-container": "#dce3eb",
+                    "inverse-on-surface": "#535557",
+                    "on-primary-fixed": "#154072",
+                    "secondary-fixed-dim": "#c5d6ea",
+                    "on-tertiary": "#535b61",
+                    "on-surface-variant": "#a6acb2",
+                    "on-secondary-container": "#b0c1d5",
+                    "surface-container": "#161a1e",
+                    "surface-container-low": "#111416",
+                    "on-error-container": "#ff9993",
+                    "error-dim": "#bb5551",
+                    "primary-container": "#1f477a",
+                    "inverse-primary": "#3b6094",
+                    "tertiary-fixed": "#dce3eb",
+                    "surface-bright": "#252d33",
+                    "on-primary": "#164073",
+                    "primary-fixed-dim": "#bed5ff",
+                    "on-primary-fixed-variant": "#375c91",
+                    "surface-container-lowest": "#000000",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-tint": "#a7c8ff",
+                    "surface-container-high": "#1b2025",
+                    "on-background": "#e0e6ed",
+                    "on-secondary-fixed": "#304151",
+                    "on-secondary": "#102230",
+                    "tertiary": "#eaf2f9",
+                    "surface-variant": "#20262c",
+                    "on-tertiary-container": "#4b5359",
+                    "outline": "#70767c",
+                    "surface": "#0c0e10",
+                    "tertiary-dim": "#cdd5dc",
+                    "outline-variant": "#42494e",
+                    "error-container": "#7f2927",
+                    "secondary-container": "#2c3d4d",
+                    "surface-dim": "#0c0e10",
+                    "background": "#0c0e10",
+                    "surface-container-highest": "#20262c",
+                    "error": "#ee7d77"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c0e10;
+            color: #e0e6ed;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0c0e10]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-bold tracking-tighter text-[#a7c8ff] font-headline" href="#">Nikita Kizevich</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Обо мне</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Проекты</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Услуги</a>
+<a class="text-[#a7c8ff] font-semibold border-b-2 border-[#a7c8ff] pb-1 font-headline tracking-tight" href="#">Блог</a>
+</div>
+<button class="bg-gradient-to-br from-[#a7c8ff] to-[#1f477a] text-[#164073] px-6 py-2 rounded-full font-label text-sm font-bold hover:opacity-90 transition-all active:scale-95">
+                Связаться
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
+<!-- Article Header -->
+<header class="mb-16">
+<div class="flex gap-3 mb-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded text-xs font-label uppercase tracking-widest">LLM</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded text-xs font-label uppercase tracking-widest">Enterprise</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter text-on-surface mb-8 leading-[1.1]">
+                Почему RAG — это будущее корпоративного AI
+            </h1>
+<div class="flex items-center gap-4 text-on-surface-variant font-label text-xs tracking-widest uppercase">
+<span>12 июля 2024</span>
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+<span>10 мин на чтение</span>
+</div>
+</header>
+<!-- Featured Image -->
+<div class="mb-16 rounded-xl overflow-hidden aspect-video bg-surface-container relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract technical visualization of data flowing between a neural network and a structured database in deep blue and mist tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIvASIush8t1VYiHJiOaDZJeUxBd1FgMV7-wLOofrcA8g8PdJ8eKrlYYKzbo83xfkDq70kAdoNI4td4-PMLp7XVEXZSJfXkxQKmeeYbyDjIDKj1vwP0OdMiqbwkQ1LpbTrTQTaoMyXiLgDoUJv8zpVcU7k19hVVUO2Dce3UL0sias3Q1C6Z5axBg3Bzkx9kZQHFOToTjdrfxSB5ThXrtuqOzgdq3htLUFskYsHP9gr_h25Je_mHA9-759ble4i1GY-fpBO5Ae5KSk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+</div>
+<!-- Article Content -->
+<article class="prose prose-invert max-w-none prose-p:text-on-surface/90 prose-p:leading-relaxed prose-p:text-lg prose-headings:font-headline prose-headings:tracking-tight prose-strong:text-primary">
+<p class="text-xl text-on-surface-variant font-light italic mb-12 border-l-4 border-primary/20 pl-6">
+                В условиях быстрого развития генеративного ИИ, компании сталкиваются с проблемой «галлюцинаций» моделей и отсутствия актуальных данных в их обучающих выборках. Retrieval-Augmented Generation (RAG) предлагает элегантное решение.
+            </p>
+<h2 class="text-3xl font-bold mt-12 mb-6">Проблема статических знаний</h2>
+<p>
+                Большие языковые модели (LLM) заморожены во времени. Их знания ограничены моментом завершения обучения. Для корпоративного сектора, где данные меняются ежесекундно, это критический недостаток. Использование RAG позволяет модели «заглядывать» во внешние источники данных перед генерацией ответа.
+            </p>
+<div class="my-12 p-8 bg-surface-container rounded-lg border-l-2 border-primary/30">
+<h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+                    Как это работает
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+<div class="p-4 bg-surface-container-high rounded border border-outline-variant/10 text-center">
+<div class="text-primary font-label text-sm mb-2">01. Поиск</div>
+<p class="text-sm">Извлечение релевантных кусков текста из векторной БД</p>
+</div>
+<div class="p-4 bg-surface-container-high rounded border border-outline-variant/10 text-center">
+<div class="text-primary font-label text-sm mb-2">02. Контекст</div>
+<p class="text-sm">Добавление найденных данных в системный промпт</p>
+</div>
+<div class="p-4 bg-surface-container-high rounded border border-outline-variant/10 text-center">
+<div class="text-primary font-label text-sm mb-2">03. Ответ</div>
+<p class="text-sm">Генерация точного ответа на основе фактов</p>
+</div>
+</div>
+</div>
+<h2 class="text-3xl font-bold mt-12 mb-6">Безопасность и контроль</h2>
+<p>
+                В отличие от fine-tuning (дообучения), RAG позволяет гибко управлять правами доступа. Если у сотрудника нет доступа к документу «Зарплаты 2024», система поиска просто не выдаст этот кусок текста для LLM, предотвращая утечку данных на уровне архитектуры.
+            </p>
+<!-- Code Block -->
+<div class="my-10 bg-surface-container-lowest rounded-lg p-6 font-mono text-sm overflow-x-auto border border-outline-variant/20">
+<div class="flex justify-between mb-4 border-b border-outline-variant/20 pb-2">
+<span class="text-on-surface-variant font-label text-xs uppercase">Python Example</span>
+<span class="material-symbols-outlined text-xs text-on-surface-variant" data-icon="content_copy">content_copy</span>
+</div>
+<pre class="text-[#96baf5]"><code>def generate_with_rag(query, vector_db):
+    # 1. Достаем контекст
+    context = vector_db.similarity_search(query, k=3)
+    
+    # 2. Формируем расширенный промпт
+    prompt = f"Используй контекст: {context}\n\nВопрос: {query}"
+    
+    # 3. Получаем ответ от LLM
+    return llm.invoke(prompt)</code></pre>
+</div>
+<!-- Quote Block -->
+<blockquote class="my-16 relative py-12 px-8 border-y border-outline-variant/30 text-center">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-4 left-1/2 -translate-x-1/2" data-icon="format_quote">format_quote</span>
+<p class="text-2xl md:text-3xl font-headline font-semibold text-on-surface italic leading-snug">
+                    «RAG не заменяет модель, он дает ей правильный контекст»
+                </p>
+</blockquote>
+<h2 class="text-3xl font-bold mt-12 mb-6">Будущее: Агентские системы</h2>
+<p>
+                Мы движемся от простых RAG-систем к агентским архитектурам, где ИИ сам решает, когда ему нужно обратиться к базе знаний, когда — к калькулятору, а когда — вызвать API стороннего сервиса. Это превращает LLM из «умного чат-бота» в полноценную операционную систему для бизнеса.
+            </p>
+</article>
+<!-- Author Strip -->
+<section class="mt-20 p-8 bg-surface-container rounded-xl flex flex-col md:flex-row items-center gap-8 border border-outline-variant/10">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a man with focused expression, clean lighting, tech-professional aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJzlUyZP2n4cTc10-4Iw5_9RMpiW_aj_Afct1TT6Sha6Oy0q5ApVqDKEFXfC_UmIancQxJMcsQod286Q-07DBD980XmeJWF1_mO3NWYsGEc6IldNOrR3dOInicvI7IS7O-gNpfrkhJmB7GHjXVR2VQJ4OVyM83O68Kc-muvO-WfD5t3ExKYF2F68E6SVGQuym2KyCL36DiwPTszJgD5lafyMOabhI_LW8F1KDwltAnnA2pR2V3CZ_t9J_skML3PZtYJTP88WLr5TE"/>
+</div>
+<div class="grow text-center md:text-left">
+<h4 class="text-xl font-headline font-bold text-on-surface">Никита Кизевич</h4>
+<div class="inline-block bg-primary-container text-on-primary-container text-[10px] px-2 py-0.5 rounded font-label uppercase tracking-widest mb-2">AI Architect</div>
+<p class="text-on-surface-variant text-sm max-w-md">
+                    Специализируюсь на внедрении LLM в бизнес-процессы. Помогаю компаниям строить надежные и масштабируемые AI-решения.
+                </p>
+</div>
+<button class="bg-surface-container-highest border border-primary/30 text-primary px-8 py-3 rounded-full font-label text-sm uppercase tracking-wider hover:bg-primary/10 transition-all shrink-0">
+                Связаться
+            </button>
+</section>
+<!-- Related Articles -->
+<section class="mt-24">
+<div class="flex justify-between items-end mb-10">
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight uppercase tracking-widest text-xs opacity-60">Читайте далее</h3>
+<a class="text-primary font-label text-sm flex items-center gap-2 group" href="#">
+                    Все статьи
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Related Card 1 -->
+<a class="group bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden border border-transparent hover:border-outline-variant/30" href="#">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Abstract neural network nodes interconnected with glowing blue lines on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8n8k6O0wrZGFtjg-H6TIT0lmnrGvJEmZY4DZlReoNseEYYVITbAQRkZVRzF7acVgiSyMvtE-36cBcFgg5KORSChqIRwNHd-V8gOI_s9JFmoANlcHlnXiLH7vRr69Xbrz72sGrEF_1WutbrnBzp-d1AOqiO3ZSLGSoy4CzlcgaQ4mAMbdSLdin6DNGp_haTw8spbL__rVKL3mDm6Lhw_87OsRefwy0HpMw2dmyvQK_X3qMe5i0Mrygb0SY1C8GRVpzndLFNOXj8x4"/>
+</div>
+<div class="p-6">
+<div class="text-xs font-label text-primary uppercase tracking-widest mb-3">Оптимизация</div>
+<h4 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                            Как снизить стоимость инференса LLM в 4 раза
+                        </h4>
+</div>
+</a>
+<!-- Related Card 2 -->
+<a class="group bg-surface-container hover:bg-surface-container-high transition-all rounded-lg overflow-hidden border border-transparent hover:border-outline-variant/30" href="#">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Minimalist clean architectural interior with glass and concrete, representing corporate technology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGtAK0COupGrkLiHn1uJOIFQTLpDdrjj30M1anz9IT1f1cPh5OQzaORgyfU7arjS8JYEf5z5TS1DlJyub2xRGYduSoMybnGL0GZXEZDgw7AB5EmILlOv3EbjohPnamgT4xSKoC_Imxb7C75KX2Db3UL6sgQHIkHFlJ2J-QQ7ibV_8e5jRC2QG58tcsTtraDoRqpumLTQxqbKc_V2pIvng_U9JYrHWZjKYa1xqZ773VPuQxdWXdAZ2Ux0QLKcUX0xQUCCsuuoQbBLY"/>
+</div>
+<div class="p-6">
+<div class="text-xs font-label text-primary uppercase tracking-widest mb-3">Strategy</div>
+<h4 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                            AI-Native компании: Новая парадигма управления
+                        </h4>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#1b2025]/30 bg-[#0c0e10]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-6">
+<span class="font-label uppercase tracking-widest text-xs text-[#8ea0b2]">© 2024 Nikita Kizevich. Precision in AI.</span>
+<div class="flex gap-8">
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label uppercase tracking-widest text-xs" href="#">Telegram</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label uppercase tracking-widest text-xs" href="#">GitHub</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label uppercase tracking-widest text-xs" href="#">LinkedIn</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-label uppercase tracking-widest text-xs" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

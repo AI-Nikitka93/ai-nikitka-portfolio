@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ТЕРМИНАЛ АРХИВА - СЕКТОР 01</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#323631",
+                    "error": "#ffb4ab",
+                    "background": "#101410",
+                    "outline-variant": "#3c4b35",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "tertiary-container": "#dcded9",
+                    "primary": "#efffe3",
+                    "primary-fixed": "#79ff5b",
+                    "on-primary-container": "#107100",
+                    "on-primary-fixed": "#022100",
+                    "secondary-fixed": "#d3e4fe",
+                    "secondary-container": "#3a4a5f",
+                    "on-tertiary-fixed-variant": "#454744",
+                    "tertiary-fixed": "#e1e3de",
+                    "primary-fixed-dim": "#2ae500",
+                    "tertiary": "#f9faf5",
+                    "on-tertiary-container": "#5f625e",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#0b1c30",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#095300",
+                    "on-tertiary": "#2e312e",
+                    "on-secondary-container": "#a9bad3",
+                    "surface": "#101410",
+                    "surface-container": "#1d211c",
+                    "surface-container-lowest": "#0b0f0b",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "surface-dim": "#101410",
+                    "on-secondary": "#213145",
+                    "surface-container-low": "#191d18",
+                    "outline": "#85967c",
+                    "on-primary": "#053900",
+                    "on-tertiary-fixed": "#191c19",
+                    "surface-container-high": "#272b26",
+                    "on-surface-variant": "#baccb0",
+                    "inverse-on-surface": "#2d312c",
+                    "secondary": "#b7c8e1",
+                    "inverse-primary": "#106e00",
+                    "on-surface": "#e0e4dc",
+                    "inverse-surface": "#e0e4dc",
+                    "on-background": "#e0e4dc",
+                    "surface-bright": "#363a35",
+                    "surface-variant": "#323631",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#39ff14",
+                    "surface-tint": "#2ae500",
+                    "tertiary-fixed-dim": "#c5c7c2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin": "12px",
+                    "unit": "4px",
+                    "gutter": "1px",
+                    "container-padding": "8px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "IBM Plex Mono"
+                    ],
+                    "code-dense": [
+                            "IBM Plex Mono"
+                    ],
+                    "headline-lg": [
+                            "IBM Plex Mono"
+                    ],
+                    "body-sm": [
+                            "IBM Plex Mono"
+                    ],
+                    "headline-md": [
+                            "IBM Plex Mono"
+                    ],
+                    "label-caps": [
+                            "IBM Plex Mono"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "code-dense": [
+                            "13px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg": [
+                            "24px",
+                            {
+                                    "lineHeight": "120%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "140%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "18px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "11px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Optional overrides to ensure sharp edges for technical brutalism, falling back to config otherwise */
+        .brutal-border {
+            border-radius: 0;
+        }
+        /* Hide scrollbar for cleaner terminal look */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3c4b35; /* outline-variant */
+            border-radius: 0;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #39ff14; /* primary-container */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md h-screen w-full overflow-hidden flex select-none">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden md:flex flex-col h-full border-r border-stone-800 h-screen w-64 border-r border-stone-800 bg-stone-950 flex-shrink-0 z-20">
+<!-- Header -->
+<div class="p-6 border-b border-stone-800 flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest rounded-none flex items-center justify-center border border-outline-variant" title="User Terminal Profile">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-[#39FF14] font-headline-md text-headline-md tracking-widest">SEC-01</h2>
+<p class="font-code-dense text-code-dense text-on-surface-variant opacity-70">LN-402</p>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex-1 overflow-y-auto py-4">
+<ul class="flex flex-col space-y-1 px-2 font-mono text-[11px] leading-tight uppercase">
+<!-- Inactive Tab -->
+<li>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert brutal-border" href="#">
+<span class="material-symbols-outlined text-[18px]">folder_managed</span>
+                        РЕЕСТР
+                    </a>
+</li>
+<!-- Inactive Tab -->
+<li>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert brutal-border" href="#">
+<span class="material-symbols-outlined text-[18px]">database</span>
+                        ОБЪЕКТЫ
+                    </a>
+</li>
+<!-- Inactive Tab -->
+<li>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert brutal-border" href="#">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+                        АРХИВ
+                    </a>
+</li>
+<!-- Active Tab (Based on Logic: Target Subject is Terminal/System) -->
+<li>
+<a class="flex items-center gap-3 bg-stone-900 border-l-4 border-[#39FF14] text-[#39FF14] py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert brutal-border" href="#">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">settings_ethernet</span>
+                        СИСТЕМА
+                    </a>
+</li>
+<!-- Inactive Tab -->
+<li>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert brutal-border" href="#">
+<span class="material-symbols-outlined text-[18px]">build</span>
+                        УТИЛИТЫ
+                    </a>
+</li>
+</ul>
+<!-- CTA -->
+<div class="px-4 mt-8">
+<button class="w-full bg-transparent border border-outline-variant text-on-surface-variant font-label-caps text-label-caps py-2 px-4 hover:border-primary-container hover:text-primary-container transition-colors brutal-border flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[14px]">add</span>
+                    НОВЫЙ ЗАПРОС
+                </button>
+</div>
+</nav>
+<!-- Footer Tab -->
+<div class="p-4 border-t border-stone-800">
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert font-mono text-[11px] leading-tight uppercase brutal-border" href="#">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+                ВЫХОД
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col h-full relative bg-background">
+<!-- TopNavBar (Shared Component) -->
+<header class="flex justify-between items-center w-full px-3 h-12 max-w-full bg-stone-950 docked full-width top-0 border-b border-stone-800 border-b border-stone-800 z-10">
+<!-- Brand -->
+<div class="flex items-center gap-2">
+<span class="text-lg font-black text-[#39FF14] tracking-widest uppercase">АРХИВ-СЕКТОР</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center space-x-6 font-mono uppercase tracking-tighter text-xs">
+<!-- Active Link (Exact Match to Page Intent) -->
+<a class="text-[#39FF14] border-b border-[#39FF14] pb-1 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black mt-1" href="#">ТЕРМИНАЛ</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black py-1" href="#">ЛОГИ</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black py-1" href="#">СТАТУС</a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black py-1" href="#">АНАЛИЗ</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-stone-500">
+<button class="hover:text-[#39FF14] transition-colors"><span class="material-symbols-outlined text-[18px]">settings_input_component</span></button>
+<button class="hover:text-[#39FF14] transition-colors text-[#39FF14]"><span class="material-symbols-outlined text-[18px]">terminal</span></button>
+</div>
+<button class="bg-[#39FF14] text-[#022100] font-label-caps text-label-caps px-4 py-1.5 brutal-border hover:bg-primary-fixed-dim transition-colors">
+                    ВХОД
+                </button>
+</div>
+</header>
+<!-- Dynamic Content Area (Bento Grid) -->
+<div class="flex-1 overflow-auto p-gutter bg-outline-variant relative">
+<!-- Subtle Scanline Overlay -->
+<div class="pointer-events-none absolute inset-0 z-50 mix-blend-overlay opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]"></div>
+<div class="grid grid-cols-12 auto-rows-[minmax(120px,auto)] gap-gutter h-full">
+<!-- Main Terminal Pane -->
+<section class="col-span-12 lg:col-span-8 row-span-4 bg-background flex flex-col brutal-border relative group">
+<div class="border-b border-outline-variant bg-surface-container-highest px-3 py-1 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-primary-container">SYS.INIT.PROTOCOL // ПЕРВИЧНЫЙ ВВОД</span>
+<div class="flex gap-1">
+<div class="w-2 h-2 bg-outline-variant brutal-border"></div>
+<div class="w-2 h-2 bg-outline-variant brutal-border"></div>
+<div class="w-2 h-2 bg-primary-container brutal-border animate-pulse"></div>
+</div>
+</div>
+<div class="flex-1 p-margin font-code-dense text-code-dense text-on-surface-variant overflow-y-auto flex flex-col gap-1">
+<p class="text-on-surface opacity-50">==================================================</p>
+<p class="text-on-surface opacity-50">CENTRAL ARCHIVE MAINFRAME - V. 4.9.1</p>
+<p class="text-on-surface opacity-50">CONNECTION ESTABLISHED. SECURE CHANNEL.</p>
+<p class="text-on-surface opacity-50">==================================================</p>
+<br/>
+<p><span class="text-primary-container">root@sec-01:~$</span> init_sequence --target all</p>
+<p class="pl-4">[OK] Memory banks aligned.</p>
+<p class="pl-4">[OK] Neural pathways synchronized.</p>
+<p class="pl-4">[WARN] Sector 7 access restricted. Override required.</p>
+<p><span class="text-primary-container">root@sec-01:~$</span> load_module "deep_search"</p>
+<p class="pl-4 animate-pulse">Loading modules [||||||||||||........] 60%</p>
+<br/>
+<div class="mt-auto flex items-center">
+<span class="text-primary-container mr-2">root@sec-01:~$</span>
+<span class="text-on-surface">awaiting_command</span>
+<span class="w-2 h-4 bg-primary-container ml-1 inline-block"></span>
+</div>
+</div>
+</section>
+<!-- Status Telemetry Pane -->
+<section class="col-span-12 sm:col-span-6 lg:col-span-4 row-span-2 bg-background flex flex-col brutal-border">
+<div class="border-b border-outline-variant bg-surface-container px-3 py-1 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface">ТЕЛЕМЕТРИЯ УЗЛА</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">monitor_heart</span>
+</div>
+<div class="flex-1 p-margin flex flex-col gap-unit justify-center">
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/30">
+<span class="font-code-dense text-code-dense text-on-surface-variant">ЦП НАГРУЗКА</span>
+<span class="font-code-dense text-code-dense text-on-surface">42.8%</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/30">
+<span class="font-code-dense text-code-dense text-on-surface-variant">ПАМЯТЬ АРХИВА</span>
+<span class="font-code-dense text-code-dense text-primary-container">98.1 TB / 100 TB</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/30">
+<span class="font-code-dense text-code-dense text-on-surface-variant">АКТИВНЫЕ ПОТОКИ</span>
+<span class="font-code-dense text-code-dense text-on-surface">1,024</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-code-dense text-code-dense text-on-surface-variant">ЦЕЛОСТНОСТЬ БАЗЫ</span>
+<span class="font-code-dense text-code-dense text-primary-container">99.99%</span>
+</div>
+</div>
+</section>
+<!-- Identity/Access Pane -->
+<section class="col-span-12 sm:col-span-6 lg:col-span-4 row-span-2 bg-background flex flex-col brutal-border">
+<div class="border-b border-outline-variant bg-surface-container px-3 py-1 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-error">УРОВЕНЬ ДОСТУПА</span>
+<span class="material-symbols-outlined text-[14px] text-error">lock_open</span>
+</div>
+<div class="flex-1 p-margin flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 border border-error mb-2 flex items-center justify-center text-error bg-error-container/10 brutal-border relative">
+<span class="material-symbols-outlined text-[32px]">fingerprint</span>
+<div class="absolute top-0 left-0 w-full h-[1px] bg-error opacity-50"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">ОПЕРАТОР Alpha</h3>
+<p class="font-code-dense text-code-dense text-on-surface-variant uppercase">Допуск: Уровень 4</p>
+<div class="mt-3 px-3 py-1 bg-surface-container-high border border-outline-variant text-primary-container font-label-caps text-label-caps inline-block brutal-border">
+                            АВТОРИЗОВАН
+                        </div>
+</div>
+</section>
+<!-- Data Stream Pane -->
+<section class="col-span-12 row-span-3 bg-background flex flex-col brutal-border">
+<div class="border-b border-outline-variant bg-surface-container px-3 py-1 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface">ПОТОК ДАННЫХ // ПОСЛЕДНИЕ ИЗМЕНЕНИЯ</span>
+<button class="text-primary-container hover:text-primary-fixed-dim"><span class="material-symbols-outlined text-[16px]">sync</span></button>
+</div>
+<div class="flex-1 overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[600px]">
+<thead>
+<tr class="bg-surface-container-low font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+<th class="p-2 font-normal">TIMESTAMP</th>
+<th class="p-2 font-normal">EVENT_ID</th>
+<th class="p-2 font-normal">SOURCE</th>
+<th class="p-2 font-normal">STATUS</th>
+<th class="p-2 font-normal">DETAILS</th>
+</tr>
+</thead>
+<tbody class="font-code-dense text-code-dense">
+<tr class="border-b border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+<td class="p-2 text-on-surface-variant">04:12:01.001</td>
+<td class="p-2 text-on-surface">EV-992-A</td>
+<td class="p-2 text-on-surface">SYS.CORE</td>
+<td class="p-2"><span class="text-primary-container border border-primary-container px-1 brutal-border text-[10px]">SUCCESS</span></td>
+<td class="p-2 text-on-surface-variant truncate max-w-[200px]">Routine index compaction completed.</td>
+</tr>
+<tr class="border-b border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+<td class="p-2 text-on-surface-variant">04:11:45.920</td>
+<td class="p-2 text-on-surface">EV-991-X</td>
+<td class="p-2 text-on-surface">EXT.NODE.04</td>
+<td class="p-2"><span class="text-error border border-error px-1 brutal-border text-[10px]">DENIED</span></td>
+<td class="p-2 text-error truncate max-w-[200px]">Unauthorized query attempt detected.</td>
+</tr>
+<tr class="border-b border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+<td class="p-2 text-on-surface-variant">04:10:12.333</td>
+<td class="p-2 text-on-surface">EV-990-B</td>
+<td class="p-2 text-on-surface">ARCHIVE_MGR</td>
+<td class="p-2"><span class="text-primary-container border border-primary-container px-1 brutal-border text-[10px]">SUCCESS</span></td>
+<td class="p-2 text-on-surface-variant truncate max-w-[200px]">Block #40921 sealed and verified.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="flex justify-between items-center px-4 py-1 h-8 w-full bg-stone-950 border-t border-stone-800 z-10 shrink-0">
+<!-- Copyright text -->
+<div class="font-mono text-[9px] uppercase text-stone-600">
+                © 2024 ЦЕНТРАЛЬНЫЙ УЗЕЛ СВЯЗИ. КОРПУС-Г
+            </div>
+<!-- Links -->
+<nav class="flex gap-4 font-mono text-[9px] uppercase">
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПРОТОКОЛ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПОДДЕРЖКА</a>
+</nav>
+</footer>
+</main>
+</body></html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archival Void - Entity Specification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#c5c7c2",
+                        "on-tertiary": "#283500",
+                        "on-primary-fixed": "#1a1c19",
+                        "secondary-fixed-dim": "#c7c7be",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e0",
+                        "primary-container": "#050705",
+                        "on-secondary-container": "#b8b9b0",
+                        "outline": "#8f928c",
+                        "secondary": "#c7c7be",
+                        "primary-fixed-dim": "#c5c7c2",
+                        "on-primary-container": "#767974",
+                        "error": "#ffb4ab",
+                        "on-primary": "#2e312e",
+                        "tertiary": "#abd600",
+                        "on-surface-variant": "#c5c7c1",
+                        "outline-variant": "#444843",
+                        "on-surface": "#e5e2e0",
+                        "surface-bright": "#3a3938",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#161e00",
+                        "tertiary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#e2e3de",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#3c4d00",
+                        "on-primary-fixed-variant": "#454744",
+                        "on-secondary-fixed": "#1a1c16",
+                        "surface-tint": "#c5c7c2",
+                        "on-secondary": "#2f312b",
+                        "surface-container-high": "#2a2a29",
+                        "on-tertiary-container": "#678200",
+                        "secondary-fixed": "#e3e3d9",
+                        "surface-dim": "#141313",
+                        "surface-variant": "#353534",
+                        "secondary-container": "#484a43",
+                        "surface": "#141313",
+                        "on-error": "#690005",
+                        "tertiary-container": "#050800",
+                        "background": "#141313",
+                        "on-secondary-fixed-variant": "#464740",
+                        "tertiary-fixed-dim": "#abd600",
+                        "on-background": "#e5e2e0",
+                        "inverse-primary": "#5d5f5b",
+                        "surface-container-low": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "40px",
+                        "void-sm": "12px",
+                        "margin": "64px",
+                        "void-md": "32px",
+                        "void-lg": "80px",
+                        "void-xs": "4px",
+                        "void-xl": "160px"
+                    },
+                    "fontFamily": {
+                        "meta-sm": ["IBM Plex Mono"],
+                        "meta-xs": ["IBM Plex Mono"],
+                        "body-base": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "meta-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "meta-xs": ["10px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "300" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { cursor: default; }
+        ::-moz-selection { background: #abd600; color: #141313; }
+        ::selection { background: #abd600; color: #141313; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base antialiased min-h-screen flex flex-col overflow-hidden selection:bg-tertiary selection:text-background">
+<!-- TopAppBar -->
+<header class="fixed docked full-width top-0 bg-transparent flex justify-between items-center w-full px-24 py-12 z-50">
+<div class="text-[10px] font-bold tracking-widest text-[#f5f5f0]">AI_NIKITKA93</div>
+<div class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] text-[#ccff00] hover:text-[#ccff00] transition-opacity duration-500 cursor-none flex items-center">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full bg-transparent flex flex-col gap-12 px-12 py-32 justify-center z-40 w-[120px]">
+<ul class="flex flex-col gap-12 font-['IBM_Plex_Mono'] text-[11px] tracking-tight w-full">
+<li class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+<span>ARCHIVE</span>
+</li>
+<li class="text-[#ccff00] flex items-center gap-4 before:w-1 before:h-1 before:bg-[#ccff00] hover:opacity-100 transition-all duration-300 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">blur_on</span>
+<span>VOID</span>
+</li>
+<li class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>NEURAL</span>
+</li>
+<li class="text-[#f5f5f0] flex items-center gap-4 opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>LOGS</span>
+</li>
+</ul>
+</nav>
+<!-- Main Content Canvas (The Verifier/About) -->
+<main class="flex-1 flex items-center justify-center w-full h-screen pl-[120px] pr-24 py-24 relative">
+<!-- Central Artifact Cluster -->
+<article class="flex flex-col items-center text-center gap-void-lg max-w-4xl relative z-10">
+<!-- Metadata Hook -->
+<div class="flex flex-col items-center gap-void-sm">
+<span class="font-meta-xs text-meta-xs text-tertiary uppercase opacity-80 flex items-center gap-2">
+<span class="w-1 h-1 bg-tertiary inline-block"></span>
+                    RATIONAL IDENTITY ESTABLISHED
+                </span>
+<h1 class="font-display-xl text-display-xl text-on-surface">THE ARCHIVAL VOID</h1>
+</div>
+<!-- Explanatory Core -->
+<div class="flex flex-col gap-void-md max-w-2xl text-left">
+<p class="font-headline-md text-headline-md text-on-surface-variant font-light">
+                    A designated vacuum state engineered for the preservation of uncorrupted data artifacts. 
+                </p>
+<p class="font-body-base text-body-base text-outline opacity-80">
+                    By eliminating contextual friction and structural containment, information is suspended in absolute isolation. Absence is the primary operative. Space is not empty; it is the active medium through which signal clarity is guaranteed. Here, data exists without the burden of interface.
+                </p>
+</div>
+<!-- Supporting Data Points -->
+<div class="flex gap-void-lg mt-void-md pt-void-md">
+<div class="flex flex-col text-left gap-void-xs">
+<span class="font-meta-xs text-meta-xs text-tertiary">STRUCTURAL INTEGRITY</span>
+<span class="font-meta-sm text-meta-sm text-on-surface">ABSOLUTE FLATNESS</span>
+</div>
+<div class="flex flex-col text-left gap-void-xs">
+<span class="font-meta-xs text-meta-xs text-tertiary">BACKGROUND NOISE</span>
+<span class="font-meta-sm text-meta-sm text-on-surface">0.00% SUPPRESSED</span>
+</div>
+<div class="flex flex-col text-left gap-void-xs">
+<span class="font-meta-xs text-meta-xs text-tertiary">ISOLATION PROTOCOL</span>
+<span class="font-meta-sm text-meta-sm text-on-surface">ACTIVE</span>
+</div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full bg-transparent flex justify-center items-center pb-12 z-50">
+<div class="font-['IBM_Plex_Mono'] text-[9px] opacity-30 text-[#ccff00] hover:opacity-100 flex gap-void-sm tracking-widest transition-opacity duration-300">
+<span>SYSTEM_STATUS: NOMINAL</span>
+<span class="opacity-50">|</span>
+<span>ENCRYPTION_ACTIVE</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 // TACTICAL_OS</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#e1e3e1",
+                        "tertiary": "#c5c7c5",
+                        "on-primary-fixed-variant": "#414941",
+                        "secondary-fixed": "#dfe4e0",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#929492",
+                        "surface-container-low": "#161d16",
+                        "background": "#0e150f",
+                        "surface-bright": "#343b33",
+                        "error-container": "#93000a",
+                        "secondary-container": "#454a48",
+                        "surface-container-lowest": "#09100a",
+                        "on-secondary-fixed-variant": "#434845",
+                        "on-surface": "#dde5d9",
+                        "primary-fixed-dim": "#c1c9be",
+                        "tertiary-fixed-dim": "#c5c7c5",
+                        "on-primary-fixed": "#161d16",
+                        "on-secondary-fixed": "#181d1b",
+                        "outline": "#8e928c",
+                        "on-secondary-container": "#b5b9b6",
+                        "on-tertiary-fixed-variant": "#444746",
+                        "surface-variant": "#2f372f",
+                        "on-primary": "#2b322b",
+                        "surface-dim": "#0e150f",
+                        "on-tertiary": "#2e3130",
+                        "inverse-primary": "#596058",
+                        "outline-variant": "#444843",
+                        "on-background": "#dde5d9",
+                        "primary-fixed": "#dde5d9",
+                        "secondary-fixed-dim": "#c3c8c4",
+                        "secondary": "#c3c8c4",
+                        "surface-tint": "#c1c9be",
+                        "primary-container": "#8e968c",
+                        "surface-container": "#1a211a",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#2a2d2c",
+                        "surface-container-highest": "#2f372f",
+                        "on-tertiary-fixed": "#191c1b",
+                        "inverse-surface": "#dde5d9",
+                        "on-error": "#690005",
+                        "surface": "#0e150f",
+                        "surface-container-high": "#242c24",
+                        "on-surface-variant": "#c4c7c1",
+                        "on-secondary": "#2c312f",
+                        "on-primary-container": "#272e27",
+                        "primary": "#c1c9be",
+                        "inverse-on-surface": "#2b322b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px", /* Forced 0px for Brutalist Tactical style as per guidance overrides */
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    spacing: {
+                        "margin": "24px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "container-max": "1440px"
+                    },
+                    fontFamily: {
+                        "data-mono": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-lg": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"],
+                        "label-caps": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"]
+                    },
+                    fontSize: {
+                        "data-mono": ["13px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "body-lg": ["16px", { lineHeight: "1.5", letterSpacing: "0em", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.5", letterSpacing: "0em", fontWeight: "400" }],
+                        "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "700" }],
+                        "headline-md": ["24px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for a cleaner tactical look */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #444843; }
+        ::-webkit-scrollbar-thumb:hover { background: #8e928c; }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-sm text-body-sm h-screen w-screen overflow-hidden selection:bg-outline selection:text-surface-container-lowest">
+<!-- TopAppBar (JSON Sourced) -->
+<header class="fixed top-0 flex justify-between items-center w-full px-6 h-10 z-50 docked full-width border-b border-[#8E968C]/30 bg-[#000000] dark:bg-black">
+<div class="text-xs font-black tracking-widest text-[#8E968C]">AI_NIKITKA93 // TACTICAL_OS</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#8E968C] text-[16px]">sensors</span>
+<span class="material-symbols-outlined text-[#8E968C] text-[16px]">wifi_tethering</span>
+<span class="material-symbols-outlined text-[#8E968C] text-[16px]">battery_charging_full</span>
+<span class="material-symbols-outlined text-[#8E968C] text-[16px]">gps_fixed</span>
+</div>
+</header>
+<div class="flex h-screen pt-10">
+<!-- SideNavBar (JSON Sourced) -->
+<nav class="fixed left-0 top-10 flex flex-col h-[calc(100vh-40px)] py-4 overflow-y-auto w-48 border-r border-[#8E968C]/20 bg-[#1A1A1A] dark:bg-[#121212] z-40">
+<div class="px-4 mb-6">
+<div class="text-[#8E968C] font-bold text-sm mb-4">SYSTEM_ACCESS</div>
+<div class="font-mono text-[11px] uppercase tracking-tighter text-[#8E968C]/70">ID:NIKITKA-93</div>
+</div>
+<div class="flex flex-col space-y-1 font-mono text-[11px] uppercase tracking-tighter">
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">login</span> Entrance
+                </button>
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">inventory_2</span> Archive
+                </button>
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">center_focus_strong</span> Focus
+                </button>
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">person</span> Human
+                </button>
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">menu_book</span> Journal
+                </button>
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">assignment</span> Briefing
+                </button>
+<!-- Active Nav Element -->
+<button class="bg-[#8E968C] text-black flex items-center px-4 py-2 w-full font-bold transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]" style="font-variation-settings: 'FILL' 1;">terminal</span> Console
+                </button>
+<button class="text-[#8E968C]/70 flex items-center px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-none delay-0">
+<span class="material-symbols-outlined mr-3 text-[18px]">map</span> Routes
+                </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-48 flex-1 bg-background p-gutter overflow-hidden flex flex-col h-full relative">
+<!-- Global Grid -->
+<div class="grid grid-cols-12 gap-gutter h-full w-full">
+<!-- Center Panel: Primary Terminal (Col Span 8) -->
+<section class="col-span-8 flex flex-col h-full border border-outline bg-surface-container-low relative p-4">
+<!-- Tactical HUD Overlay Brackets -->
+<div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-outline"></div>
+<div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-outline"></div>
+<div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-outline"></div>
+<div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-outline"></div>
+<header class="flex justify-between items-center mb-4 border-b border-outline pb-2">
+<h1 class="font-label-caps text-label-caps text-outline uppercase">/sys/primary_console/stream</h1>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-data-mono text-data-mono text-primary">LIVE</span>
+</div>
+</header>
+<!-- Terminal Output -->
+<div class="flex-1 overflow-y-auto font-data-mono text-data-mono text-on-surface-variant flex flex-col gap-1 pb-4">
+<div class="flex"><span class="text-outline w-24">[14:02:01]</span><span>SECURE HANDSHAKE INITIATED...</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:02]</span><span>NODE_ALPHA RESPONDING [22ms]</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:05]</span><span>ENCRYPTING DATA STREAM VIA PROTOCOL 7</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:08]</span><span class="text-error">WARNING: UNIDENTIFIED PING DETECTED ON PORT 8080</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:09]</span><span>FIREWALL RULE ADAPTED. PACKETS DROPPED.</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:15]</span><span>UPLOADING TELEMETRY DATA... 12%</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:16]</span><span>UPLOADING TELEMETRY DATA... 48%</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:17]</span><span>UPLOADING TELEMETRY DATA... 100% COMPLETED.</span></div>
+<div class="flex"><span class="text-outline w-24">[14:02:22]</span><span>AWAITING NEXT DIRECTIVE.</span></div>
+</div>
+<!-- Command Input -->
+<div class="mt-auto pt-4 border-t border-outline flex items-center text-outline">
+<span class="font-data-mono text-data-mono mr-2">&gt;_</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-data-mono text-data-mono text-primary placeholder-outline-variant p-0" placeholder="ENTER COMMAND SEQUENCE..." type="text"/>
+</div>
+</section>
+<!-- Right Side Panels (Col Span 4) -->
+<div class="col-span-4 flex flex-col gap-gutter h-full">
+<!-- Sub-Panel: Node Status -->
+<section class="flex-1 border border-outline bg-surface-container relative p-4 flex flex-col">
+<header class="mb-4 border-b border-outline pb-2 flex justify-between">
+<h2 class="font-label-caps text-label-caps text-outline uppercase">Active Nodes</h2>
+<span class="material-symbols-outlined text-outline text-[16px]">device_hub</span>
+</header>
+<div class="flex flex-col gap-2 font-data-mono text-data-mono">
+<div class="flex justify-between items-center py-1 border-b border-surface-variant">
+<span class="text-on-surface">ND-01:CORE</span>
+<span class="bg-background border border-outline text-outline px-2 py-0.5">NOMINAL</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-variant">
+<span class="text-on-surface">ND-02:PROXY</span>
+<span class="bg-background border border-outline text-outline px-2 py-0.5">NOMINAL</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-variant">
+<span class="text-on-surface">ND-03:RELAY</span>
+<span class="bg-error-container text-error px-2 py-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">warning</span> DEGRADED
+                                </span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-variant">
+<span class="text-on-surface">ND-04:VAULT</span>
+<span class="bg-background border border-outline text-outline px-2 py-0.5">LOCKED</span>
+</div>
+</div>
+<button class="mt-auto w-full bg-outline text-background font-label-caps text-label-caps py-2 hover:bg-on-surface transition-colors">
+                            INITIATE DIAGNOSTIC
+                        </button>
+</section>
+<!-- Sub-Panel: System Metrics -->
+<section class="h-1/3 border border-outline bg-surface-container relative p-4 flex flex-col">
+<header class="mb-2">
+<h2 class="font-label-caps text-label-caps text-outline uppercase">Resource Allocation</h2>
+</header>
+<div class="flex-1 flex flex-col justify-end gap-3 pb-2">
+<!-- Metric Bar 1 -->
+<div class="w-full">
+<div class="flex justify-between font-data-mono text-data-mono text-[10px] text-outline mb-1">
+<span>CPU_THREADS</span>
+<span>78%</span>
+</div>
+<div class="h-1 w-full bg-background relative">
+<div class="absolute top-0 left-0 h-full bg-outline w-[78%]"></div>
+</div>
+</div>
+<!-- Metric Bar 2 -->
+<div class="w-full">
+<div class="flex justify-between font-data-mono text-data-mono text-[10px] text-outline mb-1">
+<span>MEM_BUFFER</span>
+<span>42%</span>
+</div>
+<div class="h-1 w-full bg-background relative">
+<div class="absolute top-0 left-0 h-full bg-outline w-[42%]"></div>
+</div>
+</div>
+<!-- Metric Bar 3 -->
+<div class="w-full">
+<div class="flex justify-between font-data-mono text-data-mono text-[10px] text-outline mb-1">
+<span>NET_UPLINK</span>
+<span>91%</span>
+</div>
+<div class="h-1 w-full bg-background relative">
+<div class="absolute top-0 left-0 h-full bg-primary w-[91%]"></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</body></html>

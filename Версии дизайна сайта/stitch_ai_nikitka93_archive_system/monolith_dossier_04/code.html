@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dossier Detail #04</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&amp;family=Public+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#e3beb8",
+                        "tertiary": "#c6c6c7",
+                        "on-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#5a403c",
+                        "on-primary-container": "#ff907f",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "secondary": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "on-primary": "#690000",
+                        "primary-container": "#8b0000",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#aa8984",
+                        "on-secondary-container": "#b7b5b4",
+                        "surface-container": "#201f1f",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ffb4a8",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#410000",
+                        "on-tertiary": "#2f3131",
+                        "inverse-primary": "#b52619",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-container": "#414343",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "background": "#131313",
+                        "secondary-container": "#474746",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-container": "#afafb0",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#ffdad4",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#353534"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin": "40px",
+                        "gutter": "24px",
+                        "terminal-padding": "16px"
+                    },
+                    "fontFamily": {
+                        "data-primary": ["Public Sans"],
+                        "data-mono-alt": ["Public Sans"],
+                        "label-caps": ["Space Grotesk"],
+                        "system-warning": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-primary": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "data-mono-alt": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "system-warning": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #000;
+            color: #e5e2e1;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        /* CRT Scanline Overlay */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 999;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        .flicker {
+            animation: flicker 2s linear infinite;
+        }
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: .99; }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: .4; }
+        }
+    </style>
+</head>
+<body class="font-data-primary text-data-primary bg-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 border-b-2 border-red-900 border-2 border-red-900 bg-black flex justify-between items-center w-full px-4 h-16 z-50">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-red-700 dark:text-red-600 animate-pulse font-['Space_Grotesk'] uppercase tracking-tighter">DEEP STORAGE MONOLITH</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-red-800 dark:text-red-700 hover:bg-red-800 hover:text-black cursor-pointer p-2">settings_input_component</span>
+<span class="material-symbols-outlined text-red-800 dark:text-red-700 hover:bg-red-800 hover:text-black cursor-pointer p-2">terminal</span>
+<button class="border border-zinc-500 hover:bg-red-800 hover:text-black text-red-800 dark:text-red-700 font-label-caps text-label-caps px-4 py-2 uppercase tracking-widest transition-colors duration-75">EMERGENCY_SHUTDOWN</button>
+</div>
+</header>
+<div class="flex flex-1 pt-16">
+<!-- SideNavBar -->
+<nav class="docked left-0 h-full w-64 border-r-2 border-red-900 bg-zinc-950 flex flex-col h-screen fixed left-0 top-0 z-40 pt-16 pb-12">
+<div class="p-4 border-b border-red-900 mb-4 hidden">
+<div class="text-red-700 font-['Space_Grotesk'] font-bold text-xs uppercase">OPERATOR_00</div>
+<div class="text-red-900 font-['Space_Grotesk'] font-bold text-xs uppercase">ACCESS_LEVEL_ALPHA</div>
+</div>
+<div class="flex-1 flex flex-col gap-1 px-2">
+<a class="text-red-900 flex items-center gap-3 p-4 w-full font-['Space_Grotesk'] font-bold text-xs hover:bg-zinc-900 hover:text-red-500 uppercase border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">grid_view</span> SECTOR_01
+                </a>
+<a class="text-red-900 flex items-center gap-3 p-4 w-full font-['Space_Grotesk'] font-bold text-xs hover:bg-zinc-900 hover:text-red-500 uppercase border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">database</span> SECTOR_02
+                </a>
+<a class="bg-red-800 text-black flex items-center gap-3 p-4 w-full font-['Space_Grotesk'] font-bold text-xs uppercase border-l-4 border-red-500" href="#">
+<span class="material-symbols-outlined">lock</span> ARCHIVE_VAULT
+                </a>
+<a class="text-red-900 flex items-center gap-3 p-4 w-full font-['Space_Grotesk'] font-bold text-xs hover:bg-zinc-900 hover:text-red-500 uppercase border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">description</span> CORE_LOGS
+                </a>
+<a class="text-red-900 flex items-center gap-3 p-4 w-full font-['Space_Grotesk'] font-bold text-xs hover:bg-zinc-900 hover:text-red-500 uppercase border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">analytics</span> SYSTEM_DIAG
+                </a>
+</div>
+<div class="px-4 py-4 border-t border-red-900">
+<button class="w-full border border-zinc-500 hover:bg-red-800 hover:text-black text-red-700 font-label-caps text-label-caps py-3 uppercase tracking-widest transition-colors duration-75 mb-4">PURGE_BUFFER</button>
+<a class="text-red-900 flex items-center gap-3 p-3 w-full font-['Space_Grotesk'] font-bold text-xs hover:bg-zinc-900 hover:text-red-500 uppercase" href="#">
+<span class="material-symbols-outlined">keyboard</span> TERMINAL
+                </a>
+<a class="text-red-900 flex items-center gap-3 p-3 w-full font-['Space_Grotesk'] font-bold text-xs hover:bg-zinc-900 hover:text-red-500 uppercase" href="#">
+<span class="material-symbols-outlined">logout</span> LOGOUT
+                </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-64 p-gutter pb-24">
+<div class="max-w-6xl mx-auto space-y-gutter">
+<!-- Dossier Header -->
+<div class="border-2 border-outline-variant bg-surface-container-low p-terminal-padding flex justify-between items-start">
+<div>
+<div class="font-data-mono-alt text-data-mono-alt text-tertiary uppercase mb-2">FILE_REF: XJ-992-B</div>
+<h1 class="font-system-warning text-system-warning text-on-surface uppercase mb-4 tracking-tighter">DOSSIER #04</h1>
+<div class="flex gap-4">
+<span class="bg-primary-container text-black font-label-caps text-label-caps px-3 py-1 uppercase flicker">CRITICAL_LEAK</span>
+<span class="bg-surface-bright text-on-surface font-label-caps text-label-caps px-3 py-1 uppercase border border-outline-variant">STATUS: SEALED</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-data-mono-alt text-data-mono-alt text-tertiary uppercase mb-1">TIMESTAMP</div>
+<div class="font-data-primary text-data-primary text-on-surface uppercase">2099.11.04_23:59:01</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Evidence Scan Image -->
+<div class="col-span-12 md:col-span-5 border-2 border-outline-variant bg-surface-container p-unit flex flex-col relative">
+<div class="bg-primary-container h-1 w-full absolute top-0 left-0"></div>
+<div class="p-2 border-b border-outline-variant mb-2 flex justify-between">
+<span class="font-data-mono-alt text-data-mono-alt text-tertiary uppercase">EVIDENCE_SCAN.RAW</span>
+<span class="material-symbols-outlined text-tertiary text-sm">photo_camera</span>
+</div>
+<div class="relative flex-1 bg-black overflow-hidden flex items-center justify-center min-h-[400px]">
+<!-- Placeholder for Evidence Image -->
+<img class="opacity-60 mix-blend-luminosity grayscale contrast-150 object-cover h-full w-full" data-alt="Gritty, high-contrast security camera footage style image of a solitary figure wearing heavy tactical gear standing in a dark, concrete industrial corridor lit by harsh, flickering overhead fluorescent lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8xGMq-11wGIEMblhyInX1DQZfQRje7mdBljnBRs0nyR8yEhNhIg1FxujpKIPUfkZYCPM-NPA-l_owes564aksDWlgvTvWm97OyEyOlY1pugoWpRwINEBVYsrhcZPYKiSHZCC9LJ4uwnWq7x7gIV6jZF-kqqEM1HejFYCkdzkZUL1uxoHTrf9M1DQ_Ga9suD8VYTTNilSgmP-Z-jv__sIjFQll6AgxVHh9DqKa42sw-dNLPaFZLQRCmZ6hy0YafIoSr-63FfrXkxRL"/>
+<!-- Overlay Grid -->
+<div class="absolute inset-0 border-[0.5px] border-primary-container/20 pointer-events-none" style="background-image: linear-gradient(to right, rgba(139, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(139, 0, 0, 0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="absolute bottom-4 left-4 font-data-mono-alt text-data-mono-alt text-primary uppercase">
+                                SUBJ_ID: UNKNOWN<br/>
+                                MATCH_PROB: 12.4%
+                            </div>
+</div>
+</div>
+<!-- Telemetry Data -->
+<div class="col-span-12 md:col-span-7 flex flex-col gap-gutter">
+<!-- Telemetry Block 1 -->
+<div class="border-2 border-outline-variant bg-surface-container flex-1 flex flex-col">
+<div class="bg-outline-variant px-4 py-2 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">RAW_TELEMETRY_STREAM</span>
+<span class="material-symbols-outlined text-on-surface text-sm">monitor_heart</span>
+</div>
+<div class="p-4 overflow-hidden flex-1 relative">
+<!-- Faux Data Columns -->
+<div class="grid grid-cols-3 gap-4 font-data-mono-alt text-data-mono-alt text-secondary opacity-80 uppercase leading-relaxed text-xs">
+<div>
+                                        0x7F2A: 99 82 11 A4<br/>
+                                        0x7F2B: 00 FF 2B 1C<br/>
+                                        0x7F2C: C4 11 00 00<br/>
+                                        0x7F2D: <span class="text-primary flicker">ERR_NO_RSP</span><br/>
+                                        0x7F2E: 11 22 33 44<br/>
+                                        0x7F2F: AA BB CC DD<br/>
+</div>
+<div>
+                                        SIG_STR: -84dBm<br/>
+                                        FREQ: 2.4GHz<br/>
+                                        ENC_TYP: AES-256<br/>
+                                        PACKETS: 44,912<br/>
+                                        DROPPED: <span class="text-primary">1,402</span><br/>
+                                        LATENCY: 14ms<br/>
+</div>
+<div>
+                                        LOC_X: 44.129N<br/>
+                                        LOC_Y: -12.991W<br/>
+                                        ELEV: -400M<br/>
+                                        TEMP: 14.2C<br/>
+                                        RAD: 0.04mSv/h<br/>
+                                        PRES: 101.4kPa<br/>
+</div>
+</div>
+</div>
+</div>
+<!-- System Logs -->
+<div class="border-2 border-outline-variant bg-surface-container flex-1 flex flex-col">
+<div class="bg-surface-bright px-4 py-2 border-b border-outline-variant">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">RECOVERED_LOG_FRAGMENTS</span>
+</div>
+<div class="p-terminal-padding font-data-primary text-data-primary text-on-surface-variant flex flex-col gap-2">
+<div class="flex gap-4 border-b border-outline-variant/30 pb-2">
+<span class="text-tertiary">[11:04:22]</span>
+<span>UNAUTHORIZED ACCESS DETECTED AT SUB-LEVEL 4.</span>
+</div>
+<div class="flex gap-4 border-b border-outline-variant/30 pb-2 bg-surface-container-high">
+<span class="text-tertiary">[11:04:25]</span>
+<span>INITIATING AUTOMATED CONTAINMENT PROTOCOL... FAILED.</span>
+</div>
+<div class="flex gap-4 border-b border-outline-variant/30 pb-2">
+<span class="text-tertiary">[11:05:01]</span>
+<span class="text-primary">WARNING: THERMAL SENSORS OFFLINE IN SECTOR B.</span>
+</div>
+<div class="flex gap-4 pb-2">
+<span class="text-tertiary">[11:06:14]</span>
+<span>MANUAL OVERRIDE DETECTED. SYSTEM COMPROMISED.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Input / Command Line -->
+<div class="border-2 border-outline-variant bg-surface-container-lowest p-4 flex items-center gap-4">
+<span class="text-primary font-data-mono-alt text-data-mono-alt">&gt;</span>
+<input class="bg-transparent border-none outline-none text-on-surface font-data-mono-alt text-data-mono-alt uppercase w-full placeholder-tertiary focus:ring-0 p-0" placeholder="ENTER QUERY PARAMETERS_" type="text" value="DECRYPT_DOSSIER_4"/>
+<button class="border border-outline-variant hover:bg-primary-container hover:text-black text-on-surface font-label-caps text-label-caps px-6 py-2 uppercase tracking-widest transition-colors duration-75 whitespace-nowrap">EXECUTE</button>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="docked bottom-0 w-full border-t-2 border-zinc-900 border-t-2 border-zinc-900 bg-black fixed bottom-0 w-full flex justify-between px-6 py-2 z-50 bg-black/90 backdrop-blur-sm">
+<div class="text-zinc-500 font-['Space_Grotesk'] text-[10px] uppercase">SYS_LOG_STREAM: [STABLE] :: ARCHIVE_READY</div>
+<div class="flex gap-6">
+<a class="text-zinc-600 font-['Space_Grotesk'] text-[10px] uppercase hover:text-red-400" href="#">RESTRICTED_ACCESS</a>
+<a class="text-zinc-600 font-['Space_Grotesk'] text-[10px] uppercase hover:text-red-400" href="#">ENCRYPTION_PROTOCOL</a>
+</div>
+</footer>
+</body></html>

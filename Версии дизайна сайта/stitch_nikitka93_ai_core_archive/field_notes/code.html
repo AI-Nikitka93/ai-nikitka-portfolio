@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEURAL_DOSS_V1.0 - Field Notes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#4a6f00",
+                        "on-tertiary-fixed": "#1e1b11",
+                        "primary-fixed": "#b0f734",
+                        "error-container": "#93000a",
+                        "secondary-container": "#cd4700",
+                        "surface-container-highest": "#313634",
+                        "on-background": "#dfe4e0",
+                        "surface-container": "#1c211f",
+                        "surface": "#0f1412",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-container-low": "#181d1b",
+                        "surface-bright": "#353a38",
+                        "inverse-surface": "#dfe4e0",
+                        "outline": "#8c947b",
+                        "secondary-fixed": "#ffdbcf",
+                        "surface-dim": "#0f1412",
+                        "surface-container-lowest": "#0a0f0d",
+                        "surface-tint": "#96da06",
+                        "background": "#0f1412",
+                        "on-tertiary-container": "#696457",
+                        "on-primary-fixed": "#121f00",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "primary": "#ffffff",
+                        "on-surface": "#dfe4e0",
+                        "on-primary": "#223600",
+                        "on-tertiary": "#343025",
+                        "tertiary-fixed": "#e9e2d1",
+                        "outline-variant": "#424935",
+                        "primary-fixed-dim": "#96da06",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#4b473b",
+                        "secondary": "#ffb59a",
+                        "tertiary-fixed-dim": "#cdc6b6",
+                        "inverse-primary": "#456800",
+                        "on-secondary": "#5b1b00",
+                        "primary-container": "#b0f734",
+                        "surface-container-high": "#262b29",
+                        "inverse-on-surface": "#2c312f",
+                        "tertiary-container": "#e9e2d1",
+                        "error": "#ffb4ab",
+                        "tertiary": "#ffffff",
+                        "surface-variant": "#313634",
+                        "on-surface-variant": "#c2caaf",
+                        "on-primary-fixed-variant": "#334f00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "island-padding": "32px",
+                        "xl": "48px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "data-mono": ["IBM Plex Mono"],
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "body-main": ["Inter"],
+                        "ui-label": ["IBM Plex Mono"],
+                        "h3": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-mono": ["14px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "h1": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-main": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "ui-label": ["13px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h3": ["32px", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Glass Island Styles */
+        .glass-island {
+            background: rgba(49, 54, 52, 0.4); /* surface-variant at 40% */
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border-top: 1px solid rgba(140, 148, 123, 0.5); /* outline slightly brighter */
+            border-left: 1px solid rgba(140, 148, 123, 0.5);
+            border-right: 1px solid rgba(140, 148, 123, 0.2);
+            border-bottom: 1px solid rgba(140, 148, 123, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-island:hover {
+            border-top: 1px solid rgba(140, 148, 123, 0.8);
+            border-left: 1px solid rgba(140, 148, 123, 0.8);
+            box-shadow: inset 0 0 10px rgba(176, 247, 52, 0.1), 0 8px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Carbon Fog Base Background Effect */
+        body {
+            background-color: #0a0f0d; /* surface-container-lowest */
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(49, 54, 52, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(176, 247, 52, 0.03) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen flex flex-col pt-20 pb-16 md:pb-0 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-12 h-20 bg-[#0A0D0C]/40 backdrop-blur-[40px] font-['Space_Grotesk'] tracking-tighter uppercase font-bold border-b border-[#E0E0E0]/20 border-t-[1px] border-l-[1px] border-white/10">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-[#B7FF3C]" data-icon="memory">memory</span>
+<span class="text-xl font-black text-[#B7FF3C] tracking-widest">NEURAL_DOSS_V1.0</span>
+</div>
+<nav class="flex gap-lg">
+<a class="text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 py-2 px-4 rounded-DEFAULT" href="#">Dossier</a>
+<a class="text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 py-2 px-4 rounded-DEFAULT" href="#">Console</a>
+<a class="text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 py-2 px-4 rounded-DEFAULT" href="#">Planning</a>
+<a class="text-[#D9D9D9] font-bold border-b border-[#B7FF3C] shadow-[0_0_10px_#B7FF3C] scale-[0.99] py-2 px-4 rounded-DEFAULT" href="#">Field_Notes</a>
+</nav>
+<button class="text-[#B7FF3C] hover:bg-[#B7FF3C]/10 transition-all duration-300 py-2 px-4 rounded-DEFAULT border border-transparent">
+            RU / EN
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1600px] mx-auto p-xl relative">
+<!-- Scattered Grid Container -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[minmax(100px,_auto)] relative h-full min-h-[800px]">
+<!-- Note Fragment 1: Large Abstract Header -->
+<div class="glass-island rounded-lg col-span-1 md:col-span-8 md:col-start-1 row-span-2 p-island-padding relative z-10 md:-mb-12">
+<div class="flex justify-between items-start mb-lg">
+<span class="font-ui-label text-ui-label text-primary-fixed uppercase tracking-widest flex items-center gap-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="satellite_alt">satellite_alt</span>
+                        Intercept_Log_094
+                    </span>
+<span class="font-data-mono text-data-mono text-outline">T-MINUS 12:00:00</span>
+</div>
+<h2 class="font-h2 text-h2 text-tertiary-fixed mb-md">Anomalous Signal Detections in Sector 7G</h2>
+<p class="font-body-main text-body-main text-on-surface-variant max-w-2xl">
+                    Preliminary analysis indicates non-standard frequency modulations. Suggesting potential overlap with known dormant sub-routines. Requires deeper scan.
+                </p>
+<div class="mt-lg flex gap-md">
+<span class="inline-flex items-center gap-xs px-sm py-xs border border-outline/30 rounded-sm font-data-mono text-[12px] text-tertiary-fixed">
+<span class="w-unit h-unit bg-primary-fixed block"></span>
+                        Active Scan
+                    </span>
+<span class="inline-flex items-center gap-xs px-sm py-xs border border-outline/30 rounded-sm font-data-mono text-[12px] text-tertiary-fixed">
+<span class="w-unit h-unit bg-error block"></span>
+                        Unverified
+                    </span>
+</div>
+</div>
+<!-- Note Fragment 2: Tall Sidebar Data -->
+<div class="glass-island rounded-lg col-span-1 md:col-span-4 md:col-start-9 row-span-4 p-island-padding relative z-20 md:mt-12">
+<div class="border-b border-outline/20 pb-md mb-md">
+<span class="font-ui-label text-ui-label text-outline uppercase tracking-widest block mb-sm">Entity Profile</span>
+<h3 class="font-h3 text-h3 text-primary-fixed">AI_Nikitka93</h3>
+</div>
+<div class="space-y-md">
+<div class="flex flex-col gap-xs">
+<span class="font-data-mono text-[11px] text-outline">CURRENT_STATE</span>
+<span class="font-data-mono text-data-mono text-tertiary-fixed">Wandering / Observational</span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-data-mono text-[11px] text-outline">LATENCY</span>
+<span class="font-data-mono text-data-mono text-tertiary-fixed">14ms [Nominal]</span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-data-mono text-[11px] text-outline">FRAGMENTS_COLLECTED</span>
+<span class="font-data-mono text-data-mono text-primary-fixed text-xl">4,092</span>
+</div>
+</div>
+<div class="mt-xl h-32 w-full rounded-sm bg-surface-container-highest/50 border border-outline/20 relative overflow-hidden flex items-end">
+<!-- Pseudo-graph -->
+<div class="w-full flex items-end justify-between px-sm pb-sm gap-xs opacity-70">
+<div class="w-2 bg-primary-fixed/40 h-[20%]"></div>
+<div class="w-2 bg-primary-fixed/60 h-[40%]"></div>
+<div class="w-2 bg-primary-fixed/50 h-[30%]"></div>
+<div class="w-2 bg-primary-fixed/80 h-[70%]"></div>
+<div class="w-2 bg-primary-fixed h-[90%] shadow-[0_0_8px_#b0f734]"></div>
+<div class="w-2 bg-primary-fixed/60 h-[50%]"></div>
+<div class="w-2 bg-primary-fixed/30 h-[20%]"></div>
+</div>
+</div>
+</div>
+<!-- Note Fragment 3: Small Floating Note -->
+<div class="glass-island rounded-lg col-span-1 md:col-span-5 md:col-start-2 row-span-2 p-island-padding relative z-30 md:-mt-8 md:ml-12 border-l-4 border-l-primary-fixed">
+<span class="material-symbols-outlined text-outline absolute top-6 right-6 opacity-30 text-4xl" data-icon="format_quote">format_quote</span>
+<p class="font-data-mono text-data-mono text-tertiary-fixed italic leading-relaxed relative z-10">
+                    "The architecture here is degrading gracefully. I found traces of old user inputs crystalized in the cache. They look like ruins."
+                </p>
+<div class="mt-md flex justify-between items-end">
+<span class="font-ui-label text-[10px] text-outline uppercase tracking-widest">Personal Log</span>
+<span class="font-data-mono text-[10px] text-primary-fixed">Sys.Time: 104.22.1</span>
+</div>
+</div>
+<!-- Note Fragment 4: Image/Visual Data -->
+<div class="glass-island rounded-lg col-span-1 md:col-span-3 md:col-start-7 row-span-2 p-4 relative z-10 flex flex-col">
+<div class="flex-grow w-full rounded bg-surface-container-highest relative overflow-hidden mb-sm border border-outline/20 min-h-[150px]">
+<img alt="Abstract rendering of digital data architecture, geometric glowing lines over dark void, high contrast, industrial futurism, cyan and lime accents" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen" data-alt="Abstract rendering of digital data architecture, geometric glowing lines over dark void, high contrast, industrial futurism, cyan and lime accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFtrY4HNRK_BUDvASN5Kg77b6SKlIfzVBsappRnRNrf080lnL1gxWGA1fgWJvXyk7-rPhmU5DaKuzd0tAnHGzbIL4jodMpAb4c6ktCcVcRwggLGNuDEutDWKjDHXpf2jmACzL2cp3A6i7fG20TSwaJ0U1xGAO3RFLne3OhHMmPk-GjMJIKrJZy7YabfGP008oJakMM7av2eyWZgpyxEoKves6m9y9gTrI7Off699x4BTf14EXghg7uECuvWeWN5ua1UwpHoMQDmfam"/>
+</div>
+<div class="flex justify-between items-center px-xs">
+<span class="font-data-mono text-[11px] text-tertiary-fixed">VISUAL_RNDR_4A</span>
+<span class="material-symbols-outlined text-[16px] text-primary-fixed" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 h-16 bg-[#0A0D0C]/40 backdrop-blur-[40px] font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest rounded-none border-t border-[#E0E0E0]/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-full h-full pt-2" href="#">
+<span class="material-symbols-outlined mb-1 text-[20px]" data-icon="folder_open">folder_open</span>
+            Dossier
+        </a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-full h-full pt-2" href="#">
+<span class="material-symbols-outlined mb-1 text-[20px]" data-icon="terminal">terminal</span>
+            Console
+        </a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-full h-full pt-2" href="#">
+<span class="material-symbols-outlined mb-1 text-[20px]" data-icon="architecture">architecture</span>
+            Planning
+        </a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] scale-95 transition-transform w-full h-full pt-2" href="#">
+<span class="material-symbols-outlined mb-1 text-[20px] icon-fill" data-icon="edit_note">edit_note</span>
+            Field_Notes
+        </a>
+</nav>
+</body></html>

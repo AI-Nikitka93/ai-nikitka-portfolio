@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - Technical Note Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#ffb4a8",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-surface-variant": "#c3caac",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#ffdad4",
+                        "primary-fixed": "#b8f600",
+                        "on-tertiary": "#601400",
+                        "on-tertiary-container": "#bc3000",
+                        "surface-tint": "#a1d800",
+                        "surface-container": "#201f1f",
+                        "outline": "#8d9479",
+                        "inverse-primary": "#4b6700",
+                        "tertiary-container": "#ffdbd1",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#ff9a8a",
+                        "on-primary-fixed-variant": "#384e00",
+                        "on-primary-fixed": "#141f00",
+                        "secondary-container": "#920703",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#b8f600",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#410000",
+                        "surface-variant": "#353534",
+                        "on-secondary": "#690000",
+                        "tertiary-fixed-dim": "#ffb5a0",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "on-primary": "#263500",
+                        "surface-container-highest": "#353534",
+                        "tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb4a8",
+                        "on-tertiary-fixed": "#3b0900",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#872000",
+                        "on-primary-container": "#506e00",
+                        "primary-fixed-dim": "#a1d800",
+                        "inverse-on-surface": "#313030",
+                        "inverse-surface": "#e5e2e1",
+                        "outline-variant": "#434933",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#920703"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "border-thick": "4px",
+                        "border-thin": "2px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "metadata": ["IBM Plex Mono"],
+                        "label-bold": ["IBM Plex Mono"],
+                        "body": ["IBM Plex Mono"],
+                        "h3": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["72px", { "lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "metadata": ["12px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.0", "fontWeight": "700" }],
+                        "body": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body text-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 border-b-4 border-[#BFFF00] bg-zinc-950 flex justify-between items-center w-full px-6 py-4 max-w-none shadow-[4px_4px_0px_0px_rgba(191,255,0,1)] z-50">
+<div class="flex items-center gap-6">
+<div class="text-2xl font-black text-[#BFFF00] border-2 border-[#BFFF00] px-2 py-1 font-h3 text-h3 uppercase">
+                AI_NIKITKA93
+            </div>
+<nav class="hidden md:flex gap-2">
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors font-mono uppercase tracking-tighter text-sm font-label-bold text-label-bold hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">01_HOME</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors font-mono uppercase tracking-tighter text-sm font-label-bold text-label-bold hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">02_ARCHIVE</a>
+<a class="bg-[#BFFF00] text-zinc-950 font-bold px-3 py-1 font-mono uppercase tracking-tighter text-sm font-label-bold text-label-bold hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">03_LOGS</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors font-mono uppercase tracking-tighter text-sm font-label-bold text-label-bold hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">04_INTEL</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors font-mono uppercase tracking-tighter text-sm font-label-bold text-label-bold border-2 border-[#BFFF00] hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair">RU/EN</button>
+<button class="bg-[#BFFF00] text-zinc-950 font-bold px-4 py-2 font-mono uppercase tracking-tighter text-sm font-label-bold text-label-bold hover:bg-zinc-800 hover:text-[#BFFF00] cursor-crosshair active:translate-x-1 active:translate-y-1 border-2 border-[#BFFF00] shadow-[4px_4px_0px_0px_rgba(146,7,3,1)] hover:shadow-none transition-all">ACCESS_TERMINAL</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col gap-12">
+<!-- Header -->
+<section class="border-border-thick border-outline p-md relative">
+<div class="absolute -top-3 -left-3 border-border-thin border-outline bg-background px-2 py-1 font-metadata text-metadata text-secondary-container uppercase">
+                [SYSTEM_MODULE_03]
+            </div>
+<h1 class="font-h1 text-h1 text-primary uppercase mb-4">FIELD NOTES</h1>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">Raw telemetry and field observations. Unfiltered diagnostic output. Authority level required for modification.</p>
+</section>
+<!-- Feed Container -->
+<section class="flex flex-col border-border-thick border-outline bg-surface-container-lowest">
+<!-- Feed Header -->
+<div class="flex justify-between items-center border-b-border-thick border-outline bg-primary-container text-on-primary-container p-sm">
+<span class="font-label-bold text-label-bold uppercase">LIVE_FEED_ACTIVE</span>
+<span class="font-metadata text-metadata animate-pulse"><span class="material-symbols-outlined text-[16px] align-middle mr-1">sensors</span>REC</span>
+</div>
+<!-- Feed Entries -->
+<div class="flex flex-col divide-y-border-thick divide-outline">
+<!-- Entry 1 -->
+<article class="p-md hover:bg-surface-container transition-colors group">
+<div class="flex flex-col md:flex-row gap-4 justify-between items-start mb-4">
+<div class="flex gap-2 items-center">
+<span class="border-border-thin border-secondary-container text-secondary-container px-2 py-1 font-label-bold text-label-bold uppercase">CRITICAL</span>
+<span class="font-metadata text-metadata text-on-surface-variant">SYS_ERR_409</span>
+</div>
+<div class="font-metadata text-metadata text-outline-variant text-right">
+                            2024.10.27_14:00:01_UTC
+                        </div>
+</div>
+<p class="font-body text-body text-on-surface mb-4">Mainframe sync failure detected in sector 7G. Anomalous thermal readings preceding disconnect. Automated containment protocols initiated. Recommend manual override and visual inspection of cooling manifold.</p>
+<div class="flex gap-2">
+<span class="border-border-thin border-outline text-outline px-2 py-1 font-metadata text-metadata uppercase">#HARDWARE</span>
+<span class="border-border-thin border-outline text-outline px-2 py-1 font-metadata text-metadata uppercase">#THERMAL</span>
+</div>
+</article>
+<!-- Entry 2 -->
+<article class="p-md hover:bg-surface-container transition-colors group">
+<div class="flex flex-col md:flex-row gap-4 justify-between items-start mb-4">
+<div class="flex gap-2 items-center">
+<span class="border-border-thin border-outline text-outline px-2 py-1 font-label-bold text-label-bold uppercase">ROUTINE</span>
+<span class="font-metadata text-metadata text-on-surface-variant">SYS_LOG_112</span>
+</div>
+<div class="font-metadata text-metadata text-outline-variant text-right">
+                            2024.10.27_13:45:22_UTC
+                        </div>
+</div>
+<p class="font-body text-body text-on-surface mb-4">Security sweep completed. No unauthorized access attempts detected in the last 24 hours. Firewall definitions updated to revision 89.2. All nodes reporting optimal performance.</p>
+<div class="flex gap-2">
+<span class="border-border-thin border-outline text-outline px-2 py-1 font-metadata text-metadata uppercase">#SECURITY</span>
+<span class="border-border-thin border-primary-container text-primary-container px-2 py-1 font-metadata text-metadata uppercase">MAINTENANCE_COMPLETE</span>
+</div>
+</article>
+<!-- Entry 3 -->
+<article class="p-md hover:bg-surface-container transition-colors group">
+<div class="flex flex-col md:flex-row gap-4 justify-between items-start mb-4">
+<div class="flex gap-2 items-center">
+<span class="border-border-thin border-secondary-container text-secondary-container px-2 py-1 font-label-bold text-label-bold uppercase">WARNING</span>
+<span class="font-metadata text-metadata text-on-surface-variant">NET_WARN_088</span>
+</div>
+<div class="font-metadata text-metadata text-outline-variant text-right">
+                            2024.10.27_12:30:05_UTC
+                        </div>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-grow">
+<p class="font-body text-body text-on-surface mb-4">Packet loss exceeding acceptable thresholds on primary uplink. Routing traffic through secondary encrypted channel. Latency increased by 45ms. Investigating potential localized interference.</p>
+<div class="flex gap-2">
+<span class="border-border-thin border-outline text-outline px-2 py-1 font-metadata text-metadata uppercase">#NETWORK</span>
+<span class="border-border-thin border-outline text-outline px-2 py-1 font-metadata text-metadata uppercase">#DIAGNOSTIC</span>
+</div>
+</div>
+<div class="w-full md:w-64 h-32 border-border-thin border-outline bg-surface-dim relative overflow-hidden">
+<!-- Decorative chart representation -->
+<div class="absolute bottom-0 left-0 w-full h-full flex items-end opacity-50">
+<div class="w-1/6 h-1/2 bg-secondary-container mx-1"></div>
+<div class="w-1/6 h-3/4 bg-secondary-container mx-1"></div>
+<div class="w-1/6 h-full bg-secondary-container mx-1"></div>
+<div class="w-1/6 h-1/4 bg-secondary-container mx-1"></div>
+<div class="w-1/6 h-2/3 bg-secondary-container mx-1"></div>
+</div>
+<div class="absolute top-2 left-2 font-metadata text-metadata text-secondary-container">PACKET_DROP_RATE</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="docked full-width bottom-0 border-t-4 border-[#BFFF00] bg-zinc-950 flex flex-col md:flex-row justify-between items-center w-full px-6 py-2 gap-4 mt-auto">
+<div class="font-mono text-[10px] leading-tight uppercase text-[#BFFF00] font-metadata text-metadata">
+            SYSTEM_ID: AI_NIKITKA93 // TIMESTAMP: 2024.10.27_14:02:55_UTC
+        </div>
+<nav class="flex gap-4 font-mono text-[10px] leading-tight uppercase font-metadata text-metadata">
+<a class="text-zinc-500 hover:text-[#BFFF00] transition-colors" href="#">ENCRYPTED_LINE</a>
+<a class="text-zinc-500 hover:text-[#BFFF00] transition-colors" href="#">MAINFRAME_STATUS</a>
+<a class="text-zinc-500 hover:text-[#BFFF00] transition-colors" href="#">UPTIME_99.9%</a>
+</nav>
+</footer>
+</body></html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 Proof Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#4a6f00",
+                    "on-tertiary-fixed": "#1e1b11",
+                    "primary-fixed": "#b0f734",
+                    "error-container": "#93000a",
+                    "secondary-container": "#cd4700",
+                    "surface-container-highest": "#313634",
+                    "on-background": "#dfe4e0",
+                    "surface-container": "#1c211f",
+                    "surface": "#0f1412",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-container-low": "#181d1b",
+                    "surface-bright": "#353a38",
+                    "inverse-surface": "#dfe4e0",
+                    "outline": "#8c947b",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-dim": "#0f1412",
+                    "surface-container-lowest": "#0a0f0d",
+                    "surface-tint": "#96da06",
+                    "background": "#0f1412",
+                    "on-tertiary-container": "#696457",
+                    "on-primary-fixed": "#121f00",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "primary": "#ffffff",
+                    "on-surface": "#dfe4e0",
+                    "on-primary": "#223600",
+                    "on-tertiary": "#343025",
+                    "tertiary-fixed": "#e9e2d1",
+                    "outline-variant": "#424935",
+                    "primary-fixed-dim": "#96da06",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#4b473b",
+                    "secondary": "#ffb59a",
+                    "tertiary-fixed-dim": "#cdc6b6",
+                    "inverse-primary": "#456800",
+                    "on-secondary": "#5b1b00",
+                    "primary-container": "#b0f734",
+                    "surface-container-high": "#262b29",
+                    "inverse-on-surface": "#2c312f",
+                    "tertiary-container": "#e9e2d1",
+                    "error": "#ffb4ab",
+                    "tertiary": "#ffffff",
+                    "surface-variant": "#313634",
+                    "on-surface-variant": "#c2caaf",
+                    "on-primary-fixed-variant": "#334f00",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "island-padding": "32px",
+                    "xl": "48px",
+                    "lg": "24px",
+                    "gutter": "20px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "data-mono": [
+                            "IBM Plex Mono"
+                    ],
+                    "h1": [
+                            "Space Grotesk"
+                    ],
+                    "h2": [
+                            "Space Grotesk"
+                    ],
+                    "body-main": [
+                            "Inter"
+                    ],
+                    "ui-label": [
+                            "IBM Plex Mono"
+                    ],
+                    "h3": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "data-mono": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h1": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "h2": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-main": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "ui-label": [
+                            "13px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "h3": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0A0D0C;
+            color: #dfe4e0;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(183, 255, 60, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(183, 255, 60, 0.02) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+        
+        .glass-panel {
+            background-color: rgba(10, 13, 12, 0.4);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .glass-panel-hover:hover {
+            border-color: rgba(183, 255, 60, 0.3);
+            box-shadow: inset 0 0 10px rgba(183, 255, 60, 0.1);
+        }
+        
+        .luminous-edge {
+            position: relative;
+        }
+        .luminous-edge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(183, 255, 60, 0.5) 0%, transparent 100%);
+            z-index: 10;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-main text-body-main min-h-screen pt-20 pb-24 md:pb-10 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-20 bg-[#0A0D0C]/40 backdrop-blur-[40px] text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase font-bold border-b border-[#E0E0E0]/20 hidden md:flex">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="text-xl font-black text-[#B7FF3C] tracking-widest">NEURAL_DOSS_V1.0</span>
+</div>
+<nav class="flex items-center gap-lg h-full">
+<a class="h-full flex items-center px-4 text-[#D9D9D9] font-bold border-b border-[#B7FF3C] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300" href="#">Dossier</a>
+<a class="h-full flex items-center px-4 text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300" href="#">Console</a>
+<a class="h-full flex items-center px-4 text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300" href="#">Planning</a>
+<a class="h-full flex items-center px-4 text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300" href="#">Field_Notes</a>
+</nav>
+<div class="flex items-center">
+<div class="glass-panel px-3 py-1 flex items-center gap-2 rounded-DEFAULT cursor-pointer hover:border-[#B7FF3C]/30 transition-colors">
+<span class="font-ui-label text-ui-label text-on-surface">RU</span>
+<span class="text-outline-variant">/</span>
+<span class="font-ui-label text-ui-label text-outline">EN</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-[1600px] mx-auto px-4 sm:px-8 md:px-xl mt-xl">
+<!-- Header Section -->
+<div class="mb-xl">
+<div class="flex items-center gap-sm mb-2">
+<div class="w-2 h-2 bg-primary-container shadow-[0_0_8px_#b0f734]"></div>
+<span class="font-data-mono text-data-mono text-primary-container tracking-widest uppercase">Archive Access Authorized</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface mb-sm">AI_Nikitka93</h1>
+<p class="font-data-mono text-data-mono text-on-surface-variant max-w-2xl">
+                SYSTEM LOG // FRAGMENT RECOVERY: 7 RECORDS FOUND. ENCRYPTION PROTOCOL: OFFLINE. VISUAL DATA RENDERED VIA COLD-CATHODE EMULATION LAYER.
+            </p>
+</div>
+<!-- Dossier Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[240px]">
+<!-- Dossier 1: Large Image Panel -->
+<div class="glass-panel glass-panel-hover luminous-edge md:col-span-8 md:row-span-2 relative group overflow-hidden flex flex-col justify-end p-island-padding cursor-pointer transition-all duration-500">
+<div class="absolute inset-0 z-0">
+<img alt="Neural core rendering" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700 mix-blend-screen" data-alt="abstract rendering of artificial intelligence neural network with glowing green and cyan nodes floating in dark void space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5lwrsYqnaxghc4o7S10gbKHbWhbof1-kuDGHrih6_uc6IOsjtQqlXmQcoX70S0lTZcnVHb-9KmsUtE8HC6XOzU5xGyiL1_6-dOUNiMoxILq1kLXkJ_-Njpzzhg2UcOouOwa17TOEWstj_dUQrQwov48PjYk18ygvRvyaOJ-RH_NBKDI4jqBZp8k7vlU1bw5VPEVqG3KIGQfHVZnRnUU5yNs5V0ZSu8BxmJLXKOH5AQXLUhFqAvHgnVbUtIBmAPv2_8Y23qJTaQTj_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0D0C] via-[#0A0D0C]/60 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-sm mb-4">
+<span class="px-2 py-1 bg-surface-container/80 border border-outline/30 font-ui-label text-ui-label text-outline tracking-widest uppercase">SYS_CORE</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">REC_ID: 001-A</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Primary Node Activation</h2>
+<p class="font-data-mono text-data-mono text-on-surface-variant max-w-xl">
+                        Initial sequence recorded during the 93rd iteration. Core parameters stabilized at 99.8% efficiency. Neural pathways established across all secondary sectors.
+                    </p>
+</div>
+<!-- Corner Decoration -->
+<div class="absolute top-0 right-0 p-4 opacity-30 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container">qr_code_scanner</span>
+</div>
+</div>
+<!-- Dossier 2: Text Data Block -->
+<div class="glass-panel glass-panel-hover md:col-span-4 md:row-span-1 p-island-padding flex flex-col relative group cursor-pointer transition-all duration-300">
+<div class="flex justify-between items-start mb-auto">
+<div class="w-1.5 h-1.5 bg-secondary-container mt-2"></div>
+<span class="font-data-mono text-[10px] text-outline text-right">TIMESTAMP<br/>2044.11.02_04:00</span>
+</div>
+<div class="mt-4">
+<div class="font-data-mono text-data-mono text-on-surface-variant opacity-50 mb-1">RAW_OUTPUT:</div>
+<p class="font-data-mono text-data-mono text-on-surface leading-relaxed">
+                        &gt; INITIATING PURGE SEQUENCE<br/>
+                        &gt; MEMORY BLOCK 44F CORRUPTED<br/>
+                        &gt; BYPASSING FIREWALL... [OK]<br/>
+                        &gt; REDIRECTING POWER TO SECTOR 7
+                    </p>
+</div>
+<!-- Scanline effect overlay -->
+<div class="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0)_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] opacity-10"></div>
+</div>
+<!-- Dossier 3: Status Panel -->
+<div class="glass-panel glass-panel-hover md:col-span-4 md:row-span-1 p-lg flex flex-col justify-between relative group cursor-pointer transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-ui-label text-ui-label text-outline tracking-widest uppercase">System Load</span>
+<span class="material-symbols-outlined text-outline-variant text-sm">analytics</span>
+</div>
+<div>
+<div class="flex items-end gap-2 mb-2">
+<span class="font-h1 text-[48px] leading-none text-primary-container tracking-tighter">84.2</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant pb-1">%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-[2px] bg-surface-container-high mt-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[84.2%] bg-primary-container shadow-[0_0_5px_#b0f734]"></div>
+</div>
+<div class="flex justify-between mt-2 font-data-mono text-[10px] text-outline">
+<span>CPU_01</span>
+<span>NOMINAL</span>
+</div>
+</div>
+</div>
+<!-- Dossier 4: Medium Image Panel -->
+<div class="glass-panel glass-panel-hover md:col-span-6 md:row-span-2 relative group overflow-hidden flex flex-col justify-end p-island-padding cursor-pointer transition-all duration-500">
+<div class="absolute inset-0 z-0">
+<img alt="Data flow stream" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" data-alt="digital matrix style falling green code numbers over dark black background with subtle depth of field blurring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRpqhVZtUs7FCPlC5rDp93_gnbNkni34026So0PO1LJM8Ma4esfCcSJq2y8rv7lPvQHgmStY0QYA7Q9qyqm-7xwdJspvG5YhdBfSuZVwAC24txL_GMeH1VgETK3slClMXybC8mnVKHzWIntXMhEdmSCVSShcdhZNa4yAuGAIgCllEf5_03brm8sJUCoPgJ-S_kZ31OW72P87lSgCFK-8JU4TlX-oA5i-9bGUUxUghKhtyZcAgjWvRHiiWLkAYAN8e_ZOAnesNf8E1B"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0D0C] via-[#0A0D0C]/80 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<span class="inline-block mb-3 px-2 py-1 border border-outline-variant font-data-mono text-[10px] text-outline uppercase tracking-widest bg-surface/50 backdrop-blur-sm">Stream Intercept</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Data Cascade Anomaly</h3>
+<p class="font-data-mono text-data-mono text-on-surface-variant max-w-md">
+                        Unclassified data stream detected on sub-channel delta. Contents highly encrypted. Decryption algorithms estimating 400 cycle completion time.
+                    </p>
+</div>
+</div>
+<!-- Dossier 5: Log List -->
+<div class="glass-panel glass-panel-hover md:col-span-6 md:row-span-2 p-island-padding flex flex-col relative group cursor-pointer transition-all duration-300">
+<div class="flex items-center gap-sm mb-6 border-b border-white/5 pb-4">
+<span class="material-symbols-outlined text-outline">list_alt</span>
+<span class="font-ui-label text-ui-label text-on-surface tracking-widest uppercase">Event Log Matrix</span>
+</div>
+<div class="flex flex-col gap-4 flex-grow overflow-hidden">
+<div class="flex items-start gap-4">
+<div class="mt-1 font-data-mono text-[10px] text-outline w-16 opacity-60">00:14:02</div>
+<div class="flex-grow border-l border-white/10 pl-4">
+<div class="font-data-mono text-sm text-primary-container mb-1">SYS_UPDATE_COMPLETE</div>
+<div class="font-data-mono text-xs text-on-surface-variant">Version 1.0.4 deployed to all active terminals.</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 font-data-mono text-[10px] text-outline w-16 opacity-60">00:12:45</div>
+<div class="flex-grow border-l border-error-container pl-4">
+<div class="font-data-mono text-sm text-error mb-1">UNAUTHORIZED_ACCESS</div>
+<div class="font-data-mono text-xs text-on-surface-variant">Sector 4 breached. Quarantine protocols engaged.</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 font-data-mono text-[10px] text-outline w-16 opacity-60">00:08:11</div>
+<div class="flex-grow border-l border-white/10 pl-4">
+<div class="font-data-mono text-sm text-on-surface mb-1">USER_AUTH_SUCCESS</div>
+<div class="font-data-mono text-xs text-on-surface-variant">Agent K. linked to mainframe.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dossier 6: Small Metric Card -->
+<div class="glass-panel glass-panel-hover md:col-span-4 md:row-span-1 p-lg flex flex-col justify-center items-center text-center relative group cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined text-outline-variant text-3xl mb-2">memory_alt</span>
+<div class="font-h3 text-h3 text-on-surface">1,024 TB</div>
+<div class="font-data-mono text-[10px] text-outline tracking-widest mt-1">ALLOCATED V-RAM</div>
+</div>
+<!-- Dossier 7: Small Action Card -->
+<div class="glass-panel glass-panel-hover md:col-span-8 md:row-span-1 p-lg flex items-center justify-between relative group cursor-pointer transition-all duration-300">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center border border-white/10 rounded-sm">
+<span class="material-symbols-outlined text-primary-container">terminal</span>
+</div>
+<div>
+<div class="font-ui-label text-ui-label text-on-surface tracking-widest uppercase mb-1">Execute Protocol Omega</div>
+<div class="font-data-mono text-xs text-on-surface-variant">Requires Level 5 Authorization</div>
+</div>
+</div>
+<button class="px-6 py-2 bg-primary-container/10 border border-primary-container/30 text-primary-container font-ui-label text-ui-label tracking-widest uppercase hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 shadow-[inset_0_0_10px_rgba(183,255,60,0.1)]">
+                    Initiate
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 h-16 bg-[#0A0D0C]/40 backdrop-blur-[40px] font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest rounded-none border-t border-[#E0E0E0]/10 shadow-[0_0_40px_rgba(0,0,0,0.5)] md:hidden">
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] pt-2 scale-95 transition-transform w-1/4" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+<span>Dossier</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-1/4 pt-2 border-t-2 border-transparent" href="#">
+<span class="material-symbols-outlined mb-1">terminal</span>
+<span>Console</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-1/4 pt-2 border-t-2 border-transparent" href="#">
+<span class="material-symbols-outlined mb-1">architecture</span>
+<span>Planning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-1/4 pt-2 border-t-2 border-transparent" href="#">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span>Field_Notes</span>
+</a>
+</nav>
+</body></html>

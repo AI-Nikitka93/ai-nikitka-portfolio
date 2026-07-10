@@ -1,0 +1,46 @@
+{
+  "name": "ai-nikitka-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "audit:deps": "npm audit --audit-level=moderate",
+    "audit:release": "node scripts/release-audit.mjs",
+    "audit:release:live": "node scripts/release-audit.mjs --base=http://127.0.0.1:3200",
+    "verify": "npm run lint && npm run typecheck && npm run build && npm run audit:release && npm run audit:deps"
+  },
+  "dependencies": {
+    "@types/marked": "^5.0.2",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.542.0",
+    "marked": "^18.0.2",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "playwright": "^1.61.1",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "@babel/core": "7.29.7",
+    "js-yaml": "4.2.0",
+    "postcss": "8.5.15",
+    "minimatch@10.2.5": {
+      "brace-expansion": "5.0.6"
+    }
+  }
+}

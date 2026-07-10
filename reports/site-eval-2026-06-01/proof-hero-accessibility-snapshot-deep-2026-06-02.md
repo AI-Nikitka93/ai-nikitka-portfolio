@@ -1,0 +1,181 @@
+- generic [active] [ref=e1] [box=0,0,1425,4300]:
+  - generic [ref=e2] [box=0,0,1425,4300]:
+    - link "Перейти к содержанию" [ref=e3] [cursor=pointer] [box=16,-54,207,44]:
+      - /url: "#main-content"
+    - banner [box=0,0,1425,87]:
+      - generic [ref=e5] [box=33,17,1359,69]:
+        - link "AI_Nikitka93 портфолио работ и проектов" [ref=e334] [cursor=pointer] [box=53,29,233,45]:
+          - /url: /
+          - generic [ref=e7] [box=53,29,233,45]:
+            - generic [ref=e8] [box=53,29,233,17]: AI_Nikitka93
+            - generic [ref=e9] [box=53,50,233,24]: портфолио работ и проектов
+        - generic [ref=e10] [box=427,29,945,44]:
+          - generic [ref=e11] [box=427,30,91,42]: Главная
+          - navigation "Основная навигация" [ref=e12] [box=530,29,782,44]:
+            - link "01 Главная" [ref=e13] [cursor=pointer] [box=530,29,106,44]:
+              - /url: /
+              - generic [ref=e14] [box=542,44,16,14]: "01"
+              - generic [ref=e15] [box=565,41,58,20]: Главная
+            - link "02 Работы" [ref=e17] [cursor=pointer] [box=640,29,101,44]:
+              - /url: /portfolio
+              - generic [ref=e18] [box=652,44,16,14]: "02"
+              - generic [ref=e19] [box=675,41,53,20]: Работы
+            - link "03 О себе" [ref=e20] [cursor=pointer] [box=745,29,96,44]:
+              - /url: /about
+              - generic [ref=e21] [box=757,44,16,14]: "03"
+              - generic [ref=e22] [box=780,41,49,20]: О себе
+            - link "04 Блог" [ref=e23] [cursor=pointer] [box=845,29,81,44]:
+              - /url: /blog
+              - generic [ref=e24] [box=857,44,16,14]: "04"
+              - generic [ref=e25] [box=881,41,33,20]: Блог
+            - link "05 Калькулятор" [ref=e26] [cursor=pointer] [box=930,29,137,44]:
+              - /url: /services-calculator
+              - generic [ref=e27] [box=942,44,16,14]: "05"
+              - generic [ref=e28] [box=966,41,90,20]: Калькулятор
+            - link "06 Помощник" [ref=e29] [cursor=pointer] [box=1071,29,123,44]:
+              - /url: /ai-assistant
+              - generic [ref=e30] [box=1083,44,16,14]: "06"
+              - generic [ref=e31] [box=1107,41,75,20]: Помощник
+            - link "07 Контакты" [ref=e32] [cursor=pointer] [box=1198,29,114,44]:
+              - /url: /links
+              - generic [ref=e33] [box=1210,44,16,14]: "07"
+              - generic [ref=e34] [box=1234,41,66,20]: Контакты
+          - link "Open English summary" [ref=e35] [cursor=pointer] [box=1324,29,48,44]:
+            - /url: /en
+            - text: EN
+    - main [ref=e36] [box=0,0,1425,3980]:
+      - generic [ref=e39] [box=81,169,1263,517]:
+        - generic [ref=e40] [box=81,169,811,411]:
+          - paragraph [ref=e41] [box=81,169,811,17]: Главная
+          - 'heading "AI_Nikitka93: проверяемые AI-работы Никиты Кизевича." [level=1] [ref=e43] [box=81,206,768,180]'
+          - paragraph [ref=e44] [box=81,406,672,108]: "Портфолио собрано вокруг видимых артефактов: AI-видео, генеративная графика, конкурсные результаты, технические задачи и заметки по ходу работы."
+          - generic [ref=e45] [box=81,534,811,46]:
+            - link "Смотреть работы" [ref=e46] [cursor=pointer] [box=81,534,158,46]:
+              - /url: /portfolio
+            - link "Открыть страницу о себе" [ref=e47] [cursor=pointer] [box=251,534,212,46]:
+              - /url: /about
+        - generic [ref=e49] [box=924,169,420,517]:
+          - generic [ref=e50] [box=941,186,386,81]:
+            - generic [ref=e51] [box=941,186,346,81]:
+              - paragraph [ref=e52] [box=941,186,346,17]: Доказательства в первом экране
+              - paragraph [ref=e53] [box=941,211,346,56]: "Не абстрактный профиль: сразу видны файлы и досье, которые можно открыть."
+            - generic [ref=e54] [box=1303,186,24,30]: 3 / 7
+          - generic [ref=e55] [box=941,283,386,386]:
+            - 'link "КИНОМАТИК: proof asset preview Laureate / 2026 КИНОМАТИК открыть досье" [ref=e56] [cursor=pointer] [box=941,283,386,158]':
+              - /url: /portfolio/sig-04-kinomatik-laureate-neurovideo-competition
+              - 'img "КИНОМАТИК: proof asset preview" [ref=e58] [box=955,297,181,130]'
+              - generic [ref=e59] [box=1149,296,165,132]
+            - 'link "LabStory / Helix: proof asset preview Best film / 2025 LabStory / Helix открыть досье" [ref=e64] [cursor=pointer] [box=941,453,386,102]':
+              - /url: /portfolio/sig-02-labstory-helix-best-animated-film
+              - 'img "LabStory / Helix: proof asset preview" [ref=e66] [box=955,467,94,74]'
+              - generic [ref=e67] [box=1062,466,252,76]
+            - 'link "35AWARDS: proof asset preview AI imaging / 2025 35AWARDS открыть досье" [ref=e72] [cursor=pointer] [box=941,567,386,102]':
+              - /url: /portfolio/sig-01-35awards-ai-imaging-field-results
+              - 'img "35AWARDS: proof asset preview" [ref=e74] [box=955,581,94,74]'
+              - generic [ref=e75] [box=1062,580,252,76]
+      - generic [ref=e80] [box=40,767,1345,3133]:
+        - generic [ref=e82] [box=40,767,1345,898]:
+          - generic [ref=e83] [box=40,767,629,898]:
+            - generic [ref=e84] [box=40,767,629,511]:
+              - paragraph [ref=e85] [box=73,800,563,17]: Что есть на сайте
+              - heading "Главная страница нужна только для входа. Все основное разнесено по отдельным разделам." [level=2] [ref=e86] [box=73,833,563,160]
+              - paragraph [ref=e87] [box=73,1009,563,96]: Если нужны работы, открывай раздел с работами. Если нужен контекст, есть страница обо мне. Для заметок есть блог. Для связи и обсуждения задачи есть отдельные страницы.
+              - generic [ref=e88] [box=73,1129,563,116]
+            - generic [ref=e98] [box=40,1298,629,367]:
+              - paragraph [ref=e99] [box=65,1323,579,17]: Основные направления
+              - generic [ref=e100] [box=65,1355,579,284]
+          - generic [ref=e113] [box=689,767,696,898]:
+            - paragraph [ref=e114] [box=714,792,646,17]: Разделы сайта
+            - generic [ref=e115] [box=714,825,646,556]:
+              - link "01 Работы Главные проекты, результаты и отдельные страницы с подробностями по каждой работе." [ref=e116] [cursor=pointer] [box=714,825,646,130]:
+                - /url: /portfolio
+              - link "02 Блог Короткие записи о том, что сработало в работе и какие выводы появились по ходу проектов." [ref=e122] [cursor=pointer] [box=714,967,646,130]:
+                - /url: /blog
+              - 'link "03 Обсудить проект Как лучше заходить с задачей: что подготовить, что указать и как описать нужный результат." [ref=e128] [cursor=pointer] [box=714,1109,646,130]':
+                - /url: /services-calculator
+              - 'link "04 Помощник Страница, которая помогает быстро понять, куда идти: к работам, в заметки, в контакты или в раздел о себе." [ref=e134] [cursor=pointer] [box=714,1251,646,130]':
+                - /url: /ai-assistant
+        - generic [ref=e141] [box=40,1688,1345,1608]:
+          - generic [ref=e142] [box=40,1688,1345,61]:
+            - generic [ref=e143] [box=40,1688,1009,61]:
+              - paragraph [ref=e144] [box=40,1688,1009,17]: Главные работы
+              - heading "Три работы, с которых проще всего начать знакомство с проектом." [level=2] [ref=e145] [box=40,1713,1009,36]
+            - link "Все работы" [ref=e146] [cursor=pointer] [box=1289,1705,96,44]:
+              - /url: /portfolio
+          - generic [ref=e147] [box=40,1773,1345,1524]:
+            - link [ref=e149] [cursor=pointer] [box=40,1773,890,650]:
+              - /url: /portfolio/sig-01-35awards-ai-imaging-field-results
+              - article [ref=e150] [box=40,1773,890,650]
+            - link [ref=e191] [cursor=pointer] [box=950,1773,435,766]:
+              - /url: /portfolio/sig-02-labstory-helix-best-animated-film
+              - article [ref=e192] [box=950,1773,435,766]
+            - link [ref=e233] [cursor=pointer] [box=40,2559,435,738]:
+              - /url: /portfolio/sig-03-labstory-helix-technical-mastery
+              - article [ref=e234] [box=40,2559,435,738]
+        - generic [ref=e275] [box=40,3321,1345,579]:
+          - generic [ref=e276] [box=40,3321,530,579]:
+            - paragraph [ref=e277] [box=73,3354,464,17]: Куда идти дальше
+            - heading "Дальше уже отдельные страницы, а не одна длинная лента на главной." [level=2] [ref=e278] [box=73,3387,464,108]
+            - paragraph [ref=e279] [box=73,3511,464,96]: "На главной не нужно читать все сразу. Выбирай нужный раздел: работы, блог, страница обо мне, контакты или обсуждение проекта."
+          - generic [ref=e280] [box=590,3321,795,579]:
+            - link "01 Работы Главные проекты, результаты и отдельные страницы с подробностями по каждой работе." [ref=e281] [cursor=pointer] [box=590,3321,390,173]:
+              - /url: /portfolio
+              - paragraph [ref=e282] [box=611,3342,348,15]: "01"
+              - heading "Работы" [level=3] [ref=e283] [box=611,3373,348,32]
+              - paragraph [ref=e284] [box=611,3417,348,56]: Главные проекты, результаты и отдельные страницы с подробностями по каждой работе.
+            - link "02 О себе Отдельная поверхность внутри общего архива." [ref=e285] [cursor=pointer] [box=996,3321,390,173]:
+              - /url: /about
+              - paragraph [ref=e286] [box=1017,3342,348,15]: "02"
+              - heading "О себе" [level=3] [ref=e287] [box=1017,3373,348,32]
+              - paragraph [ref=e288] [box=1017,3417,348,28]: Отдельная поверхность внутри общего архива.
+            - link "03 Блог Короткие записи о том, что сработало в работе и какие выводы появились по ходу проектов." [ref=e289] [cursor=pointer] [box=590,3510,390,173]:
+              - /url: /blog
+              - paragraph [ref=e290] [box=611,3531,348,15]: "03"
+              - heading "Блог" [level=3] [ref=e291] [box=611,3562,348,32]
+              - paragraph [ref=e292] [box=611,3606,348,56]: Короткие записи о том, что сработало в работе и какие выводы появились по ходу проектов.
+            - 'link "04 Калькулятор Как лучше заходить с задачей: что подготовить, что указать и как описать нужный результат." [ref=e293] [cursor=pointer] [box=996,3510,390,173]':
+              - /url: /services-calculator
+              - paragraph [ref=e294] [box=1017,3531,348,15]: "04"
+              - heading "Калькулятор" [level=3] [ref=e295] [box=1017,3562,348,32]
+              - paragraph [ref=e296] [box=1017,3606,348,56]: "Как лучше заходить с задачей: что подготовить, что указать и как описать нужный результат."
+            - 'link "05 Помощник Страница, которая помогает быстро понять, куда идти: к работам, в заметки, в контакты или в раздел о себе." [ref=e297] [cursor=pointer] [box=590,3699,390,201]':
+              - /url: /ai-assistant
+              - paragraph [ref=e298] [box=611,3720,348,15]: "05"
+              - heading "Помощник" [level=3] [ref=e299] [box=611,3751,348,32]
+              - paragraph [ref=e300] [box=611,3795,348,84]: "Страница, которая помогает быстро понять, куда идти: к работам, в заметки, в контакты или в раздел о себе."
+            - link "06 Контакты Отдельная поверхность внутри общего архива." [ref=e301] [cursor=pointer] [box=996,3699,390,201]:
+              - /url: /links
+              - paragraph [ref=e302] [box=1017,3720,348,15]: "06"
+              - heading "Контакты" [level=3] [ref=e303] [box=1017,3751,348,32]
+              - paragraph [ref=e304] [box=1017,3795,348,28]: Отдельная поверхность внутри общего архива.
+    - contentinfo [ref=e305] [box=0,4044,1425,256]:
+      - generic [ref=e307] [box=73,4069,1279,166]:
+        - generic [ref=e308] [box=73,4069,570,166]:
+          - paragraph [ref=e309] [box=73,4069,570,17]: AI_Nikitka93
+          - paragraph [ref=e310] [box=73,4094,570,28]: Сайт о работах, проектах и опыте Никиты Кизевича.
+          - paragraph [ref=e311] [box=73,4130,570,56]: Здесь собраны работы, заметки, информация о проекте и способы связи без лишнего жаргона и витринной мишуры.
+          - generic [ref=e312] [box=73,4194,570,41]:
+            - generic [ref=e313] [box=73,4202,198,33]: "Обновлено: 1 июня 2026"
+            - generic [ref=e314] [box=279,4202,174,33]: 7 досье / 2 заметки
+        - generic [ref=e315] [box=667,4135,686,100]:
+          - link "Главная" [ref=e316] [cursor=pointer] [box=667,4135,84,44]:
+            - /url: /
+          - link "Работы" [ref=e317] [cursor=pointer] [box=763,4135,79,44]:
+            - /url: /portfolio
+          - link "О себе" [ref=e318] [cursor=pointer] [box=854,4135,75,44]:
+            - /url: /about
+          - link "Блог" [ref=e319] [cursor=pointer] [box=941,4135,59,44]:
+            - /url: /blog
+          - link "Калькулятор" [ref=e320] [cursor=pointer] [box=1012,4135,116,44]:
+            - /url: /services-calculator
+          - link "Помощник" [ref=e321] [cursor=pointer] [box=1140,4135,101,44]:
+            - /url: /ai-assistant
+          - link "Контакты" [ref=e322] [cursor=pointer] [box=1253,4135,92,44]:
+            - /url: /links
+          - link "Награды" [ref=e323] [cursor=pointer] [box=667,4191,88,44]:
+            - /url: /awards-credentials
+          - link "English" [ref=e324] [cursor=pointer] [box=767,4191,74,44]:
+            - /url: /en
+          - link "Приватность" [ref=e325] [cursor=pointer] [box=853,4191,117,44]:
+            - /url: /privacy
+  - alert [ref=e326] [box=-1,4299,1,1]

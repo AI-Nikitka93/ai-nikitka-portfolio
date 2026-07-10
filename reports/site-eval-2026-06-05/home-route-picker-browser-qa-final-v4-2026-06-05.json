@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:3200/",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "overflow": false,
+  "scrollWidth": 1425,
+  "h1": "Вы попали в портфолио AI_Nikitka93. В миру - Кизевич Никита.",
+  "hasProofHero": true,
+  "hasProofScanner": true,
+  "hasMarketNavigator": true,
+  "homeRoute": "path",
+  "routeButtons": [
+    {
+      "text": "Путь Никиты",
+      "checked": "true"
+    },
+    {
+      "text": "Работы и дипломы",
+      "checked": "false"
+    },
+    {
+      "text": "Задача и бюджет",
+      "checked": "false"
+    },
+    {
+      "text": "Куда писать",
+      "checked": "false"
+    }
+  ],
+  "quickLinks": [
+    "Путь",
+    "Работы",
+    "Бюджет",
+    "Контакты"
+  ],
+  "freshnessVisible": true
+}

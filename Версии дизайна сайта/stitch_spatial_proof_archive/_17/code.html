@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ROUTES // NEURAL_CHAMBER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffffff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#334f00",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-container": "#ffd9dc",
+                        "surface-container-low": "#191d11",
+                        "tertiary-fixed": "#ffd9dc",
+                        "surface-bright": "#363b2d",
+                        "error-container": "#93000a",
+                        "background": "#101509",
+                        "primary-fixed-dim": "#96da06",
+                        "tertiary-fixed-dim": "#ffb2ba",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary-container": "#474746",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-surface": "#e0e5d1",
+                        "on-tertiary-fixed-variant": "#910030",
+                        "on-primary-fixed": "#121f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-background": "#e0e5d1",
+                        "primary-fixed": "#b0f734",
+                        "on-primary": "#223600",
+                        "surface-variant": "#323629",
+                        "surface-dim": "#101509",
+                        "on-tertiary": "#67001f",
+                        "inverse-primary": "#456800",
+                        "outline-variant": "#424935",
+                        "secondary": "#c8c6c5",
+                        "surface-tint": "#96da06",
+                        "primary-container": "#b0f734",
+                        "surface-container": "#1d2115",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#323629",
+                        "on-tertiary-fixed": "#400010",
+                        "inverse-surface": "#e0e5d1",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#c90045",
+                        "on-secondary": "#313030",
+                        "on-primary-container": "#4a6f00",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2d3225",
+                        "surface": "#101509",
+                        "surface-container-high": "#272c1f",
+                        "on-surface-variant": "#c2caaf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "64px",
+                        "base": "4px",
+                        "margin": "32px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "lg": "40px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "code-xs": ["IBM Plex Mono"],
+                        "meta-sm": ["IBM Plex Mono"],
+                        "body-lg": ["IBM Plex Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "code-xs": ["10px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "meta-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glitch-flicker:hover {
+            animation: flicker 0.15s infinite;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; transform: translate(0); filter: drop-shadow(0 0 5px #B7FF3C); }
+            20% { opacity: 0.8; transform: translate(-1px, 1px); filter: drop-shadow(-2px 0 0 red) drop-shadow(2px 0 0 blue); }
+            40% { opacity: 0.9; transform: translate(1px, -1px); filter: none; }
+            60% { opacity: 1; transform: translate(0); filter: drop-shadow(0 0 8px #B7FF3C); }
+            80% { opacity: 0.7; transform: translate(-1px, -1px); filter: drop-shadow(2px 0 0 red) drop-shadow(-2px 0 0 blue); }
+            100% { opacity: 1; transform: translate(0); filter: drop-shadow(0 0 5px #B7FF3C); }
+        }
+        .scanline-bg {
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row overflow-x-hidden selection:bg-[#B7FF3C] selection:text-black scanline-bg">
+<!-- TopAppBar (Web & Mobile) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950/90 dark:bg-zinc-950/90 backdrop-blur-md top-0 border-b-2 border-b-[#B7FF3C] shadow-[0_0_20px_rgba(183,255,60,0.3)] md:hidden">
+<div class="text-[#B7FF3C] font-black tracking-[0.2em] animate-pulse font-['Space_Grotesk'] tracking-tighter uppercase font-bold">SYSTEM_CHAMBER_v.93</div>
+<div class="flex gap-4">
+<button class="text-zinc-500 hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 p-2 glitch-flicker"><span class="material-symbols-outlined">terminal</span></button>
+<button class="text-zinc-500 hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 p-2 glitch-flicker"><span class="material-symbols-outlined">settings_input_component</span></button>
+<button class="text-zinc-500 hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-75 p-2 glitch-flicker"><span class="material-symbols-outlined">sensors</span></button>
+</div>
+</header>
+<!-- SideNavBar (Web Only) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full flex-col z-40 overflow-y-auto scrollbar-hide bg-zinc-950 dark:bg-zinc-900/50 border-r-2 border-[#B7FF3C]/40 w-64 after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] after:bg-[length:100%_2px,3px_100%] after:pointer-events-none">
+<div class="p-6 border-b border-[#B7FF3C]/20 mb-4 z-10 relative">
+<div class="w-12 h-12 bg-zinc-800 border border-[#B7FF3C] mb-3 relative overflow-hidden glitch-flicker">
+<img alt="Glitch-distorted neural profile interface abstract digital art with neon green lines and dark background" class="w-full h-full object-cover opacity-80 mix-blend-screen" data-alt="Glitch-distorted neural profile interface abstract digital art with neon green lines and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb9jBAMsnS5De14H47zzj-VI-lHvtXFJ0tVaGLlt8tiafFSkoslSp3wTCZd_LouS6Xz-KOzWuXlrIGzLluQueWAw5dhbTW5clNl7LgTb0hREvs99ASAt9jk37820EX8UEtzUeDpOJG0CGOkyxiUi5T4ftG8vpDFuxxI1tJHBVi53llSjjBPZZ8UKL_Li8oZkO7pQvDyS1ejIbGXdkT8KYGSHF0v_rrDfiojPZ60Vl1jvDwyHxqFGUKPJ0f648T1af9NOPpDkJYhjU"/>
+</div>
+<h2 class="text-[#B7FF3C] font-bold text-lg font-headline-md text-headline-md tracking-tight uppercase">AI_Nikitka93</h2>
+<p class="font-['Space_Grotesk'] text-[10px] font-black tracking-widest text-[#B7FF3C]/70">0x-442_LEVEL_ACCESS</p>
+</div>
+<div class="flex-1 px-2 z-10 relative">
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">login</span> ENTRANCE</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">inventory_2</span> ARCHIVE</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">center_focus_strong</span> FOCUS</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">person</span> HUMAN</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">menu_book</span> JOURNAL</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">assignment</span> BRIEFING</a>
+<a class="text-[#B7FF3C]/60 flex items-center gap-3 px-4 py-3 m-2 hover:bg-zinc-800 hover:bg-[#B7FF3C]/20 hover:translate-x-2 duration-75 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined">terminal</span> CONSOLE</a>
+<a class="bg-[#B7FF3C] text-black flex items-center gap-3 px-4 py-3 m-2 rounded-none skew-x-[-12deg] transition-transform skew-x-0 duration-150 font-code-xs text-code-xs uppercase" href="#"><span class="material-symbols-outlined font-bold">map</span> ROUTES</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 pt-20 md:pt-8 px-4 md:px-margin pb-24 min-h-screen relative z-10">
+<!-- Header -->
+<div class="mb-xl flex items-end justify-between border-b border-[#B7FF3C]/30 pb-4 relative">
+<div>
+<span class="font-code-xs text-code-xs text-[#B7FF3C] bg-[#B7FF3C]/10 px-2 py-1 uppercase tracking-widest border border-[#B7FF3C]/50 inline-block mb-3">[ SECTOR_9: ROUTING_HUB ]</span>
+<h1 class="font-headline-xl text-headline-xl text-tertiary uppercase drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">EXTERNAL<br/>CONNECTIONS</h1>
+</div>
+<div class="text-right hidden sm:block">
+<p class="font-meta-sm text-meta-sm text-on-surface-variant uppercase">STATUS: <span class="text-[#B7FF3C] animate-pulse">ONLINE</span></p>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant uppercase mt-1">PING: 12ms</p>
+</div>
+<!-- Decorative corner elements -->
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#B7FF3C]"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#B7FF3C]"></div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter max-w-6xl mx-auto">
+<!-- Primary Social Module -->
+<div class="md:col-span-8 border border-[#B7FF3C]/30 bg-surface-container-low/50 relative overflow-hidden group">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-[#B7FF3C]/50">[MOD_01]</div>
+<div class="absolute inset-0 scanline-bg opacity-20 pointer-events-none"></div>
+<div class="p-sm md:p-md relative z-10 h-full flex flex-col">
+<h3 class="font-headline-md text-headline-md text-[#B7FF3C] mb-6 uppercase flex items-center gap-2"><span class="material-symbols-outlined">hub</span> Primary Nodes</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto">
+<!-- X/Twitter Link -->
+<a class="block p-4 border border-outline-variant hover:border-[#B7FF3C] hover:bg-[#B7FF3C]/5 transition-colors glitch-flicker group/link" href="#">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-tertiary font-bold group-hover/link:text-[#B7FF3C]">X_NETWORK</span>
+<span class="material-symbols-outlined text-outline-variant group-hover/link:text-[#B7FF3C]">arrow_outward</span>
+</div>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant uppercase opacity-70">Global Broadcast Channel</p>
+</a>
+<!-- GitHub Link -->
+<a class="block p-4 border border-outline-variant hover:border-[#B7FF3C] hover:bg-[#B7FF3C]/5 transition-colors glitch-flicker group/link" href="#">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-tertiary font-bold group-hover/link:text-[#B7FF3C]">REPOSITORY_HUB</span>
+<span class="material-symbols-outlined text-outline-variant group-hover/link:text-[#B7FF3C]">arrow_outward</span>
+</div>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant uppercase opacity-70">Source Code &amp; Commits</p>
+</a>
+<!-- LinkedIn Link -->
+<a class="block p-4 border border-outline-variant hover:border-[#B7FF3C] hover:bg-[#B7FF3C]/5 transition-colors glitch-flicker group/link" href="#">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-tertiary font-bold group-hover/link:text-[#B7FF3C]">CORP_LINK</span>
+<span class="material-symbols-outlined text-outline-variant group-hover/link:text-[#B7FF3C]">arrow_outward</span>
+</div>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant uppercase opacity-70">Professional Matrix</p>
+</a>
+<!-- Discord Link -->
+<a class="block p-4 border border-outline-variant hover:border-[#B7FF3C] hover:bg-[#B7FF3C]/5 transition-colors glitch-flicker group/link" href="#">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-tertiary font-bold group-hover/link:text-[#B7FF3C]">COMM_SERVER</span>
+<span class="material-symbols-outlined text-outline-variant group-hover/link:text-[#B7FF3C]">arrow_outward</span>
+</div>
+<p class="font-meta-sm text-meta-sm text-on-surface-variant uppercase opacity-70">Real-time Encrypted Chat</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Contact Form Module -->
+<div class="md:col-span-4 border border-[#B7FF3C]/30 bg-surface-container-low/50 relative">
+<div class="absolute top-2 right-2 font-code-xs text-code-xs text-[#B7FF3C]/50">[MOD_02]</div>
+<div class="p-sm md:p-md relative z-10 h-full flex flex-col">
+<h3 class="font-headline-md text-headline-md text-[#B7FF3C] mb-6 uppercase flex items-center gap-2"><span class="material-symbols-outlined">mail</span> Direct Transmission</h3>
+<form class="flex flex-col gap-4 flex-1">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant text-tertiary font-code-xs text-body-md focus:ring-0 focus:border-[#B7FF3C] pb-2 px-0 peer placeholder-transparent" id="transmission_email" placeholder="IDENTIFIER [EMAIL]" type="email"/>
+<label class="absolute left-0 -top-3.5 text-on-surface-variant font-code-xs text-code-xs transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-1 peer-focus:-top-3.5 peer-focus:text-code-xs peer-focus:text-[#B7FF3C]" for="transmission_email">IDENTIFIER [EMAIL]</label>
+</div>
+<div class="relative flex-1 mt-4">
+<textarea class="w-full h-full min-h-[100px] bg-zinc-900/50 border border-outline-variant text-tertiary font-code-xs text-body-md focus:ring-0 focus:border-[#B7FF3C] p-2 resize-none peer placeholder-transparent" id="transmission_body" placeholder="PAYLOAD [MESSAGE]"></textarea>
+<label class="absolute left-2 -top-5 text-on-surface-variant font-code-xs text-code-xs transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-code-xs peer-focus:text-[#B7FF3C]" for="transmission_body">PAYLOAD [MESSAGE]</label>
+</div>
+<button class="w-full bg-[#B7FF3C] text-black font-code-xs text-code-xs font-bold uppercase py-3 mt-2 hover:bg-[#B7FF3C]/90 glitch-flicker border border-[#B7FF3C]" type="submit">EXECUTE_SEND()</button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-8 py-1 h-8 bg-black/80 backdrop-blur-xl border-t border-[#B7FF3C]/30 relative before:content-[''] before:absolute before:top-0 before:left-[-100%] before:w-full before:h-[1px] before:bg-[#B7FF3C] before:animate-[scan_3s_ease-in-out_infinite]">
+<div class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest text-[#B7FF3C] opacity-50">[ STATUS: SECURE ] © 2024 NEURAL_CHAMBER</div>
+<div class="flex gap-6 hidden sm:flex">
+<a class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest text-zinc-700 hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-colors" href="#">LATENCY_12MS</a>
+<a class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest text-zinc-700 hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-colors" href="#">PORT_8080</a>
+<a class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest text-zinc-700 hover:text-[#B7FF3C] hover:drop-shadow-[0_0_5px_#B7FF3C] transition-colors" href="#">X_LINK_STABLE</a>
+</div>
+<style>
+            @keyframes scan {
+                0% { left: -100%; }
+                50% { left: 100%; }
+                100% { left: 100%; }
+            }
+        </style>
+</footer>
+</body></html>

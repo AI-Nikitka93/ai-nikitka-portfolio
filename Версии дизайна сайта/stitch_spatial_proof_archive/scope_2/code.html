@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Scope / Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#101509",
+                      "on-primary-fixed-variant": "#334f00",
+                      "surface-container-lowest": "#0b1005",
+                      "secondary": "#cdc6b6",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed-variant": "#504157",
+                      "surface-container-high": "#272c1f",
+                      "surface-container-highest": "#323629",
+                      "surface-bright": "#363b2d",
+                      "outline-variant": "#424935",
+                      "on-background": "#e0e5d1",
+                      "surface-container": "#1d2115",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#4d493d",
+                      "primary-container": "#b0f734",
+                      "inverse-surface": "#e0e5d1",
+                      "on-tertiary-fixed": "#23172a",
+                      "archive-bone": "#D6CFBF",
+                      "phosphor-lime": "#B7FF3C",
+                      "raw-titanium": "#8E968C",
+                      "primary-fixed": "#b0f734",
+                      "on-tertiary-container": "#6f5f76",
+                      "on-primary-fixed": "#121f00",
+                      "void-black": "#0A0D0C",
+                      "background": "#101509",
+                      "on-secondary-fixed": "#1e1b11",
+                      "on-secondary-fixed-variant": "#4b473b",
+                      "tertiary": "#ffffff",
+                      "surface-tint": "#96da06",
+                      "surface-variant": "#323629",
+                      "tertiary-fixed-dim": "#d4c0db",
+                      "secondary-fixed-dim": "#cdc6b6",
+                      "surface-container-low": "#191d11",
+                      "tertiary-container": "#f0dcf7",
+                      "inverse-primary": "#456800",
+                      "surface-dim": "#101509",
+                      "on-surface": "#e0e5d1",
+                      "on-surface-variant": "#c2caaf",
+                      "ember-orange": "#FF6A2A",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#f0dcf7",
+                      "primary-fixed-dim": "#96da06",
+                      "primary": "#ffffff",
+                      "on-secondary": "#343025",
+                      "on-tertiary": "#392b40",
+                      "error": "#ffb4ab",
+                      "secondary-fixed": "#e9e2d1",
+                      "inverse-on-surface": "#2d3225",
+                      "on-primary-container": "#4a6f00",
+                      "on-primary": "#223600",
+                      "carbon-fog": "#161B19",
+                      "outline": "#8c947b",
+                      "on-secondary-container": "#beb8a8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "lg": "24px",
+                      "gutter": "20px",
+                      "sm": "8px",
+                      "margin": "40px",
+                      "unit": "4px",
+                      "xl": "48px",
+                      "md": "16px"
+              },
+              "fontFamily": {
+                      "mono-metadata": [
+                              "IBM Plex Mono"
+                      ],
+                      "mono-id": [
+                              "IBM Plex Mono"
+                      ],
+                      "display-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-regular": [
+                              "Space Grotesk"
+                      ],
+                      "header-md": [
+                              "Space Grotesk"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "mono-label": [
+                              "IBM Plex Mono"
+                      ]
+              },
+              "fontSize": {
+                      "mono-metadata": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "mono-id": [
+                              "11px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-regular": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "header-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "mono-label": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.void-black');
+            color: theme('colors.on-surface');
+        }
+        /* Hide scrollbar for a cleaner tactical look */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.void-black');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.raw-titanium');
+        }
+      </style>
+</head>
+<body class="min-h-screen bg-void-black font-body-regular text-body-regular text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-10 h-16 bg-[#000000] dark:bg-[#000000] border-b border-[#2A2A2A] flat no-shadows shadow-[0_0_10px_rgba(183,255,60,0.1)]">
+<div class="text-[#B7FF3C] font-bold text-lg tracking-tighter uppercase font-['Space_Grotesk']">
+            AI_Nikitka93
+        </div>
+<div class="flex items-center gap-6">
+<span class="text-[#B7FF3C] font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold hover:bg-[#1A1A1A] hover:text-[#B7FF3C] transition-all duration-300 px-2 py-1 cursor-pointer">
+                EN/RU
+            </span>
+<div class="flex items-center gap-4 text-[#A1A1A1]">
+<button class="hover:bg-[#1A1A1A] hover:text-[#B7FF3C] transition-all duration-300 p-2 flex items-center justify-center hover:shadow-[0_0_10px_rgba(183,255,60,0.2)] rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">fingerprint</span>
+</button>
+<button class="hover:bg-[#1A1A1A] hover:text-[#B7FF3C] transition-all duration-300 p-2 flex items-center justify-center hover:shadow-[0_0_10px_rgba(183,255,60,0.2)] rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings_input_component</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full z-40 pt-20 flex-col justify-between bg-[#000000]/90 backdrop-blur-xl dark:bg-[#000000]/90 border-r border-[#2A2A2A] w-64 flat no-shadows">
+<div class="flex flex-col gap-1 w-full">
+<div class="px-6 pb-6 pt-4 border-b border-neutral-800 mb-4">
+<div class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-[#B7FF3C] mb-1 drop-shadow-[0_0_5px_rgba(183,255,60,0.3)]">OPERATOR_STATUS</div>
+<div class="font-['IBM_Plex_Mono'] text-[10px] tracking-widest text-[#A1A1A1]">ACTIVE_SESSION_093</div>
+</div>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+                Entrance
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">folder_managed</span>
+                Archive
+            </a>
+<a class="bg-[#1A1A1A] text-[#B7FF3C] border-l-4 border-[#B7FF3C] py-4 px-6 flex items-center gap-4 Active: translate-x-1 transition-transform font-['IBM_Plex_Mono'] text-[10px] tracking-widest shadow-[inset_10px_0_20px_-10px_rgba(183,255,60,0.2)]" href="#">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+                Focus
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">face</span>
+                Human
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+                Journal
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">ads_click</span>
+                Briefing
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+                Console
+            </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-[#B7FF3C] transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest" href="#">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+                Routes
+            </a>
+</div>
+<div class="p-6 border-t border-neutral-800 w-full">
+<button class="w-full border border-[#B7FF3C] text-[#B7FF3C] font-['IBM_Plex_Mono'] text-[10px] tracking-widest py-3 px-4 hover:bg-[#B7FF3C] hover:text-[#0A0D0C] hover:shadow-[0_0_15px_rgba(183,255,60,0.4)] transition-all duration-300">
+                INITIATE_UPLINK
+            </button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-24 pb-12 px-6 md:pl-[300px] md:pr-10 lg:pr-margin max-w-[1600px] mx-auto min-h-screen">
+<!-- Header Section -->
+<header class="mb-12 border-b border-raw-titanium/20 pb-6 relative">
+<div class="absolute top-0 right-0 font-mono-id text-mono-id text-raw-titanium opacity-50">
+                SYS.REQ // INTAKE.PROTO
+            </div>
+<h1 class="font-display-lg text-display-lg text-archive-bone uppercase tracking-tight mb-2 text-shadow-sm">
+                ИНИЦИАЦИЯ_ПРОЕКТА
+            </h1>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium max-w-2xl">
+                ЗАГРУЗКА ПАРАМЕТРОВ ОПЕРАЦИИ... ВЫБЕРИТЕ ВЕКТОР НАПРАВЛЕНИЯ ДЛЯ КАЛИБРОВКИ СИСТЕМЫ.
+            </p>
+</header>
+<!-- Tactical Selection Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16">
+<!-- Step 1: Category Selection -->
+<section class="lg:col-span-8 space-y-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-phosphor-lime text-void-black font-mono-id text-mono-id px-2 py-1 shadow-[0_0_10px_rgba(183,255,60,0.3)]">ШАГ 01</span>
+<h2 class="font-header-md text-header-md text-archive-bone drop-shadow-md">КЛАССИФИКАЦИЯ ЗАДАЧИ</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit">
+<!-- Selection Module: Active -->
+<button class="text-left bg-carbon-fog border border-phosphor-lime p-6 relative group transform hover:-translate-y-1 transition-transform duration-300 shadow-[0_0_20px_rgba(183,255,60,0.15)] bg-gradient-to-b from-carbon-fog to-phosphor-lime/5">
+<div class="absolute top-3 right-3 font-mono-id text-mono-id text-phosphor-lime drop-shadow-[0_0_5px_rgba(183,255,60,0.5)]">
+                            [01.A]
+                        </div>
+<span class="material-symbols-outlined text-phosphor-lime mb-4 text-[32px] block drop-shadow-[0_0_8px_rgba(183,255,60,0.4)]">
+                            visibility
+                        </span>
+<h3 class="font-mono-label text-mono-label text-phosphor-lime mb-2">AI_ИЗОБРАЖЕНИЯ</h3>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium">
+                            Генерация визуальных активов. Нейросетевой рендеринг. Промпт-инженерия высокого уровня.
+                        </p>
+<div class="mt-4 flex gap-2">
+<span class="border border-phosphor-lime/30 bg-phosphor-lime/10 px-2 py-0.5 font-mono-id text-[9px] text-phosphor-lime uppercase">Midjourney</span>
+<span class="border border-phosphor-lime/30 bg-phosphor-lime/10 px-2 py-0.5 font-mono-id text-[9px] text-phosphor-lime uppercase">Stable.Diff</span>
+</div>
+</button>
+<!-- Selection Module: Inactive -->
+<button class="text-left bg-carbon-fog border border-raw-titanium/30 p-6 relative group transform hover:-translate-y-1 hover:border-archive-bone/50 hover:shadow-[0_0_15px_rgba(214,207,191,0.1)] transition-all duration-300">
+<div class="absolute top-3 right-3 font-mono-id text-mono-id text-raw-titanium/50 group-hover:text-archive-bone/70 transition-colors">
+                            [01.B]
+                        </div>
+<span class="material-symbols-outlined text-raw-titanium group-hover:text-archive-bone mb-4 text-[32px] block transition-colors">
+                            smart_toy
+                        </span>
+<h3 class="font-mono-label text-mono-label text-archive-bone mb-2">АГЕНТСКИЕ_СИСТЕМЫ</h3>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium/70">
+                            Разработка автономных AI-агентов. Автоматизация рабочих процессов. Интеграция LLM.
+                        </p>
+<div class="mt-4 flex gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="border border-raw-titanium/30 px-2 py-0.5 font-mono-id text-[9px] text-raw-titanium uppercase">AutoGPT</span>
+<span class="border border-raw-titanium/30 px-2 py-0.5 font-mono-id text-[9px] text-raw-titanium uppercase">LangChain</span>
+</div>
+</button>
+<!-- Selection Module: Inactive -->
+<button class="text-left bg-carbon-fog border border-raw-titanium/30 p-6 relative group transform hover:-translate-y-1 hover:border-archive-bone/50 hover:shadow-[0_0_15px_rgba(214,207,191,0.1)] transition-all duration-300">
+<div class="absolute top-3 right-3 font-mono-id text-mono-id text-raw-titanium/50 group-hover:text-archive-bone/70 transition-colors">
+                            [01.C]
+                        </div>
+<span class="material-symbols-outlined text-raw-titanium group-hover:text-archive-bone mb-4 text-[32px] block transition-colors">
+                            code_blocks
+                        </span>
+<h3 class="font-mono-label text-mono-label text-archive-bone mb-2">ТЕХ.МАСТЕРСТВО</h3>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium/70">
+                            Архитектура систем. Оптимизация производительности. Развертывание инфраструктуры.
+                        </p>
+<div class="mt-4 flex gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="border border-raw-titanium/30 px-2 py-0.5 font-mono-id text-[9px] text-raw-titanium uppercase">Python</span>
+<span class="border border-raw-titanium/30 px-2 py-0.5 font-mono-id text-[9px] text-raw-titanium uppercase">Cloud</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Status Console (Right Column) -->
+<aside class="lg:col-span-4 bg-carbon-fog border border-raw-titanium/20 p-6 flex flex-col h-full shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center border-b border-raw-titanium/20 pb-4 mb-4">
+<span class="font-mono-id text-mono-id text-archive-bone flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-phosphor-lime">terminal</span>
+                            SYSTEM_CONSOLE
+                        </span>
+<span class="w-2 h-2 rounded-full bg-phosphor-lime animate-pulse shadow-[0_0_5px_rgba(183,255,60,0.8)]"></span>
+</div>
+<div class="flex-grow space-y-4 font-mono-metadata text-mono-metadata bg-void-black/50 p-4 rounded-sm border border-raw-titanium/10 font-mono">
+<div class="flex gap-2">
+<span class="text-raw-titanium">&gt;</span>
+<span class="text-archive-bone">Инициализация модуля сбора данных... <span class="text-phosphor-lime">OK</span></span>
+</div>
+<div class="flex gap-2">
+<span class="text-raw-titanium">&gt;</span>
+<span class="text-archive-bone">Ожидание выбора вектора...</span>
+</div>
+<div class="flex gap-2">
+<span class="text-raw-titanium">&gt;</span>
+<span class="text-phosphor-lime drop-shadow-[0_0_2px_rgba(183,255,60,0.4)]">Вектор [01.A] AI_ИЗОБРАЖЕНИЯ выбран.</span>
+</div>
+<div class="flex gap-2">
+<span class="text-raw-titanium">&gt;</span>
+<span class="text-archive-bone opacity-50">Ожидание ввода параметров объема...<span class="animate-pulse bg-archive-bone/50 w-1.5 h-3 inline-block ml-1 align-middle"></span></span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-raw-titanium/20">
+<div class="flex justify-between font-mono-id text-mono-id mb-2">
+<span class="text-raw-titanium tracking-widest">ВЕРОЯТНОСТЬ_УСПЕХА</span>
+<span class="text-phosphor-lime drop-shadow-[0_0_2px_rgba(183,255,60,0.5)]">98.4%</span>
+</div>
+<div class="w-full bg-void-black h-1.5 border border-raw-titanium/20 rounded-full overflow-hidden">
+<div class="bg-phosphor-lime h-full w-[98.4%] shadow-[0_0_10px_rgba(183,255,60,0.8)] relative">
+<div class="absolute inset-0 bg-white/20 animate-[pulse_2s_ease-in-out_infinite]"></div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Step 2: Scope Parameters (Bento Grid) -->
+<section class="space-y-6 opacity-90 hover:opacity-100 transition-opacity duration-500 relative">
+<div class="absolute -inset-4 bg-phosphor-lime/5 blur-3xl rounded-full z-0 opacity-0 hover:opacity-100 transition-opacity duration-1000"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-raw-titanium/20 border border-raw-titanium/50 text-archive-bone font-mono-id text-mono-id px-2 py-1 backdrop-blur-sm">ШАГ 02</span>
+<h2 class="font-header-md text-header-md text-archive-bone drop-shadow-md">ПАРАМЕТРЫ ОБЪЕМА</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-unit">
+<!-- Left Block: Complexity -->
+<div class="md:col-span-4 bg-carbon-fog border border-raw-titanium/20 p-6 shadow-lg">
+<h3 class="font-mono-label text-mono-label text-archive-bone border-b border-raw-titanium/20 pb-2 mb-4 tracking-wider">УРОВЕНЬ_СЛОЖНОСТИ</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-3 border border-raw-titanium/30 cursor-pointer hover:border-phosphor-lime/50 hover:bg-phosphor-lime/5 transition-all duration-200">
+<input class="form-radio bg-void-black border-raw-titanium text-phosphor-lime focus:ring-0 focus:ring-offset-0 focus:ring-phosphor-lime/50" name="complexity" type="radio"/>
+<span class="font-mono-metadata text-mono-metadata text-archive-bone">СТАНДАРТ (Альфа)</span>
+</label>
+<label class="flex items-center gap-3 p-3 border border-phosphor-lime bg-phosphor-lime/10 cursor-pointer shadow-[0_0_15px_rgba(183,255,60,0.1)] transition-all duration-200">
+<input checked="" class="form-radio bg-void-black border-phosphor-lime text-phosphor-lime focus:ring-0 focus:ring-offset-0 shadow-[0_0_5px_rgba(183,255,60,0.5)]" name="complexity" type="radio"/>
+<span class="font-mono-metadata text-mono-metadata text-phosphor-lime drop-shadow-[0_0_2px_rgba(183,255,60,0.3)] font-bold">ПРОДВИНУТЫЙ (Бета)</span>
+</label>
+<label class="flex items-center gap-3 p-3 border border-raw-titanium/30 cursor-pointer hover:border-ember-orange/50 hover:bg-ember-orange/5 hover:shadow-[0_0_15px_rgba(255,106,42,0.15)] transition-all duration-200">
+<input class="form-radio bg-void-black border-raw-titanium text-ember-orange focus:ring-0 focus:ring-offset-0" name="complexity" type="radio"/>
+<span class="font-mono-metadata text-mono-metadata text-ember-orange group-hover:drop-shadow-[0_0_2px_rgba(255,106,42,0.5)]">ЭКСПЕРИМЕНТАЛЬНЫЙ (Омега)</span>
+</label>
+</div>
+</div>
+<!-- Center Block: Timeline -->
+<div class="md:col-span-8 bg-carbon-fog border border-raw-titanium/20 p-6 flex flex-col justify-between shadow-lg">
+<div>
+<h3 class="font-mono-label text-mono-label text-archive-bone border-b border-raw-titanium/20 pb-2 mb-4 tracking-wider">ВРЕМЕННОЙ_ЦИКЛ</h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="border border-raw-titanium/30 p-4 text-center cursor-pointer hover:border-archive-bone hover:bg-white/5 transition-all duration-200 group">
+<span class="block font-display-md text-[24px] text-archive-bone mb-1 group-hover:scale-110 transition-transform">T+7</span>
+<span class="font-mono-id text-[9px] text-raw-titanium tracking-widest">ДНЕЙ</span>
+</div>
+<div class="border border-phosphor-lime p-4 text-center bg-phosphor-lime/10 cursor-pointer shadow-[0_0_20px_rgba(183,255,60,0.15)] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-phosphor-lime/20 to-transparent opacity-50"></div>
+<span class="block font-display-md text-[24px] text-phosphor-lime mb-1 drop-shadow-[0_0_5px_rgba(183,255,60,0.5)] relative z-10 font-bold scale-110">T+14</span>
+<span class="font-mono-id text-[9px] text-phosphor-lime tracking-widest relative z-10">ДНЕЙ</span>
+</div>
+<div class="border border-raw-titanium/30 p-4 text-center cursor-pointer hover:border-archive-bone hover:bg-white/5 transition-all duration-200 group">
+<span class="block font-display-md text-[24px] text-archive-bone mb-1 group-hover:scale-110 transition-transform">T+30</span>
+<span class="font-mono-id text-[9px] text-raw-titanium tracking-widest">ДНЕЙ</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-raw-titanium/20 flex justify-end">
+<button class="border border-phosphor-lime text-phosphor-lime font-mono-label text-mono-label py-3 px-8 hover:bg-phosphor-lime hover:text-void-black hover:shadow-[0_0_20px_rgba(183,255,60,0.5)] transition-all duration-300 flex items-center gap-2 tracking-widest uppercase font-bold relative overflow-hidden group">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1s_infinite]"></span>
+                            ПОДТВЕРДИТЬ_ОБЪЕМ
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<style>
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+</style>
+</body></html>

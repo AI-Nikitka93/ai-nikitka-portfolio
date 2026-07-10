@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "checkedAt": "2026-06-01T16:13:24.250Z",
+  "content": {
+    "publishedPosts": 2,
+    "publishedPortfolio": 7,
+    "postRoutes": [
+      "/blog/prompt-first-workflow",
+      "/blog/proof-led-portfolio"
+    ],
+    "portfolioRoutes": [
+      "/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "/portfolio/sig-02-labstory-helix-best-animated-film",
+      "/portfolio/sig-03-labstory-helix-technical-mastery",
+      "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+      "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon"
+    ]
+  },
+  "sourceCopy": {
+    "checkedFiles": 47
+  },
+  "deployment": {
+    "errorBoundary": true,
+    "globalErrorBoundary": true,
+    "vercelConfig": true,
+    "dependencyAuditGate": true,
+    "envAwareMetadataBase": true,
+    "reducedMotionGate": true,
+    "activeNavigationCurrent": true,
+    "dynamicFooterCounts": true
+  },
+  "live": {
+    "skipped": "no --base provided"
+  },
+  "warnings": [],
+  "errors": []
+}

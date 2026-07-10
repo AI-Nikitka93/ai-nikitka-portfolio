@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROOF ARCHIVE: Recovered Records Grid</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#e4e3d6",
+                        "surface-dim": "#121414",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-tint": "#00e61a",
+                        "background": "#121414",
+                        "on-tertiary-container": "#b8291c",
+                        "surface": "#121414",
+                        "on-secondary-fixed": "#1b1c14",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-bright": "#383939",
+                        "outline": "#85967d",
+                        "inverse-surface": "#e3e2e2",
+                        "primary-fixed": "#76ff65",
+                        "error-container": "#93000a",
+                        "secondary-container": "#494a40",
+                        "surface-container-highest": "#343535",
+                        "on-background": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "on-primary-container": "#007206",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#343535",
+                        "on-primary-fixed-variant": "#005303",
+                        "on-surface-variant": "#baccb1",
+                        "secondary-fixed-dim": "#c8c7bb",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c7bb",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "inverse-primary": "#006e06",
+                        "on-secondary": "#303128",
+                        "primary-container": "#32ff32",
+                        "surface-container-high": "#292a2a",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-container": "#ffd3cc",
+                        "error": "#ffb4ab",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690000",
+                        "tertiary-fixed": "#ffdad4",
+                        "outline-variant": "#3c4b36",
+                        "primary-fixed-dim": "#00e61a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#920703",
+                        "on-primary-fixed": "#002201",
+                        "on-secondary-container": "#b9b9ad",
+                        "primary": "#eeffe4",
+                        "on-secondary-fixed-variant": "#47473e",
+                        "on-surface": "#e3e2e2",
+                        "on-primary": "#003a01"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "grid-size": "24px",
+                        "unit": "4px",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    fontFamily: {
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-base": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-code": ["IBM Plex Mono"]
+                    },
+                    fontSize: {
+                        "body-sm": ["14px", { lineHeight: "1.4", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "body-base": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "label-code": ["12px", { lineHeight: "1.2", letterSpacing: "0.1em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanlines {
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+        .vignette {
+            background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
+            pointer-events: none;
+        }
+        .flicker:hover {
+            animation: flicker 0.15s infinite;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121414; border-left: 2px solid #85967d; }
+        ::-webkit-scrollbar-thumb { background: #3c4b36; }
+        ::-webkit-scrollbar-thumb:hover { background: #32ff32; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen overflow-hidden flex flex-col font-body-base">
+<div class="fixed inset-0 scanlines z-[100]"></div>
+<div class="fixed inset-0 vignette z-[99]"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950 dark:bg-black border-b-4 border-zinc-800">
+<div class="text-2xl font-black text-lime-400 dark:text-lime-400 tracking-tighter">
+            THE_LIVING_ARCHIVE
+        </div>
+<nav class="hidden md:flex gap-6 font-space-grotesk uppercase tracking-widest text-sm">
+<span class="text-zinc-500 dark:text-zinc-600">RU/EN_LOCALE</span>
+<span class="text-zinc-500 dark:text-zinc-600">TIME_SYNC:04:22:11</span>
+<span class="text-zinc-500 dark:text-zinc-600">STATUS:OK</span>
+</nav>
+<button class="font-space-grotesk uppercase tracking-widest text-sm text-lime-400 dark:text-lime-400 hover:bg-lime-400 hover:text-black transition-colors duration-75 px-4 py-2 border-2 border-lime-400">
+            TERMINATE_SESSION
+        </button>
+</header>
+<div class="flex flex-1 pt-16 h-screen">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col fixed left-0 top-16 h-[calc(100vh-64px)] w-64 z-40 overflow-y-auto bg-zinc-950 dark:bg-black border-r-4 border-zinc-800">
+<div class="p-6 border-b-4 border-zinc-800">
+<div class="w-12 h-12 bg-zinc-800 border-2 border-lime-400 mb-4 flex items-center justify-center overflow-hidden">
+<img alt="System_Admin_Avatar" class="w-full h-full object-cover grayscale opacity-80" data-alt="Grainy black and white portrait of a person in shadow, looking like a low-res security camera feed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVv8iK2iMO4fyO4BUAPQ-gJVY6DWzhH2vq4YHLNO1jSnkuUqpl6lYLrfz2W18QAE7FsmOcIKdnrbbS2HfIJMoFEGmEzlhXYeWyKnG89WBfmDTD1Jqwh_9_tRKrZeReaz5viM5wfTdmph4W1CbGHX0Y8Gv-PGjZ07KEYT-5xFvdKnWy1SiHkR7in_QVktq20sWbMvoc_MaQtm3j8JiOv9CuRr1lwR4CC1cXUFL6BidIb-s3zgCCiFa8QWwzFVMuxB-RtgIvaNKYpTA9"/>
+</div>
+<h2 class="font-space-grotesk uppercase text-sm font-bold text-lime-400">ROOT_DIRECTORY</h2>
+<p class="font-body-sm text-xs text-zinc-500 mt-1">MONOLITH_OS_v4.2</p>
+</div>
+<div class="flex-1 flex flex-col font-space-grotesk uppercase text-xs font-bold">
+<a class="bg-lime-400 text-black px-4 py-3 flex items-center gap-3 scale-[0.99] border-l-4 border-lime-400 opacity-80 flickering-effect" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">database</span>
+                    SECTOR_01:ARCHIVE
+                </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined">security</span>
+                    SECTOR_02:OPERATOR
+                </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                    SECTOR_03:TELEMETRY
+                </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                    SECTOR_04:COMMS
+                </a>
+</div>
+<div class="p-4 border-t border-zinc-800/30">
+<button class="w-full bg-transparent border-2 border-lime-400 text-lime-400 px-4 py-2 font-space-grotesk uppercase text-xs font-bold hover:bg-lime-400 hover:text-black transition-colors duration-75">
+                    NEW_QUERY
+                </button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 ml-0 md:ml-64 p-margin overflow-y-auto pb-24 relative">
+<div class="max-w-[1600px] mx-auto">
+<header class="mb-12 border-b-2 border-outline pb-4 flex justify-between items-end">
+<div>
+<p class="font-label-code text-on-surface-variant mb-2">[ DIRECTORY: /ARCHIVE/RECOVERED_RECORDS ]</p>
+<h1 class="font-display-lg text-primary-fixed uppercase tracking-tighter">PROOF ARCHIVE</h1>
+</div>
+<div class="text-right font-label-code text-on-surface-variant hidden md:block">
+<p>TOTAL_ENTRIES: 08</p>
+<p>CLEARANCE: LEVEL_4</p>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-grid-size">
+<!-- Dossier 1: Image -->
+<article class="border-4 border-outline bg-surface-container-low relative group">
+<div class="absolute top-0 right-0 p-2 z-10">
+<span class="font-label-code text-primary-container bg-surface-container-highest px-2 py-1 border border-primary-container">DS_REC_01</span>
+</div>
+<div class="absolute bottom-4 right-4 z-20 rotate-[-3deg] border-4 border-on-tertiary-container px-3 py-1 bg-surface/80">
+<span class="font-headline-md text-on-tertiary-container uppercase tracking-widest font-black">DE_CLASSIFIED</span>
+</div>
+<div class="h-48 border-b-2 border-outline relative overflow-hidden bg-black">
+<img alt="Telemetry" class="w-full h-full object-cover grayscale opacity-60 mix-blend-screen group-hover:opacity-100 transition-opacity" data-alt="Grainy, green-tinted radar or sonar sweep image resembling old CRT military displays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPlmDEfsuLM_pz6Utvv2a4EWAER7-balp-X6Wdi0feHo_yRLsJRPr45TNexZHbZfeuEjkjma3UHLVbTbPvAWEsjA8PpplBNNSuq18gcJOrWODXhLW9DNY8vc51nK5EuYf6LQ_kHkMXd-ys6ePgqAFFDp2KLTT6EGfYR9Uo66yIvbVqAd019geZWysBKE5BGOx8QNHUnOFhEmW-TG42V7QWe07meRCmkpcBk7LS9lMyZ2VfSooY_Gul7NxAK4-PXJ-5vj92yiWm1VFt"/>
+<div class="absolute inset-0 bg-primary-fixed/5 mix-blend-overlay"></div>
+</div>
+<div class="p-4">
+<div class="font-label-code text-on-surface-variant mb-2 border-b border-dashed border-outline-variant pb-2">DATE_MARKER: 1984.11.04</div>
+<h3 class="font-body-sm text-on-surface uppercase mb-2">&gt; Subject_Alpha Location Ping</h3>
+<p class="font-body-sm text-on-surface-variant text-xs line-clamp-2">Intercepted low-frequency transmission indicating presence near sector 7G. Coordinates scrubbed.</p>
+</div>
+<div class="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary-container"></div>
+</article>
+<!-- Dossier 2: Text/Table -->
+<article class="border-4 border-outline bg-surface-container-low relative group p-4 flex flex-col">
+<div class="flex justify-between items-start border-b-2 border-outline pb-2 mb-4">
+<div class="font-label-code text-on-surface-variant">DATE_MARKER: 1985.02.12</div>
+<span class="font-label-code text-primary-container bg-surface-container-highest px-2 py-1 border border-primary-container">DS_REC_02</span>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 rotate-[2deg] border-4 border-on-tertiary-container px-3 py-1 bg-surface/90 w-max shadow-xl">
+<span class="font-headline-md text-on-tertiary-container uppercase tracking-widest font-black">DE_CLASSIFIED</span>
+</div>
+<h3 class="font-body-sm text-on-surface uppercase mb-4">&gt; Resource Allocation Log</h3>
+<div class="flex-1 font-label-code text-xs">
+<div class="flex justify-between border-b border-dashed border-outline-variant py-1 text-on-surface-variant">
+<span>ID</span><span>ASSET</span><span>STATUS</span>
+</div>
+<div class="flex justify-between border-b border-dashed border-outline-variant py-1 text-primary-fixed-dim">
+<span>A-01</span><span>P_CORE</span><span>COMPROMISED</span>
+</div>
+<div class="flex justify-between border-b border-dashed border-outline-variant py-1 text-on-surface">
+<span>A-02</span><span>S_ARRAY</span><span>NOMINAL</span>
+</div>
+<div class="flex justify-between border-b border-dashed border-outline-variant py-1 text-on-surface">
+<span>B-11</span><span>H_DRIVE</span><span>NOMINAL</span>
+</div>
+<div class="flex justify-between border-b border-dashed border-outline-variant py-1 text-on-tertiary-container">
+<span>X-99</span><span>U_KNOWN</span><span>OFFLINE</span>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary-container"></div>
+</article>
+<!-- Dossier 3: Image -->
+<article class="border-4 border-outline bg-surface-container-low relative group">
+<div class="absolute top-0 left-0 p-2 z-10">
+<span class="font-label-code text-primary-container bg-surface-container-highest px-2 py-1 border border-primary-container">DS_REC_03</span>
+</div>
+<div class="absolute top-1/3 left-4 z-20 rotate-[-5deg] border-4 border-on-tertiary-container px-3 py-1 bg-surface/80">
+<span class="font-headline-md text-on-tertiary-container uppercase tracking-widest font-black">DE_CLASSIFIED</span>
+</div>
+<div class="h-48 border-b-2 border-outline relative overflow-hidden bg-black flex items-center justify-center">
+<img alt="Architecture" class="w-full h-full object-cover grayscale opacity-40 mix-blend-luminosity group-hover:opacity-80 transition-opacity" data-alt="Brutalist concrete architecture shot from low angle, high contrast black and white with heavy film grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhznG6uavbT4ah922xFLhP88S3Y8iCAYIxwKnyR3z9R0FjhE-_BwckqlxhpGIOALSIZLhpFldhkgXWJG2MYAoXy2MBbvxpxbgmM5FkFU1tQ-BBrpq-rB5wsru9Bpk-R6TV4eGayHIWxA6bqkRjZJGI07ofMsRJQhjgQjwlLnbeTmlt_8eUYOwLV0nhLp2BqJ4xhTodxjodHM0HPcs2ChmmrDitxILlqvGrW3wjcAesy_DRABEAfJqow326eWdLuWggPzmGOaorHi3x"/>
+<div class="absolute inset-0 bg-primary-fixed/5 mix-blend-overlay"></div>
+<span class="absolute font-label-code text-primary-container tracking-widest opacity-50">[ VISUAL_EVIDENCE_CORRUPTED ]</span>
+</div>
+<div class="p-4">
+<div class="font-label-code text-on-surface-variant mb-2 border-b border-dashed border-outline-variant pb-2">DATE_MARKER: 1986.09.21</div>
+<h3 class="font-body-sm text-on-surface uppercase mb-2">&gt; Site_B Structural Analysis</h3>
+<p class="font-body-sm text-on-surface-variant text-xs line-clamp-2">Anomalous structural degradation detected on sub-level 4. Reinforcement failed.</p>
+</div>
+<div class="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary-container"></div>
+</article>
+<!-- Dossier 4: Text/Code -->
+<article class="border-4 border-outline bg-surface-container-low relative group p-4 flex flex-col">
+<div class="flex justify-between items-start border-b-2 border-outline pb-2 mb-4">
+<div class="font-label-code text-on-surface-variant">DATE_MARKER: 1987.11.01</div>
+<span class="font-label-code text-primary-container bg-surface-container-highest px-2 py-1 border border-primary-container">DS_REC_04</span>
+</div>
+<div class="absolute bottom-4 right-4 z-20 rotate-[4deg] border-4 border-on-tertiary-container px-3 py-1 bg-surface/90 w-max shadow-xl">
+<span class="font-headline-md text-on-tertiary-container uppercase tracking-widest font-black">DE_CLASSIFIED</span>
+</div>
+<h3 class="font-body-sm text-on-surface uppercase mb-4">&gt; Intercepted Command Sequence</h3>
+<div class="flex-1 font-label-code text-[10px] leading-tight text-on-surface-variant bg-surface-dim p-2 border border-outline-variant overflow-hidden">
+<p>SYS_INIT: OK</p>
+<p>AWAIT_CMD...</p>
+<p class="text-primary-fixed">&gt; OVERRIDE_PROTOCOL_7</p>
+<p>AUTH_REQ: *******</p>
+<p>AUTH_GRANTED</p>
+<p>ACCESS_MAINFRAME...</p>
+<p class="text-on-tertiary-container">ERR: SECTOR_LOCKDOWN</p>
+<p class="text-on-tertiary-container">ERR: UNAUTHORIZED</p>
+<p class="animate-pulse">_</p>
+</div>
+<div class="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary-container"></div>
+</article>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full h-8 flex justify-between items-center px-4 z-50 pointer-events-none bg-zinc-950 dark:bg-black border-t-2 border-zinc-800 font-mono text-[10px] uppercase tracking-tighter">
+<div class="text-zinc-600">
+            © 1984-2024 DEEP_STORAGE_MONOLITH. ALL_RIGHTS_RETAINED.
+        </div>
+<div class="flex gap-4 pointer-events-auto">
+<a class="text-zinc-600 hover:text-lime-200" href="#">SYSTEM_LOGS</a>
+<a class="text-zinc-600 hover:text-lime-200" href="#">HARDWARE_STATE</a>
+<a class="text-zinc-600 hover:text-lime-200" href="#">ENCRYPTION_KEY</a>
+</div>
+</footer>
+</body></html>

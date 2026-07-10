@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - OPERATOR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#4e493c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-background": "#e3e2e2",
+                        "on-surface": "#e3e2e2",
+                        "tertiary-container": "#000000",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-secondary-container": "#c0b8a7",
+                        "background": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#1e2020",
+                        "surface-tint": "#c6c6c6",
+                        "on-tertiary-container": "#647f00",
+                        "inverse-primary": "#5e5e5e",
+                        "outline": "#988e90",
+                        "tertiary-fixed": "#c3f400",
+                        "on-surface-variant": "#cfc4c5",
+                        "secondary": "#cec6b5",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary": "#283500",
+                        "secondary-fixed": "#ebe2d0",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#383939",
+                        "surface-container-low": "#1a1c1c",
+                        "outline-variant": "#4c4546",
+                        "on-secondary-fixed-variant": "#4c463a",
+                        "on-primary-container": "#757575",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#e3e2e2",
+                        "inverse-on-surface": "#2f3131",
+                        "primary": "#c6c6c6",
+                        "secondary-fixed-dim": "#cec6b5",
+                        "on-tertiary-fixed": "#161e00",
+                        "on-primary": "#303030",
+                        "surface-container-highest": "#343535",
+                        "tertiary": "#abd600",
+                        "on-tertiary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#121414",
+                        "on-secondary-fixed": "#1f1b11",
+                        "surface-variant": "#343535",
+                        "primary-container": "#000000",
+                        "surface-container-lowest": "#0d0e0f",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#292a2a",
+                        "surface": "#121414",
+                        "on-error": "#690005",
+                        "on-secondary": "#353024",
+                        "tertiary-fixed-dim": "#abd600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "unit": "4px",
+                        "margin-safe": "5vw",
+                        "gutter": "24px",
+                        "xs": "8px",
+                        "md": "32px",
+                        "lg": "64px",
+                        "xxl": "256px",
+                        "xl": "128px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "mono-data": ["IBM Plex Mono"],
+                        "mono-label": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "display-xl": ["180px", { "lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "mono-data": ["14px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "mono-label": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(227, 218, 201, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(227, 218, 201, 0.03) 1px, transparent 1px);
+        }
+        .ember-glow {
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-[#000000] text-secondary selection:bg-tertiary-fixed selection:text-tertiary-container overflow-x-hidden min-h-screen flex flex-col">
+<!-- Technical Grid Background -->
+<div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black border-b border-[#E3DAC9]/10 flex justify-between items-center px-[5vw] py-8 transition-all ease-in-out duration-700">
+<div class="text-xl font-bold tracking-tighter text-[#E3DAC9]">
+            AI_NIKITKA93
+        </div>
+<nav class="hidden md:flex gap-8 font-space-grotesk tracking-widest uppercase text-xs md:text-sm">
+<a class="text-[#E3DAC9] opacity-60 hover:text-[#CCFF00] transition-colors duration-500" href="#">CHAPTER INDEX</a>
+<a class="text-[#E3DAC9] opacity-60 hover:text-[#CCFF00] transition-colors duration-500" href="#">ARCHIVE</a>
+<a class="text-[#FF4500] font-bold hover:text-[#CCFF00] transition-colors duration-500" href="#">OPERATOR</a>
+<a class="text-[#E3DAC9] opacity-60 hover:text-[#CCFF00] transition-colors duration-500" href="#">BRIEF</a>
+</nav>
+<div class="font-space-grotesk tracking-widest uppercase text-xs md:text-sm text-[#E3DAC9] hover:text-[#CCFF00] transition-colors duration-500 cursor-pointer">
+            RU / EN
+        </div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-20 flex flex-col items-center py-20 z-40 bg-black border-r border-[#E3DAC9]/10 transition-opacity duration-300 hidden md:flex">
+<div class="flex flex-col items-center gap-2 mb-12 transform -rotate-90 origin-center whitespace-nowrap opacity-40">
+<span class="font-mono text-[10px] tracking-widest text-[#E3DAC9] font-bold">CHAPTER INDEX</span>
+<span class="font-mono text-[10px] tracking-widest text-[#E3DAC9]">SYSTEM_ACTIVE</span>
+</div>
+<nav class="flex flex-col gap-8 mt-12 flex-1">
+<a class="text-neutral-600 hover:bg-[#E3DAC9]/5 hover:text-[#CCFF00] flex flex-col items-center gap-1 group" href="#" title="INDEX_01">
+<span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span>
+</a>
+<a class="text-neutral-600 hover:bg-[#E3DAC9]/5 hover:text-[#CCFF00] flex flex-col items-center gap-1 group" href="#" title="INDEX_02">
+<span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span>
+</a>
+<a class="text-[#CCFF00] hover:bg-[#E3DAC9]/5 hover:text-[#CCFF00] flex flex-col items-center gap-1 group" href="#" title="INDEX_03">
+<span class="material-symbols-outlined text-[18px]">radio_button_checked</span>
+</a>
+<a class="text-neutral-600 hover:bg-[#E3DAC9]/5 hover:text-[#CCFF00] flex flex-col items-center gap-1 group" href="#" title="INDEX_04">
+<span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="relative z-10 flex-1 md:pl-20 pt-32 pb-xxl px-[5vw] flex flex-col">
+<!-- Scene Header -->
+<div class="w-full flex justify-between items-end mb-xl border-b border-secondary/10 pb-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-secondary uppercase">Command<br/>Terminal</h1>
+</div>
+<div class="flex flex-col items-end gap-unit font-mono-data text-mono-data text-secondary/60 text-right">
+<div class="flex items-center gap-2">
+<span class="w-[4px] h-[4px] bg-[#FF4500] ember-glow rounded-full"></span>
+<span class="text-[#FF4500]">SYSTEM_ACTIVE</span>
+</div>
+<span>UPTIME: 93:44:12:01</span>
+<span>SECURE CONNECTION</span>
+</div>
+</div>
+<!-- Terminal Interface -->
+<div class="w-full bg-[#0A0A0A] border border-secondary/10 relative overflow-hidden group">
+<!-- Micro-accents -->
+<div class="absolute top-0 left-0 w-full h-[1px] bg-tertiary-fixed opacity-0 group-hover:opacity-50 transition-opacity duration-1000"></div>
+<div class="absolute top-4 left-4 w-[2px] h-[2px] bg-tertiary-fixed"></div>
+<div class="absolute bottom-4 right-4 w-[2px] h-[2px] bg-tertiary-fixed"></div>
+<div class="p-lg flex flex-col gap-sm font-mono-data text-mono-data h-[614px] overflow-y-auto">
+<div class="flex gap-4">
+<span class="text-secondary/40">[10:04:22]</span>
+<span class="text-secondary">Initializing core protocols...</span>
+</div>
+<div class="flex gap-4">
+<span class="text-secondary/40">[10:04:23]</span>
+<span class="text-tertiary-fixed">&gt;&gt; Handshake established. Node 04 active.</span>
+</div>
+<div class="flex gap-4">
+<span class="text-secondary/40">[10:04:25]</span>
+<span class="text-secondary">Loading visual databanks. Fetching remote assets.</span>
+</div>
+<div class="flex gap-4">
+<span class="text-secondary/40">[10:04:28]</span>
+<span class="text-[#FF4500]">WARNING: Non-standard dimensional variance detected in Sector 7.</span>
+</div>
+<div class="flex gap-4">
+<span class="text-secondary/40">[10:04:29]</span>
+<span class="text-tertiary-fixed">&gt;&gt; Overriding safety locks. Proceeding with rendering.</span>
+</div>
+<div class="flex gap-4 mt-8">
+<span class="text-tertiary-fixed animate-pulse">_</span>
+</div>
+</div>
+<!-- Input area -->
+<div class="border-t border-secondary/10 p-md flex items-center gap-4 bg-[#050505]">
+<span class="text-tertiary-fixed font-mono-data text-mono-data">root@nikitka:~#</span>
+<input class="bg-transparent border-none outline-none text-secondary font-mono-data text-mono-data flex-1 focus:ring-0 placeholder:text-secondary/20" placeholder="Awaiting input..." type="text"/>
+<div class="w-[8px] h-[16px] bg-tertiary-fixed animate-pulse"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-[5vw] py-16 flex flex-col md:flex-row justify-between gap-8 bg-black border-t border-[#E3DAC9]/5 z-10 relative mt-auto md:pl-20">
+<div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-500">
+            ©2024 AI_NIKITKA93. ALL RIGHTS RESERVED. COORDINATES: 55.7558° N, 37.6173° E
+        </div>
+<div class="flex gap-8 font-mono text-[9px] uppercase tracking-[0.2em]">
+<a class="text-neutral-700 hover:text-[#FF4500] transition-colors duration-1000" href="#">CREDITS</a>
+<a class="text-neutral-700 hover:text-[#FF4500] transition-colors duration-1000" href="#">LEGAL</a>
+<a class="text-[#E3DAC9] hover:text-[#FF4500] transition-colors duration-1000" href="#">OPERATOR_LOG</a>
+</div>
+</footer>
+</body></html>

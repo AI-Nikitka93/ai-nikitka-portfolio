@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Field Notes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e9e2d1",
+                        "on-tertiary-fixed": "#1e1b11",
+                        "on-tertiary": "#343025",
+                        "surface": "#111413",
+                        "secondary": "#ffb59a",
+                        "tertiary-container": "#e9e2d1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-secondary": "#5b1b00",
+                        "tertiary-fixed-dim": "#cdc6b6",
+                        "on-tertiary-fixed-variant": "#4b473b",
+                        "surface-container-highest": "#323534",
+                        "outline": "#8c947b",
+                        "primary-container": "#b0f734",
+                        "outline-variant": "#424935",
+                        "on-primary-fixed": "#121f00",
+                        "on-primary-container": "#4a6f00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "inverse-surface": "#e1e3e1",
+                        "surface-container-lowest": "#0c0f0e",
+                        "on-tertiary-container": "#696457",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-bright": "#373a38",
+                        "surface-variant": "#323534",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-high": "#282b29",
+                        "inverse-primary": "#456800",
+                        "tertiary": "#ffffff",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#96da06",
+                        "on-surface": "#e1e3e1",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c2caaf",
+                        "secondary-container": "#cd4700",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#111413",
+                        "surface-container": "#1d201f",
+                        "inverse-on-surface": "#2e3130",
+                        "surface-tint": "#96da06",
+                        "surface-container-low": "#191c1b",
+                        "on-primary": "#223600",
+                        "primary-fixed": "#b0f734",
+                        "on-error": "#690005",
+                        "background": "#0A0D0C", 
+                        "on-background": "#e1e3e1",
+                        "raw-titanium": "#8E968C",
+                        "archive-bone": "#8E968C", 
+                        "void-black": "#0A0D0C",
+                        "carbon-fog": "#161B19",
+                        "phosphor-lime": "#B7FF3C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "margin": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "body-large": ["IBM Plex Mono"],
+                        "label-tiny": ["IBM Plex Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-main": ["IBM Plex Mono"],
+                        "metadata": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-large": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-tiny": ["10px", { "lineHeight": "120%", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "display-xl": ["120px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-main": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "metadata": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0D0C] text-on-background font-body-main antialiased selection:bg-[#B7FF3C] selection:text-[#0A0D0C]">
+<!-- TopNavBar (Web) -->
+<nav class="hidden md:flex justify-between items-center w-full px-10 h-16 max-w-full docked full-width top-0 border-b-[0.5px] border-[#8E968C] bg-[#0A0D0C] z-50 fixed">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk'] uppercase">
+            SIGNAL_LAB [V2.0]
+        </div>
+<div class="flex gap-8 items-center h-full">
+<a class="text-[#8E968C] font-mono h-full flex items-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">ARCHIVE</a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] h-full flex items-center px-4 font-mono" href="#">SIGNALS</a>
+<a class="text-[#8E968C] font-mono h-full flex items-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">ATLAS</a>
+<a class="text-[#8E968C] font-mono h-full flex items-center hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">TERMINAL</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#B7FF3C]">search</span>
+<div class="text-[#8E968C] font-mono text-sm border-l-[0.5px] border-[#8E968C] pl-4">EN/RU</div>
+</div>
+</nav>
+<!-- SideNavBar (Web - Desktop) -->
+<aside class="hidden md:flex fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex-col z-40 bg-[#0A0D0C] border-r-[0.5px] border-[#8E968C]">
+<div class="p-6 border-b-[0.5px] border-[#8E968C]">
+<div class="font-mono text-xs uppercase text-[#B7FF3C]">OPERATOR_01</div>
+<div class="font-mono text-[10px] uppercase text-[#8E968C] mt-1">CLEARANCE: OMEGA</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-4 flex flex-col font-mono text-xs uppercase">
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+                MAP_ATLAS
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all mt-auto border-t-[0.5px] border-[#8E968C]" href="#">
+<span class="material-symbols-outlined">settings</span>
+                SETTINGS
+            </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-16 md:pt-24 pb-24 md:pb-12 px-6 md:px-margin min-h-screen">
+<!-- Header -->
+<header class="mb-12 border-b-[0.5px] border-[#8E968C] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase mb-2">ПОЛЕВЫЕ ЗАМЕТКИ</h1>
+<p class="font-body-large text-body-large text-[#8E968C]">[ИНДЕКС ЖУРНАЛА_v3.4]</p>
+</div>
+<div class="flex gap-4">
+<button class="border border-[#8E968C] px-4 py-2 font-label-tiny text-label-tiny text-primary hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+                    ФИЛЬТР
+                </button>
+<button class="border border-[#8E968C] px-4 py-2 font-label-tiny text-label-tiny text-primary hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">sort</span>
+                    СОРТИРОВКА
+                </button>
+</div>
+</header>
+<!-- Kinetic Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(120px,auto)]">
+<!-- Block 1: Featured Note (Spans 8 cols) -->
+<article class="col-span-1 md:col-span-8 bg-[#161B19] border-[0.5px] border-[#8E968C] p-6 flex flex-col justify-between group hover:border-[#B7FF3C] transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9IiM4RTk2OEMiLz48L3N2Zz4=')] opacity-20"></div>
+<div class="flex justify-between items-start mb-12 relative z-10">
+<div class="flex gap-2 items-center">
+<span class="w-2 h-2 bg-[#B7FF3C] block"></span>
+<span class="font-label-tiny text-label-tiny text-[#8E968C]">&gt; ОБЪЕКТ_АЛЬФА</span>
+</div>
+<span class="font-metadata text-metadata text-[#8E968C]">ID: 4492-X</span>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 uppercase">Аномалия в секторе 7G: Сдвиг частот</h2>
+<p class="font-body-main text-body-main text-[#8E968C] mb-6 max-w-2xl">
+                        Первичное сканирование показало нестандартные отклонения в микроволновом фоне. Сигнатура не совпадает с известными паттернами. Требуется дальнейший анализ спектральных данных.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 border-t-[0.5px] border-[#8E968C] pt-4">
+<div>
+<div class="font-metadata text-metadata text-[#8E968C]">[ДАТА]</div>
+<div class="font-metadata text-metadata text-primary">2023.10.24</div>
+</div>
+<div>
+<div class="font-metadata text-metadata text-[#8E968C]">[СТАТУС]</div>
+<div class="font-metadata text-metadata text-[#B7FF3C]">АКТИВЕН</div>
+</div>
+<div>
+<div class="font-metadata text-metadata text-[#8E968C]">[ОПЕРАТОР]</div>
+<div class="font-metadata text-metadata text-primary">OP_01</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Block 2: Image/Data Visual (Spans 4 cols) -->
+<article class="col-span-1 md:col-span-4 border-[0.5px] border-[#8E968C] relative min-h-[300px] bg-[#161B19]">
+<div class="absolute inset-0 p-1">
+<img alt="Cyberpunk server room with green neon lights" class="w-full h-full object-cover grayscale opacity-60 mix-blend-screen" data-alt="Dark highly technical server room with glowing green LED indicators and thick wiring cables brutalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIBWe1jFq8PjCW-M6Y-ZBkc7DoSm0xiHJvyFsdAuYLNEFoktPqREbUlLDLV5HZDtlf1R1DTYzs92UyXHmQbOFPoDvj_IXTKmxk4GzgiiD1R1KkiaJN0eo4sgASZpj01AAENpo1tISMdwOS6Q08qh3xXkBVVDmQFMFHWw26z2A0BUg1b_EQdkvWwep7GnQ2bLYqOdSmwmv98l5RSSRrWNN14Nf5zlb25IBCA-AIyUSV3V9zK-KpEs-6PxXFPFy72ZM0wESBQOFNwRYC"/>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-[#0A0D0C] to-transparent">
+<span class="font-label-tiny text-label-tiny text-[#B7FF3C] bg-[#0A0D0C] px-2 py-1 border border-[#B7FF3C]">ВИЗУАЛИЗАЦИЯ_01</span>
+</div>
+</article>
+<!-- Block 3: Small Note (Spans 4 cols) -->
+<article class="col-span-1 md:col-span-4 bg-[#161B19] border-[0.5px] border-[#8E968C] p-6 hover:border-[#B7FF3C] transition-colors">
+<div class="flex gap-2 items-center mb-6 border-b-[0.5px] border-[#8E968C] pb-2">
+<span class="w-2 h-2 bg-[#8E968C] block"></span>
+<span class="font-label-tiny text-label-tiny text-[#8E968C]">&gt; АРХИВ</span>
+</div>
+<h3 class="font-body-large text-body-large text-primary mb-2 uppercase">Протокол наблюдения БЕТА</h3>
+<p class="font-body-main text-body-main text-[#8E968C]">
+                    Стандартная процедура мониторинга завершена без отклонений.
+                </p>
+<div class="mt-6 font-metadata text-metadata text-[#8E968C] text-right">
+                    T-MINUS 12:00
+                </div>
+</article>
+<!-- Block 4: List/Data Table (Spans 8 cols) -->
+<article class="col-span-1 md:col-span-8 bg-[#161B19] border-[0.5px] border-[#8E968C] p-6">
+<div class="flex gap-2 items-center mb-6">
+<span class="material-symbols-outlined text-[#B7FF3C] text-[18px]">list_alt</span>
+<span class="font-label-tiny text-label-tiny text-primary">&gt; ПОСЛЕДНИЕ_СИГНАЛЫ</span>
+</div>
+<div class="flex flex-col border-t-[0.5px] border-[#8E968C]">
+<!-- Row 1 -->
+<div class="grid grid-cols-4 py-3 border-b-[0.5px] border-[#8E968C] items-center hover:bg-[#0A0D0C] transition-colors px-2">
+<div class="font-metadata text-metadata text-primary">SIG_992</div>
+<div class="font-metadata text-metadata text-[#8E968C]">ШИФРОВАН</div>
+<div class="font-metadata text-metadata text-[#8E968C]">14:32:00</div>
+<div class="text-right">
+<span class="inline-block w-2 h-2 bg-error"></span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-4 py-3 border-b-[0.5px] border-[#8E968C] items-center hover:bg-[#0A0D0C] transition-colors px-2">
+<div class="font-metadata text-metadata text-primary">SIG_993</div>
+<div class="font-metadata text-metadata text-[#8E968C]">ОТКРЫТ</div>
+<div class="font-metadata text-metadata text-[#8E968C]">15:10:45</div>
+<div class="text-right">
+<span class="inline-block w-2 h-2 bg-[#B7FF3C]"></span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-4 py-3 border-b-[0.5px] border-[#8E968C] items-center hover:bg-[#0A0D0C] transition-colors px-2">
+<div class="font-metadata text-metadata text-primary">SIG_994</div>
+<div class="font-metadata text-metadata text-[#8E968C]">ПОМЕХИ</div>
+<div class="font-metadata text-metadata text-[#8E968C]">16:05:12</div>
+<div class="text-right">
+<span class="inline-block w-2 h-2 bg-[#8E968C]"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1">dynamic_feed</span>
+<span class="font-mono text-[10px] tracking-tighter">FEED</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 w-full bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1 icon-fill">radar</span>
+<span class="font-mono text-[10px] tracking-tighter">SIGNALS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1">public</span>
+<span class="font-mono text-[10px] tracking-tighter">MAP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 w-full hover:bg-[#161B19]" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+<span class="font-mono text-[10px] tracking-tighter">USER</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - Field Notes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#810081",
+                        "tertiary-container": "#d9d9d9",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "secondary-container": "#fe00fe",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#ffd7f5",
+                        "on-tertiary-container": "#5d5f5f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#5b005b",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#380038",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe9",
+                        "primary-fixed": "#7df4ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary": "#f5f5f5",
+                        "surface-bright": "#3a3939",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b494b",
+                        "on-primary-container": "#006970",
+                        "primary-fixed-dim": "#00dbe9",
+                        "secondary": "#ffabf3",
+                        "on-primary": "#00363a",
+                        "error": "#ffb4ab",
+                        "primary-container": "#00f0ff",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#849495",
+                        "on-secondary-container": "#500050",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "primary": "#dbfcff",
+                        "on-primary-fixed": "#002022",
+                        "secondary-fixed-dim": "#ffabf3",
+                        "on-tertiary": "#2f3131"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "grid-unit": "4px",
+                        "margin": "24px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "mono-label": ["monospace"],
+                        "data-dense": ["monospace"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-sm": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["24px", { lineHeight: "1.1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-md": ["18px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "mono-label": ["11px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "data-dense": ["10px", { lineHeight: "1.0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.0", letterSpacing: "-0.04em", fontWeight: "700" }],
+                        "body-sm": ["13px", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "400" }],
+                        "body-lg": ["16px", { lineHeight: "1.5", letterSpacing: "0.01em", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+            color: #dbfcff; /* primary */
+        }
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 9999;
+            position: absolute;
+            pointer-events: none;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,240,255,0.03) 50%, rgba(0,0,0,0) 100%);
+            opacity: 0.1;
+        }
+        .glitch-hover:hover {
+            box-shadow: 2px 2px 0px 0px #fe00fe;
+            transform: translate(-1px, -1px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen relative font-mono overflow-x-hidden flex flex-col">
+<div class="scanline top-0 left-0 fixed"></div>
+<!-- TopAppBar -->
+<header class="bg-black/90 dark:bg-[#050505] docked full-width top-0 border-b border-[#00F0FF] border-b-2 border-cyan-500/50 shadow-[0_0_15px_rgba(0,240,255,0.2)] flex justify-between items-center w-full px-2 h-12 z-50 fixed">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400 dark:text-[#00F0FF]">memory</span>
+<span class="font-mono uppercase tracking-tighter text-sm font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">AI_NIKITKA93</span>
+</div>
+<button class="font-mono uppercase tracking-tighter text-sm text-cyan-400 dark:text-[#00F0FF] hover:bg-cyan-500 hover:text-black transition-all duration-75 px-2 py-1 border border-transparent hover:border-cyan-400 glitch-hover">
+            RU/EN
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[72px] pb-[88px] px-4 md:px-gutter max-w-container-max mx-auto w-full relative grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Header Section -->
+<div class="col-span-1 md:col-span-12 mb-6 flex flex-col gap-2">
+<div class="inline-flex items-center gap-2 border border-magenta-500 bg-magenta-500/10 px-3 py-1 w-fit shadow-[0_0_10px_rgba(254,0,254,0.3)]">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-mono-label text-mono-label text-secondary-container">[NEURAL_OVERLOAD_DETECTED]</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary-container uppercase tracking-tight drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]">Field Notes</h1>
+<p class="font-body-sm text-body-sm text-tertiary-fixed-dim max-w-2xl">Unstructured raw data fragments. Anomalous signal detections and localized cognitive echoes captured during latest sector sweep.</p>
+</div>
+<!-- Fragment 1: Text Note -->
+<div class="col-span-1 md:col-span-4 border border-primary-container bg-black/40 p-4 relative glitch-hover transition-transform">
+<div class="absolute top-0 left-0 w-full flex justify-between items-center px-2 py-1 border-b border-primary-container/30 bg-primary-container/5">
+<span class="font-data-dense text-data-dense text-primary-container/70">[FRAG_ID_091A]</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container/70">signal_cellular_alt</span>
+</div>
+<div class="pt-6">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Persistent interference at grid 77-B. Looks like a localized mnemonic loop. The subject keeps returning to the sequence: <span class="text-secondary-container font-mono bg-secondary-container/10 px-1 border border-secondary-container/30">0x4F 0x2A 0x99</span>. 
+                    <br/><br/>
+                    Need to isolate the frequency before it cascades. The raw output is getting increasingly garbled. 
+                </p>
+<div class="mt-4 flex gap-2">
+<span class="font-mono-label text-mono-label px-2 py-0.5 border border-outline-variant text-outline">TAG: ECHO</span>
+<span class="font-mono-label text-mono-label px-2 py-0.5 border border-error text-error">PRIORITY: HIGH</span>
+</div>
+</div>
+</div>
+<!-- Fragment 2: Waveform Visualization -->
+<div class="col-span-1 md:col-span-8 border border-primary-container bg-black/40 p-4 relative glitch-hover transition-transform shadow-[0_0_15px_rgba(0,240,255,0.1)]">
+<div class="absolute top-0 left-0 w-full flex justify-between items-center px-2 py-1 border-b border-primary-container/30 bg-primary-container/5">
+<span class="font-data-dense text-data-dense text-primary-container/70">[VIS_SIG_044]</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container/70">waves</span>
+</div>
+<div class="pt-6 h-full flex flex-col">
+<div class="flex justify-between items-end mb-2">
+<span class="font-mono-label text-mono-label text-primary-container">ANOMALY DETECTED: SPATIAL DISTORTION</span>
+<span class="font-data-dense text-data-dense text-error animate-pulse">CRITICAL SPIKE @ 14:02:11</span>
+</div>
+<!-- Simulated Waveform -->
+<div class="flex-grow flex items-end justify-between gap-1 h-32 border-b border-l border-primary-container/30 pb-1 pl-1">
+<div class="w-2 bg-primary-container/40 h-[20%]"></div>
+<div class="w-2 bg-primary-container/40 h-[35%]"></div>
+<div class="w-2 bg-primary-container/40 h-[15%]"></div>
+<div class="w-2 bg-primary-container/60 h-[50%]"></div>
+<div class="w-2 bg-primary-container/40 h-[25%]"></div>
+<div class="w-2 bg-secondary-container h-[85%] shadow-[0_0_8px_#fe00fe]"></div>
+<div class="w-2 bg-secondary-container h-[95%] shadow-[0_0_8px_#fe00fe]"></div>
+<div class="w-2 bg-secondary-container h-[70%] shadow-[0_0_8px_#fe00fe]"></div>
+<div class="w-2 bg-primary-container/60 h-[40%]"></div>
+<div class="w-2 bg-primary-container/40 h-[20%]"></div>
+<div class="w-2 bg-primary-container/40 h-[10%]"></div>
+<div class="w-2 bg-primary-container/40 h-[30%]"></div>
+<div class="w-2 bg-primary-container/40 h-[15%]"></div>
+<div class="w-2 bg-primary-container/40 h-[25%]"></div>
+<div class="w-2 bg-primary-container/40 h-[45%]"></div>
+<div class="w-2 bg-primary-container/60 h-[60%]"></div>
+<div class="w-2 bg-secondary-container h-[90%] shadow-[0_0_8px_#fe00fe]"></div>
+<div class="w-2 bg-primary-container/60 h-[55%]"></div>
+<div class="w-2 bg-primary-container/40 h-[30%]"></div>
+<div class="w-2 bg-primary-container/40 h-[20%]"></div>
+</div>
+</div>
+</div>
+<!-- Fragment 3: Technical Scribble -->
+<div class="col-span-1 md:col-span-6 border border-outline-variant bg-surface-container-low p-4 relative glitch-hover transition-transform opacity-80">
+<div class="absolute top-0 left-0 w-full flex justify-between items-center px-2 py-1 border-b border-outline-variant/30 bg-surface-variant/20">
+<span class="font-data-dense text-data-dense text-tertiary-fixed-dim">[SCRATCH_PAD_X9]</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">draw</span>
+</div>
+<div class="pt-6 font-mono">
+<p class="text-secondary-fixed text-sm mb-2 opacity-70">&gt;&gt; trace route --fuzzy</p>
+<div class="border-l-2 border-secondary-fixed/50 pl-2 ml-2 space-y-1">
+<p class="text-data-dense font-data-dense text-on-surface-variant">NODE 01: [OK] 12ms</p>
+<p class="text-data-dense font-data-dense text-on-surface-variant">NODE 02: [OK] 14ms</p>
+<p class="text-data-dense font-data-dense text-secondary-container animate-pulse">NODE 03: [TIMEOUT] - DATA CORRUPTION</p>
+<p class="text-data-dense font-data-dense text-on-surface-variant">NODE 04: [OK] 89ms</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4 italic">
+                    The routing table is degrading faster than expected. Must bypass sector 4 entirely.
+                </p>
+</div>
+</div>
+<!-- Terminal Console (Floating Bottom Panel) -->
+<div class="col-span-1 md:col-span-6 border border-primary-container bg-black h-48 flex flex-col shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+<div class="flex justify-between items-center px-2 py-1 border-b border-primary-container bg-primary-container text-black">
+<span class="font-mono-label text-mono-label font-bold">[SYS_LOG]</span>
+<div class="flex gap-1">
+<div class="w-2 h-2 bg-black"></div>
+<div class="w-2 h-2 bg-black"></div>
+<div class="w-2 h-2 bg-black"></div>
+</div>
+</div>
+<div class="p-2 flex-grow overflow-hidden flex flex-col justify-end">
+<p class="font-data-dense text-data-dense text-tertiary-fixed-dim">&gt; SYSTEM BOOT SEQUENCE INITIATED...</p>
+<p class="font-data-dense text-data-dense text-tertiary-fixed-dim">&gt; SCANNING FREQUENCIES...</p>
+<p class="font-data-dense text-data-dense text-primary-container">&gt; FOUND: 3 ANOMALOUS SIGNATURES.</p>
+<p class="font-data-dense text-data-dense text-error">&gt; WARNING: NEURAL LOAD EXCEEDING SAFE PARAMETERS.</p>
+<p class="font-data-dense text-data-dense text-primary-container flex items-center">&gt; AWAITING INPUT<span class="inline-block w-2 h-3 bg-primary-container animate-pulse ml-1"></span></p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-black dark:bg-[#050505] border-t border-[#00F0FF] border-t-2 border-[#00F0FF] shadow-[0_-5px_15px_rgba(0,240,255,0.3)] md:hidden">
+<a class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-colors duration-75 w-1/4" href="#">
+<span class="material-symbols-outlined text-[24px]">folder_shared</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">DOSSIER</span>
+</a>
+<a class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-colors duration-75 w-1/4" href="#">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">CONSOLE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-colors duration-75 w-1/4" href="#">
+<span class="material-symbols-outlined text-[24px]">event_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">PLANNING</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-cyan-400 text-black p-1 shadow-[0_0_10px_#00F0FF] border-r-4 border-magenta-500 animate-pulse w-1/4" href="#">
+<span class="material-symbols-outlined text-[24px] text-black">edit_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1 text-black">FIELD_NOTES</span>
+</a>
+</nav>
+</body></html>

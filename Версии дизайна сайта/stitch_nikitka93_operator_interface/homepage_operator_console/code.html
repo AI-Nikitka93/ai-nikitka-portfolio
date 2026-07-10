@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - SYSTEM HOME</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#5e1229",
+                        "primary-container": "#32cd32",
+                        "primary-fixed": "#75ff68",
+                        "surface": "#0e150b",
+                        "outline-variant": "#3d4a39",
+                        "on-primary": "#003a03",
+                        "archive-bone": "#E5E4D2",
+                        "surface-bright": "#333c30",
+                        "primary-fixed-dim": "#4ce346",
+                        "on-surface-variant": "#bccbb4",
+                        "inverse-primary": "#006e0a",
+                        "inverse-surface": "#dce6d4",
+                        "tertiary": "#ffbcc7",
+                        "surface-container-lowest": "#081007",
+                        "secondary-fixed-dim": "#c8c7b6",
+                        "on-secondary": "#303125",
+                        "background": "#0e150b",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "secondary-container": "#47483a",
+                        "on-tertiary-fixed": "#3f0015",
+                        "on-primary-fixed": "#002201",
+                        "surface-container-highest": "#2f372b",
+                        "phosphor-bright": "#4AF626",
+                        "surface-container-high": "#242c21",
+                        "secondary-fixed": "#e4e3d1",
+                        "on-tertiary-container": "#79273d",
+                        "inverse-on-surface": "#2a3327",
+                        "tertiary-container": "#ff92a8",
+                        "surface-tint": "#4ce346",
+                        "on-secondary-fixed-variant": "#47483a",
+                        "surface-dim": "#0e150b",
+                        "primary": "#55ea4d",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary-fixed": "#1b1c11",
+                        "ember-alert": "#FF4500",
+                        "titanium-metal": "#565E5E",
+                        "on-primary-fixed-variant": "#005306",
+                        "on-secondary-container": "#b6b6a5",
+                        "on-background": "#dce6d4",
+                        "terminal-base": "#0A0E0A",
+                        "on-error": "#690005",
+                        "surface-container": "#1a2217",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#005105",
+                        "error": "#ffb4ab",
+                        "on-surface": "#dce6d4",
+                        "on-tertiary-fixed-variant": "#7c293f",
+                        "surface-container-low": "#161e13",
+                        "outline": "#869580",
+                        "secondary": "#c8c7b6",
+                        "surface-variant": "#2f372b",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "mono-data": ["IBM Plex Mono"],
+                        "mono-body": ["IBM Plex Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-data": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "mono-body": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0A0E0A; color: #dce6d4; }
+        .bg-stone-950 { background-color: #0A0E0A; }
+        .text-lime-400 { color: #32cd32; }
+        .border-stone-800 { border-color: #565E5E; }
+        .border-lime-400 { border-color: #32cd32; }
+        .bg-lime-400 { background-color: #32cd32; }
+        .text-stone-950 { color: #0A0E0A; }
+        .text-stone-500 { color: #869580; }
+        
+        /* Grid background pattern for terminal feel */
+        .terminal-grid {
+            background-image: linear-gradient(#565E5E33 1px, transparent 1px), linear-gradient(90deg, #565E5E33 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-mono-body text-mono-body antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-stone-950 text-lime-400 font-mono uppercase tracking-tighter text-sm docked full-width top-0 border-b border-b border-stone-800 flat no shadows flex justify-between items-center w-full px-6 h-12 z-50 fixed">
+<div class="flex items-center gap-8">
+<div class="text-lg font-bold text-lime-400 tracking-widest">AI_NIKITKA93</div>
+<nav class="hidden md:flex gap-6">
+<a class="text-lime-400 border-b border-lime-400 pb-1 cursor-pointer active:opacity-80" href="#">SYSTEM</a>
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 cursor-pointer active:opacity-80" href="#">QUERY</a>
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 cursor-pointer active:opacity-80" href="#">LOGS</a>
+<a class="text-stone-500 hover:bg-lime-400 hover:text-stone-950 transition-colors duration-75 cursor-pointer active:opacity-80" href="#">ARCHIVE</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-mono-data text-mono-data text-lime-400">[ RU ] | EN</span>
+<span class="font-mono-data text-mono-data text-lime-400">SYSTEM: ONLINE</span>
+</div>
+</header>
+<div class="flex flex-1 pt-12">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col bg-stone-950 text-lime-400 font-mono text-xs uppercase docked left-0 h-full border-r w-64 border-r border-stone-800 flat no shadows flex flex-col h-screen fixed left-0 top-12 z-40">
+<div class="p-4 border-b border-titanium-metal">
+<div class="font-headline-md text-headline-md text-lime-400">OPERATOR_01</div>
+<div class="font-mono-data text-mono-data text-stone-500 mt-1">ID: NK-93</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-2">
+<a class="bg-lime-400/10 text-lime-400 border-l-2 border-lime-400 flex items-center px-4 py-3 transition-all duration-150" href="#">
+<span class="material-symbols-outlined mr-3 text-lime-400">terminal</span>
+                    TERMINAL
+                </a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150" href="#">
+<span class="material-symbols-outlined mr-3">inventory_2</span>
+                    RESOURCES
+                </a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150" href="#">
+<span class="material-symbols-outlined mr-3">database</span>
+                    DATABASES
+                </a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150" href="#">
+<span class="material-symbols-outlined mr-3">hub</span>
+                    NETWORK
+                </a>
+<a class="text-stone-500 flex items-center px-4 py-3 hover:bg-stone-900 hover:text-lime-300 transition-all duration-150" href="#">
+<span class="material-symbols-outlined mr-3">shield</span>
+                    SECURITY
+                </a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 p-margin min-h-screen terminal-grid">
+<!-- Operator Hero -->
+<section class="border border-titanium-metal bg-terminal-base p-6 mb-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 font-mono-data text-mono-data text-titanium-metal">SYS.INIT.SEQ_0x9A</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary-container">power</span>
+<span class="font-label-caps text-label-caps text-primary-container">OPERATOR CONSOLE ACTIVE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-2">INITIATING<br/>SEQUENCE</h1>
+<p class="font-mono-body text-mono-body text-on-surface-variant max-w-2xl mb-6">
+                            Establishment of direct neural link to core mainframes. Operator NK-93 verified. Awaiting command input for system overrides and data extraction protocols.
+                        </p>
+<div class="flex flex-col gap-2 bg-surface p-4 border border-titanium-metal font-mono-data text-mono-data w-full max-w-md">
+<div class="flex text-on-surface-variant">
+<span class="text-primary-container mr-2">&gt;</span>
+<span>auth.verify(NK-93)</span>
+</div>
+<div class="flex text-on-surface-variant">
+<span class="text-titanium-metal mr-2">...</span>
+<span>[OK] Biometric match confirmed</span>
+</div>
+<div class="flex text-on-surface-variant">
+<span class="text-primary-container mr-2">&gt;</span>
+<span>sys.load_modules()</span>
+</div>
+<div class="flex text-on-surface">
+<span class="text-primary-container mr-2">&gt;</span>
+<span class="animate-pulse">_</span>
+</div>
+</div>
+</div>
+<!-- Decorative Graphic -->
+<div class="w-full md:w-64 h-64 border border-titanium-metal bg-surface relative flex items-center justify-center group overflow-hidden">
+<img alt="Matrix style falling green code on black background" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity mix-blend-screen grayscale sepia hue-rotate-100 saturate-200" data-alt="Matrix style falling green code on black background, abstract digital data stream, cyberpunk aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbkRXfaDOHRBP1u9mf9RxqAo14b_TXps2vxfTP8rO2YRQA97p5msv3ApruYLCADF7bhbg1Mtp7i1AdF9f0JyLALiZJXnsOr0CVVGb3vMZa-B9iMiFXT1q3ypvZN2JWwWlWj-nEXqBfsb26al-o0mYgzpNL_wa5lCL_igmHW4mqzox-iRm9HxHGxFuG1E68VFHVxyHnJRniLNeEq6WZxF0rweIcd_t7CC_6sZwPr0G3doWuHscuF9I8sSKiLKfatrW28sgCkCjFK9F"/>
+<div class="absolute inset-0 border-[4px] border-primary-container/20 m-4 rounded-full flex items-center justify-center border-dashed">
+<div class="w-24 h-24 rounded-full border border-primary-container/50 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-4xl text-primary-container z-10">fingerprint</span>
+<div class="absolute inset-0 bg-primary-container/10 rounded-full animate-ping"></div>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 font-mono-data text-mono-data text-primary-container/50 text-[10px]">SCAN: ACTIVE</div>
+</div>
+</div>
+</section>
+<!-- Identity & Verification Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- System Aliases -->
+<div class="col-span-1 border border-titanium-metal bg-surface p-4 flex flex-col h-full">
+<div class="flex items-center gap-2 mb-4 border-b border-titanium-metal pb-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">badge</span>
+<h2 class="font-headline-md text-headline-md text-on-surface text-lg">SYSTEM ALIASES</h2>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="bg-surface-variant border border-titanium-metal text-on-surface px-2 py-1 font-label-caps text-label-caps flex items-center gap-1">
+<span class="text-primary-container">[v]</span> NIKITKA93
+                        </span>
+<span class="bg-surface-variant border border-titanium-metal text-on-surface px-2 py-1 font-label-caps text-label-caps flex items-center gap-1">
+<span class="text-primary-container">[v]</span> OPR-01
+                        </span>
+<span class="bg-surface-variant border border-titanium-metal text-on-surface px-2 py-1 font-label-caps text-label-caps flex items-center gap-1">
+<span class="text-titanium-metal">[u]</span> GHOST_NODE
+                        </span>
+</div>
+</div>
+<!-- Verification Sources -->
+<div class="col-span-1 md:col-span-2 border border-titanium-metal bg-surface p-4 flex flex-col h-full">
+<div class="flex items-center justify-between mb-4 border-b border-titanium-metal pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">security</span>
+<h2 class="font-headline-md text-headline-md text-on-surface text-lg">VERIFICATION SOURCES</h2>
+</div>
+<span class="font-mono-data text-mono-data text-primary-container">SEC_LVL_4</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="grid grid-cols-12 gap-4 py-2 border-b border-titanium-metal/50 items-center hover:bg-surface-variant/50 transition-colors">
+<div class="col-span-3 font-mono-data text-mono-data text-titanium-metal">09:42:11</div>
+<div class="col-span-6 font-mono-body text-mono-body text-on-surface">MAIN_SERVER_RIGA</div>
+<div class="col-span-3 text-right">
+<span class="font-label-caps text-label-caps text-primary-container bg-primary-container/10 px-2 py-1 rounded">VERIFIED</span>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 py-2 border-b border-titanium-metal/50 items-center hover:bg-surface-variant/50 transition-colors">
+<div class="col-span-3 font-mono-data text-mono-data text-titanium-metal">09:41:05</div>
+<div class="col-span-6 font-mono-body text-mono-body text-on-surface">BACKUP_NODE_TLN</div>
+<div class="col-span-3 text-right">
+<span class="font-label-caps text-label-caps text-primary-container bg-primary-container/10 px-2 py-1 rounded">VERIFIED</span>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 py-2 items-center hover:bg-surface-variant/50 transition-colors">
+<div class="col-span-3 font-mono-data text-mono-data text-titanium-metal">09:30:22</div>
+<div class="col-span-6 font-mono-body text-mono-body text-on-surface">EXT_RELAY_UNKNOWN</div>
+<div class="col-span-3 text-right">
+<span class="font-label-caps text-label-caps text-ember-alert bg-ember-alert/10 px-2 py-1 rounded">PENDING</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

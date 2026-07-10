@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Radar Grid V.1.0 - Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#dfe0ff",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "tertiary-container": "#7df4ff",
+                        "surface-container-lowest": "#050930",
+                        "outline": "#929277",
+                        "on-primary-fixed": "#1b1d00",
+                        "on-tertiary-fixed": "#002022",
+                        "outline-variant": "#474832",
+                        "surface": "#0a0f35",
+                        "error": "#ffb4ab",
+                        "tertiary": "#ffffff",
+                        "tertiary-fixed": "#7df4ff",
+                        "secondary-container": "#d05bff",
+                        "surface-variant": "#2c3258",
+                        "surface-container": "#171c41",
+                        "on-secondary-fixed-variant": "#75009e",
+                        "surface-tint": "#c5cf00",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "primary-fixed-dim": "#c5cf00",
+                        "surface-dim": "#0a0f35",
+                        "on-background": "#dfe0ff",
+                        "primary-fixed": "#e1ec00",
+                        "inverse-surface": "#dfe0ff",
+                        "primary-container": "#e1ec00",
+                        "on-secondary-fixed": "#320046",
+                        "on-surface-variant": "#c8c8ab",
+                        "on-error": "#690005",
+                        "on-primary-container": "#646900",
+                        "secondary": "#ecb1ff",
+                        "inverse-on-surface": "#282d53",
+                        "secondary-fixed": "#f9d8ff",
+                        "on-tertiary": "#00363a",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ecb1ff",
+                        "inverse-primary": "#5e6300",
+                        "on-secondary": "#520070",
+                        "primary": "#ffffff",
+                        "on-primary-fixed-variant": "#464a00",
+                        "on-primary": "#303300",
+                        "surface-bright": "#31365d",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#2c3258",
+                        "on-tertiary-container": "#006f77",
+                        "background": "#0a0f35",
+                        "on-secondary-container": "#480063",
+                        "surface-container-high": "#21274c",
+                        "surface-container-low": "#13183d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "fragment-gap": "2px",
+                        "margin": "24px",
+                        "base": "4px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "code-sm": ["JetBrains Mono"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "body-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "code-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-caps": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "0em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.2;
+        }
+        .crt-flicker {
+            animation: flicker 0.15s infinite;
+        }
+        @keyframes flicker {
+            0% { opacity: 0.95; }
+            50% { opacity: 1; }
+            100% { opacity: 0.95; }
+        }
+        .blip-glow {
+            filter: drop-shadow(0 0 4px #e1ec00);
+        }
+        .corner-bracket::before, .corner-bracket::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e1ec00;
+        }
+        .corner-bracket::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+        .corner-bracket::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+        .glitch-hover:hover {
+            transform: translate(2px, 0);
+            background-color: #d05bff;
+            color: #050930;
+        }
+        .radar-sweep {
+            background: conic-gradient(from 0deg, rgba(225, 236, 0, 0) 0%, rgba(225, 236, 0, 0.4) 100%);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md h-screen overflow-hidden flex flex-col crt-flicker relative">
+<div class="scanline"></div>
+<!-- TopAppBar JSON Exec -->
+<header class="flex justify-between items-center w-full px-2 py-3 bg-slate-950 docked full-width top-0 border-b-2 border-yellow-400/50 z-50">
+<div class="flex items-center gap-4">
+<span class="text-yellow-400 font-black italic tracking-widest text-lg">RADAR_GRID_V.1.0</span>
+<div class="hidden md:flex gap-4 items-center">
+<span class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-xs text-slate-500 hover:bg-purple-600 hover:text-black transition-all duration-75 cursor-pointer">SENSORS</span>
+<span class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-xs text-yellow-400 border-b-2 border-yellow-400 cursor-pointer">UPLINK</span>
+<span class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-xs text-slate-500 hover:bg-purple-600 hover:text-black transition-all duration-75 cursor-pointer">SYSTEMS</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-400 cursor-pointer hover:bg-purple-600 hover:text-black transition-all duration-75 p-1">settings_input_component</span>
+<span class="material-symbols-outlined text-yellow-400 cursor-pointer hover:bg-purple-600 hover:text-black transition-all duration-75 p-1">target</span>
+<span class="material-symbols-outlined text-yellow-400 cursor-pointer hover:bg-purple-600 hover:text-black transition-all duration-75 p-1">security</span>
+<div class="w-8 h-8 bg-surface-container border border-yellow-400 ml-2 relative">
+<img alt="OPERATOR_ID_09" class="w-full h-full object-cover grayscale opacity-80" data-alt="close up of metallic robot eye looking straight ahead in dark room with green laser light reflecting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVXBhgXHxBnbw_jtPiWF8gsaYWWjpDR3lIVtSv9prlRERrJfNPjt6QoNpCmeifSSZ8swQfbDZx8OOVQ5PR-A_mLMAWWaC3s3ZYje4aapLIpQfvkVNUS9JDz1f3mLJMnl3CTJrgNVnBBqNkxxd3Oclx3_MwsoYpX8C9Cj_F-XNLmwXAyu_s9Z7WqvGOTY7k_sPyjfUOeu6dZ5WYyHhTaiJb7f-LV0oPTuoSpGz8m1jVPpVxgTKwrCfheAOMKADlUK1bMIkAOmYcsJY"/>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden relative">
+<!-- SideNavBar JSON Exec -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r-2 border-yellow-400/30 bg-slate-900 border-r-2 border-slate-800 z-40 relative">
+<div class="p-4 border-b border-slate-800">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-surface-container border border-yellow-400 rounded-none overflow-hidden">
+<img alt="COMMAND_ROOT" class="w-full h-full object-cover grayscale" data-alt="server rack in dark room with blinking blue and red lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApb5JJg2vSu2W3eRDngZmVRL3sgE9pfqUEwsTD2MizV22WqYUKCJ9GNTLgwnsaPrKUrd7-A1HzOFL_VYtr2LytpNq39zQfQhRS-R1BmshmfNIIVh8GgVTsVYh6Q8h5_Hbd4lYOo2P1cRq2cNxemFBpV4h8t3HnP5iJ5mnP0S4Bq3g6rm6I_N-p1sjPuZogp8xRFdODmSTXe02QGUQRiu2t76hAnd32xRXnfZf-gGlhOyZWTn4pp4MHIKuf17A36sn9i8NYdq0x-DE"/>
+</div>
+<div>
+<div class="font-['Space_Grotesk'] font-bold uppercase text-yellow-400 text-sm">OPERATOR_09</div>
+<div class="font-body-md text-slate-500 text-xs">SECTOR_7_G</div>
+</div>
+</div>
+</div>
+<nav class="flex flex-col flex-1">
+<div class="font-['Space_Grotesk'] font-bold uppercase text-yellow-400/60 p-4 border-b border-slate-800 hover:bg-purple-500 hover:text-white cursor-pointer flex items-center gap-3">
+<span class="material-symbols-outlined">folder_open</span> ARCHIVE
+                </div>
+<div class="font-['Space_Grotesk'] font-bold uppercase text-yellow-400/60 p-4 border-b border-slate-800 hover:bg-purple-500 hover:text-white cursor-pointer flex items-center gap-3">
+<span class="material-symbols-outlined">radar</span> SENSORS
+                </div>
+<div class="font-['Space_Grotesk'] font-bold uppercase bg-yellow-400 text-black font-black p-4 flex items-center gap-3 border-l-4 border-yellow-400 cursor-pointer">
+<span class="material-symbols-outlined">satellite_alt</span> UPLINK
+                </div>
+<div class="font-['Space_Grotesk'] font-bold uppercase text-yellow-400/60 p-4 border-b border-slate-800 hover:bg-purple-500 hover:text-white cursor-pointer flex items-center gap-3">
+<span class="material-symbols-outlined">memory</span> SYSTEMS
+                </div>
+<div class="font-['Space_Grotesk'] font-bold uppercase text-yellow-400/60 p-4 border-b border-slate-800 hover:bg-purple-500 hover:text-white cursor-pointer flex items-center gap-3">
+<span class="material-symbols-outlined">terminal</span> LOGS
+                </div>
+</nav>
+<div class="p-4 mt-auto">
+<button class="w-full bg-yellow-400 text-black font-['Space_Grotesk'] font-bold uppercase py-2 glitch-hover transition-all duration-75">
+                    INITIATE_SCAN
+                </button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 overflow-y-auto bg-surface-container-lowest p-fragment-gap grid grid-cols-1 md:grid-cols-12 gap-fragment-gap relative pb-20">
+<!-- Hero Pane -->
+<section class="md:col-span-8 bg-surface border border-secondary-container p-gutter relative corner-bracket flex flex-col justify-between min-h-[400px]">
+<div class="absolute top-2 right-2 flex gap-2">
+<span class="font-code-sm text-code-sm text-secondary-container bg-secondary-container/20 px-1 border border-secondary-container">RU</span>
+<span class="font-code-sm text-code-sm text-primary bg-surface-variant px-1 border border-surface-variant opacity-50">EN</span>
+</div>
+<div>
+<h1 class="font-headline-xl text-headline-xl text-primary-fixed uppercase tracking-tighter mb-4 glitch-hover inline-block">
+                        GLOBAL<br/>SURVEILLANCE<br/>MATRIX
+                    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        Real-time tracking of unauthorized transmissions across SECTOR_7. Proceed with extreme caution.
+                    </p>
+</div>
+<div class="flex gap-4 mt-8">
+<div class="bg-surface-container border border-primary-fixed/50 p-2 min-w-[120px]">
+<div class="font-label-caps text-label-caps text-primary-fixed/70 mb-1">METRIC_01</div>
+<div class="font-headline-lg text-headline-lg text-primary-fixed">50+</div>
+</div>
+<div class="bg-surface-container border border-secondary-container/50 p-2 min-w-[120px]">
+<div class="font-label-caps text-label-caps text-secondary-container/70 mb-1">RANKING</div>
+<div class="font-headline-lg text-headline-lg text-secondary-container">TOP-9%</div>
+</div>
+<div class="bg-surface-container border border-error/50 p-2 min-w-[120px]">
+<div class="font-label-caps text-label-caps text-error/70 mb-1">THREAT_LEVEL</div>
+<div class="font-headline-lg text-headline-lg text-error">#64</div>
+</div>
+</div>
+</section>
+<!-- Radar Pane -->
+<section class="md:col-span-4 bg-surface border border-primary-fixed p-gutter flex flex-col items-center justify-center relative">
+<div class="absolute top-2 left-2 font-label-caps text-label-caps text-primary-fixed/50">LOCAL_SCAN</div>
+<div class="w-48 h-48 border border-primary-fixed/30 rounded-full relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 border border-primary-fixed/20 rounded-full m-4"></div>
+<div class="absolute inset-0 border border-primary-fixed/10 rounded-full m-8"></div>
+<div class="w-1 h-full bg-primary-fixed/20 absolute"></div>
+<div class="w-full h-1 bg-primary-fixed/20 absolute"></div>
+<div class="absolute inset-0 radar-sweep animate-spin" style="animation-duration: 3s;"></div>
+<!-- Blips -->
+<div class="w-2 h-2 bg-primary-fixed absolute top-10 left-16 blip-glow"></div>
+<div class="w-2 h-2 bg-error absolute bottom-12 right-10 blip-glow"></div>
+</div>
+</section>
+<!-- Identity Matrix Pane -->
+<section class="md:col-span-6 bg-surface border border-outline-variant p-gutter relative">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-4 border-b border-outline-variant pb-2">IDENTITY_RESOLUTION</h2>
+<div class="flex gap-fragment-gap h-32">
+<div class="flex-1 bg-surface-container-highest border border-outline-variant p-2 flex flex-col justify-center items-center">
+<span class="material-symbols-outlined text-outline mb-2">fingerprint</span>
+<div class="font-code-sm text-code-sm text-outline">SYS_ID: UNKNOWN</div>
+</div>
+<div class="w-8 flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary-fixed text-sm">compare_arrows</span>
+</div>
+<div class="flex-1 bg-surface-container-highest border border-primary-fixed p-2 flex flex-col justify-center items-center relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary-fixed text-on-primary-fixed font-label-caps text-[8px] px-1">VERIFIED</div>
+<span class="material-symbols-outlined text-primary-fixed mb-2">verified_user</span>
+<div class="font-code-sm text-code-sm text-primary-fixed">SRC: ALPHA_NODE</div>
+</div>
+</div>
+</section>
+<!-- Route List Pane -->
+<section class="md:col-span-6 bg-surface border border-outline-variant p-gutter relative">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-4 border-b border-outline-variant pb-2">ACTIVE_ROUTES</h2>
+<ul class="space-y-fragment-gap">
+<li class="bg-surface-container border border-outline-variant p-2 flex justify-between items-center hover:border-primary-fixed transition-colors cursor-pointer">
+<span class="font-code-sm text-code-sm text-outline">[IDX_01] NORTH_RIDGE</span>
+<span class="material-symbols-outlined text-outline text-sm">chevron_right</span>
+</li>
+<li class="bg-surface-container border border-primary-fixed p-2 flex justify-between items-center bg-primary-fixed/10">
+<span class="font-code-sm text-code-sm text-primary-fixed">[IDX_02] SECTOR_GAMMA</span>
+<span class="material-symbols-outlined text-primary-fixed text-sm">radar</span>
+</li>
+<li class="bg-surface-container border border-outline-variant p-2 flex justify-between items-center hover:border-primary-fixed transition-colors cursor-pointer">
+<span class="font-code-sm text-code-sm text-outline">[IDX_03] UNDER_CITY</span>
+<span class="material-symbols-outlined text-outline text-sm">chevron_right</span>
+</li>
+</ul>
+</section>
+</main>
+</div>
+<!-- Footer JSON Exec -->
+<footer class="fixed bottom-0 left-0 w-full px-4 py-1 flex justify-between items-center z-50 bg-opacity-90 backdrop-blur-sm bg-slate-950 docked border-t border-purple-500/50">
+<div class="font-['Space_Grotesk'] text-[10px] tracking-widest text-slate-600">
+            © 2104 TACTICAL_CMD_NET // ENCRYPTED_CHANNEL
+        </div>
+<div class="flex gap-4">
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest text-slate-600 hover:text-purple-400 cursor-pointer">SYS_STATUS</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest text-yellow-400 underline blink-animation cursor-pointer">PING</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest text-slate-600 hover:text-purple-400 cursor-pointer">ENCRYPT</span>
+</div>
+</footer>
+</body></html>

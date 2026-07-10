@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>МЕДИА_СИСТЕМА // HUD_v4.2 - Верификация</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#0c141a",
+                        "outline-variant": "#3a4a49",
+                        "on-secondary-fixed-variant": "#43474e",
+                        "surface-container-highest": "#2e363c",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#dfe2eb",
+                        "on-primary-fixed": "#002020",
+                        "on-primary-container": "#007070",
+                        "primary": "#ffffff",
+                        "tertiary-container": "#dde3ec",
+                        "primary-fixed": "#00fbfb",
+                        "secondary-container": "#454950",
+                        "on-tertiary-fixed-variant": "#41474f",
+                        "on-tertiary-container": "#5f656d",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#dde3ec",
+                        "primary-fixed-dim": "#00dddd",
+                        "tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#004f4f",
+                        "on-tertiary": "#2b3138",
+                        "on-secondary-container": "#b5b8c1",
+                        "on-secondary-fixed": "#181c22",
+                        "on-error": "#690005",
+                        "surface-dim": "#0c141a",
+                        "on-secondary": "#2d3137",
+                        "surface-container-low": "#151d22",
+                        "outline": "#839493",
+                        "surface": "#0c141a",
+                        "surface-container": "#192126",
+                        "surface-container-lowest": "#070f15",
+                        "secondary-fixed-dim": "#c3c6cf",
+                        "on-surface-variant": "#b9cac9",
+                        "inverse-on-surface": "#293138",
+                        "on-primary": "#003737",
+                        "on-tertiary-fixed": "#161c23",
+                        "surface-container-high": "#232b31",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#00fbfb",
+                        "surface-tint": "#00dddd",
+                        "tertiary-fixed-dim": "#c1c7d0",
+                        "secondary": "#c3c6cf",
+                        "inverse-primary": "#006a6a",
+                        "on-surface": "#dbe3ec",
+                        "inverse-surface": "#dbe3ec",
+                        "on-background": "#dbe3ec",
+                        "surface-bright": "#323a40",
+                        "surface-variant": "#2e363c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "unit": "4px",
+                        "module-gap": "20px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["JetBrains Mono"],
+                        "data-viz": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-md": ["JetBrains Mono"],
+                        "body-lg": ["JetBrains Mono"],
+                        "headline-lg": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "data-viz": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-caps": ["11px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0D1117;
+            background-image: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.02) 3px,
+                rgba(0, 255, 255, 0.02) 4px
+            );
+        }
+        .glow-border {
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex font-body-sm selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar -->
+<nav class="bg-[#161B22] text-cyan-400 font-mono text-[10px] tracking-widest h-screen w-20 border-r border-[#30363D] flat no-shadows flex flex-col z-40 hidden md:flex sticky top-0 shrink-0">
+<div class="flex flex-col items-center justify-center p-4 border-b border-[#30363D]">
+<span class="text-cyan-500 font-bold label-caps writing-vertical-rl transform rotate-180 mb-4 whitespace-nowrap">МОДУЛЬ_084</span>
+<span class="material-symbols-outlined text-cyan-400 text-xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div class="flex flex-col flex-grow w-full mt-4">
+<!-- Inactive -->
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 relative group" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span class="sr-only">ТЕРМИНАЛ</span>
+<div class="absolute left-full ml-2 px-2 py-1 bg-surface-container-high text-on-surface text-[10px] border border-outline-variant rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 transition-opacity">ТЕРМИНАЛ</div>
+</a>
+<!-- Inactive -->
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 relative group" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">lan</span>
+<span class="sr-only">СЕТЬ</span>
+<div class="absolute left-full ml-2 px-2 py-1 bg-surface-container-high text-on-surface text-[10px] border border-outline-variant rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 transition-opacity">СЕТЬ</div>
+</a>
+<!-- Active (Verification conceptually fits near config/security) -->
+<a class="bg-cyan-400 text-[#0D1117] shadow-[0_0_15px_rgba(0,255,255,0.6)] rounded-sm m-2 flex flex-col items-center justify-center py-3 scale-95 active:scale-90 relative group" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">tune</span>
+<span class="sr-only">КОНФИГУРАЦИЯ</span>
+<div class="absolute left-full ml-2 px-2 py-1 bg-surface-container-high text-on-surface text-[10px] border border-outline-variant rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 transition-opacity">КОНФИГУРАЦИЯ</div>
+</a>
+<!-- Inactive -->
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 relative group" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">database</span>
+<span class="sr-only">БАЗА_ДАННЫХ</span>
+<div class="absolute left-full ml-2 px-2 py-1 bg-surface-container-high text-on-surface text-[10px] border border-outline-variant rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 transition-opacity">БАЗА_ДАННЫХ</div>
+</a>
+<!-- Inactive -->
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 relative group" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">inventory_2</span>
+<span class="sr-only">АРХИВ</span>
+<div class="absolute left-full ml-2 px-2 py-1 bg-surface-container-high text-on-surface text-[10px] border border-outline-variant rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50 transition-opacity">АРХИВ</div>
+</a>
+</div>
+<div class="mt-auto mb-4 w-full">
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 relative group w-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">logout</span>
+<span class="sr-only">ВЫХОД</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-grow flex flex-col min-w-0">
+<!-- TopAppBar -->
+<header class="bg-[#0D1117] text-cyan-400 font-mono uppercase tracking-tighter text-xs docked full-width top-0 border-b border-[#30363D] shadow-[0_0_10px_rgba(0,255,255,0.1)] flex justify-between items-center w-full px-6 h-12 sticky z-30 shrink-0">
+<div class="flex items-center gap-6">
+<span class="font-mono font-black text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] text-lg">МЕДИА_СИСТЕМА // HUD_v4.2</span>
+<nav class="hidden lg:flex gap-6 h-full items-end pb-1">
+<a class="text-slate-500 hover:text-cyan-200 transition-colors h-full flex items-end" href="#">ОБЗОР</a>
+<a class="text-slate-500 hover:text-cyan-200 transition-colors h-full flex items-end" href="#">АНАЛИТИКА</a>
+<a class="text-slate-500 hover:text-cyan-200 transition-colors h-full flex items-end" href="#">ПОТОКИ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+<input class="bg-[#161B22] border border-[#30363D] text-cyan-400 text-xs px-8 py-1 rounded-sm focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_8px_rgba(0,255,255,0.3)] transition-all w-48 placeholder-slate-600" placeholder="ПОИСК..." type="text"/>
+</div>
+<div class="flex gap-3">
+<button class="text-slate-500 hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer p-1 rounded-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 0;">terminal</span>
+</button>
+<button class="text-slate-500 hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer p-1 rounded-sm relative">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-cyan-400 rounded-full glow-border"></span>
+</button>
+<button class="text-slate-500 hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer p-1 rounded-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow p-module-gap overflow-y-auto">
+<div class="max-w-7xl mx-auto space-y-module-gap">
+<!-- Page Header -->
+<div class="flex justify-between items-end border-b border-[#30363D] pb-unit">
+<div>
+<h1 class="font-headline-lg text-primary-fixed text-glow uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">policy</span>
+                            ПРОТОКОЛ ВЕРИФИКАЦИИ // УРОВЕНЬ_03
+                        </h1>
+<p class="font-data-viz text-on-surface-variant mt-1">&gt; ОЖИДАНИЕ БИОМЕТРИЧЕСКОГО ПОДТВЕРЖДЕНИЯ...</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-error rounded-full animate-pulse shadow-[0_0_8px_rgba(255,180,171,0.8)]"></span>
+<span class="font-label-caps text-error">ТРЕБУЕТСЯ АВТОРИЗАЦИЯ</span>
+</div>
+</div>
+<!-- Dashboard Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-module-gap">
+<!-- Bio-Scan Module (Span 8) -->
+<div class="md:col-span-8 bg-[#161B22] border border-[#30363D] rounded relative overflow-hidden flex flex-col min-h-[400px]">
+<div class="border-b border-[#30363D] px-4 py-2 flex justify-between items-center bg-[#0D1117]/50 backdrop-blur-sm z-10">
+<span class="font-label-caps text-on-surface-variant">MOD_SEC_01 // БИО-СКАНЕР</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">fingerprint</span>
+</div>
+<div class="flex-grow relative flex items-center justify-center p-8">
+<!-- Scanner Target UI -->
+<div class="relative w-64 h-64 border-2 border-dashed border-[#30363D] rounded-full flex items-center justify-center">
+<!-- Inner rings -->
+<div class="absolute inset-4 border border-[#30363D] rounded-full"></div>
+<div class="absolute inset-12 border border-[#30363D] rounded-full"></div>
+<!-- Scanning Line -->
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-fixed shadow-[0_0_15px_rgba(0,255,255,0.8)] z-20"></div>
+<!-- Placeholder Image representing biometric scan subject -->
+<div class="w-48 h-48 rounded-full overflow-hidden border border-primary-fixed glow-border opacity-60 mix-blend-screen bg-cover bg-center" data-alt="high contrast macro shot of a human eye iris with digital cyan scanlines overlaid, cyberpunk lighting, dark background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBk_peSsoYVluqAJrxsKejeYcarwaHH52VWuKyHoMsEDrfgEhaaZKSj4iTKhgG95s73YocoS_hLiB3SMYQaWS454m28_HFkE6QhBKJA484a0E8IrmBc8JhhWa3duh7ArTjpHGqKcdsVZlts96E4I6BsGGAlZCVVEHHbUtdvpqTRgQPPssmTr9vtVnnHLsi6XbEyHwIO22uVpmya_qpimgn05byjVaAM2VyYd8Nf4aiovMoMCYOGRiG73wbiNxURknq64NLKWPGzaHOF');">
+</div>
+<!-- Crosshairs -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-[#30363D]"></div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-full h-px bg-[#30363D]"></div>
+</div>
+<!-- Overlay Stats -->
+<div class="absolute top-4 right-4 text-right font-data-viz text-on-surface-variant space-y-1">
+<p>РЕТИНА_СОВПАДЕНИЕ: <span class="text-error">0.0%</span></p>
+<p>ЧСС: <span class="text-primary-fixed">84 BPM</span></p>
+<p>ТЕМП: <span class="text-primary-fixed">36.6C</span></p>
+</div>
+</div>
+<div class="p-4 bg-[#0D1117] border-t border-[#30363D] flex justify-between items-center">
+<span class="font-data-viz text-on-surface-variant">&gt; ПОМЕСТИТЕ ОБЪЕКТ В ЗОНУ СКАНИРОВАНИЯ</span>
+<button class="bg-primary-fixed/10 border border-primary-fixed text-primary-fixed hover:bg-primary-fixed hover:text-background transition-colors font-label-caps px-4 py-2 rounded-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">settings_overscan</span>
+                                ИНИЦИИРОВАТЬ
+                            </button>
+</div>
+</div>
+<!-- Subject Data Module (Span 4) -->
+<div class="md:col-span-4 bg-[#161B22] border border-outline-variant rounded flex flex-col relative">
+<div class="border-b border-[#30363D] px-4 py-2 flex justify-between items-center bg-[#0D1117]/50 backdrop-blur-sm">
+<span class="font-label-caps text-on-surface-variant">MOD_DATA_02 // ДОСЬЕ</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">badge</span>
+</div>
+<div class="p-4 space-y-4 flex-grow">
+<!-- Identity Card -->
+<div class="border border-[#30363D] p-3 bg-[#0D1117] relative">
+<div class="absolute top-0 right-0 p-1 bg-[#30363D] text-[#0D1117] font-label-caps text-[8px]">ID: 849-B</div>
+<h3 class="font-headline-md text-primary-fixed mb-2">НЕИЗВЕСТНЫЙ_СУБЪЕКТ</h3>
+<div class="space-y-1 font-data-viz text-on-surface-variant text-[10px]">
+<div class="flex justify-between border-b border-[#30363D] pb-1">
+<span>СТАТУС:</span>
+<span class="text-error">НЕ ВЕРИФИЦИРОВАН</span>
+</div>
+<div class="flex justify-between border-b border-[#30363D] pb-1 pt-1">
+<span>УРОВЕНЬ_ДОСТУПА:</span>
+<span>N/A</span>
+</div>
+<div class="flex justify-between pb-1 pt-1">
+<span>ЛОКАЦИЯ:</span>
+<span>СЕКТОР_7G</span>
+</div>
+</div>
+</div>
+<!-- Input Prompt -->
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant block">РУЧНОЙ ВВОД КЛЮЧА ДОСТУПА</label>
+<div class="relative">
+<span class="absolute left-2 top-1/2 -translate-y-1/2 text-primary-fixed font-data-viz">&gt;</span>
+<input class="w-full bg-[#0D1117] border border-[#30363D] text-primary-fixed font-mono text-sm pl-6 pr-3 py-2 rounded-sm focus:outline-none focus:border-primary-fixed focus:shadow-[0_0_8px_rgba(0,255,255,0.3)] transition-all placeholder-[#30363D]" placeholder="****-****-****" type="password"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 w-2 h-4 bg-primary-fixed animate-pulse"></span>
+</div>
+</div>
+<!-- Warning Widget -->
+<div class="bg-error/10 border border-error p-3 rounded-sm mt-auto">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-sm mt-0.5">warning</span>
+<p class="font-data-viz text-error text-[10px] leading-tight">ВНИМАНИЕ: ПРЕВЫШЕНИЕ ЛИМИТА ПОПЫТОК ПРИВЕДЕТ К БЛОКИРОВКЕ ТЕРМИНАЛА СОГЛАСНО ДИРЕКТИВЕ 4.1.2.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

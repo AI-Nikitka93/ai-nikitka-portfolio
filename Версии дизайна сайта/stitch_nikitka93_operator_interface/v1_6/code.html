@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ВЕРИФИКАЦИЯ // СТАТУС ПЕРСОНАЛА</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#323631",
+                        "error": "#ffb4ab",
+                        "background": "#101410",
+                        "outline-variant": "#3c4b35",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-container": "#dcded9",
+                        "primary": "#efffe3",
+                        "primary-fixed": "#79ff5b",
+                        "on-primary-container": "#107100",
+                        "on-primary-fixed": "#022100",
+                        "secondary-fixed": "#d3e4fe",
+                        "secondary-container": "#3a4a5f",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "tertiary-fixed": "#e1e3de",
+                        "primary-fixed-dim": "#2ae500",
+                        "tertiary": "#f9faf5",
+                        "on-tertiary-container": "#5f625e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#095300",
+                        "on-tertiary": "#2e312e",
+                        "on-secondary-container": "#a9bad3",
+                        "surface": "#101410",
+                        "surface-container": "#1d211c",
+                        "surface-container-lowest": "#0b0f0b",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#101410",
+                        "on-secondary": "#213145",
+                        "surface-container-low": "#191d18",
+                        "outline": "#85967c",
+                        "on-primary": "#053900",
+                        "on-tertiary-fixed": "#191c19",
+                        "surface-container-high": "#272b26",
+                        "on-surface-variant": "#baccb0",
+                        "inverse-on-surface": "#2d312c",
+                        "secondary": "#b7c8e1",
+                        "inverse-primary": "#106e00",
+                        "on-surface": "#e0e4dc",
+                        "inverse-surface": "#e0e4dc",
+                        "on-background": "#e0e4dc",
+                        "surface-bright": "#363a35",
+                        "surface-variant": "#323631",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#39ff14",
+                        "surface-tint": "#2ae500",
+                        "tertiary-fixed-dim": "#c5c7c2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin": "12px",
+                        "unit": "4px",
+                        "gutter": "1px",
+                        "container-padding": "8px"
+                    },
+                    fontFamily: {
+                        "body-md": ["IBM Plex Mono"],
+                        "code-dense": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"],
+                        "label-caps": ["IBM Plex Mono"]
+                    },
+                    fontSize: {
+                        "body-md": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "code-dense": ["13px", { "lineHeight": "120%", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["18px", { "lineHeight": "120%", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* scanline overlay */
+        body::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: #101410; }
+        ::-webkit-scrollbar-thumb { background: #38485d; }
+        ::-webkit-scrollbar-thumb:hover { background: #39ff14; }
+    </style>
+</head>
+<body class="bg-background text-on-surface h-screen overflow-hidden flex flex-col font-body-md relative selection:bg-primary-container selection:text-black">
+<!-- App Shell Wrapper -->
+<div class="flex h-full w-full">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-full w-64 border-r border-stone-800 bg-stone-950 font-mono text-[11px] leading-tight uppercase relative z-10">
+<div class="p-4 border-b border-stone-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-stone-900 border border-stone-800 flex items-center justify-center overflow-hidden">
+<img alt="User Terminal Profile" class="w-full h-full object-cover opacity-80 mix-blend-screen" data-alt="monochrome green tinted abstract data grid pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeUR7fpJqXTaN9xWYwnHAAx6U2f33vOizkdSqb4KRgexoTIuVux43k3r1_DOnVvxLF-EUxtpCafgJ_BY5gvS6cvFUXNQUG15NdC6n8BM16ahhNRrEG2nKARbQSQRBf5FxaD8VSni-PcPwpaz3dRR-ieLgMVGva3bFwAzfje8U-nYhKDlEMJS4qkm6sJ_mckbFrlTc-AgafJm4nIF7Ei-c-IvUI_XPb89sh_0jhymC0ThSUaYmUWnJYQSGJy6KT7PEAocXHWbHwUBpb"/>
+</div>
+<div>
+<div class="text-lg font-bold text-[#39FF14]">SEC-01</div>
+<div class="text-stone-500">LN-402</div>
+</div>
+</div>
+<button class="mt-4 w-full bg-transparent border border-stone-800 text-stone-300 py-2 hover:bg-stone-900 hover:text-[#39FF14] active:invert transition-none flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[14px]">add</span>
+                    НОВЫЙ ЗАПРОС
+                </button>
+</div>
+<nav class="flex-1 overflow-y-auto py-2">
+<!-- Active Item: РЕЕСТР (Registry fits Personnel context) -->
+<a class="flex items-center gap-3 bg-stone-900 border-l-4 border-[#39FF14] text-[#39FF14] py-3 px-4 transition-none cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">folder_managed</span>
+<span>РЕЕСТР</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] transition-none cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">database</span>
+<span>ОБЪЕКТЫ</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] transition-none cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span>АРХИВ</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] transition-none cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">settings_ethernet</span>
+<span>СИСТЕМА</span>
+</a>
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] transition-none cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">build</span>
+<span>УТИЛИТЫ</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-stone-800">
+<a class="flex items-center gap-3 text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] transition-none cursor-pointer active:invert" href="#">
+<span class="material-symbols-outlined">power_settings_new</span>
+<span>ВЫХОД</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full relative z-10 overflow-hidden bg-background">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-3 h-12 max-w-full docked full-width top-0 border-b border-stone-800 bg-stone-950 font-mono uppercase tracking-tighter text-xs shrink-0">
+<div class="flex items-center gap-6">
+<div class="text-lg font-black text-[#39FF14] tracking-widest mr-4">
+                        АРХИВ-СЕКТОР
+                    </div>
+<nav class="hidden md:flex gap-4 h-full items-end">
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black pb-1" href="#">
+                            ТЕРМИНАЛ
+                        </a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black pb-1" href="#">
+                            ЛОГИ
+                        </a>
+<!-- Active Item: СТАТУС -->
+<a class="text-[#39FF14] border-b border-[#39FF14] pb-1 hover:bg-stone-900 transition-none active:bg-[#39FF14] active:text-black" href="#">
+                            СТАТУС
+                        </a>
+<a class="text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black pb-1" href="#">
+                            АНАЛИЗ
+                        </a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2 text-stone-500">
+<button class="hover:text-[#39FF14] transition-none"><span class="material-symbols-outlined text-[18px]">settings_input_component</span></button>
+<button class="hover:text-[#39FF14] transition-none"><span class="material-symbols-outlined text-[18px]">terminal</span></button>
+</div>
+<button class="text-[#39FF14] border border-stone-800 px-3 py-1 hover:bg-stone-900 transition-none active:bg-[#39FF14] active:text-black">
+                        ВХОД
+                    </button>
+</div>
+</header>
+<!-- Canvas Container -->
+<div class="flex-1 overflow-y-auto p-margin pb-12">
+<!-- Page Header (Canvas level) -->
+<div class="mb-margin flex justify-between items-end border-b border-outline pb-2">
+<div>
+<h1 class="font-headline-lg text-primary-container uppercase">Досье Субъекта: 884-X-992</h1>
+<p class="font-code-dense text-on-surface-variant uppercase mt-1">&gt; Загрузка биометрических данных... Завершено.</p>
+</div>
+<div class="font-label-caps text-on-surface-variant text-right">
+<div>УРОВЕНЬ ДОСТУПА: 4</div>
+<div class="text-primary-container">АКТИВНАЯ УГРОЗА: ОТРИЦАТЕЛЬНО</div>
+</div>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter bg-outline border border-outline rounded-none">
+<!-- Bio Image Panel -->
+<div class="lg:col-span-3 bg-surface-container flex flex-col p-container-padding relative h-[300px]">
+<div class="absolute top-2 left-2 font-code-dense text-primary-container text-[10px]">SCN-ID: 44.9.0</div>
+<div class="absolute top-2 right-2 font-code-dense text-primary-container text-[10px] animate-pulse">REC</div>
+<div class="w-full h-full border border-outline-variant relative overflow-hidden bg-surface-container-lowest">
+<img alt="Biometric Scan" class="w-full h-full object-cover mix-blend-luminosity opacity-80 filter contrast-150 brightness-75 sepia hue-rotate-[70deg] saturate-200" data-alt="high contrast abstract thermal imaging of a human face profile, lime green and black duotone, technical scanline overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXm9a0rJFKdx89XVg28WZLQmYoBv3ptSobOj1kknh96rSAeDeLRdp3O8dw99j_PPJFmfgJsPNfCh48YS6idYqjAk0VlCGA4YtC7nT0VV7rOJN4Fr0QEjr00N9HE_Tt8TSWbgPen-gcR8Lp_BIzmBzB_Jx97ZjoxL1PYK0-v3k9wknv6g7j6YZF5kAJKs4o0mUfhAd7RTpw-T-ZanA3M3GRQUgZAi_oY8AlK-sBoYDzl-cLPHZ8G1bHWg9eKN_xWC5hLCEzVQSbHhab"/>
+<!-- Overlay Reticle -->
+<div class="absolute inset-0 pointer-events-none border border-primary-container/20 m-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container/40 text-6xl font-thin">crop_free</span>
+</div>
+</div>
+</div>
+<!-- Core Identification Panel -->
+<div class="lg:col-span-5 bg-surface-container flex flex-col p-container-padding gap-unit relative">
+<div class="text-[10px] text-on-surface-variant uppercase border-b border-outline-variant pb-1 mb-2">Основные Данные</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 font-code-dense uppercase text-[12px]">
+<div class="text-on-surface-variant">Идентификатор:</div>
+<div class="text-on-surface">UID-884-X-992</div>
+<div class="text-on-surface-variant">Позывной:</div>
+<div class="text-on-surface">"ВЕКТОР"</div>
+<div class="text-on-surface-variant">Статус:</div>
+<div class="text-primary-container bg-primary-container/10 px-1 inline-block border border-primary-container/30 w-max">АКТИВЕН</div>
+<div class="text-on-surface-variant">Локация:</div>
+<div class="text-on-surface">СЕКТОР-7 / ЗОНА-Б</div>
+<div class="text-on-surface-variant">Подразделение:</div>
+<div class="text-on-surface">ОПЕРАТИВНАЯ ГРУППА 4</div>
+<div class="text-on-surface-variant">Последний контакт:</div>
+<div class="text-on-surface">T-04:12:00</div>
+</div>
+<div class="mt-auto pt-2 border-t border-outline-variant flex justify-between items-center">
+<span class="font-label-caps text-on-surface-variant">АУТЕНТИФИКАЦИЯ: ПРОВЕРЕНА</span>
+<span class="material-symbols-outlined text-primary-container text-[16px]">verified</span>
+</div>
+</div>
+<!-- Telemetry Panel -->
+<div class="lg:col-span-4 bg-surface-container flex flex-col p-container-padding relative">
+<div class="text-[10px] text-on-surface-variant uppercase border-b border-outline-variant pb-1 mb-3">Телеметрия &amp; Биометрия</div>
+<div class="flex flex-col gap-4 font-code-dense text-[11px] uppercase">
+<!-- Stat 1 -->
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-on-surface-variant">Сердечный ритм (BPM)</span>
+<span class="text-primary-container">72 Норма</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-primary-container" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-on-surface-variant">Уровень стресса</span>
+<span class="text-on-surface">12% Стабильно</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-outline" style="width: 12%;"></div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-on-surface-variant">Скан Сетчатки</span>
+<span class="text-primary-container">СОВПАДЕНИЕ 99.9%</span>
+</div>
+<div class="flex gap-[1px] h-4 mt-1">
+<div class="flex-1 bg-primary-container/80"></div>
+<div class="flex-1 bg-primary-container/80"></div>
+<div class="flex-1 bg-primary-container/80"></div>
+<div class="flex-1 bg-primary-container/80"></div>
+<div class="flex-1 bg-primary-container/80"></div>
+<div class="flex-1 bg-primary-container/80"></div>
+<div class="flex-1 bg-surface-container-highest"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Trace Log Panel -->
+<div class="lg:col-span-12 bg-surface-container p-container-padding font-code-dense text-[11px] leading-relaxed uppercase border-t-0 lg:border-t border-outline">
+<div class="text-[10px] text-on-surface-variant border-b border-outline-variant pb-1 mb-2 flex justify-between">
+<span>Трассировка Авторизаций (Последние 24ч)</span>
+<span>[РЕЖИМ: АНАЛИТИКА]</span>
+</div>
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-on-surface-variant border-b border-outline-variant/50">
+<th class="py-1 font-normal w-32">ВРЕМЯ (МСК)</th>
+<th class="py-1 font-normal w-40">УЗЕЛ ДОСТУПА</th>
+<th class="py-1 font-normal">ПРОТОКОЛ</th>
+<th class="py-1 font-normal text-right">РЕЗУЛЬТАТ</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<td class="py-1.5 text-on-surface-variant">08:42:11.09</td>
+<td class="py-1.5">ТЕРМИНАЛ-Г-4</td>
+<td class="py-1.5">БИО-СКАН + PIN</td>
+<td class="py-1.5 text-right text-primary-container">ДОСТУП РАЗРЕШЕН</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<td class="py-1.5 text-on-surface-variant">12:05:44.22</td>
+<td class="py-1.5">ВРАТА-СЕКТОР-7</td>
+<td class="py-1.5">RFID МЕТКА</td>
+<td class="py-1.5 text-right text-primary-container">ДОСТУП РАЗРЕШЕН</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<td class="py-1.5 text-on-surface-variant">14:11:02.88</td>
+<td class="py-1.5 text-error">АРХИВ-БД-ОМЕГА</td>
+<td class="py-1.5">ТОКЕН-КЛЮЧ</td>
+<td class="py-1.5 text-right text-error bg-error/10 px-1 inline-block border-l border-error my-1">ОТКАЗ: УРОВЕНЬ 5 ТРЕБУЕТСЯ</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-1.5 text-on-surface-variant">14:15:30.01</td>
+<td class="py-1.5">КОММ-КАНАЛ-А</td>
+<td class="py-1.5">ГОЛОСОВОЙ СЛЕПОК</td>
+<td class="py-1.5 text-right text-primary-container">СОЕДИНЕНИЕ УСТАНОВЛЕНО</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full border-t border-stone-800 bg-stone-950 font-mono text-[9px] uppercase flex justify-between items-center px-4 py-1 h-8 z-20">
+<div class="text-stone-600">
+                    © 2024 ЦЕНТРАЛЬНЫЙ УЗЕЛ СВЯЗИ. КОРПУС-Г
+                </div>
+<div class="flex gap-4">
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПРОТОКОЛ</a>
+<a class="text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПОДДЕРЖКА</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

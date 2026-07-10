@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        .scanlines {
+            background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.4) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#805600",
+                        "on-primary": "#432c00",
+                        "surface-bright": "#393939",
+                        "on-primary-fixed-variant": "#614000",
+                        "primary": "#ffd597",
+                        "on-secondary": "#303030",
+                        "on-primary-container": "#6a4700",
+                        "on-surface-variant": "#d7c4ac",
+                        "on-error": "#690005",
+                        "on-tertiary": "#313030",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "secondary-fixed": "#e4e2e1",
+                        "inverse-on-surface": "#303030",
+                        "secondary": "#c8c6c6",
+                        "surface-container-low": "#1b1b1b",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#b6b5b4",
+                        "background": "#131313",
+                        "on-tertiary-container": "#4e4e4d",
+                        "surface-container-highest": "#353535",
+                        "outline-variant": "#524533",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#281800",
+                        "outline": "#9f8e78",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary": "#dddbda",
+                        "surface": "#131313",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#e2e2e2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#c1bfbe",
+                        "primary-fixed": "#ffddaf",
+                        "on-background": "#e2e2e2",
+                        "surface-dim": "#131313",
+                        "primary-fixed-dim": "#ffba43",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "primary-container": "#ffb000",
+                        "inverse-surface": "#e2e2e2",
+                        "secondary-container": "#474747",
+                        "surface-tint": "#ffba43",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container": "#1f1f1f",
+                        "surface-variant": "#353535"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "char-unit": "1ch",
+                        "line-unit": "1em",
+                        "container-padding": "4ch",
+                        "gutter": "2ch"
+                    },
+                    "fontFamily": {
+                        "label-md": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-lg": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-sm text-body-sm selection:bg-primary selection:text-on-primary min-h-screen flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-black text-amber-500 font-mono text-sm uppercase tracking-tighter flex justify-between items-center w-full px-4 h-12 border-b-2 border-amber-500 z-50 fixed top-0 left-0 transition-none active:scale-95">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="text-amber-500 font-mono font-black text-xl">DIRECT_ACCESS_v1.0</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined hover:bg-amber-500 hover:text-black cursor-pointer" data-icon="settings">settings</span>
+<span class="material-symbols-outlined hover:bg-amber-500 hover:text-black cursor-pointer" data-icon="power_settings_new">power_settings_new</span>
+</div>
+</header>
+<div class="flex flex-1 mt-12 mb-8 overflow-hidden relative">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-12 bottom-0 w-64 flex flex-col border-r-2 border-amber-500 py-4 bg-black z-40">
+<div class="px-4 mb-6">
+<h1 class="text-amber-500 font-mono font-bold text-lg">SYSTEM_KERNEL</h1>
+<p class="font-mono text-xs text-amber-700 uppercase">v4.2.0-STABLE</p>
+</div>
+<ul class="flex-1 flex flex-col gap-1 px-2 font-mono text-xs uppercase">
+<!-- Active Navigation -->
+<li>
+<a class="flex items-center gap-3 bg-amber-500 text-black px-2 py-1 font-bold cursor-pointer uppercase" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+                        ARCHIVE
+                    </a>
+</li>
+<!-- Inactive Navigation -->
+<li>
+<a class="flex items-center gap-3 text-amber-500 p-2 border border-transparent hover:border-amber-500 hover:bg-amber-900/20 cursor-pointer uppercase" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="group">group</span>
+                        OPERATORS
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-amber-500 p-2 border border-transparent hover:border-amber-500 hover:bg-amber-900/20 cursor-pointer uppercase" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="list_alt">list_alt</span>
+                        SYSTEM_LOG
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-amber-500 p-2 border border-transparent hover:border-amber-500 hover:bg-amber-900/20 cursor-pointer uppercase" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock">lock</span>
+                        ENCRYPTION
+                    </a>
+</li>
+</ul>
+<div class="px-4 mt-auto">
+<button class="w-full border-2 border-amber-500 text-amber-500 bg-black hover:bg-amber-500 hover:text-black py-2 font-mono text-xs uppercase cursor-pointer transition-none">
+                    INITIATE_UPLINK
+                </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 bg-background overflow-y-auto p-6 md:p-8 space-y-8">
+<div class="flex flex-col gap-2 border-b border-surface-variant pb-4">
+<p class="font-label-md text-label-md text-primary">&gt; QUERY_EXECUTED: SELECT * FROM ARCHIVE_RECORDS LIMIT 7</p>
+<p class="font-label-md text-label-md text-on-surface-variant">&gt; DISPLAY_MODE: TERMINAL_RAW</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-min">
+<!-- Dossier 1: High Priority Metric -->
+<article class="border border-outline bg-surface-container-low flex flex-col group relative">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_001 ]</span>
+<span class="font-label-md text-label-md text-error animate-pulse">[ CRITICAL ]</span>
+</div>
+<div class="p-4 flex flex-col gap-4">
+<div class="relative w-full h-32 bg-surface-container-highest border border-outline overflow-hidden mix-blend-luminosity grayscale opacity-80 group-hover:opacity-100 transition-opacity">
+<img alt="close-up of complex server motherboard with glowing circuits and intricate microchips in deep shadows" class="w-full h-full object-cover" data-alt="close-up of complex server motherboard with glowing circuits and intricate microchips in deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtRODvxGt3HbP6AjboylAYc--w0t5hxcx0Q6XUDbsqy6khcrICOOcnCMGv3Lr2d3NbhiYTrRtcf2-sqB7CJIwxk50MZbUsFcgtPESAccX3lCC_0zR_iWEhCaHWEyt9hbTPeI3qfb-GKYnEgKHxWdQU5_ki1mO-LYqZpa4-P26gHGuyTHpMHgofOEXvw2ne41phjz0mVdLspax_jghIHbB5ugWlwmJ5lEdh_3MW1CbOChi5qCA9Mk6KsgT2Bzcl3X7GWaJ4G8yI10c"/>
+<div class="absolute inset-0 scanlines pointer-events-none"></div>
+<span class="absolute bottom-1 right-1 bg-black text-primary font-label-md text-[10px] px-1">FEED_A</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface flex flex-col gap-1">
+<div class="flex justify-between"><span>CORE_TEMP</span> <span class="text-error">104°C</span></div>
+<div class="flex justify-between"><span>STRUCT_INT</span> <span>[████░░░░░░] 42%</span></div>
+<div class="w-full h-px bg-outline-variant my-1"></div>
+<p class="text-on-surface-variant text-xs mt-1">Breach detected in sector 7G. Containment protocols failing.</p>
+</div>
+</div>
+</article>
+<!-- Dossier 2: Text Heavy Log -->
+<article class="border border-outline bg-surface-container-low flex flex-col xl:row-span-2">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_002 ]</span>
+<span class="font-label-md text-label-md text-secondary">[ ARCHIVED ]</span>
+</div>
+<div class="p-4 flex flex-col gap-4 h-full">
+<p class="font-label-md text-label-md text-primary">&gt; DECRYPTING_PAYLOAD...</p>
+<div class="font-body-sm text-body-sm text-on-surface-variant whitespace-pre-wrap flex-1 bg-surface p-2 border border-surface-variant overflow-y-auto max-h-64 sm:max-h-full">
+11:42:01 - SYS_INIT
+11:42:05 - HANDSHAKE_ESTABLISHED
+11:43:12 - PACKET_LOSS_DETECTED
+11:43:15 - RETRY_SEQUENCE...
+11:43:20 - CONNECTION_TERMINATED
+=========================
+DUMP_TRACE:
+0x00A1: FF AA BB 01 02
+0x00A2: 00 00 00 00 00
+0x00A3: E4 5A 1C 9F 00
+=========================
+&gt; END_OF_LOG
+                        </div>
+</div>
+</article>
+<!-- Dossier 3: Geo Data -->
+<article class="border border-outline bg-surface-container-low flex flex-col">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_003 ]</span>
+<span class="font-label-md text-label-md text-primary">[ TRACKING ]</span>
+</div>
+<div class="p-4 flex flex-col gap-4">
+<div class="relative w-full h-24 bg-surface-container-highest border border-outline overflow-hidden mix-blend-luminosity grayscale opacity-60 group-hover:opacity-100 transition-opacity">
+<img alt="satellite view of dense urban city grid at night with bright intersecting highways and structural layout" class="w-full h-full object-cover" data-alt="satellite view of dense urban city grid at night with bright intersecting highways and structural layout" data-location="Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOSRa_cPL5T6XpFcFpDW9cic5hUEI1EfafXeYIjo_MaNyBUj5csMZ5dEGcpDLVTcP0cChow3qPiSwGz9UvE4mi7Z8_BSzspr97WmvzHfxERIXK3l72iTt3haBN8bqhGSsO2UnUMZHqYeuCMvf7yVCJDTKuiEVY782W54ke1DFGGGcGNK9u67m2RWgiACfuHHJbmyIiPb7Q4__llvXN7gNpA_TfXtAD_LuDU7NkfASm2kxK5vKfTRGgyFuT1H8fVvqHzQNLa1-wtLk"/>
+<div class="absolute inset-0 scanlines pointer-events-none"></div>
+<span class="absolute top-1 left-1 bg-black text-primary font-label-md text-[10px] px-1">SAT_UPLINK</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface grid grid-cols-2 gap-2">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[10px]">LATITUDE</span>
+<span>35.6895° N</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[10px]">LONGITUDE</span>
+<span>139.6917° E</span>
+</div>
+<div class="col-span-2 mt-2 pt-2 border-t border-outline-variant flex justify-between">
+<span>SIGNAL</span>
+<span>[██████████] 100%</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Dossier 4: Encrypted / Corrupt -->
+<article class="border border-outline bg-surface-container-low flex flex-col">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_004 ]</span>
+<span class="font-label-md text-label-md text-secondary">[ LOCKED ]</span>
+</div>
+<div class="p-4 flex flex-col gap-4">
+<div class="font-label-md text-label-md text-outline break-all leading-tight">
+                            ░▒▓████▓▒░░▒▓████▓▒░░▒▓████▓▒░░▒▓████▓▒░
+                            01010011 01011001 01010011 01010100 01000101 01001101
+                            ░▒▓████▓▒░░▒▓████▓▒░░▒▓████▓▒░░▒▓████▓▒░
+                            ACCESS_DENIED_AUTHORIZATION_REQUIRED
+                        </div>
+<button class="mt-auto w-full border border-primary text-primary hover:bg-primary hover:text-black py-1 font-label-md text-label-md uppercase transition-none">
+                            [ INITIATE_DECRYPT ]
+                        </button>
+</div>
+</article>
+<!-- Dossier 5: Personnel/Subject -->
+<article class="border border-outline bg-surface-container-low flex flex-col md:col-span-2 xl:col-span-1">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_005 ]</span>
+<span class="font-label-md text-label-md text-primary">[ SUBJECT ]</span>
+</div>
+<div class="p-4 flex gap-4 items-start">
+<div class="relative w-24 h-32 shrink-0 bg-surface-container-highest border border-outline overflow-hidden mix-blend-luminosity grayscale">
+<img alt="dark silhouette of a person standing in a dimly lit concrete corridor with harsh overhead lighting" class="w-full h-full object-cover" data-alt="dark silhouette of a person standing in a dimly lit concrete corridor with harsh overhead lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM_PwccGvlMsLUgN52fLEcKuVL87yn8-K-Pfv6wt75DKusqpIFmFfvNl1Q8Y6vhYC5s1tvVMd3xxxMFXoI-TONhqgDRfs6vvBcaUEcjX4RMdo2fYP3Q_vJyqE-omjLJ4X_8iu4HnbcfBNNBwfV9dnhqoGfYVac3EU4qlZMOoS2KMuMl19pBTOHteap8A79JzM6JuPAd3JXzrmcQQIXGrL9URA_IHyJFDR_D2euJfgiPU7nHMo5WCRRTBzPjWf_1-lAulhyqHLf1v8"/>
+<div class="absolute inset-0 scanlines pointer-events-none"></div>
+</div>
+<div class="font-label-md text-label-md text-on-surface flex flex-col gap-1 w-full">
+<p class="text-primary">&gt; ID: 884-A</p>
+<p>&gt; ALIAS: "ECHO"</p>
+<p>&gt; STATUS: ACTIVE</p>
+<div class="w-full h-px bg-outline-variant my-2"></div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">CLEARANCE</span>
+<span>LEVEL_4</span>
+</div>
+<div class="flex justify-between text-xs mt-1">
+<span class="text-on-surface-variant">LAST_SEEN</span>
+<span>04:00_HRS</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Dossier 6: Subsystem Architecture -->
+<article class="border border-outline bg-surface-container-low flex flex-col">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_006 ]</span>
+<span class="font-label-md text-label-md text-primary">[ SCHEMATIC ]</span>
+</div>
+<div class="p-4 flex flex-col gap-4">
+<div class="relative w-full h-24 bg-surface-container-highest border border-outline overflow-hidden mix-blend-luminosity grayscale opacity-60">
+<img alt="abstract top-down view of complex circuitry and digital grid networks glowing faintly in monochrome" class="w-full h-full object-cover" data-alt="abstract top-down view of complex circuitry and digital grid networks glowing faintly in monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVzH9dtPfUdREWWANqUBgBjvQ3tHTGiKvvONlP3QLyds5YGsAO0Mfpf69PrK7j372GvXzZQwXaGzC1wQRq2jHa6qnK82Kyz56ekJ5fsZkMCgKqtPPWgwemM8h1BJyGoM5lIYdMp4tM5yU-ZbwR-jFm1eaQA-NRsYERgYdqGAs3j3ExQs0lOKoB3d3UupOXPmYr1QI8Gpp48Tj0jT0CJD2oWBP8vcVXARUJJqwOxGMIc3GtJRvXt4sewWNgg_9uPRoM2J7XqjypZ-Y"/>
+<div class="absolute inset-0 scanlines pointer-events-none"></div>
+</div>
+<div class="font-label-md text-label-md text-on-surface space-y-1">
+<p>&gt; NODE_ALPHA: <span class="text-primary">[ ONLINE ]</span></p>
+<p>&gt; NODE_BETA: <span class="text-primary">[ ONLINE ]</span></p>
+<p>&gt; NODE_GAMMA: <span class="text-error">[ OFFLINE ]</span></p>
+</div>
+</div>
+</article>
+<!-- Dossier 7: Minimal Metric Block -->
+<article class="border border-outline bg-surface-container-low flex flex-col">
+<div class="bg-surface-container px-2 py-1 border-b border-outline flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary">┌─[ DOC_007 ]</span>
+<span class="font-label-md text-label-md text-primary">[ POWER ]</span>
+</div>
+<div class="p-6 flex flex-col justify-center items-center h-full gap-4">
+<div class="relative flex items-center justify-center">
+<svg class="w-24 h-24 transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-variant" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-primary" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-headline-md text-headline-md text-primary">75%</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">&gt; MAIN_REACTOR</span>
+</div>
+</article>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-4 py-1 border-t-2 border-amber-500 bg-black text-amber-500 font-mono text-[10px]">
+<div>ROOT@ARCHIVE:~# <span class="animate-[pulse_1s_step-start_infinite]">_</span></div>
+<div class="flex gap-4">
+<a class="text-amber-600 hover:text-amber-200" href="#">STATUS</a>
+<a class="text-amber-600 hover:text-amber-200" href="#">UPTIME</a>
+<a class="text-amber-600 hover:text-amber-200" href="#">EXIT</a>
+</div>
+</footer>
+</body></html>

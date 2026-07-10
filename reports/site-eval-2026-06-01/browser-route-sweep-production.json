@@ -1,0 +1,1057 @@
+[
+  {
+    "route": "/",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 240,
+          "cw": 768,
+          "h": 240,
+          "sh": 248,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 4169,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/.codex-prod-desktop-home-2026-06-01.png"
+  },
+  {
+    "route": "/portfolio",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Семь главных работ и результатов.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 120,
+          "cw": 768,
+          "h": 120,
+          "sh": 128,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Семь главных работ и результатов.",
+          "w": 768
+        },
+        {
+          "ch": 60,
+          "cw": 207,
+          "h": 60,
+          "sh": 69,
+          "sw": 207,
+          "tag": "p",
+          "text": "50+",
+          "w": 207
+        },
+        {
+          "ch": 120,
+          "cw": 207,
+          "h": 120,
+          "sh": 129,
+          "sw": 207,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 207
+        },
+        {
+          "ch": 60,
+          "cw": 207,
+          "h": 60,
+          "sh": 69,
+          "sw": 207,
+          "tag": "p",
+          "text": "#64",
+          "w": 207
+        },
+        {
+          "ch": 15,
+          "cw": 39,
+          "h": 15,
+          "sh": 15,
+          "sw": 48,
+          "tag": "p",
+          "text": "СТАТУС",
+          "w": 39
+        },
+        {
+          "ch": 15,
+          "cw": 39,
+          "h": 15,
+          "sh": 15,
+          "sw": 48,
+          "tag": "p",
+          "text": "СТАТУС",
+          "w": 39
+        },
+        {
+          "ch": 15,
+          "cw": 20,
+          "h": 15,
+          "sh": 15,
+          "sw": 48,
+          "tag": "p",
+          "text": "СТАТУС",
+          "w": 20
+        },
+        {
+          "ch": 60,
+          "cw": 20,
+          "h": 60,
+          "sh": 60,
+          "sw": 39,
+          "tag": "p",
+          "text": "файл + текст",
+          "w": 20
+        },
+        {
+          "ch": 60,
+          "cw": 386,
+          "h": 60,
+          "sh": 69,
+          "sw": 386,
+          "tag": "p",
+          "text": "50+",
+          "w": 386
+        },
+        {
+          "ch": 60,
+          "cw": 386,
+          "h": 60,
+          "sh": 69,
+          "sw": 386,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 386
+        },
+        {
+          "ch": 60,
+          "cw": 877,
+          "h": 60,
+          "sh": 69,
+          "sw": 877,
+          "tag": "p",
+          "text": "#64",
+          "w": 877
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 8074,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Работы | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/blog",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 115,
+          "tag": "p",
+          "text": "00",
+          "w": 95
+        },
+        {
+          "ch": 240,
+          "cw": 668,
+          "h": 240,
+          "sh": 248,
+          "sw": 668,
+          "tag": "h1",
+          "text": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+          "w": 668
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 1652,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Блог | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/blog/proof-led-portfolio",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Почему портфолио собрано вокруг подтверждений",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 180,
+          "cw": 768,
+          "h": 180,
+          "sh": 188,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Почему портфолио собрано вокруг подтверждений",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 2066,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Почему портфолио собрано вокруг подтверждений | Field Notes | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/services-calculator",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Сначала задача, материалы и срок. Потом честный класс сложности.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 115,
+          "tag": "p",
+          "text": "04",
+          "w": 95
+        },
+        {
+          "ch": 240,
+          "cw": 589,
+          "h": 240,
+          "sh": 248,
+          "sw": 589,
+          "tag": "h1",
+          "text": "Сначала задача, материалы и срок. Потом честный класс сложности.",
+          "w": 589
+        },
+        {
+          "ch": 60,
+          "cw": 531,
+          "h": 60,
+          "sh": 69,
+          "sw": 531,
+          "tag": "p",
+          "text": "Advanced",
+          "w": 531
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 3672,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Калькулятор услуг | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/.codex-prod-desktop-services-calculator-2026-06-01.png"
+  },
+  {
+    "route": "/ai-assistant",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Локальный помощник по сайту, который не выходит за публичные факты.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 115,
+          "tag": "p",
+          "text": "93",
+          "w": 95
+        },
+        {
+          "ch": 360,
+          "cw": 558,
+          "h": 360,
+          "sh": 368,
+          "sw": 558,
+          "tag": "h1",
+          "text": "Локальный помощник по сайту, который не выходит за публичные факты.",
+          "w": 558
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 2581,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Помощник | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/awards-credentials",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Подтверждения собраны в два слоя: главные кейсы в портфолио и фоновая база здесь.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 240,
+          "cw": 768,
+          "h": 240,
+          "sh": 248,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Подтверждения собраны в два слоя: главные кейсы в портфолио и фоновая база здесь.",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 1937,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Награды и подтверждения | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/en",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Nikita Kizevich / AI_Nikitka93: proof-led AI video, visual and prototype work.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 240,
+          "cw": 768,
+          "h": 240,
+          "sh": 248,
+          "sw": 768,
+          "tag": "h1",
+          "text": "Nikita Kizevich / AI_Nikitka93: proof-led AI video, visual and prototype work.",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 1612,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "English Summary | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/links",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 96,
+          "cw": 95,
+          "h": 96,
+          "sh": 110,
+          "sw": 115,
+          "tag": "p",
+          "text": "05",
+          "w": 95
+        },
+        {
+          "ch": 360,
+          "cw": 471,
+          "h": 360,
+          "sh": 368,
+          "sw": 492,
+          "tag": "h1",
+          "text": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+          "w": 471
+        },
+        {
+          "ch": 30,
+          "cw": 52,
+          "h": 30,
+          "sh": 30,
+          "sw": 78,
+          "tag": "p",
+          "text": "СИГНАЛЬНЫЙ ПОТОК",
+          "w": 52
+        },
+        {
+          "ch": 30,
+          "cw": 52,
+          "h": 30,
+          "sh": 30,
+          "sw": 125,
+          "tag": "p",
+          "text": "ВЕРИФИЦИРОВАННЫЙ ПРОФИЛЬ",
+          "w": 52
+        },
+        {
+          "ch": 30,
+          "cw": 52,
+          "h": 30,
+          "sh": 30,
+          "sw": 101,
+          "tag": "p",
+          "text": "УЗЕЛ ПОДТВЕРЖДЕНИЯ",
+          "w": 52
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 2297,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "Связи | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+    "viewport": "desktop",
+    "metric": {
+      "brokenImages": [],
+      "h1": "35AWARDS — AI Imaging Field Results",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 120,
+          "cw": 768,
+          "h": 120,
+          "sh": 128,
+          "sw": 768,
+          "tag": "h1",
+          "text": "35AWARDS — AI Imaging Field Results",
+          "w": 768
+        }
+      ],
+      "scroll": {
+        "clientHeight": 1000,
+        "clientWidth": 1425,
+        "height": 3108,
+        "width": 1425
+      },
+      "smallTargets": [],
+      "title": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Никита Кизевич и проект AI_Nikitka93: работы, опыт и текущие направления.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 8676,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "AI_Nikitka93 — портфолио работ и проектов",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/.codex-prod-mobile-home-2026-06-01.png"
+  },
+  {
+    "route": "/portfolio",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Семь главных работ и результатов.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "50+",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "#64",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "50+",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "TOP-9%",
+          "w": 275
+        },
+        {
+          "ch": 48,
+          "cw": 275,
+          "h": 48,
+          "sh": 55,
+          "sw": 275,
+          "tag": "p",
+          "text": "#64",
+          "w": 275
+        }
+      ],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 17980,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Работы | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/blog",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Заметки о работе: что получилось, что не получилось и что оказалось полезным.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "00",
+          "w": 343
+        }
+      ],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 3522,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Блог | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/blog/proof-led-portfolio",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Почему портфолио собрано вокруг подтверждений",
+      "hasHorizontalOverflow": false,
+      "overflowText": [],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 3407,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Почему портфолио собрано вокруг подтверждений | Field Notes | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/services-calculator",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Сначала задача, материалы и срок. Потом честный класс сложности.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "04",
+          "w": 343
+        },
+        {
+          "ch": 60,
+          "cw": 288,
+          "h": 60,
+          "sh": 69,
+          "sw": 288,
+          "tag": "p",
+          "text": "Advanced",
+          "w": 288
+        }
+      ],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 7977,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Калькулятор услуг | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/ai-assistant",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Локальный помощник по сайту, который не выходит за публичные факты.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 44,
+          "cw": 105,
+          "h": 44,
+          "sh": 44,
+          "sw": 113,
+          "tag": "a",
+          "text": "AI_NIKITKA93 портфолио",
+          "w": 105
+        },
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "93",
+          "w": 343
+        },
+        {
+          "ch": 46,
+          "cw": 299,
+          "h": 48,
+          "sh": 46,
+          "sw": 328,
+          "tag": "input",
+          "text": "Какие три кейса посмотреть сначала?",
+          "w": 301
+        }
+      ],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 6293,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Помощник | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": "M:/Projects/sites/ai-nikitka-portfolio/.codex-prod-mobile-ai-assistant-2026-06-01.png"
+  },
+  {
+    "route": "/awards-credentials",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Подтверждения собраны в два слоя: главные кейсы в портфолио и фоновая база здесь.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 3883,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Награды и подтверждения | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/en",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Nikita Kizevich / AI_Nikitka93: proof-led AI video, visual and prototype work.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 2917,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "English Summary | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/links",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "Публичные маршруты к архиву, автору и внешним узлам подтверждения.",
+      "hasHorizontalOverflow": false,
+      "overflowText": [
+        {
+          "ch": 44,
+          "cw": 105,
+          "h": 44,
+          "sh": 44,
+          "sw": 113,
+          "tag": "a",
+          "text": "AI_NIKITKA93 портфолио",
+          "w": 105
+        },
+        {
+          "ch": 72,
+          "cw": 343,
+          "h": 72,
+          "sh": 83,
+          "sw": 343,
+          "tag": "p",
+          "text": "05",
+          "w": 343
+        }
+      ],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 5225,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "Связи | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  },
+  {
+    "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+    "viewport": "mobile",
+    "metric": {
+      "brokenImages": [],
+      "h1": "35AWARDS — AI Imaging Field Results",
+      "hasHorizontalOverflow": false,
+      "overflowText": [],
+      "scroll": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "height": 5095,
+        "width": 375
+      },
+      "smallTargets": [],
+      "title": "35AWARDS — AI Imaging Field Results | Proof Archive | AI_Nikitka93",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "logs": [
+      {
+        "level": "warn",
+        "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+        "timestamp": "2026-06-01T13:26:47.584Z",
+        "url": "http://127.0.0.1:3100/_next/static/chunks/node_modules_next_dist_115brz8._.js"
+      }
+    ],
+    "screenshotPath": null
+  }
+]

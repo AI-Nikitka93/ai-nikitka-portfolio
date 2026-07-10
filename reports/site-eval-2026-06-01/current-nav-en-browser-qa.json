@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-06-01T15:41:03.452Z",
+  "url": "http://127.0.0.1:3200/en",
+  "title": "English Summary | AI_Nikitka93",
+  "currentLinks": [
+    {
+      "text": "EN",
+      "href": "/en",
+      "hiddenByCss": false
+    },
+    {
+      "text": "EN",
+      "href": "/en",
+      "hiddenByCss": false
+    }
+  ],
+  "hasEnglishCurrent": true,
+  "hasWrongCurrent": false,
+  "mainLang": "en",
+  "horizontalOverflow": false
+}

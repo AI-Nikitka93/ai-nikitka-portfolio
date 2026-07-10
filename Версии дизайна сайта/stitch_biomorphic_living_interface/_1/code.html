@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Архив</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@300;400;700&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#155129",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#00210b",
+                        "primary": "#c9c6c5",
+                        "tertiary": "#97d5a0",
+                        "surface-container-highest": "#353434",
+                        "on-primary": "#313030",
+                        "surface": "#141313",
+                        "on-error": "#690005",
+                        "on-secondary": "#2f3131",
+                        "tertiary-fixed-dim": "#97d5a0",
+                        "surface-variant": "#353434",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-dim": "#141313",
+                        "surface-container-high": "#2b2a2a",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#0d0d0d",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline-variant": "#444748",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-container": "#7c7a7a",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "inverse-primary": "#5f5e5e",
+                        "outline": "#8e9192",
+                        "surface-tint": "#c9c6c5",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-container": "#4d8759",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary": "#003917",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c6c7",
+                        "on-surface-variant": "#c4c7c7",
+                        "tertiary-fixed": "#b2f2bb",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-container": "#454747",
+                        "on-primary-fixed-variant": "#474646",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-error-container": "#ffdad6",
+                        "background": "#141313",
+                        "tertiary-container": "#001104"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "margin-edge": "64px",
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Mono"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "h2": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "body-main": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "data-mono": ["14px", { "lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "h2": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "h1": ["84px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "300" }],
+                        "h3": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-main": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glow-mint { box-shadow: 0 0 60px -15px rgba(151, 213, 160, 0.2); }
+        .hover-glow-mint:hover { box-shadow: 0 0 80px -10px rgba(151, 213, 160, 0.4); }
+        .bio-shape-1 { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        .bio-shape-2 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .bio-shape-3 { border-radius: 50% 50% 60% 40% / 40% 60% 50% 60%; }
+        .titanium-border { border: 0.5px solid rgba(201, 198, 197, 0.15); }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-12 py-6 w-full fixed top-0 z-50 bg-[#0D0D0D]/80 backdrop-blur-xl docked full-width top-0 border-b border-white/10 shadow-[0_0_40px_-15px_rgba(152,255,152,0.15)] border-b-[0.5px] border-white/20">
+<div class="text-lg font-bold tracking-widest text-[#f0f0f0] uppercase font-['Space_Grotesk'] tracking-tight">AI_Nikitka93</div>
+<div class="hidden">Search</div>
+<div class="text-[#f0f0f0] font-['Space_Grotesk'] tracking-tight">RU / EN</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden md:flex h-screen w-20 hover:w-64 fixed left-0 top-0 border-r border-white/5 transition-all duration-700 ease-in-out border-r-[0.5px] border-white/10 flat no shadows bg-[#0D0D0D]/40 backdrop-blur-2xl flex-col items-center py-12 gap-8 h-full z-40 group">
+<div class="flex flex-col items-center justify-center mt-12 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 whitespace-nowrap overflow-hidden">
+<span class="text-emerald-400 font-black font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em]">AI_Nikitka93</span>
+<span class="text-emerald-400/50 font-['IBM_Plex_Mono'] uppercase text-[8px] tracking-[0.1em] mt-2">Bio-Digital Protocol</span>
+</div>
+<div class="flex flex-col gap-8 w-full px-4 mt-auto mb-auto">
+<a class="flex items-center gap-4 text-zinc-600 font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl">home</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Главная</span>
+</a>
+<a class="flex items-center gap-4 text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.8)] font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500 bg-emerald-400/10" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl" style="font-variation-settings: 'FILL' 1;">genetics</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Архив</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-600 font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl">memory</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Досье</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-600 font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl">fingerprint</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Оператор</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-600 font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl">monitoring</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Заметки</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-600 font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl">magnification_small</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Область</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-600 font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-[0.2em] p-3 rounded-full hover:bg-emerald-400/5 hover:text-emerald-200 scale-105 transition-transform duration-500" href="#">
+<span class="material-symbols-outlined shrink-0 text-xl">link</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-0 group-hover:w-auto overflow-hidden whitespace-nowrap">Ссылки</span>
+</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="ml-0 md:ml-20 pt-32 pb-section-gap px-gutter min-h-screen relative flex flex-col">
+<!-- Background Ambient Effects -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-tertiary/5 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] mix-blend-screen opacity-20"></div>
+</div>
+<!-- Section Header -->
+<div class="max-w-container-max mx-auto w-full mb-32 flex flex-col gap-6 relative">
+<h1 class="font-h1 text-h1 text-on-surface">Архив</h1>
+<p class="font-data-mono text-data-mono text-outline max-w-2xl">
+                Идентификационные данные и метрики биологической активности. Органическое поле анализа.
+            </p>
+<div class="absolute -left-8 top-4 w-1 h-32 bg-gradient-to-b from-tertiary/50 to-transparent rounded-full glow-mint"></div>
+</div>
+<!-- Organic Field Container -->
+<div class="relative w-full max-w-container-max mx-auto min-h-[800px] flex items-center justify-center">
+<!-- Absolute Positioning for Asymmetric Organic Layout -->
+<!-- Metric Dossier 1 -->
+<div class="absolute top-0 left-[10%] w-[320px] h-[320px] bio-shape-1 titanium-border backdrop-blur-md bg-surface-container/30 hover-glow-mint transition-all duration-700 flex flex-col items-center justify-center p-8 group cursor-pointer z-10 hover:scale-105">
+<div class="font-data-mono text-data-mono text-tertiary/70 mb-4 opacity-70 group-hover:opacity-100 transition-opacity tracking-widest">ПРОТОКОЛ АЛЬФА</div>
+<div class="font-h1 text-h1 text-on-surface mb-2">50+</div>
+<div class="font-label-caps text-label-caps text-outline">АКТИВНЫХ ЦИКЛОВ</div>
+<div class="absolute inset-0 bg-gradient-to-tr from-tertiary/5 to-transparent bio-shape-1 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+</div>
+<!-- Media Dossier 1 -->
+<div class="absolute top-[15%] right-[20%] w-[380px] h-[420px] bio-shape-2 titanium-border overflow-hidden hover-glow-mint transition-all duration-700 group cursor-pointer z-20 hover:z-30 hover:scale-105">
+<img alt="Cellular scan" class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity duration-700 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="microscopic view of organic cell structures glowing with faint emerald and cyan bioluminescence against a dark background, high detail, scientific medical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Dj-VhqNmakz3Aqfu8n323-tg43tqAROqi90gZRFEYum8oy_P80dwS4IW65Uhb-Tdyckp961mEvKvg-Ui2DVAxsWn7h3-bi0pfeWdEb-OCLLKvXV6igNADAOZImVqzpVByernzJgawailCACFLMvcplB8P4DdGrXGn1_041iWnaIF1CN0OsKNfqLQy75rv0EGPMBhqdkQ3qzAluGjZBcWyrqPCqECj-BQDDjewmpUcFhdqJiCU35um_nF8w3y2S9bHE6sQ35hFu8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<div class="font-h3 text-h3 text-on-surface mb-2">Объект_01</div>
+<div class="font-data-mono text-data-mono text-tertiary">СТАТУС: СТАБИЛЕН</div>
+</div>
+</div>
+<!-- Metric Dossier 2 -->
+<div class="absolute bottom-[20%] right-[5%] w-[280px] h-[280px] bio-shape-3 titanium-border backdrop-blur-sm bg-surface-container/20 hover-glow-mint transition-all duration-700 flex flex-col items-center justify-center p-6 group cursor-pointer z-10 hover:scale-105">
+<div class="font-h2 text-h2 text-tertiary mb-2">#64</div>
+<div class="font-label-caps text-label-caps text-outline text-center">ИНДЕКС<br/>КОРРЕЛЯЦИИ</div>
+<!-- Pulsing ring -->
+<div class="absolute inset-4 border border-tertiary/20 rounded-full animate-pulse blur-[1px]"></div>
+</div>
+<!-- Metric Dossier 3 (Giant) -->
+<div class="absolute bottom-[5%] left-[25%] w-[400px] h-[400px] rounded-full titanium-border backdrop-blur-xl bg-surface-container-high/40 hover-glow-mint transition-all duration-700 flex flex-col items-center justify-center p-12 group cursor-pointer z-20 hover:scale-[1.02]">
+<div class="absolute top-12 left-1/2 -translate-x-1/2 font-data-mono text-data-mono text-outline">РЕЗУЛЬТАТ СИНТЕЗА</div>
+<div class="font-h1 text-[120px] leading-none text-on-surface tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-on-surface to-outline group-hover:from-tertiary group-hover:to-surface-variant transition-all duration-1000">TOP-9%</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2">
+<span class="w-1 h-1 bg-tertiary rounded-full"></span>
+<span class="w-1 h-1 bg-tertiary/50 rounded-full"></span>
+<span class="w-1 h-1 bg-tertiary/20 rounded-full"></span>
+</div>
+</div>
+<!-- Small Connecting Data Nodes -->
+<div class="absolute top-[45%] left-[45%] flex items-center gap-4 opacity-50">
+<div class="w-2 h-2 rounded-full bg-tertiary glow-mint"></div>
+<div class="h-[1px] w-32 bg-gradient-to-r from-tertiary/50 to-transparent"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="ml-0 md:ml-20 flex justify-between items-center px-24 w-full py-12 bg-transparent flat none">
+<div class="font-['IBM_Plex_Mono'] text-[9px] uppercase tracking-widest text-zinc-700 opacity-50 hover:opacity-100 transition-opacity">
+            © 2024 AI_Nikitka93 — Био-цифровая точность
+        </div>
+<div class="flex gap-8 font-['IBM_Plex_Mono'] text-[9px] uppercase tracking-widest">
+<a class="text-zinc-800 hover:text-emerald-500 transition-colors opacity-50 hover:opacity-100" href="#">Спецификации</a>
+<a class="text-zinc-800 hover:text-emerald-500 transition-colors opacity-50 hover:opacity-100" href="#">Протокол</a>
+</div>
+</footer>
+</body></html>

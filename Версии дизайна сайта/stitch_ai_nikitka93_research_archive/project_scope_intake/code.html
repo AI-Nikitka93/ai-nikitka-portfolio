@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 // Project Intake</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dfe4de",
+                    "tertiary-container": "#dfe4de",
+                    "tertiary-fixed-dim": "#c3c8c2",
+                    "on-secondary": "#333028",
+                    "on-background": "#dfe4db",
+                    "inverse-primary": "#506600",
+                    "on-secondary-fixed": "#1e1c14",
+                    "on-primary-container": "#556d00",
+                    "background": "#10150f",
+                    "secondary": "#cbc6ba",
+                    "surface-container-highest": "#313630",
+                    "tertiary": "#ffffff",
+                    "on-secondary-container": "#bab5a9",
+                    "error": "#ffb4ab",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#dfe4db",
+                    "on-error": "#690005",
+                    "secondary-container": "#4a473e",
+                    "outline": "#8e9379",
+                    "surface-variant": "#313630",
+                    "outline-variant": "#444933",
+                    "on-tertiary": "#2c322e",
+                    "primary-container": "#c3f400",
+                    "on-error-container": "#ffdad6",
+                    "inverse-on-surface": "#2c322c",
+                    "surface-container": "#1c211b",
+                    "surface": "#10150f",
+                    "surface-container-low": "#181d17",
+                    "on-surface": "#dfe4db",
+                    "primary-fixed": "#c3f400",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "primary": "#ffffff",
+                    "on-primary-fixed": "#161e00",
+                    "surface-container-lowest": "#0a0f0a",
+                    "on-tertiary-container": "#606661",
+                    "on-primary": "#283500",
+                    "on-tertiary-fixed": "#181d19",
+                    "surface-bright": "#353b34",
+                    "secondary-fixed": "#e8e2d6",
+                    "surface-container-high": "#262b25",
+                    "surface-dim": "#10150f",
+                    "on-surface-variant": "#c4c9ac",
+                    "primary-fixed-dim": "#abd600",
+                    "secondary-fixed-dim": "#cbc6ba",
+                    "on-secondary-fixed-variant": "#4a473e",
+                    "surface-tint": "#abd600",
+                    "on-tertiary-fixed-variant": "#434844"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "grid-columns": "12",
+                    "stack-lg": "4rem",
+                    "margin": "2rem",
+                    "unit": "4px",
+                    "gutter": "1rem",
+                    "stack-sm": "0.5rem",
+                    "stack-md": "1.5rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "metadata-sm": ["IBM Plex Mono"],
+                    "headline-md": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "metadata-lg": ["IBM Plex Mono"],
+                    "label": ["IBM Plex Mono"],
+                    "headline-xl": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "metadata-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "metadata-lg": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label": ["10px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                    "headline-xl": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom Utilities for Input Forms to match Brutalist guidelines */
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: theme('colors.primary-container');
+        }
+        
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background');
+            border-left: 1px solid theme('colors.surface-variant');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.surface-variant');
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-black dark:bg-black fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-20 border-b border-zinc-800">
+<div class="text-2xl font-black text-[#CCFF00]">
+            AI_Nikitka93
+        </div>
+<div class="flex items-center gap-8">
+<div class="font-['Space_Grotesk'] font-bold tracking-tight uppercase text-zinc-500">
+                RU / <span class="text-[#CCFF00] underline decoration-2 underline-offset-4">EN</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-black dark:bg-black fixed left-0 top-20 w-72 h-[calc(100vh-80px)] flex flex-col pt-12 border-r border-zinc-800">
+<div class="px-8 pb-12">
+<div class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest text-zinc-500 mb-1">INDEX</div>
+<div class="font-['IBM_Plex_Mono'] text-sm tracking-widest uppercase text-zinc-600">V.093_RESEARCH</div>
+</div>
+<div class="flex flex-col gap-1 w-full font-['IBM_Plex_Mono'] text-sm tracking-widest uppercase">
+<!-- 01/ ARCHIVE -->
+<a class="text-zinc-400 px-8 py-3 flex items-center justify-start gap-4 hover:bg-zinc-900 transition-none w-full" href="#">
+<span class="material-symbols-outlined text-lg">folder_open</span>
+<span>01/ ARCHIVE</span>
+</a>
+<!-- 02/ DOSSIER (Active) -->
+<a class="bg-[#CCFF00] text-black px-8 py-3 flex items-center justify-start gap-4 transition-none w-full cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-lg" data-weight="fill">account_box</span>
+<span>02/ DOSSIER</span>
+</a>
+<!-- 03/ LOGS -->
+<a class="text-zinc-400 px-8 py-3 flex items-center justify-start gap-4 hover:bg-zinc-900 transition-none w-full" href="#">
+<span class="material-symbols-outlined text-lg">terminal</span>
+<span>03/ LOGS</span>
+</a>
+<!-- 04/ OPERATOR -->
+<a class="text-zinc-400 px-8 py-3 flex items-center justify-start gap-4 hover:bg-zinc-900 transition-none w-full" href="#">
+<span class="material-symbols-outlined text-lg">support_agent</span>
+<span>04/ OPERATOR</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-72 mt-20 mb-20 p-12 lg:p-margin min-h-[calc(100vh-160px)] flex flex-col">
+<!-- Header Section -->
+<div class="mb-stack-lg border-b border-surface-variant pb-stack-sm flex flex-col gap-stack-sm">
+<div class="inline-flex border border-outline w-fit px-2 py-1">
+<span class="font-metadata-sm text-metadata-sm text-outline uppercase tracking-widest">Action_Required</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase">Scope / Project Intake</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-4">
+                Initialize new research parameter bindings. All fields subject to archival validation. Ensure precise taxonomic alignment before final execution sequence.
+            </p>
+</div>
+<!-- Asymmetric Form Grid Layout -->
+<form class="grid grid-cols-1 md:grid-cols-12 gap-gutter lg:gap-x-12 gap-y-stack-lg flex-grow">
+<!-- Section 01: Identification (Left Column on md, spanning to right) -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-4 border-t border-surface-variant pt-stack-sm">
+<h2 class="font-metadata-lg text-metadata-lg text-on-surface uppercase tracking-widest flex items-center gap-2">
+<span class="text-primary-container">01.</span> Primary Designation
+                </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Establish core metadata identifiers for the operational dossier. 
+                </p>
+</div>
+<div class="col-span-1 md:col-span-8 flex flex-col gap-stack-md border-t border-surface-variant pt-stack-sm">
+<!-- Input Group -->
+<div class="flex flex-col gap-2 w-full">
+<label class="font-metadata-sm text-metadata-sm text-on-secondary-container uppercase tracking-widest" for="proj-name">Project Nomenclature</label>
+<input class="bg-transparent border-0 border-b border-outline-variant text-on-surface font-body-lg text-body-lg px-0 py-2 w-full focus:ring-0 focus:border-primary-container transition-colors placeholder-on-surface-variant/30" id="proj-name" placeholder="e.g. OP_VALKYRIE" type="text"/>
+</div>
+<!-- 2-Col Input Row inside main grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col gap-2 w-full">
+<label class="font-metadata-sm text-metadata-sm text-on-secondary-container uppercase tracking-widest" for="client-ref">Client Ref / Source</label>
+<input class="bg-transparent border-0 border-b border-outline-variant text-on-surface font-body-lg text-body-lg px-0 py-2 w-full focus:ring-0 focus:border-primary-container transition-colors placeholder-on-surface-variant/30" id="client-ref" placeholder="Entity ID" type="text"/>
+</div>
+<div class="flex flex-col gap-2 w-full">
+<label class="font-metadata-sm text-metadata-sm text-on-secondary-container uppercase tracking-widest" for="init-date">Initialization Date</label>
+<input class="bg-transparent border-0 border-b border-outline-variant text-on-surface font-metadata-lg text-metadata-lg px-0 py-2 w-full focus:ring-0 focus:border-primary-container transition-colors placeholder-on-surface-variant/30" id="init-date" placeholder="YYYY-MM-DD" type="text" value="2023-10-24"/>
+</div>
+</div>
+</div>
+<!-- Section 02: Technical Parameters -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-4 border-t border-surface-variant pt-stack-sm">
+<h2 class="font-metadata-lg text-metadata-lg text-on-surface uppercase tracking-widest flex items-center gap-2">
+<span class="text-primary-container">02.</span> Technical Vectors
+                </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Define structural boundaries and output modalities for the synthesized data container.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-8 border-t border-surface-variant pt-stack-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Brutalist Select Alternative (Radio Buttons styled as grid) -->
+<div class="col-span-3 flex flex-col gap-4">
+<label class="font-metadata-sm text-metadata-sm text-on-secondary-container uppercase tracking-widest">Output Modality Priority</label>
+<div class="grid grid-cols-3 gap-unit">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="priority" type="radio"/>
+<div class="border border-outline-variant p-4 flex flex-col gap-2 peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:border-primary-container transition-colors h-full">
+<span class="material-symbols-outlined text-2xl">speed</span>
+<span class="font-metadata-sm text-metadata-sm uppercase">Velocity</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="priority" type="radio"/>
+<div class="border border-outline-variant p-4 flex flex-col gap-2 peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:border-primary-container transition-colors h-full text-on-surface">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+<span class="font-metadata-sm text-metadata-sm uppercase">Precision</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="priority" type="radio"/>
+<div class="border border-outline-variant p-4 flex flex-col gap-2 peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:border-primary-container transition-colors h-full text-on-surface">
+<span class="material-symbols-outlined text-2xl">layers</span>
+<span class="font-metadata-sm text-metadata-sm uppercase">Density</span>
+</div>
+</label>
+</div>
+</div>
+<div class="col-span-3 mt-4 flex flex-col gap-2 w-full">
+<label class="font-metadata-sm text-metadata-sm text-on-secondary-container uppercase tracking-widest" for="data-sources">Data Source Arrays</label>
+<input class="bg-transparent border-0 border-b border-outline-variant text-on-surface font-body-lg text-body-lg px-0 py-2 w-full focus:ring-0 focus:border-primary-container transition-colors placeholder-on-surface-variant/30" id="data-sources" placeholder="Comma-separated endpoints..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Section 03: Abstract -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-4 border-t border-surface-variant pt-stack-sm">
+<h2 class="font-metadata-lg text-metadata-lg text-on-surface uppercase tracking-widest flex items-center gap-2">
+<span class="text-primary-container">03.</span> Narrative Abstract
+                </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Freeform description of the operational scope. Avoid ambiguity.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-8 border-t border-surface-variant pt-stack-sm">
+<div class="flex flex-col gap-2 w-full h-full min-h-[200px]">
+<label class="font-metadata-sm text-metadata-sm text-on-secondary-container uppercase tracking-widest" for="abstract">Scope Details</label>
+<textarea class="bg-transparent border border-outline-variant text-on-surface font-body-lg text-body-lg p-4 w-full h-full focus:ring-0 focus:border-primary-container transition-colors resize-y min-h-[160px] placeholder-on-surface-variant/30" id="abstract" placeholder="Enter objective summary here..."></textarea>
+</div>
+</div>
+<!-- Action Area -->
+<div class="col-span-1 md:col-span-12 border-t border-surface-variant pt-stack-md flex justify-end gap-4 mt-stack-md">
+<button class="border border-outline-variant text-on-surface font-metadata-sm text-metadata-sm uppercase px-8 py-3 hover:bg-surface-variant transition-colors tracking-widest" type="button">
+                    Abort
+                </button>
+<button class="bg-outline text-background font-metadata-sm text-metadata-sm uppercase px-8 py-3 hover:bg-primary-container hover:text-on-primary-container transition-colors tracking-widest border border-transparent" type="submit">
+                    Commit Sequence
+                </button>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="bg-black dark:bg-black fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 border-t border-zinc-800">
+<div class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest text-zinc-600">
+            © AI_NIKITKA93 // ARCHIVAL_PROTOCOL
+        </div>
+<div class="flex gap-8 font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest text-zinc-600">
+<span class="hover:text-zinc-100 cursor-default">STATUS: OK</span>
+<span class="hover:text-zinc-100 cursor-default">V_93.0.1</span>
+</div>
+</footer>
+</body></html>

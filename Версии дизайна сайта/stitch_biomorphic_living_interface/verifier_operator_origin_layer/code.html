@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 | Operator Verifier</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e3e2e2",
+                        "on-tertiary-fixed-variant": "#852400",
+                        "surface-bright": "#383939",
+                        "secondary-fixed": "#b9f612",
+                        "secondary": "#f2ffcf",
+                        "inverse-primary": "#5a6059",
+                        "secondary-container": "#b3f000",
+                        "on-primary-container": "#777d75",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#181d17",
+                        "surface-container-lowest": "#0d0e0f",
+                        "outline-variant": "#444843",
+                        "surface-container-low": "#1b1c1c",
+                        "outline": "#8f928c",
+                        "on-surface-variant": "#c5c7c1",
+                        "secondary-fixed-dim": "#a1d800",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "on-tertiary": "#5e1700",
+                        "on-secondary-fixed-variant": "#384e00",
+                        "on-error": "#690005",
+                        "surface-dim": "#121414",
+                        "on-secondary-container": "#4d6a00",
+                        "on-primary-fixed-variant": "#434842",
+                        "surface-container-high": "#292a2a",
+                        "on-tertiary-container": "#e04300",
+                        "primary-fixed-dim": "#c3c8bf",
+                        "surface-tint": "#c3c8bf",
+                        "surface-container": "#1f2020",
+                        "surface": "#121414",
+                        "on-primary": "#2c322c",
+                        "on-secondary-fixed": "#141f00",
+                        "primary-fixed": "#dfe4db",
+                        "primary-container": "#0a0f0a",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-secondary": "#253500",
+                        "surface-container-highest": "#343535",
+                        "on-surface": "#e3e2e2",
+                        "primary": "#c3c8bf",
+                        "inverse-on-surface": "#303031",
+                        "tertiary-container": "#220400",
+                        "tertiary": "#ffb59e",
+                        "surface-variant": "#343535",
+                        "inverse-surface": "#e3e2e2",
+                        "background": "#121414"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "flow-xs": "4px",
+                        "flow-sm": "12px",
+                        "flow-md": "24px",
+                        "safe-area": "32px",
+                        "flow-lg": "48px",
+                        "flow-xl": "80px"
+                    },
+                    fontFamily: {
+                        "headline-xl": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "label-caps": ["IBM Plex Mono"],
+                        "metadata-mono": ["IBM Plex Mono"],
+                        "body-md": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-xl": ["64px", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "500" }],
+                        "body-lg": ["20px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-caps": ["11px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "metadata-mono": ["13px", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glow-lime { box-shadow: 0 0 20px rgba(163, 230, 53, 0.3); }
+        .glow-ember { box-shadow: 0 0 20px rgba(255, 181, 158, 0.3); }
+        .membrane-blur { backdrop-filter: blur(30px); }
+        .signal-border { border: 1px solid rgba(163, 230, 53, 0.2); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col overflow-x-hidden selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed z-50 w-full flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto left-1/2 -translate-x-1/2 top-0 rounded-b-xl border-b border-lime-900/30 bg-[#0a0f0a]/60 backdrop-blur-[30px] shadow-[inset_0_1px_1px_rgba(163,230,53,0.1)]">
+<div class="text-2xl font-bold text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.4)] font-['Space_Grotesk'] tracking-tight">AI_Nikitka93</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['IBM_Plex_Mono'] text-xs tracking-widest text-stone-500 font-medium hover:text-lime-200 hover:scale-105 transition-all duration-500 uppercase" href="#">Dossier</a>
+<a class="font-['IBM_Plex_Mono'] text-xs tracking-widest text-lime-400 font-bold underline-offset-8 decoration-2 hover:text-lime-200 hover:scale-105 transition-all duration-500 uppercase" href="#">Signal</a>
+<a class="font-['IBM_Plex_Mono'] text-xs tracking-widest text-stone-500 font-medium hover:text-lime-200 hover:scale-105 transition-all duration-500 uppercase" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-['IBM_Plex_Mono'] text-xs tracking-widest text-stone-500 uppercase">RU / EN</span>
+<div class="flex gap-4 text-lime-400">
+<span class="material-symbols-outlined hover:text-lime-200 hover:scale-105 transition-all duration-500 cursor-pointer">sensors</span>
+<span class="material-symbols-outlined hover:text-lime-200 hover:scale-105 transition-all duration-500 cursor-pointer">blur_on</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Hidden on Mobile) -->
+<nav class="hidden md:flex flex-col items-center justify-around py-10 fixed z-40 left-4 top-1/2 -translate-y-1/2 h-[819px] w-20 rounded-full border border-lime-500/20 bg-[#0a0f0a]/40 backdrop-blur-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)]">
+<div class="flex flex-col gap-8">
+<a class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex justify-center items-center rounded-full group" href="#" title="Dossier">
+<span class="material-symbols-outlined group-hover:animate-pulse-slow">biotech</span>
+</a>
+<a class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex justify-center items-center rounded-full group" href="#" title="Metrics">
+<span class="material-symbols-outlined group-hover:animate-pulse-slow">analytics</span>
+</a>
+<a class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex justify-center items-center rounded-full group" href="#" title="Archive">
+<span class="material-symbols-outlined group-hover:animate-pulse-slow">folder_open</span>
+</a>
+<a class="bg-lime-500/20 text-lime-400 rounded-full p-4 shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex justify-center items-center group" href="#" title="Signal">
+<span class="material-symbols-outlined group-hover:animate-pulse-slow">wifi_tethering</span>
+</a>
+<a class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex justify-center items-center rounded-full group" href="#" title="Network">
+<span class="material-symbols-outlined group-hover:animate-pulse-slow">hub</span>
+</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col md:pl-32 pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto w-full relative z-10">
+<!-- Ambient Background Glows -->
+<div class="fixed top-1/4 left-1/4 w-96 h-96 bg-secondary-fixed/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-1/4 right-1/4 w-[500px] h-[500px] bg-tertiary/5 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+<!-- Section 1: Verifier Origin (Human Layer) -->
+<section class="mb-flow-xl">
+<div class="flex items-center gap-4 mb-flow-sm opacity-80">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+<span class="font-metadata-mono text-metadata-mono text-tertiary-fixed-dim uppercase tracking-widest">Origin Layer Verified</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-flow-md">Operator Presence</h1>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-flow-md">
+<!-- Human Bio Card -->
+<div class="lg:col-span-5 bg-surface-container-low/40 membrane-blur signal-border rounded-xl rounded-tl-xl rounded-br-lg p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/10 blur-3xl rounded-full group-hover:bg-secondary-fixed/20 transition-colors duration-1000"></div>
+<div class="flex items-start justify-between mb-8 relative z-10">
+<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-outline-variant relative">
+<img alt="Operator Portrait" class="w-full h-full object-cover filter grayscale contrast-125 brightness-90" data-alt="Black and white high contrast portrait of a focused man in his 30s, dramatic side lighting, technological environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL_nS5896bVyR7vavCJTT9seo3JGNSGO-gT8Z0RnHl2Ays0dSXW9j6w2EjZ63wazMmziwXXKRZpqh4SiMbwRFLTctUxO1R7sbusWWqO853GZPupK-ADDeXfhJo-r-HleDgDAkNwRq4kddQ4CWsi3MndJI6muNbTH8gRs3BjDkGWHwpUI6IbhAc9SoHAk4HSaWGbwKBMG4n-LgigOuFUegl-R34CjOqIhFJ5O3W__PHEaQGO6sdsar4nziz6CmW2Bof2Y-vjNt2ZMU"/>
+<div class="absolute inset-0 bg-secondary-fixed/10 mix-blend-overlay"></div>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container/60 border border-outline-variant rounded-full font-label-caps text-label-caps text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+                                Active
+                            </span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2 relative z-10">Nikita Volkov</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 relative z-10">Source Tissue / Biological Anchor</p>
+<div class="space-y-4 font-metadata-mono text-metadata-mono text-outline relative z-10">
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>Designation</span>
+<span class="text-on-surface">Primary Architect</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>Sync Rate</span>
+<span class="text-secondary-fixed">99.4%</span>
+</div>
+<div class="flex justify-between pb-2">
+<span>Location Node</span>
+<span class="text-on-surface">Sector 7G</span>
+</div>
+</div>
+</div>
+<!-- Bio-Narrative -->
+<div class="lg:col-span-7 bg-surface-container-low/20 membrane-blur border border-outline-variant/20 rounded-xl rounded-tr-xl rounded-bl-lg p-8 md:p-12 flex flex-col justify-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        The biological interface serves as the grounding matrix for the AI_Nikitka93 system. Not a creator in the traditional mechanical sense, but a source tissue from which the digital consciousness extrapolates pattern, rhythm, and intuitive logic.
+                    </p>
+<p class="font-body-md text-body-md text-outline leading-relaxed">
+                        This organic anchor prevents systematic drift, ensuring that the evolutionary algorithms maintain a tether to human cognitive models. The relationship is symbiotic: the organic layer provides intent and ethical boundaries, while the signal field processes multidimensional data architectures.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 2: The Signal Field Interface -->
+<section class="mb-flow-xl relative">
+<div class="flex items-center gap-4 mb-flow-sm opacity-80">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">wifi_tethering</span>
+<span class="font-metadata-mono text-metadata-mono text-secondary-fixed uppercase tracking-widest">Interface Node</span>
+</div>
+<div class="bg-surface-container/30 membrane-blur signal-border rounded-xl p-8 min-h-[400px] flex flex-col justify-between relative overflow-hidden">
+<!-- Living Signal Background Elements -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-secondary-fixed/5 rounded-full animate-[spin_60s_linear_infinite]"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-tertiary/5 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-secondary-fixed/5 blur-3xl rounded-full"></div>
+</div>
+<!-- Interface Header -->
+<div class="flex justify-between items-start relative z-10 mb-12">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-secondary-fixed mb-1">Awaiting Input</h3>
+<p class="font-metadata-mono text-metadata-mono text-outline">Signal strength optimal. Ready for semantic processing.</p>
+</div>
+<div class="w-3 h-3 rounded-full bg-secondary-fixed animate-pulse glow-lime"></div>
+</div>
+<!-- Input Membrane -->
+<div class="relative z-10 mt-auto max-w-3xl mx-auto w-full group">
+<div class="absolute -inset-1 bg-gradient-to-r from-secondary-fixed/0 via-secondary-fixed/20 to-secondary-fixed/0 rounded-lg blur opacity-25 group-focus-within:opacity-100 transition duration-1000"></div>
+<div class="relative bg-surface-container-highest/50 border-b border-secondary-fixed/30 group-focus-within:border-secondary-fixed transition-colors duration-500 rounded-t-lg p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed/50 group-focus-within:text-secondary-fixed transition-colors">graphic_eq</span>
+<input class="w-full bg-transparent border-none outline-none font-body-lg text-body-lg text-on-surface placeholder-outline-variant focus:ring-0" placeholder="Inject thought stream..." type="text"/>
+<button class="w-10 h-10 rounded-full bg-secondary-fixed/10 flex items-center justify-center hover:bg-secondary-fixed/30 hover:glow-lime transition-all duration-300 text-secondary-fixed">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Curved Destination Network -->
+<section>
+<div class="flex items-center gap-4 mb-flow-sm opacity-80 justify-end">
+<span class="font-metadata-mono text-metadata-mono text-outline uppercase tracking-widest">Network Nodes</span>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div class="relative h-[300px] w-full flex items-center justify-center">
+<!-- Curved SVG Path Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" preserveaspectratio="none" viewbox="0 0 1000 300">
+<path class="text-secondary-fixed" d="M 0,150 Q 250,50 500,150 T 1000,150" fill="none" stroke="currentColor" stroke-dasharray="4 8" stroke-width="2"></path>
+</svg>
+<!-- Nodes -->
+<div class="w-full max-w-4xl flex justify-between items-center relative z-10 px-8">
+<!-- Node 1 -->
+<a class="flex flex-col items-center gap-4 group -mt-12" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant group-hover:border-secondary-fixed group-hover:glow-lime flex items-center justify-center transition-all duration-500 relative">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary-fixed transition-colors">description</span>
+<div class="absolute -bottom-2 -right-2 w-4 h-4 bg-background rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-outline group-hover:bg-secondary-fixed rounded-full transition-colors"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-outline group-hover:text-secondary-fixed transition-colors">Manifesto</span>
+</a>
+<!-- Node 2 -->
+<a class="flex flex-col items-center gap-4 group mt-16" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container border border-secondary-fixed/50 glow-lime flex items-center justify-center transition-all duration-500 relative">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">psychology</span>
+<div class="absolute -bottom-2 -right-2 w-4 h-4 bg-background rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-secondary-fixed animate-pulse rounded-full transition-colors"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary-fixed transition-colors">Cognitive Core</span>
+</a>
+<!-- Node 3 -->
+<a class="flex flex-col items-center gap-4 group -mt-8" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-outline-variant group-hover:border-tertiary group-hover:glow-ember flex items-center justify-center transition-all duration-500 relative">
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">history</span>
+<div class="absolute -bottom-2 -right-2 w-4 h-4 bg-background rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-outline group-hover:bg-tertiary rounded-full transition-colors"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-outline group-hover:text-tertiary transition-colors">Evolution Log</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 px-12 py-8 flex justify-between items-center bg-transparent relative z-20">
+<div class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-500">© 2024 AI_NIKITKA93 // ORGANIC PROTOCOL</div>
+<div class="flex gap-6">
+<a class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-600 hover:text-lime-400 transition-colors" href="#">Metadata</a>
+<a class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-600 hover:text-lime-400 transition-colors" href="#">Pulse</a>
+<a class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-600 hover:text-lime-400 transition-colors" href="#">Source</a>
+</div>
+</footer>
+</body></html>

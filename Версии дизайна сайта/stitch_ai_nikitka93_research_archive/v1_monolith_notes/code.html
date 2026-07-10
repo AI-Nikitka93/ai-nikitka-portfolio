@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA_93 // FIELD_NOTES</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0d0f0d",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "surface-container-highest": "#333533",
+                        "on-secondary-fixed": "#1a1c19",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-tint": "#abd600",
+                        "secondary-fixed": "#e3e3de",
+                        "on-secondary": "#2f312e",
+                        "surface-container-high": "#282a28",
+                        "on-tertiary-container": "#636562",
+                        "surface-dim": "#121412",
+                        "surface-variant": "#333533",
+                        "secondary-container": "#484a46",
+                        "tertiary-container": "#e2e3de",
+                        "on-error": "#690005",
+                        "surface": "#121412",
+                        "background": "#121412",
+                        "on-secondary-fixed-variant": "#454744",
+                        "inverse-primary": "#506600",
+                        "on-background": "#e2e3df",
+                        "tertiary-fixed-dim": "#c6c7c3",
+                        "surface-container-low": "#1a1c1a",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7c2",
+                        "on-tertiary": "#2f312e",
+                        "inverse-on-surface": "#2f312f",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e201e",
+                        "primary-container": "#c3f400",
+                        "inverse-surface": "#e2e3df",
+                        "outline": "#8e9379",
+                        "on-secondary-container": "#b8b9b4",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary": "#c6c7c2",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary": "#ffffff",
+                        "surface-bright": "#383a37",
+                        "on-surface": "#e2e3df",
+                        "outline-variant": "#444933",
+                        "on-tertiary-fixed": "#1a1c1a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e3de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "gutter": "16px",
+                        "margin": "32px",
+                        "column-count": "12"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["IBM Plex Mono"],
+                        "h2": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "data-mono": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background h-screen overflow-hidden flex selection:bg-primary-fixed selection:text-black">
+<!-- Shell: SideNavBar -->
+<nav class="hidden md:flex bg-[#080A08] rounded-none border-r border-[#F5F5F0] h-screen w-64 flex-col z-50 shrink-0">
+<!-- Header -->
+<div class="p-4 border-b border-[#F5F5F0]">
+<div class="text-[#F5F5F0] font-bold font-h2 text-h2 uppercase tracking-tighter">OS_MONOLITH</div>
+<div class="text-[#CCFF00] font-mono text-xs mt-1">V_1.0.9 // System Unit</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col flex-1 overflow-y-auto font-mono text-xs uppercase cursor-crosshair">
+<!-- Inactive -->
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span>CORE</span>
+</a>
+<!-- Inactive -->
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span>NODES</span>
+</a>
+<!-- Inactive -->
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+<span>STREAM</span>
+</a>
+<!-- ACTIVE (Field Notes map logically to LOGS in this context) -->
+<a class="bg-[#CCFF00] text-black font-bold flex items-center gap-3 p-4 border-b border-[#F5F5F0] transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+<span>LOGS</span>
+</a>
+<!-- Inactive -->
+<a class="text-[#F5F5F0] flex items-center gap-3 p-4 border-b border-[#F5F5F0] hover:bg-[#F5F5F0] hover:text-black transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+<span>SYSTEM</span>
+</a>
+</div>
+</nav>
+<!-- Main Workspace -->
+<div class="flex-1 flex flex-col h-full relative">
+<!-- Shell: TopAppBar -->
+<header class="flex justify-between items-center w-full h-16 bg-[#080A08] rounded-none border-b border-[#F5F5F0] z-40 shrink-0">
+<!-- Brand -->
+<div class="text-2xl font-black tracking-tighter text-[#F5F5F0] px-4 font-['Space_Grotesk']">AI_NIKITKA_93</div>
+<!-- Trailing Actions & Search Container -->
+<div class="flex items-center gap-6 px-4 h-full">
+<!-- Search Mockup (on_right logic) -->
+<div class="flex items-center border-b border-[#F5F5F0] pb-1 mr-4">
+<span class="material-symbols-outlined text-[#F5F5F0] text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none text-[#CCFF00] font-['Space_Grotesk'] uppercase tracking-widest text-sm focus:ring-0 p-0 placeholder-[#F5F5F0]/50 w-48" placeholder="QUERY_INDEX..." type="text"/>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-[#CCFF00]">
+<button class="hover:bg-[#CCFF00] hover:text-black transition-none p-1 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+<button class="hover:bg-[#CCFF00] hover:text-black transition-none p-1 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="hover:bg-[#CCFF00] hover:text-black transition-none p-1 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Canvas: Field Notes Content Area -->
+<main class="flex-1 overflow-y-auto bg-surface p-6 pb-20">
+<!-- Canvas Layout: 12 Column Grid -->
+<div class="max-w-7xl mx-auto w-full">
+<!-- Page Header block -->
+<div class="grid grid-cols-12 gap-0 border border-outline-variant mb-6 bg-surface-container-lowest">
+<div class="col-span-12 md:col-span-8 p-6 border-b md:border-b-0 md:border-r border-outline-variant">
+<h1 class="font-h1 text-h1 text-on-surface uppercase mb-2">Field_Notes_Idx</h1>
+<p class="font-data-mono text-data-mono text-on-surface-variant uppercase">Runtime compilation of localized system anomalies and manual overrides. Strictly classified material.</p>
+</div>
+<div class="col-span-12 md:col-span-4 p-6 flex flex-col justify-center font-data-mono text-data-mono bg-surface-variant text-on-surface">
+<div class="flex justify-between border-b border-outline pb-2 mb-2">
+<span>TOTAL_ENTRIES:</span>
+<span class="text-primary-fixed">0x048F</span>
+</div>
+<div class="flex justify-between border-b border-outline pb-2 mb-2">
+<span>LAST_SYNC:</span>
+<span>T-MINUS 04:12</span>
+</div>
+<div class="flex justify-between">
+<span>CRITICAL_FLAGS:</span>
+<span class="text-error font-bold">03</span>
+</div>
+</div>
+</div>
+<!-- Filters/Controls Strip -->
+<div class="flex justify-between items-center border border-outline-variant bg-surface-container-low p-2 mb-4 font-label-caps text-label-caps uppercase text-on-surface">
+<div class="flex gap-4 items-center pl-2">
+<span class="text-on-surface-variant">FILTER_BY:</span>
+<button class="border border-outline px-2 py-1 hover:bg-primary-fixed hover:text-black transition-none">SEVERITY</button>
+<button class="border border-outline px-2 py-1 hover:bg-primary-fixed hover:text-black transition-none">NODE_ID</button>
+<button class="border border-outline px-2 py-1 hover:bg-primary-fixed hover:text-black transition-none">TIMESTAMP</button>
+</div>
+<button class="bg-primary-fixed text-black border border-primary-fixed px-4 py-1 hover:bg-transparent hover:text-primary-fixed transition-none flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>NEW_ENTRY</span>
+</button>
+</div>
+<!-- Data Grid (Rigid Table) -->
+<!-- Container uses gap-px and bg color to create 1px borders between all cells -->
+<div class="grid grid-cols-12 gap-[1px] bg-outline-variant border border-outline-variant font-data-mono text-data-mono text-on-surface uppercase">
+<!-- Table Header -->
+<div class="col-span-2 bg-surface-container-high p-3 font-bold text-on-surface">ENTRY_ID</div>
+<div class="col-span-2 bg-surface-container-high p-3 font-bold text-on-surface">TIMESTAMP_SYS</div>
+<div class="col-span-2 bg-surface-container-high p-3 font-bold text-on-surface">NODE_SECTOR</div>
+<div class="col-span-1 bg-surface-container-high p-3 font-bold text-on-surface text-center">LVL</div>
+<div class="col-span-5 bg-surface-container-high p-3 font-bold text-on-surface">DIAGNOSTIC_PAYLOAD</div>
+<!-- Row 1 (Critical) -->
+<div class="col-span-2 bg-surface p-3 flex items-start">
+<span class="text-primary-fixed">FN-992-A</span>
+</div>
+<div class="col-span-2 bg-surface p-3 text-on-surface-variant">
+                        2023.10.24::14:02:11
+                    </div>
+<div class="col-span-2 bg-surface p-3">
+                        CORE_MATRIX_04
+                    </div>
+<div class="col-span-1 bg-surface p-3 flex justify-center">
+<div class="bg-error text-on-error px-2 py-0.5 border border-error text-[10px]">C</div>
+</div>
+<div class="col-span-5 bg-surface p-3">
+<p class="mb-2 text-error">UNEXPECTED THERMAL SPIKE DETECTED DURING ROUTINE RE-INDEXING.</p>
+<p class="text-on-surface-variant text-[11px]">Initiated manual coolant purge via secondary valve. Monitoring variance levels. Recommendation: Replace physical heat sink array beta-2.</p>
+</div>
+<!-- Row 2 (Warning) -->
+<div class="col-span-2 bg-surface p-3 flex items-start">
+<span class="text-primary-fixed">FN-991-B</span>
+</div>
+<div class="col-span-2 bg-surface p-3 text-on-surface-variant">
+                        2023.10.24::09:44:00
+                    </div>
+<div class="col-span-2 bg-surface p-3">
+                        COMM_RELAY_EXT
+                    </div>
+<div class="col-span-1 bg-surface p-3 flex justify-center">
+<div class="bg-surface-tint text-black px-2 py-0.5 border border-primary-fixed text-[10px]">W</div>
+</div>
+<div class="col-span-5 bg-surface p-3">
+<p class="mb-2">PACKET LOSS EXCEEDING 4% THRESHOLD ON OUTBOUND STREAM.</p>
+<p class="text-on-surface-variant text-[11px]">Rerouted traffic through auxiliary node 7. Probable cause: Atmospheric interference pattern matching recent solar flare data.</p>
+</div>
+<!-- Row 3 (Info) -->
+<div class="col-span-2 bg-surface p-3 flex items-start">
+<span class="text-primary-fixed">FN-990-C</span>
+</div>
+<div class="col-span-2 bg-surface p-3 text-on-surface-variant">
+                        2023.10.23::22:10:55
+                    </div>
+<div class="col-span-2 bg-surface p-3">
+                        MEMORY_BANK_12
+                    </div>
+<div class="col-span-1 bg-surface p-3 flex justify-center">
+<div class="text-on-surface-variant px-2 py-0.5 border border-outline-variant text-[10px]">I</div>
+</div>
+<div class="col-span-5 bg-surface p-3">
+<p class="mb-2">ROUTINE DEFRAGMENTATION CYCLE COMPLETE.</p>
+<p class="text-on-surface-variant text-[11px]">Cycle duration: 4.2 hours. Reclaimed 1.4TB of contiguous storage space. No anomalies recorded during operation.</p>
+</div>
+<!-- Row 4 (Info) -->
+<div class="col-span-2 bg-surface p-3 flex items-start">
+<span class="text-primary-fixed">FN-989-C</span>
+</div>
+<div class="col-span-2 bg-surface p-3 text-on-surface-variant">
+                        2023.10.23::18:00:00
+                    </div>
+<div class="col-span-2 bg-surface p-3">
+                        SYS_CLOCK_MAIN
+                    </div>
+<div class="col-span-1 bg-surface p-3 flex justify-center">
+<div class="text-on-surface-variant px-2 py-0.5 border border-outline-variant text-[10px]">I</div>
+</div>
+<div class="col-span-5 bg-surface p-3">
+<p class="mb-2">TIME SYNCHRONIZATION WITH EXTERNAL ATOMIC STANDARD.</p>
+<p class="text-on-surface-variant text-[11px]">Drift adjusted by +0.003ms. Consensus reached across all sub-nodes.</p>
+</div>
+</div>
+<!-- Load More / Pagination -->
+<div class="mt-6 flex justify-center border-t border-outline-variant pt-6">
+<button class="font-label-caps text-label-caps uppercase border border-primary-fixed text-primary-fixed px-8 py-2 hover:bg-primary-fixed hover:text-black transition-none">
+                        LOAD_HISTORICAL_BUFFER
+                    </button>
+</div>
+</div>
+</main>
+<!-- Shell: Footer -->
+<footer class="fixed bottom-0 left-0 md:left-64 right-0 flex justify-between items-center px-4 py-1 bg-[#080A08] rounded-none border-t border-[#F5F5F0] z-50">
+<div class="text-[#CCFF00] font-mono text-[10px] tracking-tight uppercase">STATUS: STABLE // DIAG_CODE: 0x00213</div>
+<div class="flex gap-4 font-mono text-[10px] tracking-tight uppercase">
+<a class="text-[#F5F5F0] hover:text-[#CCFF00] transition-none" href="#">0x01_RESET</a>
+<a class="text-[#F5F5F0] hover:text-[#CCFF00] transition-none" href="#">0x02_DEBUG</a>
+<a class="text-[#F5F5F0] hover:text-[#CCFF00] transition-none" href="#">0x03_VOID</a>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Overload Links</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#810081",
+                        "tertiary-container": "#d9d9d9",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "secondary-container": "#fe00fe",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#ffd7f5",
+                        "on-tertiary-container": "#5d5f5f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#5b005b",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#380038",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe9",
+                        "primary-fixed": "#7df4ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary": "#f5f5f5",
+                        "surface-bright": "#3a3939",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b494b",
+                        "on-primary-container": "#006970",
+                        "primary-fixed-dim": "#00dbe9",
+                        "secondary": "#ffabf3",
+                        "on-primary": "#00363a",
+                        "error": "#ffb4ab",
+                        "primary-container": "#00f0ff",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#849495",
+                        "on-secondary-container": "#500050",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "primary": "#dbfcff",
+                        "on-primary-fixed": "#002022",
+                        "secondary-fixed-dim": "#ffabf3",
+                        "on-tertiary": "#2f3131"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "grid-unit": "4px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "mono-label": ["monospace"],
+                        "data-dense": ["monospace"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-sm": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "mono-label": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "data-dense": ["10px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanline-overlay {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+        }
+        .cyan-grid-overlay {
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 10px var(--color-primary-container, #00f0ff);
+        }
+        .glitch-hover-effect:hover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid #fe00fe; /* Magenta */
+            transform: translate(2px, 2px);
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen relative font-body-lg overflow-x-hidden selection:bg-secondary-container selection:text-black">
+<!-- Global Visual Overlays -->
+<div class="fixed inset-0 pointer-events-none z-0 cyan-grid-overlay"></div>
+<div class="fixed inset-0 pointer-events-none z-[100] scanline-overlay opacity-30"></div>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed docked full-width top-0 border-b border-[#00F0FF] z-40 bg-black/90 dark:bg-[#050505] text-cyan-400 dark:text-[#00F0FF] font-mono uppercase tracking-tighter text-sm flex justify-between items-center w-full px-2 h-12 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<div class="font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">
+            AI_NIKITKA93
+        </div>
+<div class="text-[10px] tracking-widest cursor-pointer hover:bg-cyan-500 hover:text-black transition-all duration-75 px-2 py-1">
+            RU/EN
+        </div>
+</header>
+<!-- Main Workspace -->
+<main class="relative z-10 pt-[80px] pb-[100px] px-gutter max-w-container-max mx-auto flex flex-col gap-margin">
+<!-- Profile / Status Block -->
+<section class="border border-primary-container bg-surface/80 p-grid-unit backdrop-blur-sm relative">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label text-mono-label px-1 py-[2px]">
+                [ID_NODE_ACTIVE]
+            </div>
+<div class="flex items-center gap-4 mt-6 p-2">
+<div class="w-16 h-16 border border-primary-container p-1 relative">
+<div class="absolute inset-0 bg-primary-container opacity-20"></div>
+<img alt="Abstract wireframe skull geometric rendering in dark cyan and magenta cyberpunk aesthetic" class="w-full h-full object-cover filter contrast-125 grayscale mix-blend-screen" data-alt="Abstract wireframe skull geometric rendering in dark cyan and magenta cyberpunk aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkiKJehXuAka3aFPdITpuWHmzFIq2q21SvkBH50XepxXw7cyO3LCbB88Q26jnH6h8hft7WBuoYcNuJSHqCA_quVmsWR79ROXOxbPWeHNDkWPDwBwWGZIVvvg_ucV4ZtZ3SHxCBsaMdXSeMJm5b2pUbrpfahK83GnwFB2RGrAS4z8Ggol3HFM4S10VKZMvnWtXxGjwFC0hwJs3XMYYhVxIIuT4G7LjjrkVpBkRhqOn49c3MzV46UWudkfNkpqyB3kb2nMSGn5rMZrd5"/>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-primary-container drop-shadow-[0_0_5px_rgba(0,240,255,0.5)]">SIGNAL_ROUTER_V9</h1>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-2 h-2 bg-primary-container rounded-none shadow-[0_0_5px_#00f0ff] animate-pulse"></div>
+<span class="font-data-dense text-data-dense text-outline">UPLINK ESTABLISHED // LATENCY: 12ms</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Links Grid (Bento Style) -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-grid-unit">
+<!-- Link Tile 1 -->
+<a class="group relative flex flex-col justify-between aspect-square p-2 border border-outline bg-surface-container-low/60 backdrop-blur-md hover:border-primary-container hover:bg-surface-container hover:neon-glow-cyan glitch-hover-effect transition-all duration-75" href="#">
+<div class="flex justify-between items-start w-full">
+<span class="font-mono-label text-mono-label text-outline group-hover:text-primary-container">[SYS_REPO]</span>
+<!-- Signal Strength Indicator -->
+<div class="flex gap-[2px] items-end h-[10px]">
+<div class="w-[3px] h-[4px] bg-primary-container"></div>
+<div class="w-[3px] h-[6px] bg-primary-container"></div>
+<div class="w-[3px] h-[8px] bg-primary-container"></div>
+<div class="w-[3px] h-[10px] bg-primary-container"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary-container transition-colors drop-shadow-none group-hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" data-weight="fill" style="font-variation-settings: 'FILL' 0;">code_blocks</span>
+</div>
+<div class="w-full border-t border-outline/30 pt-1 text-center font-data-dense text-data-dense text-on-background tracking-widest group-hover:text-primary-container uppercase">
+                    Codebase
+                </div>
+</a>
+<!-- Link Tile 2 -->
+<a class="group relative flex flex-col justify-between aspect-square p-2 border border-outline bg-surface-container-low/60 backdrop-blur-md hover:border-primary-container hover:bg-surface-container hover:neon-glow-cyan glitch-hover-effect transition-all duration-75" href="#">
+<div class="flex justify-between items-start w-full">
+<span class="font-mono-label text-mono-label text-outline group-hover:text-primary-container">[COMMS_NET]</span>
+<!-- Signal Strength Indicator -->
+<div class="flex gap-[2px] items-end h-[10px]">
+<div class="w-[3px] h-[4px] bg-primary-container"></div>
+<div class="w-[3px] h-[6px] bg-primary-container"></div>
+<div class="w-[3px] h-[8px] bg-primary-container"></div>
+<div class="w-[3px] h-[10px] bg-outline-variant"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary-container transition-colors drop-shadow-none group-hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" data-weight="fill" style="font-variation-settings: 'FILL' 0;">forum</span>
+</div>
+<div class="w-full border-t border-outline/30 pt-1 text-center font-data-dense text-data-dense text-on-background tracking-widest group-hover:text-primary-container uppercase">
+                    Comms
+                </div>
+</a>
+<!-- Link Tile 3 - Critical Error State -->
+<a class="group relative flex flex-col justify-between aspect-square p-2 border border-secondary-container bg-surface-container-low/60 backdrop-blur-md hover:bg-surface-container transition-all duration-75 shadow-[0_0_15px_rgba(254,0,254,0.1)]" href="#">
+<div class="flex justify-between items-start w-full">
+<span class="font-mono-label text-mono-label text-secondary-container animate-pulse">[EXT_FEED]</span>
+<!-- Signal Strength Indicator -->
+<div class="flex gap-[2px] items-end h-[10px] animate-pulse">
+<div class="w-[3px] h-[4px] bg-secondary-container"></div>
+<div class="w-[3px] h-[6px] bg-outline-variant"></div>
+<div class="w-[3px] h-[8px] bg-outline-variant"></div>
+<div class="w-[3px] h-[10px] bg-outline-variant"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center relative">
+<span class="material-symbols-outlined text-[48px] text-secondary-container drop-shadow-[0_0_8px_rgba(254,0,254,0.8)]" data-weight="fill" style="font-variation-settings: 'FILL' 0;">public_off</span>
+<!-- Glitch line -->
+<div class="absolute w-full h-[1px] bg-white top-1/2 left-0 opacity-50 mix-blend-overlay"></div>
+</div>
+<div class="w-full border-t border-secondary-container/30 pt-1 text-center font-data-dense text-data-dense text-secondary-container tracking-widest uppercase bg-secondary-container/10">
+                    ERR: UPLINK_LOST
+                </div>
+</a>
+<!-- Link Tile 4 -->
+<a class="group relative flex flex-col justify-between aspect-square p-2 border border-outline bg-surface-container-low/60 backdrop-blur-md hover:border-primary-container hover:bg-surface-container hover:neon-glow-cyan glitch-hover-effect transition-all duration-75" href="#">
+<div class="flex justify-between items-start w-full">
+<span class="font-mono-label text-mono-label text-outline group-hover:text-primary-container">[VIS_DATA]</span>
+<!-- Signal Strength Indicator -->
+<div class="flex gap-[2px] items-end h-[10px]">
+<div class="w-[3px] h-[4px] bg-primary-container"></div>
+<div class="w-[3px] h-[6px] bg-primary-container"></div>
+<div class="w-[3px] h-[8px] bg-primary-container"></div>
+<div class="w-[3px] h-[10px] bg-primary-container"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary-container transition-colors drop-shadow-none group-hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" data-weight="fill" style="font-variation-settings: 'FILL' 0;">photo_library</span>
+</div>
+<div class="w-full border-t border-outline/30 pt-1 text-center font-data-dense text-data-dense text-on-background tracking-widest group-hover:text-primary-container uppercase">
+                    Archives
+                </div>
+</a>
+<!-- Link Tile 5 -->
+<a class="group relative flex flex-col justify-between aspect-square p-2 border border-outline bg-surface-container-low/60 backdrop-blur-md hover:border-primary-container hover:bg-surface-container hover:neon-glow-cyan glitch-hover-effect transition-all duration-75" href="#">
+<div class="flex justify-between items-start w-full">
+<span class="font-mono-label text-mono-label text-outline group-hover:text-primary-container">[LOG_STREAM]</span>
+<!-- Signal Strength Indicator -->
+<div class="flex gap-[2px] items-end h-[10px]">
+<div class="w-[3px] h-[4px] bg-primary-container"></div>
+<div class="w-[3px] h-[6px] bg-primary-container"></div>
+<div class="w-[3px] h-[8px] bg-outline-variant"></div>
+<div class="w-[3px] h-[10px] bg-outline-variant"></div>
+</div>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary-container transition-colors drop-shadow-none group-hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" data-weight="fill" style="font-variation-settings: 'FILL' 0;">article</span>
+</div>
+<div class="w-full border-t border-outline/30 pt-1 text-center font-data-dense text-data-dense text-on-background tracking-widest group-hover:text-primary-container uppercase">
+                    Writings
+                </div>
+</a>
+</section>
+<!-- Terminal Console Feed (Component from Style Guidance) -->
+<section class="border border-outline bg-[#000000]/80 h-32 flex flex-col relative overflow-hidden mt-4">
+<div class="bg-outline text-black font-data-dense text-data-dense px-2 py-[2px] flex justify-between uppercase">
+<span>TERMINAL_OUTPUT</span>
+<span>SEC_LEVEL_04</span>
+</div>
+<div class="p-2 font-data-dense text-data-dense text-tertiary-fixed-dim leading-tight flex flex-col gap-[2px] opacity-80 h-full overflow-hidden">
+<div class="truncate"><span class="text-secondary-container">&gt;</span> INIT SEQUENCE START...</div>
+<div class="truncate"><span class="text-secondary-container">&gt;</span> LOADING NEURAL MAPPINGS [OK]</div>
+<div class="truncate"><span class="text-secondary-container">&gt;</span> CONNECTING TO EXTERNAL NODES...</div>
+<div class="truncate text-primary-container drop-shadow-[0_0_2px_#00f0ff]"><span class="text-secondary-container">&gt;</span> 4 LINKS DETECTED, 1 UPLINK FAILURE</div>
+<div class="truncate"><span class="text-secondary-container animate-pulse">_</span></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component) - Active State on CONSOLE based on semantics -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-black dark:bg-[#050505] border-t border-[#00F0FF] shadow-[0_-5px_15px_rgba(0,240,255,0.3)]">
+<!-- Inactive -->
+<a class="flex-1 flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">folder_shared</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">DOSSIER</span>
+</a>
+<!-- Active (Dashboard = Console) -->
+<a class="flex-1 flex flex-col items-center justify-center bg-cyan-400 text-black p-1 shadow-[0_0_10px_#00F0FF] border-r-4 border-magenta-500 border-l-2 border-magenta-500 animate-pulse group relative z-10 skew-x-12 scale-95 transition-transform" href="#">
+<!-- Counter-skew content to keep it straight -->
+<div class="-skew-x-12 flex flex-col items-center">
+<span class="material-symbols-outlined mb-1" data-weight="fill" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-mono text-[9px] font-bold tracking-widest text-black">CONSOLE</span>
+</div>
+</a>
+<!-- Inactive -->
+<a class="flex-1 flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">event_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">PLANNING</span>
+</a>
+<!-- Inactive -->
+<a class="flex-1 flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">edit_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">FIELD_NOTES</span>
+</a>
+</nav>
+</body></html>

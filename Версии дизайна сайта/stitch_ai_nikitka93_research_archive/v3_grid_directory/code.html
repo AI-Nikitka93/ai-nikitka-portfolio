@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Directory Index</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#484a44",
+                        "background": "#111411",
+                        "surface": "#111411",
+                        "on-error": "#690005",
+                        "tertiary-container": "#dfe4dc",
+                        "on-secondary-fixed-variant": "#464742",
+                        "surface-container-low": "#191c19",
+                        "tertiary-fixed-dim": "#c3c8c0",
+                        "on-background": "#e1e3dd",
+                        "inverse-primary": "#506600",
+                        "surface-container-highest": "#333632",
+                        "on-tertiary-fixed-variant": "#434842",
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0c0f0c",
+                        "surface-tint": "#abd600",
+                        "on-secondary-fixed": "#1a1c18",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#111411",
+                        "on-tertiary-container": "#616660",
+                        "surface-container-high": "#282b27",
+                        "on-secondary": "#2f312c",
+                        "secondary-fixed": "#e3e3db",
+                        "surface-variant": "#333632",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c7bf",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "outline-variant": "#444933",
+                        "surface-bright": "#373a36",
+                        "on-surface": "#e1e3dd",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary-fixed": "#dfe4dc",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#181d18",
+                        "on-tertiary": "#2d322c",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7bf",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2e312e",
+                        "error-container": "#93000a",
+                        "surface-container": "#1d201d",
+                        "on-secondary-container": "#b8b9b2",
+                        "outline": "#8e9379",
+                        "inverse-surface": "#e1e3dd",
+                        "primary-container": "#c3f400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-md": "800px",
+                        "margin": "48px",
+                        "container-sm": "400px",
+                        "container-lg": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "display-vertical": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-vertical": ["120px", { "lineHeight": "100px", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (WEB) -->
+<nav class="hidden md:flex flex-col w-64 z-40 bg-zinc-950 fixed left-0 top-20 h-[calc(100vh-80px)] border-r border-zinc-800 border-r border-zinc-800 divide-y divide-zinc-800 flat no shadows offset-outlines-4px">
+<div class="flex-1 overflow-y-auto">
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-3">psychology</span>
+<span class="font-['Space_Grotesk'] font-medium text-xs tracking-widest uppercase">NEURAL_NET</span>
+</a>
+<a class="bg-lime-400 text-zinc-950 font-black flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-3">grid_view</span>
+<span class="font-['Space_Grotesk'] font-medium text-xs tracking-widest uppercase">FLUID_GRID</span>
+</a>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-3">align_horizontal_left</span>
+<span class="font-['Space_Grotesk'] font-medium text-xs tracking-widest uppercase">ASYMMETRIC_LOG</span>
+</a>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-3">memory</span>
+<span class="font-['Space_Grotesk'] font-medium text-xs tracking-widest uppercase">SYS_DUMP</span>
+</a>
+</div>
+<div class="mt-auto">
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0 border-t border-zinc-800" href="#">
+<span class="material-symbols-outlined mr-3">logout</span>
+<span class="font-['Space_Grotesk'] font-medium text-xs tracking-widest uppercase">LOGOUT</span>
+</a>
+</div>
+</nav>
+<div class="flex-1 flex flex-col md:ml-64 relative min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 h-20 bg-zinc-950 docked full-width top-0 border-b border-zinc-800 border-b border-zinc-800 divide-x divide-zinc-800 flat no shadows structural layering via 1px lines z-50 sticky">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-black text-lime-400 tracking-widest uppercase">AI_NIKITKA93</span>
+<nav class="hidden md:flex gap-6 h-full items-center pl-6">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0" href="#">STREAMS</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-lime-400 border-b-2 border-lime-400 pb-1 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0" href="#">LATTICE</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0" href="#">CORE</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0 flex items-center justify-center p-2">
+<span class="material-symbols-outlined">sensors</span>
+</button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0 flex items-center justify-center p-2">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0 flex items-center justify-center p-2">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 p-margin flex flex-col gap-16 relative">
+<!-- Structural Grid Lines Background -->
+<div class="absolute inset-0 pointer-events-none grid grid-cols-12 gap-gutter px-margin z-0 opacity-20">
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-tertiary-fixed-dim h-full col-span-1"></div>
+<div class="border-l border-r border-tertiary-fixed-dim h-full col-span-1"></div>
+</div>
+<!-- Header Section -->
+<section class="relative z-10 grid grid-cols-12 gap-gutter mt-16">
+<div class="col-span-12 md:col-span-8 md:col-start-2 border-l-4 border-primary-container pl-6">
+<h1 class="font-headline-lg text-primary uppercase break-words leading-none">Kinetic<br/><span class="text-primary-container">Lattice</span></h1>
+<p class="font-body-lg text-on-surface-variant mt-4 max-w-2xl">A high-density structural index of core system nodes and fluid pathways. Navigate with precision.</p>
+</div>
+</section>
+<!-- Directory Grid -->
+<section class="relative z-10 grid grid-cols-12 gap-gutter mt-8">
+<!-- Col 1 -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-gutter mt-12">
+<a class="group border border-tertiary-fixed-dim bg-surface-container p-6 relative overflow-hidden transition-all duration-0 hover:border-primary-container" href="#">
+<div class="absolute top-0 right-0 p-2 bg-tertiary-fixed-dim text-surface-container group-hover:bg-primary-container transition-colors duration-0">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-primary-container transition-colors duration-0">NEXUS_01</h3>
+<p class="font-body-md text-on-surface-variant">Primary data routing and synaptic relay junction.</p>
+<div class="mt-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-on-surface uppercase">Active</span>
+</div>
+</a>
+<a class="group border border-tertiary-fixed-dim bg-surface-container p-6 relative overflow-hidden transition-all duration-0 hover:border-primary-container ml-8" href="#">
+<div class="absolute top-0 right-0 p-2 bg-tertiary-fixed-dim text-surface-container group-hover:bg-primary-container transition-colors duration-0">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-primary-container transition-colors duration-0">VOID_ARCHIVE</h3>
+<p class="font-body-md text-on-surface-variant">Deep storage parameters and cold semantic data.</p>
+<div class="mt-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-surface-variant border border-tertiary-fixed-dim"></span>
+<span class="font-label-caps text-on-surface-variant uppercase">Standby</span>
+</div>
+</a>
+</div>
+<!-- Col 2 -->
+<div class="col-span-12 md:col-span-5 flex flex-col gap-gutter">
+<a class="group border border-primary-container bg-primary-container text-background p-8 relative overflow-hidden transition-all duration-0 hover:bg-surface-container hover:text-primary-container hover:border-primary-container" href="#">
+<div class="absolute top-0 right-0 p-2 bg-background text-primary-container group-hover:bg-primary-container group-hover:text-background transition-colors duration-0">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</div>
+<h2 class="font-headline-lg mb-4 tracking-tighter">CORE<br/>ENGINE</h2>
+<p class="font-body-lg opacity-90 max-w-sm">Direct access to the central processing matrix and fluid dynamic controls.</p>
+<div class="mt-8 border-t border-background/20 group-hover:border-primary-container/20 pt-4 flex justify-between items-center">
+<span class="font-label-caps uppercase">System Priority: High</span>
+<span class="material-symbols-outlined">memory</span>
+</div>
+</a>
+<a class="group border border-tertiary-fixed-dim bg-surface-container p-6 relative overflow-hidden transition-all duration-0 hover:border-primary-container mr-12 mt-4" href="#">
+<div class="absolute top-0 right-0 p-2 bg-tertiary-fixed-dim text-surface-container group-hover:bg-primary-container transition-colors duration-0">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-primary-container transition-colors duration-0">FLUX_GATE</h3>
+<p class="font-body-md text-on-surface-variant">Real-time telemetry and API endpoint definitions.</p>
+</a>
+</div>
+<!-- Col 3 -->
+<div class="col-span-12 md:col-span-3 flex flex-col gap-gutter mt-24">
+<div class="border border-tertiary-fixed-dim p-4 bg-surface-container-low">
+<h4 class="font-label-caps text-on-surface-variant border-b border-tertiary-fixed-dim pb-2 mb-4">SYSTEM_STATUS</h4>
+<ul class="space-y-3 font-body-md">
+<li class="flex justify-between items-center">
+<span class="text-on-surface">Lattice Integrity</span>
+<span class="text-primary-container font-bold">99.8%</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface">Neural Load</span>
+<span class="text-primary-container font-bold">42%</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface">Active Nodes</span>
+<span class="text-primary font-bold">1,024</span>
+</li>
+</ul>
+</div>
+<a class="group border border-tertiary-fixed-dim bg-surface-container p-6 relative overflow-hidden transition-all duration-0 hover:border-primary-container ml-[-40px] z-10 bg-surface" href="#">
+<div class="absolute top-0 right-0 p-2 bg-tertiary-fixed-dim text-surface-container group-hover:bg-primary-container transition-colors duration-0">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-primary-container transition-colors duration-0">LOG_DUMP</h3>
+<p class="font-body-md text-on-surface-variant">Raw execution histories and stack traces.</p>
+</a>
+</div>
+</section>
+<section class="relative z-10 grid grid-cols-12 gap-gutter mt-16 border-t border-tertiary-fixed-dim pt-8">
+<div class="col-span-12 md:col-span-6 border-l-2 border-primary-container pl-4">
+<p class="font-label-caps text-on-surface-variant">END OF DIRECTORY INDEX // 0xFA4B</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-start p-12 gap-8 w-full bg-zinc-950 border-t-2 border-lime-400 border-t border-zinc-800 flat no shadows z-50">
+<div class="flex flex-col gap-4">
+<span class="text-lime-400 font-black font-['Space_Grotesk'] text-[10px] uppercase font-bold tracking-widest">©2024 AI_NIKITKA93 // SWISS_MODERNISM_ENGINE</span>
+</div>
+<nav class="flex gap-6">
+<a class="font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 hover:text-white transition-colors duration-0" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 hover:text-white transition-colors duration-0" href="#">LATTICE_API</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 hover:text-white transition-colors duration-0" href="#">CORE_DEBUG</a>
+</nav>
+</footer>
+</div>
+</body></html>

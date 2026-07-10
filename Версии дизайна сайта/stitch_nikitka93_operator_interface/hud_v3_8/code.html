@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>МЕДИА_СИСТЕМА // HUD_v4.2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#0c141a",
+                        "outline-variant": "#3a4a49",
+                        "on-secondary-fixed-variant": "#43474e",
+                        "surface-container-highest": "#2e363c",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#dfe2eb",
+                        "on-primary-fixed": "#002020",
+                        "on-primary-container": "#007070",
+                        "primary": "#ffffff",
+                        "tertiary-container": "#dde3ec",
+                        "primary-fixed": "#00fbfb",
+                        "secondary-container": "#454950",
+                        "on-tertiary-fixed-variant": "#41474f",
+                        "on-tertiary-container": "#5f656d",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#dde3ec",
+                        "primary-fixed-dim": "#00dddd",
+                        "tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#004f4f",
+                        "on-tertiary": "#2b3138",
+                        "on-secondary-container": "#b5b8c1",
+                        "on-secondary-fixed": "#181c22",
+                        "on-error": "#690005",
+                        "surface-dim": "#0c141a",
+                        "on-secondary": "#2d3137",
+                        "surface-container-low": "#151d22",
+                        "outline": "#839493",
+                        "surface": "#0c141a",
+                        "surface-container": "#192126",
+                        "surface-container-lowest": "#070f15",
+                        "secondary-fixed-dim": "#c3c6cf",
+                        "on-surface-variant": "#b9cac9",
+                        "inverse-on-surface": "#293138",
+                        "on-primary": "#003737",
+                        "on-tertiary-fixed": "#161c23",
+                        "surface-container-high": "#232b31",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#00fbfb",
+                        "surface-tint": "#00dddd",
+                        "tertiary-fixed-dim": "#c1c7d0",
+                        "secondary": "#c3c6cf",
+                        "inverse-primary": "#006a6a",
+                        "on-surface": "#dbe3ec",
+                        "inverse-surface": "#dbe3ec",
+                        "on-background": "#dbe3ec",
+                        "surface-bright": "#323a40",
+                        "surface-variant": "#2e363c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "unit": "4px",
+                        "module-gap": "20px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["JetBrains Mono"],
+                        "data-viz": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-md": ["JetBrains Mono"],
+                        "body-lg": ["JetBrains Mono"],
+                        "headline-lg": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "data-viz": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-caps": ["11px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["20px", {"lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+        .glow-active {
+            box-shadow: 0 0 15px rgba(0,255,255,0.6);
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(0,255,255,0.8);
+        }
+        
+        /* Custom scrollbar for terminal feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c141a;
+            border-left: 1px solid #3a4a49;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2e363c;
+            border-radius: 0.125rem;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00dddd;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-sm relative overflow-hidden flex">
+<!-- Global Scanline Overlay -->
+<div class="fixed inset-0 scanlines z-50 mix-blend-overlay"></div>
+<!-- SideNavBar (JSON Component) -->
+<aside class="bg-[#161B22] docked left-0 h-full w-20 border-r border-[#30363D] flex flex-col h-full z-40 relative">
+<div class="p-4 border-b border-[#30363D] flex flex-col items-center justify-center h-16">
+<span class="material-symbols-outlined text-cyan-500 font-bold glow-text" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<nav class="flex-1 py-4 flex flex-col gap-2">
+<!-- Active Tab: ТЕРМИНАЛ -->
+<a class="bg-cyan-400 text-[#0D1117] shadow-[0_0_15px_rgba(0,255,255,0.6)] rounded-sm m-2 flex flex-col items-center justify-center py-3 scale-95 transition-all" href="#" title="ТЕРМИНАЛ">
+<span class="material-symbols-outlined text-[20px] mb-1" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90" href="#" title="СЕТЬ">
+<span class="material-symbols-outlined text-[20px] mb-1">lan</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90" href="#" title="АРХИВ">
+<span class="material-symbols-outlined text-[20px] mb-1">inventory_2</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90" href="#" title="БАЗА_ДАННЫХ">
+<span class="material-symbols-outlined text-[20px] mb-1">database</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90" href="#" title="КОНФИГУРАЦИЯ">
+<span class="material-symbols-outlined text-[20px] mb-1">tune</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-[#30363D]">
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90" href="#" title="ВЫХОД">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-screen overflow-hidden relative z-10">
+<!-- TopAppBar (JSON Component) -->
+<header class="bg-[#0D1117] docked full-width top-0 border-b border-[#30363D] flex justify-between items-center w-full px-6 h-12 shadow-[0_0_10px_rgba(0,255,255,0.1)] z-30">
+<div class="flex items-center gap-8">
+<div class="font-mono font-black text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] tracking-tighter">
+                    МЕДИА_СИСТЕМА // HUD_v4.2
+                </div>
+<nav class="hidden md:flex gap-6 h-full items-center">
+<a class="font-mono uppercase tracking-tighter text-xs text-cyan-400 border-b-2 border-cyan-400 pb-1 h-full flex items-center transition-all duration-150 ease-in-out cursor-pointer hover:bg-cyan-400/10 hover:text-cyan-400" href="#">ОБЗОР</a>
+<a class="font-mono uppercase tracking-tighter text-xs text-slate-500 hover:text-cyan-200 transition-colors h-full flex items-center transition-all duration-150 ease-in-out cursor-pointer hover:bg-cyan-400/10 hover:text-cyan-400" href="#">АНАЛИТИКА</a>
+<a class="font-mono uppercase tracking-tighter text-xs text-slate-500 hover:text-cyan-200 transition-colors h-full flex items-center transition-all duration-150 ease-in-out cursor-pointer hover:bg-cyan-400/10 hover:text-cyan-400" href="#">ПОТОКИ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="text-cyan-400 absolute left-2 top-1/2 -translate-y-1/2 text-xs font-mono">&gt;</span>
+<input class="bg-[#161B22] border border-[#30363D] text-cyan-400 font-mono text-xs pl-6 pr-3 py-1 focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_8px_rgba(0,255,255,0.3)] w-48 rounded-sm" placeholder="QUERY..." type="text"/>
+</div>
+<div class="flex items-center gap-3 text-slate-500">
+<button class="hover:text-cyan-400 transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">settings</span></button>
+<button class="hover:text-cyan-400 transition-colors cursor-pointer relative">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full glow-active"></span>
+</button>
+<button class="hover:text-cyan-400 transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">terminal</span></button>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="flex-1 p-module-gap overflow-y-auto">
+<!-- Terminal Header -->
+<div class="mb-gutter flex justify-between items-end">
+<div>
+<h1 class="font-headline-lg text-primary glow-text tracking-tight">SYSTEM_OVERRIDE_CONSOLE</h1>
+<p class="font-label-caps text-on-surface-variant mt-1 text-cyan-400/70">&gt; AUTH_LEVEL: ROOT_ACCESS_GRANTED</p>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-2 justify-end mb-1">
+<span class="w-2 h-2 rounded-full bg-cyan-400 glow-active animate-pulse"></span>
+<span class="font-label-caps text-cyan-400">LIVE_DATA_STREAM</span>
+</div>
+<p class="font-data-viz text-outline-variant">UPTIME: 99.998% // LATENCY: 12MS</p>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-module-gap">
+<!-- Main Visualizer (Span 8) -->
+<div class="col-span-12 lg:col-span-8 bg-[#161B22] border border-[#30363D] rounded-DEFAULT overflow-hidden flex flex-col relative group">
+<div class="absolute inset-0 border border-cyan-400/0 group-hover:border-cyan-400/30 transition-colors pointer-events-none z-10"></div>
+<div class="px-4 py-2 border-b border-[#30363D] bg-[#0c141a]/50 flex justify-between items-center backdrop-blur-md">
+<span class="font-label-caps text-on-surface-variant">MOD_084 // GLOBAL_NODE_MAP</span>
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[10px] font-mono rounded-sm">SEC_ALPHA</span>
+<span class="px-2 py-0.5 bg-cyan-900/30 text-cyan-400 text-[10px] font-mono border border-cyan-800 rounded-sm">ACTIVE</span>
+</div>
+</div>
+<div class="relative h-64 sm:h-80 w-full bg-[#0c141a]">
+<!-- Simulated Map/Grid Background -->
+<div class="absolute inset-0" style="background-image: radial-gradient(#30363D 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+<!-- Map Image Overlay -->
+<div class="absolute inset-4 border border-[#30363D] overflow-hidden opacity-70 mix-blend-screen">
+<img class="w-full h-full object-cover filter grayscale contrast-150 sepia-[.3] hue-rotate-[180deg]" data-alt="Digital network visualization with glowing nodes and connecting lines on a dark background, representing global data transfer in a cyberpunk style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEOTvJn0w_cXlQ5UYA54dnx3afaXz_zAZnDZsvdn_ufEKV-BAd4vFCqk2vI6zSRKn9NAv1qou7kIEDH_E2nLCptlzhcygT0X-d1Z6Jj4n9soCgDRt8N3B1nG8Q37YMI0GxUWXo2MvHTeYHgGf5-NMLCGAoVSMEBmxBfpTsteeT4H6IWWKswOJ_Le8ftgr8BMpRRJ77PHTUKrvF0BmPNVheqUVkCJppjZ2Eo8f8Y1cC2ejKVIXT8jixDyWaxAYayhQe9M0MJ_1TTOeS"/>
+</div>
+<!-- Overlay UI Elements -->
+<div class="absolute top-8 left-8 border-l-2 border-cyan-400 pl-3">
+<div class="font-data-viz text-cyan-400 glow-text text-lg">84.3TB/s</div>
+<div class="font-label-caps text-on-surface-variant text-[9px]">TOTAL_THROUGHPUT</div>
+</div>
+<!-- Crosshairs -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-cyan-400/30 rounded-full pointer-events-none">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-cyan-400/30"></div>
+<div class="absolute top-0 left-1/2 w-[1px] h-full bg-cyan-400/30"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-cyan-400 rounded-full glow-active"></div>
+</div>
+</div>
+</div>
+<!-- System Logs (Span 4) -->
+<div class="col-span-12 lg:col-span-4 bg-[#161B22] border border-[#30363D] rounded-DEFAULT flex flex-col">
+<div class="px-4 py-2 border-b border-[#30363D] bg-[#0c141a]/50 flex justify-between items-center">
+<span class="font-label-caps text-on-surface-variant">MOD_012 // SYSTEM_LOGS</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">sort</span>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-3 font-data-viz text-[11px]">
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-transparent hover:border-cyan-400">
+<span class="text-outline-variant shrink-0">14:02:44</span>
+<span class="text-error">[WARN] NODE_7_UNREACHABLE</span>
+</div>
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-transparent hover:border-cyan-400">
+<span class="text-outline-variant shrink-0">14:02:41</span>
+<span class="text-cyan-400">[INFO] DATA_SYNC_COMPLETE</span>
+</div>
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-cyan-400 bg-cyan-900/10">
+<span class="text-outline-variant shrink-0">14:02:39</span>
+<span class="text-on-surface">&gt; USER_AUTH_SUCCESS : ROOT</span>
+</div>
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-transparent hover:border-cyan-400">
+<span class="text-outline-variant shrink-0">14:02:15</span>
+<span class="text-on-surface">[SYS] KERNEL_UPDATE_INIT</span>
+</div>
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-transparent hover:border-cyan-400">
+<span class="text-outline-variant shrink-0">14:01:55</span>
+<span class="text-on-surface">[INFO] FIREWALL_RULE_ADDED</span>
+</div>
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-transparent hover:border-cyan-400">
+<span class="text-outline-variant shrink-0">14:01:02</span>
+<span class="text-on-surface">[SYS] MEMORY_ALLOCATION: OPTIMAL</span>
+</div>
+<div class="flex gap-3 hover:bg-cyan-900/20 p-1 -mx-1 transition-colors border-l-2 border-transparent hover:border-cyan-400">
+<span class="text-outline-variant shrink-0">14:00:00</span>
+<span class="text-cyan-400">[INFO] SCHEDULED_SCAN_START</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Metrics (Span 3 x 4) -->
+<div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-[#161B22] border border-[#30363D] rounded-DEFAULT p-4 flex flex-col justify-between hover:border-cyan-400/50 transition-colors group">
+<div class="font-label-caps text-on-surface-variant flex justify-between">
+<span>CPU_LOAD</span>
+<span class="material-symbols-outlined text-[14px] text-cyan-400">memory</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-primary group-hover:text-cyan-400 transition-colors">42.8%</div>
+<div class="w-full bg-[#0c141a] h-1.5 mt-2 rounded-full overflow-hidden">
+<div class="bg-cyan-400 h-full w-[42.8%] shadow-[0_0_8px_rgba(0,255,255,0.8)]"></div>
+</div>
+</div>
+</div>
+<div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-[#161B22] border border-[#30363D] rounded-DEFAULT p-4 flex flex-col justify-between hover:border-cyan-400/50 transition-colors group">
+<div class="font-label-caps text-on-surface-variant flex justify-between">
+<span>NET_TRAFFIC</span>
+<span class="material-symbols-outlined text-[14px] text-cyan-400">router</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-primary group-hover:text-cyan-400 transition-colors">1.2 TB/s</div>
+<div class="flex items-end gap-1 h-6 mt-2">
+<div class="w-full bg-cyan-900/40 h-[30%] rounded-t-sm"></div>
+<div class="w-full bg-cyan-900/40 h-[50%] rounded-t-sm"></div>
+<div class="w-full bg-cyan-900/40 h-[80%] rounded-t-sm"></div>
+<div class="w-full bg-cyan-400 h-[60%] rounded-t-sm shadow-[0_0_8px_rgba(0,255,255,0.5)]"></div>
+<div class="w-full bg-cyan-900/40 h-[40%] rounded-t-sm"></div>
+<div class="w-full bg-cyan-900/40 h-[70%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+<!-- Control Panel (Span 6) -->
+<div class="col-span-12 lg:col-span-6 bg-[#161B22] border border-cyan-400/40 shadow-[0_0_15px_rgba(0,255,255,0.1)] rounded-DEFAULT flex flex-col">
+<div class="px-4 py-2 border-b border-[#30363D] flex justify-between items-center bg-cyan-900/10">
+<span class="font-label-caps text-cyan-400 glow-text">EXEC_COMMAND_MODULE</span>
+<span class="material-symbols-outlined text-[14px] text-cyan-400">keyboard_command_key</span>
+</div>
+<div class="p-4 flex flex-col gap-4 h-full justify-center">
+<div class="relative w-full">
+<span class="text-cyan-400 absolute left-3 top-1/2 -translate-y-1/2 font-mono font-bold">&gt;</span>
+<input class="w-full bg-[#0c141a] border border-[#30363D] text-primary font-mono text-sm pl-8 pr-3 py-3 rounded-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-shadow" type="text" value="sudo sys_restart --force"/>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface-container-high border border-[#30363D] text-on-surface hover:bg-cyan-400 hover:text-[#0c141a] hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(0,255,255,0.4)] transition-all font-label-caps py-2 rounded-sm cursor-pointer">
+                                ABORT
+                            </button>
+<button class="flex-1 bg-cyan-900/30 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400 hover:text-[#0c141a] hover:shadow-[0_0_15px_rgba(0,255,255,0.6)] transition-all font-label-caps py-2 rounded-sm cursor-pointer">
+                                EXECUTE_CMD
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

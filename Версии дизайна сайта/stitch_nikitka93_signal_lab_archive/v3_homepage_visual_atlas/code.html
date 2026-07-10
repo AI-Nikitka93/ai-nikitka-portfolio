@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Visual Atlas</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e9e2d1",
+                    "on-tertiary-fixed": "#1e1b11",
+                    "on-tertiary": "#343025",
+                    "surface": "#111413",
+                    "secondary": "#ffb59a",
+                    "tertiary-container": "#e9e2d1",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-secondary": "#5b1b00",
+                    "tertiary-fixed-dim": "#cdc6b6",
+                    "on-tertiary-fixed-variant": "#4b473b",
+                    "surface-container-highest": "#323534",
+                    "outline": "#8c947b",
+                    "primary-container": "#b0f734",
+                    "outline-variant": "#424935",
+                    "on-primary-fixed": "#121f00",
+                    "on-primary-container": "#4a6f00",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "inverse-surface": "#e1e3e1",
+                    "surface-container-lowest": "#0c0f0e",
+                    "on-tertiary-container": "#696457",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-bright": "#373a38",
+                    "surface-variant": "#323534",
+                    "on-primary-fixed-variant": "#334f00",
+                    "surface-container-high": "#282b29",
+                    "inverse-primary": "#456800",
+                    "tertiary": "#ffffff",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#96da06",
+                    "on-surface": "#e1e3e1",
+                    "primary": "#ffffff",
+                    "on-surface-variant": "#c2caaf",
+                    "secondary-container": "#cd4700",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#111413",
+                    "surface-container": "#1d201f",
+                    "inverse-on-surface": "#2e3130",
+                    "surface-tint": "#96da06",
+                    "surface-container-low": "#191c1b",
+                    "on-primary": "#223600",
+                    "primary-fixed": "#b0f734",
+                    "on-error": "#690005",
+                    "background": "#111413",
+                    "on-background": "#e1e3e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "unit": "4px",
+                    "margin": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Space Grotesk"
+                    ],
+                    "body-large": [
+                            "IBM Plex Mono"
+                    ],
+                    "label-tiny": [
+                            "IBM Plex Mono"
+                    ],
+                    "display-xl": [
+                            "Space Grotesk"
+                    ],
+                    "body-main": [
+                            "IBM Plex Mono"
+                    ],
+                    "metadata": [
+                            "IBM Plex Mono"
+                    ],
+                    "headline-md": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "110%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-large": [
+                            "18px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-tiny": [
+                            "10px",
+                            {
+                                    "lineHeight": "120%",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-xl": [
+                            "120px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-main": [
+                            "14px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "metadata": [
+                            "12px",
+                            {
+                                    "lineHeight": "140%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+        },
+        }
+      }
+    </script>
+<style>
+        /* Base brutalist styles to enforce strict lines and no shadows */
+        body {
+            background-color: theme('colors.surface-container-lowest');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Utility for 0.5px lines (Tailwind doesn't natively support 0.5px well) */
+        .border-raw { border-width: 0.5px; border-color: theme('colors.outline'); }
+        .border-t-raw { border-top-width: 0.5px; border-top-color: theme('colors.outline'); }
+        .border-b-raw { border-bottom-width: 0.5px; border-bottom-color: theme('colors.outline'); }
+        .border-l-raw { border-left-width: 0.5px; border-left-color: theme('colors.outline'); }
+        .border-r-raw { border-right-width: 0.5px; border-right-color: theme('colors.outline'); }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-main text-body-main">
+<!-- TopNavBar (Web) -->
+<nav class="hidden md:flex justify-between items-center w-full px-10 h-16 max-w-full bg-[#0A0D0C] border-b-[0.5px] border-[#8E968C] z-50 sticky top-0">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk']">SIGNAL_LAB [V2.0]</div>
+<div class="flex items-center gap-8 font-['Space_Grotesk'] tracking-tighter uppercase h-full">
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-full px-4" href="#">ARCHIVE</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-full px-4" href="#">SIGNALS</a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] flex items-center h-full px-4 opacity-80" href="#">ATLAS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-full px-4" href="#">TERMINAL</a>
+</div>
+<div class="text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase cursor-pointer hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-2 py-1">EN/RU</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-4 md:px-margin py-8 md:py-12 flex flex-col gap-12 pb-24 md:pb-12">
+<!-- Hero Section: Editorial Visual Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-0 border-raw relative">
+<!-- Left Panel: Context -->
+<div class="md:col-span-4 bg-surface-container-low border-b-raw md:border-b-0 md:border-r-raw p-8 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-2 border-[1px] border-outline-variant px-2 py-1 mb-6">
+<span class="w-2 h-2 bg-primary-fixed block"></span>
+<span class="font-label-tiny text-label-tiny text-on-surface-variant uppercase">&gt; ОПЕРАТИВНЫЙ ОБЗОР</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary-fixed mb-4">ВИЗУАЛЬНЫЙ АТЛАС</h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-sm mb-8">
+                        Синтез спутниковых данных и алгоритмического анализа аномалий. Зона наблюдения: Сектор 04.
+                    </p>
+</div>
+<!-- Metadata Block -->
+<div class="w-full">
+<div class="flex justify-between border-t-raw py-2">
+<span class="font-metadata text-metadata text-outline">[ПОТОК_ДАННЫХ]</span>
+<span class="font-metadata text-metadata text-on-surface text-right">АКТИВЕН / 1.2TB/s</span>
+</div>
+<div class="flex justify-between border-t-raw py-2">
+<span class="font-metadata text-metadata text-outline">[КООРДИНАТЫ]</span>
+<span class="font-metadata text-metadata text-on-surface text-right">55.7558° N, 37.6173° E</span>
+</div>
+<div class="flex justify-between border-t-raw py-2">
+<span class="font-metadata text-metadata text-outline">[УРОВЕНЬ_УГРОЗЫ]</span>
+<span class="font-metadata text-metadata text-primary-fixed text-right">НОРМА</span>
+</div>
+<div class="flex justify-between border-t-raw border-b-raw py-2">
+<span class="font-metadata text-metadata text-outline">[ИНДЕКС_СИГНАЛА]</span>
+<span class="font-metadata text-metadata text-on-surface text-right">OMEGA-99.2</span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Visual Focus -->
+<div class="md:col-span-8 relative min-h-[500px] md:min-h-[700px] overflow-hidden bg-surface-container-high group">
+<!-- Large Image -->
+<img alt="Satellite view" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" data-alt="High contrast monochromatic satellite view of urban topography with abstract glowing green data overlay lines resembling a digital map interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIjS5v3r55nIHPW5hymBXgxxM0tLyJzo5qt0DEwb5mg_2axg4Du1QJeejvd7bEnNfbCpyO0q4nNro7EyhdZa_T6lLf9VwWUWK-ewEzcvb5KtHrazUtJjDTsBSftI3_U64xANGd1mhJ4eoFOdc8yRIxosQGULTsIx8khgpU3YZmd7Mrj7pavZIEV-w7AsmP2pYutm8wvixEuWNIyhMTM0O-ePtCQfYfPjZ00UQJzQMuVxtvtdCw9JjEM3w8XeRbtGVMmzWOqTU58Cci"/>
+<!-- Technical Annotations Overlay -->
+<!-- Reticle Center -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-raw border-primary-fixed rounded-full opacity-50 flex items-center justify-center">
+<div class="w-1 h-1 bg-primary-fixed"></div>
+</div>
+<!-- Annotation 1 -->
+<div class="absolute top-[20%] left-[15%] flex items-end">
+<div class="h-16 w-0 border-l-raw border-primary-fixed"></div>
+<div class="w-24 h-0 border-t-raw border-primary-fixed"></div>
+<div class="bg-surface-container-lowest border-[1px] border-primary-fixed px-2 py-1 ml-1">
+<span class="font-label-tiny text-label-tiny text-primary-fixed">ОБЪЕКТ_АЛЬФА</span>
+</div>
+</div>
+<!-- Overlay Grid lines -->
+<div class="absolute inset-0 pointer-events-none grid grid-cols-4 grid-rows-4 w-full h-full">
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-r-raw border-b-raw border-white/5"></div>
+<div class="border-b-raw border-white/5"></div>
+<div class="border-r-raw border-white/5"></div>
+<div class="border-r-raw border-white/5"></div>
+<div class="border-r-raw border-white/5"></div>
+<div></div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<button class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full">
+<span class="material-symbols-outlined mb-1" style="font-size: 20px;">dynamic_feed</span>
+<span class="font-mono text-[10px] tracking-tighter">FEED</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full">
+<span class="material-symbols-outlined mb-1" style="font-size: 20px;">radar</span>
+<span class="font-mono text-[10px] tracking-tighter">SIGNALS</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 hover:bg-[#161B19] w-full h-full">
+<span class="material-symbols-outlined mb-1" style="font-size: 20px;">public</span>
+<span class="font-mono text-[10px] tracking-tighter text-[#B7FF3C]">MAP</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full">
+<span class="material-symbols-outlined mb-1" style="font-size: 20px;">account_circle</span>
+<span class="font-mono text-[10px] tracking-tighter">USER</span>
+</button>
+</nav>
+</body></html>

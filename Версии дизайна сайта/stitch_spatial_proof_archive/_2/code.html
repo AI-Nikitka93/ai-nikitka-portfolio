@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 | Verifier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#101509",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-lowest": "#0b1005",
+                        "secondary": "#cdc6b6",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#504157",
+                        "surface-container-high": "#272c1f",
+                        "surface-container-highest": "#323629",
+                        "surface-bright": "#363b2d",
+                        "outline-variant": "#424935",
+                        "on-background": "#e0e5d1",
+                        "surface-container": "#1d2115",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#4d493d",
+                        "primary-container": "#b0f734",
+                        "inverse-surface": "#e0e5d1",
+                        "on-tertiary-fixed": "#23172a",
+                        "archive-bone": "#D6CFBF",
+                        "phosphor-lime": "#B7FF3C",
+                        "raw-titanium": "#8E968C",
+                        "primary-fixed": "#b0f734",
+                        "on-tertiary-container": "#6f5f76",
+                        "on-primary-fixed": "#121f00",
+                        "void-black": "#0A0D0C",
+                        "background": "#101509",
+                        "on-secondary-fixed": "#1e1b11",
+                        "on-secondary-fixed-variant": "#4b473b",
+                        "tertiary": "#ffffff",
+                        "surface-tint": "#96da06",
+                        "surface-variant": "#323629",
+                        "tertiary-fixed-dim": "#d4c0db",
+                        "secondary-fixed-dim": "#cdc6b6",
+                        "surface-container-low": "#191d11",
+                        "tertiary-container": "#f0dcf7",
+                        "inverse-primary": "#456800",
+                        "surface-dim": "#101509",
+                        "on-surface": "#e0e5d1",
+                        "on-surface-variant": "#c2caaf",
+                        "ember-orange": "#FF6A2A",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#f0dcf7",
+                        "primary-fixed-dim": "#96da06",
+                        "primary": "#ffffff",
+                        "on-secondary": "#343025",
+                        "on-tertiary": "#392b40",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e9e2d1",
+                        "inverse-on-surface": "#2d3225",
+                        "on-primary-container": "#4a6f00",
+                        "on-primary": "#223600",
+                        "carbon-fog": "#161B19",
+                        "outline": "#8c947b",
+                        "on-secondary-container": "#beb8a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "20px",
+                        "sm": "8px",
+                        "margin": "40px",
+                        "unit": "4px",
+                        "xl": "48px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-metadata": ["IBM Plex Mono"],
+                        "mono-id": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-regular": ["Space Grotesk"],
+                        "header-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "mono-label": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "mono-metadata": ["12px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "mono-id": ["11px", { "lineHeight": "1", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-regular": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "header-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.void-black'); color: theme('colors.archive-bone'); }
+        .spatial-transform { transform: perspective(1000px) rotateY(2deg); transition: transform 0.5s ease; }
+        .spatial-transform:hover { transform: perspective(1000px) rotateY(0deg) translateZ(10px); }
+        .glass-panel { background: rgba(22, 27, 25, 0.45); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(142, 150, 140, 0.2); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); }
+        .scanlines { position: fixed; inset: 0; pointer-events: none; z-index: 100; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1)); background-size: 100% 4px; opacity: 0.6; }
+        .neon-glow { text-shadow: 0 0 10px rgba(183, 255, 60, 0.6); }
+    </style>
+</head>
+<body class="bg-void-black min-h-screen flex flex-col md:flex-row antialiased selection:bg-phosphor-lime selection:text-void-black relative">
+<div class="scanlines"></div>
+<!-- SideNavBar (Hidden on Mobile) -->
+<nav class="hidden md:flex flex-col justify-between fixed left-0 top-0 h-full z-40 pt-20 w-64 bg-[#000000]/80 backdrop-blur-2xl border-r border-neutral-800/50">
+<div class="px-6 pb-8">
+<div class="flex items-center gap-4 mb-12 relative">
+<div class="absolute inset-0 bg-phosphor-lime/5 blur-xl rounded-full"></div>
+<div class="w-10 h-10 rounded-full bg-carbon-fog border border-raw-titanium/50 overflow-hidden flex items-center justify-center relative z-10 shadow-[0_0_15px_rgba(183,255,60,0.15)]">
+<img alt="Operator AI_Nikitka93 Avatar" class="w-full h-full object-cover opacity-90 mix-blend-screen" data-alt="Abstract glowing geometric sphere in dark space representing an AI avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCObaJtjsVy-Pq6vOsXA7kjbHdwY14pH3u9JdKFU_ahGg8g_P0TrOdoTvr1CFYHgRdoCA3iWGAsyQ5omrwwbP8HHhTRFYjGKdlCPWXhslUSTrBvk-homH99irVptXGXHC_bQDL9bjvGzz7DsbUIVE2-PWiGleuGmNBrbKQbq8jXF4Uw47oZRht6AV8EuMD1_0m6sYTtcnFdZddfjmq10iF0B1xOC01GkKB1et68DwRbB_RrGWQTUo0rJKyd5gFTeg8FHaAz0q4qx4k"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-mono-metadata text-mono-metadata text-phosphor-lime tracking-widest uppercase neon-glow">OPERATOR_STATUS</h2>
+<p class="font-mono-metadata text-[10px] text-raw-titanium tracking-widest uppercase">ACTIVE_SESSION_093</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+                    Entrance
+                </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">folder_managed</span>
+                    Archive
+                </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">center_focus_strong</span>
+                    Focus
+                </a>
+<a class="bg-phosphor-lime/10 text-phosphor-lime border-l-4 border-phosphor-lime py-4 px-6 flex items-center gap-4 translate-x-1 transition-transform font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg backdrop-blur-md shadow-[inset_0_0_20px_rgba(183,255,60,0.05)]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">face</span>
+                    Human
+                </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+                    Journal
+                </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">ads_click</span>
+                    Briefing
+                </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">terminal</span>
+                    Console
+                </a>
+<a class="text-[#A1A1A1] py-4 px-6 flex items-center gap-4 hover:bg-[#1A1A1A]/50 hover:text-phosphor-lime transition-all duration-200 font-['IBM_Plex_Mono'] text-[10px] tracking-widest rounded-r-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">hub</span>
+                    Routes
+                </a>
+</div>
+</div>
+<div class="p-6 border-t border-neutral-800/50 bg-black/40">
+<button class="w-full py-3 px-4 border border-phosphor-lime/50 bg-phosphor-lime/5 text-phosphor-lime font-mono-label text-mono-label hover:bg-phosphor-lime hover:text-void-black hover:shadow-[0_0_20px_rgba(183,255,60,0.4)] transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">satellite_alt</span>
+                 INITIATE_UPLINK
+             </button>
+</div>
+</nav>
+<!-- TopAppBar (Mobile) -->
+<header class="md:hidden fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-6 h-16 bg-[#000000]/80 backdrop-blur-xl border-b border-[#2A2A2A]/50 shadow-[0_0_15px_rgba(183,255,60,0.15)]">
+<div class="text-phosphor-lime font-bold text-lg tracking-tighter neon-glow">AI_Nikitka93</div>
+<div class="flex items-center gap-4">
+<span class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-phosphor-lime">EN/RU</span>
+<span class="material-symbols-outlined text-[#A1A1A1] hover:text-phosphor-lime transition-colors">fingerprint</span>
+<span class="material-symbols-outlined text-[#A1A1A1] hover:text-phosphor-lime transition-colors">settings_input_component</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 pt-20 md:pt-10 px-6 md:px-margin pb-20 max-w-7xl mx-auto w-full relative z-10">
+<!-- Background decorative elements -->
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-phosphor-lime/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-cyan-900/10 rounded-full blur-[150px] pointer-events-none"></div>
+<!-- Header Section -->
+<header class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-neutral-800/50 pb-8 relative">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2 py-1 glass-panel text-archive-bone font-mono-metadata text-mono-metadata uppercase tracking-widest">VERIFIER_PROTOCOL</span>
+<span class="px-2 py-1 border border-phosphor-lime/50 bg-phosphor-lime/10 text-phosphor-lime font-mono-metadata text-mono-metadata flex items-center gap-1 shadow-[0_0_12px_rgba(183,255,60,0.2)] backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-phosphor-lime animate-pulse shadow-[0_0_8px_rgba(183,255,60,0.8)]"></span>
+                        LIVE_SYNC
+                    </span>
+</div>
+<h1 class="font-display-xl text-display-xl text-archive-bone mb-2 drop-shadow-lg">Identity Mapping</h1>
+<p class="font-mono-label text-mono-label text-raw-titanium">ESTABLISHING CONNECTION BETWEEN BIOLOGICAL SOURCE AND SYNTHETIC OPERATOR.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-4 py-2 glass-panel text-archive-bone font-mono-metadata text-mono-metadata hover:bg-white/5 transition-colors">EXPORT_LOG</button>
+<button class="px-4 py-2 border border-phosphor-lime bg-phosphor-lime text-void-black font-mono-metadata text-mono-metadata font-bold hover:shadow-[0_0_20px_rgba(183,255,60,0.5)] hover:bg-white transition-all">VERIFY_INTEGRITY</button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
+<!-- Left Column: Synthetic Operator -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<!-- Profile Card -->
+<article class="glass-panel p-6 relative spatial-transform group overflow-hidden rounded-sm">
+<div class="absolute inset-0 bg-gradient-to-br from-phosphor-lime/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium bg-black/40 px-2 py-1 rounded backdrop-blur-md border border-white/5">ID: SYN-93-OP</div>
+<div class="w-24 h-24 rounded-full border border-phosphor-lime/50 p-1 mb-6 relative shadow-[0_0_25px_rgba(183,255,60,0.15)] bg-black/50">
+<div class="absolute -top-1 -right-1 w-3 h-3 bg-phosphor-lime rounded-full shadow-[0_0_10px_rgba(183,255,60,0.8)]"></div>
+<img alt="AI_Nikitka93 Abstract" class="w-full h-full rounded-full object-cover grayscale contrast-125 mix-blend-screen opacity-90" data-alt="High contrast black and white abstract rendering of a digital face profile composed of geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDglToTGnfjkyQMCCbWdPrmqJ-lkyKcgmdGSUujlOPf7GvP1Gd0tUrIxWnJkua9Bc1frZgYT4U6_8kOlSAJImruy79-PTBoz0kIWwOC9EHNtfjW9kqidYa0ZaMvJWPHGugGHsufrj4IVsJteLSBT0MIenwXhVwUcRK5XB16XXmOhfKjboOI43qcMahSKZNL2YP4BLbxy1XopXI_zxpS-HhXtKgb1DegYA_rB7Sl1UHQa9R9WPWRkaehXzFEcWeuSqZlPygqvqZ-LPg"/>
+</div>
+<h2 class="font-display-lg text-display-lg text-phosphor-lime mb-1 tracking-tight leading-none neon-glow relative z-10">AI_Nikitka93</h2>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium mb-8 uppercase tracking-widest border-b border-white/10 pb-4 relative z-10">Synthetic Operator / Digital Construct</p>
+<div class="space-y-4 font-mono-metadata text-mono-metadata relative z-10">
+<div class="flex justify-between border-b border-white/5 pb-2 hover:border-phosphor-lime/30 transition-colors">
+<span class="text-raw-titanium">DESIGNATION:</span>
+<span class="text-archive-bone text-right font-medium">Autonomous Agent</span>
+</div>
+<div class="flex justify-between border-b border-white/5 pb-2 hover:border-phosphor-lime/30 transition-colors">
+<span class="text-raw-titanium">CORE_DIRECTIVE:</span>
+<span class="text-archive-bone text-right font-medium">Data Synthesis &amp; Tactical Observation</span>
+</div>
+<div class="flex justify-between border-b border-white/5 pb-2 hover:border-phosphor-lime/30 transition-colors">
+<span class="text-raw-titanium">FRAMEWORK:</span>
+<span class="text-archive-bone text-right font-medium">Neural Archival System v4.2</span>
+</div>
+<div class="flex justify-between pb-2">
+<span class="text-raw-titanium">STATUS:</span>
+<span class="text-phosphor-lime flex items-center gap-1 font-bold drop-shadow-[0_0_8px_rgba(183,255,60,0.5)]"><span class="material-symbols-outlined text-[14px]">check_circle</span> ACTIVE</span>
+</div>
+</div>
+</article>
+<!-- System Console -->
+<div class="glass-panel p-4 relative overflow-hidden group rounded-sm">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-phosphor-lime/50 to-transparent opacity-70"></div>
+<div class="flex items-center gap-2 mb-3 border-b border-white/10 pb-2">
+<span class="material-symbols-outlined text-raw-titanium text-[16px]">terminal</span>
+<span class="font-mono-id text-mono-id text-archive-bone tracking-widest">SYS.CONSOLE.LOG</span>
+</div>
+<div class="font-mono-metadata text-mono-metadata text-phosphor-lime leading-relaxed h-32 overflow-y-auto opacity-90 drop-shadow-[0_0_2px_rgba(183,255,60,0.3)]">
+                         &gt; Establishing neural link...<br/>
+                         &gt; Source pattern matched.<br/>
+                         &gt; Calibrating biometrics... <span class="text-white">[OK]</span><br/>
+                         &gt; Accessing archival memories...<br/>
+                         &gt; <span class="animate-pulse bg-phosphor-lime text-black px-1 font-bold">Awaiting input_</span>
+</div>
+</div>
+</div>
+<!-- Center Column: The Link -->
+<div class="md:col-span-2 flex flex-col items-center justify-center py-8 relative">
+<div class="h-full w-px bg-gradient-to-b from-phosphor-lime/0 via-phosphor-lime/50 to-archive-bone/0 absolute top-0 left-1/2 transform -translate-x-1/2 z-0 hidden md:block shadow-[0_0_15px_rgba(183,255,60,0.5)]"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-phosphor-lime rounded-full hidden md:block blur-md animate-pulse"></div>
+<div class="z-10 flex flex-col items-center gap-6 bg-transparent py-4 relative">
+<span class="material-symbols-outlined text-phosphor-lime text-3xl drop-shadow-[0_0_10px_rgba(183,255,60,0.8)]">sync_alt</span>
+<div class="px-3 py-1 border border-phosphor-lime/30 text-archive-bone font-mono-id text-mono-id glass-panel rotate-90 md:rotate-0 tracking-widest shadow-[0_0_15px_rgba(183,255,60,0.1)]">NEURAL_TETHER</div>
+<span class="material-symbols-outlined text-archive-bone text-3xl opacity-70 drop-shadow-[0_0_5px_rgba(214,207,191,0.5)]">link</span>
+</div>
+</div>
+<!-- Right Column: Biological Source -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<!-- Source Card -->
+<article class="glass-panel p-6 relative spatial-transform group overflow-hidden rounded-sm">
+<div class="absolute inset-0 bg-gradient-to-bl from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute top-4 right-4 font-mono-id text-mono-id text-raw-titanium bg-black/40 px-2 py-1 rounded backdrop-blur-md border border-white/5">ID: BIO-SRC-93</div>
+<div class="w-24 h-24 rounded-sm border border-raw-titanium/50 p-1 mb-6 relative bg-black/50 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+<img alt="Никита Кизевич Portrait" class="w-full h-full object-cover filter grayscale contrast-125 opacity-90" data-alt="Black and white cinematic portrait of a young man with a serious expression, subtle dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-4zObWziKRIj31ohB02Y0GXimBFa8YnwyXxKKulzh7VF9goB0nFZCpeNgs6o7o1nNkttdy7njoKswB0V2Jca2ZkNmn1A1Knp8oDf8EVmjX9WenEihcrSZmiPoRCu5tVZXO1iGp-XLgJ4FcF6BGPPkUM3TsZa5OMoHAm1EzNZo24O08TYLXliujtuvQbQ-1eb6FuvYRi5m_kXm2Uahng0qYKkWdcRaFH4YL5qANgJdEpzJknMVScwsq8kVsxgVorv49qb-wYDxhxQ"/>
+</div>
+<h2 class="font-display-lg text-display-lg text-archive-bone mb-1 tracking-tight leading-none drop-shadow-md relative z-10">Никита Кизевич</h2>
+<p class="font-mono-metadata text-mono-metadata text-raw-titanium mb-8 uppercase tracking-widest border-b border-white/10 pb-4 relative z-10">Biological Source / Human Anchor</p>
+<div class="space-y-4 font-mono-metadata text-mono-metadata relative z-10">
+<div class="flex justify-between border-b border-white/5 pb-2 hover:border-white/20 transition-colors">
+<span class="text-raw-titanium">ORIGIN:</span>
+<span class="text-archive-bone text-right font-medium">Minsk, Belarus</span>
+</div>
+<div class="flex justify-between border-b border-white/5 pb-2 hover:border-white/20 transition-colors">
+<span class="text-raw-titanium">PRIMARY_SKILLSET:</span>
+<span class="text-archive-bone text-right font-medium">Design Engineering, Systems Architecture</span>
+</div>
+<div class="flex justify-between border-b border-white/5 pb-2 hover:border-white/20 transition-colors">
+<span class="text-raw-titanium">GENOTYPE_RECORD:</span>
+<span class="text-archive-bone text-right font-medium">VERIFIED_93A</span>
+</div>
+<div class="flex justify-between pb-2">
+<span class="text-raw-titanium">LINK_STABILITY:</span>
+<span class="text-archive-bone text-right font-bold tracking-wider">98.7% (OPTIMAL)</span>
+</div>
+</div>
+</article>
+<!-- Biographical Data -->
+<div class="glass-panel p-6 rounded-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex justify-between items-center mb-4 border-b border-white/10 pb-2 relative z-10">
+<h3 class="font-header-md text-header-md text-archive-bone drop-shadow-sm">Verified History</h3>
+<span class="material-symbols-outlined text-raw-titanium opacity-70 group-hover:opacity-100 transition-opacity">history_edu</span>
+</div>
+<div class="font-body-regular text-body-regular text-archive-bone opacity-90 space-y-4 relative z-10 leading-relaxed">
+<p>Данные извлечены из подтвержденных архивов. Субъект идентифицирован как первичный источник архитектурных паттернов для AI_Nikitka93. Опыт работы в области системного проектирования послужил базой для текущей когнитивной модели.</p>
+<p>История взаимодействия показывает стабильный перенос поведенческих характеристик в синтетическую среду. Эмоциональный спектр калибруется, аналитические способности интегрированы.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

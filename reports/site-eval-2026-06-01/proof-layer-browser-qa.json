@@ -1,0 +1,272 @@
+{
+  "baseUrl": "http://127.0.0.1:3200",
+  "checkedAt": "2026-06-01T13:54:28.236Z",
+  "results": [
+    {
+      "viewport": "desktop",
+      "route": "/portfolio",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": false,
+      "hasPublicStatus": false,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "source-trace"
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "Работы | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [
+        {
+          "href": "https://www.minimax.io/news/minimax-150000-ai-agent-challenge",
+          "text": "MiniMax: official challenge announcementПодтверждает площадку, даты и full-stack AI Agent Challenge; не является личным "
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": true,
+      "hasPublicStatus": true,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "MiniMax Agent Challenge 2025 — Multi-Agent Production Run | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [
+        {
+          "href": "https://vk.company.ru/ru/press/releases/12126/",
+          "text": "VK: official RecSys Challenge announcementПодтверждает VK RecSys Challenge, VK-LSVD, cold-start recommendation-задачу и "
+        },
+        {
+          "href": "https://ods.ai/competitions/vkrecsyschallengelsvd/faq",
+          "text": "ODS.AI: competition FAQПодтверждает даты, 796 участников, 3910 сабмитов, формат решения и метрику NDCG@100."
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": true,
+      "hasPublicStatus": true,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "VK RecSys Challenge — TOP-9% Result | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [
+        {
+          "href": "https://forums.developer.nvidia.com/t/blackwell-nvfp4-kernel-hackathon/350212",
+          "text": "NVIDIA Developer Forums: Blackwell NVFP4 Kernel HackathonПодтверждает официальный hackathon-контекст: GPU MODE, NVIDIA B"
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": true,
+      "hasPublicStatus": true,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": false,
+      "hasPublicStatus": false,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "файл + текст"
+        },
+        {
+          "right": 401,
+          "tag": "P",
+          "text": "source-trace"
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "Работы | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [
+        {
+          "href": "https://www.minimax.io/news/minimax-150000-ai-agent-challenge",
+          "text": "MiniMax: official challenge announcementПодтверждает площадку, даты и full-stack AI Agent Challenge; не является личным "
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": true,
+      "hasPublicStatus": true,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "MiniMax Agent Challenge 2025 — Multi-Agent Production Run | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [
+        {
+          "href": "https://vk.company.ru/ru/press/releases/12126/",
+          "text": "VK: official RecSys Challenge announcementПодтверждает VK RecSys Challenge, VK-LSVD, cold-start recommendation-задачу и "
+        },
+        {
+          "href": "https://ods.ai/competitions/vkrecsyschallengelsvd/faq",
+          "text": "ODS.AI: competition FAQПодтверждает даты, 796 участников, 3910 сабмитов, формат решения и метрику NDCG@100."
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": true,
+      "hasPublicStatus": true,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "VK RecSys Challenge — TOP-9% Result | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+      "brokenImages": [],
+      "clientWidth": 390,
+      "externalContextLinks": [
+        {
+          "href": "https://forums.developer.nvidia.com/t/blackwell-nvfp4-kernel-hackathon/350212",
+          "text": "NVIDIA Developer Forums: Blackwell NVFP4 Kernel HackathonПодтверждает официальный hackathon-контекст: GPU MODE, NVIDIA B"
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "hasPersonalCaveat": true,
+      "hasPublicStatus": true,
+      "hasSourceTrace": true,
+      "overflowElements": [
+        {
+          "right": 518,
+          "tag": "DIV",
+          "text": ""
+        }
+      ],
+      "scrollWidth": 390,
+      "smallTargets": [],
+      "title": "NVIDIA Blackwell NVFP4 Kernel Hackathon — Leaderboard Entry | Proof Archive | AI_Nikitka93",
+      "titleFitsViewport": true
+    }
+  ],
+  "logs": [],
+  "ignoredLogs": 1
+}

@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-06-02T16:09:37.403Z",
+  "home": {
+    "clientWidth": 2052,
+    "h1": "AI-видео, графика и рабочие AI-прототипы.",
+    "horizontalOverflow": false,
+    "hrReadyCopy": true,
+    "primaryCtas": true,
+    "proofHero": true,
+    "proofImageCount": 3,
+    "proofImagesLoaded": 3,
+    "proofImagesPriorityPreload": 4,
+    "scrollWidth": 2052
+  },
+  "calculatorBase": {
+    "budgetVisible": true,
+    "bynCopy": true,
+    "calculatorExists": true,
+    "currencyButtons": [
+      "BYN",
+      "USD",
+      "EUR",
+      "RUB",
+      "PLN"
+    ],
+    "h1": "Быстро прикинуть бюджет на AI-видео, визуалы или прототип.",
+    "horizontalOverflow": false,
+    "nbrbCopy": true
+  },
+  "calculatorAfterRub": {
+    "horizontalOverflow": false,
+    "mailtoHasBudget": true,
+    "mailtoHasRub": true,
+    "rubPressed": true,
+    "rubVisible": true,
+    "sourceVisible": true
+  },
+  "assistantInitial": {
+    "contactLinks": {
+      "email": 2,
+      "linkedin": 2,
+      "telegram": 3
+    },
+    "h1": "Напишите вопрос — помощник покажет нужный маршрут по сайту.",
+    "horizontalOverflow": false,
+    "inputExists": true,
+    "matrixPanel": true,
+    "whereToWrite": true
+  },
+  "assistantAfterPrompt": {
+    "answerCompleteEnough": true,
+    "answerTitleVisible": true,
+    "horizontalOverflow": false,
+    "liveRegionPolite": true,
+    "liveTextLength": 231,
+    "matrixCaret": true,
+    "matrixStream": true,
+    "promptPressed": true,
+    "routeLabelVisible": true
+  },
+  "consoleWarnErrorCount": 0
+}

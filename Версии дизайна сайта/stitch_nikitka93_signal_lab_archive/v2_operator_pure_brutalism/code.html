@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Pure Brutalism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e9e2d1",
+                      "on-tertiary-fixed": "#1e1b11",
+                      "on-tertiary": "#343025",
+                      "surface": "#111413",
+                      "secondary": "#ffb59a",
+                      "tertiary-container": "#e9e2d1",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#802a00",
+                      "secondary-fixed": "#ffdbcf",
+                      "on-secondary": "#5b1b00",
+                      "tertiary-fixed-dim": "#cdc6b6",
+                      "on-tertiary-fixed-variant": "#4b473b",
+                      "surface-container-highest": "#323534",
+                      "outline": "#8c947b",
+                      "primary-container": "#b0f734",
+                      "outline-variant": "#424935",
+                      "on-primary-fixed": "#121f00",
+                      "on-primary-container": "#4a6f00",
+                      "secondary-fixed-dim": "#ffb59a",
+                      "inverse-surface": "#e1e3e1",
+                      "surface-container-lowest": "#0c0f0e",
+                      "on-tertiary-container": "#696457",
+                      "on-secondary-container": "#fffbff",
+                      "on-secondary-fixed": "#380d00",
+                      "surface-bright": "#373a38",
+                      "surface-variant": "#323534",
+                      "on-primary-fixed-variant": "#334f00",
+                      "surface-container-high": "#282b29",
+                      "inverse-primary": "#456800",
+                      "tertiary": "#ffffff",
+                      "error-container": "#93000a",
+                      "primary-fixed-dim": "#96da06",
+                      "on-surface": "#e1e3e1",
+                      "primary": "#ffffff",
+                      "on-surface-variant": "#c2caaf",
+                      "secondary-container": "#cd4700",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#111413",
+                      "surface-container": "#1d201f",
+                      "inverse-on-surface": "#2e3130",
+                      "surface-tint": "#96da06",
+                      "surface-container-low": "#191c1b",
+                      "on-primary": "#223600",
+                      "primary-fixed": "#b0f734",
+                      "on-error": "#690005",
+                      "background": "#111413",
+                      "on-background": "#e1e3e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "margin": "40px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-large": [
+                              "IBM Plex Mono"
+                      ],
+                      "label-tiny": [
+                              "IBM Plex Mono"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-main": [
+                              "IBM Plex Mono"
+                      ],
+                      "metadata": [
+                              "IBM Plex Mono"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-large": [
+                              "18px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-tiny": [
+                              "10px",
+                              {
+                                      "lineHeight": "120%",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-main": [
+                              "14px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "metadata": [
+                              "12px",
+                              {
+                                      "lineHeight": "140%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-main text-body-main min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- TopNavBar Web -->
+<nav class="hidden md:flex flex-row justify-between items-center w-full px-10 h-16 max-w-full bg-[#0A0D0C] border-b-[0.5px] border-[#8E968C] z-50 fixed top-0 left-0">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C] font-headline-md">SIGNAL_LAB [V2.0]</div>
+<div class="flex flex-row gap-8 font-['Space_Grotesk'] tracking-tighter uppercase h-full items-center">
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4 py-2 h-full flex items-center" href="#">ARCHIVE</a>
+<a class="text-[#B7FF3C] border-b-2 border-[#B7FF3C] hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4 py-2 h-full flex items-center opacity-80" href="#">SIGNALS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4 py-2 h-full flex items-center" href="#">ATLAS</a>
+<a class="text-[#8E968C] font-mono hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4 py-2 h-full flex items-center" href="#">TERMINAL</a>
+</div>
+<div class="text-[#B7FF3C] font-mono font-bold">EN/RU</div>
+</nav>
+<!-- SideNavBar Web -->
+<aside class="hidden md:flex flex-col fixed left-0 top-16 w-64 h-[calc(100vh-64px)] z-40 bg-[#0A0D0C] border-r-[0.5px] border-[#8E968C]">
+<!-- Header title hidden per JSON -->
+<nav class="flex flex-col mt-8 font-mono text-xs uppercase text-[#B7FF3C]">
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">map</span>
+                MAP_ATLAS
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+                SETTINGS
+            </a>
+</nav>
+</aside>
+<!-- BottomNavBar Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined">dynamic_feed</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">FEED</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">radar</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">SIGNALS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined">public</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">MAP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-mono text-[10px] tracking-tighter mt-1">USER</span>
+</a>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 mt-16 p-margin pb-24 md:pb-margin overflow-x-hidden">
+<!-- Header -->
+<header class="mb-gutter border-b-[0.5px] border-outline pb-unit">
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase">СИГНАЛЫ // АКТИВНЫЙ ПОТОК</h1>
+<p class="font-body-large text-body-large text-outline mt-unit">Мониторинг аномалий в реальном времени. Уровень доступа: ОМЕГА.</p>
+</header>
+<!-- Technical Stats Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline mb-gutter border-[0.5px] border-outline">
+<div class="bg-surface p-4 flex flex-col justify-between aspect-[2/1]">
+<span class="font-label-tiny text-label-tiny text-outline uppercase">СТАТУС СЕТИ</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-primary-container"></div>
+<span class="font-metadata text-metadata text-primary">АКТИВЕН</span>
+</div>
+</div>
+<div class="bg-surface p-4 flex flex-col justify-between aspect-[2/1]">
+<span class="font-label-tiny text-label-tiny text-outline uppercase">СКОРОСТЬ ПОТОКА</span>
+<span class="font-metadata text-metadata text-primary">12.4 TB/S</span>
+</div>
+<div class="bg-surface p-4 flex flex-col justify-between aspect-[2/1]">
+<span class="font-label-tiny text-label-tiny text-outline uppercase">АНОМАЛИИ ЗА ЧАС</span>
+<span class="font-metadata text-metadata text-primary-container">42</span>
+</div>
+<div class="bg-surface p-4 flex flex-col justify-between aspect-[2/1]">
+<span class="font-label-tiny text-label-tiny text-outline uppercase">ШИФРОВАНИЕ</span>
+<span class="font-metadata text-metadata text-primary">AES-256</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-outline border-[0.5px] border-outline">
+<!-- Main Signal View (Spans 8 cols) -->
+<div class="md:col-span-8 bg-surface-container-lowest p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6 border-b-[0.5px] border-outline pb-2">
+<span class="font-label-tiny text-label-tiny text-outline uppercase">&gt; СИГНАЛ_АЛЬФА_09</span>
+<button class="border border-outline px-4 py-1 font-label-tiny text-label-tiny text-primary hover:bg-primary-container hover:text-surface-container-lowest transition-colors uppercase">
+                        АНАЛИЗ
+                    </button>
+</div>
+<div class="flex-1 relative min-h-[300px] border-[0.5px] border-outline bg-surface overflow-hidden">
+<!-- Placeholder for waveform or data visual -->
+<div class="absolute inset-0 flex items-center justify-center opacity-20 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80')] bg-cover bg-center grayscale mix-blend-luminosity" data-alt="abstract digital data visualization with green technical lines on dark background"></div>
+<div class="absolute top-4 left-4 flex flex-col gap-1 z-10">
+<div class="bg-surface-container-lowest border-[0.5px] border-outline px-2 py-1 font-metadata text-metadata text-primary-container w-fit">
+                            ФАЗА: 4
+                        </div>
+<div class="bg-surface-container-lowest border-[0.5px] border-outline px-2 py-1 font-metadata text-metadata text-primary w-fit">
+                            АМПЛИТУДА: ВЫСОКАЯ
+                        </div>
+</div>
+</div>
+</div>
+<!-- Metadata Sidebar (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface p-6 border-l-[0.5px] border-outline flex flex-col">
+<span class="font-label-tiny text-label-tiny text-outline uppercase border-b-[0.5px] border-outline pb-2 mb-4">МЕТАДАННЫЕ</span>
+<div class="flex flex-col gap-0 border-t-[0.5px] border-outline">
+<div class="flex justify-between py-2 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-outline">[ID_ОБЪЕКТА]</span>
+<span class="font-metadata text-metadata text-primary">#9904-XY</span>
+</div>
+<div class="flex justify-between py-2 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-outline">[ВЕКТОР]</span>
+<span class="font-metadata text-metadata text-primary">34.4, -12.1, 0.9</span>
+</div>
+<div class="flex justify-between py-2 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-outline">[ИСТОЧНИК]</span>
+<span class="font-metadata text-metadata text-primary">УЗЕЛ_7</span>
+</div>
+<div class="flex justify-between py-2 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-outline">[ВРЕМЯ_МСК]</span>
+<span class="font-metadata text-metadata text-primary">14:02:44.091</span>
+</div>
+</div>
+<div class="mt-8">
+<span class="font-label-tiny text-label-tiny text-outline uppercase border-b-[0.5px] border-outline pb-2 mb-4 block">ВВОД ДАННЫХ</span>
+<div class="flex flex-col gap-4 mt-4">
+<div class="relative">
+<label class="font-label-tiny text-label-tiny text-outline absolute -top-4 left-0">ЗАМЕТКА ОПЕРАТОРА</label>
+<input class="w-full bg-transparent border-0 border-b-[0.5px] border-outline focus:ring-0 focus:border-primary-container text-primary font-body-main px-0 py-2" placeholder="..." type="text"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

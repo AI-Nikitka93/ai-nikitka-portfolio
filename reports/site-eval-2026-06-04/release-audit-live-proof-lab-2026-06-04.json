@@ -1,0 +1,332 @@
+{
+  "ok": false,
+  "checkedAt": "2026-06-04T15:04:21.045Z",
+  "content": {
+    "publishedPosts": 2,
+    "publishedPortfolio": 7,
+    "postRoutes": [
+      "/blog/prompt-first-workflow",
+      "/blog/proof-led-portfolio"
+    ],
+    "portfolioRoutes": [
+      "/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "/portfolio/sig-02-labstory-helix-best-animated-film",
+      "/portfolio/sig-03-labstory-helix-technical-mastery",
+      "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+      "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon"
+    ]
+  },
+  "sourceCopy": {
+    "checkedFiles": 55
+  },
+  "freshness": {
+    "lastUpdated": "2026-06-04",
+    "lastUpdatedLabel": "4 июня 2026",
+    "minimumFreshnessDate": "2026-06-04"
+  },
+  "deployment": {
+    "errorBoundary": true,
+    "globalErrorBoundary": true,
+    "vercelConfig": true,
+    "dependencyAuditGate": true,
+    "envAwareMetadataBase": true,
+    "reducedMotionGate": true,
+    "activeNavigationCurrent": true,
+    "dynamicFooterCounts": true
+  },
+  "pricingCurrency": {
+    "requiredFiles": [
+      "src/app/api/exchange-rates/route.ts",
+      "src/lib/exchange-rates.ts",
+      "src/lib/service-pricing.ts"
+    ],
+    "baseCurrency": "BYN",
+    "exchangeSource": "https://api.nbrb.by/exrates/rates?periodicity=0"
+  },
+  "assistant": {
+    "route": "/ai-assistant",
+    "requiredBehavior": [
+      "bounded local answers",
+      "matrix-style response motion",
+      "clear contact routes",
+      "accessible live region"
+    ]
+  },
+  "live": {
+    "checkedRoutes": 27,
+    "internalLinkIntegrity": {
+      "checkedInternalLinks": 457,
+      "uniqueInternalTargets": 19,
+      "checkedAnchors": 20
+    },
+    "performanceBudget": {
+      "budgets": {
+        "maxHtmlBytes": 280000,
+        "maxRouteStaticAssetBytes": 1100000,
+        "maxRouteStaticAssetGzipBytes": 270000,
+        "maxRouteJsGzipBytes": 225000,
+        "maxRouteCssGzipBytes": 45000,
+        "maxRouteStaticAssets": 16
+      },
+      "checkedRoutes": 19,
+      "uniqueStaticAssets": 18,
+      "worst": {
+        "htmlBytes": {
+          "route": "/portfolio",
+          "bytes": 249671
+        },
+        "staticAssetBytes": {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "bytes": 650846
+        },
+        "staticAssetGzipBytes": {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "bytes": 195202
+        },
+        "jsGzipBytes": {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "bytes": 194117
+        },
+        "cssGzipBytes": {
+          "route": "/",
+          "bytes": 1085
+        },
+        "staticAssetCount": {
+          "route": "/",
+          "count": 15
+        }
+      }
+    },
+    "socialImageIntegrity": {
+      "checkedMetaImages": 38,
+      "uniqueLocalImagePaths": 9
+    },
+    "structuredDataIntegrity": {
+      "checkedRoutes": 12,
+      "scriptCount": 15,
+      "nodeCount": 15,
+      "typeCounts": {
+        "Person": 1,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "Blog": 1,
+        "BlogPosting": 2,
+        "BreadcrumbList": 2,
+        "CreativeWork": 7
+      },
+      "routes": [
+        {
+          "route": "/",
+          "scripts": 2,
+          "nodes": 2,
+          "types": [
+            "Person",
+            "WebSite"
+          ],
+          "requiredTypes": [
+            "Person",
+            "WebSite"
+          ]
+        },
+        {
+          "route": "/portfolio",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CollectionPage"
+          ],
+          "requiredTypes": [
+            "CollectionPage"
+          ]
+        },
+        {
+          "route": "/blog",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "Blog"
+          ],
+          "requiredTypes": [
+            "Blog"
+          ]
+        },
+        {
+          "route": "/blog/prompt-first-workflow",
+          "scripts": 2,
+          "nodes": 2,
+          "types": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ],
+          "requiredTypes": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ]
+        },
+        {
+          "route": "/blog/proof-led-portfolio",
+          "scripts": 2,
+          "nodes": 2,
+          "types": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ],
+          "requiredTypes": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-02-labstory-helix-best-animated-film",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-03-labstory-helix-technical-mastery",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-05-minimax-agent-challenge-2025",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-06-vk-recsys-top-9-percent",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        }
+      ]
+    },
+    "languageAlternateIntegrity": {
+      "canonicalRoutesChecked": 19,
+      "languageRoutesChecked": 2,
+      "alternateLinksChecked": 8,
+      "languageRoutes": [
+        {
+          "route": "/",
+          "alternates": {
+            "ru": "https://kizevich.com",
+            "ru-BY": "https://kizevich.com",
+            "en": "https://kizevich.com/en",
+            "x-default": "https://kizevich.com"
+          }
+        },
+        {
+          "route": "/en",
+          "alternates": {
+            "ru": "https://kizevich.com",
+            "ru-BY": "https://kizevich.com",
+            "en": "https://kizevich.com/en",
+            "x-default": "https://kizevich.com"
+          }
+        }
+      ]
+    }
+  },
+  "warnings": [],
+  "errors": [
+    "/lab: expected HTTP 200, got 404",
+    "/: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/: static asset /_next/static/chunks/0.niabdusec8~.js returned HTTP 500",
+    "/: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/about: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/about: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/blog: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/blog: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/services-calculator: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/services-calculator: static asset /_next/static/chunks/00o1jyimoiuy5.js returned HTTP 500",
+    "/services-calculator: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/ai-assistant: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/ai-assistant: static asset /_next/static/chunks/14~lnmox417jq.js returned HTTP 500",
+    "/ai-assistant: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/links: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/links: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/awards-credentials: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/awards-credentials: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/en: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/en: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/privacy: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/privacy: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/blog/prompt-first-workflow: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/blog/prompt-first-workflow: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/blog/proof-led-portfolio: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/blog/proof-led-portfolio: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-01-35awards-ai-imaging-field-results: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-01-35awards-ai-imaging-field-results: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-02-labstory-helix-best-animated-film: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-02-labstory-helix-best-animated-film: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-03-labstory-helix-technical-mastery: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-03-labstory-helix-technical-mastery: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-05-minimax-agent-challenge-2025: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-05-minimax-agent-challenge-2025: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-06-vk-recsys-top-9-percent: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-06-vk-recsys-top-9-percent: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon: static asset /_next/static/chunks/0pmn03dlvq0q8.js returned HTTP 500",
+    "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon: static asset /_next/static/chunks/11gkjnwj5n6v3.css returned HTTP 500",
+    "/sitemap.xml: missing route /lab"
+  ]
+}

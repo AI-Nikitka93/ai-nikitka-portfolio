@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DEEP_STACK // OP_ARCHIVE</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#1f2020",
+              "surface-tint": "#00dce5",
+              "on-secondary-fixed-variant": "#93000c",
+              "surface-variant": "#353535",
+              "secondary-container": "#d30017",
+              "inverse-surface": "#e5e2e1",
+              "primary-container": "#00f5ff",
+              "on-secondary-fixed": "#410002",
+              "primary-fixed": "#63f7ff",
+              "on-background": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#474646",
+              "primary-fixed-dim": "#00dce5",
+              "surface-dim": "#131313",
+              "tertiary-container": "#e0dddc",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary-fixed-dim": "#c9c6c5",
+              "on-surface": "#e5e2e1",
+              "tertiary": "#fdf9f9",
+              "tertiary-fixed": "#e5e2e1",
+              "error": "#ffb4ab",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#1c1b1b",
+              "outline-variant": "#3a494a",
+              "outline": "#849495",
+              "on-primary-fixed": "#002021",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-highest": "#353535",
+              "on-tertiary-container": "#626161",
+              "background": "#131313",
+              "on-secondary-container": "#ffe2de",
+              "error-container": "#93000a",
+              "surface-container-low": "#1b1c1c",
+              "secondary": "#ffb4ab",
+              "inverse-on-surface": "#303030",
+              "secondary-fixed": "#ffdad6",
+              "on-tertiary": "#313030",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#ffb4ab",
+              "on-surface-variant": "#b9caca",
+              "on-error": "#690005",
+              "on-primary-container": "#006c71",
+              "on-primary": "#003739",
+              "surface-bright": "#393939",
+              "on-secondary": "#690006",
+              "primary": "#e9feff",
+              "on-primary-fixed-variant": "#004f53",
+              "inverse-primary": "#00696e"
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            spacing: {
+              "gutter": "24px",
+              "stack-offset": "16px",
+              "margin-safe": "32px",
+              "unit": "4px",
+              "frame-gap": "0px"
+            },
+            fontFamily: {
+              "label-caps": ["IBM Plex Mono"],
+              "code": ["IBM Plex Mono"],
+              "display-xl": ["Space Grotesk"],
+              "headline-md": ["Space Grotesk"],
+              "body-md": ["IBM Plex Mono"],
+              "body-lg": ["IBM Plex Mono"],
+              "headline-lg": ["Space Grotesk"]
+            },
+            fontSize: {
+              "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600" }],
+              "code": ["13px", { lineHeight: "1.4", fontWeight: "400" }],
+              "display-xl": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+              "headline-md": ["24px", { lineHeight: "1.2", fontWeight: "500" }],
+              "body-md": ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      /* Cyber-Brutalism Global Rules */
+      body {
+        background-color: #131313;
+        color: #e5e2e1;
+      }
+      
+      /* Exposed Scrollbars as Depth Indicators */
+      ::-webkit-scrollbar {
+        width: 16px;
+        height: 16px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #222222;
+        border-left: 2px solid #00f5ff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00f5ff;
+        border: 2px solid #222222;
+      }
+      ::-webkit-scrollbar-corner {
+        background: #222222;
+      }
+
+      /* Stack Offset Simulator */
+      .frame-offset {
+        transform: translate(16px, 16px);
+      }
+      
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .icon-fill {
+        font-variation-settings: 'FILL' 1;
+      }
+      
+      /* Image Background Utilities */
+      .bg-img-overlay {
+        position: relative;
+      }
+      .bg-img-overlay::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(14, 14, 14, 0.85); /* surface-container-lowest with opacity */
+        z-index: 0;
+      }
+      .bg-img-overlay > * {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+</head>
+<body class="overflow-hidden selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- TopAppBar -->
+<header class="fixed top-0 flex justify-between items-center h-12 px-4 w-full z-50 bg-black/90 backdrop-blur-sm border-b-2 border-[#00F5FF]">
+<div class="flex items-center">
+<span class="text-lg font-bold text-[#00F5FF] border-r-2 border-[#00F5FF] pr-4 mr-4 uppercase tracking-widest text-xs font-['Space_Grotesk']">
+                DEEP_STACK // OP_ARCHIVE
+            </span>
+</div>
+<div class="flex items-center space-x-6 text-[#00F5FF]">
+<div class="flex space-x-4">
+<span class="material-symbols-outlined cursor-crosshair active:translate-y-px hover:bg-[#00F5FF] hover:text-black transition-colors duration-75 text-xl" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined cursor-crosshair active:translate-y-px hover:bg-[#00F5FF] hover:text-black transition-colors duration-75 text-xl" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<div class="border-l-2 border-[#00F5FF] pl-4 font-['Space_Grotesk'] uppercase tracking-widest text-xs cursor-crosshair hover:bg-[#00F5FF] hover:text-black transition-colors duration-75">
+                RU/EN
+            </div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-12 h-[calc(100vh-48px)] flex flex-col items-center z-40 bg-black border-r-2 border-[#00F5FF] w-20">
+<!-- Header/Identity Info -->
+<div class="w-full border-b-2 border-[#00F5FF] py-3 flex flex-col items-center justify-center font-['Space_Grotesk'] text-[10px] font-bold tracking-tighter text-[#00F5FF]">
+<span class="text-center">STK_IDX:<br/>001</span>
+<span class="mt-1 text-[#00F5FF]/70">[LVL: 04]</span>
+</div>
+<div class="w-full flex-1 flex flex-col">
+<!-- Active Tab -->
+<a class="bg-[#00F5FF] text-black w-full flex flex-col items-center py-4 border-b-2 border-[#00F5FF] transition-all duration-100 ease-linear cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-2xl icon-fill" data-icon="folder_open">folder_open</span>
+<span class="mt-1 font-['Space_Grotesk'] text-[10px] font-bold tracking-tighter">ARCHIVE</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="text-[#00F5FF] w-full flex flex-col items-center py-4 border-b-2 border-zinc-800 opacity-60 hover:opacity-100 hover:bg-zinc-900 transition-all duration-100 ease-linear cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="visibility">visibility</span>
+<span class="mt-1 font-['Space_Grotesk'] text-[10px] font-bold tracking-tighter">INTEL</span>
+</a>
+<a class="text-[#00F5FF] w-full flex flex-col items-center py-4 border-b-2 border-zinc-800 opacity-60 hover:opacity-100 hover:bg-zinc-900 transition-all duration-100 ease-linear cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="hub">hub</span>
+<span class="mt-1 font-['Space_Grotesk'] text-[10px] font-bold tracking-tighter">NETWORK</span>
+</a>
+<a class="text-[#00F5FF] w-full flex flex-col items-center py-4 border-b-2 border-zinc-800 opacity-60 hover:opacity-100 hover:bg-zinc-900 transition-all duration-100 ease-linear cursor-crosshair" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="terminal">terminal</span>
+<span class="mt-1 font-['Space_Grotesk'] text-[10px] font-bold tracking-tighter">SYSTEM</span>
+</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="fixed inset-0 top-12 left-20 bottom-8 overflow-y-auto bg-background p-6">
+<!-- Deep Stack Background Frame (Simulating depth) -->
+<div class="absolute inset-x-6 inset-y-6 border border-outline-variant opacity-30 pointer-events-none"></div>
+<!-- Foreground Active Frame -->
+<div class="relative bg-surface-container/10 border-2 border-primary-container min-h-full flex flex-col z-10 frame-offset mb-16 mr-16">
+<!-- Frame Header -->
+<div class="flex items-center justify-between border-b-2 border-primary-container bg-surface-container-lowest px-4 py-2">
+<div class="flex items-center space-x-3">
+<span class="font-headline-md text-headline-md text-primary-container">ARCHIVE_IDX: MASTER</span>
+<span class="font-label-caps text-label-caps text-outline bg-surface-variant px-2 py-1">[ACTIVE]</span>
+</div>
+<div class="font-code text-code text-on-surface-variant opacity-50 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">memory</span>
+                    SYS_MEM_ALLOC: 4096TB
+                </div>
+</div>
+<!-- Frame Content (Dossier Grid) -->
+<div class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-unit bg-gradient-to-b from-surface-container-lowest to-surface">
+<!-- DOSSIER 01: Hero Slab (Spans 2 columns, 2 rows) -->
+<div class="col-span-1 md:col-span-2 row-span-2 border-2 border-primary-container bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center" data-alt="cybernetic glowing server room corridor in cold blue light with massive wire bundles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJ4ZuYkMRU242Et-P_RfCXkzrlfR7KzzysRuFYFuyg27YeVBz2Oji9v5Iq0ulGnUEJdCylvUBKn4sezS12Q9FF-ON2xSYgpqtyL2tMbYpZBpqCbUmHYnQwj-OxCBW1iVtZTm4ezLOyjg_iH02bNzpob6zTzAy1rKh30V6REdZp98y6BovOk1JbhVOBdqCCFnk7K6dYeRqLq2BWrvWa2Bc2D7l8ZcNvLKJ2ybuZF7TiQx92ZFbRz8MeuJazvsVm8WhxFy4EXNnkVls');">
+<div class="flex justify-between items-start border-b border-outline p-3">
+<span class="font-label-caps text-label-caps text-primary-container bg-black/50 px-1">[DOSSIER_001]</span>
+<span class="material-symbols-outlined text-primary-container icon-fill">bookmark</span>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-end">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2 uppercase border-l-4 border-primary-container pl-4">Operation: Blindspot</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-4">Initial structural anomalies detected in Sector 7G. Full architectural breakdown required to bypass the sub-level encryption protocols.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-on-surface border border-outline px-2 py-1 bg-surface-container-high/50">[STATUS: CRITICAL]</span>
+<span class="font-label-caps text-label-caps text-on-surface border border-outline px-2 py-1 bg-surface-container-high/50">[LOC: SECTOR_7G]</span>
+</div>
+</div>
+</div>
+<!-- DOSSIER 02 -->
+<div class="border border-outline bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center h-64" data-alt="dense matrix of green binary code raining down on black screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtpyHYoE7n9tZ8HHKIXE1FJZ2JKNQROSiludkvFFw2GmbmKBNvqC94NTDWwbAp2PdjwFHAOnrNDs4UEHUvUixgwQxqTr-2J6rHbL71ZGKzRMVBXtL_EB-8bCZPY8NlhpUgux3I0WSwab7etX_w5lYQL6LKPW4dKPCFuXyT9LsXwUvqq1EYnEdNvIY5qe-4VIOVr7KcncAqBOAEB2J9lYKtRI6IhQ92lHKG0jDAF6DyuUjT5VGBMOcfvaK0FxvWjE79jIRK8J-mZdk');">
+<div class="flex justify-between items-start border-b border-surface-variant p-2">
+<span class="font-label-caps text-label-caps text-outline bg-black/50 px-1">[DOSSIER_002]</span>
+</div>
+<div class="flex-1 p-4 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">Cipher Key Alpha</h3>
+<p class="font-code text-code text-on-surface-variant truncate">Hash: 0x9A4F...B2C1</p>
+</div>
+</div>
+<!-- DOSSIER 03 -->
+<div class="border border-outline bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center h-64" data-alt="abstract close up of dark metallic circuit board with subtle cyan glow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzhTDYZJ6l-JRTY7wmnIPPTN_js7VWzmOQY95EfokUNt7U9kwVhJ5Y6UvLHTRRL3hFGldVV7NdCSAFNFzzsVMKeOzlEa8U14Uj4qp45cZ9GKmFcKxBR0kGbqOS_mZbaXXByGo9YruTSSahgO0T-dihvL4rOp-6cRuCxSvC5NqX3SJ3_UqUDSk3fIB0ZobdCWgGpTqLc5n7PMvOLHlTiqevydHS2lVdndh883f0KvK1LaDYYBJP8ZPLuJdw3BkSmJuHFKGftWw8y6A');">
+<div class="flex justify-between items-start border-b border-surface-variant p-2">
+<span class="font-label-caps text-label-caps text-outline bg-black/50 px-1">[DOSSIER_003]</span>
+</div>
+<div class="flex-1 p-4 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">Node Mapping</h3>
+<p class="font-code text-code text-on-surface-variant truncate">Nodes Active: 4,091</p>
+</div>
+</div>
+<!-- DOSSIER 04 -->
+<div class="border border-outline bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center h-64" data-alt="dark brutalist concrete architecture with sharp angles and heavy shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8xurGIABO40Mj33IobMGf7NsgU-v4dVcRgtHSHJE-qR1Jrv6uLF0fBKj9niZmuGQHbc3r9aJZzn-4NKFyzMayt7eGgNwqrt6harglT6ZdoosQ2Fa5QMm5_S1XSBTSM0fUxCd8sZfJinRNBdM_t7pZdw6112XyRgiUa74ZmptDaW5qinjtyuQ6qtghEaWy1DDvOPvoZNCtVqBho_U7BW9stzz9vg_GldNnjF4urfyqIQpvZ1b5Y1ajvyKJwmwuF6DKZyBk4adXO5o');">
+<div class="flex justify-between items-start border-b border-surface-variant p-2">
+<span class="font-label-caps text-label-caps text-outline bg-black/50 px-1">[DOSSIER_004]</span>
+</div>
+<div class="flex-1 p-4 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-error uppercase mb-1">Breach Intel</h3>
+<div class="font-label-caps text-label-caps text-on-surface border border-error px-2 py-1 bg-error-container/20 self-start">[UNVERIFIED]</div>
+</div>
+</div>
+<!-- DOSSIER 05 -->
+<div class="border border-outline bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center h-64" data-alt="close up of silicon microchip processing unit in dark lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASCEs9QirkHk2wlunflM96-udgLez-XnNFsPmrW6jOucm9LUUicYfRSKTXqeYtzLzBcG1WyEPdcHAUtxYCPwrnV_yYlaTWNzzS5OZ-S7j-PJJD8Rp7doPB44Cihg23sFZMQqF0U5BK5M1FNBl_Gf7wKt41PPB647jhHHbOa_wJ9yEajqJmKH4gIRSg0c31Aa139wnyqNEtTBjk4feB_TmBtvTrd_bU4iEg8txkPRovvTc1bZZ8VUvkz8bcUI8m01sp5Zb6cOOXOEY');">
+<div class="flex justify-between items-start border-b border-surface-variant p-2">
+<span class="font-label-caps text-label-caps text-outline bg-black/50 px-1">[DOSSIER_005]</span>
+</div>
+<div class="flex-1 p-4 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">Hardware Manifest</h3>
+<p class="font-code text-code text-on-surface-variant truncate">Asset count: 12,044</p>
+</div>
+</div>
+<!-- DOSSIER 06 -->
+<div class="border border-outline bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center h-64" data-alt="view of earth from space with connecting network lines overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAMdBp8zeZ4Gl46vBXcfBJPwddz13lUzWUGoVT1GW6kMteXdYO2n_ArRnyVUsWHhOeB4z8_-kySF_tdW6Yyaitp_6FK4bKxpTVcZRjBnLXyVZpaKoGZFJ0aN_-Q9hQGR8uVau6LphUlMcNmM2JVkL6_DzK7rNa1iB2Vv8k83kcGxOt5A1rwBSelLAKZ8z_f4_F9b3nMm3n87tak-odqOo1ioNnWJDCWQhsdArzOEHVReigEU-Chd1kmc6O1u1VnYJMzvueNrv9kiw');">
+<div class="flex justify-between items-start border-b border-surface-variant p-2">
+<span class="font-label-caps text-label-caps text-outline bg-black/50 px-1">[DOSSIER_006]</span>
+</div>
+<div class="flex-1 p-4 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">Global Uplink</h3>
+<p class="font-code text-code text-on-surface-variant truncate">Satellites: 24/24</p>
+</div>
+</div>
+<!-- DOSSIER 07 -->
+<div class="border border-outline bg-surface-container-lowest flex flex-col bg-img-overlay bg-cover bg-center h-64" data-alt="black and white security camera glitch interference pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEvqcPD-RllmSzbanGrJOI3I4gFzU4CLMWbuv6Z8-TnGbmmSuXq0C8JRN-GJ0GpZLTa9LqWXGv8XhDkBH_mPaSEh-VwCg4N53PR1gqNUaFZc4rWFK-kFhu87RYARhLndm9OC1ENn5nrgHxmrnuWTAvp-a8_bRwIMjz0Q2hdOYAW9xDQsGG8SlBfuu3gZCLoF9RbRUpRxd6WqC67T7_AKN4iwdvS1Xe5lkJJLP7sJ-F9tCuRbQqQ6HzquJz4uJctHHgeidxOMS6MXQ');">
+<div class="flex justify-between items-start border-b border-surface-variant p-2">
+<span class="font-label-caps text-label-caps text-outline bg-black/50 px-1">[DOSSIER_007]</span>
+</div>
+<div class="flex-1 p-4 flex flex-col justify-end">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-1">Surveillance Log</h3>
+<p class="font-code text-code text-on-surface-variant truncate">Feeds active: 1,029</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-20 right-0 h-8 flex justify-between items-center px-4 z-40 bg-black border-t-2 border-[#00F5FF] text-[#00F5FF] font-['Space_Grotesk'] text-[9px] monospaced uppercase">
+<div class="flex items-center space-x-6">
+<span class="text-[#00F5FF]">STATUS: ENCRYPTED // LAYER_01_ACTIVE</span>
+</div>
+<div class="flex items-center space-x-4">
+<a class="text-[#00F5FF]/70 hover:text-white transition-colors duration-75" href="#">PING: 24MS</a>
+<span class="text-[#00F5FF]/30">|</span>
+<a class="text-[#00F5FF]/70 hover:text-white transition-colors duration-75" href="#">UPLINK: STABLE</a>
+<span class="text-[#00F5FF]/30">|</span>
+<a class="text-[#00F5FF]/70 hover:text-white transition-colors duration-75" href="#">SEC_KEY: 0xFF00</a>
+</div>
+</footer>
+</body></html>

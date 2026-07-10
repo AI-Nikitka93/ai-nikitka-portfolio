@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operator Surface</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0c0f04",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "background": "#111508",
+                        "surface": "#111508",
+                        "inverse-primary": "#506600",
+                        "error": "#ffb4ab",
+                        "on-background": "#e2e4cf",
+                        "surface-container-high": "#282b1d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "outline": "#8e9379",
+                        "on-tertiary": "#21323e",
+                        "surface-container-low": "#1a1d10",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "outline-variant": "#444933",
+                        "surface-container": "#1e2113",
+                        "surface-tint": "#abd600",
+                        "surface-bright": "#373b2c",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#111508",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#333627",
+                        "error-container": "#93000a",
+                        "surface-variant": "#333627",
+                        "inverse-on-surface": "#2f3223",
+                        "on-tertiary-container": "#556774",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary-fixed-dim": "#abd600",
+                        "on-primary-container": "#556d00",
+                        "on-primary-fixed": "#161e00",
+                        "on-secondary-container": "#b8b8b8",
+                        "primary-container": "#c3f400",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "secondary-container": "#484949",
+                        "primary": "#ffffff",
+                        "secondary": "#c7c6c6",
+                        "inverse-surface": "#e2e4cf",
+                        "tertiary-fixed": "#d2e5f5",
+                        "on-surface": "#e2e4cf",
+                        "on-primary": "#283500",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "tertiary-container": "#d2e5f5",
+                        "primary-fixed": "#c3f400",
+                        "tertiary-fixed-dim": "#b6c9d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "column_count": "12",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-data": ["IBM Plex Mono"],
+                        "body-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "mono-label": ["IBM Plex Mono"],
+                        "display-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "mono-data": ["14px", { "lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-label": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-xl": ["80px", { "lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-black text-on-background min-h-screen font-body-md overflow-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-black font-['Space_Grotesk'] font-bold uppercase tracking-widest docked full-width top-0 border-b border-[#CCFF00] flat no shadows flex justify-between items-center px-8 h-16 w-full z-50 fixed">
+<div class="text-2xl font-black text-[#CCFF00] tracking-tighter">AI_NIKITKA93</div>
+<div class="text-[#CCFF00] text-sm tracking-widest font-mono-label">RU / EN</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-black font-['IBM_Plex_Mono'] text-sm tracking-tighter docked left-0 h-screen w-64 border-r border-white/20 flat no shadows fixed left-0 top-16 flex flex-col h-[calc(100vh-64px)] z-40">
+<div class="p-6 border-b border-white/20">
+<div class="text-white/60 font-mono-label text-mono-label mb-1">DIRECTORY</div>
+<div class="text-[#CCFF00] font-bold">V.1.0.4-BETA</div>
+</div>
+<div class="flex flex-col flex-grow">
+<!-- Inactive Tab 1 -->
+<a class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black transition-colors duration-0 group" href="#">
+<span class="material-symbols-outlined mr-3 text-white/50 group-hover:text-black">inventory_2</span>
+                01/ ARCHIVE
+            </a>
+<!-- Inactive Tab 2 -->
+<a class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black transition-colors duration-0 group" href="#">
+<span class="material-symbols-outlined mr-3 text-white/50 group-hover:text-black">folder_open</span>
+                02/ DOSSIER
+            </a>
+<!-- Inactive Tab 3 -->
+<a class="text-white flex items-center px-4 py-3 border-b border-white/10 hover:bg-white hover:text-black transition-colors duration-0 group" href="#">
+<span class="material-symbols-outlined mr-3 text-white/50 group-hover:text-black">format_list_numbered</span>
+                03/ INDEX
+            </a>
+<!-- Active Tab 4 (System Intent) -->
+<a class="bg-[#CCFF00] text-black font-bold flex items-center px-4 py-3 border-b border-[#CCFF00]" href="#">
+<span class="material-symbols-outlined mr-3 text-black" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                04/ SYSTEM
+            </a>
+</div>
+</nav>
+<!-- Main Canvas (Operator Surface) -->
+<main class="ml-64 pt-16 pb-12 h-screen overflow-y-auto custom-scrollbar relative bg-surface-container-lowest">
+<!-- Strict 12-Column Grid Container -->
+<div class="grid grid-cols-12 gap-gutter p-margin h-full content-start">
+<!-- Large Bone White Header -->
+<div class="col-span-12 bg-secondary-fixed text-surface-container-lowest p-[32px] border border-outline flex flex-col md:flex-row justify-between items-start md:items-end mb-[32px]">
+<div class="flex flex-col">
+<span class="font-mono-label text-mono-label uppercase tracking-widest mb-4 border-b border-surface-container-lowest/20 pb-2 inline-block w-max">Interaction Protocol Initiated</span>
+<h1 class="font-display-xl text-display-xl m-0 leading-[0.85] tracking-tighter uppercase">Operator<br/>Surface</h1>
+</div>
+<div class="mt-8 md:mt-0 bg-surface-container-lowest text-primary-fixed px-4 py-2 flex items-center gap-3 border border-primary-fixed">
+<span class="w-2.5 h-2.5 bg-primary-fixed rounded-none animate-pulse"></span>
+<span class="font-mono-label text-mono-label uppercase tracking-widest">SYS: ONLINE</span>
+</div>
+</div>
+<!-- Terminal Feed Area -->
+<div class="col-span-12 lg:col-span-9 bg-black border border-outline flex flex-col h-[512px] min-h-[400px]">
+<div class="border-b border-outline p-4 flex justify-between items-center bg-surface-container-high">
+<span class="font-mono-label text-mono-label text-on-surface-variant">SESSION_LOG // TX-992A</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">filter_list</span>
+</div>
+<div class="flex-grow p-6 overflow-y-auto font-mono-data text-mono-data flex flex-col gap-3">
+<div class="flex gap-4 group hover:bg-surface-container-low p-1 transition-colors">
+<span class="text-on-surface-variant shrink-0">[14:02:44]</span>
+<span class="text-secondary-fixed-dim">SYSTEM BOOT SEQUENCE INITIATED. KERNEL VER 4.1.9.</span>
+</div>
+<div class="flex gap-4 group hover:bg-surface-container-low p-1 transition-colors">
+<span class="text-on-surface-variant shrink-0">[14:02:45]</span>
+<span class="text-secondary-fixed-dim">MOUNTING VIRTUAL DRIVES... [OK]</span>
+</div>
+<div class="flex gap-4 group hover:bg-surface-container-low p-1 transition-colors">
+<span class="text-on-surface-variant shrink-0">[14:02:48]</span>
+<span class="text-secondary-fixed-dim">ESTABLISHING UPLINK TO MAINFRAME_04...</span>
+</div>
+<div class="flex gap-4 group hover:bg-surface-container-low p-1 transition-colors">
+<span class="text-on-surface-variant shrink-0">[14:02:51]</span>
+<span class="text-primary-fixed">UPLINK SECURED. LATENCY: 12MS.</span>
+</div>
+<div class="flex gap-4 group hover:bg-surface-container-low p-1 transition-colors">
+<span class="text-on-surface-variant shrink-0">[14:03:10]</span>
+<span class="text-secondary-fixed-dim">INCOMING QUERY FROM USER_NODE_77.</span>
+</div>
+<div class="flex gap-4 mt-4 border-l-2 border-primary-fixed pl-3">
+<span class="text-primary-fixed shrink-0">&gt;</span>
+<span class="text-white">AWAITING OPERATOR INPUT DIRECTIVE.</span>
+</div>
+</div>
+<!-- Input Area within Terminal -->
+<div class="border-t border-outline p-4 bg-surface-container-lowest flex items-center gap-4">
+<span class="text-primary-fixed font-mono-data text-mono-data font-bold">~ $</span>
+<input autocomplete="off" class="w-full bg-transparent border-none text-white font-mono-data text-mono-data focus:ring-0 placeholder:text-on-surface-variant/50 p-0" placeholder="ENTER COMMAND..." spellcheck="false" type="text"/>
+</div>
+</div>
+<!-- Context / Metrics Sidebar -->
+<div class="col-span-12 lg:col-span-3 flex flex-col gap-[16px]">
+<!-- Metric Block 1 -->
+<div class="bg-black border border-outline p-6">
+<div class="font-mono-label text-mono-label text-on-surface-variant border-b border-outline pb-2 mb-4">CORE_TEMP</div>
+<div class="font-headline-lg text-headline-lg text-white">42.8°</div>
+<div class="mt-4 flex gap-1 h-1 w-full bg-surface-container-high">
+<div class="h-full bg-primary-fixed w-[42%]"></div>
+</div>
+</div>
+<!-- Metric Block 2 -->
+<div class="bg-black border border-outline p-6">
+<div class="font-mono-label text-mono-label text-on-surface-variant border-b border-outline pb-2 mb-4">NET_THROUGHPUT</div>
+<div class="font-mono-data text-mono-data text-secondary-fixed-dim flex justify-between mb-1">
+<span>UP:</span> <span class="text-white">1.4 GB/s</span>
+</div>
+<div class="font-mono-data text-mono-data text-secondary-fixed-dim flex justify-between">
+<span>DWN:</span> <span class="text-white">3.2 GB/s</span>
+</div>
+</div>
+<!-- Action Block -->
+<div class="bg-primary-fixed text-surface-container-lowest border border-primary-fixed p-6 hover:bg-white hover:text-black transition-colors cursor-pointer group mt-auto">
+<div class="flex justify-between items-center">
+<span class="font-mono-label text-mono-label uppercase font-bold">Execute Purge</span>
+<span class="material-symbols-outlined text-xl group-hover:rotate-90 transition-transform">warning</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black font-['IBM_Plex_Mono'] text-[10px] uppercase docked bottom-0 w-full border-t border-white/20 flat no shadows fixed bottom-0 left-0 w-full px-8 py-2 flex justify-between items-center z-40 text-white/60">
+<div class="text-[#CCFF00]">© 2024 AI_NIKITKA93 // CORE_PROTOCOL_V4</div>
+<div class="flex gap-8">
+<span class="hover:text-[#CCFF00] transition-colors cursor-default">ST_STATUS: OK</span>
+<span class="hover:text-[#CCFF00] transition-colors cursor-default">LATENCY: 12MS</span>
+<span class="hover:text-[#CCFF00] transition-colors cursor-default">SEC: ENCRYPTED</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operator Surface</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#484a44",
+                    "background": "#111411",
+                    "surface": "#111411",
+                    "on-error": "#690005",
+                    "tertiary-container": "#dfe4dc",
+                    "on-secondary-fixed-variant": "#464742",
+                    "surface-container-low": "#191c19",
+                    "tertiary-fixed-dim": "#c3c8c0",
+                    "on-background": "#e1e3dd",
+                    "inverse-primary": "#506600",
+                    "surface-container-highest": "#333632",
+                    "on-tertiary-fixed-variant": "#434842",
+                    "primary-fixed": "#c3f400",
+                    "surface-container-lowest": "#0c0f0c",
+                    "surface-tint": "#abd600",
+                    "on-secondary-fixed": "#1a1c18",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "surface-dim": "#111411",
+                    "on-tertiary-container": "#616660",
+                    "surface-container-high": "#282b27",
+                    "on-secondary": "#2f312c",
+                    "secondary-fixed": "#e3e3db",
+                    "surface-variant": "#333632",
+                    "on-primary": "#283500",
+                    "error": "#ffb4ab",
+                    "secondary": "#c6c7bf",
+                    "on-primary-container": "#556d00",
+                    "primary-fixed-dim": "#abd600",
+                    "outline-variant": "#444933",
+                    "surface-bright": "#373a36",
+                    "on-surface": "#e1e3dd",
+                    "tertiary": "#ffffff",
+                    "on-surface-variant": "#c4c9ac",
+                    "tertiary-fixed": "#dfe4dc",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#181d18",
+                    "on-tertiary": "#2d322c",
+                    "on-primary-fixed": "#161e00",
+                    "secondary-fixed-dim": "#c6c7bf",
+                    "primary": "#ffffff",
+                    "inverse-on-surface": "#2e312e",
+                    "error-container": "#93000a",
+                    "surface-container": "#1d201d",
+                    "on-secondary-container": "#b8b9b2",
+                    "outline": "#8e9379",
+                    "inverse-surface": "#e1e3dd",
+                    "primary-container": "#c3f400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "container-md": "800px",
+                    "margin": "48px",
+                    "container-sm": "400px",
+                    "container-lg": "1200px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "display-vertical": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "display-vertical": ["120px", {"lineHeight": "100px", "letterSpacing": "-0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["64px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-x-hidden selection:bg-primary-container selection:text-background">
+<!-- TopAppBar -->
+<header class="bg-zinc-950 text-lime-400 font-['Space_Grotesk'] font-bold uppercase tracking-tighter top-0 border-b border-zinc-800 divide-x divide-zinc-800 flex justify-between items-center w-full px-6 h-20 fixed z-50">
+<div class="flex items-center gap-8 pr-6">
+<span class="text-2xl font-black text-lime-400 tracking-widest">AI_NIKITKA93</span>
+</div>
+<nav class="hidden md:flex flex-1 h-full items-center pl-6">
+<ul class="flex space-x-8 h-full items-center">
+<li>
+<a class="text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 flex h-full items-center px-4" href="#">STREAMS</a>
+</li>
+<li>
+<a class="text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 flex h-full items-center px-4" href="#">LATTICE</a>
+</li>
+<li>
+<a class="text-lime-400 border-b-2 border-lime-400 pb-1 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 flex h-full items-center px-4" href="#">CORE</a>
+</li>
+</ul>
+</nav>
+<div class="flex items-center space-x-4 pl-6 border-l border-zinc-800 h-full">
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-lime-400 ml-4 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 p-2">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 pt-20">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-zinc-950 text-lime-400 font-['Space_Grotesk'] font-medium text-xs tracking-widest fixed left-0 top-20 h-[calc(100vh-80px)] border-r border-zinc-800 divide-y divide-zinc-800 flex flex-col w-64 z-40">
+<div class="p-6 border-b border-zinc-800">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-lime-400 text-zinc-950 flex items-center justify-center font-bold">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<div class="text-lime-400 font-bold">OPERATOR_V1</div>
+<div class="text-zinc-500 text-[10px]">STATUS_ACTIVE</div>
+</div>
+</div>
+</div>
+<ul class="flex-1 overflow-y-auto">
+<li>
+<a class="bg-lime-400 text-zinc-950 font-black flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="psychology">psychology</span>
+                        NEURAL_NET
+                    </a>
+</li>
+<li>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="grid_view">grid_view</span>
+                        FLUID_GRID
+                    </a>
+</li>
+<li>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="align_horizontal_left">align_horizontal_left</span>
+                        ASYMMETRIC_LOG
+                    </a>
+</li>
+<li>
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="memory">memory</span>
+                        SYS_DUMP
+                    </a>
+</li>
+</ul>
+<div class="border-t border-zinc-800">
+<a class="text-zinc-400 flex items-center p-4 hover:bg-zinc-900 hover:text-lime-400 transition-all duration-0" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="logout">logout</span>
+                    LOGOUT
+                </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 flex flex-col h-[calc(100vh-80px)] overflow-hidden relative border-l border-surface-variant">
+<!-- Canvas Header Area (Asymmetric) -->
+<div class="p-8 border-b border-surface-variant flex justify-between items-end relative">
+<!-- Background Grid Lines Simulation -->
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: linear-gradient(to right, #444933 1px, transparent 1px), linear-gradient(to bottom, #444933 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="z-10 bg-background inline-block pr-4 pb-2">
+<h1 class="font-headline-lg text-on-background tracking-tighter">SURFACE</h1>
+<div class="font-label-caps text-primary-container flex items-center gap-2 mt-2">
+<div class="w-2 h-2 bg-primary-container"></div>
+                        AWAITING_INPUT // KINETIC_GRID_READY
+                    </div>
+</div>
+<div class="z-10 hidden lg:block text-right pb-2">
+<div class="font-label-caps text-on-surface-variant">SESSION_ID</div>
+<div class="font-body-md text-on-surface">0x99F.A14</div>
+</div>
+</div>
+<!-- Assistant Output Area -->
+<div class="flex-1 overflow-y-auto p-8 flex flex-col gap-8 relative">
+<!-- System Message -->
+<div class="max-w-3xl ml-0 border border-surface-variant p-6 relative group">
+<div class="absolute top-0 left-0 w-1 h-full bg-surface-variant group-hover:bg-primary-container transition-colors duration-0"></div>
+<div class="font-label-caps text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="memory">memory</span>
+                        SYSTEM_INIT
+                    </div>
+<p class="font-body-lg text-on-surface">Neural lattice established. Processing streams are idle. State is nominal. Input required to sequence operations.</p>
+</div>
+<!-- User Message Simulation -->
+<div class="max-w-3xl ml-auto border border-outline-variant p-6 relative bg-surface-container-low offset-outlines-4px w-full md:w-2/3">
+<div class="font-label-caps text-primary-container mb-4 flex justify-end items-center gap-2">
+                        USER_QUERY
+                        <span class="material-symbols-outlined text-[16px]" data-icon="person">person</span>
+</div>
+<p class="font-body-lg text-on-surface text-right">Initiate scan sequence alpha-one on designated target coordinates.</p>
+</div>
+<!-- Assistant Response -->
+<div class="max-w-3xl ml-0 border border-primary-container bg-surface-container-lowest p-6 relative">
+<!-- Punched out label -->
+<div class="absolute -top-3 left-4 bg-primary-container text-background font-label-caps px-2 py-1">
+                        OPERATOR_RESPONSE
+                    </div>
+<div class="mt-4 font-body-lg text-on-surface space-y-4">
+<p>Executing sequence. Kinetic grid active. Aligning vectors...</p>
+<div class="border-t border-surface-variant pt-4 flex gap-4 text-primary-container">
+<span class="material-symbols-outlined animate-pulse" data-icon="sync">sync</span>
+<span class="font-label-caps uppercase tracking-widest">Processing Data Streams</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bold Input Box Area -->
+<div class="p-8 border-t border-surface-variant bg-background">
+<div class="max-w-4xl mx-auto relative">
+<!-- Bold Borders and Asymmetric Layout for Input -->
+<div class="border-2 border-primary-container bg-surface-container-lowest relative flex items-end shadow-[4px_4px_0px_0px_rgba(195,244,0,0.2)]">
+<div class="absolute -top-4 left-0 bg-background px-2 font-label-caps text-primary-container">
+                            CMD_INPUT
+                        </div>
+<textarea class="w-full bg-transparent border-none text-on-surface font-body-lg p-6 focus:ring-0 resize-none h-24 placeholder-on-surface-variant" placeholder="Enter execution sequence..."></textarea>
+<div class="p-4 border-l-2 border-primary-container flex flex-col justify-end h-full bg-primary-container text-background cursor-pointer hover:bg-surface hover:text-primary-container transition-colors duration-0">
+<span class="material-symbols-outlined text-[32px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="mt-2 flex justify-between font-label-caps text-on-surface-variant">
+<span>CTRL+ENTER TO EXECUTE</span>
+<span>ENCRYPTED_CHANNEL</span>
+</div>
+</div>
+</div>
+<!-- Footer within Main Area to act as true bottom of scroll or fixed at very bottom if short -->
+<footer class="bg-zinc-950 text-lime-400 font-['Space_Grotesk'] text-[10px] uppercase font-bold border-t-2 border-lime-400 w-full flex flex-col md:flex-row justify-between items-start p-12 gap-8 mt-auto shrink-0 z-10 relative">
+<div class="text-lime-400 font-black">
+                    ©2024 AI_NIKITKA93 // SWISS_MODERNISM_ENGINE
+                </div>
+<div class="flex gap-6">
+<a class="text-lime-400 underline hover:text-white transition-colors duration-0" href="#">TERMINAL</a>
+<a class="text-zinc-500 hover:text-white transition-colors duration-0" href="#">LATTICE_API</a>
+<a class="text-zinc-500 hover:text-white transition-colors duration-0" href="#">CORE_DEBUG</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

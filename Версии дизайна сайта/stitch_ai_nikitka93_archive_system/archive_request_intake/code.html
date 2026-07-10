@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archive Request Submission</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e4e3d6",
+                        "surface-dim": "#121414",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-tint": "#00e61a",
+                        "background": "#121414",
+                        "on-tertiary-container": "#b8291c",
+                        "surface": "#121414",
+                        "on-secondary-fixed": "#1b1c14",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-bright": "#383939",
+                        "outline": "#85967d",
+                        "inverse-surface": "#e3e2e2",
+                        "primary-fixed": "#76ff65",
+                        "error-container": "#93000a",
+                        "secondary-container": "#494a40",
+                        "surface-container-highest": "#343535",
+                        "on-background": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "on-primary-container": "#007206",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#343535",
+                        "on-primary-fixed-variant": "#005303",
+                        "on-surface-variant": "#baccb1",
+                        "secondary-fixed-dim": "#c8c7bb",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c7bb",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "inverse-primary": "#006e06",
+                        "on-secondary": "#303128",
+                        "primary-container": "#32ff32",
+                        "surface-container-high": "#292a2a",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-container": "#ffd3cc",
+                        "error": "#ffb4ab",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690000",
+                        "tertiary-fixed": "#ffdad4",
+                        "outline-variant": "#3c4b36",
+                        "primary-fixed-dim": "#00e61a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#920703",
+                        "on-primary-fixed": "#002201",
+                        "on-secondary-container": "#b9b9ad",
+                        "primary": "#eeffe4",
+                        "on-secondary-fixed-variant": "#47473e",
+                        "on-surface": "#e3e2e2",
+                        "on-primary": "#003a01"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-size": "24px",
+                        "unit": "4px",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-base": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-code": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-code": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+        }
+        .vignette {
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
+            pointer-events: none;
+            z-index: 49;
+        }
+        .input-cursor {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base text-body-base min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- CRT Effects -->
+<div class="fixed inset-0 scanlines"></div>
+<div class="fixed inset-0 vignette"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950 dark:bg-black border-b-4 border-zinc-800">
+<div class="text-2xl font-black text-lime-400 dark:text-lime-400 tracking-tighter">
+            THE_LIVING_ARCHIVE
+        </div>
+<nav class="hidden md:flex gap-6 font-space-grotesk uppercase tracking-widest text-sm">
+<span class="text-lime-400 font-bold underline underline-offset-8">SECTOR_01:ARCHIVE</span>
+<span class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75 px-2 py-1">RU/EN_LOCALE</span>
+<span class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75 px-2 py-1">TIME_SYNC:04:22:11</span>
+<span class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75 px-2 py-1">STATUS:OK</span>
+</nav>
+<button class="font-space-grotesk uppercase tracking-widest text-sm text-lime-400 dark:text-lime-400 hover:bg-lime-400 hover:text-black transition-colors duration-75 px-2 py-1 border border-lime-400/30">
+            TERMINATE_SESSION
+        </button>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 z-40 overflow-y-auto bg-zinc-950 dark:bg-black border-r-4 border-zinc-800 hidden md:block">
+<div class="p-4 border-b border-zinc-800/50 mb-4">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-zinc-800 border border-zinc-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-500" data-icon="account_circle">account_circle</span>
+</div>
+<div>
+<div class="text-lime-400 font-black text-xs uppercase">ROOT_DIRECTORY</div>
+<div class="text-zinc-500 text-[10px] uppercase font-mono">MONOLITH_OS_v4.2</div>
+</div>
+</div>
+</div>
+<nav class="flex flex-col font-space-grotesk uppercase text-xs font-bold">
+<a class="bg-lime-400 text-black px-4 py-3 flex items-center gap-3 scale-[0.99] border-l-4 border-lime-400" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+                SECTOR_01:ARCHIVE
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+                SECTOR_02:OPERATOR
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                SECTOR_03:TELEMETRY
+            </a>
+<a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                SECTOR_04:COMMS
+            </a>
+</nav>
+<div class="absolute bottom-4 left-4 right-4">
+<button class="w-full border-2 border-lime-400 text-lime-400 font-space-grotesk font-bold uppercase text-xs py-2 hover:bg-lime-400 hover:text-black transition-colors">
+                NEW_QUERY
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-16 md:pl-64 pb-8 h-screen overflow-y-auto z-10 relative">
+<div class="max-w-4xl mx-auto p-margin md:p-12 relative h-full flex flex-col justify-center">
+<!-- Module Border Markings -->
+<div class="absolute top-8 left-8 w-4 h-4 border-t-2 border-l-2 border-outline opacity-50"></div>
+<div class="absolute top-8 right-8 w-4 h-4 border-t-2 border-r-2 border-outline opacity-50"></div>
+<div class="absolute bottom-8 left-8 w-4 h-4 border-b-2 border-l-2 border-outline opacity-50"></div>
+<div class="absolute bottom-8 right-8 w-4 h-4 border-b-2 border-r-2 border-outline opacity-50"></div>
+<div class="border-4 border-surface-variant bg-surface-container-lowest p-8 relative">
+<!-- System Stamp -->
+<div class="absolute -top-5 -right-4 border-4 border-on-tertiary-container text-on-tertiary-container font-headline-md text-headline-md px-4 py-1 rotate-3 uppercase bg-surface-container-lowest z-20 mix-blend-screen opacity-90">
+                    CLASSIFIED
+                </div>
+<div class="mb-8 border-b border-dashed border-surface-variant pb-4 flex justify-between items-end">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface uppercase mb-2">Request Submission</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">[ INITIALIZING_DATA_ENTRY_PROTOCOL ]</p>
+</div>
+<div class="font-label-code text-label-code text-primary-fixed bg-surface-container px-2 py-1 border border-surface-variant">
+                        SEQ: 8492-X
+                    </div>
+</div>
+<form class="space-y-6">
+<!-- Form Row 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col relative">
+<label class="font-label-code text-label-code text-on-surface-variant uppercase mb-1 flex items-center gap-2" for="subject_id">
+<span class="text-primary-fixed">&gt;</span> Subject ID
+                            </label>
+<div class="relative">
+<input class="w-full bg-surface border-2 border-surface-variant text-on-surface font-body-base focus:border-primary-fixed focus:ring-0 focus:outline-none p-3 placeholder-surface-bright" id="subject_id" placeholder="ENT_ID_###" type="text"/>
+</div>
+</div>
+<div class="flex flex-col relative">
+<label class="font-label-code text-label-code text-on-surface-variant uppercase mb-1 flex items-center gap-2" for="priority_level">
+<span class="text-primary-fixed">&gt;</span> Priority Level
+                            </label>
+<div class="relative">
+<select class="w-full bg-surface border-2 border-surface-variant text-on-surface font-body-base focus:border-primary-fixed focus:ring-0 focus:outline-none p-3 appearance-none rounded-none" id="priority_level">
+<option class="bg-surface-container-lowest">STANDARD_ROUTINE</option>
+<option class="bg-surface-container-lowest">ELEVATED_URGENCY</option>
+<option class="bg-error-container text-on-error-container font-bold">CRITICAL_OVERRIDE</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-surface-variant">
+<span class="material-symbols-outlined" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Row 2 -->
+<div class="flex flex-col relative pt-4">
+<label class="font-label-code text-label-code text-on-surface-variant uppercase mb-1 flex items-center gap-2" for="query_details">
+<span class="text-primary-fixed">&gt;</span> Query Details
+                        </label>
+<div class="relative border-2 border-surface-variant focus-within:border-primary-fixed transition-colors">
+<textarea class="w-full bg-surface text-on-surface font-body-base border-none focus:ring-0 p-3 resize-none placeholder-surface-bright" id="query_details" placeholder="ENTER_PARAMETERS_HERE_" rows="6"></textarea>
+<div class="absolute bottom-2 right-2 font-label-code text-label-code text-surface-variant">
+                                CHAR_COUNT_0/1024
+                            </div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="pt-8 flex flex-col md:flex-row gap-4 justify-end border-t border-dashed border-surface-variant mt-8">
+<button class="border-2 border-surface-variant text-on-surface-variant font-label-code text-label-code uppercase px-6 py-3 hover:bg-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:border-primary-fixed" type="button">
+                            CLEAR_BUFFER
+                        </button>
+<button class="border-2 border-primary-container text-primary-container font-label-code text-label-code uppercase px-8 py-3 hover:bg-primary-container hover:text-surface-container-lowest transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2 focus:ring-offset-surface-container-lowest flex items-center justify-center gap-2 relative overflow-hidden group" type="submit">
+<span class="relative z-10">SUBMIT_FOR_PROCESSING</span>
+<span class="material-symbols-outlined text-sm relative z-10" data-icon="send">send</span>
+<div class="absolute inset-0 bg-primary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full h-8 flex justify-between items-center px-4 z-50 pointer-events-none bg-zinc-950 dark:bg-black border-t-2 border-zinc-800">
+<div class="font-mono text-[10px] uppercase tracking-tighter text-zinc-600">
+            © 1984-2024 DEEP_STORAGE_MONOLITH. ALL_RIGHTS_RETAINED. - MONOLITH_OS_v4.2 - All Queries Logged
+        </div>
+<div class="font-mono text-[10px] uppercase tracking-tighter flex gap-4 pointer-events-auto">
+<a class="text-zinc-600 hover:text-lime-200" href="#">SYSTEM_LOGS</a>
+<a class="text-zinc-600 hover:text-lime-200" href="#">HARDWARE_STATE</a>
+<a class="text-zinc-600 hover:text-lime-200" href="#">ENCRYPTION_KEY</a>
+</div>
+</footer>
+</body></html>

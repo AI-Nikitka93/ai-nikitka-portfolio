@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-06-02T14:32:55.632Z",
+  "base": "http://127.0.0.1:3200",
+  "scope": "Rendered social image metadata after fixing default OpenGraph image fallback",
+  "route": "/about",
+  "title": "Никита Кизевич | AI_Nikitka93",
+  "og": "https://kizevich.com/opengraph-image",
+  "twitter": "https://kizevich.com/opengraph-image",
+  "same": true,
+  "local": "http://127.0.0.1:3200/opengraph-image",
+  "status": 200,
+  "contentType": "image/png",
+  "horizontalOverflow": false,
+  "externalDomainNote": "The absolute production origin remains kizevich.com; external reachability still depends on the existing domain launch gate."
+}

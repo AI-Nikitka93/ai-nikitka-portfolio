@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archive Access Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e4e3d6",
+                        "surface-dim": "#121414",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-tint": "#00e61a",
+                        "background": "#121414",
+                        "on-tertiary-container": "#b8291c",
+                        "surface": "#121414",
+                        "on-secondary-fixed": "#1b1c14",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-bright": "#383939",
+                        "outline": "#85967d",
+                        "inverse-surface": "#e3e2e2",
+                        "primary-fixed": "#76ff65",
+                        "error-container": "#93000a",
+                        "secondary-container": "#494a40",
+                        "surface-container-highest": "#343535",
+                        "on-background": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "on-primary-container": "#007206",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#343535",
+                        "on-primary-fixed-variant": "#005303",
+                        "on-surface-variant": "#baccb1",
+                        "secondary-fixed-dim": "#c8c7bb",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c7bb",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "inverse-primary": "#006e06",
+                        "on-secondary": "#303128",
+                        "primary-container": "#32ff32",
+                        "surface-container-high": "#292a2a",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-container": "#ffd3cc",
+                        "error": "#ffb4ab",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690000",
+                        "tertiary-fixed": "#ffdad4",
+                        "outline-variant": "#3c4b36",
+                        "primary-fixed-dim": "#00e61a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#920703",
+                        "on-primary-fixed": "#002201",
+                        "on-secondary-container": "#b9b9ad",
+                        "primary": "#eeffe4",
+                        "on-secondary-fixed-variant": "#47473e",
+                        "on-surface": "#e3e2e2",
+                        "on-primary": "#003a01"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-size": "24px",
+                        "unit": "4px",
+                        "margin": "32px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-base": ["IBM Plex Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-code": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-code": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #050805;
+            color: #00e61a;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* Scanlines */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+        }
+        /* Vignette */
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+            z-index: 3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body-base text-body-base bg-background h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-zinc-950 dark:bg-black text-lime-400 dark:text-lime-400 font-space-grotesk uppercase tracking-widest text-sm docked full-width top-0 border-b-4 border-zinc-800">
+<div class="flex items-center gap-6">
+<div class="text-2xl font-black text-lime-400 dark:text-lime-400 tracking-tighter">THE_LIVING_ARCHIVE</div>
+<nav class="hidden md:flex gap-4">
+<a class="text-lime-400 font-bold underline underline-offset-8" href="#">RU/EN_LOCALE</a>
+<a class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75" href="#">TIME_SYNC:04:22:11</a>
+<a class="text-zinc-500 dark:text-zinc-600 hover:bg-lime-400 hover:text-black transition-colors duration-75" href="#">STATUS:OK</a>
+</nav>
+</div>
+<div>
+<button class="px-4 py-1 border-2 border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim hover:text-surface-dim transition-colors uppercase font-label-code text-label-code">TERMINATE_SESSION</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 z-40 overflow-y-auto bg-zinc-950 dark:bg-black text-lime-400 dark:text-lime-400 font-space-grotesk uppercase text-xs font-bold docked left-0 h-full w-64 border-r-4 border-zinc-800 hidden md:block">
+<div class="p-6 border-b border-zinc-800">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-zinc-800 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed-dim">account_circle</span>
+</div>
+<div>
+<div class="text-lime-400 font-black">ROOT_DIRECTORY</div>
+<div class="text-zinc-500 text-[10px]">MONOLITH_OS_v4.2</div>
+</div>
+</div>
+<button class="w-full py-2 border-2 border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim hover:text-surface-dim transition-colors uppercase font-label-code text-label-code">NEW_QUERY</button>
+</div>
+<ul class="py-4">
+<li><a class="bg-lime-400 text-black px-4 py-3 flex items-center gap-3 border-l-4 border-lime-400" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">database</span> SECTOR_01:ARCHIVE</a></li>
+<li><a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#"><span class="material-symbols-outlined">security</span> SECTOR_02:OPERATOR</a></li>
+<li><a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#"><span class="material-symbols-outlined">analytics</span> SECTOR_03:TELEMETRY</a></li>
+<li><a class="text-lime-400/70 px-4 py-3 flex items-center gap-3 border-b border-zinc-800/30 hover:bg-zinc-800 dark:hover:bg-zinc-900 hover:text-lime-400 transition-all" href="#"><span class="material-symbols-outlined">terminal</span> SECTOR_04:COMMS</a></li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 mt-16 md:ml-64 p-margin overflow-y-auto relative z-10 flex flex-col justify-center items-center min-h-[calc(100vh-64px-32px)]">
+<div class="w-full max-w-4xl border-4 border-surface-bright bg-surface-container-lowest p-8 relative">
+<!-- Corner Marks -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-primary-fixed-dim -mt-1 -ml-1"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-primary-fixed-dim -mt-1 -mr-1"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-primary-fixed-dim -mb-1 -ml-1"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-primary-fixed-dim -mb-1 -mr-1"></div>
+<div class="text-center space-y-8">
+<!-- Status Chip -->
+<div class="inline-block border border-primary-fixed-dim px-3 py-1 font-label-code text-label-code text-primary-fixed-dim mb-4 bg-primary-container/5">
+                    [ ACCESS_GRANTED ]
+                </div>
+<!-- Centerpiece -->
+<h1 class="font-display-lg text-display-lg text-primary-fixed-dim opacity-90 tracking-tighter" style="text-shadow: 0 0 10px rgba(0, 230, 26, 0.5);">
+                    AI_Nikitka93
+                </h1>
+<!-- Verification Source -->
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+                    Verification Source: Nikita Kizevich
+                </div>
+<div class="w-full h-px bg-surface-bright my-8 opacity-50 border-dashed border-t border-surface-bright"></div>
+<!-- Navigation Modules -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="block p-4 border-2 border-surface-bright hover:border-primary-fixed-dim hover:bg-primary-container/5 transition-all text-left relative group" href="#">
+<span class="material-symbols-outlined absolute top-4 right-4 text-surface-bright group-hover:text-primary-fixed-dim transition-colors">folder_open</span>
+<div class="font-label-code text-label-code text-on-surface-variant mb-2">&gt; MODULE_01</div>
+<div class="font-headline-md text-headline-md text-primary-fixed-dim uppercase">ARCHIVE</div>
+</a>
+<a class="block p-4 border-2 border-surface-bright hover:border-primary-fixed-dim hover:bg-primary-container/5 transition-all text-left relative group" href="#">
+<span class="material-symbols-outlined absolute top-4 right-4 text-surface-bright group-hover:text-primary-fixed-dim transition-colors">engineering</span>
+<div class="font-label-code text-label-code text-on-surface-variant mb-2">&gt; MODULE_02</div>
+<div class="font-headline-md text-headline-md text-primary-fixed-dim uppercase">OPERATOR</div>
+</a>
+<a class="block p-4 border-2 border-surface-bright hover:border-primary-fixed-dim hover:bg-primary-container/5 transition-all text-left relative group" href="#">
+<span class="material-symbols-outlined absolute top-4 right-4 text-surface-bright group-hover:text-primary-fixed-dim transition-colors">edit_note</span>
+<div class="font-label-code text-label-code text-on-surface-variant mb-2">&gt; MODULE_03</div>
+<div class="font-headline-md text-headline-md text-primary-fixed-dim uppercase">FIELD_NOTES</div>
+</a>
+</div>
+<div class="mt-8 text-left">
+<div class="font-label-code text-label-code text-primary-fixed-dim flex items-center gap-2">
+<span class="inline-block w-2 h-4 bg-primary-fixed-dim animate-pulse"></span>
+                        AWAITING_INPUT...
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full h-8 flex justify-between items-center px-4 z-50 pointer-events-none bg-zinc-950 dark:bg-black text-lime-400 dark:text-lime-400 font-mono text-[10px] uppercase tracking-tighter docked full-width bottom-0 border-t-2 border-zinc-800">
+<div class="text-lime-400 opacity-50">© 1984-2024 DEEP_STORAGE_MONOLITH. ALL_RIGHTS_RETAINED.</div>
+<div class="flex gap-4 pointer-events-auto">
+<a class="text-zinc-600 hover:text-lime-200" href="#">SYSTEM_LOGS</a>
+<a class="text-zinc-600 hover:text-lime-200" href="#">HARDWARE_STATE</a>
+<a class="text-zinc-600 hover:text-lime-200" href="#">ENCRYPTION_KEY</a>
+</div>
+</footer>
+</body></html>

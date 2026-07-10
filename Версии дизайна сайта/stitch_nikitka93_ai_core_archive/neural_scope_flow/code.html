@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - System Boot / Planning</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#810081",
+                        "tertiary-container": "#d9d9d9",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "secondary-container": "#fe00fe",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#ffd7f5",
+                        "on-tertiary-container": "#5d5f5f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#5b005b",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#380038",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe9",
+                        "primary-fixed": "#7df4ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary": "#f5f5f5",
+                        "surface-bright": "#3a3939",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b494b",
+                        "on-primary-container": "#006970",
+                        "primary-fixed-dim": "#00dbe9",
+                        "secondary": "#ffabf3",
+                        "on-primary": "#00363a",
+                        "error": "#ffb4ab",
+                        "primary-container": "#00f0ff",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#849495",
+                        "on-secondary-container": "#500050",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "primary": "#dbfcff",
+                        "on-primary-fixed": "#002022",
+                        "secondary-fixed-dim": "#ffabf3",
+                        "on-tertiary": "#2f3131"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "grid-unit": "4px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "mono-label": ["monospace"],
+                        "data-dense": ["monospace"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-sm": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "mono-label": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "data-dense": ["10px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            background-image: 
+                linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 240, 255, 0.03) 51%,
+                transparent 51%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .cyber-border {
+            border: 1px solid var(--tw-colors-primary-container);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .cyber-border-magenta {
+            border: 1px solid var(--tw-colors-secondary-container);
+            box-shadow: 0 0 10px rgba(254, 0, 254, 0.2);
+        }
+
+        .cyber-input {
+            border: none;
+            border-bottom: 1px solid var(--tw-colors-primary-container);
+            background: transparent;
+            color: var(--tw-colors-primary-fixed);
+            outline: none;
+        }
+        
+        .cyber-input:focus {
+            border-bottom-color: var(--tw-colors-secondary-container);
+            box-shadow: 0 2px 5px rgba(254, 0, 254, 0.3);
+        }
+
+        /* Hide scrollbar for clean aesthetic but allow scroll */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--tw-colors-primary-container); 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--tw-colors-secondary-container); 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg">
+<div class="scanline"></div>
+<!-- TopAppBar (Transactional - Nav hidden, but header present) -->
+<header class="docked full-width top-0 border-b border-[#00F0FF] bg-black/90 dark:bg-[#050505] shadow-[0_0_15px_rgba(0,240,255,0.2)] border-b-2 border-cyan-500/50 flex justify-between items-center w-full px-2 h-12 z-40 sticky">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400 dark:text-[#00F0FF]" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="font-mono uppercase tracking-tighter text-sm font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">AI_NIKITKA93</span>
+</div>
+<div class="text-cyan-400 dark:text-[#00F0FF] font-mono uppercase tracking-tighter text-sm">
+            RU/EN
+        </div>
+</header>
+<!-- Progress / Flow Indicator (System Boot Style) -->
+<div class="w-full bg-surface-container-highest p-2 border-b border-outline-variant flex items-center justify-between z-30">
+<div class="font-mono-label text-mono-label text-primary-container">[SYS_INIT_SEQ]</div>
+<div class="flex-1 mx-4 flex gap-1">
+<div class="h-2 flex-1 bg-primary-container shadow-[0_0_5px_#00F0FF]"></div>
+<div class="h-2 flex-1 bg-primary-container shadow-[0_0_5px_#00F0FF]"></div>
+<div class="h-2 flex-1 bg-secondary-container animate-pulse shadow-[0_0_8px_#fe00fe]"></div>
+<div class="h-2 flex-1 bg-surface-variant border border-outline-variant"></div>
+<div class="h-2 flex-1 bg-surface-variant border border-outline-variant"></div>
+</div>
+<div class="font-mono-label text-mono-label text-secondary-container animate-pulse">PHASE_03_ACTIVE</div>
+</div>
+<!-- Main Canvas -->
+<main class="flex-1 container mx-auto px-gutter py-margin max-w-container-max flex flex-col gap-6 overflow-y-auto">
+<!-- Header -->
+<div class="flex flex-col gap-2 mb-4">
+<h1 class="font-display-xl text-display-xl text-primary-fixed-dim uppercase tracking-tighter drop-shadow-[0_0_10px_rgba(0,219,233,0.5)]">
+                NEURAL OVERLOAD
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Configure primary input parameters for cognitive assimilation. Ensure data streams align with designated architectural pathways.
+            </p>
+</div>
+<!-- Planning Surface (CPU Architecture Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-min">
+<!-- Core Module A -->
+<div class="md:col-span-8 cyber-border bg-surface-container-low p-4 flex flex-col gap-4 relative overflow-hidden group">
+<!-- Header Tag -->
+<div class="absolute top-0 left-0 bg-primary-container text-on-primary-container font-mono-label text-mono-label px-2 py-1">
+                    [CORE_NODE_ALPHA]
+                </div>
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-primary-fixed uppercase tracking-widest">Data Stream ID</label>
+<input class="cyber-input font-data-dense text-data-dense p-2" placeholder="Enter alphanumeric sequence..." type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-primary-fixed uppercase tracking-widest">Bandwidth Allocation</label>
+<input class="cyber-input font-data-dense text-data-dense p-2" placeholder="0 - 100%" type="number"/>
+</div>
+<div class="flex flex-col gap-2 sm:col-span-2">
+<label class="font-mono-label text-mono-label text-primary-fixed uppercase tracking-widest">Directive Payload</label>
+<textarea class="cyber-input font-data-dense text-data-dense p-2 min-h-[100px] resize-none border border-outline-variant" placeholder="Inject command parameters here..."></textarea>
+</div>
+</div>
+</div>
+<!-- Aux Module B (Error/Critical State Demo) -->
+<div class="md:col-span-4 cyber-border-magenta bg-surface-container-low p-4 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 bg-secondary-container text-on-secondary-container font-mono-label text-mono-label px-2 py-1">
+                    [AUX_NODE_BETA]
+                </div>
+<div class="mt-6 flex flex-col gap-4">
+<div class="bg-error-container border border-error text-on-error-container p-2 font-mono-label text-mono-label flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>CRITICAL: SYNC MISMATCH DETECTED IN SECTOR 7G. RESOLVE BEFORE COMMITTING.</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-secondary-fixed uppercase tracking-widest">Sync Override Code</label>
+<input class="cyber-input border-secondary-container text-secondary-fixed font-data-dense text-data-dense p-2 focus:border-primary-container" placeholder="AUTH_KEY_REQD" type="text"/>
+</div>
+<div class="flex items-center gap-2 mt-auto">
+<span class="material-symbols-outlined text-secondary-container animate-pulse">radar</span>
+<span class="font-data-dense text-data-dense text-outline">Scanning local registry...</span>
+</div>
+</div>
+</div>
+<!-- Grid Matrix C -->
+<div class="md:col-span-12 cyber-border bg-surface-container-lowest p-4 relative">
+<div class="absolute top-0 left-0 bg-outline-variant text-on-surface font-mono-label text-mono-label px-2 py-1 border-b border-r border-primary-container">
+                    [MATRIX_ARRAY_GAMMA]
+                </div>
+<div class="mt-8 overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-primary-container/30 font-mono-label text-mono-label text-primary-fixed-dim">
+<th class="p-2 border-r border-primary-container/30">SECTOR</th>
+<th class="p-2 border-r border-primary-container/30">LATENCY</th>
+<th class="p-2 border-r border-primary-container/30">STATUS</th>
+<th class="p-2">ACTION</th>
+</tr>
+</thead>
+<tbody class="font-data-dense text-data-dense text-on-surface-variant">
+<tr class="border-b border-primary-container/10 hover:bg-primary-container/5 transition-colors">
+<td class="p-2 border-r border-primary-container/10">0x00A1</td>
+<td class="p-2 border-r border-primary-container/10">12ms</td>
+<td class="p-2 border-r border-primary-container/10"><span class="bg-primary-container text-on-primary-container px-1">STABLE</span></td>
+<td class="p-2"><button class="text-primary hover:text-primary-container">CONFIGURE</button></td>
+</tr>
+<tr class="border-b border-primary-container/10 hover:bg-primary-container/5 transition-colors">
+<td class="p-2 border-r border-primary-container/10">0x00A2</td>
+<td class="p-2 border-r border-primary-container/10 text-error">450ms</td>
+<td class="p-2 border-r border-primary-container/10"><span class="bg-secondary-container text-on-secondary-container px-1">DEGRADED</span></td>
+<td class="p-2"><button class="text-primary hover:text-primary-container">CONFIGURE</button></td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-2 border-r border-primary-container/10">0x00A3</td>
+<td class="p-2 border-r border-primary-container/10">8ms</td>
+<td class="p-2 border-r border-primary-container/10"><span class="bg-primary-container text-on-primary-container px-1">STABLE</span></td>
+<td class="p-2"><button class="text-primary hover:text-primary-container">CONFIGURE</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Action Area -->
+<div class="md:col-span-12 flex justify-end mt-4">
+<button class="bg-primary-container text-on-primary-container font-headline-md text-headline-md px-8 py-4 border border-primary-container shadow-[0_0_15px_#00F0FF] hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container hover:shadow-[0_0_20px_#fe00fe] transition-all duration-150 uppercase tracking-widest flex items-center gap-2 group">
+<span>SAVE AND NEXT</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Terminal Console (Persistent Bottom) -->
+<div class="border-t border-primary-container bg-surface-container-lowest h-24 flex flex-col font-data-dense text-data-dense overflow-hidden">
+<div class="bg-surface-variant text-on-surface-variant px-2 py-1 border-b border-outline-variant flex justify-between items-center">
+<span>[TERMINAL_OUT]</span>
+<span class="material-symbols-outlined text-[14px]">more_horiz</span>
+</div>
+<div class="p-2 text-outline-variant flex flex-col gap-1 overflow-y-auto">
+<div class="flex gap-2">
+<span class="text-primary-fixed-dim">&gt;</span>
+<span>SYS_BOOT: Initializing neural pathways... OK</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary-fixed-dim">&gt;</span>
+<span>AUTH: Checking user credentials for AI_NIKITKA93... OK</span>
+</div>
+<div class="flex gap-2">
+<span class="text-primary-fixed-dim animate-pulse">&gt;</span>
+<span>Awaiting parameter input in CORE_NODE_ALPHA...</span>
+</div>
+</div>
+</div>
+</body></html>

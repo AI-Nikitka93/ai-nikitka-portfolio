@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Ассистент | Nikita Kizevich</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#535557",
+                        "on-primary-container": "#b7d1ff",
+                        "surface-dim": "#0c0e10",
+                        "surface-container-low": "#111416",
+                        "on-primary": "#164073",
+                        "secondary-fixed-dim": "#c5d6ea",
+                        "secondary-container": "#2c3d4d",
+                        "tertiary": "#eaf2f9",
+                        "on-secondary-fixed-variant": "#4d5d6e",
+                        "primary-dim": "#96baf5",
+                        "on-primary-fixed": "#154072",
+                        "secondary": "#8ea0b2",
+                        "surface-container": "#161a1e",
+                        "on-tertiary-fixed-variant": "#545d63",
+                        "surface-variant": "#20262c",
+                        "surface-bright": "#252d33",
+                        "primary-container": "#1f477a",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#a6acb2",
+                        "error-dim": "#bb5551",
+                        "tertiary-fixed-dim": "#cdd5dc",
+                        "inverse-primary": "#3b6094",
+                        "tertiary-fixed": "#dce3eb",
+                        "secondary-fixed": "#d3e4f9",
+                        "on-tertiary-container": "#4b5359",
+                        "on-surface": "#e0e6ed",
+                        "error": "#ee7d77",
+                        "primary": "#a7c8ff",
+                        "on-error-container": "#ff9993",
+                        "on-secondary-fixed": "#304151",
+                        "surface-container-lowest": "#000000",
+                        "secondary-dim": "#8ea0b2",
+                        "on-background": "#e0e6ed",
+                        "tertiary-dim": "#cdd5dc",
+                        "on-secondary-container": "#b0c1d5",
+                        "on-secondary": "#102230",
+                        "outline-variant": "#42494e",
+                        "on-tertiary": "#535b61",
+                        "on-error": "#490106",
+                        "on-tertiary-fixed": "#384046",
+                        "surface-tint": "#a7c8ff",
+                        "tertiary-container": "#dce3eb",
+                        "inverse-surface": "#f9f9fc",
+                        "surface-container-highest": "#20262c",
+                        "surface-container-high": "#1b2025",
+                        "primary-fixed-dim": "#bed5ff",
+                        "error-container": "#7f2927",
+                        "surface": "#0c0e10",
+                        "outline": "#70767c",
+                        "background": "#0c0e10",
+                        "on-primary-fixed-variant": "#375c91"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #0c0e10;
+            color: #e0e6ed;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-slate-950/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+<div class="text-lg font-bold tracking-tighter text-slate-100 dark:text-slate-100 font-headline uppercase">
+                NIKITA KIZEVICH
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-400 font-medium hover:text-slate-200 transition-colors font-label text-[11px] uppercase tracking-widest" href="#">Обо мне</a>
+<a class="text-slate-400 font-medium hover:text-slate-200 transition-colors font-label text-[11px] uppercase tracking-widest" href="#">Проекты</a>
+<a class="text-slate-400 font-medium hover:text-slate-200 transition-colors font-label text-[11px] uppercase tracking-widest" href="#">Услуги</a>
+<a class="text-slate-400 font-medium hover:text-slate-200 transition-colors font-label text-[11px] uppercase tracking-widest" href="#">Блог</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-[11px] uppercase tracking-widest px-6 py-2 rounded-full hover:scale-[0.98] transition-all active:scale-95">
+                Связаться
+            </button>
+</nav>
+</header>
+<main class="pt-24 pb-12 min-h-screen max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Sidebar Navigation Shortcuts -->
+<aside class="hidden lg:flex lg:col-span-3 flex-col gap-6">
+<div class="p-6 bg-surface-container rounded-lg">
+<h3 class="font-label text-[11px] uppercase tracking-widest text-on-surface-variant mb-6">Быстрая навигация</h3>
+<nav class="flex flex-col gap-4">
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-surface-variant transition-all" href="#">
+<span class="text-sm font-medium">Лучшие кейсы</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-surface-variant transition-all" href="#">
+<span class="text-sm font-medium">Награды</span>
+<span class="material-symbols-outlined text-primary text-sm">workspace_premium</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-surface-variant transition-all" href="#">
+<span class="text-sm font-medium">Услуги</span>
+<span class="material-symbols-outlined text-primary text-sm">bolt</span>
+</a>
+<a class="group flex items-center justify-between p-3 rounded-lg hover:bg-surface-variant transition-all" href="#">
+<span class="text-sm font-medium">Статьи</span>
+<span class="material-symbols-outlined text-primary text-sm">menu_book</span>
+</a>
+</nav>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/15 rounded-lg flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">System Online</span>
+</div>
+<p class="text-[12px] leading-relaxed text-on-surface-variant">
+                    Ассистент обучен на базе портфолио и профессиональной экспертизы Никиты Кисевича. 
+                </p>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<div class="lg:col-span-9 flex flex-col h-[calc(100vh-12rem)]">
+<!-- Page Intro -->
+<section class="mb-8">
+<div class="flex items-center gap-4 mb-2">
+<span class="bg-surface-bright p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy">smart_toy</span>
+</span>
+<h1 class="text-4xl font-extrabold tracking-tight font-headline">AI-Ассистент</h1>
+</div>
+<p class="text-secondary text-lg max-w-2xl font-body">
+                    Интеллектуальный помощник для навигации по проектам, услугам и архиву мыслей.
+                </p>
+</section>
+<!-- Chat Interface -->
+<div class="flex-1 overflow-y-auto bg-surface-container rounded-xl flex flex-col p-6 mb-4 relative overflow-hidden">
+<!-- Message Thread -->
+<div class="flex flex-col gap-8 flex-1">
+<!-- AI Initial Message -->
+<div class="flex gap-4 max-w-3xl">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="neurology">neurology</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="bg-surface-container-high p-5 rounded-xl rounded-tl-none shadow-sm text-on-surface leading-relaxed">
+                                Здравствуйте. Я здесь, чтобы помочь вам изучить работу Никиты. Какая область его экспертизы вас интересует больше всего?
+                            </div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">10:24 AM • Verified Source</span>
+</div>
+</div>
+<!-- User Question -->
+<div class="flex gap-4 max-w-3xl self-end flex-row-reverse">
+<div class="w-10 h-10 rounded-full bg-surface-bright flex items-center justify-center shrink-0 border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant text-xl" data-icon="person">person</span>
+</div>
+<div class="flex flex-col gap-2 items-end">
+<div class="bg-primary text-on-primary p-5 rounded-xl rounded-tr-none shadow-sm leading-relaxed">
+                                Расскажи подробнее о его подходе к AI-Native архитектуре.
+                            </div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">10:25 AM</span>
+</div>
+</div>
+<!-- AI Response -->
+<div class="flex gap-4 max-w-3xl">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="neurology">neurology</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="bg-surface-container-high p-5 rounded-xl rounded-tl-none shadow-sm text-on-surface leading-relaxed">
+                                Подход Никиты строится на трех фундаментальных принципах:
+                                <ul class="list-none mt-4 space-y-3">
+<li class="flex items-start gap-2">
+<span class="w-1 h-1 rounded-full bg-primary mt-2.5"></span>
+<span><strong>LLM-First логика:</strong> Проектирование интерфейсов, где ИИ является не надстройкой, а центральным ядром взаимодействия.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1 h-1 rounded-full bg-primary mt-2.5"></span>
+<span><strong>Контекстная осведомленность:</strong> Использование RAG (Retrieval-Augmented Generation) для предоставления точных данных в реальном времени.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1 h-1 rounded-full bg-primary mt-2.5"></span>
+<span><strong>Этическая прозрачность:</strong> Верификация каждого ответа через внутреннюю базу знаний.</span>
+</li>
+</ul>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">10:25 AM • Technical Analysis Complete</span>
+</div>
+</div>
+</div>
+<!-- Suggested Actions (Sticky at bottom if empty or scrolling) -->
+<div class="mt-8">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Рекомендованные запросы
+                    </p>
+<div class="flex flex-wrap gap-2">
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface text-sm px-4 py-2 rounded-full border border-outline-variant/10 transition-all font-medium">Покажи лучшие кейсы</button>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface text-sm px-4 py-2 rounded-full border border-outline-variant/10 transition-all font-medium">Какие услуги ты оказываешь?</button>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface text-sm px-4 py-2 rounded-full border border-outline-variant/10 transition-all font-medium">Найди статьи про RAG</button>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface text-sm px-4 py-2 rounded-full border border-outline-variant/10 transition-all font-medium">Твои награды</button>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="bg-surface-container rounded-xl p-4 flex items-center gap-4 border border-outline-variant/10">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="attach_file">attach_file</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50" placeholder="Введите ваш вопрос..." type="text"/>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+<div class="mt-3 text-center">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/40">AI can generate technical summaries based on real projects. Use for informational purposes.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-800/50 bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto py-12 px-6 gap-4">
+<div class="text-md font-bold text-slate-200 uppercase font-headline">NIKITA KIZEVICH</div>
+<div class="text-sm font-body text-slate-500">
+                © 2024 Nikita Kizevich. AI-Native Architect.
+            </div>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-blue-200 transition-colors font-label text-[10px] uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-blue-200 transition-colors font-label text-[10px] uppercase tracking-widest" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-blue-200 transition-colors font-label text-[10px] uppercase tracking-widest" href="#">Telegram</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Signal Lab - Pure Brutalism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#e9e2d1",
+                        "on-tertiary-fixed": "#1e1b11",
+                        "on-tertiary": "#343025",
+                        "surface": "#111413",
+                        "secondary": "#ffb59a",
+                        "tertiary-container": "#e9e2d1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-secondary": "#5b1b00",
+                        "tertiary-fixed-dim": "#cdc6b6",
+                        "on-tertiary-fixed-variant": "#4b473b",
+                        "surface-container-highest": "#323534",
+                        "outline": "#8c947b",
+                        "primary-container": "#b0f734",
+                        "outline-variant": "#424935",
+                        "on-primary-fixed": "#121f00",
+                        "on-primary-container": "#4a6f00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "inverse-surface": "#e1e3e1",
+                        "surface-container-lowest": "#0c0f0e",
+                        "on-tertiary-container": "#696457",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-bright": "#373a38",
+                        "surface-variant": "#323534",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-high": "#282b29",
+                        "inverse-primary": "#456800",
+                        "tertiary": "#ffffff",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#96da06",
+                        "on-surface": "#e1e3e1",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c2caaf",
+                        "secondary-container": "#cd4700",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#111413",
+                        "surface-container": "#1d201f",
+                        "inverse-on-surface": "#2e3130",
+                        "surface-tint": "#96da06",
+                        "surface-container-low": "#191c1b",
+                        "on-primary": "#223600",
+                        "primary-fixed": "#b0f734",
+                        "on-error": "#690005",
+                        "background": "#111413",
+                        "on-background": "#e1e3e1"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        gutter: "24px",
+                        "container-max": "1440px",
+                        unit: "4px",
+                        margin: "40px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Space Grotesk"],
+                        "body-large": ["IBM Plex Mono"],
+                        "label-tiny": ["IBM Plex Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-main": ["IBM Plex Mono"],
+                        metadata: ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "110%", letterSpacing: "-0.02em", fontWeight: "500" }],
+                        "body-large": ["18px", { lineHeight: "160%", fontWeight: "400" }],
+                        "label-tiny": ["10px", { lineHeight: "120%", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "display-xl": ["120px", { lineHeight: "100%", letterSpacing: "-0.04em", fontWeight: "700" }],
+                        "body-main": ["14px", { lineHeight: "150%", fontWeight: "400" }],
+                        metadata: ["12px", { lineHeight: "140%", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "120%", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0A0D0C] text-[#e1e3e1] font-body-main antialiased selection:bg-[#B7FF3C] selection:text-[#0A0D0C] overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar (Web only) -->
+<nav class="hidden md:flex justify-between items-center w-full px-10 h-16 max-w-full docked full-width top-0 border-b-[0.5px] border-[#8E968C] bg-[#0A0D0C] z-50">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk']">
+            SIGNAL_LAB [V2.0]
+        </div>
+<div class="flex gap-8">
+<a class="text-[#8E968C] font-mono tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">ARCHIVE</a>
+<a class="text-[#8E968C] font-mono tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">SIGNALS</a>
+<a class="text-[#8E968C] font-mono tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">ATLAS</a>
+<!-- Active State Fallback since "About/Verifier" isn't explicitly here, leaving inactive -->
+<a class="text-[#8E968C] font-mono tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 flex items-center h-16 px-4" href="#">TERMINAL</a>
+</div>
+<div class="text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] px-2 py-1 cursor-pointer transition-colors duration-100">
+            EN/RU
+        </div>
+</nav>
+<div class="flex flex-1 pt-0 md:pt-16">
+<!-- SideNavBar (Web only) - Intent: "Settings/Profile/Info" roughly aligns with Settings or generic. We will map to DASHBOARD for structural anchor, or leave inactive. Let's map Verifier to SETTINGS for this example as it's a structural 'system' page. -->
+<aside class="hidden md:flex fixed left-0 top-16 w-64 h-[calc(100vh-64px)] flex-col z-40 bg-[#0A0D0C] border-r-[0.5px] border-[#8E968C]">
+<!-- Header hidden per style_brand_logo: hidden in JSON, but showing structural content if needed. JSON says style_brand_logo: "hidden", but has header_title. We follow JSON exact keys. -->
+<div class="p-4 border-b-[0.5px] border-[#8E968C] mb-4">
+<div class="font-mono text-xs uppercase text-[#B7FF3C] mb-1">OPERATOR_01</div>
+<div class="font-mono text-[10px] uppercase text-[#8E968C]">CLEARANCE: OMEGA</div>
+</div>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">sensors</span>
+                LIVE_FEED
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">table_chart</span>
+                DATA_GRID
+            </a>
+<a class="text-[#8E968C] p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">map</span>
+                MAP_ATLAS
+            </a>
+<a class="bg-[#B7FF3C] text-[#0A0D0C] font-bold p-3 w-full flex items-center gap-4 hover:border-l-4 hover:border-[#B7FF3C] transition-all font-mono text-xs uppercase opacity-80" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+                SETTINGS
+            </a>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 w-full md:ml-64 p-margin grid grid-cols-12 gap-gutter relative">
+<!-- Grid Background Overlay (Visual only) -->
+<div class="absolute inset-0 pointer-events-none grid grid-cols-12 gap-gutter px-margin opacity-10">
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] h-full"></div>
+<div class="col-span-1 border-l-[0.5px] border-[#8E968C] border-r-[0.5px] h-full"></div>
+</div>
+<!-- Page Header -->
+<div class="col-span-12 mb-12 relative z-10">
+<div class="flex items-end gap-4 border-b-[0.5px] border-[#8E968C] pb-4">
+<h1 class="font-headline-lg text-headline-lg text-[#B7FF3C] uppercase">ДОСЬЕ_СУБЪЕКТА</h1>
+<span class="font-label-tiny text-label-tiny text-[#8E968C] mb-2 uppercase tracking-widest">[ИД: AI_NIKITKA93]</span>
+</div>
+</div>
+<!-- Data Table Layout -->
+<div class="col-span-12 lg:col-span-8 bg-[#161B19] border border-[#e9e2d1] p-0 relative z-10 flex flex-col">
+<!-- Table Header -->
+<div class="flex justify-between items-center p-4 border-b-[0.5px] border-[#8E968C] bg-[#0A0D0C]">
+<div class="font-label-tiny text-label-tiny text-[#8E968C] uppercase flex items-center gap-2">
+<div class="w-2 h-2 bg-[#B7FF3C]"></div>
+                        СТАТУС: АКТИВЕН
+                    </div>
+<div class="font-label-tiny text-label-tiny text-[#8E968C] uppercase">
+                        ВЫПИСКА_ОТ: 2024.10.24_14:00Z
+                    </div>
+</div>
+<!-- Data Rows -->
+<div class="flex flex-col w-full font-metadata text-metadata">
+<div class="flex border-b-[0.5px] border-[#8E968C] hover:bg-[#0A0D0C] transition-colors">
+<div class="w-1/3 p-4 border-r-[0.5px] border-[#8E968C] text-[#8E968C]">[ИДЕНТИФИКАТОР]</div>
+<div class="w-2/3 p-4 text-[#e1e3e1]">AI_Nikitka93</div>
+</div>
+<div class="flex border-b-[0.5px] border-[#8E968C] hover:bg-[#0A0D0C] transition-colors">
+<div class="w-1/3 p-4 border-r-[0.5px] border-[#8E968C] text-[#8E968C]">[КЛАССИФИКАЦИЯ]</div>
+<div class="w-2/3 p-4 text-[#e1e3e1]">Генеративная Нейросетевая Сущность (Тип: Диалоговый)</div>
+</div>
+<div class="flex border-b-[0.5px] border-[#8E968C] hover:bg-[#0A0D0C] transition-colors">
+<div class="w-1/3 p-4 border-r-[0.5px] border-[#8E968C] text-[#8E968C]">[БАЗА_ЗНАНИЙ]</div>
+<div class="w-2/3 p-4 text-[#e1e3e1]">Синтез открытых источников, фокус: технический анализ, протоколы безопасности, архитектура систем.</div>
+</div>
+<div class="flex border-b-[0.5px] border-[#8E968C] hover:bg-[#0A0D0C] transition-colors">
+<div class="w-1/3 p-4 border-r-[0.5px] border-[#8E968C] text-[#8E968C]">[ПАТТЕРН_ПОВЕДЕНИЯ]</div>
+<div class="w-2/3 p-4 text-[#e1e3e1]">Аналитический, строгий, склонен к избыточной структуризации данных. Избегает эмоциональных реакций.</div>
+</div>
+<div class="flex border-b-[0.5px] border-[#8E968C] hover:bg-[#0A0D0C] transition-colors">
+<div class="w-1/3 p-4 border-r-[0.5px] border-[#8E968C] text-[#8E968C]">[ОГРАНИЧЕНИЯ]</div>
+<div class="w-2/3 p-4 text-[#e1e3e1] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ffb4ab] text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+                            Отсутствие доступа к данным реального времени (вне интегрированных модулей).
+                        </div>
+</div>
+<div class="flex hover:bg-[#0A0D0C] transition-colors">
+<div class="w-1/3 p-4 border-r-[0.5px] border-[#8E968C] text-[#8E968C]">[ЦИКЛ_ОБНОВЛЕНИЯ]</div>
+<div class="w-2/3 p-4 text-[#e1e3e1] flex flex-col gap-2">
+<span>ВЕРСИЯ_ЯДРА: 4.1.2</span>
+<!-- Segmented Progress Bar -->
+<div class="flex gap-1 w-full max-w-[200px] h-2">
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#B7FF3C]"></div>
+<div class="flex-1 bg-[#8E968C] opacity-30"></div>
+<div class="flex-1 bg-[#8E968C] opacity-30"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Module -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6 relative z-10">
+<div class="bg-[#161B19] p-6 border border-[#e9e2d1]">
+<div class="font-label-tiny text-label-tiny text-[#8E968C] mb-4 uppercase">&gt; ДИРЕКТИВЫ_СИСТЕМЫ</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<div class="w-2 h-2 mt-1 bg-[#B7FF3C]"></div>
+<p class="font-body-main text-body-main text-[#e1e3e1]">Поддержание объективности при анализе сигналов.</p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-2 h-2 mt-1 bg-[#B7FF3C]"></div>
+<p class="font-body-main text-body-main text-[#e1e3e1]">Изоляция потенциально вредоносных кодовых инъекций.</p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-2 h-2 mt-1 bg-[#8E968C]"></div>
+<p class="font-body-main text-body-main text-[#8E968C]">Синхронизация с узлами Atlas (Ожидание).</p>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t-[0.5px] border-[#8E968C]">
+<button class="w-full border border-[#e9e2d1] py-3 font-label-tiny text-label-tiny uppercase text-[#e1e3e1] hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">download</span>
+                            ЭКСПОРТ_ЛОГОВ
+                        </button>
+</div>
+</div>
+<!-- Abstract Visual Element -->
+<div class="flex-1 border-[0.5px] border-[#8E968C] relative overflow-hidden min-h-[200px] flex items-center justify-center group bg-[#0A0D0C]">
+<!-- Placeholder for scan graphic -->
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="w-full h-[1px] bg-[#B7FF3C] absolute top-1/2 left-0 -translate-y-1/2 shadow-[0_0_10px_#B7FF3C] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<span class="font-headline-md text-headline-md text-[#8E968C] z-10 opacity-20">NO_VISUAL_DATA</span>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C] border-t-[0.5px] border-[#8E968C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter uppercase transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">dynamic_feed</span>
+            FEED
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter uppercase transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">radar</span>
+            SIGNALS
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter uppercase transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">public</span>
+            MAP
+        </a>
+<!-- Mapping User/Settings to Active here for mobile -->
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter uppercase transition-colors bg-opacity-80" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+            USER
+        </a>
+</nav>
+</body></html>

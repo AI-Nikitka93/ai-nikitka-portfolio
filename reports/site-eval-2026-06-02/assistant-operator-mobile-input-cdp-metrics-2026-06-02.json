@@ -1,0 +1,13 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "inputVisible": true,
+  "inputValue": "Я HR. Что открыть первым?",
+  "answerCompleteEnough": true,
+  "liveTextLength": 231,
+  "horizontalOverflow": false,
+  "scrollWidth": 390,
+  "clientWidth": 390
+}

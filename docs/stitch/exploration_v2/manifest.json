@@ -1,0 +1,54 @@
+{
+  "project_name": "projects/6735542063805162036",
+  "project_id": "6735542063805162036",
+  "screens": [
+    {
+      "title": "Concept 1: Clean Minimalist Light",
+      "screen_name": "projects/6735542063805162036/screens/dddaf9a565a8459785480bf0de83ce21",
+      "image_path": "docs\\stitch\\exploration_v2\\Concept_1_Clean_Minimalist_Light.png",
+      "html_path": "docs\\stitch\\exploration_v2\\Concept_1_Clean_Minimalist_Light.html",
+      "width": "2560",
+      "height": "9296"
+    },
+    {
+      "title": "Concept 3: Bento Proof Grid",
+      "screen_name": "projects/6735542063805162036/screens/d2ae092f839c46e4a93075b8184d1734",
+      "image_path": "docs\\stitch\\exploration_v2\\Concept_3_Bento_Proof_Grid.png",
+      "html_path": "docs\\stitch\\exploration_v2\\Concept_3_Bento_Proof_Grid.html",
+      "width": "2560",
+      "height": "4678"
+    },
+    {
+      "title": "Concept 4: Editorial / Academic",
+      "screen_name": "projects/6735542063805162036/screens/90d563887c1c4949b295c7228261112d",
+      "image_path": "docs\\stitch\\exploration_v2\\Concept_4_Editorial_Academic.png",
+      "html_path": "docs\\stitch\\exploration_v2\\Concept_4_Editorial_Academic.html",
+      "width": "2560",
+      "height": "8640"
+    },
+    {
+      "title": "Concept 2: Dark Tech / Prompt Console",
+      "screen_name": "projects/6735542063805162036/screens/a2847d7d9ccf40edafc89a031a3d30a7",
+      "image_path": "docs\\stitch\\exploration_v2\\Concept_2_Dark_Tech_Prompt_Console.png",
+      "html_path": "docs\\stitch\\exploration_v2\\Concept_2_Dark_Tech_Prompt_Console.html",
+      "width": "2560",
+      "height": "10288"
+    },
+    {
+      "title": "Concept 5: Soft Glass / Modern Calm",
+      "screen_name": "projects/6735542063805162036/screens/96a9ae75b5b944979e0b53c2ceead5f6",
+      "image_path": "docs\\stitch\\exploration_v2\\Concept_5_Soft_Glass_Modern_Calm.png",
+      "html_path": "docs\\stitch\\exploration_v2\\Concept_5_Soft_Glass_Modern_Calm.html",
+      "width": "2560",
+      "height": "10760"
+    },
+    {
+      "title": "Concept 6: Precise Hybrid Professional",
+      "screen_name": "projects/6735542063805162036/screens/5491f31044264ea1a1c16a9c4f638b59",
+      "image_path": "docs\\stitch\\exploration_v2\\Concept_6_Precise_Hybrid_Professional.png",
+      "html_path": "docs\\stitch\\exploration_v2\\Concept_6_Precise_Hybrid_Professional.html",
+      "width": "2560",
+      "height": "12360"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Архив</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Monaspace+Neon:wght@400;700&display=swap');
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e4e2e2",
+                        "tertiary": "#dddbdb",
+                        "primary-fixed-dim": "#ffba43",
+                        "on-tertiary-container": "#4e4e4e",
+                        "error-container": "#93000a",
+                        "secondary-container": "#474747",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "primary": "#ffd597",
+                        "tertiary-container": "#c1bfbf",
+                        "primary-fixed": "#ffddaf",
+                        "on-primary-fixed": "#281800",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-primary-container": "#6a4700",
+                        "surface-container-highest": "#343535",
+                        "error": "#ffb4ab",
+                        "background": "#121414",
+                        "outline-variant": "#524533",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-surface": "#e3e2e2",
+                        "on-surface": "#e3e2e2",
+                        "inverse-primary": "#805600",
+                        "secondary": "#c6c6c6",
+                        "on-background": "#e3e2e2",
+                        "surface-bright": "#383939",
+                        "surface-variant": "#343535",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#ffb000",
+                        "surface-tint": "#ffba43",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "on-primary": "#432c00",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-container-high": "#292a2a",
+                        "on-surface-variant": "#d7c4ac",
+                        "inverse-on-surface": "#303031",
+                        "surface": "#121414",
+                        "surface-container": "#1f2020",
+                        "surface-container-lowest": "#0d0e0f",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "surface-dim": "#121414",
+                        "on-secondary": "#303030",
+                        "surface-container-low": "#1b1c1c",
+                        "outline": "#9f8e78",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-error": "#690005",
+                        "on-tertiary": "#303030",
+                        "on-primary-fixed-variant": "#614000",
+                        "on-secondary-container": "#b5b5b5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max-width": "800px",
+                        "indent-terminal": "1.5rem",
+                        "stack-md": "2.5rem",
+                        "gutter": "2rem",
+                        "stack-lg": "5rem",
+                        "stack-sm": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-mono": ["Monaspace Neon"],
+                        "label-caps": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "terminal-sm": ["Monaspace Neon"]
+                    },
+                    "fontSize": {
+                        "body-mono": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "terminal-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-mono text-body-mono antialiased selection:bg-primary-container selection:text-black">
+<!-- TopNavBar -->
+<header class="w-full bg-black border-b border-surface-variant sticky top-0 z-50">
+<div class="max-w-[800px] mx-auto w-full flex justify-between items-center px-4 py-3">
+<div class="font-terminal-sm text-terminal-sm font-bold text-primary-container tracking-widest uppercase">
+                ТЕРМИНАЛ_СИСТЕМА
+            </div>
+<nav class="hidden md:flex gap-6">
+<a class="font-terminal-sm text-terminal-sm uppercase tracking-tighter text-secondary hover:text-primary-container transition-colors" href="#">КОНСОЛЬ</a>
+<a class="font-terminal-sm text-terminal-sm uppercase tracking-tighter text-primary-container border-b border-primary-container pb-1 opacity-80 duration-100" href="#">АРХИВ</a>
+<a class="font-terminal-sm text-terminal-sm uppercase tracking-tighter text-secondary hover:text-primary-container transition-colors" href="#">СТАТУС</a>
+</nav>
+<div class="flex gap-4 text-primary-container">
+<button class="hover:bg-surface-variant transition-all rounded p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<button class="hover:bg-surface-variant transition-all rounded p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</button>
+<button class="hover:bg-surface-variant transition-all rounded p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">power_settings_new</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow w-full max-w-[800px] mx-auto px-4 py-stack-md flex flex-col gap-stack-lg">
+<!-- Header Section -->
+<section class="flex flex-col gap-stack-sm">
+<h1 class="font-h1 text-h1 text-on-surface uppercase border-b border-surface-variant pb-4">
+                Записи_Архива
+            </h1>
+<!-- Terminal Query Input -->
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 border-b border-surface-variant focus-within:border-primary-container focus-within:shadow-[0_1px_0_0_theme(colors.primary-container)] transition-colors mt-2">
+<span class="text-primary-container font-terminal-sm text-terminal-sm font-bold">&gt;</span>
+<input class="bg-transparent border-none outline-none flex-grow font-terminal-sm text-terminal-sm text-on-surface placeholder-secondary focus:ring-0 w-full" placeholder="ЗАПРОС..." type="text" value="SELECT * FROM DOSSIER WHERE CLEARANCE &gt;= 3"/>
+<span class="material-symbols-outlined text-secondary animate-pulse text-[18px]">keyboard_return</span>
+</div>
+</section>
+<!-- Data Results Section -->
+<section class="flex flex-col">
+<div class="flex items-center justify-between py-2 border-b border-surface-variant text-secondary font-terminal-sm text-terminal-sm uppercase mb-4">
+<span>ИД_ОБЪЕКТА</span>
+<span>МЕТАДАННЫЕ</span>
+</div>
+<!-- List of Dossiers -->
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-3 px-2 border-b border-surface-container-highest hover:bg-surface-container-low transition-colors gap-4">
+<div class="flex items-center gap-4">
+<span class="font-terminal-sm text-terminal-sm text-primary-container min-w-[100px]">0x7F-A1</span>
+<div class="flex flex-col">
+<span class="font-body-mono text-body-mono text-on-surface">Операция_Авангард</span>
+<span class="font-terminal-sm text-terminal-sm text-secondary">SUBJ: Перехват данных сектора 4</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+<span class="font-terminal-sm text-terminal-sm text-secondary">2024-10-24 14:32</span>
+<span class="font-label-caps text-label-caps text-primary-container uppercase px-2 py-1 bg-surface-container-highest border border-surface-variant">
+                            [ ВЫПОЛНЕНО ]
+                        </span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-3 px-2 border-b border-surface-container-highest hover:bg-surface-container-low transition-colors gap-4">
+<div class="flex items-center gap-4">
+<span class="font-terminal-sm text-terminal-sm text-secondary group-hover:text-primary-container transition-colors min-w-[100px]">0x7F-B2</span>
+<div class="flex flex-col">
+<span class="font-body-mono text-body-mono text-on-surface">Анализ_Сигнала_Омега</span>
+<span class="font-terminal-sm text-terminal-sm text-secondary">SUBJ: Неизвестная частотная аномалия</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+<span class="font-terminal-sm text-terminal-sm text-secondary">2024-10-22 09:15</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase px-2 py-1 bg-surface-container-lowest border border-surface-variant">
+                            [ АРХИВ ]
+                        </span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-3 px-2 border-b border-surface-container-highest hover:bg-surface-container-low transition-colors gap-4">
+<div class="flex items-center gap-4">
+<span class="font-terminal-sm text-terminal-sm text-secondary group-hover:text-primary-container transition-colors min-w-[100px]">0x8A-00</span>
+<div class="flex flex-col">
+<span class="font-body-mono text-body-mono text-on-surface">Протокол_Удержания</span>
+<span class="font-terminal-sm text-terminal-sm text-secondary">SUBJ: Нарушение периметра базы</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+<span class="font-terminal-sm text-terminal-sm text-secondary">2024-10-18 23:59</span>
+<span class="font-label-caps text-label-caps text-error uppercase px-2 py-1 bg-surface-container-highest border border-error/30">
+                            [ ИНЦИДЕНТ ]
+                        </span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-3 px-2 border-b border-surface-container-highest hover:bg-surface-container-low transition-colors gap-4">
+<div class="flex items-center gap-4">
+<span class="font-terminal-sm text-terminal-sm text-secondary group-hover:text-primary-container transition-colors min-w-[100px]">0x8A-01</span>
+<div class="flex flex-col">
+<span class="font-body-mono text-body-mono text-on-surface">Синхронизация_Узлов</span>
+<span class="font-terminal-sm text-terminal-sm text-secondary">SUBJ: Плановое обслуживание сети</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+<span class="font-terminal-sm text-terminal-sm text-secondary">2024-10-15 03:00</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase px-2 py-1 bg-surface-container-lowest border border-surface-variant">
+                            [ АРХИВ ]
+                        </span>
+</div>
+</div>
+</div>
+<div class="mt-stack-sm flex justify-center">
+<button class="font-terminal-sm text-terminal-sm uppercase tracking-widest text-primary-container border border-surface-variant px-6 py-2 hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">download</span>
+                    ЗАГРУЗИТЬ_ЕЩЕ
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-black border-t border-surface-variant mt-auto">
+<div class="max-w-[800px] mx-auto w-full flex flex-col md:flex-row justify-between items-center py-6 px-4 gap-4">
+<span class="font-terminal-sm text-[10px] text-secondary uppercase tracking-widest">
+                © 2024 СИСТЕМА_ФОКУС. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            </span>
+<div class="flex gap-6">
+<a class="font-terminal-sm text-[10px] text-secondary hover:text-primary-container uppercase tracking-widest transition-colors" href="#">ПОДДЕРЖКА</a>
+<a class="font-terminal-sm text-[10px] text-secondary hover:text-primary-container uppercase tracking-widest transition-colors" href="#">ДОКУМЕНТАЦИЯ</a>
+</div>
+</div>
+</footer>
+</body></html>

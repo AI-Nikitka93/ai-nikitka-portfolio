@@ -1,0 +1,16 @@
+.next/
+node_modules/
+out/
+build/
+.vercel/
+*.log
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+.env*.local
+.codex*.png
+.design-audit-sheets/
+.codex-temp/
+.playwright-mcp/
+
+.vercel

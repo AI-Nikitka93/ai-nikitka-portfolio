@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-06-02T14:14:18.052Z",
+  "base": "http://127.0.0.1:3200",
+  "scope": "CSS-only header and dossier card refactor after removing framer-motion",
+  "staticVerification": {
+    "npmRunAuditReleaseRedBeforeImplementation": {
+      "ok": false,
+      "errors": [
+        "src\\components\\dossier-card.tsx: production UI should use CSS/server components instead of framer-motion",
+        "src\\components\\site-header.tsx: production UI should use CSS/server components instead of framer-motion",
+        "package.json: release UI must not ship framer-motion for basic navigation/card motion"
+      ]
+    },
+    "npmRunVerifyAfterImplementation": {
+      "ok": true,
+      "checks": ["lint", "typecheck", "build", "audit:release", "audit:deps"],
+      "dependencyAudit": "found 0 vulnerabilities"
+    },
+    "liveReleaseAudit": {
+      "path": "reports/site-eval-2026-06-01/release-audit-live-2026-06-02-framerless.json",
+      "ok": true,
+      "checkedRoutes": 26,
+      "warnings": 0,
+      "errors": 0
+    }
+  },
+  "dependencyCheck": {
+    "rgFramerMotionSourceAndLock": "no matches",
+    "npmLsFramerMotion": "empty tree"
+  },
+  "mobileMenuCheck": {
+    "route": "/portfolio",
+    "viewport": { "width": 390, "height": 844 },
+    "before": {
+      "panel": false,
+      "ariaExpanded": "false",
+      "horizontalOverflow": false,
+      "portfolioCardCount": 14,
+      "firstCardVisible": true
+    },
+    "afterOpen": {
+      "panel": true,
+      "ariaExpanded": "true",
+      "currentLinks": ["02Работы"],
+      "linkCount": 10,
+      "linkBox": { "width": 317, "height": 50 },
+      "horizontalOverflow": false
+    },
+    "afterClose": {
+      "panel": false,
+      "ariaExpanded": "false",
+      "horizontalOverflow": false
+    }
+  },
+  "routeSweep": {
+    "routes": 19,
+    "viewports": [
+      { "name": "desktop", "width": 1440, "height": 960 },
+      { "name": "mobile", "width": 390, "height": 844 }
+    ],
+    "checks": 38,
+    "horizontalOverflow": 0,
+    "missingOrInvisibleH1": 0,
+    "h1CountFailures": 0,
+    "brokenImagesAfterScroll": 0,
+    "consoleWarnOrError": 0,
+    "statusFailures": 0,
+    "smallTapTargetChecks": 0,
+    "failureCount": 0
+  },
+  "screenshots": [
+    "reports/site-eval-2026-06-01/portfolio-framerless-desktop-2026-06-02.png",
+    "reports/site-eval-2026-06-01/portfolio-framerless-mobile-2026-06-02.png"
+  ]
+}

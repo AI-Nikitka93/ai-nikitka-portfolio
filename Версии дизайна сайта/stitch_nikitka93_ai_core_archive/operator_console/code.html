@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operator Assistant Screen - AI_Nikitka93</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400&amp;family=Space+Grotesk:wght@500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#4a6f00",
+                    "on-tertiary-fixed": "#1e1b11",
+                    "primary-fixed": "#b0f734",
+                    "error-container": "#93000a",
+                    "secondary-container": "#cd4700",
+                    "surface-container-highest": "#313634",
+                    "on-background": "#dfe4e0",
+                    "surface-container": "#1c211f",
+                    "surface": "#0f1412",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-container-low": "#181d1b",
+                    "surface-bright": "#353a38",
+                    "inverse-surface": "#dfe4e0",
+                    "outline": "#8c947b",
+                    "secondary-fixed": "#ffdbcf",
+                    "surface-dim": "#0f1412",
+                    "surface-container-lowest": "#0a0f0d",
+                    "surface-tint": "#96da06",
+                    "background": "#0f1412",
+                    "on-tertiary-container": "#696457",
+                    "on-primary-fixed": "#121f00",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "primary": "#ffffff",
+                    "on-surface": "#dfe4e0",
+                    "on-primary": "#223600",
+                    "on-tertiary": "#343025",
+                    "tertiary-fixed": "#e9e2d1",
+                    "outline-variant": "#424935",
+                    "primary-fixed-dim": "#96da06",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#4b473b",
+                    "secondary": "#ffb59a",
+                    "tertiary-fixed-dim": "#cdc6b6",
+                    "inverse-primary": "#456800",
+                    "on-secondary": "#5b1b00",
+                    "primary-container": "#b0f734",
+                    "surface-container-high": "#262b29",
+                    "inverse-on-surface": "#2c312f",
+                    "tertiary-container": "#e9e2d1",
+                    "error": "#ffb4ab",
+                    "tertiary": "#ffffff",
+                    "surface-variant": "#313634",
+                    "on-surface-variant": "#c2caaf",
+                    "on-primary-fixed-variant": "#334f00",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "island-padding": "32px",
+                    "xl": "48px",
+                    "lg": "24px",
+                    "gutter": "20px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "data-mono": [
+                            "IBM Plex Mono"
+                    ],
+                    "h1": [
+                            "Space Grotesk"
+                    ],
+                    "h2": [
+                            "Space Grotesk"
+                    ],
+                    "body-main": [
+                            "Inter"
+                    ],
+                    "ui-label": [
+                            "IBM Plex Mono"
+                    ],
+                    "h3": [
+                            "Space Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "data-mono": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h1": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "h2": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-main": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "ui-label": [
+                            "13px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "h3": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        /* Custom styles for elements not fully covered by basic utility classes but required by design system */
+        .glass-panel {
+            background-color: rgba(15, 20, 18, 0.4); /* surface/40 */
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(140, 148, 123, 0.2); /* outline/20 */
+            border-top-color: rgba(140, 148, 123, 0.5); /* Luminous top edge */
+            border-left-color: rgba(140, 148, 123, 0.5); /* Luminous left edge */
+        }
+        
+        .glow-active {
+            box-shadow: inset 0 0 10px rgba(176, 247, 52, 0.3); /* Phosphor Lime */
+        }
+        
+        /* Hide scrollbar for cleaner UI */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(140, 148, 123, 0.3);
+            border-radius: 2px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface h-screen w-screen overflow-hidden flex flex-col font-body-main text-body-main selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-20 bg-[#0A0D0C]/40 backdrop-blur-[40px] border-b border-[#E0E0E0]/20 border-t-[1px] border-l-[1px] border-white/10">
+<!-- Brand / Leading -->
+<div class="flex items-center gap-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-[#B7FF3C] text-2xl">memory</span>
+<span class="text-xl font-black text-[#B7FF3C] tracking-widest font-['Space_Grotesk'] tracking-tighter uppercase font-bold">NEURAL_DOSS_V1.0</span>
+</div>
+<!-- Desktop Navigation Cluster (Hidden on Mobile) -->
+<nav class="hidden md:flex gap-lg h-full items-center">
+<a class="h-full flex items-center text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 px-md font-ui-label text-ui-label" href="#">
+                Dossier
+            </a>
+<!-- Active Tab: Console -->
+<a class="h-full flex items-center text-[#D9D9D9] font-bold border-b border-[#B7FF3C] hover:bg-[#B7FF3C]/10 transition-all duration-300 px-md font-ui-label text-ui-label Active: shadow-[0_0_10px_#B7FF3C] scale-[0.99]" href="#">
+                Console
+            </a>
+<a class="h-full flex items-center text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 px-md font-ui-label text-ui-label" href="#">
+                Planning
+            </a>
+<a class="h-full flex items-center text-[#808080] hover:bg-[#B7FF3C]/10 hover:text-[#B7FF3C] transition-all duration-300 px-md font-ui-label text-ui-label" href="#">
+                Field_Notes
+            </a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center">
+<button class="font-ui-label text-ui-label text-outline uppercase tracking-widest hover:text-primary-container transition-colors">
+                RU / EN
+            </button>
+</div>
+</header>
+<!-- Main Workspace Canvas -->
+<main class="flex-1 mt-20 md:mb-0 mb-16 p-xl flex flex-col md:flex-row gap-lg overflow-hidden relative">
+<!-- Left Panel: Data Logs & Status (30%) -->
+<aside class="hidden md:flex flex-col w-[30%] glass-panel rounded-xl overflow-hidden p-island-padding gap-md">
+<!-- AI Status Header -->
+<div class="flex items-center gap-sm border-b border-outline/20 pb-sm mb-sm">
+<div class="w-2 h-2 bg-primary-container shadow-[0_0_8px_#b0f734] animate-pulse"></div>
+<h2 class="font-h3 text-h3 text-on-surface uppercase tracking-widest text-[16px]">AI_Nikitka93 <span class="text-outline-variant">:: ACTIVE</span></h2>
+</div>
+<!-- Metrics Sub-panel -->
+<div class="grid grid-cols-2 gap-xs mb-md">
+<div class="bg-surface-container/30 backdrop-blur-[20px] rounded p-sm border border-outline/10">
+<span class="font-ui-label text-ui-label text-outline block mb-xs">CPU_LOAD</span>
+<span class="font-data-mono text-data-mono text-primary-container">14.02%</span>
+</div>
+<div class="bg-surface-container/30 backdrop-blur-[20px] rounded p-sm border border-outline/10">
+<span class="font-ui-label text-ui-label text-outline block mb-xs">MEMORY_ALLC</span>
+<span class="font-data-mono text-data-mono text-primary-container">8,092 MB</span>
+</div>
+</div>
+<!-- Terminal Output / Logs -->
+<div class="flex-1 overflow-y-auto bg-surface-container-low/50 rounded border border-outline/10 p-sm">
+<ul class="font-data-mono text-data-mono text-[12px] space-y-1 opacity-80">
+<li class="text-outline"><span class="text-on-surface-variant">[10:42:01]</span> SYS.INIT Sequence complete.</li>
+<li class="text-outline"><span class="text-on-surface-variant">[10:42:05]</span> Connecting to remote database...</li>
+<li class="text-primary-container"><span class="text-on-surface-variant">[10:42:06]</span> Connection established. Latency: 12ms.</li>
+<li class="text-outline"><span class="text-on-surface-variant">[10:42:15]</span> Awaiting operator command input.</li>
+<li class="text-error"><span class="text-on-surface-variant">[10:43:02]</span> WARN: Sub-routine 'Delta_7' delayed.</li>
+<li class="text-outline"><span class="text-on-surface-variant">[10:44:11]</span> Running background diagnostics...</li>
+<li class="text-primary-container"><span class="text-on-surface-variant">[10:44:18]</span> Diagnostics nominal. All systems optimal.</li>
+<li class="text-outline"><span class="text-on-surface-variant">[10:45:00]</span> Listening on port 8080.</li>
+</ul>
+</div>
+</aside>
+<!-- Right Panel: Main Interaction Console (70%) -->
+<section class="flex-1 glass-panel rounded-xl flex flex-col overflow-hidden relative glow-active">
+<!-- Console Header -->
+<div class="px-island-padding py-md border-b border-outline/20 bg-surface/20 flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">terminal</span>
+<span class="font-ui-label text-ui-label text-outline uppercase tracking-widest">Operator Console Session</span>
+</div>
+<!-- Floating Action Buttons (Contextual to Console) -->
+<div class="flex gap-sm">
+<button class="bg-surface-container/50 border border-outline/30 hover:border-primary-container hover:text-primary-container text-on-surface-variant px-sm py-xs rounded font-ui-label text-ui-label transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+                        FLUSH_CACHE
+                    </button>
+<button class="bg-surface-container/50 border border-outline/30 hover:border-primary-container hover:text-primary-container text-on-surface-variant px-sm py-xs rounded font-ui-label text-ui-label transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">bug_report</span>
+                        DIAGNOSTIC
+                    </button>
+</div>
+</div>
+<!-- Main Output Area -->
+<div class="flex-1 p-island-padding overflow-y-auto font-data-mono text-data-mono text-on-surface space-y-md">
+<div class="opacity-70">
+<p>&gt; AI_Nikitka93 Core Interface v2.4 loaded.</p>
+<p>&gt; Authentication verified for Operator ID: 994-A.</p>
+<p>&gt; Access level: MAXIMUM.</p>
+</div>
+<br/>
+<div>
+<p class="text-primary-container">&gt; Subject query initiated...</p>
+<p>&gt; Scanning local sectors for recent activity logs.</p>
+<p class="mt-sm pl-sm border-l-2 border-primary-container/30">
+                        Result: 4 anomalies detected in Sector 7G.<br/>
+                        Parsing structured data...<br/>
+                        [FILE_REF: AX-8821]<br/>
+                        [FILE_REF: AX-8822]<br/>
+</p>
+</div>
+<!-- Simulated AI generation progress -->
+<div class="mt-xl">
+<p class="text-outline mb-xs">Generating tactical summary...</p>
+<div class="w-64 h-[2px] bg-outline/20 relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary-container w-1/3 animate-[pulse_1s_ease-in-out_infinite]"></div>
+</div>
+</div>
+</div>
+<!-- Interactive Input Area -->
+<div class="p-island-padding border-t border-outline/20 bg-surface/40 flex items-center gap-md">
+<span class="font-data-mono text-data-mono text-primary-container font-bold">&gt;</span>
+<input autocomplete="off" class="flex-1 bg-transparent border-none focus:ring-0 font-data-mono text-data-mono text-on-surface placeholder:text-outline-variant p-0" placeholder="Enter command sequence..." spellcheck="false" type="text"/>
+<button class="bg-primary-container text-on-primary-container font-ui-label text-ui-label px-md py-sm rounded hover:shadow-[0_0_15px_rgba(176,247,52,0.5)] transition-all">
+                    EXECUTE
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 h-16 bg-[#0A0D0C]/40 backdrop-blur-[40px] rounded-none border-t border-[#E0E0E0]/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-16" href="#">
+<span aria-hidden="true" class="material-symbols-outlined mb-xs text-[20px]">folder_open</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Dossier</span>
+</a>
+<!-- Active Tab: Console -->
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] pt-2 w-16 hover:opacity-100 hover:text-[#B7FF3C] Active: scale-95 transition-transform" href="#">
+<span aria-hidden="true" class="material-symbols-outlined mb-xs text-[20px]">terminal</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Console</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-16" href="#">
+<span aria-hidden="true" class="material-symbols-outlined mb-xs text-[20px]">architecture</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Planning</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#808080] opacity-60 hover:opacity-100 hover:text-[#B7FF3C] w-16" href="#">
+<span aria-hidden="true" class="material-symbols-outlined mb-xs text-[20px]">edit_note</span>
+<span class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest">Field_Notes</span>
+</a>
+</nav>
+</body></html>

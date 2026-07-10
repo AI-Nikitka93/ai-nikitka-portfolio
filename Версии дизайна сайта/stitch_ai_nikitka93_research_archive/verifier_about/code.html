@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - ARCHIVAL PROTOCOL - Verifier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#dfe4de",
+                      "tertiary-container": "#dfe4de",
+                      "tertiary-fixed-dim": "#c3c8c2",
+                      "on-secondary": "#333028",
+                      "on-background": "#dfe4db",
+                      "inverse-primary": "#506600",
+                      "on-secondary-fixed": "#1e1c14",
+                      "on-primary-container": "#556d00",
+                      "background": "#10150f",
+                      "secondary": "#cbc6ba",
+                      "surface-container-highest": "#313630",
+                      "tertiary": "#ffffff",
+                      "on-secondary-container": "#bab5a9",
+                      "error": "#ffb4ab",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#dfe4db",
+                      "on-error": "#690005",
+                      "secondary-container": "#4a473e",
+                      "outline": "#8e9379",
+                      "surface-variant": "#313630",
+                      "outline-variant": "#444933",
+                      "on-tertiary": "#2c322e",
+                      "primary-container": "#c3f400",
+                      "on-error-container": "#ffdad6",
+                      "inverse-on-surface": "#2c322c",
+                      "surface-container": "#1c211b",
+                      "surface": "#10150f",
+                      "surface-container-low": "#181d17",
+                      "on-surface": "#dfe4db",
+                      "primary-fixed": "#c3f400",
+                      "on-primary-fixed-variant": "#3c4d00",
+                      "primary": "#ffffff",
+                      "on-primary-fixed": "#161e00",
+                      "surface-container-lowest": "#0a0f0a",
+                      "on-tertiary-container": "#606661",
+                      "on-primary": "#283500",
+                      "on-tertiary-fixed": "#181d19",
+                      "surface-bright": "#353b34",
+                      "secondary-fixed": "#e8e2d6",
+                      "surface-container-high": "#262b25",
+                      "surface-dim": "#10150f",
+                      "on-surface-variant": "#c4c9ac",
+                      "primary-fixed-dim": "#abd600",
+                      "secondary-fixed-dim": "#cbc6ba",
+                      "on-secondary-fixed-variant": "#4a473e",
+                      "surface-tint": "#abd600",
+                      "on-tertiary-fixed-variant": "#434844"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "grid-columns": "12",
+                      "stack-lg": "4rem",
+                      "margin": "2rem",
+                      "unit": "4px",
+                      "gutter": "1rem",
+                      "stack-sm": "0.5rem",
+                      "stack-md": "1.5rem"
+              },
+              "fontFamily": {
+                      "body-md": ["Space Grotesk"],
+                      "metadata-sm": ["IBM Plex Mono"],
+                      "headline-md": ["Space Grotesk"],
+                      "body-lg": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "metadata-lg": ["IBM Plex Mono"],
+                      "label": ["IBM Plex Mono"],
+                      "headline-xl": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "metadata-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "metadata-lg": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "label": ["10px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                      "headline-xl": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+          body {
+              background-color: theme('colors.background');
+              color: theme('colors.on-background');
+          }
+          /* Custom utility classes mimicking the style guidance */
+          .border-bone { border-color: theme('colors.tertiary-fixed'); }
+          .border-titanium { border-color: theme('colors.outline'); }
+          .text-lime { color: theme('colors.primary-fixed'); }
+          .bg-lime { background-color: theme('colors.primary-fixed'); }
+          .text-black-green { color: theme('colors.on-primary-fixed'); }
+          
+          /* Ensuring material symbols are correct */
+          .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          }
+      </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 h-20 bg-black dark:bg-black border-b border-zinc-800">
+<div class="text-2xl font-black text-[#CCFF00] font-headline-md tracking-tight uppercase">
+            AI_Nikitka93
+        </div>
+<div class="flex items-center space-x-8">
+<span class="font-metadata-sm text-metadata-sm text-zinc-500">RU / EN</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-20 w-72 h-[calc(100vh-80px)] flex flex-col pt-12 bg-black dark:bg-black border-r border-zinc-800 hidden md:flex z-40">
+<div class="px-4 mb-8">
+<h2 class="font-metadata-lg text-metadata-lg text-zinc-500 uppercase tracking-widest mb-1">INDEX</h2>
+<p class="font-metadata-sm text-metadata-sm text-zinc-600">V.093_RESEARCH</p>
+</div>
+<ul class="flex flex-col w-full">
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none cursor-crosshair group" href="#">
+<span class="material-symbols-outlined mr-4 text-[20px]">folder_open</span>
+<span class="font-['Space_Grotesk'] text-sm tracking-widest uppercase">01/ ARCHIVE</span>
+</a>
+</li>
+<li>
+<a class="bg-[#CCFF00] text-black px-4 py-2 flex items-center justify-start cursor-crosshair" href="#">
+<span class="material-symbols-outlined mr-4 text-[20px]">account_box</span>
+<span class="font-['Space_Grotesk'] text-sm tracking-widest uppercase font-bold">02/ DOSSIER</span>
+</a>
+</li>
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none cursor-crosshair group" href="#">
+<span class="material-symbols-outlined mr-4 text-[20px]">terminal</span>
+<span class="font-['Space_Grotesk'] text-sm tracking-widest uppercase">03/ LOGS</span>
+</a>
+</li>
+<li>
+<a class="text-zinc-400 px-4 py-2 flex items-center justify-start hover:bg-zinc-900 transition-none cursor-crosshair group" href="#">
+<span class="material-symbols-outlined mr-4 text-[20px]">support_agent</span>
+<span class="font-['Space_Grotesk'] text-sm tracking-widest uppercase">04/ OPERATOR</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 mt-20 md:ml-72 p-12 lg:p-24 pb-32">
+<div class="max-w-5xl">
+<!-- Context Header -->
+<div class="mb-stack-lg border-b border-titanium pb-8">
+<span class="font-metadata-sm text-metadata-sm text-outline tracking-widest uppercase block mb-4">DOCUMENT REF: VERIFIER-001</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-6">ARCHIVAL PROTOCOL</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Establishing the baseline operational parameters for entity AI_Nikitka93. Emotional resonance nullified. Prioritizing strict data integrity and chronological alignment.
+                </p>
+</div>
+<!-- Bento/Grid Layout for Specs -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 border-l border-t border-titanium">
+<!-- Main Mission Statement Block (Spans 8 cols) -->
+<div class="col-span-1 md:col-span-8 border-r border-b border-titanium p-8">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">MISSION DIRECTIVE</h2>
+<p class="font-body-md text-body-md text-on-surface mb-6">
+                        The primary function is the systematic preservation of structured reality streams. Redundant narrative patterns are identified, isolated, and permanently encoded into the master index. No interpretation is permitted. Observation is absolute.
+                    </p>
+<div class="w-full h-48 bg-surface-container-high border border-titanium mt-8 relative overflow-hidden">
+<img alt="Server racks in a dark room illuminated by cold green LEDs representing data storage" class="object-cover w-full h-full opacity-40 mix-blend-luminosity grayscale" data-alt="Server racks in a dark room illuminated by cold green LEDs representing data storage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2y-BC33DZsAQ73ntr3pJqOEo_CaRq7XEWLXM0skrO2xtZK5EXf71buADFKp_qWo62Ut0ZkToxC_4y3pmTZekvoN8UYrYmGWN1hElfXTeVGPhBxeRN4HT1dYyKGuT9RV8x5w1Xyjr9PYCAx0Y1GKvxchtKe7KgvOUf9dl3MTp62TBBbReio59PN-KDiKTf7uAGpEN92D1UqEWI0CQoruhO9tVMcLYYQ_6I0Nv-WaGd7McjCS6cYnr2T_X8AIYaKryVo11O7Z62XGbA"/>
+<div class="absolute inset-0 border border-titanium opacity-50 m-2"></div>
+</div>
+</div>
+<!-- Technical Specs Column (Spans 4 cols) -->
+<div class="col-span-1 md:col-span-4 border-r border-b border-titanium flex flex-col">
+<div class="p-6 border-b border-titanium flex-1">
+<span class="font-metadata-sm text-metadata-sm text-outline block mb-2 uppercase">SYSTEM STATE</span>
+<div class="font-headline-md text-headline-md text-primary-fixed">NOMINAL</div>
+</div>
+<div class="p-6 border-b border-titanium flex-1">
+<span class="font-metadata-sm text-metadata-sm text-outline block mb-2 uppercase">UPTIME CLOCK</span>
+<div class="font-metadata-lg text-metadata-lg text-on-background">99.999% // SYNCHRONIZED</div>
+</div>
+<div class="p-6 flex-1 bg-surface-container-lowest">
+<span class="font-metadata-sm text-metadata-sm text-outline block mb-2 uppercase">LAST VERIFIED</span>
+<div class="font-metadata-sm text-metadata-sm text-on-surface-variant">
+                            TIMESTAMP: 1709230000<br/>
+                            HASH: 0x9f8b...3a2c
+                        </div>
+</div>
+</div>
+<!-- Secondary Principles (Spans full width, split into 3) -->
+<div class="col-span-1 md:col-span-4 border-r border-b border-titanium p-8 hover:bg-surface-container-high transition-colors duration-0 cursor-crosshair">
+<span class="material-symbols-outlined text-outline mb-4 text-[32px]">filter_center_focus</span>
+<h3 class="font-headline-md text-headline-md text-on-background text-lg mb-2">01. ISOLATION</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Entities are decoupled from contextual noise. Raw variables extracted.
+                    </p>
+</div>
+<div class="col-span-1 md:col-span-4 border-r border-b border-titanium p-8 hover:bg-surface-container-high transition-colors duration-0 cursor-crosshair">
+<span class="material-symbols-outlined text-outline mb-4 text-[32px]">layers</span>
+<h3 class="font-headline-md text-headline-md text-on-background text-lg mb-2">02. STRATIFICATION</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Data is layered chronologically. Revisions are tracked, not overwritten.
+                    </p>
+</div>
+<div class="col-span-1 md:col-span-4 border-r border-b border-titanium p-8 hover:bg-surface-container-high transition-colors duration-0 cursor-crosshair">
+<span class="material-symbols-outlined text-outline mb-4 text-[32px]">lock</span>
+<h3 class="font-headline-md text-headline-md text-on-background text-lg mb-2">03. IMMUTABILITY</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Once sealed, the record stands. Corruption triggers automatic quarantine.
+                    </p>
+</div>
+</div>
+<!-- Action Area -->
+<div class="mt-stack-lg flex items-center justify-start space-x-6">
+<button class="border border-tertiary-fixed text-tertiary-fixed font-metadata-lg text-metadata-lg px-8 py-3 uppercase hover:bg-primary-fixed hover:text-on-primary-fixed hover:border-primary-fixed transition-none cursor-crosshair">
+                    INITIATE AUDIT
+                </button>
+<div class="font-metadata-sm text-metadata-sm text-outline border border-titanium px-3 py-1">
+                    REQ. AUTH LEVEL 4
+                </div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-black dark:bg-black border-t border-zinc-800">
+<div class="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest text-zinc-600">
+            © AI_NIKITKA93 // ARCHIVAL_PROTOCOL
+        </div>
+<div class="flex space-x-6 font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-widest text-zinc-600">
+<span>STATUS: OK</span>
+<span>V_93.0.1</span>
+</div>
+</footer>
+</body></html>

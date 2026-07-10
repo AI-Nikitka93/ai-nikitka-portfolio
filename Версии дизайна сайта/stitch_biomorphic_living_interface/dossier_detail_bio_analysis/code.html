@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 - Dossier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e3e2e2",
+                        "on-tertiary-fixed-variant": "#852400",
+                        "surface-bright": "#383939",
+                        "secondary-fixed": "#b9f612",
+                        "secondary": "#f2ffcf",
+                        "inverse-primary": "#5a6059",
+                        "secondary-container": "#b3f000",
+                        "on-primary-container": "#777d75",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#181d17",
+                        "surface-container-lowest": "#0d0e0f",
+                        "outline-variant": "#444843",
+                        "surface-container-low": "#1b1c1c",
+                        "outline": "#8f928c",
+                        "on-surface-variant": "#c5c7c1",
+                        "secondary-fixed-dim": "#a1d800",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "on-tertiary": "#5e1700",
+                        "on-secondary-fixed-variant": "#384e00",
+                        "on-error": "#690005",
+                        "surface-dim": "#121414",
+                        "on-secondary-container": "#4d6a00",
+                        "on-primary-fixed-variant": "#434842",
+                        "surface-container-high": "#292a2a",
+                        "on-tertiary-container": "#e04300",
+                        "primary-fixed-dim": "#c3c8bf",
+                        "surface-tint": "#c3c8bf",
+                        "surface-container": "#1f2020",
+                        "surface": "#121414",
+                        "on-primary": "#2c322c",
+                        "on-secondary-fixed": "#141f00",
+                        "primary-fixed": "#dfe4db",
+                        "primary-container": "#0a0f0a",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-secondary": "#253500",
+                        "surface-container-highest": "#343535",
+                        "on-surface": "#e3e2e2",
+                        "primary": "#c3c8bf",
+                        "inverse-on-surface": "#303031",
+                        "tertiary-container": "#220400",
+                        "tertiary": "#ffb59e",
+                        "surface-variant": "#343535",
+                        "inverse-surface": "#e3e2e2",
+                        "background": "#121414"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "flow-xs": "4px",
+                        "flow-lg": "48px",
+                        "flow-sm": "12px",
+                        "flow-md": "24px",
+                        "safe-area": "32px",
+                        "flow-xl": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "label-caps": ["IBM Plex Mono"],
+                        "metadata-mono": ["IBM Plex Mono"],
+                        "body-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "metadata-mono": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Organic membrane background */
+        .bg-organic {
+            background: radial-gradient(circle at 50% 50%, rgba(185, 246, 18, 0.03) 0%, transparent 60%),
+                        radial-gradient(circle at 100% 0%, rgba(185, 246, 18, 0.05) 0%, transparent 40%);
+        }
+        
+        /* Luminous diffusion effects */
+        .glass-panel {
+            background: rgba(18, 20, 20, 0.6);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(143, 146, 140, 0.1);
+        }
+        
+        /* Glowing edge */
+        .glow-edge {
+            box-shadow: inset 0 1px 1px rgba(185, 246, 18, 0.1);
+        }
+        
+        /* Asymmetrical radiuses for organic feel */
+        .organic-radius-1 { border-radius: 3rem 1rem 2rem 1rem; }
+        .organic-radius-2 { border-radius: 1rem 3rem 1rem 2rem; }
+        .organic-radius-3 { border-radius: 2rem 1rem 3rem 1rem; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col bg-organic overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0a0f0a]/60 backdrop-blur-[30px] rounded-b-[3rem] border-b border-lime-900/30 shadow-[inset_0_1px_1px_rgba(163,230,53,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-flow-md">
+<span class="text-2xl font-bold text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.4)] font-['Space_Grotesk'] tracking-tight">AI_Nikitka93</span>
+</div>
+<div class="flex items-center gap-flow-sm">
+<span class="font-metadata-mono text-metadata-mono text-lime-400">RU / EN</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-on-surface group-hover:text-lime-200 group-hover:scale-105 transition-all duration-500">sensors</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-on-surface group-hover:text-lime-200 group-hover:scale-105 transition-all duration-500">blur_on</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Web Only) -->
+<nav class="hidden md:flex flex-col items-center justify-around py-10 bg-[#0a0f0a]/40 backdrop-blur-2xl fixed left-4 top-1/2 -translate-y-1/2 h-[819px] w-20 rounded-full border border-lime-500/20 shadow-[0_0_40px_rgba(0,0,0,0.8)] z-40">
+<div class="flex flex-col gap-8 w-full items-center">
+<!-- Active Tab: Dossier -->
+<a class="flex flex-col items-center gap-2 group relative" href="#">
+<div class="bg-lime-500/20 text-lime-400 rounded-full p-4 shadow-[0_0_20px_rgba(163,230,53,0.3)] flex items-center justify-center">
+<span class="material-symbols-outlined text-lime-400 font-bold">biotech</span>
+</div>
+<span class="font-['IBM_Plex_Mono'] uppercase text-[10px] tracking-widest text-lime-400 font-bold absolute left-full ml-4 opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity pointer-events-none">Dossier</span>
+</a>
+<a class="flex flex-col items-center gap-2 group relative" href="#">
+<div class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-2 group relative" href="#">
+<div class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">folder_open</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-2 group relative" href="#">
+<div class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">wifi_tethering</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-2 group relative" href="#">
+<div class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">hub</span>
+</div>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-safe-area md:pl-32 max-w-screen-2xl mx-auto w-full flex flex-col gap-flow-lg">
+<!-- Header Region -->
+<section class="flex flex-col gap-flow-sm relative">
+<div class="absolute -left-10 top-10 w-32 h-32 bg-secondary-fixed/5 rounded-full blur-3xl pointer-events-none"></div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">
+                Entity <span class="text-secondary-fixed">Dossier</span>
+</h1>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(255,181,158,0.6)] animate-pulse"></span>
+<span class="font-metadata-mono text-metadata-mono text-on-surface-variant uppercase tracking-widest">Live Signal Feed Active</span>
+</div>
+</section>
+<!-- Core Metric Canvas (Asymmetrical Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-flow-md">
+<!-- Main Visual Core -->
+<div class="lg:col-span-8 glass-panel glow-edge organic-radius-1 p-flow-md flex flex-col gap-flow-md relative overflow-hidden group min-h-[400px]">
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary-fixed/10 rounded-full blur-3xl transition-transform duration-1000 group-hover:scale-110 pointer-events-none"></div>
+<div class="flex justify-between items-start z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Neural Pattern Alpha</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time mapping of cognitive processes.</p>
+</div>
+<div class="px-3 py-1 rounded-full border border-outline bg-surface/50 backdrop-blur-md">
+<span class="font-label-caps text-label-caps text-on-surface">Node Active</span>
+</div>
+</div>
+<!-- Abstract Visual Area (Placeholder for actual vis) -->
+<div class="flex-grow flex items-center justify-center z-10">
+<div class="w-full h-full min-h-[200px] relative">
+<!-- Decorative organic rings -->
+<div class="absolute inset-0 m-auto w-48 h-48 border border-secondary-fixed/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
+<div class="absolute inset-0 m-auto w-32 h-32 border border-tertiary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+<div class="absolute inset-0 m-auto w-16 h-16 bg-secondary-fixed/10 rounded-full blur-md animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Side Pods -->
+<div class="lg:col-span-4 flex flex-col gap-flow-md">
+<!-- Pod 1 -->
+<div class="glass-panel glow-edge organic-radius-2 p-flow-md flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">memory</span>
+<h3 class="font-metadata-mono text-metadata-mono text-on-surface-variant uppercase tracking-wider">Processing Core</h3>
+</div>
+<div class="text-3xl font-headline-lg text-on-surface">94.2%</div>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-2">
+<div class="h-full bg-secondary-fixed w-[94.2%] shadow-[0_0_10px_rgba(185,246,18,0.5)]"></div>
+</div>
+</div>
+<!-- Pod 2 -->
+<div class="glass-panel glow-edge organic-radius-3 p-flow-md flex flex-col gap-3 relative overflow-hidden flex-grow">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">history</span>
+<h3 class="font-metadata-mono text-metadata-mono text-on-surface-variant uppercase tracking-wider">Last Sync</h3>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface">T-Minus 00:04:12</div>
+<p class="font-metadata-mono text-[10px] text-outline mt-auto">Quantum entanglement verified across all subsidiary nodes.</p>
+</div>
+</div>
+</section>
+<!-- Archive Note Field -->
+<section class="glass-panel glow-edge rounded-3xl p-flow-md lg:p-flow-lg">
+<div class="flex items-center gap-3 mb-flow-sm border-b border-outline/20 pb-4">
+<span class="material-symbols-outlined text-on-surface-variant">edit_note</span>
+<h2 class="font-headline-lg text-[24px] text-on-surface">Field Observation Log</h2>
+</div>
+<div class="relative mt-flow-sm">
+<textarea class="w-full bg-surface-container-low/50 border-0 border-b border-outline/30 focus:border-secondary-fixed focus:ring-0 text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 transition-colors duration-300 resize-none pt-4 pb-2 px-0" placeholder="Enter analytical notes here..." rows="4"></textarea>
+<!-- Glowing underline effect on focus is handled by custom css logic conceptually, but basic tailwind classes used above -->
+</div>
+<div class="flex justify-end mt-flow-sm">
+<button class="px-6 py-2 rounded-full border border-secondary-fixed text-secondary-fixed hover:bg-secondary-fixed/10 hover:shadow-[0_0_15px_rgba(185,246,18,0.2)] transition-all duration-300 font-label-caps text-label-caps uppercase tracking-wider">
+                     Commit Log
+                 </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-12 py-8 flex justify-between items-center bg-transparent mt-auto relative z-10">
+<div class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-500">
+            © 2024 AI_NIKITKA93 // ORGANIC PROTOCOL
+        </div>
+<div class="flex gap-6">
+<a class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-600 hover:text-lime-400 transition-colors" href="#">Metadata</a>
+<a class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-600 hover:text-lime-400 transition-colors" href="#">Pulse</a>
+<a class="font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-600 hover:text-lime-400 transition-colors" href="#">Source</a>
+</div>
+</footer>
+</body></html>

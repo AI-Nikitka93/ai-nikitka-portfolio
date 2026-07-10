@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>МЕДИА_СИСТЕМА // ИНИЦИАЛИЗАЦИЯ ПРОЕКТА</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#0c141a",
+                      "outline-variant": "#3a4a49",
+                      "on-secondary-fixed-variant": "#43474e",
+                      "surface-container-highest": "#2e363c",
+                      "error": "#ffb4ab",
+                      "secondary-fixed": "#dfe2eb",
+                      "on-primary-fixed": "#002020",
+                      "on-primary-container": "#007070",
+                      "primary": "#ffffff",
+                      "tertiary-container": "#dde3ec",
+                      "primary-fixed": "#00fbfb",
+                      "secondary-container": "#454950",
+                      "on-tertiary-fixed-variant": "#41474f",
+                      "on-tertiary-container": "#5f656d",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#dde3ec",
+                      "primary-fixed-dim": "#00dddd",
+                      "tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#004f4f",
+                      "on-tertiary": "#2b3138",
+                      "on-secondary-container": "#b5b8c1",
+                      "on-secondary-fixed": "#181c22",
+                      "on-error": "#690005",
+                      "surface-dim": "#0c141a",
+                      "on-secondary": "#2d3137",
+                      "surface-container-low": "#151d22",
+                      "outline": "#839493",
+                      "surface": "#0c141a",
+                      "surface-container": "#192126",
+                      "surface-container-lowest": "#070f15",
+                      "secondary-fixed-dim": "#c3c6cf",
+                      "on-surface-variant": "#b9cac9",
+                      "inverse-on-surface": "#293138",
+                      "on-primary": "#003737",
+                      "on-tertiary-fixed": "#161c23",
+                      "surface-container-high": "#232b31",
+                      "on-error-container": "#ffdad6",
+                      "primary-container": "#00fbfb",
+                      "surface-tint": "#00dddd",
+                      "tertiary-fixed-dim": "#c1c7d0",
+                      "secondary": "#c3c6cf",
+                      "inverse-primary": "#006a6a",
+                      "on-surface": "#dbe3ec",
+                      "inverse-surface": "#dbe3ec",
+                      "on-background": "#dbe3ec",
+                      "surface-bright": "#323a40",
+                      "surface-variant": "#2e363c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin": "24px",
+                      "unit": "4px",
+                      "module-gap": "20px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "body-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "data-viz": [
+                              "JetBrains Mono"
+                      ],
+                      "label-caps": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-md": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "body-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-viz": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            background-image: linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.03) 25%, rgba(0, 255, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.03) 75%, rgba(0, 255, 255, 0.03) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.03) 25%, rgba(0, 255, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.03) 75%, rgba(0, 255, 255, 0.03) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+        }
+        .scanline::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 50;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        .hud-glow {
+            box-shadow: 0 0 12px rgba(0, 251, 251, 0.15);
+        }
+        .hud-border {
+            border: 1px solid theme('colors.outline-variant');
+        }
+        .hud-border-active {
+            border: 1px solid theme('colors.primary-fixed');
+            box-shadow: 0 0 8px rgba(0, 251, 251, 0.4);
+        }
+    </style>
+</head>
+<body class="font-body-sm text-body-sm text-on-surface h-screen w-screen overflow-hidden flex relative scanline">
+<!-- SideNavBar Component -->
+<nav class="bg-[#161B22] docked left-0 h-full w-20 border-r border-[#30363D] flat no-shadows flex flex-col h-full z-40">
+<div class="py-6 flex flex-col items-center border-b border-[#30363D]">
+<div class="font-mono text-[10px] tracking-widest text-cyan-500 font-bold rotate-180" style="writing-mode: vertical-rl;">
+                МОДУЛЬ_084
+            </div>
+<div class="mt-4 flex space-x-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(0,255,255,0.8)]"></span>
+</div>
+</div>
+<div class="flex-1 flex flex-col pt-4 gap-2">
+<a class="bg-cyan-400 text-[#0D1117] shadow-[0_0_15px_rgba(0,255,255,0.6)] rounded-sm m-2 flex flex-col items-center justify-center py-4 scale-95 active:scale-90 font-mono text-[10px] tracking-widest group" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap">ТЕРМИНАЛ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 font-mono text-[10px] tracking-widest group" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">lan</span>
+<span class="hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap">СЕТЬ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 font-mono text-[10px] tracking-widest group" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">inventory_2</span>
+<span class="hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap">АРХИВ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 font-mono text-[10px] tracking-widest group" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">database</span>
+<span class="hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap">БАЗА_ДАННЫХ</span>
+</a>
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 font-mono text-[10px] tracking-widest group" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">tune</span>
+<span class="hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap">КОНФИГУРАЦИЯ</span>
+</a>
+</div>
+<div class="pb-6 border-t border-[#30363D]">
+<a class="text-slate-500 flex flex-col items-center justify-center py-4 hover:border-cyan-400 hover:border-l-4 transition-all scale-95 active:scale-90 font-mono text-[10px] tracking-widest group" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">logout</span>
+<span class="hidden group-hover:block absolute left-full ml-2 bg-[#161B22] border border-[#30363D] text-cyan-400 px-2 py-1 z-50 whitespace-nowrap">ВЫХОД</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col relative z-10">
+<!-- TopAppBar Component -->
+<header class="bg-[#0D1117] docked full-width top-0 border-b border-[#30363D] shadow-[0_0_10px_rgba(0,255,255,0.1)] flex justify-between items-center w-full px-6 h-12 flex-shrink-0">
+<div class="flex items-center gap-8">
+<div class="font-mono font-black text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.8)] text-xs tracking-tighter uppercase">
+                    МЕДИА_СИСТЕМА // HUD_v4.2
+                </div>
+<nav class="flex gap-6 h-full items-center font-mono uppercase tracking-tighter text-xs pt-1">
+<a class="text-slate-500 hover:text-cyan-200 transition-colors hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer h-full flex items-center px-2" href="#">ОБЗОР</a>
+<a class="text-slate-500 hover:text-cyan-200 transition-colors hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer h-full flex items-center px-2" href="#">АНАЛИТИКА</a>
+<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1 h-full flex items-center px-2 transition-all duration-150 ease-in-out cursor-pointer" href="#">ПОТОКИ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 text-cyan-400">
+<button class="hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer p-1 rounded">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<button class="hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer p-1 rounded relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+</button>
+<button class="hover:bg-cyan-400/10 hover:text-cyan-400 transition-all duration-150 ease-in-out cursor-pointer p-1 rounded">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</button>
+</div>
+</header>
+<!-- Form Canvas -->
+<main class="flex-1 overflow-y-auto p-margin scrollbar-hide">
+<div class="max-w-7xl mx-auto space-y-module-gap">
+<!-- Page Header -->
+<div class="flex justify-between items-end border-b border-outline-variant pb-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary-fixed drop-shadow-[0_0_8px_rgba(0,255,255,0.4)] tracking-tight">ИНИЦИАЛИЗАЦИЯ ПРОЕКТА</h1>
+<p class="font-data-viz text-data-viz text-on-surface-variant mt-2 uppercase tracking-widest opacity-80">SEQ_ID: PRJ-992-ALPHA // ОЖИДАНИЕ ВВОДА ДАННЫХ</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-1 border border-outline-variant rounded-DEFAULT">
+<span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(0,255,255,0.8)]"></span>
+<span class="font-label-caps text-label-caps text-primary-fixed">СИСТЕМА ГОТОВА</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-module-gap">
+<!-- Module 1: Core Identifiers -->
+<div class="col-span-12 md:col-span-7 bg-surface-container-highest border border-outline-variant rounded-DEFAULT flex flex-col p-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary-fixed/10 to-transparent pointer-events-none"></div>
+<div class="flex items-center gap-2 mb-6 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">folder_special</span>
+<span class="font-label-caps text-label-caps text-primary-fixed tracking-widest">БАЗОВЫЕ ПАРАМЕТРЫ [MOD_01]</span>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block font-data-viz text-data-viz text-on-surface-variant mb-1">ИДЕНТИФИКАТОР КЛИЕНТА</label>
+<div class="flex items-center bg-surface-dim border border-outline-variant px-3 py-2 focus-within:border-primary-fixed focus-within:shadow-[0_0_8px_rgba(0,255,255,0.2)] transition-all">
+<span class="text-primary-fixed mr-3 font-body-sm">&gt;</span>
+<input class="bg-transparent border-none outline-none text-on-surface w-full font-body-sm focus:ring-0 p-0" placeholder="ВВЕДИТЕ ID..." type="text" value="CL-8442-V"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-data-viz text-data-viz text-on-surface-variant mb-1">НАИМЕНОВАНИЕ ПОТОКА</label>
+<div class="flex items-center bg-surface-dim border border-outline-variant px-3 py-2 focus-within:border-primary-fixed focus-within:shadow-[0_0_8px_rgba(0,255,255,0.2)] transition-all">
+<span class="text-primary-fixed mr-3 font-body-sm">&gt;</span>
+<input class="bg-transparent border-none outline-none text-on-surface w-full font-body-sm focus:ring-0 p-0" placeholder="PROJECT_ALPHA_V1" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-data-viz text-data-viz text-on-surface-variant mb-1">УРОВЕНЬ ДОСТУПА</label>
+<div class="flex items-center bg-surface-dim border border-outline-variant px-3 py-2 focus-within:border-primary-fixed transition-all relative">
+<span class="text-primary-fixed mr-3 font-body-sm">&gt;</span>
+<select class="bg-transparent border-none outline-none text-on-surface w-full font-body-sm focus:ring-0 p-0 appearance-none">
+<option class="bg-surface-container" value="1">L1 - ОТКРЫТЫЙ</option>
+<option class="bg-surface-container" selected="" value="2">L2 - СЛУЖЕБНЫЙ</option>
+<option class="bg-surface-container" value="3">L3 - СТРОГО СЕКРЕТНО</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant pointer-events-none text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 2: Media Specs -->
+<div class="col-span-12 md:col-span-5 bg-surface-container border border-outline-variant rounded-DEFAULT flex flex-col p-4">
+<div class="flex items-center gap-2 mb-6 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">movie</span>
+<span class="font-label-caps text-label-caps text-primary-fixed tracking-widest">ФОРМАТЫ МЕДИА [MOD_02]</span>
+</div>
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary-fixed/20 border border-primary-fixed text-primary-fixed px-3 py-1 font-data-viz text-data-viz rounded shadow-[0_0_8px_rgba(0,255,255,0.2)]">.RAW_8K</button>
+<button class="bg-surface-dim border border-outline-variant text-on-surface px-3 py-1 font-data-viz text-data-viz rounded hover:border-primary-fixed/50 transition-colors">.PRORES_4444</button>
+<button class="bg-surface-dim border border-outline-variant text-on-surface px-3 py-1 font-data-viz text-data-viz rounded hover:border-primary-fixed/50 transition-colors">.H265_10BIT</button>
+<button class="bg-primary-fixed/20 border border-primary-fixed text-primary-fixed px-3 py-1 font-data-viz text-data-viz rounded shadow-[0_0_8px_rgba(0,255,255,0.2)]">.WAV_96kHz</button>
+</div>
+<div class="mt-auto space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-4 h-4 border border-outline-variant bg-surface-dim flex items-center justify-center group-hover:border-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed opacity-0">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">АКТИВИРОВАТЬ НЕЙРОСЕТЕВОЙ АПСКЕЙЛИНГ</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-4 h-4 border border-primary-fixed bg-primary-fixed/20 flex items-center justify-center shadow-[0_0_4px_rgba(0,255,255,0.4)]">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">РЕЗЕРВНОЕ КОПИРОВАНИЕ НА ХОЛОДНЫЙ УЗЕЛ</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Module 3: Telemetry / Visuals -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-highest border border-outline-variant rounded-DEFAULT flex flex-col p-4 min-h-[240px] relative">
+<div class="flex items-center justify-between mb-4 border-b border-outline-variant pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">monitoring</span>
+<span class="font-label-caps text-label-caps text-primary-fixed tracking-widest">ПРЕДВАРИТЕЛЬНЫЙ АНАЛИЗ [MOD_03]</span>
+</div>
+<span class="font-data-viz text-data-viz text-primary-fixed animate-pulse">ОЖИДАНИЕ СИГНАЛА...</span>
+</div>
+<div class="flex-1 flex items-center justify-center border border-outline-variant bg-surface-dim overflow-hidden relative">
+<!-- Decorative Grid Background inside viz area -->
+<div class="absolute inset-0" style="background-image: linear-gradient(theme('colors.outline-variant') 1px, transparent 1px), linear-gradient(90deg, theme('colors.outline-variant') 1px, transparent 1px); background-size: 20px 20px; opacity: 0.2;"></div>
+<div class="text-center z-10">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant/30 mb-2">graphic_eq</span>
+<p class="font-data-viz text-data-viz text-on-surface-variant/50 uppercase tracking-widest">НЕТ ДАННЫХ ДЛЯ ОТОБРАЖЕНИЯ</p>
+<p class="font-data-viz text-[10px] text-on-surface-variant/30 mt-1">ЗАПУСТИТЕ ПРОЦЕСС ИНИЦИАЛИЗАЦИЯ ДЛЯ ГЕНЕРАЦИИ ГРАФИКА</p>
+</div>
+<!-- Overlay scanning line -->
+<div class="absolute top-0 left-0 w-full h-0.5 bg-primary-fixed/50 shadow-[0_0_10px_rgba(0,255,255,0.8)] animate-[scan_3s_linear_infinite]"></div>
+</div>
+</div>
+<!-- Module 4: Execution Control -->
+<div class="col-span-12 md:col-span-4 bg-surface-container border border-outline-variant rounded-DEFAULT flex flex-col p-4 justify-between">
+<div class="flex items-center gap-2 mb-4 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary-fixed text-[16px]">terminal</span>
+<span class="font-label-caps text-label-caps text-primary-fixed tracking-widest">КОМАНДНЫЙ ИНТЕРФЕЙС [MOD_04]</span>
+</div>
+<div class="bg-surface-dim border border-outline-variant p-2 font-data-viz text-data-viz text-on-surface-variant/80 h-32 overflow-y-auto mb-4 flex flex-col justify-end">
+<p>&gt; SYS.CHECK()...</p>
+<p class="text-primary-fixed">&gt; ОШИБОК НЕ ОБНАРУЖЕНО</p>
+<p>&gt; ИДЕНТИФИКАТОР КЛИЕНТА ВВЕДЕН: CL-8442-V</p>
+<p>&gt; ПАРАМЕТРЫ СЕТИ ОЖИДАЮТ ПОДТВЕРЖДЕНИЯ_</p>
+</div>
+<button class="w-full bg-primary-fixed/10 border border-primary-fixed text-primary-fixed font-label-caps text-label-caps py-3 tracking-widest hover:bg-primary-fixed hover:text-background transition-all duration-300 shadow-[0_0_15px_rgba(0,255,255,0.1)] hover:shadow-[0_0_20px_rgba(0,255,255,0.6)] flex justify-center items-center gap-2 group">
+<span class="material-symbols-outlined text-[18px] group-hover:animate-spin">sync</span>
+                            ИНИЦИАЛИЗИРОВАТЬ ПРОЕКТ
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<style>
+        @keyframes scan {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+    </style>
+</body></html>

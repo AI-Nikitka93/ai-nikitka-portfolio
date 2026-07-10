@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SEC-01 // ТЕРМИНАЛ // VK RecSys TOP-9%</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: IBM Plex Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-family: 'Material Symbols Outlined';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 24px;
+                line-height: 1;
+                letter-spacing: normal;
+                text-transform: none;
+                display: inline-block;
+                white-space: nowrap;
+                word-wrap: normal;
+                direction: ltr;
+                -webkit-font-feature-settings: 'liga';
+                -webkit-font-smoothing: antialiased;
+            }
+            
+            /* Scanline Overlay for Brutalist Terminal Vibe */
+            .scanlines {
+                background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+                background-size: 100% 4px;
+                pointer-events: none;
+            }
+            
+            /* Custom Ultra-Thin Scrollbar */
+            ::-webkit-scrollbar {
+                width: 4px;
+                height: 4px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #101410; /* surface */
+                border-left: 1px solid #3c4b35; /* outline-variant */
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #85967c; /* outline */
+                border-radius: 0px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #39ff14; /* primary-container */
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#323631",
+                        "error": "#ffb4ab",
+                        "background": "#101410",
+                        "outline-variant": "#3c4b35",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-container": "#dcded9",
+                        "primary": "#efffe3",
+                        "primary-fixed": "#79ff5b",
+                        "on-primary-container": "#107100",
+                        "on-primary-fixed": "#022100",
+                        "secondary-fixed": "#d3e4fe",
+                        "secondary-container": "#3a4a5f",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "tertiary-fixed": "#e1e3de",
+                        "primary-fixed-dim": "#2ae500",
+                        "tertiary": "#f9faf5",
+                        "on-tertiary-container": "#5f625e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#095300",
+                        "on-tertiary": "#2e312e",
+                        "on-secondary-container": "#a9bad3",
+                        "surface": "#101410",
+                        "surface-container": "#1d211c",
+                        "surface-container-lowest": "#0b0f0b",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#101410",
+                        "on-secondary": "#213145",
+                        "surface-container-low": "#191d18",
+                        "outline": "#85967c",
+                        "on-primary": "#053900",
+                        "on-tertiary-fixed": "#191c19",
+                        "surface-container-high": "#272b26",
+                        "on-surface-variant": "#baccb0",
+                        "inverse-on-surface": "#2d312c",
+                        "secondary": "#b7c8e1",
+                        "inverse-primary": "#106e00",
+                        "on-surface": "#e0e4dc",
+                        "inverse-surface": "#e0e4dc",
+                        "on-background": "#e0e4dc",
+                        "surface-bright": "#363a35",
+                        "surface-variant": "#323631",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#39ff14",
+                        "surface-tint": "#2ae500",
+                        "tertiary-fixed-dim": "#c5c7c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "12px",
+                        "unit": "4px",
+                        "gutter": "1px",
+                        "container-padding": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["IBM Plex Mono"],
+                        "code-dense": ["IBM Plex Mono"],
+                        "headline-lg": ["IBM Plex Mono"],
+                        "body-sm": ["IBM Plex Mono"],
+                        "headline-md": ["IBM Plex Mono"],
+                        "label-caps": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "150%", "fontWeight": "400"}],
+                        "code-dense": ["13px", {"lineHeight": "120%", "fontWeight": "500"}],
+                        "headline-lg": ["24px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "140%", "fontWeight": "400"}],
+                        "headline-md": ["18px", {"lineHeight": "120%", "fontWeight": "600"}],
+                        "label-caps": ["11px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface h-screen w-screen overflow-hidden flex flex-col font-body-md selection:bg-primary-container selection:text-black relative">
+<!-- Global Scanline Overlay -->
+<div class="absolute inset-0 z-50 scanlines mix-blend-overlay"></div>
+<!-- TopNavBar (Generated from JSON) -->
+<header class="bg-stone-950 flex justify-between items-center w-full px-3 h-12 max-w-full docked full-width top-0 border-b border-stone-800 z-40 shrink-0">
+<div class="flex items-center gap-6">
+<div class="text-lg font-black text-[#39FF14] tracking-widest">АРХИВ-СЕКТОР</div>
+<nav class="flex items-center gap-4">
+<a class="font-mono uppercase tracking-tighter text-xs text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">ТЕРМИНАЛ</a>
+<a class="font-mono uppercase tracking-tighter text-xs text-[#39FF14] border-b border-[#39FF14] pb-1 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">ЛОГИ</a>
+<a class="font-mono uppercase tracking-tighter text-xs text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">СТАТУС</a>
+<a class="font-mono uppercase tracking-tighter text-xs text-stone-500 hover:bg-stone-900 hover:text-[#39FF14] transition-none active:bg-[#39FF14] active:text-black" href="#">АНАЛИЗ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2 text-[#39FF14]">
+<button class="hover:bg-stone-900 p-1 flex items-center justify-center transition-none active:bg-[#39FF14] active:text-black">
+<span class="material-symbols-outlined text-[18px]">settings_input_component</span>
+</button>
+<button class="hover:bg-stone-900 p-1 flex items-center justify-center transition-none active:bg-[#39FF14] active:text-black">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+<button class="font-mono uppercase tracking-tighter text-xs text-[#39FF14] border border-[#39FF14] px-3 py-1 hover:bg-stone-900 transition-none active:bg-[#39FF14] active:text-black">ВХОД</button>
+</div>
+</header>
+<!-- Main Workspace Area -->
+<div class="flex flex-1 overflow-hidden relative z-10">
+<!-- SideNavBar (Generated from JSON) -->
+<aside class="bg-stone-950 flex flex-col h-full border-r border-stone-800 w-64 shrink-0 z-20">
+<!-- Header -->
+<div class="p-4 border-b border-stone-800 flex items-center gap-3">
+<div class="w-10 h-10 bg-stone-900 border border-[#39FF14] flex items-center justify-center text-[#39FF14]">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="text-lg font-bold text-[#39FF14] leading-none">SEC-01</div>
+<div class="font-mono text-[11px] leading-tight uppercase text-stone-500 mt-1">LN-402</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="p-4 border-b border-stone-800">
+<button class="w-full bg-stone-900 border border-[#39FF14] text-[#39FF14] font-mono text-[11px] leading-tight uppercase py-2 cursor-pointer active:invert hover:bg-stone-800">НОВЫЙ ЗАПРОС</button>
+</div>
+<!-- Tabs -->
+<nav class="flex-1 overflow-y-auto py-2 flex flex-col">
+<a class="font-mono text-[11px] leading-tight uppercase text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">folder_managed</span>
+                    РЕЕСТР
+                </a>
+<a class="font-mono text-[11px] leading-tight uppercase bg-stone-900 border-l-4 border-[#39FF14] text-[#39FF14] py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">database</span>
+                    ОБЪЕКТЫ
+                </a>
+<a class="font-mono text-[11px] leading-tight uppercase text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+                    АРХИВ
+                </a>
+<a class="font-mono text-[11px] leading-tight uppercase text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">settings_ethernet</span>
+                    СИСТЕМА
+                </a>
+<a class="font-mono text-[11px] leading-tight uppercase text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">build</span>
+                    УТИЛИТЫ
+                </a>
+</nav>
+<!-- Footer Tabs -->
+<div class="border-t border-stone-800 mt-auto">
+<a class="font-mono text-[11px] leading-tight uppercase text-stone-400 py-3 px-4 hover:bg-stone-900 hover:text-[#39FF14] cursor-pointer active:invert flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+                    ВЫХОД
+                </a>
+</div>
+</aside>
+<!-- Main Content Canvas: Dossier Detail (Design System Guidelines) -->
+<main class="flex-1 bg-background flex flex-col overflow-hidden relative">
+<!-- Dossier Header -->
+<div class="bg-surface-container-lowest border-b border-surface-variant px-margin py-margin flex justify-between items-end shrink-0 relative overflow-hidden">
+<!-- Decorative Grid background -->
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(to right, #3c4b35 1px, transparent 1px), linear-gradient(to bottom, #3c4b35 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-unit tracking-widest flex items-center gap-2">
+<span class="w-1 h-1 bg-primary-container inline-block"></span>
+                        ДЕТАЛИЗАЦИЯ ОБЪЕКТА // UUID: 8A9B-4F21-VK
+                    </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">VK RecSys TOP-9%</h1>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-unit max-w-2xl">
+                        Экстракция алгоритмических весов и матриц предпочтений. Сбор телеметрии с узлов глубокого обучения.
+                    </div>
+</div>
+<div class="relative z-10 flex gap-4 items-end">
+<div class="flex flex-col gap-1 items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ДОПУСК</span>
+<div class="border border-outline-variant bg-surface-container px-2 py-1 font-code-dense text-code-dense text-error flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                            ОТКРЫТЫЙ КОНТУР
+                        </div>
+</div>
+<div class="flex flex-col gap-1 items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">СТАТУС ПОТОКА</span>
+<div class="border border-primary-container bg-primary-container/10 px-2 py-1 font-code-dense text-code-dense text-primary-container flex items-center gap-2 uppercase relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+<span class="w-2 h-2 bg-primary-container inline-block shadow-[0_0_8px_#39ff14] animate-pulse"></span>
+                            ЗАХВАТ АКТИВЕН
+                        </div>
+</div>
+</div>
+</div>
+<!-- Content Area Scrollable -->
+<div class="flex-1 overflow-y-auto p-margin flex flex-col gap-margin relative">
+<!-- Metadata Bento Grid -->
+<div class="grid grid-cols-4 gap-gutter bg-surface-variant border border-surface-variant shrink-0">
+<!-- Meta Block 1 -->
+<div class="bg-surface p-container-padding flex flex-col justify-between min-h-[80px] hover:bg-surface-container-low transition-colors">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ЦЕЛЕВОЙ КЛАСТЕР</span>
+<div class="font-code-dense text-code-dense text-on-surface mt-2 flex justify-between items-end">
+<span>VK-REC-NODE-44</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">dns</span>
+</div>
+</div>
+<!-- Meta Block 2 -->
+<div class="bg-surface p-container-padding flex flex-col justify-between min-h-[80px] hover:bg-surface-container-low transition-colors">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ИНДЕКС ДОВЕРИЯ</span>
+<div class="font-code-dense text-code-dense text-on-surface mt-2 flex items-center gap-2">
+<div class="w-full bg-surface-container-highest h-1 flex-1 relative">
+<div class="absolute inset-y-0 left-0 bg-secondary w-[92%]"></div>
+</div>
+<span class="text-secondary">0.92</span>
+</div>
+</div>
+<!-- Meta Block 3 -->
+<div class="bg-surface p-container-padding flex flex-col justify-between min-h-[80px] hover:bg-surface-container-low transition-colors">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ОБЪЕМ ИЗВЛЕЧЕНИЯ</span>
+<div class="font-code-dense text-code-dense text-primary mt-2">
+                            14.2 TB <span class="text-on-surface-variant text-[10px] ml-1">[ДЕЛЬТА +2.1GB]</span>
+</div>
+</div>
+<!-- Meta Block 4 -->
+<div class="bg-surface p-container-padding flex flex-col justify-between min-h-[80px] border-l border-primary-container relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/5 pointer-events-none group-hover:bg-primary-container/10 transition-colors"></div>
+<span class="font-label-caps text-label-caps text-primary-container relative z-10">СИНХРОНИЗАЦИЯ</span>
+<div class="font-code-dense text-code-dense text-primary-container mt-2 flex justify-between items-end relative z-10">
+<span class="uppercase">T-MINUS 00:04:12</span>
+<span class="material-symbols-outlined text-[14px] animate-spin" style="animation-duration: 3s;">sync</span>
+</div>
+</div>
+</div>
+<!-- Evidence Stream / Log Table -->
+<div class="flex-1 bg-surface border border-outline-variant flex flex-col min-h-[400px]">
+<!-- Toolbar -->
+<div class="bg-surface-container-lowest border-b border-outline-variant px-container-padding py-2 flex justify-between items-center shrink-0">
+<div class="font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-container">data_object</span>
+                            ЖУРНАЛ ТРАНЗАКЦИЙ // ПОТОК 0x4A
+                        </div>
+<div class="flex gap-2">
+<button class="border border-outline-variant bg-surface px-3 py-1 font-label-caps text-label-caps text-on-surface-variant hover:border-primary-container hover:text-primary-container hover:bg-primary-container/10 transition-all cursor-pointer">
+                                ФИЛЬТР
+                            </button>
+<button class="border border-outline-variant bg-surface px-3 py-1 font-label-caps text-label-caps text-on-surface-variant hover:border-primary-container hover:text-primary-container hover:bg-primary-container/10 transition-all cursor-pointer flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span> ДАМП
+                            </button>
+</div>
+</div>
+<!-- Table Wrapper -->
+<div class="flex-1 overflow-auto bg-surface relative">
+<!-- Vertical Grid Line -->
+<div class="absolute top-0 bottom-0 left-[180px] w-[1px] bg-outline-variant/30 z-0 pointer-events-none"></div>
+<table class="w-full text-left font-code-dense text-code-dense border-collapse relative z-10">
+<thead class="sticky top-0 bg-surface-container border-b border-outline-variant shadow-[0_1px_0_0_#3c4b35]">
+<tr class="text-on-surface-variant">
+<th class="py-2 px-3 font-normal w-[180px] shrink-0 whitespace-nowrap">METRIC_TIME (UTC)</th>
+<th class="py-2 px-3 font-normal w-[120px] shrink-0">OP_CODE</th>
+<th class="py-2 px-3 font-normal">ПЭЙЛОАД / ВЕКТОР</th>
+<th class="py-2 px-3 font-normal text-right w-[100px] shrink-0">ИНДЕКС</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/50">
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:12:44.102</td>
+<td class="py-1.5 px-3 text-secondary group-hover:text-primary-container">VEC_UPDATE</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Обновление матрицы эмбеддингов для кластера [USER_SEGMENT_A4]</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x0A1</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair bg-error-container/10">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:12:45.005</td>
+<td class="py-1.5 px-3 text-error">RATE_LIMIT</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Превышение квоты запросов к API Graph. Троттлинг включен.</td>
+<td class="py-1.5 px-3 text-right text-error font-mono">0x0F4</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:12:46.881</td>
+<td class="py-1.5 px-3 text-secondary group-hover:text-primary-container">WEIGHT_SYNC</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Синхронизация весов модели Deep Neural Net завершена успешно.</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x0A2</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair bg-primary-container/5 border-l-2 border-l-primary-container">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-primary-container">2023-11-04 09:13:01.000</td>
+<td class="py-1.5 px-3 text-primary-container font-bold">ANOMALY_DET</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Обнаружен аномальный паттерн потребления контента. Сохранение слепка.</td>
+<td class="py-1.5 px-3 text-right text-primary-container font-mono">0x99B</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:13:05.112</td>
+<td class="py-1.5 px-3 text-secondary group-hover:text-primary-container">CACHE_PURGE</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Очистка L2 кэша узла рекомендаций. Высвобождено 14GB.</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x0C1</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:13:10.450</td>
+<td class="py-1.5 px-3 text-secondary group-hover:text-primary-container">SESS_START</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Инициализация нового пула соединений с шардом БД-4.</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x0A0</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:13:11.200</td>
+<td class="py-1.5 px-3 text-secondary group-hover:text-primary-container">METRIC_PULL</td>
+<td class="py-1.5 px-3 text-on-surface truncate max-w-[400px]">Сбор метрик CTR по топ-9% сегменту. Запись в хранилище.</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x0B5</td>
+</tr>
+<!-- Filler rows to show density -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:13:12.800</td>
+<td class="py-1.5 px-3 text-on-surface-variant group-hover:text-primary-container">PING_ACK</td>
+<td class="py-1.5 px-3 text-on-surface-variant truncate max-w-[400px]">Keep-alive сигнал принят шлюзом.</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x000</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-crosshair">
+<td class="py-1.5 px-3 text-on-surface-variant whitespace-nowrap group-hover:text-on-surface">2023-11-04 09:13:13.100</td>
+<td class="py-1.5 px-3 text-on-surface-variant group-hover:text-primary-container">PING_ACK</td>
+<td class="py-1.5 px-3 text-on-surface-variant truncate max-w-[400px]">Keep-alive сигнал принят шлюзом.</td>
+<td class="py-1.5 px-3 text-right text-on-surface-variant font-mono">0x000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Info of Table -->
+<div class="bg-surface-container-lowest border-t border-outline-variant px-container-padding py-1 flex justify-between items-center shrink-0">
+<span class="font-code-dense text-[10px] text-on-surface-variant">СТРОК: 14,092 [ОТОБРАЖАЮТСЯ ПОСЛЕДНИЕ 100]</span>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-primary-container block rounded-none animate-ping"></span>
+<span class="font-code-dense text-[10px] text-primary-container">LIVE ПРИЕМ</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer (Generated from JSON) -->
+<footer class="bg-stone-950 flex justify-between items-center px-4 py-1 h-8 w-full fixed bottom-0 border-t border-stone-800 z-50">
+<div class="font-mono text-[9px] uppercase text-[#39FF14]">© 2024 ЦЕНТРАЛЬНЫЙ УЗЕЛ СВЯЗИ. КОРПУС-Г</div>
+<nav class="flex gap-4">
+<a class="font-mono text-[9px] uppercase text-stone-600 hover:text-[#39FF14] transition-none" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+<a class="font-mono text-[9px] uppercase text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПРОТОКОЛ</a>
+<a class="font-mono text-[9px] uppercase text-stone-600 hover:text-[#39FF14] transition-none" href="#">ПОДДЕРЖКА</a>
+</nav>
+</footer>
+</body></html>

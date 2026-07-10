@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#490106",
+                    "on-tertiary-fixed": "#384046",
+                    "inverse-surface": "#f9f9fc",
+                    "on-tertiary-fixed-variant": "#545d63",
+                    "secondary-dim": "#8ea0b2",
+                    "on-surface": "#e0e6ed",
+                    "primary-dim": "#96baf5",
+                    "secondary-fixed": "#d3e4f9",
+                    "primary": "#a7c8ff",
+                    "secondary": "#8ea0b2",
+                    "on-secondary-fixed-variant": "#4d5d6e",
+                    "tertiary-fixed-dim": "#cdd5dc",
+                    "on-primary-container": "#b7d1ff",
+                    "tertiary-container": "#dce3eb",
+                    "inverse-on-surface": "#535557",
+                    "on-primary-fixed": "#154072",
+                    "secondary-fixed-dim": "#c5d6ea",
+                    "on-tertiary": "#535b61",
+                    "on-surface-variant": "#a6acb2",
+                    "on-secondary-container": "#b0c1d5",
+                    "surface-container": "#161a1e",
+                    "surface-container-low": "#111416",
+                    "on-error-container": "#ff9993",
+                    "error-dim": "#bb5551",
+                    "primary-container": "#1f477a",
+                    "inverse-primary": "#3b6094",
+                    "tertiary-fixed": "#dce3eb",
+                    "surface-bright": "#252d33",
+                    "on-primary": "#164073",
+                    "primary-fixed-dim": "#bed5ff",
+                    "on-primary-fixed-variant": "#375c91",
+                    "surface-container-lowest": "#000000",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-tint": "#a7c8ff",
+                    "surface-container-high": "#1b2025",
+                    "on-background": "#e0e6ed",
+                    "on-secondary-fixed": "#304151",
+                    "on-secondary": "#102230",
+                    "tertiary": "#eaf2f9",
+                    "surface-variant": "#20262c",
+                    "on-tertiary-container": "#4b5359",
+                    "outline": "#70767c",
+                    "surface": "#0c0e10",
+                    "tertiary-dim": "#cdd5dc",
+                    "outline-variant": "#42494e",
+                    "error-container": "#7f2927",
+                    "secondary-container": "#2c3d4d",
+                    "surface-dim": "#0c0e10",
+                    "background": "#0c0e10",
+                    "surface-container-highest": "#20262c",
+                    "error": "#ee7d77"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .label-mono { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0c0e10]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold tracking-tighter text-[#a7c8ff] font-headline">Nikita Kizevich</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Обо мне</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Проекты</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Услуги</a>
+<a class="text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors font-headline tracking-tight" href="#">Блог</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest hover:scale-95 transition-transform active:opacity-80">
+                Связаться
+            </button>
+</div>
+</nav>
+<main class="flex-grow pt-32 pb-24 px-6 max-w-5xl mx-auto w-full">
+<!-- Hero Section -->
+<header class="mb-16 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-lg mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="label-mono text-[10px] uppercase tracking-[0.2em] text-secondary">The Digital Curator</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface mb-4">
+                    Полезные ссылки
+                </h1>
+<p class="text-secondary text-lg font-body leading-relaxed max-w-lg">
+                    Все ресурсы в одном месте. Прямой доступ к моим проектам, материалам и социальным сетям.
+                </p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container border border-outline-variant/10">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a man in minimalist attire, soft studio lighting, deep grey background, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn0MOopXY7AHB_rWeLjQEP9UMGYS_yiud3F3F-RLF0HehpQsk66HP2s93WaQ10YzqWNLVtiWLd1mfSkYM0bksvcs-D5eOgw5cEn0y7z73HEYRBt6YitjV3BBWrcYmVPTbqEpovVrpCf_oHhCNkkHmDuiKq0qWLd0DSLBoiqlezCWEksWXaCBaKbGPYIlFKT8Bmkd-Z2a_lvdUPYuhyJ4kOA3oEFMVi6KnFW0e4ZXcU2grmRNuycZbXys7jBqDBcPVCrrzhqlD0Jxs"/>
+</div>
+<span class="label-mono text-[10px] uppercase tracking-widest text-secondary-dim">Nikita Kizevich — AI Native</span>
+</div>
+</header>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+<!-- Section: Professional Networks -->
+<div class="md:col-span-4 bg-surface-container rounded-lg p-8 group hover:bg-surface-container-high transition-colors duration-300">
+<div class="flex justify-between items-start mb-12">
+<h2 class="text-2xl font-bold tracking-tight">Профессиональные сети</h2>
+<span class="label-mono text-[10px] text-secondary-dim px-2 py-1 bg-surface-variant rounded">NETWORKS_01</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<a class="flex flex-col gap-3 p-4 bg-surface-container-lowest rounded-lg border border-transparent hover:border-primary/20 transition-all" href="#">
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
+<span class="material-symbols-outlined text-secondary-dim text-sm" data-icon="north_east">north_east</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">LinkedIn</p>
+<p class="text-xs text-secondary leading-snug mt-1">Опыт, образование и профессиональные рекомендации в сфере AI.</p>
+</div>
+</a>
+<a class="flex flex-col gap-3 p-4 bg-surface-container-lowest rounded-lg border border-transparent hover:border-primary/20 transition-all" href="#">
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+<span class="material-symbols-outlined text-secondary-dim text-sm" data-icon="north_east">north_east</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">GitHub</p>
+<p class="text-xs text-secondary leading-snug mt-1">Открытый исходный код, эксперименты с ML и архитектурные решения.</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Section: Contact -->
+<div class="md:col-span-2 bg-surface-container rounded-lg p-8 flex flex-col justify-between">
+<div>
+<h2 class="text-2xl font-bold tracking-tight mb-2">Связь</h2>
+<p class="text-xs text-secondary leading-relaxed mb-8">Прямые каналы для оперативного общения и предложений.</p>
+</div>
+<div class="space-y-3">
+<a class="flex items-center justify-between p-4 bg-surface-variant rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+<span class="label-mono text-xs uppercase tracking-widest font-bold">Telegram</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 bg-surface-variant rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="label-mono text-xs uppercase tracking-widest font-bold">Email</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Section: Materials -->
+<div class="md:col-span-3 bg-surface-container rounded-lg p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-surface-variant text-6xl select-none group-hover:text-primary/10 transition-colors" data-icon="folder_shared">folder_shared</span>
+</div>
+<div class="relative z-10">
+<h2 class="text-2xl font-bold tracking-tight mb-8">Материалы</h2>
+<div class="space-y-6">
+<a class="block group/link" href="#">
+<h3 class="text-on-surface font-bold group-hover/link:text-primary transition-colors">Портфолио</h3>
+<p class="text-sm text-secondary mt-1">Подробный разбор кейсов, архитектурных схем и результатов внедрения AI.</p>
+</a>
+<div class="h-px bg-outline-variant/20"></div>
+<a class="block group/link" href="#">
+<h3 class="text-on-surface font-bold group-hover/link:text-primary transition-colors">Презентации</h3>
+<p class="text-sm text-secondary mt-1">Выступления на конференциях и образовательные материалы для команд.</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Section: Media -->
+<div class="md:col-span-3 bg-surface-container rounded-lg p-8 flex flex-col justify-between">
+<h2 class="text-2xl font-bold tracking-tight mb-6">Медиа</h2>
+<div class="grid grid-cols-1 gap-4">
+<div class="p-5 bg-surface-container-high rounded-xl border-l-4 border-primary">
+<div class="flex items-center justify-between mb-2">
+<span class="label-mono text-[10px] text-primary uppercase tracking-widest">Интервью</span>
+<span class="text-[10px] text-secondary">2023</span>
+</div>
+<p class="text-sm font-bold text-on-surface">Будущее AI-native разработки в современных продуктах.</p>
+</div>
+<div class="p-5 bg-surface-container-high rounded-xl border-l-4 border-secondary">
+<div class="flex items-center justify-between mb-2">
+<span class="label-mono text-[10px] text-secondary uppercase tracking-widest">Награды</span>
+<span class="text-[10px] text-secondary">2024</span>
+</div>
+<p class="text-sm font-bold text-on-surface">Победитель Digital Excellence Award в номинации AI Solution.</p>
+</div>
+</div>
+</div>
+<!-- Visual Filler / Metadata -->
+<div class="md:col-span-6 flex flex-col md:flex-row items-center justify-between p-8 bg-surface-container-low rounded-lg gap-8">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="label-mono text-[10px] text-secondary-dim uppercase tracking-widest">Status</span>
+<span class="text-on-surface font-bold">Open to projects</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30 hidden md:block"></div>
+<div class="flex flex-col">
+<span class="label-mono text-[10px] text-secondary-dim uppercase tracking-widest">Location</span>
+<span class="text-on-surface font-bold">Remote / Global</span>
+</div>
+</div>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-xs text-on-primary-container" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-xs text-on-secondary-container" data-icon="psychology" data-weight="fill" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#1b2025]/30 bg-[#0c0e10]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-6">
+<span class="font-space-grotesk uppercase tracking-widest text-xs text-[#8ea0b2]">
+                © 2024 Nikita Kizevich. Precision in AI.
+            </span>
+<div class="flex gap-8">
+<a class="font-space-grotesk uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">Telegram</a>
+<a class="font-space-grotesk uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">GitHub</a>
+<a class="font-space-grotesk uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">LinkedIn</a>
+<a class="font-space-grotesk uppercase tracking-widest text-xs text-[#8ea0b2] hover:text-[#a7c8ff] transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,62 @@
+{
+  "homeInitial": {
+    "activeScannerId": "kinomatik",
+    "h1": "AI-видео, графика и рабочие AI-прототипы.",
+    "horizontalOverflow": false,
+    "market": true,
+    "proofScanner": true,
+    "scannerRoleCount": 4,
+    "title": "AI_Nikitka93 — портфолио работ и проектов",
+    "url": "/",
+    "viewport": {
+      "height": 1100,
+      "width": 1440
+    }
+  },
+  "helixRadioCount": 1,
+  "homeAfterScannerClick": {
+    "activeEvidenceText": true,
+    "activeScannerId": "helix-film",
+    "activeTitle": "LabStory / Helix — Best Animated Film",
+    "horizontalOverflow": false
+  },
+  "portfolio": {
+    "compactIndexLinks": 7,
+    "hasCompactIndex": true,
+    "hasHeroProofLinks": true,
+    "horizontalOverflow": false,
+    "title": "Работы | AI_Nikitka93"
+  },
+  "lab": {
+    "hasProofLab": true,
+    "hasScanner": true,
+    "horizontalOverflow": false,
+    "title": "Lab | AI_Nikitka93",
+    "trackCount": 4
+  },
+  "caseDetail": {
+    "hasCaseStudySpine": true,
+    "horizontalOverflow": false,
+    "spineTextIncludesEvidence": false,
+    "spineTextIncludesRole": true,
+    "title": "КИНОМАТИК — Laureate, Neurovideo Competition | Proof Archive | AI_Nikitka93"
+  },
+  "proofPromptCount": 1,
+  "assistant": {
+    "animatedTextAriaHidden": "true",
+    "hasFlagshipSource": true,
+    "hasPortfolioSource": true,
+    "horizontalOverflow": false,
+    "liveRegionTextLength": 222,
+    "sourceCardCount": 3,
+    "title": "Помощник | AI_Nikitka93"
+  },
+  "english": {
+    "headerCopy": true,
+    "horizontalOverflow": false,
+    "proofRailLinks": 3,
+    "skipText": "Skip to content",
+    "title": "English Summary | AI_Nikitka93"
+  },
+  "consoleErrors": []
+}

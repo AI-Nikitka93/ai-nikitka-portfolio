@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 // TACTICAL_OS - Proof Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e1e3e1",
+                        "tertiary": "#c5c7c5",
+                        "on-primary-fixed-variant": "#414941",
+                        "secondary-fixed": "#dfe4e0",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#929492",
+                        "surface-container-low": "#161d16",
+                        "background": "#0e150f",
+                        "surface-bright": "#343b33",
+                        "error-container": "#93000a",
+                        "secondary-container": "#454a48",
+                        "surface-container-lowest": "#09100a",
+                        "on-secondary-fixed-variant": "#434845",
+                        "on-surface": "#dde5d9",
+                        "primary-fixed-dim": "#c1c9be",
+                        "tertiary-fixed-dim": "#c5c7c5",
+                        "on-primary-fixed": "#161d16",
+                        "on-secondary-fixed": "#181d1b",
+                        "outline": "#8e928c",
+                        "on-secondary-container": "#b5b9b6",
+                        "on-tertiary-fixed-variant": "#444746",
+                        "surface-variant": "#2f372f",
+                        "on-primary": "#2b322b",
+                        "surface-dim": "#0e150f",
+                        "on-tertiary": "#2e3130",
+                        "inverse-primary": "#596058",
+                        "outline-variant": "#444843",
+                        "on-background": "#dde5d9",
+                        "primary-fixed": "#dde5d9",
+                        "secondary-fixed-dim": "#c3c8c4",
+                        "secondary": "#c3c8c4",
+                        "surface-tint": "#c1c9be",
+                        "primary-container": "#8e968c",
+                        "surface-container": "#1a211a",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#2a2d2c",
+                        "surface-container-highest": "#2f372f",
+                        "on-tertiary-fixed": "#191c1b",
+                        "inverse-surface": "#dde5d9",
+                        "on-error": "#690005",
+                        "surface": "#0e150f",
+                        "surface-container-high": "#242c24",
+                        "on-surface-variant": "#c4c7c1",
+                        "on-secondary": "#2c312f",
+                        "on-primary-container": "#272e27",
+                        "primary": "#c1c9be",
+                        "inverse-on-surface": "#2b322b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "data-mono": ["IBM Plex Mono", "monospace"],
+                        "headline-lg": ["IBM Plex Mono", "monospace"],
+                        "body-lg": ["IBM Plex Mono", "monospace"],
+                        "body-sm": ["IBM Plex Mono", "monospace"],
+                        "label-caps": ["IBM Plex Mono", "monospace"],
+                        "headline-md": ["IBM Plex Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "data-mono": ["13px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hud-corner-tl { position: absolute; top: 0; left: 0; width: 8px; height: 8px; border-top: 1px solid theme('colors.outline'); border-left: 1px solid theme('colors.outline'); }
+        .hud-corner-tr { position: absolute; top: 0; right: 0; width: 8px; height: 8px; border-top: 1px solid theme('colors.outline'); border-right: 1px solid theme('colors.outline'); }
+        .hud-corner-bl { position: absolute; bottom: 0; left: 0; width: 8px; height: 8px; border-bottom: 1px solid theme('colors.outline'); border-left: 1px solid theme('colors.outline'); }
+        .hud-corner-br { position: absolute; bottom: 0; right: 0; width: 8px; height: 8px; border-bottom: 1px solid theme('colors.outline'); border-right: 1px solid theme('colors.outline'); }
+        
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: theme('colors.background'); }
+        ::-webkit-scrollbar-thumb { background: theme('colors.outline-variant'); }
+        ::-webkit-scrollbar-thumb:hover { background: theme('colors.outline'); }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-hidden selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 bg-[#000000] dark:bg-black text-[#8E968C] font-mono text-[10px] uppercase tracking-[0.2em] font-medium border-b border-[#8E968C]/30 flex justify-between items-center w-full px-6 h-10 z-50">
+<div class="text-xs font-black tracking-widest text-[#8E968C]">AI_NIKITKA93 // TACTICAL_OS</div>
+<div class="flex items-center gap-4 hidden"></div> <!-- search_bar: hidden -->
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[14px] hover:text-white transition-colors cursor-default">sensors</span>
+<span class="material-symbols-outlined text-[14px] hover:text-white transition-colors cursor-default">wifi_tethering</span>
+<span class="material-symbols-outlined text-[14px] hover:text-white transition-colors cursor-default">battery_charging_full</span>
+<span class="material-symbols-outlined text-[14px] hover:text-white transition-colors cursor-default">gps_fixed</span>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="bg-[#1A1A1A] dark:bg-[#121212] text-[#8E968C] font-mono text-[11px] uppercase tracking-tighter border-r border-[#8E968C]/20 w-48 fixed left-0 top-10 flex flex-col h-[calc(100vh-40px)] py-4 overflow-y-auto z-40 hidden md:flex">
+<div class="px-4 mb-6">
+<div class="text-[#8E968C] font-bold text-sm mb-1">SYSTEM_ACCESS</div>
+<div class="text-[#8E968C]/60 text-[10px] tracking-widest">ID:NIKITKA-93</div>
+</div>
+<ul class="flex flex-col gap-1 w-full">
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">login</span>
+<span>Entrance</span>
+</a>
+</li>
+<li>
+<a class="bg-[#8E968C] text-black flex items-center gap-3 px-4 py-2 w-full font-bold immediate state transition with 0ms delay" href="#">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>Archive</span>
+</a>
+</li>
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+<span>Focus</span>
+</a>
+</li>
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span>Human</span>
+</a>
+</li>
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Journal</span>
+</a>
+</li>
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">assignment</span>
+<span>Briefing</span>
+</a>
+</li>
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Console</span>
+</a>
+</li>
+<li>
+<a class="text-[#8E968C]/70 flex items-center gap-3 px-4 py-2 w-full hover:bg-[#8E968C]/10 hover:text-[#8E968C] transition-colors duration-75" href="#">
+<span class="material-symbols-outlined text-[18px]">map</span>
+<span>Routes</span>
+</a>
+</li>
+</ul>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-48 mt-10 p-margin h-[calc(100vh-40px)] overflow-y-auto bg-background">
+<!-- Header -->
+<header class="mb-8 border-b border-outline-variant pb-4 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tighter uppercase">Proof Archive</h1>
+<p class="font-data-mono text-data-mono text-on-surface-variant mt-2 uppercase">Entity Dossier Registry // Grid Layout</p>
+</div>
+<!-- Toolbar -->
+<div class="flex items-center gap-4">
+<div class="relative border-b border-outline w-48 focus-within:border-primary focus-within:border">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline-variant text-[16px]">search</span>
+<input class="w-full bg-transparent border-none text-on-surface font-data-mono text-data-mono pl-8 py-2 focus:ring-0 placeholder:text-outline-variant focus:outline-none uppercase" placeholder="QUERY_ID..." type="text"/>
+</div>
+<button class="border border-outline bg-transparent text-primary hover:bg-primary hover:text-on-primary transition-colors px-4 py-2 flex items-center gap-2 font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+                    Filter
+                </button>
+</div>
+</header>
+<!-- DOSSIER GRID (7 Entities) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter auto-rows-max">
+<!-- Dossier 1 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-9901-A</div>
+<div class="border border-primary text-primary px-2 py-0.5 font-label-caps text-[10px] uppercase bg-primary/10">Active</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 border border-outline-variant bg-surface shrink-0 overflow-hidden relative grayscale contrast-125">
+<img alt="" class="w-full h-full object-cover" data-alt="grainy black and white portrait of a person in shadow, high contrast surveillance style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-CvsFHud03kNgvwJ7uvwUsbVSz7mmg1kx2_1yLzg_i2kTMu9JQeMrnmmvl9cKoRsBcBW3tWZIwJeZvTYax_pDPTOK3l3KmM_wU5ENMUKCkZEaDNLFGLeorZzy-vHZdUQgAykiMMC_SgwBlVzl81p7ksssTarHABwD3pppV3CYOcfRd2St5gwYo-5yBdHz5nJlanFv8LmrmpwQvRdcPB32XwhgeIOBGm_kLT3b0OD0Fk3ZMNw1Fxi0hGos0mUDzZUkYs082NXJj70"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-[20px] leading-tight text-on-surface uppercase truncate">Vanguard Node</h2>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Primary intelligence gathering point in Sector 4. High signal traffic detected.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Evidence Count</span>
+<span class="font-data-mono text-[14px] text-on-surface">3,402</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Last Ping</span>
+<span class="font-data-mono text-[14px] text-primary">T-0:14:00</span>
+</div>
+</div>
+</article>
+<!-- Dossier 2 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-8820-X</div>
+<div class="border border-error text-error px-2 py-0.5 font-label-caps text-[10px] uppercase bg-error/10">Compromised</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 border border-outline-variant bg-surface shrink-0 overflow-hidden relative grayscale contrast-125">
+<img alt="" class="w-full h-full object-cover" data-alt="high contrast abstract geometric architecture, brutalist concrete structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQtuYkp68yifvRuWBsyQokIohU531h6vrwOD0yJ3qir6nzRlSNzLfppZj67G2vxIuBqppu-kGjJehfaJ84NaX766nDIhPESUpS7-_0GNRPhq6osF_5L8GdYYBHzfifhnfX6OYB5mKotnsSR1Npz23kQVXsbT5K73fYihm_0ce0NNAlj5pzMIRdkoy3TmxOhy-mT1NZapmorxJTv6pNBs3cFR1KsjLTIhcrCp_6tEk6Bf4L2uJUfy3cZpWLSJRXmRgt0NlC8j3juU8"/>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-[20px] leading-tight text-on-surface uppercase truncate">Epsilon Relay</h2>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Communication hub breached. Physical containment initiated pending scrub.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Evidence Count</span>
+<span class="font-data-mono text-[14px] text-on-surface">841</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Threat Level</span>
+<span class="font-data-mono text-[14px] text-error">CRITICAL</span>
+</div>
+</div>
+</article>
+<!-- Dossier 3 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-4412-B</div>
+<div class="border border-outline text-outline px-2 py-0.5 font-label-caps text-[10px] uppercase">Archived</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 border border-outline-variant bg-surface shrink-0 overflow-hidden relative grayscale contrast-125">
+<img alt="" class="w-full h-full object-cover" data-alt="close up of old paper document with redacted black lines and faded stamps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPxVzCuIBva1DcfZ-LIJF-Tt1aPH11mUoidOKTcma8adS9XFSg4s9UJMNpGwDXvrX9oRYzILgo7qjyg4oQNoftVr0qWoxguuIa-dOYFlKk753BQX_07hv55ov5WoVgRmgigX3yRskjMhSUfF4n-snCnRkqQGvVGuU55bzvp17gDJL4gqTqbIJNE39Z-ecpFHbDQMeo5P9dcepY_0u3Y9sr1RyJfrSLMxTqlmvlk87DRFmu1BfbBuYVbeFLrBOS2GqiAwPkIU5ZPg0"/>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-[20px] leading-tight text-on-surface uppercase truncate">Project Echo</h2>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Historical data concerning acoustic mapping anomalies in lower quadrant.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Evidence Count</span>
+<span class="font-data-mono text-[14px] text-on-surface">12,045</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Archive Date</span>
+<span class="font-data-mono text-[14px] text-on-surface">2023.11.04</span>
+</div>
+</div>
+</article>
+<!-- Dossier 4 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors xl:col-span-2">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start mb-2">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-7740-M</div>
+<div class="border border-secondary text-secondary px-2 py-0.5 font-label-caps text-[10px] uppercase bg-secondary/10">Monitoring</div>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="w-full md:w-32 h-24 border border-outline-variant bg-surface shrink-0 overflow-hidden relative grayscale contrast-125">
+<img alt="" class="w-full h-full object-cover" data-alt="satellite view of urban landscape at night with glowing light grids, monochrome green tint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD41ZbLnj5EDrBFLf-0_EDiJyrTOZ1v6P-70DKHujKVxzwIKU1OO4AjKFoH836GBJyybs_R637cWxUuKjeNSym5BzMws-xkoN1FgrVHC8SAxYKDI6REhz61w92UzdcKcJvGU4wzFBKdpyjxGIzCpv6FtxhVDtHKBbUWXFTmSJawtC_PzNNa9Fq2wS1g1KB22BcN_bUEPir6FG2SXqS7tj1HSnihHHM42QtZrA3ySi-e-2iU2JqYiH0rUkzGVnOtG9Bs4OdnOSORjBo"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-color"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">Sector 7 Grid Anomaly</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-2xl">Continuous power fluctuations detected across tertiary systems. Source traces back to undocumented subterranean facility. Surveillance drones deployed for mapping.</p>
+</div>
+<div class="flex gap-8 mt-4 pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Data Vol</span>
+<span class="font-data-mono text-[16px] text-on-surface">45.2 TB</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Drone Mapped</span>
+<span class="font-data-mono text-[16px] text-primary">64%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Est. Completion</span>
+<span class="font-data-mono text-[16px] text-on-surface">T-48:00:00</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Dossier 5 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-1102-Q</div>
+<div class="border border-primary text-primary px-2 py-0.5 font-label-caps text-[10px] uppercase bg-primary/10">Active</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 border border-outline-variant bg-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-outline">fingerprint</span>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-[20px] leading-tight text-on-surface uppercase truncate">Subject 'Moth'</h2>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Identity unknown. Repeated access attempts to restricted databanks.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Matches</span>
+<span class="font-data-mono text-[14px] text-on-surface">0</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Attempts</span>
+<span class="font-data-mono text-[14px] text-primary">14,992</span>
+</div>
+</div>
+</article>
+<!-- Dossier 6 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-5509-C</div>
+<div class="border border-outline text-outline px-2 py-0.5 font-label-caps text-[10px] uppercase">Pending</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 border border-outline-variant bg-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-outline">folder_open</span>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-[20px] leading-tight text-on-surface uppercase truncate">Cargo Log 99</h2>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Manifest discrepancies detected at transit point Delta.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Items</span>
+<span class="font-data-mono text-[14px] text-on-surface">450</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Status</span>
+<span class="font-data-mono text-[14px] text-on-surface">Verifying</span>
+</div>
+</div>
+</article>
+<!-- Dossier 7 -->
+<article class="relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col gap-4 group hover:border-primary transition-colors">
+<div class="hud-corner-tl"></div><div class="hud-corner-tr"></div><div class="hud-corner-bl"></div><div class="hud-corner-br"></div>
+<div class="flex justify-between items-start">
+<div class="font-data-mono text-data-mono text-outline uppercase tracking-widest">DS-2210-F</div>
+<div class="border border-primary text-primary px-2 py-0.5 font-label-caps text-[10px] uppercase bg-primary/10">Active</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 border border-outline-variant bg-surface shrink-0 overflow-hidden relative grayscale contrast-125">
+<img alt="" class="w-full h-full object-cover" data-alt="abstract close up of circuitry and wires, dark monochrome, industrial tech vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQCMCa3HnJqIHI1jklmf--pKliniY6KWftThmG8yqPgQEo3ruBiApKp6KvGHYstjLnW-K5aa9U_P2SmVndygf6NpOOKMhH6FEqsf4to0dwa33jddOWA_6KcV9W4Ur2iPuTau7tZH3Wn-HPZS0mSy-wrJJxfBME9ZcbD0cmaZNGUj5n1Lb_MqhZFY9iRsvB4VW_z0OT__z01DW2Rzt2yNp4DPO_3jF6rWUgDM9vSMdZNttITI9lvrdCicuKu3SzqpQZsd-5YB2WBU"/>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-[20px] leading-tight text-on-surface uppercase truncate">Hardware Uplink</h2>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Physical tap detected on main fiber line. Tracing physical location.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-auto pt-4 border-t border-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Bandwidth</span>
+<span class="font-data-mono text-[14px] text-error">Compromised</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline-variant uppercase">Trace Stat</span>
+<span class="font-data-mono text-[14px] text-primary">88%</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+</body></html>

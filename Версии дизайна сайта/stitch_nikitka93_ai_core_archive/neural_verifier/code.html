@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_NIKITKA93 - Dossier</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts for System Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#006970",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-background": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#810081",
+                      "tertiary-container": "#d9d9d9",
+                      "on-error": "#690005",
+                      "surface": "#131313",
+                      "background": "#131313",
+                      "secondary-container": "#fe00fe",
+                      "surface-variant": "#353534",
+                      "secondary-fixed": "#ffd7f5",
+                      "on-tertiary-container": "#5d5f5f",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary": "#5b005b",
+                      "surface-dim": "#131313",
+                      "on-secondary-fixed": "#380038",
+                      "on-primary-fixed-variant": "#004f54",
+                      "surface-tint": "#00dbe9",
+                      "primary-fixed": "#7df4ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-highest": "#353534",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#b9cacb",
+                      "tertiary": "#f5f5f5",
+                      "surface-bright": "#3a3939",
+                      "on-surface": "#e5e2e1",
+                      "outline-variant": "#3b494b",
+                      "on-primary-container": "#006970",
+                      "primary-fixed-dim": "#00dbe9",
+                      "secondary": "#ffabf3",
+                      "on-primary": "#00363a",
+                      "error": "#ffb4ab",
+                      "primary-container": "#00f0ff",
+                      "inverse-surface": "#e5e2e1",
+                      "outline": "#849495",
+                      "on-secondary-container": "#500050",
+                      "surface-container": "#201f1f",
+                      "inverse-on-surface": "#313030",
+                      "error-container": "#93000a",
+                      "primary": "#dbfcff",
+                      "on-primary-fixed": "#002022",
+                      "secondary-fixed-dim": "#ffabf3",
+                      "on-tertiary": "#2f3131"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "container-max": "1440px",
+                      "grid-unit": "4px",
+                      "margin": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "mono-label": [
+                              "monospace"
+                      ],
+                      "data-dense": [
+                              "monospace"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-sm": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "mono-label": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "data-dense": [
+                              "10px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Global Background Grid Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: 
+                linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        /* Scanline Overlay (No animation as per rules, just static structural artifact) */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 50%; left: 0; width: 100vw; height: 2px;
+            background: rgba(0, 240, 255, 0.03);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+            pointer-events: none;
+            z-index: 9999;
+        }
+        /* Hide scrollbar for clean aesthetic */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #00f0ff; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#050505] text-on-background min-h-screen font-body-sm antialiased selection:bg-secondary-container selection:text-black">
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-40 bg-black/90 dark:bg-[#050505] border-b border-[#00F0FF] border-b-2 border-cyan-500/50 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+<div class="flex justify-between items-center w-full px-2 h-12">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400 dark:text-[#00F0FF]" style="font-variation-settings: 'FILL' 0;">memory</span>
+<span class="font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)] font-mono uppercase tracking-tighter text-sm">AI_NIKITKA93</span>
+</div>
+<div class="text-cyan-400 dark:text-[#00F0FF] font-mono uppercase tracking-tighter text-sm hover:bg-cyan-500 hover:text-black transition-all duration-75 px-2 py-1 cursor-pointer">
+                RU/EN
+            </div>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="max-w-[container-max] mx-auto p-margin pb-32">
+<!-- Header Section -->
+<header class="mb-8 border-l-4 border-primary-container pl-4 relative">
+<div class="absolute -left-[5px] top-0 w-[4px] h-[12px] bg-secondary-container shadow-[0_0_10px_#fe00fe]"></div>
+<h1 class="font-display-xl text-display-xl text-primary drop-shadow-[0_0_10px_rgba(219,252,255,0.3)]">SYS_DOSSIER</h1>
+<p class="font-mono-label text-mono-label text-primary-fixed-dim uppercase tracking-widest mt-2">VERIFIER PROTOCOL_v4.2 // NEURAL OVERLOAD</p>
+</header>
+<!-- CSS Grid Modules -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- CORE SPECS MODULE -->
+<section class="md:col-span-4 bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container relative">
+<div class="border-b border-primary-container/30 px-3 py-1 flex justify-between items-center bg-surface-container-low">
+<span class="font-mono-label text-mono-label text-primary-container">[SEC_01_ID]</span>
+<span class="material-symbols-outlined text-primary-container text-[14px]">fingerprint</span>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex items-end justify-between border-b border-outline-variant pb-1">
+<span class="font-data-dense text-data-dense text-outline">DESIGNATION</span>
+<span class="font-mono-label text-mono-label text-on-surface">NODE_ALPHA_9X</span>
+</div>
+<div class="flex items-end justify-between border-b border-outline-variant pb-1">
+<span class="font-data-dense text-data-dense text-outline">UPTIME</span>
+<span class="font-mono-label text-mono-label text-primary-fixed">9482.04.11_CYCLES</span>
+</div>
+<div class="flex items-end justify-between border-b border-outline-variant pb-1">
+<span class="font-data-dense text-data-dense text-outline">COGNITIVE_LOAD</span>
+<span class="font-mono-label text-mono-label text-secondary-container">CRITICAL_THRESHOLD</span>
+</div>
+<!-- Luminous Decorative Element -->
+<div class="w-full h-24 mt-4 border border-secondary-container/50 relative overflow-hidden bg-surface-dim/50 group cursor-crosshair">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(254,0,254,0.1)_0%,transparent_70%)]"></div>
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-secondary-container shadow-[0_0_8px_#fe00fe]"></div>
+<div class="absolute top-0 left-1/2 w-[1px] h-full bg-secondary-container shadow-[0_0_8px_#fe00fe]"></div>
+<span class="absolute bottom-1 right-1 font-data-dense text-data-dense text-secondary-container">TGT_LOCK</span>
+</div>
+</div>
+</section>
+<!-- DIAGNOSTICS MODULE -->
+<section class="md:col-span-8 bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container relative shadow-[0_0_15px_rgba(0,240,255,0.05)] hover:shadow-[0_0_20px_rgba(0,240,255,0.15)] transition-shadow">
+<div class="border-b border-primary-container/30 px-3 py-1 flex justify-between items-center bg-surface-container-low">
+<span class="font-mono-label text-mono-label text-primary-container">[SEC_02_DIAG]</span>
+<span class="material-symbols-outlined text-primary-container text-[14px]">vital_signs</span>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Progress Item 1 -->
+<div class="space-y-2">
+<div class="flex justify-between font-mono-label text-mono-label">
+<span class="text-on-surface">NEURAL_ROUTING</span>
+<span class="text-primary-container">80%</span>
+</div>
+<div class="flex gap-[2px] h-3 w-full">
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-surface-container-high border border-primary-container/20"></div>
+<div class="flex-1 bg-surface-container-high border border-primary-container/20"></div>
+</div>
+</div>
+<!-- Progress Item 2 -->
+<div class="space-y-2">
+<div class="flex justify-between font-mono-label text-mono-label">
+<span class="text-on-surface">MEMORY_BANKS_SYS</span>
+<span class="text-secondary-container">40%</span>
+</div>
+<div class="flex gap-[2px] h-3 w-full">
+<div class="flex-1 bg-secondary-container shadow-[0_0_5px_#fe00fe]"></div>
+<div class="flex-1 bg-secondary-container shadow-[0_0_5px_#fe00fe]"></div>
+<div class="flex-1 bg-secondary-container shadow-[0_0_5px_#fe00fe]"></div>
+<div class="flex-1 bg-secondary-container shadow-[0_0_5px_#fe00fe]"></div>
+<div class="flex-1 bg-surface-container-high border border-secondary-container/20"></div>
+<div class="flex-1 bg-surface-container-high border border-secondary-container/20"></div>
+<div class="flex-1 bg-surface-container-high border border-secondary-container/20"></div>
+<div class="flex-1 bg-surface-container-high border border-secondary-container/20"></div>
+<div class="flex-1 bg-surface-container-high border border-secondary-container/20"></div>
+<div class="flex-1 bg-surface-container-high border border-secondary-container/20"></div>
+</div>
+</div>
+<!-- Progress Item 3 -->
+<div class="space-y-2">
+<div class="flex justify-between font-mono-label text-mono-label">
+<span class="text-on-surface">COOLANT_FLOW</span>
+<span class="text-primary-container">100%</span>
+</div>
+<div class="flex gap-[2px] h-3 w-full">
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+<div class="flex-1 bg-primary-container shadow-[0_0_5px_#00f0ff]"></div>
+</div>
+</div>
+<!-- Data Dense Readout -->
+<div class="bg-surface border border-outline-variant p-2 font-data-dense text-data-dense text-outline">
+<p class="text-primary-fixed">&gt; INIT_SEQ... OK</p>
+<p>&gt; CHECKING_INTEGRITY...</p>
+<p class="text-secondary-fixed">&gt; WARN: SEC_B_OVERRIDE</p>
+<p>&gt; COMPILING_DATA...</p>
+<p class="text-primary-fixed blink animate-pulse">&gt; WAITING_INPUT_</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<!-- Applies rules for md:hidden (Mobile only) - though guidelines say responsive pivot, the shell setup implies it's the primary nav for the app -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-black dark:bg-[#050505] border-t border-[#00F0FF] border-t-2 shadow-[0_-5px_15px_rgba(0,240,255,0.3)] md:hidden">
+<!-- ACTIVE ITEM: DOSSIER -->
+<div class="flex flex-col items-center justify-center bg-cyan-400 text-black p-1 shadow-[0_0_10px_#00F0FF] border-r-4 border-magenta-500 border-l-2 w-1/4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_shared</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">DOSSIER</span>
+</div>
+<!-- INACTIVE ITEM: CONSOLE -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-all duration-75 w-1/4">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">CONSOLE</span>
+</div>
+<!-- INACTIVE ITEM: PLANNING -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-all duration-75 w-1/4">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">PLANNING</span>
+</div>
+<!-- INACTIVE ITEM: FIELD_NOTES -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-all duration-75 w-1/4">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest mt-1">FIELD_NOTES</span>
+</div>
+</nav>
+<!-- Desktop Nav representation (if requested by guidelines to hide bottom nav on desktop, this acts as the terminal console replacement requested in component list) -->
+<div class="hidden md:block fixed bottom-0 left-0 w-full h-8 border-t border-primary-container bg-black z-50 overflow-hidden">
+<div class="font-data-dense text-data-dense text-primary-fixed-dim whitespace-nowrap px-2 py-1 opacity-80">
+            &gt; TAIL: /var/log/sys.log | grep "CRITICAL" ... NO ENTRIES ... MONITORING ACTIVE ... NODE_ALPHA_9X STABLE ... AWAITING COMMAND_
+        </div>
+</div>
+</body></html>

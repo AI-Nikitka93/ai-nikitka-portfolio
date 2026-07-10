@@ -1,0 +1,35 @@
+{
+  "home": {
+    "has35Awards2026Asset": true,
+    "hasOld35AwardsAssetInHero": false,
+    "overflowX": false,
+    "scannerButtons": [
+      "formal cultural review / 2026КИНОМАТИКConcept compression",
+      "judged narrative work / 2025Helix Best FilmStory assembly",
+      "AI imaging field / 2025-202635AWARDSAI image direction",
+      "workflow recognition / 2025Helix TechWorkflow execution"
+    ],
+    "scannerMentionsHelixTech": true,
+    "scannerMentionsVk": false
+  },
+  "homeScreenshot": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\gramoty-proof-home-browser-qa-2026-06-04.png",
+  "awardsDossier": {
+    "has35Awards2026Image": true,
+    "hasJune2026": true,
+    "hasSeason10Categories": true,
+    "hasSeason11": true,
+    "hasTop35": true,
+    "overflowX": false
+  },
+  "awardsDossierScreenshot": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\gramoty-proof-35awards-dossier-browser-qa-2026-06-04.png",
+  "credentials": {
+    "hasCategoryImage": true,
+    "hasCategorySupport": true,
+    "hasDigitalImage": true,
+    "hasDigitalMarathon": true,
+    "hasDigitalMetric": true,
+    "overflowX": false
+  },
+  "credentialsScreenshot": "M:\\Projects\\sites\\ai-nikitka-portfolio\\reports\\site-eval-2026-06-04\\gramoty-proof-awards-credentials-browser-qa-2026-06-04.png",
+  "consoleErrors": []
+}

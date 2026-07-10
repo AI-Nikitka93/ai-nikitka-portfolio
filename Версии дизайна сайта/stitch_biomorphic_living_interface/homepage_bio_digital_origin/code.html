@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI_Nikitka93 / Никита Кизевич</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e3e2e2",
+                        "on-tertiary-fixed-variant": "#852400",
+                        "surface-bright": "#383939",
+                        "secondary-fixed": "#b9f612",
+                        "secondary": "#f2ffcf",
+                        "inverse-primary": "#5a6059",
+                        "secondary-container": "#b3f000",
+                        "on-primary-container": "#777d75",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#181d17",
+                        "surface-container-lowest": "#0d0e0f",
+                        "outline-variant": "#444843",
+                        "surface-container-low": "#1b1c1c",
+                        "outline": "#8f928c",
+                        "on-surface-variant": "#c5c7c1",
+                        "secondary-fixed-dim": "#a1d800",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "on-tertiary": "#5e1700",
+                        "on-secondary-fixed-variant": "#384e00",
+                        "on-error": "#690005",
+                        "surface-dim": "#121414",
+                        "on-secondary-container": "#4d6a00",
+                        "on-primary-fixed-variant": "#434842",
+                        "surface-container-high": "#292a2a",
+                        "on-tertiary-container": "#e04300",
+                        "primary-fixed-dim": "#c3c8bf",
+                        "surface-tint": "#c3c8bf",
+                        "surface-container": "#1f2020",
+                        "surface": "#121414",
+                        "on-primary": "#2c322c",
+                        "on-secondary-fixed": "#141f00",
+                        "primary-fixed": "#dfe4db",
+                        "primary-container": "#0a0f0a",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-secondary": "#253500",
+                        "surface-container-highest": "#343535",
+                        "on-surface": "#e3e2e2",
+                        "primary": "#c3c8bf",
+                        "inverse-on-surface": "#303031",
+                        "tertiary-container": "#220400",
+                        "tertiary": "#ffb59e",
+                        "surface-variant": "#343535",
+                        "inverse-surface": "#e3e2e2",
+                        "background": "#121414"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "flow-xs": "4px",
+                        "flow-lg": "48px",
+                        "flow-sm": "12px",
+                        "flow-md": "24px",
+                        "safe-area": "32px",
+                        "flow-xl": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "label-caps": ["IBM Plex Mono"],
+                        "metadata-mono": ["IBM Plex Mono"],
+                        "body-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "metadata-mono": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen relative overflow-x-hidden selection:bg-secondary-fixed selection:text-on-secondary-fixed flex flex-col">
+<!-- Ambient Background Glows -->
+<div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-secondary-fixed/5 blur-[120px]"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-tertiary-fixed-dim/5 blur-[150px]"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed z-50 bg-[#0a0f0a]/60 backdrop-blur-[30px] font-['Space_Grotesk'] tracking-tight flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto docked full-width top-0 rounded-b-[3rem] border-b border-lime-900/30 shadow-[inset_0_1px_1px_rgba(163,230,53,0.1)]">
+<div class="text-2xl font-bold text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.4)]">AI_Nikitka93</div>
+<!-- Language / Trailing Actions -->
+<div class="flex items-center gap-6">
+<span class="text-lime-400 font-bold underline-offset-8 decoration-2 hover:text-lime-200 hover:scale-105 transition-all duration-500 cursor-pointer">RU / EN</span>
+<div class="flex gap-4 text-lime-400">
+<span class="material-symbols-outlined hover:text-lime-200 hover:scale-105 transition-all duration-500 cursor-pointer">sensors</span>
+<span class="material-symbols-outlined hover:text-lime-200 hover:scale-105 transition-all duration-500 cursor-pointer">blur_on</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Hidden on Mobile) -->
+<nav class="hidden md:flex bg-[#0a0f0a]/40 backdrop-blur-2xl font-['IBM_Plex_Mono'] uppercase text-xs tracking-widest fixed left-4 top-1/2 -translate-y-1/2 h-[819px] w-20 rounded-full border border-lime-500/20 shadow-[0_0_40px_rgba(0,0,0,0.8)] flex-col items-center justify-around py-10 z-40">
+<!-- Avatar Area -->
+<div class="flex flex-col items-center gap-2 mb-4 group cursor-pointer">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-lime-500/30 group-hover:border-lime-400 transition-colors duration-500 shadow-[inset_0_0_10px_rgba(163,230,53,0.2)]">
+<img alt="AI_Nikitka93 Bio-Interface" class="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700" data-alt="Abstract cybernetic portrait with organic green lighting and fluid biometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWaO4gmKrGAYSWzClMfV8eOoSS-68W09duj1N_7rIneRhCHnq5SlCx6MP9eGZK29J986thS6HcAIpMHVTXEe3LNvKrEYe6gIXiH8PKcuGbmCTR3JsVTqOZcfa3HGo7SmWBOUP0fgbkW3n2msAqwDfN--dKoQ9YSWheh5VbJt_dtpLa9IgZ35l_yt9qYvLFSoTVIHGCYAgTjahGibDmFUlODQbCThxzRaQyoUjctL5j0dnb0S2lOQIQ7iFC9ltKiSVpbVfG2Wo6YZw"/>
+</div>
+</div>
+<div class="flex flex-col gap-8 items-center w-full">
+<a aria-label="Dossier" class="bg-lime-500/20 text-lime-400 rounded-full p-4 shadow-[0_0_20px_rgba(163,230,53,0.3)] flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined">biotech</span>
+</a>
+<a aria-label="Metrics" class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined">analytics</span>
+</a>
+<a aria-label="Archive" class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+</a>
+<a aria-label="Signal" class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined">wifi_tethering</span>
+</a>
+<a aria-label="Network" class="text-stone-600 p-4 hover:bg-lime-900/20 hover:text-lime-300 transition-all duration-700 ease-in-out flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined">hub</span>
+</a>
+</div>
+<div class="mt-auto pt-4 flex flex-col items-center">
+<button class="w-12 h-12 rounded-full border border-lime-500/40 text-lime-500 flex items-center justify-center hover:bg-lime-500/10 hover:shadow-[0_0_15px_rgba(163,230,53,0.3)] transition-all duration-500" title="Contact Entity">
+<span class="material-symbols-outlined text-sm">mail</span>
+</button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow pt-[120px] pb-safe-area px-6 md:pl-[120px] md:pr-safe-area flex flex-col gap-flow-xl w-full max-w-screen-2xl mx-auto">
+<!-- Hero Section: Dual Identity -->
+<section class="relative min-h-[614px] flex flex-col justify-center gap-flow-lg">
+<div class="relative z-10 max-w-4xl">
+<h1 class="font-headline-xl text-primary font-bold mb-4 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col gap-2">
+<span class="text-on-background opacity-80 mix-blend-screen text-4xl md:text-5xl lg:text-6xl tracking-widest uppercase">AI_Nikitka93</span>
+<span class="text-secondary-fixed opacity-90 text-5xl md:text-7xl lg:text-8xl drop-shadow-[0_0_30px_rgba(185,246,18,0.3)]">Никита Кизевич</span>
+</h1>
+<p class="font-body-lg text-primary-fixed mt-6 max-w-2xl opacity-80 border-l-2 border-secondary-fixed/50 pl-6 py-2 bg-surface-container-low/30 backdrop-blur-sm rounded-r-xl">
+                    Цифровая сущность и биологический носитель. Слияние органического мышления с алгоритмической точностью.
+                </p>
+</div>
+<!-- Abstract Organism Visual -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-2/3 h-full max-h-[600px] rounded-bl-[100px] rounded-tr-[50px] overflow-hidden opacity-40 mix-blend-screen z-0 pointer-events-none">
+<img alt="Fluid abstract bio-digital structure" class="w-full h-full object-cover" data-alt="Abstract flowing green and black organic digital structure resembling a neural network underwater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8-Cz7B-yy7NEXN9P1s3FxBmCPMM5ctGn0k90dzceYBGT3_H78dDsQrAr5__W0smF_JC2wHccZyrKtu558zJOOJQOCZG3Olf5VnYUDheJyT1aW1FU9lOyXKLu2k23qTTtDZJTkjEkf9fq182XOlW8sSppLmogixCYJTpcOJshP855KVJDFosQ3U8isBT3e3C22rg0womWIhKrM2KC0JW86jN3xUfinL8IffkR4CodpRY804EVUUZP4Gxru7W8Sx6H8hXjfyzN85lQ"/>
+<div class="absolute inset-0 bg-gradient-to-l from-transparent via-background/50 to-background"></div>
+</div>
+</section>
+<!-- Bento Grid: Modules -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-flow-md relative z-10">
+<!-- Dossier Membrane -->
+<div class="md:col-span-8 bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 rounded-tl-[3rem] rounded-br-[1rem] rounded-tr-[2rem] rounded-bl-[2rem] p-8 md:p-12 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/10 blur-[50px] rounded-full group-hover:bg-secondary-fixed/20 transition-all duration-700"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl drop-shadow-[0_0_10px_rgba(185,246,18,0.5)]">biotech</span>
+<h2 class="font-headline-lg text-on-background">Dossier / Био-данные</h2>
+</div>
+<div class="space-y-4 font-body-md text-on-surface-variant max-w-2xl">
+<p>Анализ системных протоколов и поведенческих паттернов. Синхронизация между органическим интерфейсом и цифровым потоком.</p>
+<div class="flex flex-wrap gap-3 mt-6">
+<span class="font-label-caps bg-surface-container-high border border-outline/20 px-4 py-2 rounded-full text-secondary">Neural Link: Active</span>
+<span class="font-label-caps bg-surface-container-high border border-outline/20 px-4 py-2 rounded-full text-secondary">Sync Rate: 99.8%</span>
+</div>
+</div>
+</div>
+<!-- Signal Pulse -->
+<div class="md:col-span-4 bg-surface-container-low/50 backdrop-blur-lg border border-tertiary-fixed-dim/20 rounded-tl-[1rem] rounded-br-[3rem] rounded-tr-[2rem] rounded-bl-[1rem] p-8 relative flex flex-col justify-between overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
+<div class="relative z-10 flex items-start justify-between">
+<h3 class="font-metadata-mono text-tertiary uppercase tracking-widest">Текущий Сигнал</h3>
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary"></span>
+</span>
+</div>
+<div class="relative z-10 mt-auto pt-12">
+<div class="font-headline-lg text-on-background mb-2">Alpha_State</div>
+<p class="font-metadata-mono text-outline">Трансляция активна</p>
+</div>
+</div>
+<!-- Archive Access -->
+<div class="md:col-span-12 bg-surface-container/40 border border-secondary-fixed/20 backdrop-blur-md rounded-[2rem] p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden hover:bg-surface-container/60 transition-colors duration-500">
+<div class="absolute left-0 bottom-0 w-1/2 h-2 bg-gradient-to-r from-secondary-fixed/50 to-transparent"></div>
+<div class="flex-1 flex flex-col gap-2">
+<h3 class="font-headline-lg text-secondary-fixed">Архив Памяти</h3>
+<p class="font-body-md text-on-surface-variant">Доступ к сохраненным циклам и историческим данным системы AI_Nikitka93.</p>
+</div>
+<button class="shrink-0 font-label-caps tracking-widest text-secondary-fixed bg-transparent border-2 border-secondary-fixed/50 hover:border-secondary-fixed hover:bg-secondary-fixed/10 hover:shadow-[0_0_20px_rgba(185,246,18,0.2)] px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-3 group">
+                    ОТКРЫТЬ АРХИВ
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-auto bg-transparent font-['IBM_Plex_Mono'] text-[10px] opacity-60 text-stone-500 full-width bottom-0 px-12 py-8 flex justify-between items-center w-full z-10 relative pointer-events-none md:pl-[120px]">
+<div>© 2024 AI_NIKITKA93 // ORGANIC PROTOCOL</div>
+<div class="flex gap-6 pointer-events-auto">
+<a class="text-stone-600 hover:text-lime-400 transition-colors" href="#">Metadata</a>
+<a class="text-stone-600 hover:text-lime-400 transition-colors" href="#">Pulse</a>
+<a class="text-stone-600 hover:text-lime-400 transition-colors" href="#">Source</a>
+</div>
+</footer>
+</body></html>

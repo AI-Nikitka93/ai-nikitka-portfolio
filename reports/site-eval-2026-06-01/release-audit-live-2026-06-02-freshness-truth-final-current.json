@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "checkedAt": "2026-06-02T14:54:55.603Z",
+  "content": {
+    "publishedPosts": 2,
+    "publishedPortfolio": 7,
+    "postRoutes": [
+      "/blog/prompt-first-workflow",
+      "/blog/proof-led-portfolio"
+    ],
+    "portfolioRoutes": [
+      "/portfolio/sig-01-35awards-ai-imaging-field-results",
+      "/portfolio/sig-02-labstory-helix-best-animated-film",
+      "/portfolio/sig-03-labstory-helix-technical-mastery",
+      "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+      "/portfolio/sig-05-minimax-agent-challenge-2025",
+      "/portfolio/sig-06-vk-recsys-top-9-percent",
+      "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon"
+    ]
+  },
+  "sourceCopy": {
+    "checkedFiles": 47
+  },
+  "freshness": {
+    "lastUpdated": "2026-06-02",
+    "lastUpdatedLabel": "2 июня 2026",
+    "minimumFreshnessDate": "2026-06-02"
+  },
+  "deployment": {
+    "errorBoundary": true,
+    "globalErrorBoundary": true,
+    "vercelConfig": true,
+    "dependencyAuditGate": true,
+    "envAwareMetadataBase": true,
+    "reducedMotionGate": true,
+    "activeNavigationCurrent": true,
+    "dynamicFooterCounts": true
+  },
+  "live": {
+    "checkedRoutes": 26,
+    "internalLinkIntegrity": {
+      "checkedInternalLinks": 454,
+      "uniqueInternalTargets": 19,
+      "checkedAnchors": 19
+    },
+    "performanceBudget": {
+      "budgets": {
+        "maxHtmlBytes": 280000,
+        "maxRouteStaticAssetBytes": 1100000,
+        "maxRouteStaticAssetGzipBytes": 270000,
+        "maxRouteJsGzipBytes": 225000,
+        "maxRouteCssGzipBytes": 45000,
+        "maxRouteStaticAssets": 16
+      },
+      "checkedRoutes": 19,
+      "uniqueStaticAssets": 17,
+      "worst": {
+        "htmlBytes": {
+          "route": "/portfolio",
+          "bytes": 249671
+        },
+        "staticAssetBytes": {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "bytes": 969568
+        },
+        "staticAssetGzipBytes": {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "bytes": 240406
+        },
+        "jsGzipBytes": {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "bytes": 200069
+        },
+        "cssGzipBytes": {
+          "route": "/",
+          "bytes": 40337
+        },
+        "staticAssetCount": {
+          "route": "/services-calculator",
+          "count": 15
+        }
+      }
+    },
+    "socialImageIntegrity": {
+      "checkedMetaImages": 38,
+      "uniqueLocalImagePaths": 9
+    },
+    "structuredDataIntegrity": {
+      "checkedRoutes": 12,
+      "scriptCount": 15,
+      "nodeCount": 15,
+      "typeCounts": {
+        "Person": 1,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "Blog": 1,
+        "BlogPosting": 2,
+        "BreadcrumbList": 2,
+        "CreativeWork": 7
+      },
+      "routes": [
+        {
+          "route": "/",
+          "scripts": 2,
+          "nodes": 2,
+          "types": [
+            "Person",
+            "WebSite"
+          ],
+          "requiredTypes": [
+            "Person",
+            "WebSite"
+          ]
+        },
+        {
+          "route": "/portfolio",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CollectionPage"
+          ],
+          "requiredTypes": [
+            "CollectionPage"
+          ]
+        },
+        {
+          "route": "/blog",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "Blog"
+          ],
+          "requiredTypes": [
+            "Blog"
+          ]
+        },
+        {
+          "route": "/blog/prompt-first-workflow",
+          "scripts": 2,
+          "nodes": 2,
+          "types": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ],
+          "requiredTypes": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ]
+        },
+        {
+          "route": "/blog/proof-led-portfolio",
+          "scripts": 2,
+          "nodes": 2,
+          "types": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ],
+          "requiredTypes": [
+            "BlogPosting",
+            "BreadcrumbList"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-01-35awards-ai-imaging-field-results",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-02-labstory-helix-best-animated-film",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-03-labstory-helix-technical-mastery",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-04-kinomatik-laureate-neurovideo-competition",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-05-minimax-agent-challenge-2025",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-06-vk-recsys-top-9-percent",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        },
+        {
+          "route": "/portfolio/sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+          "scripts": 1,
+          "nodes": 1,
+          "types": [
+            "CreativeWork"
+          ],
+          "requiredTypes": [
+            "CreativeWork"
+          ]
+        }
+      ]
+    },
+    "languageAlternateIntegrity": {
+      "canonicalRoutesChecked": 19,
+      "languageRoutesChecked": 2,
+      "alternateLinksChecked": 8,
+      "languageRoutes": [
+        {
+          "route": "/",
+          "alternates": {
+            "ru": "https://kizevich.com",
+            "ru-BY": "https://kizevich.com",
+            "en": "https://kizevich.com/en",
+            "x-default": "https://kizevich.com"
+          }
+        },
+        {
+          "route": "/en",
+          "alternates": {
+            "ru": "https://kizevich.com",
+            "ru-BY": "https://kizevich.com",
+            "en": "https://kizevich.com/en",
+            "x-default": "https://kizevich.com"
+          }
+        }
+      ]
+    }
+  },
+  "warnings": [],
+  "errors": []
+}

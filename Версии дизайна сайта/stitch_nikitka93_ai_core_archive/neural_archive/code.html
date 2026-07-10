@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dossier - AI_NIKITKA93</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006970",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#810081",
+                        "tertiary-container": "#d9d9d9",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "secondary-container": "#fe00fe",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#ffd7f5",
+                        "on-tertiary-container": "#5d5f5f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#5b005b",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#380038",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-tint": "#00dbe9",
+                        "primary-fixed": "#7df4ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary": "#f5f5f5",
+                        "surface-bright": "#3a3939",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b494b",
+                        "on-primary-container": "#006970",
+                        "primary-fixed-dim": "#00dbe9",
+                        "secondary": "#ffabf3",
+                        "on-primary": "#00363a",
+                        "error": "#ffb4ab",
+                        "primary-container": "#00f0ff",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#849495",
+                        "on-secondary-container": "#500050",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "primary": "#dbfcff",
+                        "on-primary-fixed": "#002022",
+                        "secondary-fixed-dim": "#ffabf3",
+                        "on-tertiary": "#2f3131"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "container-max": "1440px",
+                        "grid-unit": "4px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "mono-label": ["monospace"],
+                        "data-dense": ["monospace"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-sm": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "mono-label": ["11px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "data-dense": ["10px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-sm": ["13px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Global Scanning Grid */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Scanline Animation */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.2) 51%);
+            background-size: 100% 4px;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+        
+        .noise-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.15;
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
+        
+        .glow-border-cyan {
+            box-shadow: 0 0 10px rgba(0,240,255,0.5);
+        }
+        .glow-border-magenta {
+            box-shadow: 0 0 10px rgba(254,0,254,0.5);
+        }
+        
+        .glitch-hover:hover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid #fe00fe;
+            transform: translate(2px, 2px);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen pb-20 pt-16 flex flex-col items-center">
+<!-- TopAppBar (From JSON) -->
+<header class="fixed top-0 w-full z-50 bg-black/90 dark:bg-[#050505] docked full-width border-b border-[#00F0FF] shadow-[0_0_15px_rgba(0,240,255,0.2)] border-b-2 border-cyan-500/50 flex justify-between items-center px-2 h-12">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400 dark:text-[#00F0FF]">memory</span>
+<span class="font-mono uppercase tracking-tighter text-sm font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">AI_NIKITKA93</span>
+</div>
+<button class="font-mono uppercase tracking-tighter text-sm text-cyan-400 dark:text-[#00F0FF] hover:bg-cyan-500 hover:text-black transition-all duration-75 px-2 py-1 border border-transparent hover:border-[#00F0FF]">
+            RU/EN
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-container-max px-gutter md:px-margin flex-grow grid grid-cols-1 md:grid-cols-12 gap-grid-unit md:gap-4 mt-8">
+<!-- Header / Terminal Logs Area -->
+<div class="col-span-1 md:col-span-12 border border-primary-container p-2 relative bg-surface-container-low mb-4">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label px-1 text-mono-label z-10">[SYS_LOG_01]</div>
+<div class="font-data-dense text-data-dense text-primary-fixed pt-4 h-20 overflow-hidden flex flex-col justify-end">
+<p>&gt; INITIATING NEURAL OVERLOAD PROTOCOL...</p>
+<p>&gt; ACCESSING ARCHIVE CLUSTER [7_NODES]...</p>
+<p>&gt; DECRYPTING VISUAL MEMORY BANKS...</p>
+<p class="text-secondary-container">&gt; WARNING: CORRUPTION DETECTED IN SECTOR 4.</p>
+<p>&gt; DISPLAYING DOSSIER CONTENTS.</p>
+</div>
+<div class="noise-overlay"></div>
+</div>
+<!-- Dossier Grid (Bento Style) -->
+<!-- Item 1: Large Image Card -->
+<article class="col-span-1 md:col-span-8 lg:col-span-6 relative group border border-primary-container h-64 md:h-96 overflow-hidden glitch-hover hover:glow-border-cyan transition-shadow bg-surface-container-low cursor-pointer flex flex-col justify-between">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label px-1 text-mono-label z-10 border-b border-r border-black">[IMG_MEM_001]</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-60 group-hover:opacity-100 transition-opacity duration-300" data-alt="Cyberpunk city street at night with neon signs reflecting in puddles, dense rain, cinematic lighting, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmFUzadoX7WPENVI7HPQ7qD-R0zfxLRQsZB9IEQiJnMQVQyQpVINZIjKxrkuTfVkrS52X1Hlw3o4WayvDRA19XwYcptRDVnmwgJH1sqsIyEv73WCTADpIiyRrSku-ABYQHkwH1mTuqNmogxWLpnLGReocd8k1ipIKxv_RlCK_g5Hsmxo3JvxrOh_UgbRYPllV1-AuOaKlwwhziSaDtwhDsHpdZiSU_v1UdtRonZAHa9YsTYPL5f-Dp0W3PWxTwlI6VY1QQv1QY15dy"/>
+<div class="noise-overlay"></div>
+<div class="absolute bottom-0 left-0 w-full p-2 bg-black/80 border-t border-primary-container backdrop-blur-sm z-10">
+<h2 class="font-headline-md text-headline-md text-primary-container">URBAN_SECTOR_7</h2>
+<p class="font-data-dense text-data-dense text-tertiary-fixed-dim">STATUS: COMPROMISED | TIMESTAMP: 2049.11.02</p>
+</div>
+</article>
+<!-- Item 2: Text/Data Card -->
+<article class="col-span-1 md:col-span-4 lg:col-span-3 relative border border-secondary-container h-64 md:h-96 bg-surface-container-lowest p-3 flex flex-col glitch-hover hover:glow-border-magenta transition-shadow cursor-pointer">
+<div class="absolute top-0 left-0 bg-secondary-container text-black font-mono-label px-1 text-mono-label z-10">[DAT_STREAM_A]</div>
+<div class="mt-6 font-data-dense text-data-dense text-primary-fixed flex-grow overflow-hidden flex flex-col gap-1">
+<div class="flex justify-between border-b border-primary-container/30 pb-1"><span>ID:</span><span>N-9982</span></div>
+<div class="flex justify-between border-b border-primary-container/30 pb-1"><span>CLASS:</span><span class="text-secondary-container">CRITICAL</span></div>
+<div class="flex justify-between border-b border-primary-container/30 pb-1"><span>CAPACITY:</span><span>89.4%</span></div>
+<div class="flex justify-between border-b border-primary-container/30 pb-1"><span>FREQ:</span><span>144Hz</span></div>
+<div class="mt-2 text-on-surface-variant break-words">
+                     01001000 01100101 01101100 01110000 00100000 01101101 01100101
+                 </div>
+<div class="w-full h-2 bg-surface-container-high mt-auto flex">
+<div class="w-4/5 bg-secondary-container border-r border-black"></div>
+</div>
+</div>
+<div class="noise-overlay"></div>
+</article>
+<!-- Item 3: Tall Image Card -->
+<article class="col-span-1 md:col-span-4 lg:col-span-3 row-span-1 md:row-span-2 relative group border border-primary-container h-64 md:h-auto overflow-hidden glitch-hover hover:glow-border-cyan transition-shadow bg-surface-container-low cursor-pointer flex flex-col justify-between">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label px-1 text-mono-label z-10">[IMG_MEM_002]</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:opacity-90 transition-opacity duration-300" data-alt="Close up of abstract glowing circuit board, macro photography, green and cyan luminous lines, dark background, technical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc3U6UMkTOpVOuKEtw1S-SEbZdLlKU8Y9Eeyj1BZQQbFDh-K3lOazEgIsAeoR8EnnorybgDWvENsvLlQO2AhGxPtOrOxMiX6WUAniKnWloSt5L2ZeFFjZLArIS8wRMPibjCFyCZJ59VRxeTPCxH3L5ebWOt7ZUR1eL7TtFsUKepo_aATmhjE-qNhQbZpzXTNWLttQEJFmeSoRe_EVC35YfaOVfhpVbNNXt96riTTp2hyNivdbu5H4tHvPxLC1QXQJGAveJPabVk_f5"/>
+<div class="noise-overlay"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-primary-container flex items-center justify-center bg-black/50 backdrop-blur-sm z-10 rounded-full">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-2 bg-black/80 border-t border-primary-container backdrop-blur-sm z-10">
+<h2 class="font-headline-md text-headline-md text-primary-container">CORE_INTEGRATION</h2>
+</div>
+</article>
+<!-- Item 4: Wide Text/Data Card -->
+<article class="col-span-1 md:col-span-8 lg:col-span-9 relative border border-primary-container h-48 bg-surface-container-low p-3 flex flex-col glitch-hover hover:glow-border-cyan transition-shadow cursor-pointer">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label px-1 text-mono-label z-10">[SYS_METRICS]</div>
+<div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 font-data-dense text-data-dense text-primary-fixed">
+<div class="border border-primary-container/50 p-2 flex flex-col items-center justify-center bg-black/40">
+<span class="text-tertiary-fixed-dim mb-1">TEMP</span>
+<span class="font-headline-md text-headline-md text-secondary-container">84°C</span>
+</div>
+<div class="border border-primary-container/50 p-2 flex flex-col items-center justify-center bg-black/40">
+<span class="text-tertiary-fixed-dim mb-1">LOAD</span>
+<span class="font-headline-md text-headline-md text-primary-container">92%</span>
+</div>
+<div class="border border-primary-container/50 p-2 flex flex-col items-center justify-center bg-black/40">
+<span class="text-tertiary-fixed-dim mb-1">THREAT LEVEL</span>
+<span class="font-headline-md text-headline-md text-error">HIGH</span>
+</div>
+<div class="border border-primary-container/50 p-2 flex flex-col items-center justify-center bg-black/40">
+<span class="text-tertiary-fixed-dim mb-1">UPLINK</span>
+<span class="font-headline-md text-headline-md text-primary-container">STABLE</span>
+</div>
+</div>
+<div class="noise-overlay"></div>
+</article>
+<!-- Item 5: Small Image Card -->
+<article class="col-span-1 md:col-span-4 lg:col-span-3 relative group border border-primary-container h-48 overflow-hidden glitch-hover hover:glow-border-cyan transition-shadow bg-surface-container-low cursor-pointer flex flex-col justify-between">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label px-1 text-mono-label z-10">[IMG_MEM_003]</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-70 group-hover:opacity-100 transition-opacity duration-300" data-alt="Abstract rendering of binary code falling like rain, matrix style, glowing cyan text on deep black background, cinematic depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI8dH8S35I9xEmi-N_oahyJWPyYvHc7DYlLcuNS5cAd4R40hNjufkXuaT5Fx19hzMf8nqsiZ5PrATMRFphBHsk_4Xaxah5IZleT3zJFIMVzd2IaeP1_8PI5uo251wjVLayGDBZloqQD5dAeQYg8UAG95uBflp02al13h2iGpNxRUlKhHwfPhcXPu8-y0lQFJPJoNkZraVPpHC_gmAxEyLiQAstHKSVyq0ohfUZ9WIQJ8urOGIMmiCiLwxnCy4q9hS9Lz-7JR4lXhUl"/>
+<div class="noise-overlay"></div>
+</article>
+<!-- Item 6: Small Data Card -->
+<article class="col-span-1 md:col-span-4 lg:col-span-3 relative border border-secondary-container h-48 bg-surface-container-lowest p-3 flex flex-col glitch-hover hover:glow-border-magenta transition-shadow cursor-pointer">
+<div class="absolute top-0 left-0 bg-secondary-container text-black font-mono-label px-1 text-mono-label z-10">[ERR_LOG]</div>
+<div class="mt-6 font-data-dense text-data-dense text-secondary-container flex flex-col gap-2 overflow-hidden">
+<p class="border-b border-secondary-container/30 pb-1">&gt; NULL_POINTER_EXCEPTION</p>
+<p class="border-b border-secondary-container/30 pb-1">&gt; MEMORY_LEAK_DETECTED</p>
+<p class="border-b border-secondary-container/30 pb-1">&gt; UNAUTHORIZED_ACCESS</p>
+<p class="animate-pulse">&gt; PURGING_CACHE...</p>
+</div>
+<div class="noise-overlay"></div>
+</article>
+<!-- Item 7: Wide Image Card -->
+<article class="col-span-1 md:col-span-4 lg:col-span-6 relative group border border-primary-container h-48 overflow-hidden glitch-hover hover:glow-border-cyan transition-shadow bg-surface-container-low cursor-pointer flex flex-col justify-between">
+<div class="absolute top-0 left-0 bg-primary-container text-black font-mono-label px-1 text-mono-label z-10">[IMG_MEM_004]</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-60 group-hover:opacity-100 transition-opacity duration-300" data-alt="Server room interior, endless rows of racks with blinking green and cyan LED lights, sterile cold atmosphere, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIYA0o0P50ODYey0l2JdSlkUJMFS2wPWRVYptjaf-bSEWiBwVaLUTJXEZOJJ4cfSABz7_KpdFFp-hRONJ_A1uYQ8ejQVFNS10OG6zBa7O-NjA6XsCvk8bK1KRuoOQOhFCX58MFiHD2-rx_hUbb3I5bhi762i_b_n-3wfFxu5zP1jPLnARtepH7igrQls9XX7CQc6eYauTFZVWwv9ihbGKrg7AqOnsVWib5DRDGTiqvtuTA3KHCwUGnahBQGpv0CeN71IrUhfNJhSaz"/>
+<div class="noise-overlay"></div>
+<div class="absolute bottom-0 right-0 p-2 bg-black/80 border-t border-l border-primary-container backdrop-blur-sm z-10">
+<span class="font-mono-label text-mono-label text-primary-container">ARCHIVE_FACILITY_B</span>
+</div>
+</article>
+</main>
+<!-- BottomNavBar (From JSON) - Rendered on mobile, mapped to active tab 'DOSSIER' -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-black dark:bg-[#050505] border-t border-[#00F0FF] shadow-[0_-5px_15px_rgba(0,240,255,0.3)] border-t-2 md:hidden">
+<!-- Active Tab: DOSSIER -->
+<div class="flex flex-col items-center justify-center bg-cyan-400 text-black p-1 shadow-[0_0_10px_#00F0FF] border-r-4 border-magenta-500 hover:bg-magenta-500/20 hover:text-white Active: border-l-2 border-magenta-500 animate-pulse flex-1 cursor-pointer">
+<span class="material-symbols-outlined mb-1">folder_shared</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">DOSSIER</span>
+</div>
+<!-- Inactive Tab: CONSOLE -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white flex-1 cursor-pointer border-r border-[#00F0FF]/30">
+<span class="material-symbols-outlined mb-1">terminal</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">CONSOLE</span>
+</div>
+<!-- Inactive Tab: PLANNING -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white flex-1 cursor-pointer border-r border-[#00F0FF]/30">
+<span class="material-symbols-outlined mb-1">event_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">PLANNING</span>
+</div>
+<!-- Inactive Tab: FIELD_NOTES -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white flex-1 cursor-pointer">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest">FIELD_NOTES</span>
+</div>
+</nav>
+<!-- Top Nav Tabs for Desktop (Equivalent to BottomNavBar) -->
+<nav class="hidden md:flex fixed top-12 left-0 w-full z-40 bg-black/90 border-b border-primary-container/50 h-8">
+<div class="flex w-full max-w-container-max mx-auto px-margin gap-4 items-end">
+<div class="bg-cyan-400 text-black px-4 py-1 font-mono-label text-mono-label font-bold border-l-2 border-magenta-500 shadow-[0_0_10px_#00F0FF] flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">folder_shared</span>
+                 DOSSIER
+             </div>
+<div class="text-cyan-700 px-4 py-1 font-mono-label text-mono-label hover:bg-cyan-500 hover:text-black transition-colors flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+                 CONSOLE
+             </div>
+<div class="text-cyan-700 px-4 py-1 font-mono-label text-mono-label hover:bg-cyan-500 hover:text-black transition-colors flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">event_note</span>
+                 PLANNING
+             </div>
+<div class="text-cyan-700 px-4 py-1 font-mono-label text-mono-label hover:bg-cyan-500 hover:text-black transition-colors flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+                 FIELD_NOTES
+             </div>
+</div>
+</nav>
+</body></html>

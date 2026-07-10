@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Overload Dossier</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#006970",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-background": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#810081",
+                      "tertiary-container": "#d9d9d9",
+                      "on-error": "#690005",
+                      "surface": "#131313",
+                      "background": "#131313",
+                      "secondary-container": "#fe00fe",
+                      "surface-variant": "#353534",
+                      "secondary-fixed": "#ffd7f5",
+                      "on-tertiary-container": "#5d5f5f",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary": "#5b005b",
+                      "surface-dim": "#131313",
+                      "on-secondary-fixed": "#380038",
+                      "on-primary-fixed-variant": "#004f54",
+                      "surface-tint": "#00dbe9",
+                      "primary-fixed": "#7df4ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-highest": "#353534",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#b9cacb",
+                      "tertiary": "#f5f5f5",
+                      "surface-bright": "#3a3939",
+                      "on-surface": "#e5e2e1",
+                      "outline-variant": "#3b494b",
+                      "on-primary-container": "#006970",
+                      "primary-fixed-dim": "#00dbe9",
+                      "secondary": "#ffabf3",
+                      "on-primary": "#00363a",
+                      "error": "#ffb4ab",
+                      "primary-container": "#00f0ff",
+                      "inverse-surface": "#e5e2e1",
+                      "outline": "#849495",
+                      "on-secondary-container": "#500050",
+                      "surface-container": "#201f1f",
+                      "inverse-on-surface": "#313030",
+                      "error-container": "#93000a",
+                      "primary": "#dbfcff",
+                      "on-primary-fixed": "#002022",
+                      "secondary-fixed-dim": "#ffabf3",
+                      "on-tertiary": "#2f3131"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "container-max": "1440px",
+                      "grid-unit": "4px",
+                      "margin": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "mono-label": [
+                              "monospace"
+                      ],
+                      "data-dense": [
+                              "monospace"
+                      ],
+                      "display-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-sm": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "mono-label": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "data-dense": [
+                              "10px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        /* CSS Scanlines and Grid Overlays per Style Guide */
+        body {
+            background-color: #050505; /* Level 0 Floor */
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 4px 4px;
+        }
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 40;
+            opacity: 0.3;
+        }
+        /* Chromatic Aberration / Glitch effects */
+        .glitch-text {
+            text-shadow: 2px 0 0 rgba(254,0,254,0.8), -2px 0 0 rgba(0,240,255,0.8);
+        }
+        .hover-glitch:hover {
+            transform: translate(1px, -1px);
+            box-shadow: -2px 2px 0 rgba(254,0,254,1);
+        }
+        /* Neon glow for active states */
+        .neon-glow-cyan {
+            box-shadow: 0 0 10px var(--color-primary-container);
+        }
+        .neon-glow-magenta {
+            box-shadow: 0 0 10px var(--color-secondary-container);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen relative font-body-lg text-body-lg overflow-x-hidden selection:bg-secondary-container selection:text-black">
+<div class="scanlines"></div>
+<!-- Shared Component: TopAppBar -->
+<header class="fixed top-0 z-50 w-full flex justify-between items-center px-2 h-12 bg-black/90 dark:bg-[#050505] docked full-width border-b border-[#00F0FF] border-b-2 border-cyan-500/50 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400 dark:text-[#00F0FF]" data-icon="memory" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="font-black tracking-[0.2em] text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">AI_NIKITKA93</span>
+</div>
+<div class="font-mono uppercase tracking-tighter text-sm text-cyan-400 dark:text-[#00F0FF] hover:bg-cyan-500 hover:text-black transition-all duration-75 px-3 py-1 cursor-pointer">RU/EN</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-20 pb-24 px-gutter md:px-margin max-w-container-max mx-auto relative z-10 grid grid-cols-12 gap-grid-unit md:gap-4 items-start">
+<!-- Contextual Back Action (Data dense style) -->
+<div class="col-span-12 mb-4">
+<button class="flex items-center gap-1 font-mono-label text-mono-label text-primary-fixed hover:text-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+<span>[RETURN_TO_ARCHIVE]</span>
+</button>
+</div>
+<!-- Layered Data Shells -->
+<!-- Shell 1: Large Glitched Title -->
+<article class="col-span-12 relative border border-secondary-container p-4 md:p-8 bg-surface-container-lowest/80 backdrop-blur-sm">
+<div class="absolute -top-[10px] left-4 bg-background px-2 font-mono-label text-mono-label text-secondary-container border-x border-secondary-container">[FILE_ID_938X]</div>
+<h1 class="font-display-xl text-display-xl text-primary-fixed uppercase tracking-tighter glitch-text mb-2 break-words">
+                Neural<br class="md:hidden"/> Overload
+            </h1>
+<p class="font-mono-label text-mono-label text-tertiary-fixed-dim border-l-2 border-primary-fixed pl-2">CRITICAL EVENT CLASSIFICATION: CLASS-IV INCIDENT RECORDING.</p>
+</article>
+<!-- Shell 2: Evidence Status -->
+<aside class="col-span-12 md:col-span-4 relative border border-primary-fixed p-4 bg-surface-container-lowest/80 h-full flex flex-col justify-center gap-4">
+<div class="absolute -top-[10px] left-4 bg-background px-2 font-mono-label text-mono-label text-primary-fixed border-x border-primary-fixed">[EVIDENCE_STATE]</div>
+<div class="flex items-center gap-4 border-b border-primary-fixed/30 pb-4">
+<div class="w-4 h-4 rounded-full bg-secondary-container neon-glow-magenta animate-pulse flex-shrink-0"></div>
+<div class="font-headline-md text-headline-md text-secondary-container uppercase tracking-wider">Active Threat</div>
+</div>
+<div class="grid grid-cols-2 gap-2 font-data-dense text-data-dense">
+<div class="text-on-surface-variant text-right pr-2 border-r border-primary-fixed/30">QUARANTINE_LVL</div>
+<div class="text-primary-fixed pl-2">OMEGA-9</div>
+<div class="text-on-surface-variant text-right pr-2 border-r border-primary-fixed/30">CORRUPTION_IDX</div>
+<div class="text-secondary-container pl-2 font-bold">98.4% [ERR]</div>
+<div class="text-on-surface-variant text-right pr-2 border-r border-primary-fixed/30">LIFESPAN</div>
+<div class="text-primary-fixed pl-2">PERSISTENT</div>
+</div>
+</aside>
+<!-- Shell 3: Issuer / Technical Data -->
+<section class="col-span-12 md:col-span-8 relative border border-primary-fixed p-4 bg-surface-container-lowest/80">
+<div class="absolute -top-[10px] left-4 bg-background px-2 font-mono-label text-mono-label text-primary-fixed border-x border-primary-fixed">[ISSUER_TELEMETRY]</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Data Block A -->
+<div class="border border-primary-fixed/30 p-2">
+<div class="font-mono-label text-mono-label text-primary-fixed-dim border-b border-primary-fixed/30 pb-1 mb-2 uppercase">Source Node</div>
+<div class="font-data-dense text-data-dense text-on-surface break-all space-y-1">
+<div class="flex justify-between hover:bg-primary-fixed/10 px-1"><span>IP_ROUTING:</span> <span class="text-primary-fixed">192.168.##.##</span></div>
+<div class="flex justify-between hover:bg-primary-fixed/10 px-1"><span>MAC_SPOOF:</span> <span class="text-primary-fixed">TRUE</span></div>
+<div class="flex justify-between hover:bg-primary-fixed/10 px-1"><span>GEO_LOC:</span> <span class="text-secondary-container">[REDACTED]</span></div>
+<div class="flex justify-between hover:bg-primary-fixed/10 px-1"><span>SIGNATURE:</span> <span class="text-primary-fixed">HX-77B-ALFA</span></div>
+</div>
+</div>
+<!-- Data Block B -->
+<div class="border border-primary-fixed/30 p-2">
+<div class="font-mono-label text-mono-label text-primary-fixed-dim border-b border-primary-fixed/30 pb-1 mb-2 uppercase">Vector Analysis</div>
+<div class="space-y-2">
+<!-- Brutalist Progress Bar -->
+<div>
+<div class="flex justify-between font-data-dense text-data-dense mb-1">
+<span class="text-on-surface-variant">Penetration Rate</span>
+<span class="text-secondary-container">89%</span>
+</div>
+<div class="w-full flex gap-[1px] h-2">
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container opacity-20"></div>
+<div class="flex-1 bg-secondary-container opacity-20"></div>
+</div>
+</div>
+<div class="font-data-dense text-data-dense text-on-surface mt-2">
+                            &gt; Payload delivery confirmed.<br/>
+                            &gt; Synaptic firewalls breached.<br/>
+<span class="text-secondary-container animate-pulse">&gt; OVERLOAD IMMINENT.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Shell 4: Notes / Terminal Output -->
+<section class="col-span-12 relative border border-primary-fixed bg-surface-container-lowest/90 overflow-hidden">
+<div class="bg-primary-fixed/10 border-b border-primary-fixed p-1 px-4 flex justify-between items-center">
+<span class="font-mono-label text-mono-label text-primary-fixed">[RAW_FEED_INTERCEPT]</span>
+<span class="material-symbols-outlined text-primary-fixed text-[14px]">terminal</span>
+</div>
+<div class="p-4 h-48 overflow-y-auto font-data-dense text-data-dense text-primary-fixed-dim space-y-1">
+<p>SYS_LOG [04:12:00.001]: Initializing neural handshake...</p>
+<p>SYS_LOG [04:12:00.054]: Handshake accepted. Connection established.</p>
+<p class="text-secondary-container">WARN [04:12:01.120]: Unusual traffic volume detected on port 8080.</p>
+<p>SYS_LOG [04:12:01.500]: Attempting auto-throttling.</p>
+<p class="text-secondary-container glitch-text">ERR [04:12:02.000]: Throttling failed. Override command received.</p>
+<p>SYS_LOG [04:12:02.100]: Dumping memory registers...</p>
+<p>DATA: 0x00F0 0x00FF 0xFE00 0xFEFE 0x0000 0x1111 ...</p>
+<p>DATA: 0xAAAA 0xBBBB 0xCCCC 0xDDDD 0xEEEE 0xFFFF ...</p>
+<p class="text-secondary-container font-bold">CRIT [04:12:03.000]: NEURAL OVERLOAD DETECTED. SEVERING TRUNK LINE.</p>
+<p>SYS_LOG [04:12:03.001]: Disconnect protocol initiated.</p>
+<p class="animate-pulse">SYS_LOG [04:12:03.002]: ...awaiting manual reset.</p>
+</div>
+</section>
+<!-- Action Area -->
+<div class="col-span-12 flex justify-end gap-4 mt-4">
+<button class="border border-primary-fixed text-primary-fixed font-mono-label text-mono-label px-6 py-2 hover-glitch hover:bg-primary-fixed hover:text-black transition-all">
+                [DECRYPT_FULL_LOG]
+            </button>
+<button class="border border-secondary-container text-secondary-container font-mono-label text-mono-label px-6 py-2 hover-glitch hover:bg-secondary-container hover:text-black transition-all neon-glow-magenta bg-secondary-container/10">
+                [PURGE_RECORD]
+            </button>
+</div>
+</main>
+<!-- Shared Component: BottomNavBar (Visible on Mobile to show app context, Active: DOSSIER) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-black border-t border-[#00F0FF] border-t-2 shadow-[0_-5px_15px_rgba(0,240,255,0.3)] md:hidden">
+<!-- Active Nav Item -->
+<div class="flex flex-col items-center justify-center bg-cyan-400 text-black p-1 shadow-[0_0_10px_#00F0FF] border-r-4 border-magenta-500 border-l-2 animate-pulse flex-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="folder_shared" style="font-variation-settings: 'FILL' 1;">folder_shared</span>
+<span class="font-mono text-[9px] font-bold tracking-widest uppercase">DOSSIER</span>
+</div>
+<!-- Inactive Nav Items -->
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-all flex-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-mono text-[9px] font-bold tracking-widest uppercase">CONSOLE</span>
+</div>
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-all flex-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest uppercase">PLANNING</span>
+</div>
+<div class="flex flex-col items-center justify-center text-cyan-600 p-1 opacity-70 hover:bg-magenta-500/20 hover:text-white transition-all flex-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-mono text-[9px] font-bold tracking-widest uppercase">FIELD_NOTES</span>
+</div>
+</nav>
+</body></html>

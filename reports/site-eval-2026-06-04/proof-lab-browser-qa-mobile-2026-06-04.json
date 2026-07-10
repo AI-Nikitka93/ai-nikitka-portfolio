@@ -1,0 +1,50 @@
+{
+  "home": {
+    "height": 844,
+    "horizontalOverflow": false,
+    "proofHeroTop": 687,
+    "scannerPresent": true,
+    "scannerRadioCount": 4,
+    "scannerTop": 1985,
+    "width": 390
+  },
+  "homeScreenshotBytes": 42023,
+  "portfolio": {
+    "compactIndexLinks": 7,
+    "compactIndexTop": 11393,
+    "fileBackedTop": 4363,
+    "heroProofTop": 738,
+    "horizontalOverflow": false
+  },
+  "portfolioScreenshotBytes": 39695,
+  "services": {
+    "calculatorTop": 1667,
+    "checkboxCount": 5,
+    "horizontalOverflow": false,
+    "quickChoiceTop": 781,
+    "radioCount": 19,
+    "sourceLinkMinHeight": 44
+  },
+  "servicesScreenshotBytes": 42817,
+  "assistant": {
+    "animatedTextAriaHidden": "true",
+    "heroActionTop": 685,
+    "horizontalOverflow": false,
+    "panelTop": 1218,
+    "sourceCardCount": 3
+  },
+  "assistantScreenshotBytes": 45828,
+  "caseDetail": {
+    "hasCaseStudySpine": true,
+    "horizontalOverflow": false,
+    "spineTextIncludesEvidence": true
+  },
+  "english": {
+    "headerCopy": true,
+    "horizontalOverflow": false,
+    "proofRailLinks": 3,
+    "skipText": "Skip to content"
+  },
+  "englishScreenshotBytes": 44175,
+  "consoleErrors": []
+}

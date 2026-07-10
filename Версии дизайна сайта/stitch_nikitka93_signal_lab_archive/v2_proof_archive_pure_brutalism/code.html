@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIGNAL_LAB // АРХИВ ДОКАЗАТЕЛЬСТВ</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e9e2d1",
+                        "on-tertiary-fixed": "#1e1b11",
+                        "on-tertiary": "#343025",
+                        "surface": "#111413",
+                        "secondary": "#ffb59a",
+                        "tertiary-container": "#e9e2d1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-secondary": "#5b1b00",
+                        "tertiary-fixed-dim": "#cdc6b6",
+                        "on-tertiary-fixed-variant": "#4b473b",
+                        "surface-container-highest": "#323534",
+                        "outline": "#8c947b",
+                        "primary-container": "#b0f734",
+                        "outline-variant": "#424935",
+                        "on-primary-fixed": "#121f00",
+                        "on-primary-container": "#4a6f00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "inverse-surface": "#e1e3e1",
+                        "surface-container-lowest": "#0c0f0e",
+                        "on-tertiary-container": "#696457",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-bright": "#373a38",
+                        "surface-variant": "#323534",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-high": "#282b29",
+                        "inverse-primary": "#456800",
+                        "tertiary": "#ffffff",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#96da06",
+                        "on-surface": "#e1e3e1",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c2caaf",
+                        "secondary-container": "#cd4700",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#111413",
+                        "surface-container": "#1d201f",
+                        "inverse-on-surface": "#2e3130",
+                        "surface-tint": "#96da06",
+                        "surface-container-low": "#191c1b",
+                        "on-primary": "#223600",
+                        "primary-fixed": "#b0f734",
+                        "on-error": "#690005",
+                        "background": "#111413",
+                        "on-background": "#e1e3e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "margin": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "body-large": ["IBM Plex Mono"],
+                        "label-tiny": ["IBM Plex Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-main": ["IBM Plex Mono"],
+                        "metadata": ["IBM Plex Mono"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-large": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-tiny": ["10px", { "lineHeight": "120%", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "display-xl": ["120px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-main": ["14px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "metadata": ["12px", { "lineHeight": "140%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-fixed selection:text-background font-body-main antialiased relative">
+<!-- TopNavBar (Web) -->
+<nav class="hidden md:flex bg-[#0A0D0C] border-b-[0.5px] border-[#8E968C] flex justify-between items-center w-full px-10 h-16 max-w-full fixed top-0 z-50">
+<div class="text-xl font-bold tracking-widest text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase">SIGNAL_LAB [V2.0]</div>
+<div class="flex items-center h-full gap-8">
+<a class="h-full flex items-center text-[#B7FF3C] border-b-2 border-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 opacity-80 px-4" href="#">ARCHIVE</a>
+<a class="h-full flex items-center text-[#8E968C] font-mono font-['Space_Grotesk'] tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">SIGNALS</a>
+<a class="h-full flex items-center text-[#8E968C] font-mono font-['Space_Grotesk'] tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">ATLAS</a>
+<a class="h-full flex items-center text-[#8E968C] font-mono font-['Space_Grotesk'] tracking-tighter uppercase hover:bg-[#B7FF3C] hover:text-[#0A0D0C] transition-colors duration-100 px-4" href="#">TERMINAL</a>
+</div>
+<div class="text-[#B7FF3C] font-['Space_Grotesk'] tracking-tighter uppercase">EN/RU</div>
+</nav>
+<!-- Main Canvas -->
+<main class="w-full max-w-container-max mx-auto px-margin pb-margin pt-[calc(64px+40px)] md:pt-[calc(64px+80px)]">
+<!-- Header Section -->
+<header class="mb-12 border-b-[0.5px] border-outline pb-8">
+<div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
+<div>
+<div class="inline-flex items-center gap-2 border border-outline px-2 py-1 mb-6 bg-surface-container-low">
+<span class="w-2 h-2 bg-primary-fixed block"></span>
+<span class="font-label-tiny text-label-tiny text-on-surface uppercase">СИСТЕМНЫЙ СТАТУС: ОПЕРАТИВЕН</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-2">Архив Доказательств</h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-2xl">Структурированный реестр перехваченных сигналов, аномалий и засекреченных объектов. Доступ уровня ОМЕГА.</p>
+</div>
+<div class="flex gap-8 text-right">
+<div class="flex flex-col">
+<span class="font-metadata text-metadata text-outline uppercase">Всего Записей</span>
+<span class="font-headline-md text-headline-md text-primary-fixed">8,492</span>
+</div>
+<div class="flex flex-col border-l-[0.5px] border-outline pl-8">
+<span class="font-metadata text-metadata text-outline uppercase">Обновление</span>
+<span class="font-headline-md text-headline-md text-on-surface">04:22 GMT</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Tabular Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Dossier Card 01 -->
+<article class="border-[1px] border-outline bg-surface-container-lowest relative flex flex-col group hover:border-primary-fixed transition-colors duration-200">
+<span class="absolute top-2 right-4 font-display-xl text-display-xl text-surface-container z-0 pointer-events-none select-none">01</span>
+<div class="p-6 relative z-10 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mb-6 drop-shadow-md">Объект 'Сириус'</h2>
+<div class="aspect-video w-full bg-surface-container mb-6 border-[0.5px] border-outline overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Surveillance Footage" class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="grainy monochromatic drone surveillance footage of a brutalist concrete building deep in a snow covered forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf0DFcCm4zMldhMVfIsFJLfA3fkaK9efvSEHJuwK3MqkH0NzMRESkJAv_reFXf6B5xEg6oeXdOq_fjTJRkrfiApc3IemQhpxF5qOnxmT58nRCaBo_vIDJ94zZAtlppoibVz-x0Ni9vUuHuNQjfbqSfkoJxmzTkxXbc_x5nfU6PdL_F_MYwen42vCnJXwJBu8ZoyN7ukBz2p7wG-h_KjVr3YON8zj5Vb_nnesmt1m5Zs9lJvw0zmS2YOgZLM6Pv2qfjtH60r_g3P03w"/>
+<div class="absolute inset-0 bg-primary-fixed/10 mix-blend-overlay"></div>
+<div class="absolute top-2 left-2 bg-background/80 border-[0.5px] border-outline px-2 py-1 font-label-tiny text-label-tiny text-primary-fixed backdrop-blur-sm uppercase">REC REC REC</div>
+</div>
+<div class="flex-grow flex flex-col justify-end space-y-0 border-t-[0.5px] border-outline">
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[ИДЕНТИФИКАТОР]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">SR-001-ALPHA</span>
+</div>
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[СТАТУС]</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-fixed"></span>
+<span class="font-metadata text-metadata text-primary-fixed uppercase font-bold">Активен</span>
+</div>
+</div>
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[ЛОКАЦИЯ]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">Сектор 4, Зона Отчуждения</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[УГРОЗА]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase text-error">КРИТИЧЕСКАЯ</span>
+</div>
+</div>
+</div>
+<button class="w-full border-t-[1px] border-outline py-4 px-6 font-body-main text-body-main uppercase text-center text-on-surface bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors duration-150 tracking-widest font-bold">
+                    Открыть Досье
+                </button>
+</article>
+<!-- Dossier Card 02 -->
+<article class="border-[1px] border-outline bg-surface-container-lowest relative flex flex-col group hover:border-primary-fixed transition-colors duration-200">
+<span class="absolute top-2 right-4 font-display-xl text-display-xl text-surface-container z-0 pointer-events-none select-none">02</span>
+<div class="p-6 relative z-10 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mb-6 drop-shadow-md">Проект 'Вега'</h2>
+<div class="aspect-video w-full bg-surface-container mb-6 border-[0.5px] border-outline overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Data Visualization" class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="highly abstract corrupted data visualization with harsh geometric lines and static interference in stark black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx2am94LU5d7bsVNMXNG65QA9mA5scQBs2ljmwMZLdCmI8nl6udKHtpLcN6LNjDY0U_rwf3giQeYbNN15ALXBY1mTRAfITa4vzArC5y_5PY4rMcBtvdVYm9GuYfQdUD61vzW48laLQB2gH6GxD7YUJvzXjZ1V8EdFhseD9L54St86AjMW5ZCiqRzL9JLdkzMWBUoerB3tBrQt4VZjZeG6Fmg7GMAAivfMiUA3KOC_ZbQTCT64AK8us4hOAW6HkRLRL888UdLM3E5D0"/>
+<div class="absolute inset-0 bg-primary-fixed/10 mix-blend-overlay"></div>
+</div>
+<div class="flex-grow flex flex-col justify-end space-y-0 border-t-[0.5px] border-outline">
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[ИДЕНТИФИКАТОР]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">VG-992-BETA</span>
+</div>
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[СТАТУС]</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-outline-variant"></span>
+<span class="font-metadata text-metadata text-outline uppercase font-bold">Засекречен</span>
+</div>
+</div>
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[ЛОКАЦИЯ]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">ДАННЫЕ УДАЛЕНЫ</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[УГРОЗА]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase text-secondary">ВЫСОКАЯ</span>
+</div>
+</div>
+</div>
+<button class="w-full border-t-[1px] border-outline py-4 px-6 font-body-main text-body-main uppercase text-center text-on-surface bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors duration-150 tracking-widest font-bold">
+                    Открыть Досье
+                </button>
+</article>
+<!-- Dossier Card 03 -->
+<article class="border-[1px] border-outline bg-surface-container-lowest relative flex flex-col group hover:border-primary-fixed transition-colors duration-200">
+<span class="absolute top-2 right-4 font-display-xl text-display-xl text-surface-container z-0 pointer-events-none select-none">03</span>
+<div class="p-6 relative z-10 flex-grow flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mb-6 drop-shadow-md">Аномалия 89-A</h2>
+<div class="aspect-video w-full bg-surface-container mb-6 border-[0.5px] border-outline overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Circuit Analysis" class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="close up macro photography of an integrated circuit board bathed in harsh artificial white light casting sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4VOOg9icSdMulaCdvwVlvi4Owy14UIy4OUy6sGBQqEv7zCj83rMX9X8cUNf8NS_TRBjzWfic9LNfhl8-2Ztf_ZGE_OKlxTmHwMnWpULRwIgK7SEDOXWd-08WD3dFe33TCKuTSw57wDtlD9jzZTJbj16oMOpCdIJJAbQVxojAtz-rrfFX5ancnYwGgdd6rR-teyvtAe0BXxc6J6PE_-ETSpfexvE_Ee1ZX_WUw-61Lb8Mo3NhbZHk-c50su0pMmTCwN3Qxq-cXcOGL"/>
+<div class="absolute inset-0 bg-primary-fixed/10 mix-blend-overlay"></div>
+</div>
+<div class="flex-grow flex flex-col justify-end space-y-0 border-t-[0.5px] border-outline">
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[ИДЕНТИФИКАТОР]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">AN-089-A</span>
+</div>
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[СТАТУС]</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="font-metadata text-metadata text-secondary uppercase font-bold">Анализ</span>
+</div>
+</div>
+<div class="flex justify-between py-3 border-b-[0.5px] border-outline">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[ЛОКАЦИЯ]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">Узел 12, Сеть Терминалов</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase">[УГРОЗА]</span>
+<span class="font-metadata text-metadata text-on-surface uppercase">НЕИЗВЕСТНАЯ</span>
+</div>
+</div>
+</div>
+<button class="w-full border-t-[1px] border-outline py-4 px-6 font-body-main text-body-main uppercase text-center text-on-surface bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors duration-150 tracking-widest font-bold">
+                    Открыть Досье
+                </button>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-[#0A0D0C]">
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter" href="#">
+<span class="material-symbols-outlined mb-1">dynamic_feed</span>
+            FEED
+        </a>
+<a class="flex flex-col items-center justify-center text-[#B7FF3C] border-t-2 border-[#B7FF3C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">radar</span>
+            SIGNALS
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter" href="#">
+<span class="material-symbols-outlined mb-1">public</span>
+            MAP
+        </a>
+<a class="flex flex-col items-center justify-center text-[#8E968C] py-2 hover:bg-[#161B19] w-full h-full font-mono text-[10px] tracking-tighter" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+            USER
+        </a>
+</nav>
+</body></html>

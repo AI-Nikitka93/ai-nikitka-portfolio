@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mission Scope Acquisition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#ffb4a8",
+                        "tertiary-fixed": "#ffdbd1",
+                        "on-surface-variant": "#c3caac",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#ffdad4",
+                        "primary-fixed": "#b8f600",
+                        "on-tertiary": "#601400",
+                        "on-tertiary-container": "#bc3000",
+                        "surface-tint": "#a1d800",
+                        "surface-container": "#201f1f",
+                        "outline": "#8d9479",
+                        "inverse-primary": "#4b6700",
+                        "tertiary-container": "#ffdbd1",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#ff9a8a",
+                        "on-primary-fixed-variant": "#384e00",
+                        "on-primary-fixed": "#141f00",
+                        "secondary-container": "#920703",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#b8f600",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#410000",
+                        "surface-variant": "#353534",
+                        "on-secondary": "#690000",
+                        "tertiary-fixed-dim": "#ffb5a0",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "on-primary": "#263500",
+                        "surface-container-highest": "#353534",
+                        "tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb4a8",
+                        "on-tertiary-fixed": "#3b0900",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#872000",
+                        "on-primary-container": "#506e00",
+                        "primary-fixed-dim": "#a1d800",
+                        "inverse-on-surface": "#313030",
+                        "inverse-surface": "#e5e2e1",
+                        "outline-variant": "#434933",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#920703"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "border-thick": "4px",
+                        "border-thin": "2px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "metadata": ["IBM Plex Mono"],
+                        "label-bold": ["IBM Plex Mono"],
+                        "body": ["IBM Plex Mono"],
+                        "h3": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["72px", { "lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "metadata": ["12px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.0", "fontWeight": "700" }],
+                        "body": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom styles to enforce rigid borders and spacing where Tailwind utilities are insufficient for the exact aesthetic */
+        .cyber-border {
+            border: 2px solid theme('colors.outline');
+        }
+        .cyber-border-thick {
+            border: 4px solid theme('colors.primary-fixed');
+        }
+        .cyber-focus:focus-within {
+            border-color: theme('colors.primary-fixed');
+            outline: none;
+        }
+        .cyber-shadow {
+            box-shadow: 4px 4px 0px 0px theme('colors.primary-fixed');
+        }
+        .cyber-shadow-active:active {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+        .cyber-shadow-error {
+            box-shadow: 4px 4px 0px 0px theme('colors.error');
+        }
+        
+        /* Blinking cursor effect for active inputs */
+        .cyber-input:focus {
+            caret-color: theme('colors.primary-fixed');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col selection:bg-primary-fixed selection:text-background">
+<!-- TopAppBar from JSON -->
+<header class="flex justify-between items-center w-full px-6 py-4 max-w-none bg-zinc-950 font-mono uppercase tracking-tighter text-sm docked full-width top-0 border-b-4 border-[#BFFF00] shadow-[4px_4px_0px_0px_rgba(191,255,0,1)] z-50">
+<div class="text-2xl font-black text-[#BFFF00] border-2 border-[#BFFF00] px-2 py-1 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+            AI_NIKITKA93
+        </div>
+<nav class="hidden md:flex gap-4">
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">01_HOME</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">02_ARCHIVE</a>
+<a class="text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">03_LOGS</a>
+<a class="bg-[#BFFF00] text-zinc-950 font-bold px-3 py-1 hover:bg-[#BFFF00] hover:text-zinc-950 cursor-crosshair active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">04_INTEL</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-[#BFFF00] hover:bg-zinc-800 px-3 py-1 transition-colors hover:text-zinc-950 cursor-crosshair border-2 border-[#BFFF00]">RU/EN</button>
+<button class="bg-[#BFFF00] text-zinc-950 font-bold px-4 py-2 hover:bg-zinc-800 hover:text-[#BFFF00] cursor-crosshair transition-colors border-2 border-[#BFFF00] active:translate-x-1 active:translate-y-1 active:shadow-none">ACCESS_TERMINAL</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-sm md:p-lg flex flex-col items-center justify-start pt-xl">
+<!-- Intake Terminal Container -->
+<div class="w-full max-w-4xl cyber-border-thick bg-surface-container p-sm md:p-md flex flex-col gap-md relative">
+<!-- System Label -->
+<div class="absolute -top-[14px] left-sm bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-xs py-[2px] border-2 border-primary-fixed uppercase tracking-widest">
+                [INTAKE_FORM_04]
+            </div>
+<!-- Terminal Header -->
+<div class="border-b-2 border-outline pb-sm flex justify-between items-end">
+<div>
+<h1 class="font-h2 text-h2 text-primary uppercase tracking-tighter">MISSION_SCOPE_ACQUISITION</h1>
+<p class="font-metadata text-metadata text-on-surface-variant uppercase mt-xs">ENTER MISSION PARAMETERS // AWAITING INPUT...</p>
+</div>
+<div class="hidden md:flex gap-xs">
+<span class="w-3 h-3 bg-error rounded-full animate-pulse"></span>
+<span class="font-metadata text-metadata text-error uppercase">REC</span>
+</div>
+</div>
+<!-- Intake Form Grid -->
+<form class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<!-- Objective Input -->
+<div class="md:col-span-2 flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold text-primary-fixed uppercase">1.0_PRIMARY_OBJECTIVE</label>
+<div class="cyber-border cyber-focus bg-surface-container-lowest flex items-center p-xs group transition-colors">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary-fixed mr-xs">target</span>
+<input class="bg-transparent border-none w-full font-body text-body text-on-surface focus:ring-0 placeholder:text-outline p-0 cyber-input" placeholder="DEFINE_TARGET_OUTCOME..." type="text"/>
+</div>
+</div>
+<!-- Designation Selection -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold text-primary-fixed uppercase">2.1_THREAT_DESIGNATION</label>
+<div class="grid grid-cols-2 gap-xs">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="threat" type="radio"/>
+<div class="cyber-border bg-surface-container-lowest p-xs text-center font-metadata text-metadata uppercase text-on-surface peer-checked:bg-primary-fixed peer-checked:text-on-primary-fixed peer-checked:border-primary-fixed hover:bg-surface-variant transition-colors">
+                                ALPHA_CLASS
+                            </div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="threat" type="radio"/>
+<div class="cyber-border bg-surface-container-lowest p-xs text-center font-metadata text-metadata uppercase text-on-surface peer-checked:bg-error peer-checked:text-background peer-checked:border-error hover:bg-surface-variant transition-colors">
+                                OMEGA_CLASS
+                            </div>
+</label>
+</div>
+</div>
+<!-- Resource Allocation -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold text-primary-fixed uppercase">2.2_RESOURCE_REQ</label>
+<select class="cyber-border bg-surface-container-lowest font-body text-body text-on-surface focus:ring-0 focus:border-primary-fixed p-xs w-full appearance-none rounded-none uppercase">
+<option value="minimal">MINIMAL_OP [1-2 PAX]</option>
+<option selected="" value="standard">STANDARD_OP [3-5 PAX]</option>
+<option value="heavy">HEAVY_ASSAULT [6+ PAX]</option>
+</select>
+</div>
+<!-- Tactical Details Textarea -->
+<div class="md:col-span-2 flex flex-col gap-xs mt-sm">
+<label class="font-label-bold text-label-bold text-primary-fixed uppercase flex justify-between">
+<span>3.0_TACTICAL_SUMMARY</span>
+<span class="text-outline text-metadata font-metadata">[MAX_1024_BYTES]</span>
+</label>
+<textarea class="cyber-border cyber-focus bg-surface-container-lowest font-body text-body text-on-surface focus:ring-0 placeholder:text-outline p-xs w-full min-h-[120px] resize-y rounded-none cyber-input" placeholder="INPUT_SITREP_AND_ENGAGEMENT_RULES..."></textarea>
+</div>
+<!-- Action Bar -->
+<div class="md:col-span-2 mt-md pt-sm border-t-2 border-outline flex justify-end gap-sm">
+<button class="bg-surface-container-high text-on-surface border-2 border-outline font-label-bold text-label-bold uppercase px-md py-xs hover:bg-surface-variant transition-colors" type="button">
+                        ABORT
+                    </button>
+<button class="bg-primary-fixed text-on-primary-fixed border-2 border-primary-fixed font-label-bold text-label-bold uppercase px-lg py-xs cyber-shadow cyber-shadow-active hover:bg-background hover:text-primary-fixed transition-all flex items-center gap-xs" type="submit">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                        INITIATE_ACQUISITION
+                    </button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer from JSON -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-6 py-2 gap-4 bg-zinc-950 font-mono text-[10px] leading-tight uppercase docked full-width bottom-0 border-t-4 border-[#BFFF00]">
+<div class="text-[#BFFF00]">
+            SYSTEM_ID: AI_NIKITKA93 // TIMESTAMP: 2024.10.27_14:02:55_UTC
+        </div>
+<div class="flex gap-4">
+<a class="text-zinc-500 hover:text-[#BFFF00]" href="#">ENCRYPTED_LINE</a>
+<a class="text-zinc-500 hover:text-[#BFFF00]" href="#">MAINFRAME_STATUS</a>
+<a class="text-[#BFFF00] underline hover:text-[#BFFF00]" href="#">UPTIME_99.9%</a>
+</div>
+</footer>
+</body></html>

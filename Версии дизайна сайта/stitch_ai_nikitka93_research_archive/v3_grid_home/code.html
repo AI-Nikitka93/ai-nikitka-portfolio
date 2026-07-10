@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic Grid | RESEARCH_GRID_93</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#484a44",
+                        "background": "#111411",
+                        "surface": "#111411",
+                        "on-error": "#690005",
+                        "tertiary-container": "#dfe4dc",
+                        "on-secondary-fixed-variant": "#464742",
+                        "surface-container-low": "#191c19",
+                        "tertiary-fixed-dim": "#c3c8c0",
+                        "on-background": "#e1e3dd",
+                        "inverse-primary": "#506600",
+                        "surface-container-highest": "#333632",
+                        "on-tertiary-fixed-variant": "#434842",
+                        "primary-fixed": "#c3f400",
+                        "surface-container-lowest": "#0c0f0c",
+                        "surface-tint": "#abd600",
+                        "on-secondary-fixed": "#1a1c18",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-dim": "#111411",
+                        "on-tertiary-container": "#616660",
+                        "surface-container-high": "#282b27",
+                        "on-secondary": "#2f312c",
+                        "secondary-fixed": "#e3e3db",
+                        "surface-variant": "#333632",
+                        "on-primary": "#283500",
+                        "error": "#ffb4ab",
+                        "secondary": "#c6c7bf",
+                        "on-primary-container": "#556d00",
+                        "primary-fixed-dim": "#abd600",
+                        "outline-variant": "#444933",
+                        "surface-bright": "#373a36",
+                        "on-surface": "#e1e3dd",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "tertiary-fixed": "#dfe4dc",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#181d18",
+                        "on-tertiary": "#2d322c",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#c6c7bf",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#2e312e",
+                        "error-container": "#93000a",
+                        "surface-container": "#1d201d",
+                        "on-secondary-container": "#b8b9b2",
+                        "outline": "#8e9379",
+                        "inverse-surface": "#e1e3dd",
+                        "primary-container": "#c3f400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-md": "800px",
+                        "margin": "48px",
+                        "container-sm": "400px",
+                        "container-lg": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "display-vertical": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-vertical": ["120px", { "lineHeight": "100px", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Kinetic Grid Overrides */
+        body { background-color: #111411; background-image: linear-gradient(to right, #242924 1px, transparent 1px), linear-gradient(to bottom, #242924 1px, transparent 1px); background-size: 8.33% 40px; background-position: left top; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-background">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 h-20 bg-zinc-950 border-b border-zinc-800 divide-x divide-zinc-800 fixed top-0 left-0 z-50">
+<div class="pr-6">
+<span class="text-2xl font-black text-lime-400 tracking-widest uppercase">AI_NIKITKA93</span>
+</div>
+<nav class="flex-1 flex justify-center space-x-8 px-6 hidden md:flex">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 px-2 py-1" href="#">STREAMS</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 px-2 py-1" href="#">LATTICE</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-lime-400 border-b-2 border-lime-400 pb-1 hover:bg-lime-400 hover:text-zinc-950 transition-colors duration-0 px-2" href="#">CORE</a>
+</nav>
+<div class="flex items-center space-x-4 pl-6">
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0"><span class="material-symbols-outlined" data-icon="sensors">sensors</span></button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0"><span class="material-symbols-outlined" data-icon="terminal">terminal</span></button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors duration-0"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center border-b border-zinc-800">
+<div class="absolute left-0 top-0 bottom-0 w-[8.33%] border-r border-zinc-800 flex flex-col justify-center items-center">
+<div class="flex flex-col space-y-8 font-label-caps text-label-caps tracking-widest transform -rotate-90">
+<span class="text-zinc-500 hover:text-primary-container cursor-pointer transition-colors duration-0">EN</span>
+<span class="text-primary-container font-black">RU</span>
+</div>
+</div>
+<div class="ml-[8.33%] w-full pl-gutter pr-gutter relative">
+<div class="absolute -top-32 right-[10%] w-[40%] h-[120%] border border-zinc-800 bg-surface-container-lowest z-0 transform translate-x-4 translate-y-4"></div>
+<div class="relative z-10 w-full max-w-5xl">
+<h1 class="font-display-vertical text-display-vertical text-primary-container uppercase break-words leading-none -ml-4">
+                        RESEARCH<br/>
+<span class="text-tertiary">GRID_93</span>
+</h1>
+<div class="mt-16 flex flex-col md:flex-row gap-8 items-start justify-end w-full border-t border-zinc-800 pt-8">
+<div class="w-full md:w-1/3 border border-zinc-800 p-6 bg-background relative overflow-hidden group hover:border-primary-container transition-colors duration-0">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary-container hidden group-hover:block"></div>
+<span class="font-label-caps text-label-caps text-zinc-500 block mb-4">SYSTEM_STATUS</span>
+<p class="font-body-lg text-body-lg text-tertiary">ASYMMETRIC BALANCE ENGAGED. NEURAL PATHWAYS OPTIMIZED.</p>
+</div>
+<div class="w-full md:w-1/2">
+<p class="font-body-md text-body-md text-zinc-400 mb-8 max-w-md">Deploying advanced spatial analytics algorithms across distributed nodes. The kinetic architecture ensures zero latency in data visualization streams.</p>
+<button class="bg-primary-container text-background font-label-caps text-label-caps px-8 py-4 hover:bg-background hover:text-primary-container border border-primary-container transition-all duration-0">INITIATE SEQUENCE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract decorative elements -->
+<div class="absolute bottom-0 right-[25%] w-px h-64 bg-primary-container"></div>
+<div class="absolute top-[20%] right-0 w-32 h-px bg-primary-container"></div>
+</section>
+<!-- Data Modules Section -->
+<section class="border-b border-zinc-800">
+<div class="flex flex-col md:flex-row w-full h-full">
+<!-- Module 1 -->
+<div class="w-full md:w-[41.66%] border-r border-zinc-800 p-12 relative min-h-[614px] flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary-container mb-4 block">MODULE_01</span>
+<h2 class="font-headline-md text-headline-md text-tertiary uppercase">Lattice<br/>Architecture</h2>
+</div>
+<div class="mt-16">
+<div class="h-48 w-full border border-zinc-800 bg-surface-container-low mb-6 relative overflow-hidden">
+<img alt="Abstract wireframe rendering of a complex 3d structural grid on a dark background" class="w-full h-full object-cover mix-blend-luminosity opacity-40" data-alt="Abstract wireframe rendering of a complex 3d structural grid on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOYXyClQc-JlXcIV7kwD9XtHFjMw7hI0WG0tCJgyN7PyHVilyTiNsx2Yqm2FUxwwq6StxGN07iQi9W1iiWV8YA-tJBcsnoDr8waT1wV6LdtX7u2ckPa0D5XYcnnNhlH91pNFXlaRFy8DgNQ8bSU1aKFW78c-cFQowKDuqMXNKsNO9zjqWWvF-7ycEomcKCpaSlPQ1hx8fFZAj3W7I7iqwfsqqHPGdm7s_An3NOLJIzgBB9Q2_GtWfHAhmLsQrTKeLk6uH4n1VGlql9"/>
+<div class="absolute inset-0 bg-primary-container mix-blend-overlay opacity-20"></div>
+</div>
+<p class="font-body-md text-body-md text-zinc-400">Non-Euclidean data structures mapped to real-time sensory inputs. Optimizing for non-linear traversal.</p>
+</div>
+</div>
+<!-- Module 2 -->
+<div class="w-full md:w-[58.33%] flex flex-col">
+<div class="border-b border-zinc-800 p-12 flex-1 flex flex-col justify-center bg-surface-container-highest relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzM2MzIiPjwvcmVjdD48cGF0aCBkPSJNMCAwdjhINHYtOEgweiIgZmlsbD0iIzI4MmIyNyI+PC9wYXRoPjwvc3ZnPg==')] opacity-50"></div>
+<div class="relative z-10 w-full md:w-2/3 ml-auto text-right">
+<span class="font-label-caps text-label-caps text-zinc-500 mb-4 block">MODULE_02</span>
+<h2 class="font-headline-lg text-headline-lg text-tertiary uppercase leading-none">FLUID<br/>DYNAMICS</h2>
+<button class="mt-8 border border-zinc-500 text-tertiary font-label-caps text-label-caps px-6 py-3 hover:bg-tertiary hover:text-background transition-colors duration-0 ml-auto flex items-center space-x-2">
+<span>ANALYZE</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="p-12 flex-1 flex items-end">
+<div class="w-full grid grid-cols-2 gap-8">
+<div class="border-t border-zinc-800 pt-4">
+<span class="font-headline-md text-headline-md text-primary-container block">99.9%</span>
+<span class="font-label-caps text-label-caps text-zinc-500">EFFICIENCY_QUOTIENT</span>
+</div>
+<div class="border-t border-zinc-800 pt-4">
+<span class="font-headline-md text-headline-md text-tertiary block">0.04ms</span>
+<span class="font-label-caps text-label-caps text-zinc-500">LATENCY_FLOOR</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-start p-12 gap-8 w-full bg-zinc-950 border-t-2 border-lime-400 font-['Space_Grotesk'] text-[10px] uppercase font-bold text-zinc-500 z-50 relative">
+<div class="text-lime-400 font-black">
+            ©2024 AI_NIKITKA93 // SWISS_MODERNISM_ENGINE
+        </div>
+<div class="flex space-x-8">
+<a class="hover:text-white transition-colors duration-0 text-zinc-500" href="#">TERMINAL</a>
+<a class="hover:text-white transition-colors duration-0 text-zinc-500" href="#">LATTICE_API</a>
+<a class="hover:text-white transition-colors duration-0 text-lime-400 underline" href="#">CORE_DEBUG</a>
+</div>
+</footer>
+</body></html>

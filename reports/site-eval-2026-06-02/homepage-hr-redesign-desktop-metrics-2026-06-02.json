@@ -1,0 +1,21 @@
+{
+  "clientWidth": 2052,
+  "h1": "AI-видео, генеративная графика и рабочие AI-прототипы.",
+  "horizontalOverflow": false,
+  "loadedProofImages": 3,
+  "proofHeroTop": 128,
+  "proofHeroVisible": true,
+  "proofImageCount": 3,
+  "scrollWidth": 2037,
+  "title": "AI_Nikitka93 — портфолио работ и проектов",
+  "url": "http://127.0.0.1:3200/",
+  "viewport": {
+    "height": 1272,
+    "width": 2052
+  },
+  "visibleTextChecks": {
+    "budget": true,
+    "hr": true,
+    "work": true
+  }
+}
