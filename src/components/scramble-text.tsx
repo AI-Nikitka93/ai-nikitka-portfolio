@@ -17,24 +17,28 @@ export function ScrambleText({
   className,
   delay = 0,
 }: ScrambleTextProps) {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const isRunningRef = useRef(false);
   const [prevText, setPrevText] = useState(text);
   const [displayText, setDisplayText] = useState(text);
   const frameRef = useRef<number | null>(null);
   const timeoutRef = useRef<number | null>(null);
-  const isRunningRef = useRef(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    }
-    return false;
-  });
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
     mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
+
+    const checkTimer = window.setTimeout(() => {
+      setPrefersReducedMotion(mediaQuery.matches);
+    }, 0);
+
+    return () => {
+      window.clearTimeout(checkTimer);
+      mediaQuery.removeEventListener("change", handler);
+    };
   }, []);
 
   // Synchronize state when text prop changes (React-recommended pattern)
