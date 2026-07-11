@@ -66,10 +66,10 @@ export function DossierPanel({
               style={{ animationDelay: `${(idx + 1) * 60}ms` }}
             >
               <dt className="font-mono text-[10px] tracking-[0.24em] text-titanium uppercase">
-                {item.key}
+                <ScrambleText text={item.key} delay={(idx + 1) * 80} />
               </dt>
               <dd className="mt-1.5 text-base font-medium text-foreground">
-                {item.value}
+                <ScrambleText text={item.value} delay={(idx + 1) * 80 + 150} />
               </dd>
             </div>
           ))}
@@ -81,14 +81,16 @@ export function DossierPanel({
         className="dossier-animate-item mt-8 pt-4 border-t border-border-subtle"
         style={{ animationDelay: `${(items.length + 1) * 60}ms` }}
       >
-        <p className="font-mono text-[10px] tracking-[0.2%e] text-titanium uppercase">
+        <p className="font-mono text-[10px] tracking-[0.2em] text-titanium uppercase">
           SYS.INTEGRATION_LEVEL
         </p>
         <div className="mt-3 space-y-3">
           {skills.map((skill, idx) => (
             <div key={skill.name} className="space-y-1">
               <div className="flex justify-between font-mono text-[9px]">
-                <span className="text-foreground">{skill.name}</span>
+                <span className="text-foreground">
+                  <ScrambleText text={skill.name} delay={(items.length + 2) * 80 + idx * 100} />
+                </span>
                 <span className="text-accent">{skill.pct}%</span>
               </div>
               <div className="h-1 bg-surface-muted rounded-full overflow-hidden border border-border-subtle">

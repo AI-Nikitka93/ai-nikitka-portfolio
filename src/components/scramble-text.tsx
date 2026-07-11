@@ -79,7 +79,7 @@ export function ScrambleText({
         setDisplayText(text);
         isRunningRef.current = false;
       } else {
-        iteration += 1 / 3; // Speed of decoding (adjust to make it smooth)
+        iteration += Math.max(0.4, text.length / 22);
         frameRef.current = requestAnimationFrame(tick);
       }
     };
