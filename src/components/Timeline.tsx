@@ -3,12 +3,14 @@
 import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { catalogData } from "@/data/catalog";
+import { Lang, t, translateMeta } from "@/utils/translate";
 
 interface TimelineProps {
+  lang: Lang;
   onSpotlightSelect: (id: string) => void;
 }
 
-export default function Timeline({ onSpotlightSelect }: TimelineProps) {
+export default function Timeline({ lang, onSpotlightSelect }: TimelineProps) {
   const releases = catalogData.releases;
   const artists = catalogData.artists;
 
@@ -30,21 +32,23 @@ export default function Timeline({ onSpotlightSelect }: TimelineProps) {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 pb-6 border-b border-border-primary">
         <div>
           <span className="text-[10px] font-bold text-brand-accent font-sans tracking-widest uppercase block mb-2">
-            ХРОНОЛОГИЯ ИЗДАНИЙ // RELEASES TIMELINE
+            {t("sectionTimelineTitle", lang)}
           </span>
           <h2 className="text-4xl md:text-5xl font-serif tracking-tight">
-            ХРОНОЛОГИЯ КАТАЛОГА
+            {t("sectionTimelineHeading", lang)}
           </h2>
         </div>
         
         {/* Sort Controls */}
         <div className="flex items-center gap-3">
-          <span className="text-[9px] font-sans font-bold tracking-wider uppercase text-text-secondary">СОРТИРОВКА:</span>
+          <span className="text-[9px] font-sans font-bold tracking-wider uppercase text-text-secondary">
+            {t("sortBy", lang)}
+          </span>
           <button
             onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "desc")}
             className="px-4 py-2 border border-border-primary hover:bg-bg-cardboard rounded-none text-[9px] font-bold tracking-wider text-text-primary transition-colors duration-200 uppercase font-sans"
           >
-            {sortOrder === "desc" ? "СНАЧАЛА НОВЫЕ ↓" : "СНАЧАЛА СТАРЫЕ ↑"}
+            {sortOrder === "desc" ? t("sortNewest", lang) : t("sortOldest", lang)}
           </button>
         </div>
       </div>
@@ -54,12 +58,12 @@ export default function Timeline({ onSpotlightSelect }: TimelineProps) {
         <table className="w-full text-left font-sans border-collapse min-w-[700px]">
           <thead>
             <tr className="text-[9px] font-sans font-bold tracking-wider text-text-secondary uppercase border-b border-border-primary">
-              <th className="py-4 font-bold">ГОД</th>
-              <th className="py-4 font-bold">ДАТА</th>
-              <th className="py-4 font-bold">НАЗВАНИЕ РЕЛИЗА</th>
-              <th className="py-4 font-bold">ИСПОЛНИТЕЛЬ</th>
-              <th className="py-4 font-bold">ЖАНР</th>
-              <th className="py-4 font-bold text-right">ДЕЙСТВИЕ</th>
+              <th className="py-4 font-bold">{t("timelineYear", lang)}</th>
+              <th className="py-4 font-bold">{t("timelineDate", lang)}</th>
+              <th className="py-4 font-bold">{t("timelineRelease", lang)}</th>
+              <th className="py-4 font-bold">{t("timelineArtist", lang)}</th>
+              <th className="py-4 font-bold">{t("timelineGenre", lang)}</th>
+              <th className="py-4 font-bold text-right">{t("timelineAction", lang)}</th>
             </tr>
           </thead>
           <tbody>
@@ -89,14 +93,14 @@ export default function Timeline({ onSpotlightSelect }: TimelineProps) {
                     {artist.name}
                   </td>
                   <td className="py-4 text-[10px] text-text-secondary font-sans font-bold uppercase tracking-wider">
-                    {release.genre} • {release.type}
+                    {translateMeta(release.genre, lang)} • {translateMeta(release.type, lang)}
                   </td>
                   <td className="py-4 text-right">
                     <button
                       onClick={() => onSpotlightSelect(release.id)}
                       className="px-4 py-1.5 border border-border-primary hover:bg-text-primary hover:text-bg-base rounded-none text-[9px] font-bold tracking-wider text-text-primary transition-all duration-200 uppercase"
                     >
-                      Смотреть
+                      {t("timelineView", lang)}
                     </button>
                   </td>
                 </motion.tr>

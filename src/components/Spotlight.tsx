@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { catalogData } from "@/data/catalog";
+import { Lang, t, translateMeta } from "@/utils/translate";
 
 interface SpotlightProps {
+  lang: Lang;
   selectedReleaseId: string;
 }
 
@@ -19,7 +21,7 @@ function getTrackDuration(title: string): string {
   return `${min}:${sec < 10 ? "0" : ""}${sec}`;
 }
 
-export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
+export default function Spotlight({ lang, selectedReleaseId }: SpotlightProps) {
   const releases = catalogData.releases;
   const artists = catalogData.artists;
 
@@ -33,8 +35,8 @@ export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
   const accentColor = artist.accent || "#ffffff";
 
   return (
-    <section id="spotlight" className="py-16 px-6 md:px-10 bg-[#f3efe9] overflow-hidden">
-      <div className="max-w-[1120px] mx-auto border border-[#111111] bg-[#111111] text-white p-8 md:p-12 relative flex flex-col lg:flex-row gap-12 items-center shadow-[4px_4px_0px_rgba(17,17,17,0.15)]">
+    <section id="spotlight" className="py-16 px-6 md:px-10 bg-bg-base overflow-hidden">
+      <div className="max-w-[1120px] mx-auto border border-border-primary bg-[#0f0f11] text-white p-8 md:p-12 relative flex flex-col lg:flex-row gap-12 items-center shadow-[4px_4px_0px_var(--color-border-primary)]">
         {/* Paper texture overlay */}
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white via-zinc-400 to-black pointer-events-none" />
 
@@ -48,52 +50,69 @@ export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
             }}
           >
             {/* Wear & Tear Sleeve lines */}
-            <div className="absolute inset-4 border border-black/20 pointer-events-none" />
-            <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-              <div className="flex flex-col font-sans uppercase font-bold text-black">
-                <span className="text-[9px] tracking-widest">{artist.shortLane}</span>
-                <span className="text-[13px] leading-none mt-1 truncate max-w-[150px]">{release.title}</span>
+            <div className="absolute inset-2 border border-white/5 pointer-events-none" />
+            <div className="absolute inset-4 border border-black/10 pointer-events-none" />
+            
+            {/* Album Label Artwork (styled procedurally) */}
+            <div className="absolute inset-0 flex flex-col justify-between p-6">
+              <div className="flex justify-between items-start">
+                <span className="text-[7px] font-mono tracking-widest text-white/50 uppercase">
+                  A93 ARCHIVE
+                </span>
+                <span className="text-[7px] font-mono tracking-widest text-white/50">
+                  {release.dateLabel.split(".").pop()}
+                </span>
               </div>
-              <div className="font-mono text-[9px] text-black/70 font-semibold">
-                {release.dateLabel}
+              <div className="flex flex-col gap-1">
+                <span className="text-[8px] font-sans font-bold uppercase tracking-widest" style={{ color: accentColor }}>
+                  {artist.name}
+                </span>
+                <h4 className="text-xl md:text-2xl font-serif font-bold text-white tracking-tight leading-tight uppercase">
+                  {release.title}
+                </h4>
               </div>
             </div>
-
-            {/* Vintage style stamp */}
-            <div className="absolute top-6 left-6 px-2 py-0.5 border border-black/40 text-black/70 font-serif text-[8px] font-bold uppercase rotate-[-8deg]">
-              Live Catalog
-            </div>
-
-            {/* Vinyl record wear shadow ring */}
-            <div className="absolute inset-0 rounded-full border border-black/5 m-12 pointer-events-none" />
+            {/* Sleeve Ring Wear */}
+            <div className="absolute inset-0 rounded-full border border-black/5 opacity-40 bg-[radial-gradient(circle_at_center,transparent_60%,rgba(0,0,0,0.25)_100%)] pointer-events-none" />
           </div>
 
-          {/* Rotating Vinyl Record peeking out */}
-          <motion.div
-            animate={{ rotate: isRotating ? 360 : 0 }}
-            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-            className="absolute left-[30%] w-60 h-60 md:w-76 md:h-76 rounded-full bg-[#0d0d0e] border border-black shadow-2xl flex items-center justify-center select-none pointer-events-none z-0"
+          {/* Vinyl Record sliding out */}
+          <div
+            className={`absolute top-4 bottom-4 left-24 right-0 rounded-full bg-[#111111] border border-zinc-800 flex items-center justify-center z-0 transition-transform duration-1000 ${
+              isRotating ? "animate-[spin_20s_linear_infinite]" : ""
+            }`}
             style={{
-              backgroundImage: "repeating-radial-gradient(circle, #0d0d0e, #0d0d0e 2px, #18181b 4px, #0d0d0e 5px)",
+              boxShadow: "5px 5px 25px rgba(0, 0, 0, 0.6)",
+              backgroundImage: "repeating-radial-gradient(circle, #222, #111 2px, #222 4px)",
             }}
           >
-            {/* Center label */}
+            {/* Grooves texture overlay */}
+            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.65)_100%)] opacity-80" />
+
+            {/* Vinyl Center Sticker */}
             <div
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full flex flex-col items-center justify-center p-2 text-center text-black font-sans uppercase relative"
-              style={{ backgroundColor: accentColor }}
+              className="w-24 h-24 rounded-full flex flex-col items-center justify-center p-2 text-center relative border border-black"
+              style={{
+                backgroundColor: accentColor,
+                color: "#111111",
+              }}
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-[#09090b] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2" />
-              <span className="text-[7px] font-black tracking-widest leading-none truncate max-w-[65px]">{artist.name}</span>
-              <span className="text-[6px] text-black/60 font-mono mt-1 font-semibold">{release.type}</span>
+              <span className="text-[5px] font-sans font-bold uppercase tracking-widest">
+                AI Nikitka93
+              </span>
+              <span className="text-[7px] font-serif font-black uppercase tracking-tight leading-tight my-0.5 truncate w-full">
+                {release.title}
+              </span>
+              <div className="w-1.5 h-1.5 rounded-full bg-[#000] mt-1 border border-zinc-800" />
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Story & Tracklist Column */}
-        <div className="flex-1 w-full flex flex-col justify-between self-stretch z-10">
-          <div className="flex flex-col">
-            <span className="text-[10px] font-bold text-[#a82c16] font-sans tracking-widest uppercase mb-2">
-              В ФОКУСЕ // FEATURED
+        {/* Detailed Description Column */}
+        <div className="flex-1 flex flex-col h-full gap-8 z-10 w-full">
+          <div>
+            <span className="text-[10px] font-bold text-brand-accent font-sans tracking-widest uppercase mb-2 block">
+              {t("spotlightTitle", lang)}
             </span>
             <AnimatePresence mode="wait">
               <motion.div
@@ -113,10 +132,10 @@ export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
                     {artist.name}
                   </span>
                   <span className="px-2.5 py-1 border border-zinc-800">
-                    {release.type}
+                    {translateMeta(release.type, lang)}
                   </span>
                   <span className="px-2.5 py-1 border border-zinc-800">
-                    {release.genre}
+                    {translateMeta(release.genre, lang)}
                   </span>
                   <span className="px-2.5 py-1 border border-zinc-800">
                     {release.dateLabel}
@@ -124,7 +143,10 @@ export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
                 </div>
                 
                 <p className="text-zinc-300 text-xs md:text-sm font-sans leading-relaxed max-w-[620px] mb-8">
-                  {release.story || "Эпическое музыкальное произведение, раскрывающее грани звука и характера артиста. Глубокое погружение в жанровые традиции с привлечением технологий нового поколения."}
+                  {release.story || (lang === "ru" 
+                    ? "Эпическое музыкальное произведение, раскрывающее грани звука и характера артиста. Глубокое погружение в жанровые традиции с привлечением технологий нового поколения."
+                    : "An epic musical piece that unfolds the facets of sound and the artist's character. A deep dive into genre traditions using next-generation technologies."
+                  )}
                 </p>
               </motion.div>
             </AnimatePresence>
@@ -132,7 +154,7 @@ export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
 
           <div className="mt-auto">
             <h4 className="text-[9px] font-bold font-sans tracking-widest uppercase text-zinc-500 mb-3">
-              ТРЕКЛИСТ // CATALOG LIST
+              {t("tracksTitle", lang)}
             </h4>
             <div className="border-t border-zinc-800 pt-3 flex flex-col gap-2">
               {release.tracks.map((track, trackIdx) => (
@@ -146,7 +168,7 @@ export default function Spotlight({ selectedReleaseId }: SpotlightProps) {
               ))}
             </div>
             <div className="mt-4 pt-3 border-t border-zinc-800 flex justify-between items-center text-[9px] font-sans font-bold text-zinc-500 uppercase tracking-wider">
-              <span>Всего: {release.tracks.length} треков</span>
+              <span>{lang === "ru" ? `Всего: ${release.tracks.length} треков` : `Total: ${release.tracks.length} tracks`}</span>
               <span>Demo Audio Loaded</span>
             </div>
           </div>

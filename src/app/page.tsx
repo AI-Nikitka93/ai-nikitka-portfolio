@@ -11,10 +11,25 @@ import ReleaseGrid from "@/components/ReleaseGrid";
 import Timeline from "@/components/Timeline";
 import Footer from "@/components/Footer";
 import { catalogData } from "@/data/catalog";
+import { Lang, t } from "@/utils/translate";
 
 export default function Home() {
   const [hoveredArtistIndex, setHoveredArtistIndex] = useState<number | null>(null);
   const [selectedReleaseId, setSelectedReleaseId] = useState<string>("");
+  const [lang, setLang] = useState<Lang>("ru");
+
+  // Load language preference from local storage
+  useEffect(() => {
+    const savedLang = localStorage.getItem("portfolio_lang") as Lang;
+    if (savedLang === "ru" || savedLang === "en") {
+      setLang(savedLang);
+    }
+  }, []);
+
+  const handleSetLang = (newLang: Lang) => {
+    setLang(newLang);
+    localStorage.setItem("portfolio_lang", newLang);
+  };
 
   // Initialize Lenis smooth scroll
   useEffect(() => {
@@ -55,7 +70,7 @@ export default function Home() {
       <div className="grain-overlay" />
 
       {/* Global Header */}
-      <Header />
+      <Header lang={lang} setLang={handleSetLang} />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col justify-center max-w-[1360px] mx-auto px-6 md:px-10 py-16 z-10 overflow-hidden">
@@ -64,13 +79,13 @@ export default function Home() {
           {/* Hero Copy (7 columns) */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <span className="text-[10px] font-bold text-brand-accent font-sans tracking-widest uppercase block">
-              ПРОДЮСЕРСКИЙ ЦЕНТР // CATALOG SHOWCASE
+              {t("heroOverline", lang)}
             </span>
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-text-primary tracking-tight leading-[1.08]">
-              Живой каталог артистов, альбомов и релизных линий.
+              {t("heroTitle", lang)}
             </h1>
             <p className="max-w-[580px] text-text-secondary font-sans text-sm sm:text-base leading-relaxed">
-              Восемь уникальных музыкальных веток под одним продюсерским штабом: от multilingual pop и academic classical до Indian devotional, Chinese pop, Bossa Nova и Arabic organic house.
+              {t("heroSubtitle", lang)}
             </p>
 
             {/* CTAs */}
@@ -79,23 +94,23 @@ export default function Home() {
                 href="#catalog"
                 className="inline-flex items-center justify-center min-h-[44px] px-6 bg-text-primary text-bg-base font-sans text-xs font-bold uppercase tracking-wider border border-border-primary hover:bg-transparent hover:text-text-primary transition-colors duration-200"
               >
-                Открыть каталог
+                {t("ctaOpenCatalog", lang)}
               </a>
               <a
                 href="#artists"
                 className="inline-flex items-center justify-center min-h-[44px] px-6 bg-transparent text-text-primary font-sans text-xs font-bold uppercase tracking-wider border border-border-primary hover:bg-text-primary hover:text-bg-base transition-colors duration-200"
               >
-                Смотреть артистов
+                {t("ctaViewArtists", lang)}
               </a>
             </div>
 
             {/* Statistics block */}
             <div className="grid grid-cols-4 gap-4 mt-8 max-w-[620px] border-t border-border-primary pt-6">
               {[
-                { label: "АРТИСТА", value: totalArtists },
-                { label: "РЕЛИЗОВ", value: totalReleases },
-                { label: "ТРЕКОВ", value: totalTracks },
-                { label: "ПОСЛЕДНИЙ", value: "02.06.2026", subVal: "Nikitka Kizevich", highlight: true },
+                { label: t("statArtists", lang), value: totalArtists },
+                { label: t("statReleases", lang), value: totalReleases },
+                { label: t("statTracks", lang), value: totalTracks },
+                { label: t("statLatest", lang), value: "02.06.2026", subVal: "Nikitka Kizevich", highlight: true },
               ].map((stat, idx) => (
                 <div key={idx} className="flex flex-col">
                   <span className="text-[9px] font-sans font-bold text-text-secondary uppercase tracking-wider">
@@ -134,21 +149,21 @@ export default function Home() {
       </section>
 
       {/* Artist Worlds Section */}
-      <ArtistGrid />
+      <ArtistGrid lang={lang} />
 
       {/* Spotlight Featured Section */}
       {selectedReleaseId && (
-        <Spotlight selectedReleaseId={selectedReleaseId} />
+        <Spotlight lang={lang} selectedReleaseId={selectedReleaseId} />
       )}
 
       {/* Release Catalog Grid */}
-      <ReleaseGrid onSpotlightSelect={(id) => setSelectedReleaseId(id)} />
+      <ReleaseGrid lang={lang} onSpotlightSelect={(id) => setSelectedReleaseId(id)} />
 
       {/* Timeline Section */}
-      <Timeline onSpotlightSelect={(id) => setSelectedReleaseId(id)} />
+      <Timeline lang={lang} onSpotlightSelect={(id) => setSelectedReleaseId(id)} />
 
       {/* Global Footer */}
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

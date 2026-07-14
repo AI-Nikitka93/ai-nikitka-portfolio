@@ -3,8 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { catalogData } from "@/data/catalog";
+import { Lang, t, translateArtist } from "@/utils/translate";
 
-export default function ArtistGrid() {
+interface ArtistGridProps {
+  lang: Lang;
+}
+
+export default function ArtistGrid({ lang }: ArtistGridProps) {
   const artists = catalogData.artists;
 
   // Custom styling templates based on artist ID
@@ -34,7 +39,7 @@ export default function ArtistGrid() {
                 {artist.name}
               </h3>
               <p className="text-[10px] text-zinc-500 font-sans font-bold uppercase tracking-widest mt-1">
-                {artist.shortLane}
+                {translateArtist(artist, "shortLane", lang)}
               </p>
               <blockquote className="text-[9px] text-zinc-400 italic font-serif mt-2">
                 "Live is real..."
@@ -70,7 +75,9 @@ export default function ArtistGrid() {
               <div className="flex flex-col gap-2 flex-grow mt-2">
                 <span className="text-[9px] text-zinc-500 uppercase tracking-wider">COMPOSER_CLASS:</span>
                 <h3 className="text-lg font-bold tracking-tighter text-zinc-800 leading-tight">{artist.name}</h3>
-                <p className="text-[10px] text-zinc-600 font-sans leading-tight mt-1">{artist.role}</p>
+                <p className="text-[10px] text-zinc-600 font-sans leading-tight mt-1">
+                  {translateArtist(artist, "role", lang)}
+                </p>
               </div>
 
               {/* Footer metadata */}
@@ -93,7 +100,7 @@ export default function ArtistGrid() {
           <motion.div
             id={`artist-card-${artist.id}`}
             whileHover={{ scale: 1.02, y: -5 }}
-            className="relative flex flex-col bg-[#e6dfcc] text-zinc-950 p-4 border border-[#d2c9b4] shadow-lg rounded-none w-full"
+            className="relative flex flex-col bg-[#e6dfcc] text-zinc-955 p-4 border border-[#d2c9b4] shadow-lg rounded-none w-full"
           >
             {/* Post stamp */}
             <div className="absolute top-2 right-2 w-10 h-12 bg-amber-900/10 border border-amber-900/20 rounded-sm flex flex-col items-center justify-center text-[8px] font-serif text-amber-900/60 uppercase select-none pointer-events-none rotate-6">
@@ -106,7 +113,9 @@ export default function ArtistGrid() {
             </div>
             <div className="pt-4 flex flex-col gap-1">
               <h3 className="text-lg font-serif font-bold text-zinc-800">{artist.name}</h3>
-              <p className="text-xs text-zinc-500 font-sans tracking-wide leading-tight">{artist.core}</p>
+              <p className="text-xs text-zinc-500 font-sans tracking-wide leading-tight">
+                {translateArtist(artist, "core", lang)}
+              </p>
               <div className="mt-2 text-[9px] text-zinc-400 font-mono tracking-widest uppercase border-t border-zinc-300 pt-2">
                 CATALOG REF: {artist.id}
               </div>
@@ -134,7 +143,9 @@ export default function ArtistGrid() {
               <div className="flex flex-col gap-1">
                 <span className="text-xs font-bold text-red-500 uppercase tracking-widest font-mono">尼科先</span>
                 <h3 className="text-3xl font-serif font-black leading-none text-white">{artist.name}</h3>
-                <p className="text-xs text-zinc-300 font-sans mt-2">{artist.lane}</p>
+                <p className="text-xs text-zinc-300 font-sans mt-2">
+                  {translateArtist(artist, "lane", lang)}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -151,7 +162,7 @@ export default function ArtistGrid() {
             {/* Cyberpunk grid overlay */}
             <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(0,240,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,1)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
 
-            <div className="aspect-[16/9] bg-zinc-950 border border-[#e00078]/30 overflow-hidden relative">
+            <div className="aspect-[16/9] bg-zinc-955 border border-[#e00078]/30 overflow-hidden relative">
               <img src={avatar} alt={artist.name} className="w-full h-full object-cover saturate-150 contrast-125" />
               <div className="absolute inset-0 bg-cyan-900/10 mix-blend-color-dodge" />
             </div>
@@ -162,11 +173,13 @@ export default function ArtistGrid() {
                 <span>VER. 2026.07</span>
               </div>
               <h3 className="text-xl font-bold tracking-tight text-white mt-1">{artist.name}</h3>
-              <p className="text-[10px] text-zinc-400 leading-snug font-sans mt-1">{artist.core}</p>
+              <p className="text-[10px] text-zinc-400 leading-snug font-sans mt-1">
+                {translateArtist(artist, "core", lang)}
+              </p>
               
               {/* Barcode representation */}
               <div className="mt-4 pt-3 border-t border-zinc-800 flex justify-between items-center">
-                <div className="flex flex-col gap-0.5 text-[8px] text-zinc-500">
+                <div className="flex flex-col gap-0.5 text-[8px] text-zinc-505">
                   <span>ID: {artist.id}</span>
                   <span>IP: 192.88.26.01</span>
                 </div>
@@ -187,7 +200,7 @@ export default function ArtistGrid() {
               backgroundImage: "radial-gradient(circle at 100% 100%, rgba(0,255,102,0.03) 0%, transparent 60%)",
             }}
           >
-            <div className="aspect-[4/3] bg-zinc-950 border border-zinc-800 overflow-hidden relative">
+            <div className="aspect-[4/3] bg-zinc-955 border border-zinc-800 overflow-hidden relative">
               <img src={avatar} alt={artist.name} className="w-full h-full object-cover grayscale contrast-125" />
               {/* Overlay lines */}
               <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,255,102,0.15)_50%)] bg-[size:100%_4px] pointer-events-none" />
@@ -199,7 +212,9 @@ export default function ArtistGrid() {
                 <span>KZE-X.06</span>
               </div>
               <h3 className="text-2xl font-serif font-black tracking-tight text-white mt-1 uppercase">{artist.name}</h3>
-              <p className="text-xs text-zinc-400 mt-2 font-inter leading-relaxed">{artist.role}</p>
+              <p className="text-xs text-zinc-400 mt-2 font-inter leading-relaxed">
+                {translateArtist(artist, "role", lang)}
+              </p>
             </div>
           </motion.div>
         );
@@ -220,13 +235,15 @@ export default function ArtistGrid() {
             </div>
 
             <div className="pl-3">
-              <div className="aspect-[16/10] bg-zinc-900 overflow-hidden relative border border-[#3b2b25]">
+              <div className="aspect-[16/10] bg-zinc-955 overflow-hidden relative border border-[#3b2b25]">
                 <img src={avatar} alt={artist.name} className="w-full h-full object-cover saturate-75 brightness-90" />
               </div>
               <div className="pt-4 flex flex-col gap-1">
                 <span className="text-[9px] text-[#ff5722] font-mono tracking-widest uppercase">35MM FILM EXPOSURE</span>
                 <h3 className="text-xl font-serif font-bold text-[#fbeee6] leading-none mt-1">{artist.name}</h3>
-                <p className="text-xs text-zinc-400 font-sans mt-2">{artist.core}</p>
+                <p className="text-xs text-zinc-400 font-sans mt-2">
+                  {translateArtist(artist, "core", lang)}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -241,12 +258,12 @@ export default function ArtistGrid() {
             className="relative flex flex-col bg-[#0b0c0d] text-zinc-400 p-5 border border-zinc-800 shadow-md rounded-none w-full font-mono text-xs"
           >
             {/* CCTV timestamps */}
-            <div className="flex justify-between items-center text-[9px] text-zinc-500 mb-2">
+            <div className="flex justify-between items-center text-[9px] text-zinc-505 mb-2">
               <span>CAM 08 - OUTDOOR</span>
               <span>14/07/2026 17:52:10</span>
             </div>
 
-            <div className="aspect-[4/3] bg-zinc-950 border border-zinc-900 overflow-hidden relative">
+            <div className="aspect-[4/3] bg-zinc-955 border border-zinc-900 overflow-hidden relative">
               <img src={avatar} alt={artist.name} className="w-full h-full object-cover grayscale brightness-75 contrast-125" />
               {/* Surveillance grid lines */}
               <div className="absolute top-2 left-2 text-[8px] text-green-500 opacity-60">● REC</div>
@@ -255,7 +272,9 @@ export default function ArtistGrid() {
 
             <div className="mt-4 flex flex-col gap-1">
               <h3 className="text-lg font-serif font-bold text-white tracking-tight">{artist.name}</h3>
-              <p className="text-[10px] text-zinc-500 font-sans mt-1 leading-snug">{artist.core}</p>
+              <p className="text-[10px] text-zinc-500 font-sans mt-1 leading-snug">
+                {translateArtist(artist, "core", lang)}
+              </p>
             </div>
           </motion.div>
         );
@@ -266,19 +285,31 @@ export default function ArtistGrid() {
   };
 
   return (
-    <section id="artists" className="py-20 px-6 md:px-10 max-w-[1360px] mx-auto text-[#111111]">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-[#111111] pb-6">
+    <section id="artists" className="py-20 px-6 md:px-10 max-w-[1360px] mx-auto text-text-primary">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-border-primary pb-6 text-text-primary">
         <div>
-          <span className="text-[10px] font-bold text-[#a82c16] font-sans tracking-widest uppercase block mb-2">
-            ИССЛЕДУЙТЕ МИРЫ // 8 ARTISTS
+          <span className="text-[10px] font-bold text-brand-accent font-sans tracking-widest uppercase block mb-2">
+            {t("sectionArtistsTitle", lang)}
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif text-[#111111] leading-tight">
-            8 ВСЕЛЕННЫХ. 8 ГОЛОСОВ. <br />
-            <span className="text-[#555450]">1 ПРОДЮСЕР.</span>
+          <h2 className="text-4xl md:text-5xl font-serif leading-tight text-text-primary">
+            {lang === "ru" ? (
+              <>
+                8 ВСЕЛЕННЫХ. 8 ГОЛОСОВ. <br />
+                <span className="text-text-secondary">1 ПРОДЮСЕР.</span>
+              </>
+            ) : (
+              <>
+                8 UNIVERSES. 8 VOICES. <br />
+                <span className="text-text-secondary">1 PRODUCER.</span>
+              </>
+            )}
           </h2>
         </div>
-        <p className="max-w-[400px] text-xs text-[#555450] font-sans leading-relaxed">
-          Разные сцены, один каталог. Каждый артист — это отдельная музыкальная вселенная со своими языковыми кодами, культурой и саундом. Погрузитесь в их дискографии.
+        <p className="max-w-[400px] text-xs text-text-secondary font-sans leading-relaxed">
+          {lang === "ru" 
+            ? "Разные сцены, один каталог. Каждый артист — это отдельная музыкальная вселенная со своими языковыми кодами, культурой и саундом. Погрузитесь в их дискографии."
+            : "Different scenes, one catalog. Every artist is a distinct musical universe with their own linguistic codes, culture, and sound. Dive into their discography."
+          }
         </p>
       </div>
 
