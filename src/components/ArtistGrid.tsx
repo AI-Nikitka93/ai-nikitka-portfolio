@@ -9,7 +9,7 @@ export default function ArtistGrid() {
 
   // Custom styling templates based on artist ID
   const renderArtistCard = (artist: typeof artists[0]) => {
-    const avatar = (artist.avatarUrl ? artist.avatarUrl.replace("./", "/") : `/assets/avatars/${artist.id.replace("-", "_")}.jpg`) + "?v=20260714-2325";
+    const avatar = (artist.avatarUrl ? artist.avatarUrl.replace("./", "/") : `/assets/avatars/${artist.id.replace("-", "_")}.jpg`) + "?v=20260714-2345";
     
     switch (artist.id) {
       case "nikitka-ai":
