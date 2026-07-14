@@ -9,7 +9,7 @@ export default function ArtistGrid() {
 
   // Custom styling templates based on artist ID
   const renderArtistCard = (artist: typeof artists[0]) => {
-    const avatar = (artist.avatarUrl ? artist.avatarUrl.replace("./", "/") : `/assets/avatars/${artist.id.replace("-", "_")}.jpg`) + "?v=20260714-2345";
+    const avatar = (artist.avatarUrl ? artist.avatarUrl.replace("./", "/") : `/assets/avatars/${artist.id.replace("-", "_")}.jpg`) + "?v=20260714-2359";
     
     switch (artist.id) {
       case "nikitka-ai":
@@ -19,18 +19,26 @@ export default function ArtistGrid() {
             id={`artist-card-${artist.id}`}
             whileHover={{ scale: 1.02, rotate: -1, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative flex flex-col p-4 bg-[#f8f6f0] text-zinc-900 border border-zinc-300 shadow-xl rounded-none transform rotate-1 self-start w-full"
+            className="relative flex flex-col p-4 bg-white text-black border border-zinc-200 shadow-xl rounded-none w-full"
           >
-            <div className="relative aspect-[4/5] bg-zinc-900 overflow-hidden border border-zinc-200">
-              <img src={avatar} alt={artist.name} className="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute top-2 right-2 px-2 py-0.5 bg-red-600 text-white text-[9px] font-bold uppercase tracking-wider">
-                Live
-              </div>
+            {/* Red Live Sticker */}
+            <div className="absolute top-2 right-2 bg-red-600 text-white text-[7px] font-sans font-bold px-1.5 py-0.5 uppercase tracking-widest animate-pulse z-10">
+              LIVE
             </div>
-            <div className="pt-4 pb-2 flex flex-col gap-1 font-serif text-center">
-              <h3 className="text-xl font-bold tracking-tight text-zinc-800">{artist.name}</h3>
-              <p className="text-xs text-zinc-500 font-sans tracking-wide uppercase font-bold">{artist.shortLane}</p>
-              <span className="text-[10px] text-zinc-400 font-sans italic mt-2">"Live is real..."</span>
+            
+            <div className="w-full aspect-[4/5] bg-zinc-100 overflow-hidden border border-zinc-300 relative">
+              <img src={avatar} alt={artist.name} className="w-full h-full object-cover" />
+            </div>
+            <div className="pt-4 pb-2 text-center flex flex-col gap-1">
+              <h3 className="font-sans font-black text-2xl tracking-tighter text-zinc-950 uppercase italic leading-none">
+                {artist.name}
+              </h3>
+              <p className="text-[10px] text-zinc-500 font-sans font-bold uppercase tracking-widest mt-1">
+                {artist.shortLane}
+              </p>
+              <blockquote className="text-[9px] text-zinc-400 italic font-serif mt-2">
+                "Live is real..."
+              </blockquote>
             </div>
           </motion.div>
         );
@@ -53,10 +61,9 @@ export default function ArtistGrid() {
             </div>
 
             <div className="flex flex-col gap-4 h-full justify-between">
-              {/* Photo at the top */}
-              <div className="w-full aspect-[4/3] bg-zinc-800 border border-zinc-400 overflow-hidden relative grayscale">
+              {/* Photo at the top - Removed grayscale filter to show original color photograph */}
+              <div className="w-full aspect-[4/3] bg-zinc-800 border border-zinc-400 overflow-hidden relative">
                 <img src={avatar} alt={artist.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-yellow-900/10 mix-blend-multiply pointer-events-none" />
               </div>
               
               {/* Text section */}
