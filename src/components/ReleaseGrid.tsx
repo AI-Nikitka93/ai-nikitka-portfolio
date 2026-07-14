@@ -95,16 +95,16 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             animate="animate"
             exit="exit"
             whileHover="hover"
-            className="relative flex flex-col min-h-[460px] bg-[#141416] border border-glass-border rounded-lg overflow-hidden group shadow-2xl"
+            className="relative flex flex-col min-h-[460px] bg-[#f4f4f0] border border-[#111111] overflow-hidden group shadow-[2px_2px_0px_rgba(17,17,17,1)]"
           >
             {/* Peeking Vinyl Circle */}
-            <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-[#0b0b0c] border border-zinc-800 opacity-60 flex items-center justify-center pointer-events-none group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500">
-              <div className="w-10 h-10 rounded-full border border-zinc-700/50 bg-[#121214]" />
+            <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-[#0b0b0c] border border-black/80 opacity-80 flex items-center justify-center pointer-events-none group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500">
+              <div className="w-10 h-10 rounded-full border border-zinc-800 bg-[#121214]" />
             </div>
 
             {/* Sleeve Cover Cover Area */}
             <div className={`h-56 relative overflow-hidden ${artist.texture}`} style={{ backgroundColor: accent }}>
-              <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-black/5 mix-blend-multiply" />
               <div className="absolute top-4 left-4 right-4 flex justify-between items-start text-black uppercase font-mono text-[9px] font-bold">
                 <span>{artist.shortLane}</span>
                 <span>{release.dateLabel}</span>
@@ -118,24 +118,24 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             </div>
 
             {/* Sleeve Content Area */}
-            <div className="p-5 flex-1 flex flex-col justify-between">
+            <div className="p-5 flex-1 flex flex-col justify-between text-[#111111]">
               <div>
-                <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider mb-2">
+                <p className="text-[10px] text-[#555450] font-sans font-bold uppercase tracking-wider mb-2">
                   {artist.name} • {release.type}
                 </p>
-                <p className="text-zinc-400 text-xs line-clamp-3 mb-4 font-inter leading-relaxed">
+                <p className="text-[#555450] text-xs line-clamp-3 mb-4 font-sans leading-relaxed">
                   {release.story || "Оригинальное издание лейбла AI NIKITKA93. Экспериментальное слияние музыкального характера и аналогового саунда."}
                 </p>
               </div>
 
               <div>
-                <div className="border-t border-glass-border pt-4 flex justify-between items-center text-[10px] font-mono text-zinc-500">
+                <div className="border-t border-[#111111] pt-4 flex justify-between items-center text-[10px] font-sans font-bold text-[#555450] uppercase">
                   <span>{release.tracks.length} ТРЕКОВ</span>
                   <span>{release.genre}</span>
                 </div>
                 <button
                   onClick={() => onSpotlightSelect(release.id)}
-                  className="w-full mt-4 py-2 border border-glass-border hover:border-white rounded-md text-xs font-bold tracking-widest text-zinc-300 hover:text-white transition-colors duration-300 uppercase"
+                  className="w-full mt-4 py-2 border border-[#111111] hover:bg-[#111111] hover:text-white rounded-none text-xs font-bold tracking-widest text-[#111111] transition-colors duration-200 uppercase"
                 >
                   В фокус
                 </button>
@@ -154,16 +154,16 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             animate="animate"
             exit="exit"
             whileHover="hover"
-            className="relative flex flex-col min-h-[460px] bg-[#1a191c] border-2 border-zinc-800 rounded-lg overflow-hidden group shadow-2xl texture-cardboard"
+            className="relative flex flex-col min-h-[460px] bg-[#edece8] border border-[#111111] overflow-hidden group shadow-[2px_2px_0px_rgba(17,17,17,1)] texture-cardboard"
           >
             {/* Cassette face wrapper */}
-            <div className="p-4 bg-[#111012] border-b border-zinc-800 flex justify-between items-center text-[9px] font-mono text-zinc-500">
+            <div className="p-4 bg-[#f4f4f0] border-b border-[#111111] flex justify-between items-center text-[9px] font-mono text-[#555450] font-bold">
               <span>CASSETTE TAPE</span>
               <span>A / B SIDE</span>
             </div>
 
             {/* Taped label effect */}
-            <div className="mx-5 my-6 p-4 bg-[#eae3cf] text-zinc-900 border border-zinc-300 relative shadow-sm flex flex-col gap-2">
+            <div className="mx-5 my-6 p-4 bg-[#eae3cf] text-zinc-900 border border-[#111111] relative shadow-sm flex flex-col gap-2 rounded-none">
               <div className="absolute top-1 right-2 font-mono text-[8px] text-zinc-500 uppercase">NK-C90</div>
               <h3 className="text-base font-sans font-black tracking-tight uppercase leading-none border-b border-zinc-400 pb-2">
                 {release.title}
@@ -174,20 +174,20 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             </div>
 
             {/* Content info */}
-            <div className="p-5 flex-1 flex flex-col justify-between text-zinc-400">
-              <div className="text-[10px] font-mono flex flex-col gap-1">
+            <div className="p-5 flex-1 flex flex-col justify-between text-[#111111]">
+              <div className="text-[10px] font-sans font-bold flex flex-col gap-1 text-[#555450]">
                 <div>ARTIST: {artist.name}</div>
                 <div>RELEASE: {release.dateLabel}</div>
               </div>
 
               <div>
-                <div className="border-t border-zinc-800 pt-4 flex justify-between items-center text-[10px] font-mono text-zinc-500">
+                <div className="border-t border-[#111111] pt-4 flex justify-between items-center text-[10px] font-sans font-bold text-[#555450] uppercase">
                   <span>{release.tracks.length} ТРЕКОВ</span>
                   <span>{release.genre}</span>
                 </div>
                 <button
                   onClick={() => onSpotlightSelect(release.id)}
-                  className="w-full mt-4 py-2 border border-zinc-800 hover:border-zinc-500 rounded-md text-xs font-mono text-[#ffdd3d] hover:text-white transition-colors duration-300 uppercase"
+                  className="w-full mt-4 py-2 border border-[#111111] hover:bg-[#111111] hover:text-white rounded-none text-xs font-bold text-[#111111] transition-colors duration-200 uppercase"
                 >
                   В фокус
                 </button>
@@ -206,43 +206,43 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             animate="animate"
             exit="exit"
             whileHover="hover"
-            className="relative flex flex-col min-h-[460px] bg-[#27231e] border border-[#3b342b] rounded-lg overflow-hidden group shadow-2xl"
+            className="relative flex flex-col min-h-[460px] bg-[#e6dcc5] border border-[#111111] overflow-hidden group shadow-[2px_2px_0px_rgba(17,17,17,1)]"
           >
             {/* Kraft flap lines */}
-            <div className="absolute top-0 left-0 right-0 h-4 bg-[#1f1b18] border-b border-[#3b342b] flex items-center justify-center">
-              <div className="w-12 h-1 bg-[#100e0c] rounded-full opacity-40" />
+            <div className="absolute top-0 left-0 right-0 h-4 bg-[#d8ccb3] border-b border-[#111111] flex items-center justify-center">
+              <div className="w-12 h-1 bg-[#111111] rounded-full opacity-20" />
             </div>
 
-            <div className="p-5 pt-8 flex-1 flex flex-col justify-between">
+            <div className="p-5 pt-8 flex-1 flex flex-col justify-between text-[#111111]">
               <div>
                 <div className="flex justify-between items-start mb-4">
-                  <span className="text-[9px] font-mono text-[#cdaa54] border border-[#cdaa54]/30 px-1 py-0.5 rounded-sm uppercase">
+                  <span className="text-[9px] font-mono text-[#a82c16] border border-[#a82c16] px-1 py-0.5 rounded-none font-bold uppercase">
                     CONFIDENTIAL
                   </span>
-                  <span className="text-[9px] font-mono text-zinc-500">{release.dateLabel}</span>
+                  <span className="text-[9px] font-mono font-bold text-[#555450]">{release.dateLabel}</span>
                 </div>
                 
-                <h3 className="text-xl font-serif text-[#fbeee6] tracking-tight leading-none mb-3">
+                <h3 className="text-xl font-serif text-[#111111] tracking-tight leading-none mb-3">
                   {release.title}
                 </h3>
-                <p className="text-[11px] text-zinc-400 font-mono mb-4 leading-relaxed line-clamp-4">
+                <p className="text-xs text-[#555450] font-sans mb-4 leading-relaxed line-clamp-4">
                   {release.story || "Запись из архива продюсера. Поставляется в оригинальном крафтовом конверте. Уникальные лингвистические коды."}
                 </p>
               </div>
 
               <div>
                 {/* Stamp overlay */}
-                <div className="text-red-700/30 text-[10px] font-mono font-bold uppercase tracking-widest border border-red-700/20 px-2 py-0.5 inline-block rotate-[-6deg] mb-4">
+                <div className="text-red-800/80 text-[10px] font-mono font-bold uppercase tracking-widest border border-red-800/50 px-2 py-0.5 inline-block rotate-[-6deg] mb-4">
                   DEEP AUDIO
                 </div>
 
-                <div className="border-t border-[#3b342b] pt-4 flex justify-between items-center text-[10px] font-mono text-zinc-500">
+                <div className="border-t border-[#111111] pt-4 flex justify-between items-center text-[10px] font-sans font-bold text-[#555450] uppercase">
                   <span>{artist.name}</span>
                   <span>{release.genre}</span>
                 </div>
                 <button
                   onClick={() => onSpotlightSelect(release.id)}
-                  className="w-full mt-4 py-2 border border-[#3b342b] hover:border-zinc-500 rounded-md text-xs font-bold tracking-widest text-zinc-300 hover:text-white transition-colors duration-300 uppercase"
+                  className="w-full mt-4 py-2 border border-[#111111] hover:bg-[#111111] hover:text-white rounded-none text-xs font-bold text-[#111111] transition-colors duration-200 uppercase"
                 >
                   В фокус
                 </button>
@@ -261,39 +261,39 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             animate="animate"
             exit="exit"
             whileHover="hover"
-            className="relative flex flex-col min-h-[460px] bg-[#1e1f22] border border-glass-border rounded-lg overflow-hidden group shadow-2xl"
+            className="relative flex flex-col min-h-[460px] bg-[#f4f4f0] border border-[#111111] overflow-hidden group shadow-[2px_2px_0px_rgba(17,17,17,1)]"
           >
             {/* Folder Tab graphic */}
-            <div className="absolute top-0 left-5 w-24 h-4 bg-[#2b2c31] border-x border-t border-glass-border rounded-t-sm flex items-center justify-center text-[8px] font-mono text-zinc-400">
+            <div className="absolute top-0 left-5 w-24 h-4 bg-[#edece8] border-x border-t border-[#111111] rounded-t-sm flex items-center justify-center text-[8px] font-mono font-bold text-[#555450]">
               {release.id.substring(0, 10).toUpperCase()}
             </div>
 
-            <div className="p-5 pt-8 flex-1 flex flex-col justify-between">
+            <div className="p-5 pt-8 flex-1 flex flex-col justify-between text-[#111111]">
               <div>
-                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block mb-2">
+                <span className="text-[9px] font-mono text-[#555450] font-bold uppercase tracking-widest block mb-2">
                   FOLDER_REF // {release.tracks.length}_FILES
                 </span>
-                <h3 className="text-2xl font-serif text-zinc-200 tracking-tight leading-none mb-3">
+                <h3 className="text-2xl font-serif text-[#111111] tracking-tight leading-none mb-3">
                   {release.title}
                 </h3>
-                <p className="text-xs text-zinc-400 font-inter line-clamp-3 leading-relaxed mb-4">
+                <p className="text-xs text-[#555450] font-sans line-clamp-3 leading-relaxed mb-4">
                   {release.story || "Архивные файлы студии. Релиз содержит уникальные нарезки, полевые записи и синтезаторные дорожки."}
                 </p>
               </div>
 
               <div>
                 {/* Paperclip asset representation */}
-                <div className="h-6 w-10 border-2 border-dashed border-zinc-700 rounded-lg flex items-center justify-center text-[8px] font-mono text-zinc-600 mb-4 uppercase">
+                <div className="h-6 w-10 border-2 border-dashed border-zinc-400 rounded-none flex items-center justify-center text-[8px] font-mono text-zinc-500 mb-4 uppercase">
                   clip
                 </div>
 
-                <div className="border-t border-glass-border pt-4 flex justify-between items-center text-[10px] font-mono text-zinc-500">
+                <div className="border-t border-[#111111] pt-4 flex justify-between items-center text-[10px] font-sans font-bold text-[#555450] uppercase">
                   <span>{artist.name}</span>
                   <span>{release.dateLabel}</span>
                 </div>
                 <button
                   onClick={() => onSpotlightSelect(release.id)}
-                  className="w-full mt-4 py-2 border border-glass-border hover:border-white rounded-md text-xs font-bold tracking-widest text-zinc-300 hover:text-white transition-colors duration-300 uppercase"
+                  className="w-full mt-4 py-2 border border-[#111111] hover:bg-[#111111] hover:text-white rounded-none text-xs font-bold text-[#111111] transition-colors duration-200 uppercase"
                 >
                   В фокус
                 </button>
@@ -313,29 +313,29 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
             animate="animate"
             exit="exit"
             whileHover="hover"
-            className="relative flex flex-col min-h-[460px] bg-[#f0ede6] text-zinc-900 border border-zinc-300 rounded-lg overflow-hidden group shadow-2xl"
+            className="relative flex flex-col min-h-[460px] bg-white text-zinc-900 border border-[#111111] overflow-hidden group shadow-[2px_2px_0px_rgba(17,17,17,1)]"
           >
             {/* Library Grid overlay line */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-blue-800 opacity-60" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-[#a82c16]" />
 
-            <div className="p-5 pt-8 flex-1 flex flex-col justify-between font-mono">
+            <div className="p-5 pt-8 flex-1 flex flex-col justify-between font-sans font-bold">
               <div>
                 <div className="flex justify-between items-center text-[8px] text-zinc-500 border-b border-zinc-300 pb-2 mb-3">
                   <span>LIBRARY CATALOG CARD</span>
                   <span>NO. {release.id.substring(0, 5).toUpperCase()}</span>
                 </div>
 
-                <h3 className="text-lg font-bold tracking-tight text-zinc-800 leading-none mb-3">
+                <h3 className="text-lg font-serif tracking-tight text-zinc-800 leading-none mb-3">
                   {release.title}
                 </h3>
-                <p className="text-[10px] text-zinc-600 font-sans line-clamp-4 leading-relaxed mb-4">
+                <p className="text-[10px] text-zinc-600 font-normal line-clamp-4 leading-relaxed mb-4">
                   {release.story || "Классическая библиотечная карточка каталога. Содержит метаданные, имена авторов и композиторов."}
                 </p>
               </div>
 
               <div>
                 {/* Stamp matrix */}
-                <div className="grid grid-cols-2 gap-2 text-[8px] text-zinc-400 uppercase font-mono border border-zinc-200 p-2 mb-4 rounded-sm">
+                <div className="grid grid-cols-2 gap-2 text-[8px] text-zinc-500 uppercase font-mono border border-zinc-200 p-2 mb-4 rounded-none">
                   <div>DATE: {release.dateLabel}</div>
                   <div>LANG: {release.language || "INSTR"}</div>
                 </div>
@@ -346,7 +346,7 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
                 </div>
                 <button
                   onClick={() => onSpotlightSelect(release.id)}
-                  className="w-full mt-4 py-2 border border-zinc-400 hover:border-zinc-800 rounded-md text-xs font-bold text-zinc-700 hover:text-black transition-colors duration-300 uppercase"
+                  className="w-full mt-4 py-2 border border-[#111111] hover:bg-[#111111] hover:text-white rounded-none text-xs font-bold text-black transition-colors duration-200 uppercase"
                 >
                   В фокус
                 </button>
@@ -358,13 +358,13 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
   };
 
   return (
-    <section id="catalog" className="py-20 px-6 md:px-10 max-w-[1360px] mx-auto">
+    <section id="catalog" className="py-20 px-6 md:px-10 max-w-[1360px] mx-auto text-[#111111]">
       {/* Title */}
-      <div className="mb-12 border-b border-glass-border pb-6">
-        <span className="text-xs font-bold text-zinc-500 font-inter tracking-widest uppercase block mb-2">
+      <div className="mb-12 border-b border-[#111111] pb-6">
+        <span className="text-[10px] font-bold text-[#a82c16] font-sans tracking-widest uppercase block mb-2">
           МУЗЫКАЛЬНЫЕ ИЗДАНИЯ // FULL CATALOG
         </span>
-        <h2 className="text-4xl md:text-5xl font-serif text-white tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-serif tracking-tight">
           КАТАЛОГ РЕЛИЗОВ
         </h2>
       </div>
@@ -378,10 +378,10 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
               setActiveArtistId("all");
               setVisibleCount(9);
             }}
-            className={`px-4 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-300 rounded-md border ${
+            className={`px-4 py-2 text-xs font-bold tracking-wider uppercase transition-all duration-200 border rounded-none ${
               activeArtistId === "all"
-                ? "bg-white text-black border-white"
-                : "bg-surface text-zinc-400 border-glass-border hover:border-zinc-500 hover:text-white"
+                ? "bg-[#111111] text-white border-[#111111]"
+                : "bg-white text-[#555450] border-[#111111] hover:bg-[#edece8] hover:text-[#111111]"
             }`}
           >
             Все
@@ -393,10 +393,10 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
                 setActiveArtistId(artist.id);
                 setVisibleCount(9);
               }}
-              className={`px-4 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-300 rounded-md border ${
+              className={`px-4 py-2 text-xs font-bold tracking-wider uppercase transition-all duration-200 border rounded-none ${
                 activeArtistId === artist.id
-                  ? "bg-white text-black border-white"
-                  : "bg-surface text-zinc-400 border-glass-border hover:border-zinc-500 hover:text-white"
+                  ? "bg-[#111111] text-white border-[#111111]"
+                  : "bg-white text-[#555450] border-[#111111] hover:bg-[#edece8] hover:text-[#111111]"
               }`}
             >
               {artist.name}
@@ -406,24 +406,24 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
 
         {/* Search Input */}
         <div className="search-box flex-shrink-0 w-full lg:w-80 flex flex-col gap-1.5">
-          <span className="text-[10px] font-bold font-mono tracking-widest uppercase text-zinc-500">
-            ПОИСК ПО КАТАЛОГУ
+          <span className="text-[9px] font-bold font-sans tracking-wider uppercase text-[#555450]">
+            ПОИСК // SEARCH
           </span>
           <input
             type="text"
-            placeholder="Искать по названию, треку, языку..."
+            placeholder="Искать по названию, треку..."
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);
               setVisibleCount(9);
             }}
-            className="w-full h-11 px-4 text-sm bg-surface border border-glass-border hover:border-zinc-500 focus:border-white focus:outline-none rounded-md transition-colors duration-300 text-white placeholder-zinc-600"
+            className="w-full h-11 px-4 text-xs font-sans font-bold uppercase tracking-wider bg-white border border-[#111111] focus:outline-none focus:bg-[#f4f4f0] text-black placeholder-zinc-400 rounded-none transition-colors duration-200"
           />
         </div>
       </div>
 
       {/* Result stats */}
-      <div className="text-[11px] font-bold font-mono tracking-widest uppercase text-zinc-500 mb-6 border-b border-glass-border pb-3">
+      <div className="text-[9px] font-sans font-bold tracking-wider uppercase text-[#555450] mb-6 border-b border-[#111111] pb-3">
         Найдено: {filteredReleases.length} релизов
       </div>
 
@@ -442,9 +442,9 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
 
       {/* Empty State */}
       {filteredReleases.length === 0 && (
-        <div className="border border-glass-border p-12 bg-surface text-center">
-          <h3 className="text-xl font-serif text-zinc-400 mb-2">Релизы не найдены</h3>
-          <p className="text-sm text-zinc-600 font-inter">Попробуйте ввести другой поисковый запрос.</p>
+        <div className="border border-[#111111] p-12 bg-[#f4f4f0] text-center rounded-none">
+          <h3 className="text-lg font-serif text-[#111111] mb-2">Релизы не найдены</h3>
+          <p className="text-xs text-[#555450] font-sans">Попробуйте ввести другой поисковый запрос.</p>
         </div>
       )}
 
@@ -453,7 +453,7 @@ export default function ReleaseGrid({ onSpotlightSelect }: ReleaseGridProps) {
         <div className="mt-12 flex justify-center">
           <button
             onClick={() => setVisibleCount((prev) => prev + 9)}
-            className="px-6 py-3 border border-glass-border hover:border-white rounded-md text-xs font-bold tracking-widest text-zinc-300 hover:text-white transition-all duration-300 uppercase"
+            className="px-6 py-3 border border-[#111111] hover:bg-[#111111] hover:text-white rounded-none text-xs font-bold tracking-wider text-black transition-all duration-200 uppercase"
           >
             Загрузить ещё
           </button>

@@ -22,7 +22,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "AI NIKITKA93 | Музыкальный Каталог & Цифровая Выставка",
-  description: "Цифровая выставка музыкального каталога продюсера AI NIKITKA93. 8 вселенных, 8 голосов, 1 продюсер. В стиле Terra Brutalism и Grounded Realism.",
+  description: "Цифровая выставка музыкального каталога продюсера AI NIKITKA93. 8 вселенных, 8 голосов, 1 продюсер. В швейцарском минималистичном стиле.",
   openGraph: {
     title: "AI NIKITKA93 | Музыкальный Каталог",
     description: "Цифровая выставка музыкального каталога продюсера AI NIKITKA93. 8 вселенных, 8 голосов, 1 продюсер.",
@@ -47,7 +47,7 @@ export default function RootLayout({
       lang="ru"
       className={`${playfair.variable} ${outfit.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#09090b] text-[#ffffff] selection:bg-white selection:text-black">
+      <body className="min-h-full flex flex-col bg-[#f3efe9] text-[#111111] selection:bg-[#111111] selection:text-white">
         {children}
       </body>
     </html>

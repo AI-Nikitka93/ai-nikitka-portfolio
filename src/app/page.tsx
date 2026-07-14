@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Lenis from "lenis";
 import Header from "@/components/Header";
-import AmbientMixer from "@/components/AmbientMixer";
+import ReleaseMap from "@/components/ReleaseMap";
 import MiniMixers from "@/components/MiniMixers";
 import ArtistGrid from "@/components/ArtistGrid";
 import Spotlight from "@/components/Spotlight";
@@ -48,10 +48,9 @@ export default function Home() {
   const totalReleases = catalogData.releases.length;
   const totalArtists = catalogData.artists.length;
   const totalTracks = catalogData.releases.reduce((acc, r) => acc + r.tracks.length, 0);
-  const latestReleaseLabel = catalogData.releases[0]?.dateLabel || "Сегодня";
 
   return (
-    <div className="relative min-h-screen bg-[#09090b]">
+    <div className="relative min-h-screen bg-[#f3efe9] text-[#111111]">
       {/* Grain overlay for tactile analogue feel */}
       <div className="grain-overlay" />
 
@@ -59,59 +58,77 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center max-w-[1360px] mx-auto px-6 md:px-10 py-20 z-10 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-center max-w-[1360px] mx-auto px-6 md:px-10 py-16 z-10 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Copy (7 columns) */}
-          <div className="lg:col-span-7 flex flex-col gap-6 select-none">
-            <span className="text-xs font-bold text-[#e84f3d] font-inter tracking-widest uppercase block">
+          <div className="lg:col-span-7 flex flex-col gap-6">
+            <span className="text-[10px] font-bold text-[#a82c16] font-sans tracking-widest uppercase block">
               ПРОДЮСЕРСКИЙ ЦЕНТР // CATALOG SHOWCASE
             </span>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-white tracking-tight leading-[1.05]">
-              МУЗЫКА КАК ИСКУССТВО. <br />
-              ТЕХНОЛОГИИ КАК <br />
-              ИНСТРУМЕНТ.
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#111111] tracking-tight leading-[1.08]">
+              Живой каталог артистов, альбомов и релизных линий.
             </h1>
-            <p className="max-w-[540px] text-zinc-400 font-inter text-sm sm:text-base leading-relaxed">
-              8 вселенных. 8 голосов. 1 продюсер. <br />
-              Экспериментальные жанры, культурные диалоги и технологии нового поколения.
+            <p className="max-w-[580px] text-[#555450] font-sans text-sm sm:text-base leading-relaxed">
+              Восемь уникальных музыкальных веток под одним продюсерским штабом: от multilingual pop и academic classical до Indian devotional, Chinese pop, Bossa Nova и Arabic organic house.
             </p>
 
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 mt-2">
+              <a
+                href="#catalog"
+                className="inline-flex items-center justify-center min-h-[44px] px-6 bg-[#111111] text-white font-sans text-xs font-bold uppercase tracking-wider border border-[#111111] hover:bg-transparent hover:text-[#111111] transition-colors duration-200"
+              >
+                Открыть каталог
+              </a>
+              <a
+                href="#artists"
+                className="inline-flex items-center justify-center min-h-[44px] px-6 bg-transparent text-[#111111] font-sans text-xs font-bold uppercase tracking-wider border border-[#111111] hover:bg-[#111111] hover:text-white transition-colors duration-200"
+              >
+                Смотреть артистов
+              </a>
+            </div>
+
             {/* Statistics block */}
-            <div className="grid grid-cols-4 gap-4 mt-8 max-w-[620px] border-t border-glass-border pt-6">
+            <div className="grid grid-cols-4 gap-4 mt-8 max-w-[620px] border-t border-[#111111] pt-6">
               {[
-                { label: "Артистов", value: totalArtists },
-                { label: "Релизов", value: totalReleases },
-                { label: "Треков", value: totalTracks },
-                { label: "Обновлено", value: latestReleaseLabel, highlight: true },
+                { label: "АРТИСТА", value: totalArtists },
+                { label: "РЕЛИЗОВ", value: totalReleases },
+                { label: "ТРЕКОВ", value: totalTracks },
+                { label: "ПОСЛЕДНИЙ", value: "02.06.2026", subVal: "Nikitka Kizevich", highlight: true },
               ].map((stat, idx) => (
                 <div key={idx} className="flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+                  <span className="text-[9px] font-sans font-bold text-[#555450] uppercase tracking-wider">
                     {stat.label}
                   </span>
                   <span
-                    className={`text-xl sm:text-2xl font-black font-sans mt-1 ${
-                      stat.highlight ? "text-[#e84f3d]" : "text-white"
+                    className={`text-lg sm:text-xl font-bold font-sans mt-1 ${
+                      stat.highlight ? "text-[#a82c16]" : "text-[#111111]"
                     }`}
                   >
                     {stat.value}
                   </span>
+                  {stat.subVal && (
+                    <span className="text-[8px] font-sans font-bold uppercase tracking-wider text-[#555450] mt-0.5">
+                      {stat.subVal}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* R3F Interactive Mixer Canvas (5 columns) */}
-          <div className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-[600px] border border-glass-border bg-[#101012] relative overflow-hidden shadow-premium">
-            <AmbientMixer hoveredArtistIndex={hoveredArtistIndex} />
-            <div className="absolute bottom-4 left-4 text-[9px] font-mono text-zinc-600 uppercase tracking-widest pointer-events-none">
-              interactive_equalizer_v2.0
-            </div>
+          {/* 2D Interactive Release Map Widget (5 columns) */}
+          <div className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-[600px] shadow-[4px_4px_0px_rgba(17,17,17,1)] relative overflow-hidden">
+            <ReleaseMap
+              hoveredArtistIndex={hoveredArtistIndex}
+              setHoveredArtistIndex={setHoveredArtistIndex}
+            />
           </div>
         </div>
 
         {/* Mini Mixers Row under Hero */}
-        <div className="w-full mt-12">
+        <div className="w-full mt-16">
           <MiniMixers
             hoveredArtistIndex={hoveredArtistIndex}
             setHoveredArtistIndex={setHoveredArtistIndex}

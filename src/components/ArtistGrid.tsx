@@ -256,19 +256,19 @@ export default function ArtistGrid() {
   };
 
   return (
-    <section id="artists" className="py-20 px-6 md:px-10 max-w-[1360px] mx-auto">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-glass-border pb-6">
+    <section id="artists" className="py-20 px-6 md:px-10 max-w-[1360px] mx-auto text-[#111111]">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-[#111111] pb-6">
         <div>
-          <span className="text-xs font-bold text-zinc-500 font-inter tracking-widest uppercase block mb-2">
+          <span className="text-[10px] font-bold text-[#a82c16] font-sans tracking-widest uppercase block mb-2">
             ИССЛЕДУЙТЕ МИРЫ // 8 ARTISTS
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl font-serif text-[#111111] leading-tight">
             8 ВСЕЛЕННЫХ. 8 ГОЛОСОВ. <br />
-            <span className="text-zinc-500">1 ПРОДЮСЕР.</span>
+            <span className="text-[#555450]">1 ПРОДЮСЕР.</span>
           </h2>
         </div>
-        <p className="max-w-[400px] text-sm text-zinc-400 font-inter leading-relaxed">
-          Каждый артист — это отдельная музыкальная вселенная со своими языковыми кодами, культурой и саундом. Погрузитесь в их каталоги.
+        <p className="max-w-[400px] text-xs text-[#555450] font-sans leading-relaxed">
+          Разные сцены, один каталог. Каждый артист — это отдельная музыкальная вселенная со своими языковыми кодами, культурой и саундом. Погрузитесь в их дискографии.
         </p>
       </div>
 
