@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Lenis from "lenis";
 import Header from "@/components/Header";
-import ReleaseMap from "@/components/ReleaseMap";
+import AmbientMixer from "@/components/AmbientMixer";
 import MiniMixers from "@/components/MiniMixers";
 import ArtistGrid from "@/components/ArtistGrid";
 import Spotlight from "@/components/Spotlight";
@@ -50,7 +50,7 @@ export default function Home() {
   const totalTracks = catalogData.releases.reduce((acc, r) => acc + r.tracks.length, 0);
 
   return (
-    <div className="relative min-h-screen bg-[#f3efe9] text-[#111111]">
+    <div className="relative min-h-screen bg-bg-base text-text-primary">
       {/* Grain overlay for tactile analogue feel */}
       <div className="grain-overlay" />
 
@@ -63,13 +63,13 @@ export default function Home() {
           
           {/* Hero Copy (7 columns) */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            <span className="text-[10px] font-bold text-[#a82c16] font-sans tracking-widest uppercase block">
+            <span className="text-[10px] font-bold text-brand-accent font-sans tracking-widest uppercase block">
               ПРОДЮСЕРСКИЙ ЦЕНТР // CATALOG SHOWCASE
             </span>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#111111] tracking-tight leading-[1.08]">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-text-primary tracking-tight leading-[1.08]">
               Живой каталог артистов, альбомов и релизных линий.
             </h1>
-            <p className="max-w-[580px] text-[#555450] font-sans text-sm sm:text-base leading-relaxed">
+            <p className="max-w-[580px] text-text-secondary font-sans text-sm sm:text-base leading-relaxed">
               Восемь уникальных музыкальных веток под одним продюсерским штабом: от multilingual pop и academic classical до Indian devotional, Chinese pop, Bossa Nova и Arabic organic house.
             </p>
 
@@ -77,20 +77,20 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 mt-2">
               <a
                 href="#catalog"
-                className="inline-flex items-center justify-center min-h-[44px] px-6 bg-[#111111] text-white font-sans text-xs font-bold uppercase tracking-wider border border-[#111111] hover:bg-transparent hover:text-[#111111] transition-colors duration-200"
+                className="inline-flex items-center justify-center min-h-[44px] px-6 bg-text-primary text-bg-base font-sans text-xs font-bold uppercase tracking-wider border border-border-primary hover:bg-transparent hover:text-text-primary transition-colors duration-200"
               >
                 Открыть каталог
               </a>
               <a
                 href="#artists"
-                className="inline-flex items-center justify-center min-h-[44px] px-6 bg-transparent text-[#111111] font-sans text-xs font-bold uppercase tracking-wider border border-[#111111] hover:bg-[#111111] hover:text-white transition-colors duration-200"
+                className="inline-flex items-center justify-center min-h-[44px] px-6 bg-transparent text-text-primary font-sans text-xs font-bold uppercase tracking-wider border border-border-primary hover:bg-text-primary hover:text-bg-base transition-colors duration-200"
               >
                 Смотреть артистов
               </a>
             </div>
 
             {/* Statistics block */}
-            <div className="grid grid-cols-4 gap-4 mt-8 max-w-[620px] border-t border-[#111111] pt-6">
+            <div className="grid grid-cols-4 gap-4 mt-8 max-w-[620px] border-t border-border-primary pt-6">
               {[
                 { label: "АРТИСТА", value: totalArtists },
                 { label: "РЕЛИЗОВ", value: totalReleases },
@@ -98,18 +98,18 @@ export default function Home() {
                 { label: "ПОСЛЕДНИЙ", value: "02.06.2026", subVal: "Nikitka Kizevich", highlight: true },
               ].map((stat, idx) => (
                 <div key={idx} className="flex flex-col">
-                  <span className="text-[9px] font-sans font-bold text-[#555450] uppercase tracking-wider">
+                  <span className="text-[9px] font-sans font-bold text-text-secondary uppercase tracking-wider">
                     {stat.label}
                   </span>
                   <span
                     className={`text-lg sm:text-xl font-bold font-sans mt-1 ${
-                      stat.highlight ? "text-[#a82c16]" : "text-[#111111]"
+                      stat.highlight ? "text-brand-accent" : "text-text-primary"
                     }`}
                   >
                     {stat.value}
                   </span>
                   {stat.subVal && (
-                    <span className="text-[8px] font-sans font-bold uppercase tracking-wider text-[#555450] mt-0.5">
+                    <span className="text-[8px] font-sans font-bold uppercase tracking-wider text-text-secondary mt-0.5">
                       {stat.subVal}
                     </span>
                   )}
@@ -118,12 +118,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 2D Interactive Release Map Widget (5 columns) */}
-          <div className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-[600px] shadow-[4px_4px_0px_rgba(17,17,17,1)] relative overflow-hidden">
-            <ReleaseMap
-              hoveredArtistIndex={hoveredArtistIndex}
-              setHoveredArtistIndex={setHoveredArtistIndex}
-            />
+          {/* 3D Interactive Ambient Mixer (5 columns) */}
+          <div className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-[600px] border border-border-primary relative overflow-hidden bg-black shadow-[4px_4px_0px_var(--color-border-primary)]">
+            <AmbientMixer hoveredArtistIndex={hoveredArtistIndex} />
           </div>
         </div>
 

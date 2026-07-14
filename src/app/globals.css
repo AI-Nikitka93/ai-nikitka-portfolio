@@ -5,26 +5,26 @@
   --font-sans: var(--font-outfit), system-ui, sans-serif;
   --font-inter: var(--font-inter), system-ui, sans-serif;
   
-  /* Light Editorial Swiss theme custom variables */
-  --color-bg-base: #f3efe9;       /* warm paper light background */
-  --color-bg-card: #f4f4f0;       /* lighter container background */
-  --color-bg-cardboard: #edece8;  /* cardboard simulation background */
-  --color-bg-scrollbar-thumb: #ccc9be;
-  --color-bg-scrollbar-thumb-hover: #b5b2a6;
-  --color-text-primary: #111111;  /* ink black text */
-  --color-text-secondary: #555450;/* muted gray copy */
-  --color-brand-accent: #a82c16;  /* rust orange/red */
-  --color-border-primary: #111111;/* solid black borders */
-  --color-border-muted: #ccc9be;  /* soft divider gray */
-  --color-glass-border: #111111;
+  /* Dark Brutalist theme custom variables */
+  --color-bg-base: #09090b;       /* dark obsidian background */
+  --color-bg-card: #121214;       /* dark container background */
+  --color-bg-cardboard: #18181b;  /* dark paper/concrete background */
+  --color-bg-scrollbar-thumb: #27272a;
+  --color-bg-scrollbar-thumb-hover: #3f3f46;
+  --color-text-primary: #ffffff;  /* white text */
+  --color-text-secondary: #a1a1aa;/* muted gray copy */
+  --color-brand-accent: #f4c542;  /* yellow/gold brand accent */
+  --color-border-primary: #27272a;/* dark gray borders */
+  --color-border-muted: #1c1c1f;  /* soft dark divider */
+  --color-glass-border: rgba(255, 255, 255, 0.08);
 
   /* Transparent overlay variables to bypass hardcoded color scanner */
-  --color-shadow-dots-1: rgba(0, 0, 0, 0.05);
-  --color-shadow-dots-2: rgba(0, 0, 0, 0.03);
-  --color-shadow-circle: rgba(0, 0, 0, 0.02);
-  --color-shadow-overlay-1: rgba(0, 0, 0, 0.01);
-  --color-shadow-overlay-2: rgba(0, 0, 0, 0.01);
-  --color-shadow-card-inset: rgba(0, 0, 0, 0.15);
+  --color-shadow-dots-1: rgba(255, 255, 255, 0.05);
+  --color-shadow-dots-2: rgba(255, 255, 255, 0.02);
+  --color-shadow-circle: rgba(255, 255, 255, 0.02);
+  --color-shadow-overlay-1: rgba(255, 255, 255, 0.01);
+  --color-shadow-overlay-2: rgba(255, 255, 255, 0.01);
+  --color-shadow-card-inset: rgba(0, 0, 0, 0.5);
 
   --color-lane-overlay-1: rgba(232, 79, 61, 0.12);
   --color-lane-overlay-2: rgba(244, 197, 66, 0.08);
