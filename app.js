@@ -315,14 +315,6 @@
       })
       .join("");
 
-      }
-
-          });
-      },
-      { threshold: 0.15 }
-    );
-
-    document.querySelectorAll(".reveal:not(.is-visible)").forEach((item) => observer.observe(item));
   }
 
   function bindEvents() {
