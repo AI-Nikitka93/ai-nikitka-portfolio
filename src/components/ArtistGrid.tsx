@@ -36,13 +36,13 @@ export default function ArtistGrid() {
         );
 
       case "nikita-kizevich":
-        // Archival Document Template
+        // Archival Document Template (Vertical to match aspect ratio of other cards)
         return (
           <motion.div
             id={`artist-card-${artist.id}`}
             whileHover={{ scale: 1.02, rotate: 1, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative flex flex-col p-6 bg-[#eae4d3] text-zinc-900 border-2 border-[#cfc8b3] shadow-md rounded-none w-full"
+            className="relative flex flex-col p-5 bg-[#eae4d3] text-zinc-900 border-2 border-[#cfc8b3] shadow-lg rounded-none w-full font-mono min-h-[420px] justify-between"
             style={{
               backgroundImage: "radial-gradient(circle at 10% 20%, rgba(0,0,0,0.01) 0%, transparent 100%)",
             }}
@@ -52,21 +52,24 @@ export default function ArtistGrid() {
               FILE_REF // 19-B
             </div>
 
-            <div className="flex gap-4">
-              <div className="w-1/3 aspect-[3/4] bg-zinc-800 border border-zinc-400 overflow-hidden relative grayscale">
+            <div className="flex flex-col gap-4 h-full justify-between">
+              {/* Photo at the top */}
+              <div className="w-full aspect-[4/3] bg-zinc-800 border border-zinc-400 overflow-hidden relative grayscale">
                 <img src={avatar} alt={artist.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-yellow-900/10 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-yellow-900/10 mix-blend-multiply pointer-events-none" />
               </div>
-              <div className="w-2/3 flex flex-col justify-between font-mono">
-                <div>
-                  <span className="text-[9px] text-zinc-500 uppercase block tracking-wider">COMPOSER_CLASS:</span>
-                  <h3 className="text-lg font-bold tracking-tighter text-zinc-800">{artist.name}</h3>
-                  <p className="text-[10px] text-zinc-600 mt-2 font-sans leading-tight">{artist.role}</p>
-                </div>
-                <div className="border-t border-zinc-400 pt-2 text-[9px] text-zinc-500 flex flex-col gap-0.5">
-                  <div>LANG: {artist.language}</div>
-                  <div>ACC: {artist.accent}</div>
-                </div>
+              
+              {/* Text section */}
+              <div className="flex flex-col gap-2 flex-grow mt-2">
+                <span className="text-[9px] text-zinc-500 uppercase tracking-wider">COMPOSER_CLASS:</span>
+                <h3 className="text-lg font-bold tracking-tighter text-zinc-800 leading-tight">{artist.name}</h3>
+                <p className="text-[10px] text-zinc-600 font-sans leading-tight mt-1">{artist.role}</p>
+              </div>
+
+              {/* Footer metadata */}
+              <div className="border-t border-zinc-400 pt-3 text-[9px] text-zinc-500 flex flex-col gap-1 mt-auto">
+                <div>LANG: {artist.language}</div>
+                <div>ACC: {artist.accent}</div>
               </div>
             </div>
             
