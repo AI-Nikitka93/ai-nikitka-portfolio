@@ -140,49 +140,49 @@ export const artistTranslations = {
   "nikitka-ai": {
     lane: { ru: "Мультиязычный поп / сезонный AI-поп", en: "Multilingual pop / seasonal AI-pop" },
     shortLane: { ru: "Поп", en: "Pop" },
-    core: { ru: "русский, французский, английский pop; сезонные и экспериментальные AI-pop релизы", en: "Russian, French, English pop; seasonal and experimental AI-pop releases" },
-    role: { ru: "Главная смешанная pop-линия каталога.", en: "Main mixed pop line of the catalog." }
+    core: { ru: "Русский, французский, английский поп; сезонные и экспериментальные релизы.", en: "Russian, French, English pop; seasonal and experimental releases." },
+    role: { ru: "Главная смешанная поп-линия каталога.", en: "Main mixed pop line of the catalog." }
   },
   "nikita-kizevich": {
     lane: { ru: "Классика / камерная / киномузыка", en: "Classical / chamber / cinematic miniatures" },
     shortLane: { ru: "Классика", en: "Classical" },
-    core: { ru: "академическая, хоровая, камерная, симфоническая и кинематографическая линия", en: "academic, choral, chamber, symphonic and serious cinematic line" },
+    core: { ru: "Академическая, хоровая, камерная, симфоническая и кинематографическая музыка.", en: "Academic, choral, chamber, symphonic and cinematic music." },
     role: { ru: "Классическая музыка.", en: "Classical music." }
   },
   "nikitaal": {
     lane: { ru: "Этническая музыка / Азия / индийские мотивы", en: "World Music / Asia / Hindi-inspired" },
     shortLane: { ru: "Этника / Азия", en: "World / Asia" },
-    core: { ru: "Indian / Hindi-inspired music, Asia, devotional-inspired и ethno-pop направление", en: "Indian / Hindi-inspired music, Asia, devotional-inspired and ethno-pop direction" },
+    core: { ru: "Индийская музыка, азиатские мотивы, этно-поп и духовные песнопения.", en: "Indian and Asian ethno-pop music inspired by Hindi and devotional themes." },
     role: { ru: "Индийская и азиатская этно-поп линия.", en: "Indian and Asian ethno-pop line." }
   },
   "niko-xian": {
     lane: { ru: "Китайский поп / C-pop", en: "Chinese-language pop / C-pop" },
     shortLane: { ru: "C-pop", en: "C-pop" },
-    core: { ru: "китайский поп (упрощенный), песни на китайском и неоновый сити-поп", en: "Chinese-language pop (Simplified) and neon city pop direction" },
+    core: { ru: "Китайский поп, песни на китайском языке и неоновый сити-поп.", en: "Chinese-language pop and neon city pop direction." },
     role: { ru: "Линия китайской поп-музыки.", en: "Chinese pop-music line." }
   },
   "nkvis": {
     lane: { ru: "Кибер-техно-поп / K-techno / джерси-клаб", en: "Cyber-Techno-Pop, K-Techno, Choral Jersey Club" },
     shortLane: { ru: "K-pop / K-техно", en: "K-Pop / K-Techno" },
-    core: { ru: "Виртуальная кибер-дива, существующая в цифровом зазеркалье Нео-Сеула", en: "Virtual cyber-diva existing in the digital mirror-world of Neo-Seoul" },
+    core: { ru: "Виртуальная кибер-дива, существующая в цифровом зазеркалье Нео-Сеула.", en: "Virtual cyber-diva existing in the digital mirror-world of Neo-Seoul." },
     role: { ru: "Виртуальный K-Pop артист.", en: "Virtual K-Pop artist." }
   },
   "kezevix": {
     lane: { ru: "Электро-брейкс / дарксинт / индастриал-техно", en: "Electro-breaks, Darksynth, Industrial Techno" },
     shortLane: { ru: "Электроника / Техно", en: "Electronic / Techno" },
-    core: { ru: "Виртуальный электро-техно продюсер, диджей и саунд-дизайнер", en: "Virtual electro-techno producer, DJ, and sound designer" },
+    core: { ru: "Виртуальный электро-техно продюсер, диджей и саунд-дизайнер.", en: "Virtual electro-techno producer, DJ, and sound designer." },
     role: { ru: "Инструментальная электронная ветка каталога.", en: "Instrumental electronic branch of the catalog." }
   },
   "niquiano": {
     lane: { ru: "Латиноамериканская / испанская музыка", en: "Latin / Spanish music" },
     shortLane: { ru: "Латина", en: "Latin" },
-    core: { ru: "Испанская музыка и латиноамериканские акустические гитарные баллады", en: "Spanish music and Latin-American acoustic guitar compositions" },
+    core: { ru: "Испанская музыка и латиноамериканские акустические гитарные баллады.", en: "Spanish music and Latin-American acoustic guitar compositions." },
     role: { ru: "Латиноамериканская ветка каталога.", en: "Latin-American branch of the catalog." }
   },
   "nita-kizevich": {
     lane: { ru: "Арабский поп / органик-хаус", en: "Arabic Pop, Organic House, Acoustic Tarab" },
     shortLane: { ru: "Арабский поп", en: "Arabic Pop" },
-    core: { ru: "Арабская музыка, ближневосточное поп-слияние, Organic House", en: "Arabic music, Middle-Eastern pop fusion, Organic House" },
+    core: { ru: "Арабская музыка, ближневосточное поп-слияние, Organic House.", en: "Arabic music, Middle-Eastern pop fusion, Organic House." },
     role: { ru: "Арабская ветка каталога.", en: "Arabic branch of the catalog." }
   }
 };
@@ -199,9 +199,12 @@ export function translateArtist(artist: any, field: "lane" | "shortLane" | "core
 export const metadataTranslations = {
   // Types
   "Сингл": { ru: "Сингл", en: "Single" },
+  "Single": { ru: "Сингл", en: "Single" },
   "Альбом": { ru: "Альбом", en: "Album" },
+  "Album": { ru: "Альбом", en: "Album" },
   "EP": { ru: "EP", en: "EP" },
   "Сборник": { ru: "Сборник", en: "Compilation" },
+  "Compilation": { ru: "Сборник", en: "Compilation" },
   
   // Genres
   "Pop": { ru: "Поп", en: "Pop" },
