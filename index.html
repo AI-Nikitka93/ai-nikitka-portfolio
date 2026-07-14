@@ -22,6 +22,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- Animation & Scroll Libraries -->
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" defer></script>
+    <!-- Three.js (Spatial Background) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
     <script src="./site-data.js" defer></script>
     <script src="./app.js" defer></script>
   </head>
@@ -100,7 +107,7 @@
           <div class="filter-group" id="artistFilters" role="group" aria-label="Фильтр по артисту"></div>
           <label class="search-box">
             <span>Поиск</span>
-            <input id="catalogSearch" type="search" placeholder="Название, трек, UPC, язык" autocomplete="off" />
+            <input id="catalogSearch" type="search" placeholder="Название, трек, язык" autocomplete="off" />
           </label>
         </div>
 

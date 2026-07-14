@@ -20,6 +20,58 @@
     spotlightShell: document.querySelector("#spotlightShell")
   };
 
+  // Lenis & GSAP Init
+  let lenis;
+  if (window.Lenis && window.gsap && window.ScrollTrigger && window.Flip) {
+    lenis = new Lenis({
+      lerp: 0.1,
+      wheelMultiplier: 1.2,
+      smoothWheel: true,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    gsap.registerPlugin(ScrollTrigger, Flip);
+
+    // Smart Header
+    const showAnim = gsap.from('.site-header', { 
+      yPercent: -100,
+      paused: true,
+      duration: 0.4,
+      ease: "power2.out"
+    }).progress(1);
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        if (self.direction === -1) showAnim.play();
+        else showAnim.reverse();
+      }
+    });
+  }
+
+  function initScrollReveals() {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion || !window.gsap) {
+      document.querySelectorAll('.reveal').forEach(el => el.style.opacity = 1);
+      return;
+    }
+    ScrollTrigger.batch(".reveal", {
+      onEnter: (batch) => gsap.to(batch, {
+        opacity: 1, 
+        y: 0, 
+        stagger: 0.1, 
+        ease: "power3.out",
+        duration: 0.8
+      }),
+      start: "top 85%"
+    });
+  }
+
   function normalize(value) {
     return String(value || "").toLowerCase();
   }
@@ -31,7 +83,6 @@
       release.genre,
       release.language,
       release.dateLabel,
-      release.upc,
       release.story,
       artistsById.get(release.artistId)?.name,
       release.tracks.join(" ")
@@ -165,49 +216,64 @@
       elements.releaseGrid.innerHTML = `
         <div class="empty-state">
           <h3>Ничего не найдено</h3>
-          <p>Попробуйте другое название, UPC, язык или артиста.</p>
+          <p>Попробуйте другое название, трек, язык или артиста.</p>
         </div>
       `;
       return;
     }
 
-    elements.releaseGrid.innerHTML = filtered
-      .map((release) => {
-        const artist = artistsById.get(release.artistId);
-        const firstTracks = release.tracks.slice(0, 5);
-        const hasMore = release.tracks.length > firstTracks.length;
-
-        return `
-          <article class="release-card reveal" style="--accent:${artist.accent}; --secondary:${artist.secondary}">
-            ${releaseCover(release)}
-            <div class="release-body">
-              <p class="release-meta">${artist.name} · ${release.type} · ${release.genre}</p>
-              <h3>${release.title}</h3>
-              <p>${release.story}</p>
-              <dl class="release-facts">
-                <div><dt>Дата</dt><dd>${release.dateLabel}</dd></div>
-                <div><dt>Язык</dt><dd>${release.language}</dd></div>
-                <div><dt>UPC</dt><dd>${release.upc || "не указан"}</dd></div>
-                <div><dt>Треков</dt><dd>${release.tracks.length}</dd></div>
-              </dl>
-              <details class="tracklist">
-                <summary>Треклист</summary>
-                <ol>
-                  ${release.tracks.map((track) => `<li>${track}</li>`).join("")}
-                </ol>
-              </details>
-              <div class="release-actions">
-                <button type="button" class="text-button" data-spotlight="${release.id}">В фокус</button>
-                <span>${firstTracks.join(" · ")}${hasMore ? " · ..." : ""}</span>
-              </div>
+    
+    const htmlString = filtered.map((release) => {
+      const artist = artistsById.get(release.artistId);
+      const firstTracks = release.tracks.slice(0, 5);
+      const hasMore = release.tracks.length > firstTracks.length;
+      return `
+        <article class="release-card reveal" data-id="${release.id}" style="--accent:${artist.accent}; --secondary:${artist.secondary}">
+          ${releaseCover(release)}
+          <div class="release-body">
+            <p class="release-meta">${artist.name} · ${release.type} · ${release.genre}</p>
+            <h3>${release.title}</h3>
+            <p>${release.story}</p>
+            <dl class="release-facts">
+              <div><dt>Дата</dt><dd>${release.dateLabel}</dd></div>
+              <div><dt>Язык</dt><dd>${release.language || "инструментал"}</dd></div>
+              <div><dt>Треков</dt><dd>${release.tracks.length}</dd></div>
+            </dl>
+            <details class="tracklist">
+              <summary>Треклист</summary>
+              <ol>
+                ${release.tracks.map((track) => `<li>${track}</li>`).join("")}
+              </ol>
+            </details>
+            <div class="release-actions">
+              <button type="button" class="text-button" data-spotlight="${release.id}">В фокус</button>
+              <span>${firstTracks.join(" · ")}${hasMore ? " · ..." : ""}</span>
             </div>
-          </article>
-        `;
-      })
-      .join("");
+          </div>
+        </article>
+      `;
+    }).join("");
 
-    observeReveals();
-  }
+    if (window.Flip && elements.releaseGrid.children.length > 0) {
+      const stateObj = Flip.getState(".release-card");
+      elements.releaseGrid.innerHTML = htmlString;
+      Flip.from(stateObj, {
+        duration: 0.5,
+        ease: "power2.inOut",
+        stagger: 0.05,
+        absolute: true,
+        onEnter: elements => gsap.fromTo(elements, {opacity: 0, scale: 0.96}, {opacity: 1, scale: 1, duration: 0.4}),
+        onLeave: elements => gsap.to(elements, {opacity: 0, scale: 0.96, duration: 0.3}),
+        onComplete: () => ScrollTrigger.refresh()
+      });
+    } else {
+      elements.releaseGrid.innerHTML = htmlString;
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+      initScrollReveals();
+    }
+
+
+      }
 
   function renderSpotlight() {
     const release = data.releases.find((item) => item.id === state.spotlightId) || data.releases[0];
@@ -249,19 +315,9 @@
       })
       .join("");
 
-    observeReveals();
-  }
+      }
 
-  function observeReveals() {
-    if (!("IntersectionObserver" in window)) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
+          });
       },
       { threshold: 0.15 }
     );
@@ -292,6 +348,133 @@
     });
   }
 
+  function initAmbient3D() {
+    if (!window.THREE) return;
+
+    // 1. Create canvas
+    const canvas = document.createElement('canvas');
+    canvas.id = 'ambient-canvas';
+    Object.assign(canvas.style, {
+      position: 'fixed',
+      top: '0',
+      left: '0',
+      width: '100vw',
+      height: '100vh',
+      zIndex: '-1',
+      pointerEvents: 'none',
+      background: 'radial-gradient(circle at center, #15131a 0%, #0a090c 100%)' 
+    });
+    document.body.prepend(canvas);
+
+    // 2. Setup Scene, Camera, Renderer
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x0a090c, 0.0025);
+
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.set(0, 0, 40);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // 3. Cyber-Gothic Elements
+
+    // A. Abstract floating monoliths / wireframes via InstancedMesh (1 draw call)
+    const monoGeo = new THREE.OctahedronGeometry(1.5, 0);
+    const monoMat = new THREE.MeshBasicMaterial({ 
+      color: 0x4a4a5a, 
+      wireframe: true, 
+      transparent: true, 
+      opacity: 0.15 
+    });
+    
+    const monoCount = 45;
+    const instancedMono = new THREE.InstancedMesh(monoGeo, monoMat, monoCount);
+    
+    const dummy = new THREE.Object3D();
+    for (let i = 0; i < monoCount; i++) {
+      dummy.position.set(
+        (Math.random() - 0.5) * 120,
+        (Math.random() - 0.5) * 120,
+        (Math.random() - 0.5) * 100 - 20
+      );
+      dummy.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+      const scale = Math.random() * 2 + 0.5;
+      dummy.scale.set(scale, scale, scale);
+      dummy.updateMatrix();
+      instancedMono.setMatrixAt(i, dummy.matrix);
+    }
+    scene.add(instancedMono);
+
+    // B. Ambient Dust / Data particles (1 draw call)
+    const particlesGeo = new THREE.BufferGeometry();
+    const particlesCount = window.innerWidth < 768 ? 400 : 1000;
+    const posArray = new Float32Array(particlesCount * 3);
+    for (let i = 0; i < particlesCount * 3; i++) {
+      posArray[i] = (Math.random() - 0.5) * 150;
+    }
+    particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    const particlesMat = new THREE.PointsMaterial({
+      size: 0.15,
+      color: 0x8899aa,
+      transparent: true,
+      opacity: 0.4,
+      blending: THREE.AdditiveBlending
+    });
+    const particles = new THREE.Points(particlesGeo, particlesMat);
+    scene.add(particles);
+
+    // 4. Parallax & Resize
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }, { passive: true });
+
+    // 5. Render Loop (Performance optimized)
+    const clock = new THREE.Clock();
+    let isVisible = true;
+    
+    document.addEventListener("visibilitychange", () => {
+      isVisible = document.visibilityState === 'visible';
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!isVisible) return;
+
+      const delta = clock.getDelta();
+      const elapsed = clock.getElapsedTime();
+
+      // Drift
+      instancedMono.rotation.y += delta * 0.015;
+      instancedMono.rotation.x += delta * 0.01;
+      particles.rotation.y -= delta * 0.02;
+      particles.position.y = Math.sin(elapsed * 0.2) * 2;
+
+      // Parallax easing
+      targetX = mouseX * 2;
+      targetY = mouseY * 2;
+      camera.position.x += (targetX - camera.position.x) * 0.02;
+      camera.position.y += (targetY - camera.position.y) * 0.02;
+      camera.lookAt(scene.position);
+
+      renderer.render(scene, camera);
+    }
+    
+    animate();
+  }
+
   function init() {
     renderStats();
     renderHeroLanes();
@@ -301,7 +484,8 @@
     renderReleases();
     renderTimeline();
     bindEvents();
-    observeReveals();
+    initScrollReveals();
+        initAmbient3D();
   }
 
   init();

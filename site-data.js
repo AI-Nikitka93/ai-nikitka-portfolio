@@ -129,7 +129,6 @@ window.catalogData = {
       "language": "арабский",
       "date": "2026-07-14",
       "dateLabel": "14.07.2026",
-      "upc": "5064000463857",
       "status": "released",
       "story": "",
       "tracks": [
@@ -150,7 +149,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-07-01",
       "dateLabel": "01.07.2026",
-      "upc": "5064000354100",
       "status": "released",
       "story": "",
       "tracks": [
@@ -180,7 +178,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-07-01",
       "dateLabel": "01.07.2026",
-      "upc": "5064000354698",
       "status": "released",
       "story": "",
       "tracks": [
@@ -205,7 +202,6 @@ window.catalogData = {
       "language": "французский",
       "date": "2026-06-28",
       "dateLabel": "28.06.2026",
-      "upc": "5064000335697",
       "status": "released",
       "story": "",
       "tracks": [
@@ -230,7 +226,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-28",
       "dateLabel": "28.06.2026",
-      "upc": "5064000330067",
       "status": "released",
       "story": "",
       "tracks": [
@@ -255,7 +250,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-28",
       "dateLabel": "28.06.2026",
-      "upc": "5064000329467",
       "status": "released",
       "story": "",
       "tracks": [
@@ -276,7 +270,6 @@ window.catalogData = {
       "language": "chinese (simplified)",
       "date": "2026-06-28",
       "dateLabel": "28.06.2026",
-      "upc": "5064000329665",
       "status": "released",
       "story": "",
       "tracks": [
@@ -294,7 +287,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-28",
       "dateLabel": "28.06.2026",
-      "upc": "5064000328989",
       "status": "released",
       "story": "",
       "tracks": [
@@ -312,7 +304,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-28",
       "dateLabel": "28.06.2026",
-      "upc": "5064000329832",
       "status": "released",
       "story": "",
       "tracks": [
@@ -334,7 +325,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-27",
       "dateLabel": "27.06.2026",
-      "upc": "5064000320877",
       "status": "released",
       "story": "",
       "tracks": [
@@ -361,7 +351,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-06-26",
       "dateLabel": "26.06.2026",
-      "upc": "5064000318102",
       "status": "released",
       "story": "",
       "tracks": [
@@ -377,7 +366,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-06-16",
       "dateLabel": "16.06.2026",
-      "upc": "5064000241332",
       "status": "released",
       "story": "",
       "tracks": [
@@ -396,7 +384,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-26",
       "dateLabel": "26.05.2026",
-      "upc": "5064000050736",
       "status": "released",
       "story": "",
       "tracks": [
@@ -433,7 +420,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-19",
       "dateLabel": "19.05.2026",
-      "upc": "5063825704978",
       "status": "released",
       "story": "",
       "tracks": [
@@ -473,7 +459,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-11",
       "dateLabel": "11.05.2026",
-      "upc": "5063825618039",
       "status": "released",
       "story": "",
       "tracks": [
@@ -500,7 +485,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-08",
       "dateLabel": "08.05.2026",
-      "upc": "5063825602649",
       "status": "released",
       "story": "",
       "tracks": [
@@ -521,7 +505,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-05-07",
       "dateLabel": "07.05.2026",
-      "upc": "5063825590472",
       "status": "released",
       "story": "",
       "tracks": [
@@ -541,7 +524,6 @@ window.catalogData = {
       "language": "",
       "date": "2025-12-30",
       "dateLabel": "30.12.2025",
-      "upc": "",
       "status": "released",
       "story": "",
       "tracks": [
@@ -561,7 +543,6 @@ window.catalogData = {
       "language": "",
       "date": "2025-12-29",
       "dateLabel": "29.12.2025",
-      "upc": "",
       "status": "released",
       "story": "",
       "tracks": []
@@ -575,7 +556,6 @@ window.catalogData = {
       "language": "",
       "date": "",
       "dateLabel": "",
-      "upc": "",
       "status": "released",
       "story": "",
       "tracks": []
@@ -589,7 +569,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-07-01",
       "dateLabel": "01.07.2026",
-      "upc": "5064000353349",
       "status": "released",
       "story": "",
       "tracks": [
@@ -614,7 +593,6 @@ window.catalogData = {
       "language": "испанский",
       "date": "2026-06-30",
       "dateLabel": "30.06.2026",
-      "upc": "5064000350751",
       "status": "released",
       "story": "",
       "tracks": [
@@ -635,7 +613,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-06-21",
       "dateLabel": "21.06.2026",
-      "upc": "5064000271117",
       "status": "released",
       "story": "",
       "tracks": [
@@ -655,7 +632,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-02",
       "dateLabel": "02.06.2026",
-      "upc": "5064000123843",
       "status": "released",
       "story": "",
       "tracks": [
@@ -682,7 +658,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-06-02",
       "dateLabel": "02.06.2026",
-      "upc": "5064000125397",
       "status": "released",
       "story": "",
       "tracks": [
@@ -717,7 +692,6 @@ window.catalogData = {
       "language": "chinese (simplified)",
       "date": "2026-05-31",
       "dateLabel": "31.05.2026",
-      "upc": "5064000108383",
       "status": "released",
       "story": "",
       "tracks": [
@@ -741,7 +715,6 @@ window.catalogData = {
       "language": "хинди",
       "date": "2026-05-29",
       "dateLabel": "29.05.2026",
-      "upc": "5064000087923",
       "status": "released",
       "story": "",
       "tracks": [
@@ -764,7 +737,6 @@ window.catalogData = {
       "language": "хинди",
       "date": "2026-05-28",
       "dateLabel": "28.05.2026",
-      "upc": "5064000073971",
       "status": "released",
       "story": "",
       "tracks": [
@@ -787,7 +759,6 @@ window.catalogData = {
       "language": "хинди",
       "date": "2026-05-27",
       "dateLabel": "27.05.2026",
-      "upc": "5064000062135",
       "status": "released",
       "story": "",
       "tracks": [
@@ -805,7 +776,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-21",
       "dateLabel": "21.05.2026",
-      "upc": "5064000010235",
       "status": "released",
       "story": "",
       "tracks": [
@@ -844,7 +814,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-18",
       "dateLabel": "18.05.2026",
-      "upc": "5063825691148",
       "status": "released",
       "story": "",
       "tracks": [
@@ -874,7 +843,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-10",
       "dateLabel": "10.05.2026",
-      "upc": "5063825610392",
       "status": "released",
       "story": "",
       "tracks": [
@@ -900,7 +868,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-06",
       "dateLabel": "06.05.2026",
-      "upc": "5063825577954",
       "status": "released",
       "story": "",
       "tracks": [
@@ -920,7 +887,6 @@ window.catalogData = {
       "language": "английский",
       "date": "2026-05-05",
       "dateLabel": "05.05.2026",
-      "upc": "5063825566767",
       "status": "released",
       "story": "",
       "tracks": [
@@ -953,7 +919,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-05-03",
       "dateLabel": "03.05.2026",
-      "upc": "5063825550766",
       "status": "released",
       "story": "",
       "tracks": [
@@ -974,7 +939,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-05-03",
       "dateLabel": "03.05.2026",
-      "upc": "5063825550742",
       "status": "released",
       "story": "",
       "tracks": [
@@ -995,7 +959,6 @@ window.catalogData = {
       "language": "французский",
       "date": "2026-05-03",
       "dateLabel": "03.05.2026",
-      "upc": "5063825550759",
       "status": "released",
       "story": "",
       "tracks": [
@@ -1022,7 +985,6 @@ window.catalogData = {
       "language": "русский",
       "date": "2026-05-02",
       "dateLabel": "02.05.2026",
-      "upc": "5063825543263",
       "status": "released",
       "story": "",
       "tracks": [
@@ -1047,7 +1009,6 @@ window.catalogData = {
       "language": "",
       "date": "2025-12-29",
       "dateLabel": "29.12.2025",
-      "upc": "",
       "status": "released",
       "story": "",
       "tracks": []
@@ -1061,7 +1022,6 @@ window.catalogData = {
       "language": "",
       "date": "",
       "dateLabel": "",
-      "upc": "",
       "status": "released",
       "story": "",
       "tracks": []
