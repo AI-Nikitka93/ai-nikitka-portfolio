@@ -34,7 +34,7 @@ export const catalogData = {
       "lane": "Classical / chamber / cinematic miniatures",
       "shortLane": "Classical",
       "core": "академическая, choral, chamber, symphonic и serious cinematic-линия",
-      "role": "Отдельная серьезная ветка без смешивания с pop-каталогом.",
+      "role": "Классическая музыка.",
       "composer": "Кизевич Никита Игоревич",
       "language": "EN / RU titles",
       "accent": "#246bfe",

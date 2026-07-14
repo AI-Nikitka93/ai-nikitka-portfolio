@@ -61,8 +61,8 @@ export default function ArtistGrid() {
             </div>
 
             <div className="flex flex-col gap-4 h-full justify-between">
-              {/* Photo at the top - Removed grayscale filter to show original color photograph */}
-              <div className="w-full aspect-[4/3] bg-zinc-800 border border-zinc-400 overflow-hidden relative">
+              {/* Photo at the top - Using aspect-square to show the signature at the bottom of the photo */}
+              <div className="w-full aspect-square bg-zinc-800 border border-zinc-400 overflow-hidden relative">
                 <img src={avatar} alt={artist.name} className="w-full h-full object-cover" />
               </div>
               
