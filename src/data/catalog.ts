@@ -1,4 +1,4 @@
-window.catalogData = {
+export const catalogData = {
   "meta": {
     "label": "AI Nikitka93",
     "updated": "2026-07-14",
