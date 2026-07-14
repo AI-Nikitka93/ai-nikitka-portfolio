@@ -157,7 +157,7 @@
         return `
           <article class="artist-panel reveal" style="--accent:${artist.accent}; --secondary:${artist.secondary}">
             <div class="artist-visual ${artist.texture}" aria-hidden="true">
-              <span></span><span></span><span></span>
+              ${artist.avatarUrl ? `<img src="${artist.avatarUrl}" alt="${artist.name}" loading="lazy" />` : `<span></span><span></span><span></span>`}
             </div>
             <div class="artist-copy">
               <p class="artist-kicker">${artist.lane}</p>

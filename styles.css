@@ -406,6 +406,13 @@ h3 {
   background: var(--surface);
 }
 
+.artist-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .artist-visual span {
   position: absolute;
   border: 2px solid rgba(21, 21, 21, 0.82);

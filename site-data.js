@@ -25,7 +25,8 @@ window.catalogData = {
       "language": "RU / FR / EN",
       "accent": "#e84f3d",
       "secondary": "#f4c542",
-      "texture": "street-pop"
+      "texture": "street-pop",
+      "avatarUrl": "./assets/avatars/nikitka_ai.jpg"
     },
     {
       "id": "nikita-kizevich",
@@ -38,7 +39,8 @@ window.catalogData = {
       "language": "EN / RU titles",
       "accent": "#246bfe",
       "secondary": "#151515",
-      "texture": "score"
+      "texture": "score",
+      "avatarUrl": "./assets/avatars/nikita_kizevich.jpg"
     },
     {
       "id": "nikitaal",
@@ -51,7 +53,8 @@ window.catalogData = {
       "language": "Hindi",
       "accent": "#0c8f69",
       "secondary": "#f0702f",
-      "texture": "monsoon"
+      "texture": "monsoon",
+      "avatarUrl": "./assets/avatars/nikitaal.jpg"
     },
     {
       "id": "niko-xian",
@@ -64,7 +67,8 @@ window.catalogData = {
       "language": "Chinese Simplified",
       "accent": "#b91646",
       "secondary": "#29a7df",
-      "texture": "neon-letter"
+      "texture": "neon-letter",
+      "avatarUrl": "./assets/avatars/niko_xian.jpg"
     },
     {
       "id": "nkvis",
@@ -77,7 +81,8 @@ window.catalogData = {
       "language": "Konglish / Latin",
       "accent": "#e00078",
       "secondary": "#00f0ff",
-      "texture": "cyber-gothic"
+      "texture": "cyber-gothic",
+      "avatarUrl": "./assets/avatars/nkvis.jpg"
     },
     {
       "id": "kezevix",
@@ -90,7 +95,8 @@ window.catalogData = {
       "language": "Instrumental",
       "accent": "#00ff66",
       "secondary": "#000000",
-      "texture": "oscilloscope"
+      "texture": "oscilloscope",
+      "avatarUrl": "./assets/avatars/kezevix.jpg"
     },
     {
       "id": "niquiano",
@@ -103,7 +109,8 @@ window.catalogData = {
       "language": "Spanish",
       "accent": "#ff5722",
       "secondary": "#795548",
-      "texture": "sand"
+      "texture": "sand",
+      "avatarUrl": "./assets/avatars/niquiano.jpg"
     },
     {
       "id": "nita-kizevich",
@@ -116,7 +123,8 @@ window.catalogData = {
       "language": "Arabic",
       "accent": "#cdaa54",
       "secondary": "#2f4f4f",
-      "texture": "tarab"
+      "texture": "tarab",
+      "avatarUrl": "./assets/avatars/nita_kizevich.jpg"
     }
   ],
   "releases": [
