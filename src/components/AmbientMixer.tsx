@@ -21,35 +21,35 @@ function createNoiseTexture() {
   canvas.height = 512;
   const ctx = canvas.getContext("2d")!;
   
-  // Base concrete/cardboard color
-  ctx.fillStyle = "#1e1e21";
+  // Base concrete/cardboard color (much lighter gray for realistic light reflection)
+  ctx.fillStyle = "#88888e";
   ctx.fillRect(0, 0, 512, 512);
 
   // Add noise
   const imgData = ctx.getImageData(0, 0, 512, 512);
   const data = imgData.data;
   for (let i = 0; i < data.length; i += 4) {
-    const noise = (Math.random() - 0.5) * 12;
+    const noise = (Math.random() - 0.5) * 30; // higher noise contrast
     data[i] = Math.min(255, Math.max(0, data[i] + noise));
     data[i+1] = Math.min(255, Math.max(0, data[i+1] + noise));
     data[i+2] = Math.min(255, Math.max(0, data[i+2] + noise));
   }
   ctx.putImageData(imgData, 0, 0);
 
-  // Draw scratches/wear
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
-  ctx.lineWidth = 1;
-  for (let i = 0; i < 15; i++) {
+  // Draw dark dirt/scratch marks
+  ctx.strokeStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.lineWidth = 1.5;
+  for (let i = 0; i < 20; i++) {
     ctx.beginPath();
     ctx.moveTo(Math.random() * 512, Math.random() * 512);
     ctx.lineTo(Math.random() * 512, Math.random() * 512);
     ctx.stroke();
   }
   
-  // Draw vertical thin slots representing light windows
-  ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
-  for (let i = 0; i < 4; i++) {
-    ctx.fillRect(250 + i * 4, 0, 2, 512);
+  // Draw bright white slots representing vertical light windows
+  ctx.fillStyle = "rgba(255, 255, 255, 1.0)";
+  for (let i = 0; i < 3; i++) {
+    ctx.fillRect(245 + i * 8, 0, 3, 512);
   }
 
   return new THREE.CanvasTexture(canvas);
@@ -125,16 +125,16 @@ function Columns({ hoveredArtistIndex }: { hoveredArtistIndex: number | null }) 
       meshRef.current!.setMatrixAt(i, dummy.matrix);
 
       // Color setting
-      let colColor = new THREE.Color("#2a2a2e"); // default dim color
+      let colColor = new THREE.Color("#44444c");
       if (hoveredArtistIndex !== null) {
         if (isHoveredSection) {
-          colColor.copy(ARTIST_COLORS[col.artistIndex]).multiplyScalar(1.5);
+          colColor.copy(ARTIST_COLORS[col.artistIndex]).multiplyScalar(3.0);
         } else {
-          colColor.multiplyScalar(0.2); // dim others more when hovered
+          colColor.copy(ARTIST_COLORS[col.artistIndex]).multiplyScalar(0.25);
         }
       } else {
-        // Subtle color drift in passive state
-        colColor.lerp(ARTIST_COLORS[col.artistIndex], 0.15);
+        // Show artist bands clearly in passive state
+        colColor.copy(ARTIST_COLORS[col.artistIndex]).multiplyScalar(1.2);
       }
       meshRef.current!.setColorAt(i, colColor);
     });
@@ -149,11 +149,12 @@ function Columns({ hoveredArtistIndex }: { hoveredArtistIndex: number | null }) 
     <instancedMesh ref={meshRef} args={[undefined, undefined, count]} castShadow receiveShadow>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial
-        roughness={0.8}
-        metalness={0.4}
+        roughness={0.5}
+        metalness={0.8}
         map={texture}
         bumpMap={texture}
-        bumpScale={0.03}
+        bumpScale={0.05}
+        emissive="#111115"
       />
     </instancedMesh>
   );
@@ -174,14 +175,14 @@ function Scene({ hoveredArtistIndex }: { hoveredArtistIndex: number | null }) {
     <>
       <color attach="background" args={["#09090b"]} />
       
-      {/* Volumetric Fog */}
-      <fogExp2 attach="fog" args={["#09090b", 0.035]} />
+      {/* Volumetric Fog - thinner density to show details */}
+      <fogExp2 attach="fog" args={["#09090b", 0.018]} />
 
-      <ambientLight intensity={0.15} />
+      <ambientLight intensity={0.6} />
 
-      {/* Point lights for spotlight volumetric feel */}
-      <pointLight position={[0, 20, -5]} intensity={1.5} color="#ffffff" castShadow />
-      <directionalLight position={[10, 20, 10]} intensity={0.5} />
+      {/* Point lights and directional light for shadow and metal details */}
+      <pointLight position={[0, 15, 10]} intensity={3.0} color="#ffffff" castShadow />
+      <directionalLight position={[15, 25, 15]} intensity={1.5} castShadow />
 
       {/* Floating dust particles */}
       <Particles count={250} />
