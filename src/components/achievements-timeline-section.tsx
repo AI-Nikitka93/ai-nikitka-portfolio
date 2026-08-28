@@ -28,9 +28,9 @@ const awardSlides: readonly AwardSlide[] = [
     description: "Международная премия в области ИИ-фотографии. 9 работ прошли в финальные фазы, автор вошел в ТОП-35 лучших в мире.",
     image: "/proof-assets/sig-01-35awards-2026.jpg",
     stats: [
-      { label: "Living Creatures", value: "Top 35" },
-      { label: "Landscape", value: "Top 50" },
-      { label: "Undocumented", value: "Top 70" }
+      { label: "Living Creatures", value: "Top 10" },
+      { label: "Landscape", value: "Top 1%" },
+      { label: "Undocumented", value: "Top 10" }
     ]
   },
   {
@@ -80,7 +80,7 @@ const awardSlides: readonly AwardSlide[] = [
   },
   {
     id: "amd-hackathon",
-    slug: "sig-07-nvidia-blackwell-nvfp4-kernel-hackathon",
+    slug: "/awards-credentials",
     title: "УСПЕШНО",
     titleAccent: "AMD CLOUD",
     subtitle: "AMD DEVELOPER HACKATHON 2026",
@@ -209,7 +209,7 @@ export function AchievementsTimelineSection() {
 
             <div className="mt-6 pt-4 border-t border-border-subtle/30">
               <Link
-                href={`/portfolio/${currentAward.slug}`}
+                href={currentAward.slug.startsWith("/") ? currentAward.slug : `/portfolio/${currentAward.slug}`}
                 className="inline-flex min-h-9 items-center justify-center gap-1.5 rounded-panel border border-accent/40 bg-accent/4 px-4 py-2 text-xs font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/18 hover:scale-[1.02] shadow-[0_0_8px_rgba(183,255,60,0.05)] hover:shadow-[0_0_18px_rgba(183,255,60,0.2)]"
               >
                 ПОДРОБНЕЕ

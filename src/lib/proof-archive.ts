@@ -118,7 +118,7 @@ export function buildProofArchiveJsonLd(
     url: absoluteUrl("/portfolio"),
     name: "Работы | AI_Nikitka93",
     description:
-      "Семь страниц с работами, результатами, датами и подтверждениями AI_Nikitka93.",
+      "Восемь страниц с работами, результатами, датами и подтверждениями AI_Nikitka93.",
     isPartOf: {
       "@type": "WebSite",
       "@id": absoluteUrl("/#website"),

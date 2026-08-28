@@ -12,6 +12,7 @@ import {
   SquareTerminal,
 } from "lucide-react";
 import { marked } from "marked";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -48,7 +49,7 @@ const contactActions = [
 ] as const;
 
 const initialGreeting =
-  "Привет! Я цифровой клон Никиты Кизевича. Настоящий Никита сейчас, скорее всего, скармливает очередную пачку логов в LLM или рендерит видео.\n\nЯ знаю всё о его проектах, хакатонах, победах и о том, как он вылетел из ЖКХ за видео из окна. Могу рассказать о том, как выжать **56μs** на NVIDIA Blackwell без знания C++, о победе в Helix LabStory или отправить тебя в [калькулятор услуг](/services-calculator) для оценки бюджета.";
+  "Привет! Я цифровой клон Никиты Кизевича. Настоящий Никита сейчас, скорее всего, скармливает очередную пачку логов в LLM или разрабатывает ИИ-агентов.\n\nЯ знаю всё о его пути от электромонтера до побед в хакатонах NVIDIA, конкурсах Helix LabStory и Киноматик. Могу рассказать о том, как выжать **56μs** на NVIDIA Blackwell через pure prompting, о победах в визуальных премиях или направить в [калькулятор услуг](/services-calculator) для прозрачного расчета бюджета.";
 
 export function SiteAssistantPanel() {
   const [query, setQuery] = useState("");
@@ -184,7 +185,7 @@ export function SiteAssistantPanel() {
                   type="button"
                   onClick={() => selectPrompt(prompt)}
                   disabled={isLoading}
-                  className="min-h-11 rounded-panel border border-border-subtle text-[rgba(214,207,191,0.78)] px-4 py-3 text-left text-sm leading-6 transition-colors hover:border-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent disabled:opacity-50"
+                  className="min-h-11 rounded-panel border border-border-subtle text-[rgba(214,207,191,0.78)] px-4 py-3 text-left text-sm leading-6 transition-all hover:border-accent hover:text-foreground active:scale-[0.98] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent disabled:opacity-50"
                 >
                   {prompt}
                 </button>
@@ -255,7 +256,7 @@ export function SiteAssistantPanel() {
                     <div
                       className="prose prose-invert prose-sm assistant-answer-markdown"
                       dangerouslySetInnerHTML={{
-                        __html: marked.parse(msg.content) as string,
+                        __html: sanitizeHtml(marked.parse(msg.content) as string),
                       }}
                     />
                   ) : (

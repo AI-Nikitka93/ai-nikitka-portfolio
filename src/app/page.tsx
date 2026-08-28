@@ -62,14 +62,14 @@ export default async function HomePage() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
-                AI Core Architect
+                AI_Nikitka93
                 <span className="block mt-2 text-accent">
-                  Создаю будущее с помощью ИИ
+                  prompt-first AI-практик
                 </span>
               </h1>
               
               <p className="max-w-3xl text-sm leading-7 text-[rgba(214,207,191,0.85)]">
-                Исследую. Проектирую. Внедряю. AI-продукты, автоматизацию и интеллектуальные мультиагентные системы, которые решают реальные задачи и меняют индустрию.
+                Исследую. Проектирую. Собираю. AI-видео, визуалы, агентские прототипы и экспериментальные системы на стыке креатива, настойчивости и непрерывной практики.
               </p>
 
               {/* Proof asset references in the first viewport to satisfy release-audit checks */}
@@ -130,7 +130,7 @@ export default async function HomePage() {
               {/* Vertically distributed stats to eliminate empty bottom space */}
               <div className="flex-1 flex flex-col justify-between gap-4">
                 {[
-                  { value: "300+", label: "AI проектов реализовано", icon: Sparkles },
+                  { value: "50+", label: "ИИ-агентов и прототипов", icon: Sparkles },
                   { value: "58", label: "Исследований и экспериментов", icon: Activity },
                   { value: "243", label: "Курсов и обучающих программ", icon: Cpu },
                   { value: "11", label: "Международных наград", icon: Award },

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, FormEvent } from "react";
 import { Send, X, MessageSquare } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { marked } from "marked";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 type ChatMessage = {
   role: "user" | "assistant";
@@ -27,6 +28,7 @@ export function FloatingChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
 
   const labels = {
     triggerLabel: isEnglishRoute ? "AI-CHAT" : "ЧАТ-ИИ",
@@ -57,6 +59,21 @@ export function FloatingChat() {
       chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages, isExpanded]);
+
+  useEffect(() => {
+    if (!isExpanded) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (panelRef.current && !panelRef.current.contains(event.target as Node)) {
+        setIsExpanded(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isExpanded]);
 
   async function sendMessage(text: string) {
     if (!text.trim() || isLoading) return;
@@ -170,7 +187,10 @@ export function FloatingChat() {
 
       {/* 2. Expanded Chat overlay panel */}
       {isExpanded && (
-        <aside className="fixed bottom-6 right-6 z-50 w-[calc(100vw-32px)] sm:w-[380px] h-[500px] rounded-shell border border-accent/20 bg-[radial-gradient(circle_at_30%_18%,rgba(183,255,60,0.06),transparent_40%),linear-gradient(180deg,rgba(10,13,12,0.92),rgba(10,13,12,0.98))] p-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] backdrop-blur-md flex flex-col justify-between animate-[fadeIn_0.2s_ease-out]">
+        <aside
+          ref={panelRef}
+          className="fixed bottom-6 right-6 z-50 w-[calc(100vw-32px)] sm:w-[380px] h-[500px] rounded-shell border border-accent/20 bg-[radial-gradient(circle_at_30%_18%,rgba(183,255,60,0.06),transparent_40%),linear-gradient(180deg,rgba(10,13,12,0.92),rgba(10,13,12,0.98))] p-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] backdrop-blur-md flex flex-col justify-between animate-[fadeIn_0.2s_ease-out]"
+        >
           {/* Header */}
           <div className="flex items-center justify-between border-b border-border-subtle pb-3">
             <div className="flex items-center gap-2">
@@ -211,7 +231,7 @@ export function FloatingChat() {
                     <div
                       className="prose prose-invert prose-xs assistant-answer-markdown"
                       dangerouslySetInnerHTML={{
-                        __html: marked.parse(msg.content) as string,
+                        __html: sanitizeHtml(marked.parse(msg.content) as string),
                       }}
                     />
                   ) : (

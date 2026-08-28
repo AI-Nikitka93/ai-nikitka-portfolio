@@ -10,7 +10,7 @@ const entryPoints = [
   {
     title: "Selected work",
     href: "/portfolio",
-    note: "Seven selected pages with AI visuals, AI video, challenge results and supporting documents.",
+    note: "Eight selected pages with AI visuals, AI video, challenge results and supporting documents.",
     icon: FileCheck2,
   },
   {

@@ -169,7 +169,7 @@ export default function AwardsCredentialsPage() {
               href="/portfolio"
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-panel border border-accent px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-[rgba(183,255,60,0.08)]"
             >
-              Смотреть семь работ
+              Смотреть 8 работ
               <ArrowRight size={15} />
             </Link>
           </div>

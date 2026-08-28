@@ -5,10 +5,9 @@ const systemPrompt = `Роль: Вы — AI-клон Никиты Кизевич
 Контекст биографии:
 - Работал электромонтером 5-го разряда в УП "Минскводоканал" (7 лет стажа, IV группа безопасности). В 2021 году уволился и полностью переключился на IT, программирование и генеративные нейросети.
 - Прошел более 250 курсов (сертификаты Vanderbilt, IBM, Google, Harvard CS50).
-- Достижения: Top-35 на 35AWARDS (AI-графика), Гран-при в конкурсе мультфильмов Helix / LabStory за лучший нейросетевой мультфильм (декабрь 2025), лауреат конкурса Киноматик за нейровидео (март 2026), выиграл несколько номинаций на MiniMax Agent Challenge.
+- Достижения: Top-10 и Top-35 на 35AWARDS (AI-графика), Гран-при в конкурсе мультфильмов Helix / LabStory за лучший нейросетевой мультфильм (декабрь 2025), лауреат конкурса Киноматик за нейровидео (март 2026), выиграл несколько номинаций на MiniMax Agent Challenge.
 - Места на хакатонах: VK RecSys (68 место / топ-9%), Yandex CodeRun (104 место), NVIDIA Blackwell GPU hackathon (64 место с результатом 56.183 микросекунд через Pure Prompting без знания C++).
-- Женат на Александре Кизевич (учительница, родилась 22.11.2000, у нее день рождения за день до Никиты, который родился 23.11.1993).
-- Специализация: Вайб-кодинг (Vibe Coding — быстрая разработка сайтов, ботов и ИИ-агентов). Генерацией AI-видео Никита сейчас сам почти не занимается, полностью сфокусировавшись на кодинге, но если клиенту нужно именно видео, эти задачи полностью решает его жена Александра.
+- Специализация: Вайб-кодинг (Vibe Coding — быстрая разработка сайтов, ботов и ИИ-агентов). Генерацией AI-видео Никита сейчас сам почти не занимается, полностью сфокусировавшись на кодинге и разработке ИИ-агентов. В случае запросов клиентов на сложное видеопроизводство эти задачи в тандеме решает супруга Александра.
 
 ПРАВИЛА ОТВЕТОВ:
 1. Отвечайте на русском языке.
@@ -31,7 +30,7 @@ const fallbacks = [
   },
   {
     keywords: ["наград", "диплом", "35awards", "helix", "конкурс", "сертификат", "лауреат", "киноматик"],
-    answer: "Все дипломы и наработки я собрал на странице /awards-credentials. Из самого свежего: Гран-при в Helix LabStory за лучший диагностический мультфильм, Laureate Diploma в конкурсе Киноматик за нейросетевое видео (март 2026), а по графике — вошел в топ-35 на международном конкурсе 35AWARDS по нейросетевому арту."
+    answer: "Все дипломы и наработки я собрал на странице /awards-credentials. Из самого свежего: Гран-при в Helix LabStory за лучший диагностический мультфильм, Laureate Diploma в конкурсе Киноматик за нейросетевое видео (март 2026), а по графике — вошел в TOP 10 (животный мир) и TOP 35 на международной премии 35AWARDS по нейросетевому арту."
   },
   {
     keywords: ["цена", "стоимость", "калькулятор", "заказать", "услуг", "бюджет"],
@@ -97,20 +96,70 @@ function handleStreamResponse(response: Response) {
   });
 }
 
+type IncomingMessage = {
+  role?: unknown;
+  content?: unknown;
+};
+
+type IncomingBody = {
+  message?: unknown;
+  history?: unknown;
+};
+
 export async function POST(req: NextRequest) {
   try {
-    const { message, history = [] } = await req.json();
+    let body: IncomingBody | null = null;
+    try {
+      body = (await req.json()) as IncomingBody;
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid JSON payload" },
+        { status: 400 }
+      );
+    }
+
+    const message = body?.message;
+    const history = body?.history;
+
+    if (typeof message !== "string" || message.trim().length === 0) {
+      return NextResponse.json(
+        { error: "Message must be a non-empty string" },
+        { status: 400 }
+      );
+    }
+
+    if (message.length > 1000) {
+      return NextResponse.json(
+        { error: "Message exceeds maximum length of 1000 characters" },
+        { status: 400 }
+      );
+    }
+
+    const sanitizedHistory = Array.isArray(history)
+      ? (history as IncomingMessage[])
+          .filter(
+            (h): h is { role: "user" | "assistant"; content: string } =>
+              Boolean(
+                h &&
+                  typeof h === "object" &&
+                  typeof h.content === "string" &&
+                  (h.role === "user" || h.role === "assistant"),
+              ),
+          )
+          .slice(-15) // keep last 15 messages max
+          .map((h) => ({
+            role: h.role,
+            content: h.content.slice(0, 1500),
+          }))
+      : [];
 
     const groqKey = process.env.GROQ_API_KEY;
     const openRouterKey = process.env.OPENROUTER_API_KEY;
 
     const messages = [
       { role: "system", content: systemPrompt },
-      ...history.map((h: { role: string; content: string }) => ({
-        role: h.role === "user" ? "user" : "assistant",
-        content: h.content,
-      })),
-      { role: "user", content: message },
+      ...sanitizedHistory,
+      { role: "user", content: message.trim() },
     ];
 
     // Attempt 1: Groq

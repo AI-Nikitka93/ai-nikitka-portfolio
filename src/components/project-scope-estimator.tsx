@@ -333,7 +333,10 @@ export function ProjectScopeEstimator() {
             </ControlGroup>
 
             <label className="grid gap-3">
-              <span className="signal-label">Короткое описание</span>
+              <div className="flex items-center justify-between">
+                <span className="signal-label">Короткое описание</span>
+                <span className="font-mono text-[10px] text-titanium">{brief.length}/400</span>
+              </div>
               <textarea
                 value={brief}
                 onChange={(event) => setBrief(event.target.value)}
