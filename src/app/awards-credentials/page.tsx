@@ -13,7 +13,7 @@ const credentialGroups = [
     label: "Награды и конкурсные результаты",
     icon: Award,
     value:
-      "35AWARDS, LabStory / Helix, КИНОМАТИК и другие внешние площадки, где оценивались работы.",
+      "35AWARDS, LabStory / Helix, КИНОМАТИК, CodeRun, CareBridge (Devpost) и другие площадки, где оценивались решения.",
   },
   {
     label: "Техническая и образовательная база",

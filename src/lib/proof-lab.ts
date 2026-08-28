@@ -211,6 +211,39 @@ export const supportingProofHighlights: readonly SupportingProofHighlight[] = [
     note:
       "Эти файлы подтверждают отдельные категории 35AWARDS и остаются дополнительными документами.",
   },
+  {
+    id: "coderun-winter-challenge",
+    title: "Зимний алгоритмический марафон CodeRun",
+    status: "104 место из 2090",
+    image: "/proof-assets/support-01-digital-marathon-2026.jpg",
+    issuer: "CodeRun / LLM Reasoning",
+    date: "2026-02-15",
+    metric: "104 место из 2090 участников",
+    note:
+      "21-дневный марафон сложных алгоритмических задач. Решение задач теории чисел и вычислительной геометрии через многошаговую декомпозицию и строгий промпт-инжиниринг.",
+  },
+  {
+    id: "carebridge-navigator-devpost",
+    title: "CareBridge Navigator (HealthTech / UN SDG 3)",
+    status: "Honorable Mention",
+    image: "/proof-assets/support-07-amd-hackathon-2026.jpg",
+    issuer: "Devpost / PresentMe Academy",
+    date: "2026-08-15",
+    metric: "Exceptional Performance Distinction",
+    note:
+      "Международный хакатон по цифровому здоровью (485 участников). Построение модульной концепции цифровой навигации в MedTech с автоматизированным анализом архитектуры.",
+  },
+  {
+    id: "legaltech-problem-solving",
+    title: "Прикладной LegalTech & AI-анализ норм права",
+    status: "практическое решение",
+    image: "/proof-assets/support-02-russian-house-2026.jpg",
+    issuer: "LLM + Python / ReportLab",
+    date: "2025–2026",
+    metric: "100% результативность",
+    note:
+      "Анализ градостроительных нормативов и стандартов защиты прав потребителей через LLM. Генерация юридически строгих досудебных обращений и регламентных документов.",
+  },
 ] as const;
 
 export const labExperimentTracks = [

@@ -29,7 +29,7 @@ const plainTimeline = [
     period: "2025-2026",
     title: "AI_Nikitka93",
     body:
-      "Публичные работы, конкурсы, портфолио, калькулятор, помощник по сайту и новые задачи.",
+      "Победы в хакатонах (AvitoTech ML 7-е место, NVIDIA, КИНОМАТИК, Helix, CodeRun), MedTech-концепты, прикладной LegalTech и агентный кодинг.",
   },
 ] as const;
 
