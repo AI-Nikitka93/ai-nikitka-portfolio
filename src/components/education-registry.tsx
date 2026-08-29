@@ -14,6 +14,8 @@ import {
   ShieldCheck,
   Award,
   Sparkles,
+  ChevronDown,
+  ChevronsDown,
 } from "lucide-react";
 import {
   educationCertificates,
@@ -21,6 +23,9 @@ import {
   type CertificateCategory,
   type CertificatePlatform,
 } from "@/lib/education-data";
+
+const INITIAL_BATCH_SIZE = 18;
+const BATCH_INCREMENT = 18;
 
 const PLATFORM_THEMES: Record<CertificatePlatform, { bg: string; text: string; border: string }> = {
   Coursera: { bg: "bg-[#0056D2]/10", text: "text-[#68a5ff]", border: "border-[#0056D2]/30" },
@@ -40,6 +45,7 @@ export function EducationRegistry() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_BATCH_SIZE);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Keyboard shortcut listener (/ to search, Esc to clear)
@@ -57,13 +63,31 @@ export function EducationRegistry() {
         searchInputRef.current?.focus();
       } else if (e.key === "Escape" && searchQuery) {
         setSearchQuery("");
+        setVisibleCount(INITIAL_BATCH_SIZE);
       }
     }
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [searchQuery]);
 
-  // Instant In-Memory Search & Filtering (0ms Latency)
+  // Handlers with automatic batch reset
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+    setVisibleCount(INITIAL_BATCH_SIZE);
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    setVisibleCount(INITIAL_BATCH_SIZE);
+  };
+
+  const handleResetFilters = () => {
+    setSearchQuery("");
+    setSelectedCategory("all");
+    setVisibleCount(INITIAL_BATCH_SIZE);
+  };
+
+  // Instant In-Memory Filter (Dataset is pre-sorted from highest flagship to vocational)
   const filteredCertificates = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
     return educationCertificates.filter((item) => {
@@ -80,6 +104,25 @@ export function EducationRegistry() {
       );
     });
   }, [searchQuery, selectedCategory]);
+
+  // Sliced progressive batch to eliminate DOM overload on mobile devices
+  const totalCount = filteredCertificates.length;
+  const visibleCertificates = useMemo(() => {
+    return filteredCertificates.slice(0, visibleCount);
+  }, [filteredCertificates, visibleCount]);
+
+  const hasMore = visibleCount < totalCount;
+  const remainingCount = totalCount - visibleCount;
+  const nextBatchCount = Math.min(BATCH_INCREMENT, remainingCount);
+  const progressPercent = totalCount > 0 ? Math.min(100, Math.round((visibleCertificates.length / totalCount) * 100)) : 0;
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => Math.min(prev + BATCH_INCREMENT, totalCount));
+  };
+
+  const handleShowAll = () => {
+    setVisibleCount(totalCount);
+  };
 
   // Live category count calculations
   const categoryCounts = useMemo(() => {
@@ -108,7 +151,7 @@ export function EducationRegistry() {
                 Реестр подтвержденных курсов и специализаций
               </h2>
               <p className="max-w-2xl text-sm leading-relaxed text-[rgba(214,207,191,0.85)]">
-                Здесь собраны пройденные онлайн-программы, академические специализации и сертификаты. Каждая запись содержит прямую ссылку на верификацию в Coursera, edX, Stepik, Google Drive или профильной академии.
+                Здесь собраны пройденные онлайн-программы, академические специализации и сертификаты (отсортированы от ведущих международных программ к прикладным курсам). Каждая запись содержит прямую ссылку на верификацию.
               </p>
             </div>
 
@@ -193,7 +236,7 @@ export function EducationRegistry() {
               ref={searchInputRef}
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               placeholder="Поиск по курсу, вузу, навыку (нажмите / для фокуса)..."
               className="w-full rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.7)] py-2.5 pl-10 pr-20 text-xs sm:text-sm text-foreground placeholder:text-titanium/60 focus-visible:border-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
               aria-label="Поиск по сертификатам"
@@ -202,7 +245,7 @@ export function EducationRegistry() {
               {searchQuery ? (
                 <button
                   type="button"
-                  onClick={() => setSearchQuery("")}
+                  onClick={() => handleSearchChange("")}
                   className="rounded p-1 text-titanium hover:text-foreground active:scale-[0.96]"
                   aria-label="Очистить поиск"
                 >
@@ -255,7 +298,7 @@ export function EducationRegistry() {
         <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
           <button
             type="button"
-            onClick={() => setSelectedCategory("all")}
+            onClick={() => handleCategorySelect("all")}
             className={`shrink-0 rounded-panel border px-3.5 py-1.5 text-xs transition duration-150 active:scale-[0.96] ${
               selectedCategory === "all"
                 ? "border-accent bg-accent/15 font-semibold text-foreground shadow-[0_0_12px_rgba(183,255,60,0.15)]"
@@ -272,7 +315,7 @@ export function EducationRegistry() {
               <button
                 key={catKey}
                 type="button"
-                onClick={() => setSelectedCategory(catKey)}
+                onClick={() => handleCategorySelect(catKey)}
                 className={`shrink-0 rounded-panel border px-3.5 py-1.5 text-xs transition duration-150 active:scale-[0.96] flex items-center gap-1.5 ${
                   active
                     ? "border-accent bg-accent/15 font-semibold text-foreground shadow-[0_0_12px_rgba(183,255,60,0.15)]"
@@ -288,12 +331,12 @@ export function EducationRegistry() {
         </div>
       </div>
 
-      {/* Screen Reader status */}
+      {/* Screen Reader live status */}
       <div role="status" aria-live="polite" className="sr-only">
-        Найдено сертификатов: {filteredCertificates.length}
+        Показано {visibleCertificates.length} из {totalCount} курсов
       </div>
 
-      {/* 3. DISPLAY RESULTS (Grid or Table Mode) */}
+      {/* 3. DISPLAY RESULTS */}
       {filteredCertificates.length === 0 ? (
         <div className="rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.5)] p-12 text-center">
           <p className="font-mono text-sm text-accent uppercase tracking-wider">Ничего не найдено</p>
@@ -302,10 +345,7 @@ export function EducationRegistry() {
           </p>
           <button
             type="button"
-            onClick={() => {
-              setSearchQuery("");
-              setSelectedCategory("all");
-            }}
+            onClick={handleResetFilters}
             className="mt-5 inline-flex items-center gap-2 rounded-panel border border-accent bg-accent/10 px-4 py-2 text-xs font-mono text-accent hover:bg-accent/20 active:scale-[0.96]"
           >
             Сбросить фильтры
@@ -314,7 +354,7 @@ export function EducationRegistry() {
       ) : viewMode === "grid" ? (
         /* GRID MODE */
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredCertificates.map((cert) => {
+          {visibleCertificates.map((cert) => {
             const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
             const visibleSkills = cert.skills.slice(0, 4);
             const remainingSkillsCount = cert.skills.length - visibleSkills.length;
@@ -322,13 +362,12 @@ export function EducationRegistry() {
             return (
               <article
                 key={cert.id}
+                style={{ contentVisibility: "auto", containIntrinsicSize: "0 230px" }}
                 className="group relative flex flex-col justify-between rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.03),rgba(18,24,22,0.88)_40%,rgba(10,13,12,0.96))] p-5 transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_24px_rgba(183,255,60,0.09)] hover:-translate-y-0.5"
               >
-                {/* Top Edge Hairline Accent on Hover */}
                 <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-shell bg-gradient-to-r from-transparent via-accent/0 to-transparent transition-opacity duration-300 group-hover:via-accent/60" />
 
                 <div>
-                  {/* Top Bar: Platform Badge on Left, Flagship/Specialization Pill on Right (No Year Noise) */}
                   <div className="flex items-center justify-between gap-2">
                     <span className={`inline-flex items-center gap-1 rounded border px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-wide font-medium ${theme.border} ${theme.bg} ${theme.text}`}>
                       {cert.platform}
@@ -350,24 +389,20 @@ export function EducationRegistry() {
                     </div>
                   </div>
 
-                  {/* Title */}
                   <h3 className="mt-3.5 text-sm sm:text-base font-semibold leading-snug text-foreground group-hover:text-accent transition-colors line-clamp-2">
                     {cert.title}
                   </h3>
 
-                  {/* Russian Subtitle / Translation if present */}
                   {cert.titleRu && (
                     <p className="mt-1 text-xs text-[rgba(214,207,191,0.78)] leading-relaxed line-clamp-2">
                       {cert.titleRu}
                     </p>
                   )}
 
-                  {/* Issuer */}
                   <p className="mt-2 text-xs font-mono text-titanium">
                     {cert.issuer}
                   </p>
 
-                  {/* Skills tags (max 4 + remaining badge to preserve card height consistency) */}
                   <div className="mt-3.5 flex flex-wrap gap-1.5">
                     {visibleSkills.map((skill) => (
                       <span
@@ -385,7 +420,6 @@ export function EducationRegistry() {
                   </div>
                 </div>
 
-                {/* Bottom Action: Link to verify */}
                 <div className="mt-5 flex items-center justify-between border-t border-border-subtle/50 pt-3.5">
                   <span className="font-mono text-[10px] uppercase tracking-wider text-titanium">
                     {cert.isSpecialization ? `Специализация (${cert.coursesCount || 3}+)` : "Курс"}
@@ -406,7 +440,7 @@ export function EducationRegistry() {
           })}
         </div>
       ) : (
-        /* TABLE / COMPACT MODE (Clean Telemetry Grid) */
+        /* TABLE / COMPACT MODE */
         <div className="overflow-hidden rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.75)]">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-[rgba(214,207,191,0.85)]">
@@ -419,7 +453,7 @@ export function EducationRegistry() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border-subtle/30">
-                {filteredCertificates.map((cert) => {
+                {visibleCertificates.map((cert) => {
                   const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
                   return (
                     <tr
@@ -459,6 +493,64 @@ export function EducationRegistry() {
               </tbody>
             </table>
           </div>
+        </div>
+      )}
+
+      {/* 4. TELEMETRY PROGRESS & PROGRESSIVE DISCLOSURE CONTROLS */}
+      {filteredCertificates.length > 0 && (
+        <div className="space-y-4 rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.6)] p-5 md:p-6 text-center">
+          {/* Progress Bar & Telemetry Status */}
+          <div className="mx-auto max-w-md space-y-2">
+            <div className="flex items-center justify-between text-[11px] font-mono text-titanium">
+              <span className="tracking-wide">
+                ПОКАЗАНО: <span className="text-foreground font-semibold">{visibleCertificates.length}</span> ИЗ <span className="text-foreground font-semibold">{totalCount}</span>
+              </span>
+              <span className="text-accent font-semibold">{progressPercent}%</span>
+            </div>
+
+            {/* Futuristic Progress Track */}
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-[rgba(10,13,12,0.85)] border border-border-subtle/50">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-accent/60 via-accent to-accent shadow-[0_0_10px_rgba(183,255,60,0.5)] transition-all duration-500 ease-out"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          {hasMore ? (
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              {/* Primary: Show Next Batch */}
+              <button
+                type="button"
+                onClick={handleLoadMore}
+                className="group relative inline-flex items-center justify-center gap-2.5 rounded-panel border border-accent/40 bg-[linear-gradient(135deg,rgba(183,255,60,0.12),rgba(18,24,22,0.9))] px-6 py-3 text-xs sm:text-sm font-semibold font-mono text-accent shadow-[0_0_20px_rgba(183,255,60,0.08)] transition-all duration-200 hover:border-accent hover:bg-accent/20 hover:shadow-[0_0_28px_rgba(183,255,60,0.22)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <span>ПОКАЗАТЬ ЕЩЕ {nextBatchCount} КУРСОВ</span>
+                <span className="inline-flex items-center justify-center rounded-full bg-accent/20 border border-accent/40 px-2 py-0.5 text-[10px] text-foreground font-mono font-normal">
+                  осталось {remainingCount}
+                </span>
+                <ChevronDown size={15} className="text-accent transition-transform duration-200 group-hover:translate-y-0.5" />
+              </button>
+
+              {/* Secondary: Show All */}
+              <button
+                type="button"
+                onClick={handleShowAll}
+                className="inline-flex items-center justify-center gap-1.5 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-4 py-3 text-xs font-mono text-titanium hover:border-accent/40 hover:text-foreground transition-all duration-150 active:scale-[0.98]"
+              >
+                <ChevronsDown size={14} />
+                <span>Развернуть все ({totalCount})</span>
+              </button>
+            </div>
+          ) : totalCount > INITIAL_BATCH_SIZE ? (
+            <div className="pt-2 text-center">
+              <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-titanium/80">
+                <span className="h-1 w-1 rounded-full bg-accent" />
+                Весь реестр из {totalCount} курсов полностью отображен
+              </span>
+            </div>
+          ) : null}
         </div>
       )}
     </div>
