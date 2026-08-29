@@ -17,6 +17,7 @@ const englishLabels: Record<string, string> = {
   "/lab": "Lab",
   "/blog": "Blog",
   "/awards-credentials": "Awards",
+  "/education": "Education",
   "/links": "Contact",
 };
 

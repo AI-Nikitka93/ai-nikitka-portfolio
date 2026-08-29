@@ -38,7 +38,7 @@ export const navigation = [
   { href: "/lab", label: "ЛАБОРАТОРИЯ", shortLabel: "ЛАБОРАТОРИЯ" },
   { href: "/blog", label: "СТАТЬИ", shortLabel: "СТАТЬИ" },
   { href: "/awards-credentials", label: "НАГРАДЫ", shortLabel: "НАГРАДЫ" },
-  { href: "/education", label: "ОБУЧЕНИЕ", shortLabel: "ОБУЧЕНИЕ" },
+  { href: "/education", label: "ОБРАЗОВАНИЕ", shortLabel: "ОБРАЗОВАНИЕ" },
   { href: "/links", label: "КОНТАКТЫ", shortLabel: "КОНТАКТЫ" },
 ] as const;
 
