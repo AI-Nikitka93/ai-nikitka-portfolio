@@ -1,7 +1,7 @@
 # scripts/update_education_with_priority.py
 import json
 
-with open('all_parsed_certificates.json', 'r', encoding='utf-8') as f:
+with open('cleaned_certs.json', 'r', encoding='utf-8') as f:
     certs = json.load(f)
 
 def compute_priority(cert):
@@ -13,12 +13,12 @@ def compute_priority(cert):
 
     # Tier 1 (90-100)
     if "vanderbilt" in inst_l or "prompt engineering" in title_l: return 100
-    if "ibm" in inst_l and (is_spec or "generative ai fundamentals" in title_l or "fine-tuning" in title_l): return 98
+    if "ibm" in inst_l and (is_spec or "generative ai" in title_l or "foundation models" in title_l or "fine-tuning" in title_l): return 98
     if "harvard" in inst_l or platform == "Harvard" or "cs50" in title_l: return 97
     if "google" in inst_l and ("ai essentials" in title_l or is_flag): return 95
     if "anthropic" in inst_l or "claude" in title_l: return 95
     if "hugging face" in inst_l or "ai agents" in title_l: return 94
-    if "bsafe" in title_l or "department of safety" in inst_l or "undss" in inst_l: return 94
+    if "bsafe" in title_l or "department of safety" in inst_l or "undss" in inst_l or "безопасности оон" in inst_l: return 94
     if "stanford" in inst_l: return 93
     if "six sigma black belt" in title_l or "juran" in inst_l: return 92
     if "delft" in inst_l or "electric cars" in title_l: return 91
@@ -30,9 +30,9 @@ def compute_priority(cert):
     if "tecnológico de monterrey" in inst_l or "monterrey" in inst_l: return 85
     if "dartmouth" in inst_l: return 85
     if "ibm" in inst_l and is_spec: return 84
-    if "world health organization" in inst_l or "who" in inst_l or "unicef" in inst_l or "fema" in inst_l: return 83
+    if "world health organization" in inst_l or "who" in inst_l or "воз" in inst_l or "unicef" in inst_l or "fema" in inst_l: return 83
     if "яндекс" in inst_l and ("метрика" in title_l or "директ" in title_l or "эксперт" in title_l): return 82
-    if "cisco" in title_l or "it essentials" in title_l: return 78
+    if "cisco" in title_l or "it essentials" in title_l or "cisco" in inst_l: return 78
     if "рцтту" in inst_l or "республиканский центр" in inst_l: return 76
     if is_flag: return 75
 
@@ -40,7 +40,7 @@ def compute_priority(cert):
     if "uc davis" in inst_l or "california, davis" in inst_l: return 74
     if "glasgow" in inst_l: return 72
     if "helsinki" in inst_l or "elements of ai" in title_l: return 71
-    if "michigan" in inst_l or "johns hopkins" in inst_l: return 68
+    if "michigan" in inst_l or "johns hopkins" in inst_l or "edinburgh" in inst_l: return 68
     if "university of london" in inst_l or "illinois" in inst_l or "babson" in inst_l: return 65
     if any(k in inst_l for k in ["двфу", "ранхигс", "рудн", "книту-каи", "омгту", "мфти", "вшэ", "тпу", "мади"]): return 62
     if platform in ["Coursera", "edX"]: return 58
@@ -54,7 +54,7 @@ def compute_priority(cert):
 
     return 30
 
-# Sort certs by priority descending, then flagship, then title
+# Sort certs by priority descending, then flagship, then specialization
 certs.sort(key=lambda c: (compute_priority(c), 1 if c.get('isFlagship') else 0, 1 if c.get('isSpecialization') else 0), reverse=True)
 
 ts_content = '''export type CertificateCategory =
@@ -162,4 +162,4 @@ ts_content += "];\n"
 with open('src/lib/education-data.ts', 'w', encoding='utf-8') as f:
     f.write(ts_content)
 
-print(f"Successfully generated prioritized education dataset with {len(certs)} records!")
+print(f"Successfully generated prioritized and cleaned education dataset with {len(certs)} records!")

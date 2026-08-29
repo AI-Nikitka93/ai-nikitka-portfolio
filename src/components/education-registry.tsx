@@ -16,6 +16,7 @@ import {
   Sparkles,
   ChevronDown,
   ChevronsDown,
+  BookOpen,
 } from "lucide-react";
 import {
   educationCertificates,
@@ -151,7 +152,7 @@ export function EducationRegistry() {
                 Реестр подтвержденных курсов и специализаций
               </h2>
               <p className="max-w-2xl text-sm leading-relaxed text-[rgba(214,207,191,0.85)]">
-                Здесь собраны пройденные онлайн-программы, академические специализации и сертификаты (отсортированы от ведущих международных программ к прикладным курсам). Каждая запись содержит прямую ссылку на верификацию.
+                Здесь собраны пройденные онлайн-программы, академические специализации ведущих мировых университетов (Vanderbilt, Harvard, Stanford, MIT, IBM, Google) и сертификаты. Каждая запись содержит прямую ссылку на верификацию.
               </p>
             </div>
 
@@ -169,10 +170,10 @@ export function EducationRegistry() {
               <div className="rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] p-3.5 flex flex-col justify-between">
                 <div className="flex items-center gap-1.5 text-accent">
                   <Building2 size={15} />
-                  <span className="font-mono text-[9px] uppercase tracking-wider">Платформы</span>
+                  <span className="font-mono text-[9px] uppercase tracking-wider">Вузы и платформы</span>
                 </div>
                 <span className="font-mono text-2xl sm:text-3xl font-extrabold text-foreground mt-2">40+</span>
-                <span className="text-[10px] text-titanium mt-0.5">Вузов и академий</span>
+                <span className="text-[10px] text-titanium mt-0.5">Мировых академий</span>
               </div>
 
               <div className="rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] p-3.5 flex flex-col justify-between">
@@ -237,7 +238,7 @@ export function EducationRegistry() {
               type="text"
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
-              placeholder="Поиск по курсу, вузу, навыку (нажмите / для фокуса)..."
+              placeholder="Поиск по вузу, курсу, навыку (нажмите / для фокуса)..."
               className="w-full rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.7)] py-2.5 pl-10 pr-20 text-xs sm:text-sm text-foreground placeholder:text-titanium/60 focus-visible:border-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
               aria-label="Поиск по сертификатам"
             />
@@ -352,7 +353,7 @@ export function EducationRegistry() {
           </button>
         </div>
       ) : viewMode === "grid" ? (
-        /* GRID MODE: Initial 6 items (2 rows of 3) */
+        /* GRID MODE: Initial 6 items (2 rows of 3) with PROMINENT UNIVERSITY/ISSUER */
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visibleCertificates.map((cert) => {
             const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
@@ -368,41 +369,49 @@ export function EducationRegistry() {
                 <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-shell bg-gradient-to-r from-transparent via-accent/0 to-transparent transition-opacity duration-300 group-hover:via-accent/60" />
 
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <span className={`inline-flex items-center gap-1 rounded border px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-wide font-medium ${theme.border} ${theme.bg} ${theme.text}`}>
+                  {/* Top Bar: Institution / University + Platform Channel */}
+                  <div className="flex items-start justify-between gap-2 border-b border-border-subtle/40 pb-3">
+                    <div className="flex items-center gap-1.5 min-w-0 pr-2">
+                      <Building2 size={13} className="text-accent shrink-0" />
+                      <span className="font-semibold text-xs sm:text-sm text-foreground truncate group-hover:text-accent transition-colors" title={cert.issuer}>
+                        {cert.issuer}
+                      </span>
+                    </div>
+
+                    <span className={`shrink-0 inline-flex items-center gap-1 rounded border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide font-medium ${theme.border} ${theme.bg} ${theme.text}`}>
                       {cert.platform}
                     </span>
-
-                    <div className="flex items-center gap-1.5">
-                      {cert.isFlagship && (
-                        <span className="inline-flex items-center gap-1 rounded border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 font-mono text-[9px] uppercase text-amber-400">
-                          <Award size={10} />
-                          <span>Топ-программа</span>
-                        </span>
-                      )}
-                      {cert.isSpecialization && !cert.isFlagship && (
-                        <span className="inline-flex items-center gap-1 rounded border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-[9px] uppercase text-accent">
-                          <Sparkles size={9} />
-                          <span>Специализация</span>
-                        </span>
-                      )}
-                    </div>
                   </div>
 
-                  <h3 className="mt-3.5 text-sm sm:text-base font-semibold leading-snug text-foreground group-hover:text-accent transition-colors line-clamp-2">
+                  {/* Flagship / Specialization Badges */}
+                  <div className="mt-3 flex items-center gap-1.5">
+                    {cert.isFlagship && (
+                      <span className="inline-flex items-center gap-1 rounded border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 font-mono text-[9px] uppercase text-amber-400">
+                        <Award size={10} />
+                        <span>Топ-программа</span>
+                      </span>
+                    )}
+                    {cert.isSpecialization && (
+                      <span className="inline-flex items-center gap-1 rounded border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-[9px] uppercase text-accent">
+                        <Sparkles size={9} />
+                        <span>Специализация ({cert.coursesCount || 3}+ курса)</span>
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Program Title */}
+                  <h3 className="mt-2.5 text-sm sm:text-base font-bold leading-snug text-foreground group-hover:text-accent transition-colors line-clamp-2">
                     {cert.title}
                   </h3>
 
+                  {/* Russian Description / Breakdown */}
                   {cert.titleRu && (
-                    <p className="mt-1 text-xs text-[rgba(214,207,191,0.78)] leading-relaxed line-clamp-2">
+                    <p className="mt-1.5 text-xs text-[rgba(214,207,191,0.85)] leading-relaxed line-clamp-2">
                       {cert.titleRu}
                     </p>
                   )}
 
-                  <p className="mt-2 text-xs font-mono text-titanium">
-                    {cert.issuer}
-                  </p>
-
+                  {/* Skills tags */}
                   <div className="mt-3.5 flex flex-wrap gap-1.5">
                     {visibleSkills.map((skill) => (
                       <span
@@ -420,10 +429,12 @@ export function EducationRegistry() {
                   </div>
                 </div>
 
+                {/* Bottom Action / Verification Button */}
                 <div className="mt-5 flex items-center justify-between border-t border-border-subtle/50 pt-3.5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-titanium">
-                    {cert.isSpecialization ? `Специализация (${cert.coursesCount || 3}+)` : "Курс"}
-                  </span>
+                  <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-titanium">
+                    <BookOpen size={11} className="text-accent" />
+                    <span>{cert.isSpecialization ? `Специализация` : "Сертификат"}</span>
+                  </div>
 
                   <a
                     href={cert.url}
@@ -440,15 +451,15 @@ export function EducationRegistry() {
           })}
         </div>
       ) : (
-        /* TABLE / COMPACT MODE */
+        /* TABLE / COMPACT MODE with Clear University/Issuer column */
         <div className="overflow-hidden rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.75)]">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-[rgba(214,207,191,0.85)]">
               <thead className="border-b border-border-subtle bg-[rgba(10,13,12,0.85)] font-mono text-[10px] uppercase tracking-wider text-titanium">
                 <tr>
-                  <th className="py-3 px-4">Платформа</th>
-                  <th className="py-3 px-4">Программа / Курс</th>
-                  <th className="py-3 px-4 hidden md:table-cell">Организация</th>
+                  <th className="py-3 px-4">Университет / Организация</th>
+                  <th className="py-3 px-4">Программа / Специализация</th>
+                  <th className="py-3 px-4 hidden md:table-cell">Платформа</th>
                   <th className="py-3 px-4 text-right">Подтверждение</th>
                 </tr>
               </thead>
@@ -460,10 +471,11 @@ export function EducationRegistry() {
                       key={cert.id}
                       className="group transition-colors hover:bg-accent/[0.04] border-l-2 border-l-transparent hover:border-l-accent"
                     >
-                      <td className="py-3 px-4 whitespace-nowrap">
-                        <span className={`inline-block rounded px-2 py-0.5 font-mono text-[9px] uppercase ${theme.border} ${theme.bg} ${theme.text} border`}>
-                          {cert.platform}
-                        </span>
+                      <td className="py-3 px-4 font-semibold text-foreground whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
+                          <Building2 size={12} className="text-accent shrink-0" />
+                          <span>{cert.issuer}</span>
+                        </div>
                       </td>
                       <td className="py-3 px-4">
                         <div className="font-semibold text-foreground group-hover:text-accent transition-colors">
@@ -473,8 +485,10 @@ export function EducationRegistry() {
                           <div className="text-[11px] text-titanium">{cert.titleRu}</div>
                         )}
                       </td>
-                      <td className="py-3 px-4 hidden md:table-cell font-mono text-[11px] text-titanium">
-                        {cert.issuer}
+                      <td className="py-3 px-4 hidden md:table-cell whitespace-nowrap">
+                        <span className={`inline-block rounded px-2 py-0.5 font-mono text-[9px] uppercase ${theme.border} ${theme.bg} ${theme.text} border`}>
+                          {cert.platform}
+                        </span>
                       </td>
                       <td className="py-3 px-4 text-right whitespace-nowrap">
                         <a
@@ -528,7 +542,7 @@ export function EducationRegistry() {
               >
                 <span>ПОКАЗАТЬ ЕЩЕ {nextBatchCount} КУРСОВ</span>
                 <span className="inline-flex items-center justify-center rounded-full bg-accent/20 border border-accent/40 px-2 py-0.5 text-[10px] text-foreground font-mono font-normal">
-                  осталось {remainingCount}
+                  (осталось {remainingCount})
                 </span>
                 <ChevronDown size={15} className="text-accent transition-transform duration-200 group-hover:translate-y-0.5" />
               </button>
