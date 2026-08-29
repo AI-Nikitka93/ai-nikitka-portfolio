@@ -24,8 +24,8 @@ import {
   type CertificatePlatform,
 } from "@/lib/education-data";
 
-const INITIAL_BATCH_SIZE = 18;
-const BATCH_INCREMENT = 18;
+const INITIAL_BATCH_SIZE = 6;
+const BATCH_INCREMENT = 6;
 
 const PLATFORM_THEMES: Record<CertificatePlatform, { bg: string; text: string; border: string }> = {
   Coursera: { bg: "bg-[#0056D2]/10", text: "text-[#68a5ff]", border: "border-[#0056D2]/30" },
@@ -70,7 +70,7 @@ export function EducationRegistry() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [searchQuery]);
 
-  // Handlers with automatic batch reset
+  // Handlers with automatic batch reset to 6 items
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
     setVisibleCount(INITIAL_BATCH_SIZE);
@@ -105,7 +105,7 @@ export function EducationRegistry() {
     });
   }, [searchQuery, selectedCategory]);
 
-  // Sliced progressive batch to eliminate DOM overload on mobile devices
+  // Sliced progressive batch of 6 items
   const totalCount = filteredCertificates.length;
   const visibleCertificates = useMemo(() => {
     return filteredCertificates.slice(0, visibleCount);
@@ -352,7 +352,7 @@ export function EducationRegistry() {
           </button>
         </div>
       ) : viewMode === "grid" ? (
-        /* GRID MODE */
+        /* GRID MODE: Initial 6 items (2 rows of 3) */
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visibleCertificates.map((cert) => {
             const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
@@ -540,7 +540,7 @@ export function EducationRegistry() {
                 className="inline-flex items-center justify-center gap-1.5 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-4 py-3 text-xs font-mono text-titanium hover:border-accent/40 hover:text-foreground transition-all duration-150 active:scale-[0.98]"
               >
                 <ChevronsDown size={14} />
-                <span>Развернуть все ({totalCount})</span>
+                <span>Развернуть весь реестр ({totalCount})</span>
               </button>
             </div>
           ) : totalCount > INITIAL_BATCH_SIZE ? (
