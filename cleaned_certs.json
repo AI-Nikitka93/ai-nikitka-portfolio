@@ -901,7 +901,8 @@
     "skills": [
       "Public Health"
     ],
-    "titleRu": "Тренинг по COVID-19"
+    "titleRu": "Клиническая подготовка и протоколы безопасности медработников",
+    "isFlagship": true
   },
   {
     "id": "cert-79-promoting-and-protecting-human",
@@ -1005,13 +1006,14 @@
   {
     "id": "cert-87-bsafe",
     "title": "BSAFE Field Security & Safety Certification",
-    "issuer": "Rochester Institute of Technology (RIT, США)",
+    "issuer": "Департамент безопасности ООН (UNDSS)",
     "platform": "UN / WHO",
     "category": "global-health-safety",
     "url": "https://drive.google.com/file/d/10Sa6991ynSNZwMnss0l0qbGY0hpdjKZU/view?usp=sharing",
     "skills": [
       "Global Standards",
-      "Safety Protocols"
+      "Safety Protocols",
+      "Crisis Response"
     ],
     "isFlagship": true,
     "titleRu": "Официальная сертификация полевой безопасности сотрудников ООН"
@@ -1178,7 +1180,7 @@
   {
     "id": "cert-101-general-business-energy-effici",
     "title": "General Business Energy Efficiency",
-    "issuer": "Rochester Institute of Technology (RIT, США)",
+    "issuer": "Sustainable Energy Authority of Ireland / SEAI Energy Academy",
     "platform": "Other",
     "category": "engineering-energy",
     "url": "https://drive.google.com/file/d/1BxdgMM9Rlqn61VhXpXkI_nHArOHuTk6h/view?usp=sharing",
@@ -1292,7 +1294,7 @@
   {
     "id": "cert-110-prevent-detect-escape-home-fir",
     "title": "Prevent Detect Escape - Home Fire Safety for people at higher risk",
-    "issuer": "Rochester Institute of Technology (RIT, США)",
+    "issuer": "Country Fire Authority",
     "platform": "Other",
     "category": "global-health-safety",
     "url": "https://drive.google.com/file/d/15MfOzQSb6oGaS70llfNVS4dmeT3yr66E/view?usp=sharing",
@@ -1518,7 +1520,7 @@
       "Leadership",
       "UN Protocols"
     ],
-    "titleRu": "Лидерство в распределенных и удаленных командах"
+    "titleRu": "Лидерство в распределенных и удаленных командах (Harvard Professional Certificate)"
   },
   {
     "id": "cert-128-remote-work-revolution-for-eve",
@@ -1546,7 +1548,7 @@
     "isFlagship": true,
     "isSpecialization": true,
     "coursesCount": 3,
-    "titleRu": "Лидерство в распределенных и удаленных командах"
+    "titleRu": "Лидерство в распределенных и удаленных командах (Harvard Professional Certificate)"
   },
   {
     "id": "cert-130-fundamentos-de-fotograf-a-docu",
@@ -2962,8 +2964,9 @@
     "category": "ai-ml",
     "url": "https://www.coursera.org/account/accomplishments/verify/ED35K9D93X2L",
     "skills": [
-      "Machine Learning",
-      "AI Tools"
+      "AI Tools",
+      "Generative AI",
+      "Prompt Engineering"
     ],
     "isFlagship": true,
     "titleRu": "Основы прикладного использования ИИ в рабочих процессах"
@@ -3146,9 +3149,11 @@
     "url": "https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/4c81fd9ddc2033e7900275a483dd9092d0e08abd7f90d819876d33ca1158c283?response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-02-11.png%3B+filename%3D%222025-02-11.png%22%3B&response-content-type=image%2Fpng&Expires=1744132475&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NDEzMjQ3NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2YyLzM0L2YyMzQ0MTUxZjYwZjYwMjdjNDM2ODIxZGM2MWNmM2YyN2E0NjQzNWRlNTdkZjhkZjUwYWQwMmI1YWNjYTdjMDcvNGM4MWZkOWRkYzIwMzNlNzkwMDI3NWE0ODNkZDkwOTJkMGUwOGFiZDdmOTBkODE5ODc2ZDMzY2ExMTU4YzI4Mz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=ClN1kYVUhRH1KH9ouXZLGk%7EGy0cj0Wh7kPHHDi45GvLoOokiQhSS-QrChKxcmTyGbnPAHvIQsi4wCwjtPbK2PWvBDvLGE96c-n26PXXwlGdxUjtQJFvb61vDUKYvc%7E9ZmojsWNmtpH9aGXCCWzzPh%7EXj95X%7Eb78Bh9queSGYvDqDO%7E3TtjV7KPZ1vjoAQOIk2Ws%7EI7tLV8W46zroPFQbTnQBRnBtxjBewen8gZsxUwXpjKYl1BFNYyeWAY2QVfnKfywLMqjIvZ7De7Df8p-AREzML82IYl2lO7NVQCLYvbtOSOxZUlGkTjHZL7aX6kIOjFNpbx9pbvUT51beqOh-tg__&Key-Pair-Id=K24J24Z295AEI9",
     "skills": [
       "AI Agents",
-      "UN Protocols"
+      "LLM Workflows",
+      "Python"
     ],
-    "titleRu": "Основы работы агентов искусственного интеллекта"
+    "titleRu": "Основы разработки ИИ-агентов и рабочих процессов LLM",
+    "isFlagship": true
   },
   {
     "id": "cert-258-ai-agents-from-prompts-to-mult",

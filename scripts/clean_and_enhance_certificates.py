@@ -11,22 +11,30 @@ def clean_issuer_name(raw_issuer):
     raw = raw_issuer.strip()
     raw = re.sub(r'\s+', ' ', raw)
     
-    # Standardize prestigious institutions
+    # Standardize prestigious institutions with strict word boundaries or exact substrings
     if "vanderbilt" in raw.lower():
         return "Vanderbilt University (Университет Вандербильта)"
     if "harvard" in raw.lower():
         return "Harvard University (Гарвардский университет)"
     if "stanford" in raw.lower():
         return "Stanford Medicine (Стэнфордский университет)"
-    if "massachusetts institute of technology" in raw.lower() or "mit" in raw.lower():
-        return "MIT (Массачусетский технологический институт)"
-    if "ibm" in raw.lower():
+    if "undss" in raw.lower() or "department of safety" in raw.lower() or "безопасности оон" in raw.lower() or "united nations department" in raw.lower():
+        return "Департамент безопасности ООН (UNDSS)"
+    if "ibm" in raw.lower() or "international business machines" in raw.lower():
         return "IBM (International Business Machines)"
+    if "hugging face" in raw.lower() or "huggingface" in raw.lower():
+        return "Hugging Face"
+    if "anthropic" in raw.lower():
+        return "Anthropic"
     if "google" in raw.lower() and "analytics" not in raw.lower():
         return "Google"
+    if "google analytics" in raw.lower():
+        return "Google Analytics Academy"
     if "delft" in raw.lower():
         return "Delft University of Technology (TU Delft, Нидерланды)"
-    if "rochester institute of technology" in raw.lower() or "rit" in raw.lower():
+    if "massachusetts institute of technology" in raw.lower() or re.search(r'\bmit\b', raw, re.IGNORECASE):
+        return "MIT (Массачусетский технологический институт)"
+    if "rochester institute of technology" in raw.lower() or re.search(r'\brit\b', raw, re.IGNORECASE):
         return "Rochester Institute of Technology (RIT, США)"
     if "dartmouth" in raw.lower():
         return "Dartmouth College (Дартмутский колледж, Ivy League)"
@@ -48,9 +56,7 @@ def clean_issuer_name(raw_issuer):
         return "University of Michigan (Мичиганский университет)"
     if "cisco" in raw.lower():
         return "Cisco Networking Academy"
-    if "undss" in raw.lower() or "department of safety and security" in raw.lower():
-        return "Департамент безопасности ООН (UNDSS)"
-    if "world health organization" in raw.lower() or "who" in raw.lower() or "воз" in raw.lower():
+    if "world health organization" in raw.lower() or re.search(r'\bwho\b', raw, re.IGNORECASE) or re.search(r'\bвоз\b', raw, re.IGNORECASE):
         return "Всемирная организация здравоохранения (ВОЗ / WHO)"
     if "unicef" in raw.lower() or "юнисеф" in raw.lower():
         return "ЮНИСЕФ (UNICEF / ООН)"
@@ -111,7 +117,7 @@ def clean_title_and_extract_ru(raw_title):
     title_ru = None
 
     # Handle Vanderbilt prompt engineering
-    if "prompt engineering (специализация)" in t.lower() or ("prompt engineering" in t.lower() and "chatgpt" in t.lower()):
+    if "prompt engineering (специализация)" in t.lower() or ("prompt engineering" in t.lower() and "chatgpt" in t.lower()) or "prompt engineering specialization" in t.lower():
         title_en = "Prompt Engineering Specialization"
         title_ru = "Специализация: Промпт-инжиниринг и генеративный ИИ (3 курса: Prompt Engineering for ChatGPT, ChatGPT Advanced Data Analysis, Trustworthy GenAI)"
         return title_en, title_ru
@@ -129,21 +135,33 @@ def clean_title_and_extract_ru(raw_title):
         return title_en, title_ru
 
     # Handle Harvard Remote Leadership
-    if "exercising leadership" in t.lower() or "remote environment" in t.lower() or "leading in a remote" in t.lower():
+    if "exercising leadership" in t.lower() or "remote environment" in t.lower() or "leading in a remote" in t.lower() or "professional certificate: leading" in t.lower():
         title_en = "Leading in a Remote Environment & Exercising Leadership"
-        title_ru = "Лидерство в распределенных и удаленных командах"
+        title_ru = "Лидерство в распределенных и удаленных командах (Harvard Professional Certificate)"
         return title_en, title_ru
 
     # Handle Google AI Essentials
-    if "google ai essentials" in t.lower() or "ai essentials" in t.lower() and "google" in t.lower():
+    if "google ai essentials" in t.lower() or ("ai essentials" in t.lower() and "google" in t.lower()):
         title_en = "Google AI Essentials"
         title_ru = "Основы прикладного использования ИИ в рабочих процессах"
+        return title_en, title_ru
+
+    # Handle Hugging Face AI Agents
+    if "ai agents fundamentals" in t.lower() or ("ai agents" in t.lower() and "hugging" in t.lower()):
+        title_en = "AI Agents Fundamentals"
+        title_ru = "Основы разработки ИИ-агентов и рабочих процессов LLM"
         return title_en, title_ru
 
     # Handle UNDSS BSAFE
     if "bsafe" in t.lower():
         title_en = "BSAFE Field Security & Safety Certification"
         title_ru = "Официальная сертификация полевой безопасности сотрудников ООН"
+        return title_en, title_ru
+
+    # Handle Stanford COVID-19
+    if "covid-19 training for healthcare" in t.lower():
+        title_en = "COVID-19 Training for Healthcare Workers"
+        title_ru = "Клиническая подготовка и протоколы безопасности медработников"
         return title_en, title_ru
 
     # Handle Six Sigma Black Belt
@@ -184,6 +202,34 @@ for c in certs:
         entry['titleRu'] = title_ru
     elif 'titleRu' in entry and entry['titleRu']:
         pass
+    
+    # Normalize flagship & specialization flags
+    if entry.get('id') in ['cert-237-prompt-engineering-1-prompt-en', 'cert-241-generative-ai-prompt-engineeri', 'cert-129-professional-certificate-leadi', 'cert-214-cs50-technology', 'cert-242-google-ai-essentials-google', 'cert-243-google-ai-essentials', 'cert-257-ai-agents-fundamentals', 'cert-87-bsafe', 'cert-78-covid-19-training-for-healthca', 'cert-236-electric-cars-technology-busines', 'cert-234-lean-six-sigma-black-belt-parts-']:
+        entry['isFlagship'] = True
+
+    if entry.get('id') in ['cert-237-prompt-engineering-1-prompt-en', 'cert-241-generative-ai-prompt-engineeri', 'cert-129-professional-certificate-leadi']:
+        entry['isSpecialization'] = True
+
+    # Ensure Hugging Face skills and platform
+    if 'hugging face' in issuer_clean.lower() or entry.get('id') == 'cert-257-ai-agents-fundamentals':
+        entry['issuer'] = 'Hugging Face'
+        entry['skills'] = ['AI Agents', 'LLM Workflows', 'Python']
+        entry['category'] = 'ai-ml'
+
+    # Ensure Google AI Essentials category & platform
+    if 'google ai essentials' in title_clean.lower():
+        entry['issuer'] = 'Google'
+        entry['platform'] = 'Google'
+        entry['category'] = 'ai-ml'
+        entry['skills'] = ['AI Tools', 'Generative AI', 'Prompt Engineering']
+
+    # Ensure UNDSS BSAFE category & platform
+    if entry.get('id') == 'cert-87-bsafe' or 'bsafe' in title_clean.lower():
+        entry['issuer'] = 'Департамент безопасности ООН (UNDSS)'
+        entry['platform'] = 'UN / WHO'
+        entry['category'] = 'global-health-safety'
+        entry['skills'] = ['Global Standards', 'Safety Protocols', 'Crisis Response']
+
     cleaned_certs.append(entry)
 
 print(f"Cleaned {len(cleaned_certs)} certs!")

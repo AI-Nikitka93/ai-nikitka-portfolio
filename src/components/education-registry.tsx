@@ -152,7 +152,7 @@ export function EducationRegistry() {
                 Реестр подтвержденных курсов и специализаций
               </h2>
               <p className="max-w-2xl text-sm leading-relaxed text-[rgba(214,207,191,0.85)]">
-                Здесь собраны пройденные онлайн-программы, академические специализации ведущих мировых университетов (Vanderbilt, Harvard, Stanford, MIT, IBM, Google) и сертификаты. Каждая запись содержит прямую ссылку на верификацию.
+                Здесь собраны пройденные онлайн-программы, академические специализации ведущих мировых институтов (Vanderbilt University, Harvard, Stanford Medicine, MIT, IBM, Google) и сертификаты. Каждая запись содержит прямую ссылку на верификацию.
               </p>
             </div>
 
@@ -247,7 +247,7 @@ export function EducationRegistry() {
                 <button
                   type="button"
                   onClick={() => handleSearchChange("")}
-                  className="rounded p-1 text-titanium hover:text-foreground active:scale-[0.96]"
+                  className="rounded p-1 text-titanium hover:text-foreground active:scale-[0.96] transition-transform"
                   aria-label="Очистить поиск"
                 >
                   <X size={14} />
@@ -266,7 +266,7 @@ export function EducationRegistry() {
               <button
                 type="button"
                 onClick={() => setViewMode("grid")}
-                className={`flex items-center gap-1.5 rounded-[6px] px-3 py-1.5 text-xs font-mono transition ${
+                className={`flex items-center gap-1.5 rounded-[6px] px-3 py-1.5 text-xs font-mono transition duration-150 active:scale-[0.96] ${
                   viewMode === "grid"
                     ? "border border-accent/40 bg-accent/15 font-semibold text-accent"
                     : "text-titanium hover:text-foreground"
@@ -280,7 +280,7 @@ export function EducationRegistry() {
               <button
                 type="button"
                 onClick={() => setViewMode("table")}
-                className={`flex items-center gap-1.5 rounded-[6px] px-3 py-1.5 text-xs font-mono transition ${
+                className={`flex items-center gap-1.5 rounded-[6px] px-3 py-1.5 text-xs font-mono transition duration-150 active:scale-[0.96] ${
                   viewMode === "table"
                     ? "border border-accent/40 bg-accent/15 font-semibold text-accent"
                     : "text-titanium hover:text-foreground"
@@ -347,60 +347,68 @@ export function EducationRegistry() {
           <button
             type="button"
             onClick={handleResetFilters}
-            className="mt-5 inline-flex items-center gap-2 rounded-panel border border-accent bg-accent/10 px-4 py-2 text-xs font-mono text-accent hover:bg-accent/20 active:scale-[0.96]"
+            className="mt-5 inline-flex items-center gap-2 rounded-panel border border-accent bg-accent/10 px-4 py-2 text-xs font-mono text-accent hover:bg-accent/20 active:scale-[0.96] transition-transform"
           >
             Сбросить фильтры
           </button>
         </div>
       ) : viewMode === "grid" ? (
-        /* GRID MODE: Initial 6 items (2 rows of 3) with PROMINENT UNIVERSITY/ISSUER */
+        /* GRID MODE: Initial 6 items (2 rows of 3) with UNTRUNCATED UNIVERSITY/ISSUER */
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visibleCertificates.map((cert) => {
             const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
             const visibleSkills = cert.skills.slice(0, 4);
             const remainingSkillsCount = cert.skills.length - visibleSkills.length;
+            const hasBadges = cert.isFlagship || cert.isSpecialization;
 
             return (
               <article
                 key={cert.id}
                 style={{ contentVisibility: "auto", containIntrinsicSize: "0 230px" }}
-                className="group relative flex flex-col justify-between rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.03),rgba(18,24,22,0.88)_40%,rgba(10,13,12,0.96))] p-5 transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_24px_rgba(183,255,60,0.09)] hover:-translate-y-0.5"
+                className="group relative flex flex-col justify-between h-full rounded-shell border border-border-subtle bg-[linear-gradient(135deg,rgba(183,255,60,0.03),rgba(18,24,22,0.88)_40%,rgba(10,13,12,0.96))] p-5 transition-all duration-300 hover:border-accent/50 hover:shadow-[0_0_24px_rgba(183,255,60,0.09)] hover:-translate-y-0.5"
               >
                 <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-shell bg-gradient-to-r from-transparent via-accent/0 to-transparent transition-opacity duration-300 group-hover:via-accent/60" />
 
-                <div>
+                <div className="flex-1 flex flex-col">
                   {/* Top Bar: Institution / University + Platform Channel */}
-                  <div className="flex items-start justify-between gap-2 border-b border-border-subtle/40 pb-3">
-                    <div className="flex items-center gap-1.5 min-w-0 pr-2">
-                      <Building2 size={13} className="text-accent shrink-0" />
-                      <span className="font-semibold text-xs sm:text-sm text-foreground truncate group-hover:text-accent transition-colors" title={cert.issuer}>
+                  <div className="flex items-start justify-between gap-3 border-b border-border-subtle/40 pb-3">
+                    <div className="flex items-start gap-2 min-w-0 flex-1">
+                      <Building2 size={14} className="text-accent shrink-0 mt-0.5" />
+                      <span
+                        className="font-semibold text-xs sm:text-sm text-foreground leading-snug group-hover:text-accent transition-colors break-words"
+                        title={cert.issuer}
+                      >
                         {cert.issuer}
                       </span>
                     </div>
 
-                    <span className={`shrink-0 inline-flex items-center gap-1 rounded border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide font-medium ${theme.border} ${theme.bg} ${theme.text}`}>
+                    <span
+                      className={`shrink-0 inline-flex items-center gap-1 rounded border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide font-medium ${theme.border} ${theme.bg} ${theme.text}`}
+                    >
                       {cert.platform}
                     </span>
                   </div>
 
-                  {/* Flagship / Specialization Badges */}
-                  <div className="mt-3 flex items-center gap-1.5">
-                    {cert.isFlagship && (
-                      <span className="inline-flex items-center gap-1 rounded border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 font-mono text-[9px] uppercase text-amber-400">
-                        <Award size={10} />
-                        <span>Топ-программа</span>
-                      </span>
-                    )}
-                    {cert.isSpecialization && (
-                      <span className="inline-flex items-center gap-1 rounded border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-[9px] uppercase text-accent">
-                        <Sparkles size={9} />
-                        <span>Специализация ({cert.coursesCount || 3}+ курса)</span>
-                      </span>
-                    )}
-                  </div>
+                  {/* Flagship / Specialization Badges (Render only when present to maintain consistent spacing) */}
+                  {hasBadges && (
+                    <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                      {cert.isFlagship && (
+                        <span className="inline-flex items-center gap-1 rounded border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 font-mono text-[9px] uppercase text-amber-400">
+                          <Award size={10} />
+                          <span>Топ-программа</span>
+                        </span>
+                      )}
+                      {cert.isSpecialization && (
+                        <span className="inline-flex items-center gap-1 rounded border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-[9px] uppercase text-accent">
+                          <Sparkles size={9} />
+                          <span>Специализация ({cert.coursesCount || 3}+ курса)</span>
+                        </span>
+                      )}
+                    </div>
+                  )}
 
                   {/* Program Title */}
-                  <h3 className="mt-2.5 text-sm sm:text-base font-bold leading-snug text-foreground group-hover:text-accent transition-colors line-clamp-2">
+                  <h3 className="mt-3 text-sm sm:text-base font-bold leading-snug text-foreground group-hover:text-accent transition-colors line-clamp-2">
                     {cert.title}
                   </h3>
 
@@ -412,7 +420,7 @@ export function EducationRegistry() {
                   )}
 
                   {/* Skills tags */}
-                  <div className="mt-3.5 flex flex-wrap gap-1.5">
+                  <div className="mt-4 pt-1 flex flex-wrap gap-1.5">
                     {visibleSkills.map((skill) => (
                       <span
                         key={skill}
@@ -440,7 +448,7 @@ export function EducationRegistry() {
                     href={cert.url}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="inline-flex items-center gap-1.5 rounded-panel border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 active:scale-[0.96]"
+                    className="inline-flex items-center gap-1.5 rounded-panel border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 active:scale-[0.96] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
                   >
                     <span>Сверить сертификат</span>
                     <ExternalLink size={12} />
@@ -471,8 +479,8 @@ export function EducationRegistry() {
                       key={cert.id}
                       className="group transition-colors hover:bg-accent/[0.04] border-l-2 border-l-transparent hover:border-l-accent"
                     >
-                      <td className="py-3 px-4 font-semibold text-foreground whitespace-nowrap">
-                        <div className="flex items-center gap-1.5">
+                      <td className="py-3 px-4 font-semibold text-foreground">
+                        <div className="flex items-center gap-1.5 min-w-[150px]">
                           <Building2 size={12} className="text-accent shrink-0" />
                           <span>{cert.issuer}</span>
                         </div>
@@ -482,7 +490,7 @@ export function EducationRegistry() {
                           {cert.title}
                         </div>
                         {cert.titleRu && (
-                          <div className="text-[11px] text-titanium">{cert.titleRu}</div>
+                          <div className="text-[11px] text-titanium mt-0.5">{cert.titleRu}</div>
                         )}
                       </td>
                       <td className="py-3 px-4 hidden md:table-cell whitespace-nowrap">
@@ -495,7 +503,7 @@ export function EducationRegistry() {
                           href={cert.url}
                           target="_blank"
                           rel="noreferrer noopener"
-                          className="inline-flex items-center gap-1.5 rounded-panel border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 active:scale-[0.96]"
+                          className="inline-flex items-center gap-1.5 rounded-panel border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 active:scale-[0.96] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
                         >
                           <span>Сверить</span>
                           <ExternalLink size={11} />
@@ -551,7 +559,7 @@ export function EducationRegistry() {
               <button
                 type="button"
                 onClick={handleShowAll}
-                className="inline-flex items-center justify-center gap-1.5 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-4 py-3 text-xs font-mono text-titanium hover:border-accent/40 hover:text-foreground transition-all duration-150 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-1.5 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-4 py-3 text-xs font-mono text-titanium hover:border-accent/40 hover:text-foreground transition-all duration-150 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <ChevronsDown size={14} />
                 <span>Развернуть весь реестр ({totalCount})</span>
