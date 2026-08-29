@@ -6,6 +6,7 @@ import {
   Activity,
   Award,
   Sparkles,
+  GraduationCap,
 } from "lucide-react";
 import { JsonLdScript } from "@/components/json-ld-script";
 import { WireframeBrain } from "@/components/wireframe-brain";
@@ -134,7 +135,7 @@ export default async function HomePage() {
                 {[
                   { value: "50+", label: "ИИ-агентов и систем", icon: Sparkles },
                   { value: "ТОП 1%", label: "Мировой рейтинг 35AWARDS", icon: Award },
-                  { value: "56.18 мкс", label: "Рекорд скорости в NVIDIA", icon: Terminal },
+                  { value: "250+", label: "Пройденных курсов и сертификатов", icon: GraduationCap },
                   { value: "11", label: "Международных наград", icon: Activity },
                 ].map((stat, index) => {
                   const Icon = stat.icon;
