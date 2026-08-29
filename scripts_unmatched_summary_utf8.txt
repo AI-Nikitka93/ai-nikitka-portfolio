@@ -1,0 +1,373 @@
+
+=======================================================
+UNMATCHED ITEMS IN SHEET 1 (Total: 11)
+=======================================================
+1. Row 1:
+   Title: Дипломы об образовании
+   Issuer: 
+   Links: []
+   Col vals: {"A": "Дипломы об образовании", "B": "", "C": "", "D": "", "E": "", "F": ""}
+2. Row 2:
+   Title: Дата
+   Issuer: Учебное заведение
+   Links: []
+   Col vals: {"A": "Дата", "B": "Учебное заведение", "C": "Специальность", "D": "Квалификация", "E": "Диплом", "F": "Ведомость оценок"}
+3. Row 3:
+   Title: 01.09.2009-29.06.2012
+   Issuer: Минский государственный колледж сферы обслуживания
+   Links: ['https://drive.google.com/file/d/1AyhwXMov48iXzm5dbuje0YcQm11zM0B-/view?usp=sharing', 'https://drive.google.com/file/d/1Ug0-ffZwHuMGdG5jyTi7MJ6V5kIHZOWB/view?usp=sharing']
+   Col vals: {"A": "01.09.2009-29.06.2012", "B": "Минский государственный колледж сферы обслуживания", "C": "Кинофикация. Техническая эксплуатация электрооборудования", "D": "Киномеханик второй категории. Электромонтер по ремонту и обслуживанию электрооборудования ", "E": "Диплом ПТУ", "F": "Ведомость"}
+4. Row 4:
+   Title: 01.09.2012-30.06.2014
+   Issuer: Минский государственный колледж сферы обслуживания
+   Links: ['https://drive.google.com/file/d/1IGsFGVXh5pBzKD17Pf2kAudLxG2TVOH3/view?usp=sharing', 'https://drive.google.com/file/d/1iiDaS5NHi1XB03YKwEWSeZ_bT3L4AY2S/view?usp=sharing']
+   Col vals: {"A": "01.09.2012-30.06.2014", "B": "Минский государственный колледж сферы обслуживания", "C": "Техническое обслуживание кинооборудования и аудиовизуальных систем", "D": "Техник - электромеханик", "E": "Диплом ССО", "F": "Ведомость"}
+5. Row 6:
+   Title: Трудовая книжка. Скан от 03.01.2023
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1BPk3C0AT2uHYiLkPupSxXoLIzE4AoAKe/view?usp=sharing']
+   Col vals: {"A": "Трудовая книжка. Скан от 03.01.2023", "B": "", "C": "", "D": "", "E": "", "F": ""}
+6. Row 9:
+   Title: Удостоверение о проверке знаний по электробезопасности от 02.04.2020
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1z9LFWTu1lWBefz6RTRwTk_qB-9AlgDSl/view?usp=sharing']
+   Col vals: {"A": "Удостоверение о проверке знаний по электробезопасности от 02.04.2020", "B": "", "C": "", "D": "", "E": "", "F": ""}
+7. Row 13:
+   Title: Характеристика с УП "Минскводоканала" от 26.08.2022
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1EreMGUvspF9pwKecOj7H5-tIs7oxLV5Y/view?usp=sharing']
+   Col vals: {"A": "Характеристика с УП \"Минскводоканала\" от 26.08.2022", "B": "", "C": "", "D": "", "E": "", "F": ""}
+8. Row 17:
+   Title: Характеристика с ГП «ЖЭУ № 3 Заводского района г.Минска»
+ от 17.10.2022
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1nI8h_jDtyOAMIJEOM8GVLN1qHc1TbT6c/view?usp=sharing']
+   Col vals: {"A": "Характеристика с ГП «ЖЭУ № 3 Заводского района г.Минска»\n от 17.10.2022", "B": "", "C": "", "D": "", "E": "", "F": ""}
+9. Row 19:
+   Title: Медицинская справка на вождение авто от 06.04.2023
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1BwWLb0JXo8vsSEu7aAZ9KsqUn6IVjSob/view?usp=sharing']
+   Col vals: {"A": "Медицинская справка на вождение авто от 06.04.2023", "B": "", "C": "", "D": "", "E": "", "F": ""}
+10. Row 22:
+   Title: Военный билет. Скан от 06.04.2023
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1HvKJOKQyhiCycQpUwijZo0aRw24aq3R-/view?usp=sharing']
+   Col vals: {"A": "Военный билет. Скан от 06.04.2023", "B": "", "C": "", "D": "", "E": "", "F": ""}
+11. Row 25:
+   Title: Членский билет РОО "Патриоты Беларуси"
+   Issuer: 
+   Links: ['https://drive.google.com/file/d/1otFju5DRDlA_Nkb_WQTsC3iF0PVqeGHs/view?usp=sharing']
+   Col vals: {"A": "Членский билет РОО \"Патриоты Беларуси\"", "B": "", "C": "", "D": "", "E": "", "F": ""}
+
+=======================================================
+UNMATCHED ITEMS IN SHEET 2 (Total: 56)
+=======================================================
+1. Row 2:
+   Title: Дата начала и окончания
+   Issuer: Название курсов (Специализация)
+   Links: []
+   Col vals: {"A": "Дата начала и окончания", "B": "Название курсов (Специализация)", "C": "Проводившая организация\n(Учебное заведение)", "D": "Сертификат об обучении", "E": "Ссылка"}
+2. Row 5:
+   Title: 25.07.2014-08.08.2014
+   Issuer: Основы работы с Яндекс
+   Links: ['https://intuit.ru/verifydiplomas/100799295']
+   Col vals: {"A": "25.07.2014-08.08.2014", "B": "Основы работы с Яндекс", "C": "Национальный Открытый Университет «ИНТУИТ»", "D": "Электронный", "E": "Сертификат"}
+3. Row 6:
+   Title: 26.07.2014-09.08.2014
+   Issuer: Всемирная Сеть (WWW) - использование и приложения
+   Links: ['https://intuit.ru/verifydiplomas/100799346']
+   Col vals: {"A": "26.07.2014-09.08.2014", "B": "Всемирная Сеть (WWW) - использование и приложения", "C": "Национальный Открытый Университет «ИНТУИТ»", "D": "Электронный", "E": "Сертификат"}
+4. Row 7:
+   Title: 01.03.2020-03.04.2020
+   Issuer: Повышение квалификации. Присвоение 5-го разряда электромонтера
+   Links: ['https://drive.google.com/file/d/140jvyZtqnPn6koIoE7edMFd4FJHm064R/view?usp=sharing']
+   Col vals: {"A": "01.03.2020-03.04.2020", "B": "Повышение квалификации. Присвоение 5-го разряда электромонтера", "C": "Государственный центр повышения квалификации руководящих работников и специалистов «ЖИЛКОМ»", "D": "Свидетельство", "E": "Свидетельство"}
+5. Row 12:
+   Title: 44399.0
+   Issuer: Полезные навыки работы в Excel, о которых не знают профи
+   Links: ['https://netology.ru/sharing/15187ccee9bf03fd5e0e826c2523845e']
+   Col vals: {"A": "44399.0", "B": "Полезные навыки работы в Excel, о которых не знают профи", "C": "Центр онлайн-образования «Нетология»", "D": "Электронный", "E": "Сертификат"}
+6. Row 14:
+   Title: 29.08.2021-14.09.2021
+   Issuer: Введение в мобильный маркетинг
+   Links: ['https://stepik.org/certificate/03da2c3c427c53397821be844219555d1f0c2c8e.pdf']
+   Col vals: {"A": "29.08.2021-14.09.2021", "B": "Введение в мобильный маркетинг", "C": "Appbooster Academy                  (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+7. Row 16:
+   Title: 44454.0
+   Issuer: Безопасность в интернете
+   Links: ['https://stepik.org/certificate/470665c06ba43860b5da1dc460032fa0980ae33b.pdf']
+   Col vals: {"A": "44454.0", "B": "Безопасность в интернете", "C": "Академия Яндекса            (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+8. Row 17:
+   Title: 06.09.2021-15.09.2021
+   Issuer: Мобильная реклама в Facebook
+   Links: ['https://stepik.org/certificate/213d6e032081a1d179ba1e3eb6e01408d2886098.pdf']
+   Col vals: {"A": "06.09.2021-15.09.2021", "B": "Мобильная реклама в Facebook", "C": "Advert School\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+9. Row 18:
+   Title: 08.09.2021-16.09.2021
+   Issuer: Введение в кибербезопасность
+   Links: ['https://stepik.org/certificate/18127f26e5fe450f3238c9e49b24abb4cc2afca3.pdf']
+   Col vals: {"A": "08.09.2021-16.09.2021", "B": "Введение в кибербезопасность", "C": "Дальневосточный федеральный университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+10. Row 19:
+   Title: 15.09.2021-19.09.2021
+   Issuer: Основные инструменты современного Excel
+   Links: ['https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/84208573fa0b9d5233e79184070cbca8.png/s/800x/a/248212/sc/50']
+   Col vals: {"A": "15.09.2021-19.09.2021", "B": "Основные инструменты современного Excel", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+11. Row 20:
+   Title: 19.09.2021-21.09.2021
+   Issuer: Навыки влияния и убеждения
+   Links: ['https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/8fb47ed2829ba03fb05e0544fb8770d7.png/s/800x/a/248212/sc/199']
+   Col vals: {"A": "19.09.2021-21.09.2021", "B": "Навыки влияния и убеждения", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+12. Row 21:
+   Title: 22.09.2021-23.09.2021
+   Issuer: Инклюзивные инструменты Microsoft
+   Links: ['https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/d6c42f615c07418b72ca238e830ec026.png/s/800x/a/248212/sc/88']
+   Col vals: {"A": "22.09.2021-23.09.2021", "B": "Инклюзивные инструменты Microsoft", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+13. Row 22:
+   Title: 22.09.2021-23.09.2021
+   Issuer: Терминология продаж
+   Links: ['https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/ec5b92ff195f99fbd6c6ff7d236e2d31.png/s/800x/a/248212/sc/361']
+   Col vals: {"A": "22.09.2021-23.09.2021", "B": "Терминология продаж", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+14. Row 24:
+   Title: 01.09.2021-23.09.2021
+   Issuer: Бережливое производство. Базовый курс
+   Links: ['https://stepik.org/certificate/eaf01dd531a2c41a3f50ab760cdd0bab83397c92.pdf']
+   Col vals: {"A": "01.09.2021-23.09.2021", "B": "Бережливое производство. Базовый курс", "C": "Дальневосточный федеральный университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+15. Row 25:
+   Title: 26.09.2021-27.09.2021
+   Issuer: Развитие личного бренда
+   Links: ['https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/94e275f9ae63c9b581a4aab5c19d9779.png/s/800x/a/248212/sc/217']
+   Col vals: {"A": "26.09.2021-27.09.2021", "B": "Развитие личного бренда", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+16. Row 26:
+   Title: 01.09.2021-30.09.2021
+   Issuer: Основы профессии "Менеджер по продажам"
+   Links: ['https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/6a2f1e6a9953d38994ec6f1a41f1e35a.png/s/800x/a/248212/sc/203']
+   Col vals: {"A": "01.09.2021-30.09.2021", "B": "Основы профессии \"Менеджер по продажам\"", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+17. Row 27:
+   Title: 27.09.2021-01.10.2021
+   Issuer: Эпоха цифрового развития: основы цифровой трансформации
+   Links: ['https://stepik.org/certificate/7a566dc6773cb46951113f2f6b412e559e5a9b41.pdf']
+   Col vals: {"A": "27.09.2021-01.10.2021", "B": "Эпоха цифрового развития: основы цифровой трансформации", "C": "Центр подготовки руководителей и команд ЦТ ВШГУ РАНХиГС\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+18. Row 28:
+   Title: 03.10.2021-06.10.2021
+   Issuer: Стрессоустойчивость
+   Links: ['https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/f6eef8fe5a79db76bbcad7ac60aadfa3.png/s/800x/a/248212/sc/117']
+   Col vals: {"A": "03.10.2021-06.10.2021", "B": "Стрессоустойчивость", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+19. Row 29:
+   Title: 10.10.2021-20.10.2021
+   Issuer: Основы интернет-маркетинга
+   Links: ['https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/a7aebeeba453260422c0dc487df2c4c4.png/s/800x/a/248212/sc/320']
+   Col vals: {"A": "10.10.2021-20.10.2021", "B": "Основы интернет-маркетинга", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+20. Row 30:
+   Title: 02.10.2021-21.10.2021
+   Issuer: Основы профессии "Интернет-маркетолог"
+   Links: ['https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/4cd525ddd55a91d5164551cacfe24c8f.png/s/800x/a/248212/sc/288']
+   Col vals: {"A": "02.10.2021-21.10.2021", "B": "Основы профессии \"Интернет-маркетолог\"", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+21. Row 31:
+   Title: 21.10.2021-24.10.2021
+   Issuer: ИТ-Администрирование
+   Links: ['https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/abeb5a3fa49d738e1d72b1409e2fc99c.png/s/800x/a/248212/sc/341']
+   Col vals: {"A": "21.10.2021-24.10.2021", "B": "ИТ-Администрирование", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+22. Row 32:
+   Title: 44493.0
+   Issuer: Инструменты уверенного пользования ПК
+   Links: ['https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/d81bff23e176a4a1c77f66887b2b7f67.png/s/800x/a/248212/sc/212']
+   Col vals: {"A": "44493.0", "B": "Инструменты уверенного пользования ПК", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+23. Row 33:
+   Title: 25.10.2021-03.11.2021
+   Issuer: Деловые коммуникации
+   Links: ['https://stepik.org/certificate/3aeac90020b5b131c889944f39fe7c702b2c4f3d.pdf']
+   Col vals: {"A": "25.10.2021-03.11.2021", "B": "Деловые коммуникации", "C": "Российский университет дружбы народов\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+24. Row 34:
+   Title: 18.10.2021-03.11.2021
+   Issuer: Инженерная графика. Азбука инженера
+   Links: ['https://stepik.org/certificate/323f8ed26367e75b782d21bcbb0a7eb04afac8d3.pdf']
+   Col vals: {"A": "18.10.2021-03.11.2021", "B": "Инженерная графика. Азбука инженера", "C": "Омский Государственный Технический Университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+25. Row 36:
+   Title: 04.11.2021-10.11.2021
+   Issuer: Основы конструкции автомобиля
+   Links: ['https://stepik.org/certificate/5ae3da2ce23b34806ee68fe59e68182a13da0ee8.pdf']
+   Col vals: {"A": "04.11.2021-10.11.2021", "B": "Основы конструкции автомобиля", "C": "Московский автомобильно-дорожный государственный технический университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+26. Row 38:
+   Title: 20.11.2021-04.12.2021
+   Issuer: Зоопсихология
+   Links: ['https://stepik.org/certificate/108537af1deb4d64f69d65a051fe5e4792d490fd.pdf']
+   Col vals: {"A": "20.11.2021-04.12.2021", "B": "Зоопсихология", "C": "Московский институт психоанализа                                      (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+27. Row 39:
+   Title: 28.11.2021-04.12.2021
+   Issuer: Управление персоналом
+   Links: ['https://stepik.org/certificate/20f589a6f9916e368c5fcd338849c14b321059d1.pdf']
+   Col vals: {"A": "28.11.2021-04.12.2021", "B": "Управление персоналом", "C": "Омский Государственный Технический Университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+28. Row 40:
+   Title: 15.11.2021-05.12.2021
+   Issuer: Управление интеллектуальной собственностью: основы для инженеров
+   Links: ['https://stepik.org/certificate/b6ae1048beb222b90bbba1e57047e3c23a933881.pdf']
+   Col vals: {"A": "15.11.2021-05.12.2021", "B": "Управление интеллектуальной собственностью: основы для инженеров", "C": "Stepik - образовательная платформа", "D": "Электронный", "E": "Сертификат"}
+29. Row 41:
+   Title: 01.12.2021-07.12.2021
+   Issuer: Профессиональная этика
+   Links: ['https://stepik.org/certificate/fcc5ea8f1a93ed6fd672739f36ad471de7c3e25a.pdf']
+   Col vals: {"A": "01.12.2021-07.12.2021", "B": "Профессиональная этика", "C": "ЛГПУ им. П.П. Семенова-Тян-Шанского\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+30. Row 42:
+   Title: 04.12.2021-09.12.2021
+   Issuer: Инженерия будущего
+   Links: ['https://stepik.org/certificate/7726d2ce8dd96d35d1daa3cd1f38f98e92bf6538.pdf']
+   Col vals: {"A": "04.12.2021-09.12.2021", "B": "Инженерия будущего", "C": "Томский политехнический университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+31. Row 43:
+   Title: 12.11.2021-10.12.2021
+   Issuer: Психология
+   Links: ['https://stepik.org/certificate/6c624e7e47883190c4af53b5af189bb22d7a2ac6.pdf']
+   Col vals: {"A": "12.11.2021-10.12.2021", "B": "Психология", "C": "Балтийский федеральный университет имени Иммануила Канта\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+32. Row 44:
+   Title: 08.12.2021-10.12.2021
+   Issuer: Развитие эмоционального интеллекта
+   Links: ['https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/05d2cd47aac007fe61502c2d17574146.png/s/800x/a/248212/sc/78']
+   Col vals: {"A": "08.12.2021-10.12.2021", "B": "Развитие эмоционального интеллекта", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+33. Row 45:
+   Title: 23.11.2021-10.12.2021
+   Issuer: Психоанализ для жизни
+   Links: ['https://stepik.org/certificate/bf4586e48eab12fb0734c5583e26fb466208b93d.pdf']
+   Col vals: {"A": "23.11.2021-10.12.2021", "B": "Психоанализ для жизни", "C": "Московский институт психоанализа                                      (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+34. Row 46:
+   Title: 17.09.2021-11.12.2021
+   Issuer: Материаловедение в машиностроении
+   Links: ['https://stepik.org/certificate/68460f7634d4614c1c40b89affa556fa2d2139eb.pdf']
+   Col vals: {"A": "17.09.2021-11.12.2021", "B": "Материаловедение в машиностроении", "C": "Казанский национальный исследовательский технический университет имени                   А. Н. Туполева                                      (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+35. Row 47:
+   Title: 06.12.2021-12.12.2021
+   Issuer: Введение в сетевые технологии
+   Links: ['https://stepik.org/certificate/eaf01dd531a2c41a3f50ab760cdd0bab83397c92.pdf']
+   Col vals: {"A": "06.12.2021-12.12.2021", "B": "Введение в сетевые технологии", "C": "Дальневосточный федеральный университет\n (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+36. Row 49:
+   Title: 44544.0
+   Issuer: Эффективные коммуникации и работа в команде
+   Links: ['https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/290ac58549e5bd4a5649e74bd04c1e89.png/s/800x/a/248212/sc/159']
+   Col vals: {"A": "44544.0", "B": "Эффективные коммуникации и работа в команде", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+37. Row 51:
+   Title: 16.11.2021-17.12.2021
+   Issuer: Финансовая грамотность
+   Links: ['https://stepik.org/certificate/d3b248ef263db286e7c66a671b18ab6e25aff3ac.pdf']
+   Col vals: {"A": "16.11.2021-17.12.2021", "B": "Финансовая грамотность", "C": "Stepik - образовательная платформа", "D": "Электронный", "E": "Сертификат"}
+38. Row 52:
+   Title: 17.12.2021-21.12.2021
+   Issuer: Управленческий консалтинг в органическом сельском хозяйстве
+   Links: ['https://stepik.org/certificate/d8dfa28be35e95c1c55ef18f3a814a0a399fb5ca.pdf']
+   Col vals: {"A": "17.12.2021-21.12.2021", "B": "Управленческий консалтинг в органическом сельском хозяйстве", "C": "Российский государственный аграрный университет – МСХА имени К.А. Тимирязева              (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+39. Row 53:
+   Title: 14.12.2021-23.12.2021
+   Issuer: Технологии работы с открытыми отраслевыми данными
+   Links: ['https://stepik.org/certificate/f2355b42c72ae20eb2f0417a5b8a063809507f71.pdf']
+   Col vals: {"A": "14.12.2021-23.12.2021", "B": "Технологии работы с открытыми отраслевыми данными", "C": "Российский государственный аграрный университет – МСХА имени К.А. Тимирязева              (Stepik - образовательная платформа)", "D": "Электронный", "E": "Сертификат"}
+40. Row 54:
+   Title: 27.12.2021-04.01.2022
+   Issuer: Компьютерная графика: основы
+   Links: ['https://stepik.org/certificate/2be7af48e90e78b69a52b1741a8b6d44e20cd235.pdf']
+   Col vals: {"A": "27.12.2021-04.01.2022", "B": "Компьютерная графика: основы", "C": "Stepik - образовательная платформа", "D": "Электронный", "E": "Сертификат"}
+41. Row 57:
+   Title: 22.01.2022-24.01.2022
+   Issuer: Аналитика для начинающих интернет-маркетологов
+   Links: ['https://netology.ru/sharing/a7e75f330ac09f8c82dd05b90bee9c2e']
+   Col vals: {"A": "22.01.2022-24.01.2022", "B": "Аналитика для начинающих интернет-маркетологов", "C": "Центр онлайн-образования «Нетология»", "D": "Электронный", "E": "Сертификат"}
+42. Row 58:
+   Title: 28.01.2022-29.01.2022
+   Issuer: Как стать дизайнером
+   Links: ['https://netology.ru/sharing/8067fe033d570927b08b4174e92188d1']
+   Col vals: {"A": "28.01.2022-29.01.2022", "B": "Как стать дизайнером", "C": "Центр онлайн-образования «Нетология»", "D": "Электронный", "E": "Сертификат"}
+43. Row 59:
+   Title: 14.02.2022-16.02.2022
+   Issuer: Основы информационной безопасности
+   Links: ['https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/92c343ba9d5472ce479c9bbc593f9b83.png/s/800x/a/248212/sc/214']
+   Col vals: {"A": "14.02.2022-16.02.2022", "B": "Основы информационной безопасности", "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)", "D": "Электронный", "E": "Сертификат"}
+44. Row 73:
+   Title: 27.04.2022-06.05.2022
+   Issuer: Основы работы с маркетплейсами
+   Links: ['https://drive.google.com/file/d/1JnyhPnfqXASELenuY7i_1p0-mCvfEMJw/view?usp=sharing']
+   Col vals: {"A": "27.04.2022-06.05.2022", "B": "Основы работы с маркетплейсами", "C": "Skillbox", "D": "Нет", "E": "1.Пример работы ( первая инфографика)   2.Тестовое задание  и вот что вышло          3.Инфографика игрушки              4. Инфографика разделочных досок "}
+45. Row 74:
+   Title: 01.05.2022-10.05.2022
+   Issuer: Дизайнер сайтов на Tilda
+   Links: ['https://youtu.be/Jo_vHz_DOOo']
+   Col vals: {"A": "01.05.2022-10.05.2022", "B": "Дизайнер сайтов на Tilda", "C": "Skillbox", "D": "Нет", "E": "Пример работы"}
+46. Row 75:
+   Title: 12.05.2022-13.05.2022
+   Issuer: HR
+   Links: ['https://gb.ru/certificates/1791575']
+   Col vals: {"A": "12.05.2022-13.05.2022", "B": "HR", "C": "Образовательная платформа GeekBrains", "D": "Электронный", "E": "Сертификат"}
+47. Row 76:
+   Title: 06.06.2022-10.06.2022
+   Issuer: Introduction to Computers and Office Productivity Software (Введение в компьютеры и офисное программное обеспечение)
+   Links: ['https://www.coursera.org/account/accomplishments/certificate/GYL4T7L2V6DG']
+   Col vals: {"A": "06.06.2022-10.06.2022", "B": "Introduction to Computers and Office Productivity Software (Введение в компьютеры и офисное программное обеспечение)", "C": "The Hong Kong University of Science and Technology (Гонконгский университет науки и технологий)                   платформа Сoursera", "D": "Электронный", "E": "Сертификат"}
+48. Row 78:
+   Title: 44727.0
+   Issuer: Social media marketing strategy 2022. Launch your SMM!  (Стратегия маркетинга в социальных сетях 2022)
+   Links: ['https://www.udemy.com/certificate/UC-2ebc2396-26b9-4d61-9a16-04fc5a9c2c2c/']
+   Col vals: {"A": "44727.0", "B": "Social media marketing strategy 2022. Launch your SMM!  (Стратегия маркетинга в социальных сетях 2022)", "C": "Udemy-платформа для онлайн-обучения", "D": "Электронный", "E": "Сертификат"}
+49. Row 80:
+   Title: 44728.0
+   Issuer: Promoting and Protecting Human Rights: a Global Overview                                               (защита прав человека: глобальный обзор)
+   Links: ['https://drive.google.com/file/d/18C_vCUZ0vPAkRFoTK6fG6C9pAFTvtoDD/view?usp=sharing']
+   Col vals: {"A": "44728.0", "B": " Promoting and Protecting Human Rights: a Global Overview                                               (защита прав человека: глобальный обзор)", "C": "Global Campus of Human Rights (Глобальный кампус прав человека)", "D": "Электронный", "E": "Сертификат"}
+50. Row 81:
+   Title: 44729.0
+   Issuer: Business Communications (Деловые коммуникации)
+   Links: ['https://drive.google.com/file/d/17_Cp_S0k_k19vBV1YlwPsWE7SpqUTlfy/view?usp=sharing']
+   Col vals: {"A": "44729.0", "B": "Business Communications (Деловые коммуникации)", "C": "HP Life", "D": "Электронный", "E": "Сертификат"}
+51. Row 82:
+   Title: 44730.0
+   Issuer: Achieving Sustainable Development Goals on Water and Sanitation                            (Достижение целей устойчивого развития в области водоснабжения и санитарии)
+   Links: ['https://drive.google.com/file/d/1a08igrjbrKCeEfNBEeSVgncYbfinRF0H/view?usp=sharing']
+   Col vals: {"A": "44730.0", "B": "Achieving Sustainable Development Goals on Water and Sanitation                            (Достижение целей устойчивого развития в области водоснабжения и санитарии)", "C": "Asian Development Bank Institute (Институт Азиатского банка развития)", "D": "Электронный", "E": "Сертификат"}
+52. Row 83:
+   Title: 44730.0
+   Issuer: Введение: COVID-19, способы диагностики, профилактики, лечения и контроля
+   Links: ['https://drive.google.com/file/d/1tuYtcAqnN25j1Y6xTmGnBgfNBIjE2CXR/view?usp=sharing']
+   Col vals: {"A": "44730.0", "B": "Введение: COVID-19, способы диагностики, профилактики, лечения и контроля", "C": "World Health Organization (Всемирная организация здравоохранения)", "D": "Электронный", "E": "Сертификат              ( Проверка )"}
+53. Row 91:
+   Title: 44733.0
+   Issuer: Essentials of fire safety inspections (Основы пожарной безопасности)
+   Links: ['https://credentials.itcilo.org/f5ef6288-98cb-4ec4-8b68-f6d59626ecb3']
+   Col vals: {"A": "44733.0", "B": "Essentials of fire safety inspections (Основы пожарной безопасности)", "C": "International Training Centre of the ILO (ITCILO)                                   (Учебный центр Международной организации) ", "D": "Электронный", "E": "Сертификат"}
+54. Row 93:
+   Title: 44734.0
+   Issuer: The Climate Crisis: Addressing 5 Key Areas for Change (Климатический кризис: решение 5 ключевых областей для изменений)
+   Links: ['https://drive.google.com/file/d/1eLW4xuro1FYolJrvkRkpDV5z31Kke-TB/view?usp=sharing']
+   Col vals: {"A": "44734.0", "B": "The Climate Crisis: Addressing 5 Key Areas for Change (Климатический кризис: решение 5 ключевых областей для изменений)", "C": "Young African Leaders Initiative (Инициатива молодых африканских лидеров)", "D": "Электронный", "E": "Сертификат"}
+55. Row 95:
+   Title: 44735.0
+   Issuer: EV Vehicle Safety: An Awareness Level Training (Безопасность электромобиля: обучение)
+   Links: ['https://drive.google.com/file/d/1K3AxJvMaMqOiDHnNEsfDxkkgNs3xs-KQ/view?usp=sharing']
+   Col vals: {"A": "44735.0", "B": "EV Vehicle Safety: An Awareness Level Training (Безопасность электромобиля: обучение)", "C": "National Volunteer Fire Council (Национальный добровольный пожарный совет)", "D": "Электронный", "E": "Сертификат"}
+56. Row 97:
+   Title: 44736.0
+   Issuer: Волонтерство в ЮНИСЕФ
+   Links: ['https://drive.google.com/file/d/1pZMJhghOeqIYZFW6wQhgI1GzMhdi8vMA/view?usp=sharing']
+   Col vals: {"A": "44736.0", "B": "Волонтерство в ЮНИСЕФ", "C": "ЮНИСЕФ Беларусь", "D": "Электронный", "E": "Сертификат"}
+
+=======================================================
+UNMATCHED ITEMS IN SHEET 3 (Total: 5)
+=======================================================
+1. Row 1:
+   Title: https://vk.com/id124793891
+   Issuer: 
+   Links: ['https://vk.com/id124793891']
+   Col vals: {"A": "https://vk.com/id124793891"}
+2. Row 3:
+   Title: https://www.facebook.com/Nikitka9393/
+   Issuer: 
+   Links: ['https://www.facebook.com/Nikitka9393/']
+   Col vals: {"A": "https://www.facebook.com/Nikitka9393/"}
+3. Row 5:
+   Title: http://instagram.com/nikitka9393
+   Issuer: 
+   Links: ['https://vk.com/away.php?to=http%3A%2F%2Finstagram.com%2Fnikitka9393&post=124793891_28471&cc_key=']
+   Col vals: {"A": "http://instagram.com/nikitka9393"}
+4. Row 7:
+   Title: http://instagram.com/nikitka93
+   Issuer: 
+   Links: ['https://vk.com/away.php?to=http%3A%2F%2Finstagram.com%2Fnikitka93&post=124793891_28471&cc_key=']
+   Col vals: {"A": "http://instagram.com/nikitka93"}
+5. Row 9:
+   Title: https://www.linkedin.com/in/nikitka93/
+   Issuer: 
+   Links: ['https://www.linkedin.com/in/nikitka93/']
+   Col vals: {"A": "https://www.linkedin.com/in/nikitka93/"}

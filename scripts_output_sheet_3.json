@@ -1,0 +1,55 @@
+{
+  "sheet_name": "Социальные сети",
+  "rows": [
+    {
+      "row": "1",
+      "cols": {
+        "A": {
+          "val": "https://vk.com/id124793891",
+          "link": "https://vk.com/id124793891",
+          "ref": "A1"
+        }
+      }
+    },
+    {
+      "row": "3",
+      "cols": {
+        "A": {
+          "val": "https://www.facebook.com/Nikitka9393/",
+          "link": "https://www.facebook.com/Nikitka9393/",
+          "ref": "A3"
+        }
+      }
+    },
+    {
+      "row": "5",
+      "cols": {
+        "A": {
+          "val": "http://instagram.com/nikitka9393",
+          "link": "https://vk.com/away.php?to=http%3A%2F%2Finstagram.com%2Fnikitka9393&post=124793891_28471&cc_key=",
+          "ref": "A5"
+        }
+      }
+    },
+    {
+      "row": "7",
+      "cols": {
+        "A": {
+          "val": "http://instagram.com/nikitka93",
+          "link": "https://vk.com/away.php?to=http%3A%2F%2Finstagram.com%2Fnikitka93&post=124793891_28471&cc_key=",
+          "ref": "A7"
+        }
+      }
+    },
+    {
+      "row": "9",
+      "cols": {
+        "A": {
+          "val": "https://www.linkedin.com/in/nikitka93/",
+          "link": "https://www.linkedin.com/in/nikitka93/",
+          "ref": "A9"
+        }
+      }
+    }
+  ]
+}

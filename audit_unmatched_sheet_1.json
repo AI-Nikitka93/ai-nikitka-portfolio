@@ -1,0 +1,187 @@
+[
+  {
+    "row": "1",
+    "title": "Дипломы об образовании",
+    "issuer": "",
+    "cert_type": "",
+    "links": [],
+    "col_vals": {
+      "A": "Дипломы об образовании",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "2",
+    "title": "Дата",
+    "issuer": "Учебное заведение",
+    "cert_type": "Специальность",
+    "links": [],
+    "col_vals": {
+      "A": "Дата",
+      "B": "Учебное заведение",
+      "C": "Специальность",
+      "D": "Квалификация",
+      "E": "Диплом",
+      "F": "Ведомость оценок"
+    }
+  },
+  {
+    "row": "3",
+    "title": "01.09.2009-29.06.2012",
+    "issuer": "Минский государственный колледж сферы обслуживания",
+    "cert_type": "Кинофикация. Техническая эксплуатация электрооборудования",
+    "links": [
+      "https://drive.google.com/file/d/1AyhwXMov48iXzm5dbuje0YcQm11zM0B-/view?usp=sharing",
+      "https://drive.google.com/file/d/1Ug0-ffZwHuMGdG5jyTi7MJ6V5kIHZOWB/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "01.09.2009-29.06.2012",
+      "B": "Минский государственный колледж сферы обслуживания",
+      "C": "Кинофикация. Техническая эксплуатация электрооборудования",
+      "D": "Киномеханик второй категории. Электромонтер по ремонту и обслуживанию электрооборудования ",
+      "E": "Диплом ПТУ",
+      "F": "Ведомость"
+    }
+  },
+  {
+    "row": "4",
+    "title": "01.09.2012-30.06.2014",
+    "issuer": "Минский государственный колледж сферы обслуживания",
+    "cert_type": "Техническое обслуживание кинооборудования и аудиовизуальных систем",
+    "links": [
+      "https://drive.google.com/file/d/1IGsFGVXh5pBzKD17Pf2kAudLxG2TVOH3/view?usp=sharing",
+      "https://drive.google.com/file/d/1iiDaS5NHi1XB03YKwEWSeZ_bT3L4AY2S/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "01.09.2012-30.06.2014",
+      "B": "Минский государственный колледж сферы обслуживания",
+      "C": "Техническое обслуживание кинооборудования и аудиовизуальных систем",
+      "D": "Техник - электромеханик",
+      "E": "Диплом ССО",
+      "F": "Ведомость"
+    }
+  },
+  {
+    "row": "6",
+    "title": "Трудовая книжка. Скан от 03.01.2023",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1BPk3C0AT2uHYiLkPupSxXoLIzE4AoAKe/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Трудовая книжка. Скан от 03.01.2023",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "9",
+    "title": "Удостоверение о проверке знаний по электробезопасности от 02.04.2020",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1z9LFWTu1lWBefz6RTRwTk_qB-9AlgDSl/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Удостоверение о проверке знаний по электробезопасности от 02.04.2020",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "13",
+    "title": "Характеристика с УП \"Минскводоканала\" от 26.08.2022",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1EreMGUvspF9pwKecOj7H5-tIs7oxLV5Y/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Характеристика с УП \"Минскводоканала\" от 26.08.2022",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "17",
+    "title": "Характеристика с ГП «ЖЭУ № 3 Заводского района г.Минска»\n от 17.10.2022",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1nI8h_jDtyOAMIJEOM8GVLN1qHc1TbT6c/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Характеристика с ГП «ЖЭУ № 3 Заводского района г.Минска»\n от 17.10.2022",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "19",
+    "title": "Медицинская справка на вождение авто от 06.04.2023",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1BwWLb0JXo8vsSEu7aAZ9KsqUn6IVjSob/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Медицинская справка на вождение авто от 06.04.2023",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "22",
+    "title": "Военный билет. Скан от 06.04.2023",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1HvKJOKQyhiCycQpUwijZo0aRw24aq3R-/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Военный билет. Скан от 06.04.2023",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  },
+  {
+    "row": "25",
+    "title": "Членский билет РОО \"Патриоты Беларуси\"",
+    "issuer": "",
+    "cert_type": "",
+    "links": [
+      "https://drive.google.com/file/d/1otFju5DRDlA_Nkb_WQTsC3iF0PVqeGHs/view?usp=sharing"
+    ],
+    "col_vals": {
+      "A": "Членский билет РОО \"Патриоты Беларуси\"",
+      "B": "",
+      "C": "",
+      "D": "",
+      "E": "",
+      "F": ""
+    }
+  }
+]

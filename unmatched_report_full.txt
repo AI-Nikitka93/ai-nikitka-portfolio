@@ -1,0 +1,1160 @@
+
+=======================================================
+CATEGORY: EDX_UNIVERSITY (Total: 53)
+=======================================================
+
+[1] Row 129
+  Title: Remote Work Revolution for Everyone                      (Революция удаленной работы для всех)
+  Issuer: Harvard University                      (Гарвардский университет)                      Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/32c20efe290b49a09517c88e502257be
+
+[2] Row 131
+  Title: Fundamentos de fotografía documental                               (Основы документальной фотографии)
+  Issuer: Universidad del Rosario (Университет Росарио)  Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/fc0273227782412c84ef3605a0882f57
+
+[3] Row 140
+  Title: Bioseguridad y equipo de protección para la prevención de COVID-19                                         (Средства биобезопасности и защиты для профилактики COVID-19)
+  Issuer: Universidad Galileo                   (Университет Галилео) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/0f19b9643cae4e52a625040a20d9b1f5
+
+[4] Row 165
+  Title: A strategic approach to talent management                 (Стратегический подход к управлению талантами)
+  Issuer: Stellenbosch University (Университет Стелленбос) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/ea5df48376c64314bbcbc8928fd9c599
+
+[5] Row 166
+  Title: Diversity, Equity and Inclusion (DEI) interventions (Вмешательства в области разнообразия, справедливости и инклюзивности (DEI))
+  Issuer: Stellenbosch University (Университет Стелленбос) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/27548ff1e4704a17949539c5e5f0d563
+
+[6] Row 169
+  Title: Environmental Protection and Sustainability                               (Защита окружающей среды и устойчивость)
+  Issuer: IsraelX                                 Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/fa479a8411d14603862205baa774ffc2
+
+[7] Row 170
+  Title: Electric Cars: Introduction (Электромобили: Введение)
+  Issuer: Delft University of Technology (Делфтский технический университет)                Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/f4972ee338434617b7ba43f547eb04dd
+
+[8] Row 171
+  Title: Electric Cars: Technology (Электромобили: технологии)
+  Issuer: Delft University of Technology (Делфтский технический университет)                Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/6334cbafa1e947118d785ce13a2e5767
+
+[9] Row 172
+  Title: Electric Cars: Business (Электромобили: Бизнес)
+  Issuer: Delft University of Technology (Делфтский технический университет)                Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/f3fbe2e6c31f47a4a3f03eff80e440e3
+
+[10] Row 173
+  Title: Electric Cars: Policy (Электромобили: политика)
+  Issuer: Delft University of Technology (Делфтский технический университет)                Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/018724a4927c4c1197f7c1d45398584c
+
+[11] Row 177
+  Title: Sustainable Tourism: Society & Environmental Aspects (Устойчивый туризм: социальные и экологические аспекты)
+  Issuer: Wageningen University & Research                              (Вагенингенский университет) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/cb45b219d4c3489ca384b3e8587351b6
+
+[12] Row 178
+  Title: Sustainable Tourism: Rethinking the future                       (Устойчивый туризм: переосмысление будущего)
+  Issuer: Wageningen University & Research                              (Вагенингенский университет) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/229b6969a0aa4b9f90d8dcb6e3a9d5f5
+
+[13] Row 179
+  Title: Tourism and Climate Change             (Туризм и изменение климата)
+  Issuer: Wageningen University & Research                              (Вагенингенский университет) Платформа edX
+  Cert Type: Электронный
+  Date: Tourism in Transition: Exploring a Sustainable Future
+  Link: https://courses.edx.org/certificates/5bab7de1e7c746b5bbea3e2fadde68df
+
+[14] Row 181
+  Title: American Government: Constitutional Foundations (Американское правительство: конституционные основы)
+  Issuer: Harvard University                 (Гарвардский университет)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/5208aab3d71b48b2b37ee2cd1c80c59c
+
+[15] Row 182
+  Title: U.S. Political Institutions: Congress, Presidency, Courts, and Bureaucracy (Политические институты США: Конгресс, президентство, суды и бюрократия)
+  Issuer: Harvard University                 (Гарвардский университет)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/f329e5d74a6e441783d6c5364ef2e0b1
+
+[16] Row 183
+  Title: Citizen Politics in America: Public Opinion, Elections, Interest Groups, and the Media (Гражданская политика в Америке: общественное мнение, выборы, группы интересов и СМИ)
+  Issuer: Harvard University                 (Гарвардский университет)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/8dac1ac62357483797f531c02ddb563d
+
+[17] Row 184
+  Title: U.S. Public Policy: Social, Economic, and Foreign Policies (Государственная политика США: социальная, экономическая и внешняя политика)
+  Issuer: Harvard University                 (Гарвардский университет)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/4d116d853c224af496b32dcf32a86f16
+
+[18] Row 186
+  Title: Intercultural Communication at Work – Land the job and do it well                              (Межкультурная коммуникация на работе – найди работу и сделай ее хорошо)
+  Issuer: The National University of Singapore                                              (Национальный университет Сингапура)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/deee4939f4334ad294b6452e8135af03
+
+[19] Row 189
+  Title: Positive Psychology (Позитивная психология)
+  Issuer: American Psychological Association                                              (Американская психологическая ассоциация)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/1ff68669b1154d8bad2afa489ce19f34
+
+[20] Row 190
+  Title: The Entrepreneurial Mindset (Предпринимательское мышление)
+  Issuer: Babson College                             (Колледж Бабсон)                        Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/4bf26a4024bf4b2fab4497711eaef02d
+
+[21] Row 191
+  Title: Unconscious Bias: From Awareness to Action (Неосознанная предвзятость: от осознания к действию)
+  Issuer: Catalyst                        Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/f2da3ca66e5948be8d542edbe10b2ded
+
+[22] Row 192
+  Title: Communication Skills for Dialoguing Across Difference (Навыки общения для ведения диалога на основе различий)
+  Issuer: Catalyst                        Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/0b49157c7c494eb78646a4aab6d6989f
+
+[23] Row 193
+  Title: Facing Racism and Emotional Tax in the Workplace (Столкновение с расизмом и эмоциональным налогом на рабочем месте)
+  Issuer: Catalyst                        Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/5399366b4fc64394bc98dc19ddd8d951
+
+[24] Row 194
+  Title: Understanding Gender Equity (Понимание гендерного равенства)
+  Issuer: Catalyst                        Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/550588d1171041a39c226618262e8f0f
+
+[25] Row 196
+  Title: The Civil War and Reconstruction - 1850-1861: A House Divided                                     (Гражданская война и реконструкция - 1850-1861 гг: Разделенный дом)
+  Issuer: Columbia University (Колумбийский университет)   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/ee870a7ba33841d19ef4f19907511ec0
+
+[26] Row 197
+  Title: The Civil War and Reconstruction- 1861- 1865: A New Birth of Freedom (Гражданская война и реконструкция - 1861-1865 гг: Новое рождение свободы)
+  Issuer: Columbia University (Колумбийский университет)   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/3e1b0444210046a69de0938b86c31197
+
+[27] Row 198
+  Title: The Civil War and Reconstruction – 1865-1890: The Unfinished Revolution (Гражданская война и реконструкция - 1865-1890 гг: Незавершенная революция)
+  Issuer: Columbia University (Колумбийский университет)   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/d6387a21c027433397f28f34b656e240
+
+[28] Row 199
+  Title: The Civil War and Reconstruction                (Гражданская война и реконструкция)
+  Issuer: Columbia University (Колумбийский университет)   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://credentials.edx.org/credentials/2b69d31f6ee840fdbb693e50f29c5f3b/
+
+[29] Row 200
+  Title: Identifying Entrepreneurial Opportunities                    (Определение возможностей для предпринимательской деятельности)
+  Issuer: University System of Maryland (Университетская система штата Мэриленд)                     Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/aebc913a29c94d6fa9d6ac623d439d4e
+
+[30] Row 201
+  Title: Social Media: How Media Got Social                         (Социальные медиа: Как медиа стали социальными)
+  Issuer: Curtin University                          (Университет Кертин)     Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/0b62b82359444dc0acd73d498fba652c
+
+[31] Row 202
+  Title: Lean Six Sigma Black Belt Certification Part 1: Basic Improvement, Define and Measure                        (Сертификация Lean Six Sigma Black Belt Часть 1: Основные улучшения, определение и измерение)
+  Issuer: Juran                                         Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/8585a0693f0647ed941c98e24c85e9df
+
+[32] Row 203
+  Title: Lean Six Sigma Black Belt Certification Part 2: Analyze, Improve and Control (Сертификация Lean Six Sigma Black Belt Часть 2: Анализ, совершенствование и контроль)
+  Issuer: Juran                                         Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/d495bbe9447944538d6f3778c8ec0b4d
+
+[33] Row 206
+  Title: Knowledge Management and Big Data in Business (Управление знаниями и большие данные в бизнесе)
+  Issuer: The Hong Kong Polytechnic University (PolyU)                                (Гонконгский политехнический университет)                                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/869c91228a0a44e2b322942c96570dcc
+
+[34] Row 207
+  Title: How to Revolutionize your Business                                       (Как революционизировать свой бизнес)
+  Issuer: The Hong Kong Polytechnic University (PolyU)                                (Гонконгский политехнический университет)                                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/55dc7b7c0fbf4615b9f6bb9a1d19e063
+
+[35] Row 210
+  Title: AC and Switching Circuits (Цепи переменного тока и коммутации)
+  Issuer: The National University of Singapore                                              (Национальный университет Сингапура)                   Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/381cf3a140ad40a3829363267f1abd87
+
+[36] Row 213
+  Title: Spiritual Competency Training in Mental Health                    (Обучение духовной компетентности в области психического здоровья)
+  Issuer: University System of Maryland (Университетская система штата Мэриленд)                     Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/8a2f8da745cd49e9af47dc204d5155fe
+
+[37] Row 214
+  Title: Lifestyle Medicine Fundamentals                            (Основы медицины образа жизни)
+  Issuer: Doane University                            (Университет Доун)                          Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/57d76989b2c740b687ce56e1db72049b
+
+[38] Row 216
+  Title: Liderazgo estratégico internacional                    (Международное стратегическое лидерство)
+  Issuer: Anahuac University Network (Сеть университета Анауак) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/c6b050c0dacd49f5a597a900b75604e7
+
+[39] Row 217
+  Title: E-Leadership                   (Электронное лидерство)
+  Issuer: Anahuac University Network (Сеть университета Анауак) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/4e5b6287f4e34b18a7a006995529fd01
+
+[40] Row 219
+  Title: Comercio digital: reinventando los modelos de negocio (Цифровая коммерция: переосмысление бизнес-моделей)
+  Issuer: Tecnológico de Monterrey (Технический университет Монтеррея)                  Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/b561343d888e406fb0e85ec767fab6f7
+
+[41] Row 222
+  Title: Why Move Towards Cleaner Power                                   (Зачем переходить на более чистую энергию)
+  Issuer: Imperial College London (Имперский колледж Лондона) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/0544a515f95a46808136f32c8a90f980
+
+[42] Row 223
+  Title: Creating a Pro-Renewables Environment                    (Создание среды, поддерживающей возобновляемые источники энергии)
+  Issuer: Imperial College London (Имперский колледж Лондона) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/15358e24e56545ba829a72400e32474d
+
+[43] Row 224
+  Title: Incorporating Renewable Energy in Electricity Grids (Включение возобновляемых источников энергии в электрические сети)
+  Issuer: Imperial College London (Имперский колледж Лондона) Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/f116f9e8a8064722b6a148ec4391656e
+
+[44] Row 226
+  Title: Retail Fundamentals                 (Основы розничной торговли)
+  Issuer: Dartmouth College                     (Дартмут Колледж)                      Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/c30f65e360884193b6c73e59c3c6314b
+
+[45] Row 227
+  Title: Omnichannel Strategy and Management                (Стратегия и управление омниканальным бизнесом)
+  Issuer: Dartmouth College                     (Дартмут Колледж)                      Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/c4c95767cc7748fb816a1b22edb3db8a
+
+[46] Row 229
+  Title: Introduction to Internationalization and Localization                    (Введение в интернационализацию и локализацию)
+  Issuer: Университет Вашингтона (University of Washington)      Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/ed5f97b3741b475681499104a9901749
+
+[47] Row 231
+  Title: Measuring Risk: Equity, Fixed Income, Derivatives and FX (Измерение риска: акции, фиксированный доход, деривативы и валюта)
+  Issuer: New York Institute of Finance (Нью-Йоркский финансовый институт)                       Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/3e9a500f5a5a468cb7dd45cdf2a1c24f
+
+[48] Row 232
+  Title: Risk Management Tools and Practices                       (Инструменты и практика управления рисками)
+  Issuer: New York Institute of Finance (Нью-Йоркский финансовый институт)                       Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/c452d5257520406faa5f183f0b89ad59
+
+[49] Row 233
+  Title: Stress Testing and Risk Regulation – Part 1 (Стресс-тестирование и регулирование рисков - часть 1)
+  Issuer: New York Institute of Finance (Нью-Йоркский финансовый институт)                       Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/e655e580957c41de9eb6412ab7df337e
+
+[50] Row 234
+  Title: Stress Testing and Risk Regulation – Part 2 (Стресс-тестирование и регулирование рисков - часть 2)
+  Issuer: New York Institute of Finance (Нью-Йоркский финансовый институт)                       Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/dfa9b0612a744ca9a751484c1edd637b
+
+[51] Row 245
+  Title: MIS01x: AI for Leaders (MIS01x: ИИ для лидеров)
+  Issuer: Babson College (Колледж Бабсон)                                    Платформа edX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/8ce8d215a02344a38bce221f54845009
+
+[52] Row 253
+  Title: AI0151EN: Impact, Ethics, and Issues with Generative AI (AI0151EN: Влияние, этика и проблемы генеративного ИИ)
+  Issuer: IBM                                                Платформа EDX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/4001bbe8e27a498e86f9455588fd56f4
+
+[53] Row 263
+  Title: AI0141EN: Models and Platforms for Generative AI
+ (AI0141EN: Модели и платформы для генеративного искусственного интеллекта)
+  Issuer: IBM                                                Платформа EDX
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.edx.org/certificates/63731baa6e1048488378029191d01c4d
+
+=======================================================
+CATEGORY: COURSERA (Total: 21)
+=======================================================
+
+[1] Row 76
+  Title: Introduction to Computers and Office Productivity Software (Введение в компьютеры и офисное программное обеспечение)
+  Issuer: The Hong Kong University of Science and Technology (Гонконгский университет науки и технологий)                   платформа Сoursera
+  Cert Type: Электронный
+  Date: 06.06.2022-10.06.2022
+  Link: https://www.coursera.org/account/accomplishments/certificate/GYL4T7L2V6DG
+
+[2] Row 110
+  Title: Strategies for Assisted Living Communities during COVID-19 (Стратегии для сообществ с престарелыми во время COVID-19)
+  Issuer: Johns Hopkins University (Университет Джонса Хопкинса)                          платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://coursera.org/share/f6f0327659e5bfe6eb6d34f21b156160
+
+[3] Row 114
+  Title: Get Started with Canva (Начните работу с Canva)
+  Issuer: Coursera Project Network
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/learn/get-started-with-canva
+  Link: https://coursera.org/share/1b0daf8b061a202f4cf50c01b24a9f00
+
+[4] Row 115
+  Title: Digital Footprint              (Цифровой след)
+  Issuer: University of Edinburgh (Эдинбургский университет)           платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/UERWQQ9RYSRD
+
+[5] Row 118
+  Title: Animals, Self, and Society (Животные, личность и общество)
+  Issuer: University of Colorado Boulder (Университет штата Колорадо в Боулдере)                           платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/SZC5PMXMD783
+
+[6] Row 119
+  Title: Animals and Institutions (Животные и учреждения)
+  Issuer: University of Colorado Boulder (Университет штата Колорадо в Боулдере)                           платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/UN7XJEW9PSUH
+
+[7] Row 120
+  Title: The Changing Status and Perception of Animals (Меняющийся статус и восприятие животных)
+  Issuer: University of Colorado Boulder (Университет штата Колорадо в Боулдере)                           платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/4GC5ARXFSDAL
+
+[8] Row 124
+  Title: Создаем дизайны для социальных сетей с помощью Canva
+  Issuer: Coursera Project Network
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/learn/how-to-create-social-media-graphics-using-canva-ru
+  Link: https://www.coursera.org/learn/how-to-create-social-media-graphics-using-canva-ru
+  Link: https://www.coursera.org/account/accomplishments/verify/5NE2T4FXY5LP
+
+[9] Row 126
+  Title: Политика и управление водными ресурсами
+  Issuer: Université de Genève (Университет Женевы) платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/ZWBT7PHXYHHB
+
+[10] Row 141
+  Title: Specialization: Microsoft 365 Fundamentals (Специализация: Основы Microsoft 365)                                    1) Work Smarter with Microsoft Word                                       (Работайте эффективнее с Microsoft Word)                               2) Work Smarter with Microsoft Excel                                 (Работайте эффективнее с Microsoft Excel)                         3) Work Smarter with Microsoft PowerPoint
+(Работайте эффективнее с Microsoft PowerPoint)
+  Issuer: платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/specialization/CRSRG3V3KMX2
+
+[11] Row 144
+  Title: Introduction to Technical Support                         (Введение в техническую поддержку)
+  Issuer: IBM                                         платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/2PFPSTD96WD5
+
+[12] Row 148
+  Title: Types of Conflict                        (Типы конфликтов)
+  Issuer: University of California, Irvine                 (Калифорнийский университет в Ирвайне)                            платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/D3G92WVJ38RM
+
+[13] Row 155
+  Title: Introduction to Networking and Storage                                       (Введение в сеть и хранилище)
+  Issuer: IBM                                         платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/39TTP2KE5MFA
+
+[14] Row 161
+  Title: Technical Support Case Studies and Capstone                               (Тематические исследования технической поддержки и Capstone)
+  Issuer: IBM                                         платформа Сoursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/LWWPK6QKQSA8
+
+[15] Row 235
+  Title: Ready, Set, Future! Introduction to Futures Thinking                        (Готовься, настраивайся, будущее! Введение в перспективное мышление)
+  Issuer: Institute for the Future                    (Институт будущего)                Платформа Coursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/QMV2XXGYM5K8
+
+[16] Row 236
+  Title: Preparing to Manage Human Resources                              (Подготовка к управлению человеческими ресурсами)
+  Issuer: University of Minnesota (Университет Миннесоты) Платформа Coursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/HF93Z4F5YJD6
+
+[17] Row 240
+  Title: Gen AI for Data Privacy & Protection                  (Поколение искусственного интеллекта для конфиденциальности и защиты данных)
+  Issuer: Edureka
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/3WX2ZYXKS3R3
+
+[18] Row 251
+  Title: AI for Education (Advanced)(
+ИИ для образования (продвинутый уровень))
+  Issuer: University System of Georgia (Университетская система Джорджии) Платформа Coursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/ENRS287RV7HJ
+
+[19] Row 252
+  Title: Artificial Intelligence                        (Искусственный интеллект)
+  Issuer: Illinois Institute of Technology (Технологический институт Иллинойса) Платформа Coursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/V2QZ4D9ARLL4
+
+[20] Row 257
+  Title: Follow a Machine Learning Workflow                                              (Следуйте рабочему процессу машинного обучения)
+  Issuer: CertNexus                                              Платформа Coursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/ORBFFJ8XM5R4
+
+[21] Row 260
+  Title: Introduction to Artificial Intelligence (AI)                   (Введение в искусственный интеллект (ИИ)
+  Issuer: IBM                                       Платформа Coursera
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.coursera.org/account/accomplishments/verify/ZCYKQSZFTA30
+
+=======================================================
+CATEGORY: STEPIK (Total: 22)
+=======================================================
+
+[1] Row 14
+  Title: Введение в мобильный маркетинг
+  Issuer: Appbooster Academy                  (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 29.08.2021-14.09.2021
+  Link: https://stepik.org/certificate/03da2c3c427c53397821be844219555d1f0c2c8e.pdf
+
+[2] Row 16
+  Title: Безопасность в интернете
+  Issuer: Академия Яндекса            (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 44454.0
+  Link: https://stepik.org/certificate/470665c06ba43860b5da1dc460032fa0980ae33b.pdf
+
+[3] Row 17
+  Title: Мобильная реклама в Facebook
+  Issuer: Advert School
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 06.09.2021-15.09.2021
+  Link: https://stepik.org/certificate/213d6e032081a1d179ba1e3eb6e01408d2886098.pdf
+
+[4] Row 18
+  Title: Введение в кибербезопасность
+  Issuer: Дальневосточный федеральный университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 08.09.2021-16.09.2021
+  Link: https://stepik.org/certificate/18127f26e5fe450f3238c9e49b24abb4cc2afca3.pdf
+
+[5] Row 24
+  Title: Бережливое производство. Базовый курс
+  Issuer: Дальневосточный федеральный университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 01.09.2021-23.09.2021
+  Link: https://stepik.org/certificate/eaf01dd531a2c41a3f50ab760cdd0bab83397c92.pdf
+
+[6] Row 27
+  Title: Эпоха цифрового развития: основы цифровой трансформации
+  Issuer: Центр подготовки руководителей и команд ЦТ ВШГУ РАНХиГС
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 27.09.2021-01.10.2021
+  Link: https://stepik.org/certificate/7a566dc6773cb46951113f2f6b412e559e5a9b41.pdf
+
+[7] Row 33
+  Title: Деловые коммуникации
+  Issuer: Российский университет дружбы народов
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 25.10.2021-03.11.2021
+  Link: https://stepik.org/certificate/3aeac90020b5b131c889944f39fe7c702b2c4f3d.pdf
+
+[8] Row 34
+  Title: Инженерная графика. Азбука инженера
+  Issuer: Омский Государственный Технический Университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 18.10.2021-03.11.2021
+  Link: https://stepik.org/certificate/323f8ed26367e75b782d21bcbb0a7eb04afac8d3.pdf
+
+[9] Row 36
+  Title: Основы конструкции автомобиля
+  Issuer: Московский автомобильно-дорожный государственный технический университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 04.11.2021-10.11.2021
+  Link: https://stepik.org/certificate/5ae3da2ce23b34806ee68fe59e68182a13da0ee8.pdf
+
+[10] Row 38
+  Title: Зоопсихология
+  Issuer: Московский институт психоанализа                                      (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 20.11.2021-04.12.2021
+  Link: https://stepik.org/certificate/108537af1deb4d64f69d65a051fe5e4792d490fd.pdf
+
+[11] Row 39
+  Title: Управление персоналом
+  Issuer: Омский Государственный Технический Университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 28.11.2021-04.12.2021
+  Link: https://stepik.org/certificate/20f589a6f9916e368c5fcd338849c14b321059d1.pdf
+
+[12] Row 40
+  Title: Управление интеллектуальной собственностью: основы для инженеров
+  Issuer: Stepik - образовательная платформа
+  Cert Type: Электронный
+  Date: 15.11.2021-05.12.2021
+  Link: https://stepik.org/certificate/b6ae1048beb222b90bbba1e57047e3c23a933881.pdf
+
+[13] Row 41
+  Title: Профессиональная этика
+  Issuer: ЛГПУ им. П.П. Семенова-Тян-Шанского
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 01.12.2021-07.12.2021
+  Link: https://stepik.org/certificate/fcc5ea8f1a93ed6fd672739f36ad471de7c3e25a.pdf
+
+[14] Row 42
+  Title: Инженерия будущего
+  Issuer: Томский политехнический университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 04.12.2021-09.12.2021
+  Link: https://stepik.org/certificate/7726d2ce8dd96d35d1daa3cd1f38f98e92bf6538.pdf
+
+[15] Row 43
+  Title: Психология
+  Issuer: Балтийский федеральный университет имени Иммануила Канта
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 12.11.2021-10.12.2021
+  Link: https://stepik.org/certificate/6c624e7e47883190c4af53b5af189bb22d7a2ac6.pdf
+
+[16] Row 45
+  Title: Психоанализ для жизни
+  Issuer: Московский институт психоанализа                                      (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 23.11.2021-10.12.2021
+  Link: https://stepik.org/certificate/bf4586e48eab12fb0734c5583e26fb466208b93d.pdf
+
+[17] Row 46
+  Title: Материаловедение в машиностроении
+  Issuer: Казанский национальный исследовательский технический университет имени                   А. Н. Туполева                                      (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 17.09.2021-11.12.2021
+  Link: https://stepik.org/certificate/68460f7634d4614c1c40b89affa556fa2d2139eb.pdf
+
+[18] Row 47
+  Title: Введение в сетевые технологии
+  Issuer: Дальневосточный федеральный университет
+ (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 06.12.2021-12.12.2021
+  Link: https://stepik.org/certificate/eaf01dd531a2c41a3f50ab760cdd0bab83397c92.pdf
+
+[19] Row 51
+  Title: Финансовая грамотность
+  Issuer: Stepik - образовательная платформа
+  Cert Type: Электронный
+  Date: 16.11.2021-17.12.2021
+  Link: https://stepik.org/certificate/d3b248ef263db286e7c66a671b18ab6e25aff3ac.pdf
+
+[20] Row 52
+  Title: Управленческий консалтинг в органическом сельском хозяйстве
+  Issuer: Российский государственный аграрный университет – МСХА имени К.А. Тимирязева              (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 17.12.2021-21.12.2021
+  Link: https://stepik.org/certificate/d8dfa28be35e95c1c55ef18f3a814a0a399fb5ca.pdf
+
+[21] Row 53
+  Title: Технологии работы с открытыми отраслевыми данными
+  Issuer: Российский государственный аграрный университет – МСХА имени К.А. Тимирязева              (Stepik - образовательная платформа)
+  Cert Type: Электронный
+  Date: 14.12.2021-23.12.2021
+  Link: https://stepik.org/certificate/f2355b42c72ae20eb2f0417a5b8a063809507f71.pdf
+
+[22] Row 54
+  Title: Компьютерная графика: основы
+  Issuer: Stepik - образовательная платформа
+  Cert Type: Электронный
+  Date: 27.12.2021-04.01.2022
+  Link: https://stepik.org/certificate/2be7af48e90e78b69a52b1741a8b6d44e20cd235.pdf
+
+=======================================================
+CATEGORY: NETOLOGY (Total: 3)
+=======================================================
+
+[1] Row 12
+  Title: Полезные навыки работы в Excel, о которых не знают профи
+  Issuer: Центр онлайн-образования «Нетология»
+  Cert Type: Электронный
+  Date: 44399.0
+  Link: https://netology.ru/sharing/15187ccee9bf03fd5e0e826c2523845e
+
+[2] Row 57
+  Title: Аналитика для начинающих интернет-маркетологов
+  Issuer: Центр онлайн-образования «Нетология»
+  Cert Type: Электронный
+  Date: 22.01.2022-24.01.2022
+  Link: https://netology.ru/sharing/a7e75f330ac09f8c82dd05b90bee9c2e
+
+[3] Row 58
+  Title: Как стать дизайнером
+  Issuer: Центр онлайн-образования «Нетология»
+  Cert Type: Электронный
+  Date: 28.01.2022-29.01.2022
+  Link: https://netology.ru/sharing/8067fe033d570927b08b4174e92188d1
+
+=======================================================
+CATEGORY: PRONAVYKI_GETCOURSE (Total: 13)
+=======================================================
+
+[1] Row 19
+  Title: Основные инструменты современного Excel
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 15.09.2021-19.09.2021
+  Link: https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/84208573fa0b9d5233e79184070cbca8.png/s/800x/a/248212/sc/50
+
+[2] Row 20
+  Title: Навыки влияния и убеждения
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 19.09.2021-21.09.2021
+  Link: https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/8fb47ed2829ba03fb05e0544fb8770d7.png/s/800x/a/248212/sc/199
+
+[3] Row 21
+  Title: Инклюзивные инструменты Microsoft
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 22.09.2021-23.09.2021
+  Link: https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/d6c42f615c07418b72ca238e830ec026.png/s/800x/a/248212/sc/88
+
+[4] Row 22
+  Title: Терминология продаж
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 22.09.2021-23.09.2021
+  Link: https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/ec5b92ff195f99fbd6c6ff7d236e2d31.png/s/800x/a/248212/sc/361
+
+[5] Row 25
+  Title: Развитие личного бренда
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 26.09.2021-27.09.2021
+  Link: https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/94e275f9ae63c9b581a4aab5c19d9779.png/s/800x/a/248212/sc/217
+
+[6] Row 26
+  Title: Основы профессии "Менеджер по продажам"
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 01.09.2021-30.09.2021
+  Link: https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/6a2f1e6a9953d38994ec6f1a41f1e35a.png/s/800x/a/248212/sc/203
+
+[7] Row 28
+  Title: Стрессоустойчивость
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 03.10.2021-06.10.2021
+  Link: https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/f6eef8fe5a79db76bbcad7ac60aadfa3.png/s/800x/a/248212/sc/117
+
+[8] Row 30
+  Title: Основы профессии "Интернет-маркетолог"
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 02.10.2021-21.10.2021
+  Link: https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/4cd525ddd55a91d5164551cacfe24c8f.png/s/800x/a/248212/sc/288
+
+[9] Row 31
+  Title: ИТ-Администрирование
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 21.10.2021-24.10.2021
+  Link: https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/abeb5a3fa49d738e1d72b1409e2fc99c.png/s/800x/a/248212/sc/341
+
+[10] Row 32
+  Title: Инструменты уверенного пользования ПК
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 44493.0
+  Link: https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/d81bff23e176a4a1c77f66887b2b7f67.png/s/800x/a/248212/sc/212
+
+[11] Row 44
+  Title: Развитие эмоционального интеллекта
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 08.12.2021-10.12.2021
+  Link: https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/05d2cd47aac007fe61502c2d17574146.png/s/800x/a/248212/sc/78
+
+[12] Row 49
+  Title: Эффективные коммуникации и работа в команде
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 44544.0
+  Link: https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/290ac58549e5bd4a5649e74bd04c1e89.png/s/800x/a/248212/sc/159
+
+[13] Row 59
+  Title: Основы информационной безопасности
+  Issuer: Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)
+  Cert Type: Электронный
+  Date: 14.02.2022-16.02.2022
+  Link: https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/92c343ba9d5472ce479c9bbc593f9b83.png/s/800x/a/248212/sc/214
+
+=======================================================
+CATEGORY: GEEKBRAINS (Total: 1)
+=======================================================
+
+[1] Row 75
+  Title: HR
+  Issuer: Образовательная платформа GeekBrains
+  Cert Type: Электронный
+  Date: 12.05.2022-13.05.2022
+  Link: https://gb.ru/certificates/1791575
+
+=======================================================
+CATEGORY: UN_FEMA_WHO_INTL (Total: 10)
+=======================================================
+
+[1] Row 78
+  Title: Social media marketing strategy 2022. Launch your SMM!  (Стратегия маркетинга в социальных сетях 2022)
+  Issuer: Udemy-платформа для онлайн-обучения
+  Cert Type: Электронный
+  Date: 44727.0
+  Link: https://www.udemy.com/certificate/UC-2ebc2396-26b9-4d61-9a16-04fc5a9c2c2c/
+
+[2] Row 81
+  Title: Business Communications (Деловые коммуникации)
+  Issuer: HP Life
+  Cert Type: Электронный
+  Date: 44729.0
+  Link: https://drive.google.com/file/d/17_Cp_S0k_k19vBV1YlwPsWE7SpqUTlfy/view?usp=sharing
+
+[3] Row 93
+  Title: The Climate Crisis: Addressing 5 Key Areas for Change (Климатический кризис: решение 5 ключевых областей для изменений)
+  Issuer: Young African Leaders Initiative (Инициатива молодых африканских лидеров)
+  Cert Type: Электронный
+  Date: 44734.0
+  Link: https://drive.google.com/file/d/1eLW4xuro1FYolJrvkRkpDV5z31Kke-TB/view?usp=sharing
+
+[4] Row 95
+  Title: EV Vehicle Safety: An Awareness Level Training (Безопасность электромобиля: обучение)
+  Issuer: National Volunteer Fire Council (Национальный добровольный пожарный совет)
+  Cert Type: Электронный
+  Date: 44735.0
+  Link: https://drive.google.com/file/d/1K3AxJvMaMqOiDHnNEsfDxkkgNs3xs-KQ/view?usp=sharing
+
+[5] Row 105
+  Title: The Human Security Approach: From principles to practice (Подход с точки зрения безопасности человека: от принципов к практике)
+  Issuer: United Nations System Staff College: UNSSC                      (Колледж персонала системы Организации Объединенных Наций)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1evcWM9B9etsiJQbzdXhlBOOYmfFoZdg1/view?usp=sharing
+
+[6] Row 111
+  Title: Prevent Detect Escape - Home Fire Safety for people at higher risk                                     (Домашняя пожарная безопасность)
+  Issuer: Country Fire Authority
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/15MfOzQSb6oGaS70llfNVS4dmeT3yr66E/view?usp=sharing
+
+[7] Row 117
+  Title: Human Capital Strategy                         (Стратегия человеческого капитала)
+  Issuer: Philanthropy University
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.philanthropyu.org/certificates/fe02ccc03531464d8d591a0291f6790e
+
+[8] Row 127
+  Title: Electronics Foundations: Fundamentals                    (Основы электроники: основы)
+  Issuer: LinkedIn Learning
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.linkedin.com/learning/certificates/2588a96b434c186f674fc8f83b0f1cd8e9d09dd4c18b7aed41445558d3a5ca9b?u=90799586
+
+[9] Row 146
+  Title: Wildland Fire Assessment Program                           (Программа оценки лесных пожаров)
+  Issuer: National Volunteer Fire Council (NVFC)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1MZVBZYGhqvrzSHsMTfxXxdvngwydKNHY/view?usp=sharing
+
+[10] Row 188
+  Title: IT Career Fundamentals (Основы ИТ-карьеры)
+  Issuer: Charles Sturt University (Университет Чарльза Стёрта)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1nIuo-PL4htAHyzPncFxtKumSNF_8Ejn0/view?usp=sharing
+
+=======================================================
+CATEGORY: INTUIT (Total: 2)
+=======================================================
+
+[1] Row 5
+  Title: Основы работы с Яндекс
+  Issuer: Национальный Открытый Университет «ИНТУИТ»
+  Cert Type: Электронный
+  Date: 25.07.2014-08.08.2014
+  Link: https://intuit.ru/verifydiplomas/100799295
+
+[2] Row 6
+  Title: Всемирная Сеть (WWW) - использование и приложения
+  Issuer: Национальный Открытый Университет «ИНТУИТ»
+  Cert Type: Электронный
+  Date: 26.07.2014-09.08.2014
+  Link: https://intuit.ru/verifydiplomas/100799346
+
+=======================================================
+CATEGORY: OTHER_WITH_LINKS (Total: 32)
+=======================================================
+
+[1] Row 7
+  Title: Повышение квалификации. Присвоение 5-го разряда электромонтера
+  Issuer: Государственный центр повышения квалификации руководящих работников и специалистов «ЖИЛКОМ»
+  Cert Type: Свидетельство
+  Date: 01.03.2020-03.04.2020
+  Link: https://drive.google.com/file/d/140jvyZtqnPn6koIoE7edMFd4FJHm064R/view?usp=sharing
+
+[2] Row 73
+  Title: Основы работы с маркетплейсами
+  Issuer: Skillbox
+  Cert Type: Нет
+  Date: 27.04.2022-06.05.2022
+  Link: https://drive.google.com/file/d/1JnyhPnfqXASELenuY7i_1p0-mCvfEMJw/view?usp=sharing
+
+[3] Row 74
+  Title: Дизайнер сайтов на Tilda
+  Issuer: Skillbox
+  Cert Type: Нет
+  Date: 01.05.2022-10.05.2022
+  Link: https://youtu.be/Jo_vHz_DOOo
+
+[4] Row 80
+  Title: Promoting and Protecting Human Rights: a Global Overview                                               (защита прав человека: глобальный обзор)
+  Issuer: Global Campus of Human Rights (Глобальный кампус прав человека)
+  Cert Type: Электронный
+  Date: 44728.0
+  Link: https://drive.google.com/file/d/18C_vCUZ0vPAkRFoTK6fG6C9pAFTvtoDD/view?usp=sharing
+
+[5] Row 82
+  Title: Achieving Sustainable Development Goals on Water and Sanitation                            (Достижение целей устойчивого развития в области водоснабжения и санитарии)
+  Issuer: Asian Development Bank Institute (Институт Азиатского банка развития)
+  Cert Type: Электронный
+  Date: 44730.0
+  Link: https://drive.google.com/file/d/1a08igrjbrKCeEfNBEeSVgncYbfinRF0H/view?usp=sharing
+
+[6] Row 83
+  Title: Введение: COVID-19, способы диагностики, профилактики, лечения и контроля
+  Issuer: World Health Organization (Всемирная организация здравоохранения)
+  Cert Type: Электронный
+  Date: 44730.0
+  Link: https://drive.google.com/file/d/1tuYtcAqnN25j1Y6xTmGnBgfNBIjE2CXR/view?usp=sharing
+
+[7] Row 96
+  Title: Energy: first grid position in the race to a greener future (Энергетика: первое место в энергосистеме в гонке за экологичное будущее)
+  Issuer: European commission (Европейская Комиссия)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/16o0oW1-9uPx2dGa0gcXjYDkFqWIljhPS/view?usp=sharing
+
+[8] Row 97
+  Title: Волонтерство в ЮНИСЕФ
+  Issuer: ЮНИСЕФ Беларусь
+  Cert Type: Электронный
+  Date: 44736.0
+  Link: https://drive.google.com/file/d/1pZMJhghOeqIYZFW6wQhgI1GzMhdi8vMA/view?usp=sharing
+
+[9] Row 101
+  Title: Energy Efficiency and Management in Electrical Systems (Энергоэффективность и управление в электрических системах)
+  Issuer: Asian Productivity Organization
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1iT0VuXMQHUXSMkCgv7kTfGHQOy-y1z48/view?usp=sharing
+
+[10] Row 102
+  Title: General Business Energy Efficiency                                    (Общая энергоэффективность бизнеса)
+  Issuer: Sustainable Energy Authority of Ireland / SEAI Energy Academy
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1BxdgMM9Rlqn61VhXpXkI_nHArOHuTk6h/view?usp=sharing
+
+[11] Row 103
+  Title: Land in Focus – Dry Ecosystems                              (Земля в центре внимания – сухие экосистемы)
+  Issuer: ESA / EO college             (Европейское космическое агентство)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/13m__XFe_SNFHickzeAM_0D8pmsurz0ef/view?usp=sharing
+
+[12] Row 106
+  Title: Introduction to Conservation nature                               (Введение в сохранение природы)
+  Issuer: National Geographic
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1ovvDrLeZt5qp4W9dlXmIxuU85htdAt6i/view?usp=sharing
+
+[13] Row 107
+  Title: Introduction to digital journalism (Введение в цифровую журналистику)
+  Issuer: Reuters
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/14WZQP2X1c9Bzf8K15s4qnKWGnBOU4QtS/view?usp=sharing
+
+[14] Row 108
+  Title: Leadership and People Management Course          (Курс лидерства и управления людьми)
+  Issuer: Reed Courses
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.reed.co.uk/courses/certificate/C-aVOdERt3HOPpssf4Pd3w
+
+[15] Row 109
+  Title: How To Have A Patient-Centered Discussion About COVID Vaccines            (Как вести дискуссию о вакцинах против COVID)
+  Issuer: Stanford Medicine
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1pS-iEFiHWdy-pEtbbdf2YgyQ6ZhPddl6/view?usp=sharing
+
+[16] Row 112
+  Title: Digital Skills: Social Media (Цифровые навыки: социальные сети)
+  Issuer: FutureLearn - британская платформа цифрового образования
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1sqb0poLLc2VtLmJTLkrQewl3yEAIOMq8/view?usp=sharing
+
+[17] Row 113
+  Title: What are smart cities?            (Что такое умные города?)
+  Issuer: Royal Town Planning Institute (Королевский институт городского планирования)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/16T8FQrZAPFXXDTsoytoG5U4eNUw0dIcY/view?usp=sharing
+
+[18] Row 122
+  Title: Data and Digital Literacy Introduction Course                             (Вводный курс по данным и цифровой грамотности)
+  Issuer: IFRC                         (Международная Федерация обществ Красного Креста и Красного Полумесяца)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1y5iJCoUAtKnNQb3jnpQjMTGwY09eHl9B/view?usp=sharing
+
+[19] Row 132
+  Title: Aussie Specialist Agent
+  Issuer: Tourism Australia
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1n9dYlIE7tYJbvWGM3p4eXsLpkXgBIfFP/view?usp=sharing
+
+[20] Row 135
+  Title: Essentials of Team Collaboration                     (Основы командного сотрудничества)
+  Issuer: LinkedIn Learning
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.linkedin.com/learning/essentials-of-team-collaboration?u=90799586
+  Link: https://www.linkedin.com/learning/certificates/138f9c4651b5d6a5fe7d032b74cb260acd5e207daa93dbd116110b776802518a?u=90799586
+
+[21] Row 136
+  Title: Специалист по Абу-Даби
+  Issuer: Департамент культуры и туризма Абу-Даби
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/105KagCtlgFCLABP-CkKOWTJYRv_g3Ayd/view?usp=sharing
+
+[22] Row 137
+  Title: Jumeirah Beacon
+  Issuer: Jumeirah Hotels & Resorts
+  Cert Type: Электронный
+  Date: 
+  Link: https://www.jumeirah.com/ru
+  Link: https://drive.google.com/file/d/1JH7NQubdhE5yrvAsS2ppZl-klxv2-OHi/view?usp=sharing
+
+[23] Row 138
+  Title: Italy Online Training
+  Issuer: Italian Tourist Board UK & Ireland
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1u1DeEADR4CtSEnTF1aq6V6gMI7HKpLzA/view?usp=sharing
+
+[24] Row 145
+  Title: Success Mindset              (Мышление успеха)
+  Issuer: HP Life
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1ruEfO8YYcwZWnNvkb62qGEWFObYskxvB/view?usp=sharing
+
+[25] Row 147
+  Title: Думай інакше: Зламай перешкоди на шляху до навчання та відкрий свій прихований потенціал
+  Issuer: Платформа обучения Prometheus
+  Cert Type: Электронный
+  Date: 
+  Link: https://courses.prometheus.org.ua/courses/course-v1:Prometheus+MINDSHIFT101+2021_T2/course/
+  Link: https://drive.google.com/file/d/13Qr4EkuY_9olfKvKhrOd8pwezTC1N2aa/view?usp=sharing
+
+[26] Row 149
+  Title: Word та Excel: інструменти і лайфхаки
+  Issuer: Платформа обучения Prometheus
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1FGiGvXc0rh57kSCzQ68zIK8KZcIRhpXi/view?usp=sharing
+
+[27] Row 150
+  Title: Доставляемость email-рассылок
+  Issuer: Sendpulse Academy
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1fokhGAVLnTirTKUze33ItYXiAz66gMUQ/view?usp=sharing
+
+[28] Row 153
+  Title: Vocational Education and Training                            (Профессиональное образование и обучение)
+  Issuer: EU International Partnerships Academy                      (Академия международного партнерства ЕС)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1YhYNyydyfF8-gNuH3HJ3DSrL2c2Ts1go/view?usp=sharing
+
+[29] Row 157
+  Title: What Keeps You Awake at Night: Risk, Leading Change, and Challenging Decisions          (Что не дает вам спать по ночам: риск, лидерство в переменах и сложные решения)
+  Issuer: Forensic Technology Center of Excellence                                   (Центр передового опыта судебно-медицинской экспертизы)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1uPz9Gdrdz-gA_zxX2KIZFvYKzMVAIXMa/view?usp=sharing
+
+[30] Row 158
+  Title: Civil Rights in American History                        (Гражданские права в американской истории)
+  Issuer: Hillsdale College                     (Колледж Хилсдейл)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1hRhQK--zyQ0w2YE5k754mEEWpJYYBskH/view?usp=sharing
+
+[31] Row 159
+  Title: Flammable Liquids Safety Training                                (Обучение безопасному обращению с легковоспламеняющимися жидкостями)
+  Issuer: TRANSCAER (Осведомленность транспортного сообщества и реагирование на чрезвычайные ситуации)
+  Cert Type: Электронный
+  Date: 
+  Link: https://drive.google.com/file/d/1jYwBN-uYWeu2QpI0bZiCZuOjwFBerfZW/view?usp=sharing
+
+[32] Row 212
+  Title: Возобновляемые источники энергии
+  Issuer: Южно-Уральский Государственный Университет Платформа Лекториум
+  Cert Type: Электронный
+  Date: 
+  Link: https://mooc.lektorium.tv/certificates/36a1ee68503d4ef7ba24e92af0ad71a4
+
+=======================================================
+CATEGORY: NO_LINKS (Total: 0)
+=======================================================

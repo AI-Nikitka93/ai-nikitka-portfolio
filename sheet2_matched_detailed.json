@@ -1,0 +1,3024 @@
+[
+  {
+    "sheet": {
+      "row": "3",
+      "date": "01.09.2005-30.05.2014",
+      "title": "1.Пользователь ПЭВМ.                    2.Программирование на языке TURBO PASCAL 7.0 3.Компьютерные сети.          4.Создание Wеb-сайтов.               5.Работа в сети Интернет. 6.Компьютерная графика (CorelDRAW, Photoshop)                 7.Устройство, ремонт и тестирование ПЭВМ.",
+      "issuer": "Республиканский Центр технического творчества учащихся",
+      "cert_type": "Характеристика",
+      "links": [
+        "https://drive.google.com/file/d/1_9rtU15W4358uqK4GAyqdplFVYmi52L7/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "01.09.2005-30.05.2014",
+        "B": "1.Пользователь ПЭВМ.                    2.Программирование на языке TURBO PASCAL 7.0 3.Компьютерные сети.          4.Создание Wеb-сайтов.               5.Работа в сети Интернет. 6.Компьютерная графика (CorelDRAW, Photoshop)                 7.Устройство, ремонт и тестирование ПЭВМ.",
+        "C": "Республиканский Центр технического творчества учащихся",
+        "D": "Характеристика",
+        "E": "Характеристика"
+      }
+    },
+    "ts": {
+      "id": "tech-rcttu-pascal",
+      "title": "Программирование на языке Turbo Pascal 7.0 & Сети",
+      "titleRu": "Turbo Pascal 7.0, Архитектура ПК, Веб-сайты и Компьютерная графика",
+      "issuer": "РЦТТУ (Республиканский центр тех. творчества учащихся)",
+      "platform": "Other",
+      "category": "programming-web",
+      "year": "2005–2009",
+      "url": "https://drive.google.com/file/d/1_9rtU15W4358uqK4GAyqdplFVYmi52L7/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "4",
+      "date": "01.09.2012-04.02.2013",
+      "title": "IT Essentials: PC Hardware and Software Version",
+      "issuer": "Минский государственный колледж сферы обслуживания",
+      "cert_type": "Есть",
+      "links": [
+        "https://drive.google.com/file/d/1lZWjZBcKh4swUuZYejaetvZioTgoDHMR/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "01.09.2012-04.02.2013",
+        "B": "IT Essentials: PC Hardware and Software Version",
+        "C": "Минский государственный колледж сферы обслуживания",
+        "D": "Есть",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-cisco-it-essentials",
+      "title": "IT Essentials: PC Hardware and Software",
+      "titleRu": "IT Essentials: Аппаратное и программное обеспечение ПК",
+      "issuer": "Cisco Networking Academy / МГКСО",
+      "platform": "Other",
+      "category": "programming-web",
+      "year": "2013",
+      "url": "https://drive.google.com/file/d/1lZWjZBcKh4swUuZYejaetvZioTgoDHMR/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "8",
+      "date": "44342.0",
+      "title": "Обучение мерам пожарной безопасности рабочих и служащих организаций и предприятий Министерства ЖКХ РБ",
+      "issuer": "Государственный центр повышения квалификации руководящих работников и специалистов «ЖИЛКОМ»",
+      "cert_type": "Справка об обучении",
+      "links": [
+        "https://drive.google.com/file/d/1emfvKZQDFBfLYrncmhwnFw6GJRm6DS95/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44342.0",
+        "B": "Обучение мерам пожарной безопасности рабочих и служащих организаций и предприятий Министерства ЖКХ РБ",
+        "C": "Государственный центр повышения квалификации руководящих работников и специалистов «ЖИЛКОМ»",
+        "D": "Справка об обучении",
+        "E": "Справка"
+      }
+    },
+    "ts": {
+      "id": "eng-zhilkom-fire-safety",
+      "title": "Обучение мерам пожарной безопасности Министерства ЖКХ РБ",
+      "titleRu": "Пожарно-технический минимум на опасных производственных объектах",
+      "issuer": "ГЦПК «ЖИЛКОМ»",
+      "platform": "Other",
+      "category": "engineering-energy",
+      "year": "2020",
+      "url": "https://drive.google.com/file/d/1emfvKZQDFBfLYrncmhwnFw6GJRm6DS95/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "9",
+      "date": "12.07.2021-14.07.2021",
+      "title": "Старт в SMM",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/df7664e017156618f0d33940210309e7"
+      ],
+      "col_vals": {
+        "A": "12.07.2021-14.07.2021",
+        "B": "Старт в SMM",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Свидетельство"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-smm",
+      "title": "Старт в SMM",
+      "titleRu": "Продвижение и контент-маркетинг в социальных сетях",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2021",
+      "url": "https://netology.ru/sharing/df7664e017156618f0d33940210309e7"
+    }
+  },
+  {
+    "sheet": {
+      "row": "10",
+      "date": "16.07.2021-18.07.2021",
+      "title": "Основы интернет-маркетинга: старт в профессии",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/0b3177bac41f2f726278df8bd6b49920"
+      ],
+      "col_vals": {
+        "A": "16.07.2021-18.07.2021",
+        "B": "Основы интернет-маркетинга: старт в профессии",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Свидетельство"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-marketing-intro",
+      "title": "Основы интернет-маркетинга: старт в профессии",
+      "titleRu": "Базовые каналы привлечения трафика и воронки продаж",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2021",
+      "url": "https://netology.ru/sharing/0b3177bac41f2f726278df8bd6b49920"
+    }
+  },
+  {
+    "sheet": {
+      "row": "11",
+      "date": "19.07.2021-20.07.2021",
+      "title": "Как создавать контент для бизнеса",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/094cb1adba510d532d31fbec3bd071a5"
+      ],
+      "col_vals": {
+        "A": "19.07.2021-20.07.2021",
+        "B": "Как создавать контент для бизнеса",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-content",
+      "title": "Как создавать контент для бизнеса",
+      "titleRu": "Сторителлинг, коммерческий копирайтинг и визуальный контент",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2021",
+      "url": "https://netology.ru/sharing/094cb1adba510d532d31fbec3bd071a5"
+    }
+  },
+  {
+    "sheet": {
+      "row": "13",
+      "date": "08.08.2021-20.08.2021",
+      "title": "Основы Adobe Photoshop",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/178af8330bacb6f0495e1ee2f8050e98"
+      ],
+      "col_vals": {
+        "A": "08.08.2021-20.08.2021",
+        "B": "Основы Adobe Photoshop",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-photoshop",
+      "title": "Основы Adobe Photoshop",
+      "titleRu": "Обработка изображений, ретушь и слои в Photoshop",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2021",
+      "url": "https://netology.ru/sharing/178af8330bacb6f0495e1ee2f8050e98"
+    }
+  },
+  {
+    "sheet": {
+      "row": "15",
+      "date": "44453.0",
+      "title": "Первая помощь при остановке сердца (базовая реанимация)",
+      "issuer": "Крымский симуляционный центр экстренной медицины (Stepik - образовательная платформа)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://stepik.org/certificate/2ee0cbc5e4898ced5c0d9cb9ceb7e7a66cb54f68.pdf"
+      ],
+      "col_vals": {
+        "A": "44453.0",
+        "B": "Первая помощь при остановке сердца (базовая реанимация)",
+        "C": "Крымский симуляционный центр экстренной медицины (Stepik - образовательная платформа)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-stepik-cpr",
+      "title": "Первая помощь при остановке сердца (базовая реанимация)",
+      "titleRu": "Крымский симуляционный центр экстренной медицины",
+      "issuer": "Симуляционный центр экстренной медицины",
+      "platform": "Stepik",
+      "category": "global-health-safety",
+      "year": "2022",
+      "url": "https://stepik.org/certificate/2ee0cbc5e4898ced5c0d9cb9ceb7e7a66cb54f68.pdf"
+    }
+  },
+  {
+    "sheet": {
+      "row": "23",
+      "date": "19.09.2021-23.09.2021",
+      "title": "Право и этика искусственного интеллекта",
+      "issuer": "Дальневосточный федеральный университет\n (Stepik - образовательная платформа)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://stepik.org/certificate/f2da5f5bd4d50fc7285c018eb3f032f5dbfee005.pdf"
+      ],
+      "col_vals": {
+        "A": "19.09.2021-23.09.2021",
+        "B": "Право и этика искусственного интеллекта",
+        "C": "Дальневосточный федеральный университет\n (Stepik - образовательная платформа)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-fefu-law-ethics",
+      "title": "Право и этика искусственного интеллекта",
+      "titleRu": "Правовое регулирование и этические стандарты в ИИ",
+      "issuer": "Дальневосточный федеральный университет (ДВФУ)",
+      "platform": "Stepik",
+      "category": "ai-ml",
+      "year": "2023",
+      "url": "https://stepik.org/certificate/f2da5f5bd4d50fc7285c018eb3f032f5dbfee005.pdf"
+    }
+  },
+  {
+    "sheet": {
+      "row": "29",
+      "date": "10.10.2021-20.10.2021",
+      "title": "Основы интернет-маркетинга",
+      "issuer": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/a7aebeeba453260422c0dc487df2c4c4.png/s/800x/a/248212/sc/320"
+      ],
+      "col_vals": {
+        "A": "10.10.2021-20.10.2021",
+        "B": "Основы интернет-маркетинга",
+        "C": "Центр развития инновационных технологий «ИТ-Планета» (ПРОНАВЫКИ)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-marketing-intro",
+      "title": "Основы интернет-маркетинга: старт в профессии",
+      "titleRu": "Базовые каналы привлечения трафика и воронки продаж",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2021",
+      "url": "https://netology.ru/sharing/0b3177bac41f2f726278df8bd6b49920"
+    }
+  },
+  {
+    "sheet": {
+      "row": "35",
+      "date": "07.11.2021-09.11.2021",
+      "title": "Вводный курс MBA",
+      "issuer": "City Business School",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1qnqTuACAEmDUIG6aOV7bh0645UPrlbTt/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "07.11.2021-09.11.2021",
+        "B": "Вводный курс MBA",
+        "C": "City Business School",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-cbs-mba",
+      "title": "Вводный курс MBA",
+      "titleRu": "Основы бизнес-администрирования и финансового планирования",
+      "issuer": "City Business School",
+      "platform": "Other",
+      "category": "management-leadership",
+      "year": "2022",
+      "url": "https://drive.google.com/file/d/1qnqTuACAEmDUIG6aOV7bh0645UPrlbTt/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "37",
+      "date": "24.11.2021-03.12.2021",
+      "title": "Основы Html & CSS",
+      "issuer": "Stepik - образовательная платформа",
+      "cert_type": "Электронный",
+      "links": [
+        "https://stepik.org/certificate/0209a04225a1ffc2a45bc1aa6fe018154a1bca56.pdf"
+      ],
+      "col_vals": {
+        "A": "24.11.2021-03.12.2021",
+        "B": "Основы Html & CSS",
+        "C": "Stepik - образовательная платформа",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-stepik-html-css",
+      "title": "Основы HTML & CSS",
+      "titleRu": "Верстка веб-страниц: основы HTML5 и CSS3",
+      "issuer": "Stepik",
+      "platform": "Stepik",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://stepik.org/certificate/0209a04225a1ffc2a45bc1aa6fe018154a1bca56.pdf"
+    }
+  },
+  {
+    "sheet": {
+      "row": "48",
+      "date": "44543.0",
+      "title": "Скорость печати на русском языке",
+      "issuer": "Ratatype",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.ratatype.ua/ru/u4108020/certificate/ru/"
+      ],
+      "col_vals": {
+        "A": "44543.0",
+        "B": "Скорость печати на русском языке",
+        "C": "Ratatype",
+        "D": "Электронный",
+        "E": "225 знаков/мин"
+      }
+    },
+    "ts": {
+      "id": "mkt-ratatype-speed",
+      "title": "Скорость слепой печати на русском языке: 225 зн/мин",
+      "titleRu": "Сертификат скорости клавиатурного набора",
+      "issuer": "Ratatype",
+      "platform": "Other",
+      "category": "marketing-design",
+      "year": "2021",
+      "url": "https://www.ratatype.ua/ru/u4108020/certificate/ru/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "50",
+      "date": "13.12.2021-15.12.2021",
+      "title": "Веб-разработка для начинающих: HTML и CSS",
+      "issuer": "ITC \n (Stepik - образовательная платформа)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://stepik.org/certificate/c9f9c84fd75abe0305a22052cdaaf37d54ccc999.pdf"
+      ],
+      "col_vals": {
+        "A": "13.12.2021-15.12.2021",
+        "B": "Веб-разработка для начинающих: HTML и CSS",
+        "C": "ITC \n (Stepik - образовательная платформа)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-itc-html-css",
+      "title": "Веб-разработка для начинающих: HTML и CSS",
+      "titleRu": "Практическая веб-разработка",
+      "issuer": "ITC / Stepik",
+      "platform": "Stepik",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://stepik.org/certificate/c9f9c84fd75abe0305a22052cdaaf37d54ccc999.pdf"
+    }
+  },
+  {
+    "sheet": {
+      "row": "55",
+      "date": "10.01.2022-13.01.2022",
+      "title": "Основы работы с текстом",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/e16a7678bbd108378f9c2bb94c275478"
+      ],
+      "col_vals": {
+        "A": "10.01.2022-13.01.2022",
+        "B": "Основы работы с текстом",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-text",
+      "title": "Основы работы с текстом",
+      "titleRu": "Редактура, информационный стиль и структура статей",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://netology.ru/sharing/e16a7678bbd108378f9c2bb94c275478"
+    }
+  },
+  {
+    "sheet": {
+      "row": "56",
+      "date": "15.01.2022-17.01.2022",
+      "title": "Маркетплейсы: как выбрать площадку для размещения",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/05398925ebf8660ed8771feac3ac27c9"
+      ],
+      "col_vals": {
+        "A": "15.01.2022-17.01.2022",
+        "B": "Маркетплейсы: как выбрать площадку для размещения",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-marketplaces",
+      "title": "Маркетплейсы: как выбрать площадку для размещения",
+      "titleRu": "E-commerce воронки на Wildberries, Ozon и маркетплейсах",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://netology.ru/sharing/05398925ebf8660ed8771feac3ac27c9"
+    }
+  },
+  {
+    "sheet": {
+      "row": "60",
+      "date": "03.03.2022-09.03.2022",
+      "title": "1С-Битрикс:Контент-менеджер",
+      "issuer": "ООО «1С-Битрикс»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1XHhoWVBVmZwJ3OYgQGEjXa0wV0VfCENt/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "03.03.2022-09.03.2022",
+        "B": "1С-Битрикс:Контент-менеджер",
+        "C": "ООО «1С-Битрикс»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-bitrix-content",
+      "title": "1С-Битрикс: Контент-менеджер",
+      "titleRu": "Администрирование и наполнение сайтов на 1С-Битрикс",
+      "issuer": "ООО «1С-Битрикс»",
+      "platform": "Other",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://drive.google.com/file/d/1XHhoWVBVmZwJ3OYgQGEjXa0wV0VfCENt/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "61",
+      "date": "02.03.2022-12.03.2022",
+      "title": "Введение в арбитраж трафика и CPA маркетинг",
+      "issuer": "Stepik - образовательная платформа",
+      "cert_type": "Электронный",
+      "links": [
+        "https://stepik.org/certificate/f86d278d7a021d93a3bcea5d7c43948d19ce6c06.pdf"
+      ],
+      "col_vals": {
+        "A": "02.03.2022-12.03.2022",
+        "B": "Введение в арбитраж трафика и CPA маркетинг",
+        "C": "Stepik - образовательная платформа",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-stepik-cpa",
+      "title": "Введение в арбитраж трафика и CPA маркетинг",
+      "titleRu": "Партнерский маркетинг, трекинг и монетизация трафика",
+      "issuer": "Stepik",
+      "platform": "Stepik",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://stepik.org/certificate/f86d278d7a021d93a3bcea5d7c43948d19ce6c06.pdf"
+    }
+  },
+  {
+    "sheet": {
+      "row": "62",
+      "date": "13.03.2022-18.03.2022",
+      "title": "1С-Битрикс:Продвижение сайта и Маркетинг",
+      "issuer": "ООО «1С-Битрикс»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1Q7jp6VLH2bu9Wce5t_gT73-Ju784-FVU/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "13.03.2022-18.03.2022",
+        "B": "1С-Битрикс:Продвижение сайта и Маркетинг",
+        "C": "ООО «1С-Битрикс»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-bitrix-marketing",
+      "title": "1С-Битрикс: Продвижение сайта и Маркетинг",
+      "titleRu": "SEO и маркетинговые инструменты платформы 1С-Битрикс",
+      "issuer": "ООО «1С-Битрикс»",
+      "platform": "Other",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://drive.google.com/file/d/1Q7jp6VLH2bu9Wce5t_gT73-Ju784-FVU/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "63",
+      "date": "03.03.2022-25.03.2022",
+      "title": "Специалист по Яндекс.Метрике",
+      "issuer": "Yandex",
+      "cert_type": "Электронный",
+      "links": [
+        "https://yandex.ru/adv/expert/certificate/pdf/7upA9u4bbp/229516"
+      ],
+      "col_vals": {
+        "A": "03.03.2022-25.03.2022",
+        "B": "Специалист по Яндекс.Метрике",
+        "C": "Yandex",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-yandex-metrika",
+      "title": "Специалист по Яндекс.Метрике",
+      "titleRu": "Официальный сертификат эксперта по Яндекс.Метрике",
+      "issuer": "Yandex",
+      "platform": "Yandex",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://yandex.ru/adv/expert/certificate/pdf/7upA9u4bbp/229516"
+    }
+  },
+  {
+    "sheet": {
+      "row": "64",
+      "date": "11.03.2022-26.03.2022",
+      "title": "Курс по Google Аналитике для начинающих",
+      "issuer": "Google Analytics Academy",
+      "cert_type": "Электронный",
+      "links": [
+        "https://analytics.google.com/analytics/academy/certificate/XUEKPmoPSEyKtCLIYr0lvA"
+      ],
+      "col_vals": {
+        "A": "11.03.2022-26.03.2022",
+        "B": "Курс по Google Аналитике для начинающих",
+        "C": "Google Analytics Academy",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-google-analytics",
+      "title": "Google Analytics for Beginners",
+      "titleRu": "Курс по Google Аналитике для начинающих",
+      "issuer": "Google Analytics Academy",
+      "platform": "Google",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://analytics.google.com/analytics/academy/certificate/XUEKPmoPSEyKtCLIYr0lvA"
+    }
+  },
+  {
+    "sheet": {
+      "row": "65",
+      "date": "17.03.2022-30.03.2022",
+      "title": "Специалист по Яндекс.Директу",
+      "issuer": "Yandex",
+      "cert_type": "Электронный",
+      "links": [
+        "https://yandex.ru/adv/expert/certificate/pdf/7upA9u4bbp/229799"
+      ],
+      "col_vals": {
+        "A": "17.03.2022-30.03.2022",
+        "B": "Специалист по Яндекс.Директу",
+        "C": "Yandex",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-yandex-direct",
+      "title": "Специалист по Яндекс.Директу",
+      "titleRu": "Официальный сертификат по контекстной рекламе Яндекс.Директ",
+      "issuer": "Yandex",
+      "platform": "Yandex",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://yandex.ru/adv/expert/certificate/pdf/7upA9u4bbp/229799"
+    }
+  },
+  {
+    "sheet": {
+      "row": "66",
+      "date": "02.04.2022-03.04.2022",
+      "title": "Adobe Photoshop. Коллажирование",
+      "issuer": "Образовательная платформа GeekBrains",
+      "cert_type": "Электронный",
+      "links": [
+        "https://gb.ru/certificates/1739034"
+      ],
+      "col_vals": {
+        "A": "02.04.2022-03.04.2022",
+        "B": "Adobe Photoshop. Коллажирование",
+        "C": "Образовательная платформа GeekBrains",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-geekbrains-collaging",
+      "title": "Adobe Photoshop. Коллажирование",
+      "titleRu": "Сложное многослойное коллажирование и арт-постпродакшн",
+      "issuer": "Образовательная платформа GeekBrains",
+      "platform": "GeekBrains",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://gb.ru/certificates/1739034"
+    }
+  },
+  {
+    "sheet": {
+      "row": "67",
+      "date": "03.04.2022-05.04.2022",
+      "title": "Как создать личный блог: курс \"Создание блога на Wordpress\"",
+      "issuer": "Образовательная платформа GeekBrains",
+      "cert_type": "Электронный",
+      "links": [
+        "https://gb.ru/certificates/1741856"
+      ],
+      "col_vals": {
+        "A": "03.04.2022-05.04.2022",
+        "B": "Как создать личный блог: курс \"Создание блога на Wordpress\"",
+        "C": "Образовательная платформа GeekBrains",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-geekbrains-wordpress",
+      "title": "Создание блога на WordPress",
+      "titleRu": "Разработка и настройка личного блога на CMS WordPress",
+      "issuer": "Образовательная платформа GeekBrains",
+      "platform": "GeekBrains",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://gb.ru/certificates/1741856"
+    }
+  },
+  {
+    "sheet": {
+      "row": "68",
+      "date": "02.03.2022-07.04.2022",
+      "title": "Сертификация по контекстно-медийной сети Google Рекламы",
+      "issuer": "Skillshop Google",
+      "cert_type": "Электронный",
+      "links": [
+        "https://skillshop.exceedlms.com/student/award/mp2sjREHzwnT5czTWYwwznFg"
+      ],
+      "col_vals": {
+        "A": "02.03.2022-07.04.2022",
+        "B": "Сертификация по контекстно-медийной сети Google Рекламы",
+        "C": "Skillshop Google",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-google-display",
+      "title": "Сертификация по контекстно-медийной сети Google Рекламы",
+      "titleRu": "Google Display Ads Certification",
+      "issuer": "Skillshop Google",
+      "platform": "Google",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://skillshop.exceedlms.com/student/award/mp2sjREHzwnT5czTWYwwznFg"
+    }
+  },
+  {
+    "sheet": {
+      "row": "69",
+      "date": "21.03.2022-09.04.2022",
+      "title": "Сертификация по оценке эффективности объявлений в Google Рекламе",
+      "issuer": "Skillshop Google",
+      "cert_type": "Электронный",
+      "links": [
+        "https://skillshop.exceedlms.com/student/award/5QxLX9bDSCPCxi4Qrs5U3kdg"
+      ],
+      "col_vals": {
+        "A": "21.03.2022-09.04.2022",
+        "B": "Сертификация по оценке эффективности объявлений в Google Рекламе",
+        "C": "Skillshop Google",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-google-measurement",
+      "title": "Сертификация по оценке эффективности объявлений в Google Рекламе",
+      "titleRu": "Google Ads Measurement Certification",
+      "issuer": "Skillshop Google",
+      "platform": "Google",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://skillshop.exceedlms.com/student/award/5QxLX9bDSCPCxi4Qrs5U3kdg"
+    }
+  },
+  {
+    "sheet": {
+      "row": "70",
+      "date": "17.04.2022-21.04.2022",
+      "title": "Основы графического дизайна c Canva",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/feec66e3c7a4be77d1df9c01e973e6c3"
+      ],
+      "col_vals": {
+        "A": "17.04.2022-21.04.2022",
+        "B": "Основы графического дизайна c Canva",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-canva",
+      "title": "Основы графического дизайна c Canva",
+      "titleRu": "Композиция, типографика и визуальные шаблоны",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://netology.ru/sharing/feec66e3c7a4be77d1df9c01e973e6c3"
+    }
+  },
+  {
+    "sheet": {
+      "row": "71",
+      "date": "26.04.2022-30.04.2022",
+      "title": "Основы Figma",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "cert_type": "Электронный",
+      "links": [
+        "https://netology.ru/sharing/523f26b40e1564f153b8751f537195d9"
+      ],
+      "col_vals": {
+        "A": "26.04.2022-30.04.2022",
+        "B": "Основы Figma",
+        "C": "Центр онлайн-образования «Нетология»",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-netology-figma",
+      "title": "Основы Figma",
+      "titleRu": "Интерфейсный дизайн, автолейауты и компоненты в Figma",
+      "issuer": "Центр онлайн-образования «Нетология»",
+      "platform": "Netology",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://netology.ru/sharing/523f26b40e1564f153b8751f537195d9"
+    }
+  },
+  {
+    "sheet": {
+      "row": "72",
+      "date": "02.05.2022-05.05.2022",
+      "title": "Основы программирования",
+      "issuer": "Образовательная платформа GeekBrains",
+      "cert_type": "Электронный",
+      "links": [
+        "https://gb.ru/certificates/1781838"
+      ],
+      "col_vals": {
+        "A": "02.05.2022-05.05.2022",
+        "B": "Основы программирования",
+        "C": "Образовательная платформа GeekBrains",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-geekbrains-prog",
+      "title": "Основы программирования",
+      "titleRu": "Алгоритмизация и структуры данных",
+      "issuer": "Образовательная платформа GeekBrains",
+      "platform": "GeekBrains",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://gb.ru/certificates/1781838"
+    }
+  },
+  {
+    "sheet": {
+      "row": "77",
+      "date": "01.06.2022-11.06.2022",
+      "title": "Technical Support Fundamentals (Основы технической поддержки)",
+      "issuer": "Google                                            (платформа Сoursera)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/certificate/V66XMJ8B32Q3"
+      ],
+      "col_vals": {
+        "A": "01.06.2022-11.06.2022",
+        "B": "Technical Support Fundamentals (Основы технической поддержки)",
+        "C": "Google                                            (платформа Сoursera)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-google-support",
+      "title": "Technical Support Fundamentals",
+      "titleRu": "Основы технической поддержки Google",
+      "issuer": "Google",
+      "platform": "Google",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/V66XMJ8B32Q3"
+    }
+  },
+  {
+    "sheet": {
+      "row": "79",
+      "date": "14.05.2022-16.06.2022",
+      "title": "COVID-19 Training for Healthcare Workers                   (Тренинг по COVID-19)",
+      "issuer": "Stanford Online (образовательная инициатива Стэнфордского университета)                  платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/certificate/4LRWJ6N9D873"
+      ],
+      "col_vals": {
+        "A": "14.05.2022-16.06.2022",
+        "B": "COVID-19 Training for Healthcare Workers                   (Тренинг по COVID-19)",
+        "C": "Stanford Online (образовательная инициатива Стэнфордского университета)                  платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-stanford-covid",
+      "title": "COVID-19 Training for Healthcare Workers",
+      "titleRu": "Клинический тренинг для медработников от Stanford Medicine",
+      "issuer": "Stanford Online (Стэнфордский университет)",
+      "platform": "Coursera",
+      "category": "global-health-safety",
+      "year": "2022",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/4LRWJ6N9D873"
+    }
+  },
+  {
+    "sheet": {
+      "row": "84",
+      "date": "44730.0",
+      "title": "The Federal Emergency Management Agency / The Center for\nDomestic Preparedness (Федеральное агентство по управлению в чрезвычайных ситуациях США / Центр внутренней готовности)",
+      "issuer": "Response Considerations During an Outbreak or Pandemic (Рекомендации по реагированию во время вспышки или пандемии)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1TTOKHwwOqz9pgnJvZ0dk1A6S8moqnOdc/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44730.0",
+        "B": "The Federal Emergency Management Agency / The Center for\nDomestic Preparedness (Федеральное агентство по управлению в чрезвычайных ситуациях США / Центр внутренней готовности)",
+        "C": "Response Considerations During an Outbreak or Pandemic (Рекомендации по реагированию во время вспышки или пандемии)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-fema-outbreak",
+      "title": "Response Considerations During an Outbreak or Pandemic",
+      "titleRu": "Рекомендации по реагированию на вспышки и пандемии (FEMA США)",
+      "issuer": "FEMA / The Center for Domestic Preparedness (США)",
+      "platform": "Other",
+      "category": "global-health-safety",
+      "year": "2022",
+      "url": "https://drive.google.com/file/d/1TTOKHwwOqz9pgnJvZ0dk1A6S8moqnOdc/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "85",
+      "date": "21.05.2022-19.06.2022",
+      "title": "COVID-19 Contact Tracing (Отслеживание контактов COVID-19)",
+      "issuer": "Johns Hopkins University (Университет Джонса Хопкинса)                          платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/certificate/SZPV7LK3F8SB"
+      ],
+      "col_vals": {
+        "A": "21.05.2022-19.06.2022",
+        "B": "COVID-19 Contact Tracing (Отслеживание контактов COVID-19)",
+        "C": "Johns Hopkins University (Университет Джонса Хопкинса)                          платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-jhu-contact-tracing",
+      "title": "COVID-19 Contact Tracing",
+      "titleRu": "Отслеживание контактов и эпидемиологический протокол",
+      "issuer": "Johns Hopkins University (Университет Джонса Хопкинса)",
+      "platform": "Coursera",
+      "category": "global-health-safety",
+      "year": "2022",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/SZPV7LK3F8SB"
+    }
+  },
+  {
+    "sheet": {
+      "row": "86",
+      "date": "44731.0",
+      "title": "The Monitoring and Controls Learning Track                                (Курс обучения мониторингу и контролю)",
+      "issuer": "Grundfos Ecademy",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1x92iTrS21tdYdqm4Fr60BBMLj0xnPjcG/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44731.0",
+        "B": "The Monitoring and Controls Learning Track                                (Курс обучения мониторингу и контролю)",
+        "C": "Grundfos Ecademy",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-grundfos-controls",
+      "title": "The Monitoring and Controls Learning Track",
+      "titleRu": "Курс обучения мониторингу и промышленному контролю",
+      "issuer": "Grundfos Ecademy",
+      "platform": "Other",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1x92iTrS21tdYdqm4Fr60BBMLj0xnPjcG/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "87",
+      "date": "15.06.2022-20.06.2022",
+      "title": "Социально-экологические принципы Всемирного банка",
+      "issuer": "World Bank Group             (Всемирный банк)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1AxviTbtydHY-uAMq5BKSEPwFCE__-d-_/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "15.06.2022-20.06.2022",
+        "B": "Социально-экологические принципы Всемирного банка",
+        "C": "World Bank Group             (Всемирный банк)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-worldbank-esf",
+      "title": "Социально-экологические принципы Всемирного банка",
+      "titleRu": "World Bank Environmental & Social Framework",
+      "issuer": "World Bank Group (Всемирный банк)",
+      "platform": "Other",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1AxviTbtydHY-uAMq5BKSEPwFCE__-d-_/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "88",
+      "date": "44732.0",
+      "title": "BSAFE",
+      "issuer": "United Nations Department of Safety and Security (Департамент по вопросам охраны и безопасности ООН)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/10Sa6991ynSNZwMnss0l0qbGY0hpdjKZU/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44732.0",
+        "B": "BSAFE",
+        "C": "United Nations Department of Safety and Security (Департамент по вопросам охраны и безопасности ООН)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-undss-bsafe",
+      "title": "BSAFE — Безопасность персонала ООН",
+      "titleRu": "Официальный сертификат безопасности Департамента охраны ООН (UNDSS)",
+      "issuer": "United Nations Department of Safety and Security (UNDSS)",
+      "platform": "UN / WHO",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/10Sa6991ynSNZwMnss0l0qbGY0hpdjKZU/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "89",
+      "date": "44732.0",
+      "title": "Gender Equality in Preparedness and Humanitarian Action",
+      "issuer": "UNICEF - United Nations International Children's Emergency Fund",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1GU_bzH6V63qpbjLpVP567zOLeduVNr1b/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44732.0",
+        "B": "Gender Equality in Preparedness and Humanitarian Action",
+        "C": "UNICEF - United Nations International Children's Emergency Fund",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-unicef-gender",
+      "title": "Gender Equality in Preparedness and Humanitarian Action",
+      "titleRu": "Гендерное равенство в гуманитарных миссиях ЮНИСЕФ",
+      "issuer": "UNICEF (ЮНИСЕФ)",
+      "platform": "UN / WHO",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1GU_bzH6V63qpbjLpVP567zOLeduVNr1b/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "90",
+      "date": "44733.0",
+      "title": "Human Health and Climate Change                                   (Здоровье человека и изменение климата)",
+      "issuer": "UN CC:Learn ( Обучение ООН)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1SriO0XirYRwX3j6sx2NMRYCa-I8McjU0/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44733.0",
+        "B": "Human Health and Climate Change                                   (Здоровье человека и изменение климата)",
+        "C": "UN CC:Learn ( Обучение ООН)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-un-cclearn-climate",
+      "title": "Human Health and Climate Change",
+      "titleRu": "Влияние климатических изменений на здоровье человека",
+      "issuer": "UN CC:Learn (Обучение ООН)",
+      "platform": "UN / WHO",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1SriO0XirYRwX3j6sx2NMRYCa-I8McjU0/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "91",
+      "date": "44733.0",
+      "title": "Essentials of fire safety inspections (Основы пожарной безопасности)",
+      "issuer": "International Training Centre of the ILO (ITCILO)                                   (Учебный центр Международной организации)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.itcilo.org/f5ef6288-98cb-4ec4-8b68-f6d59626ecb3"
+      ],
+      "col_vals": {
+        "A": "44733.0",
+        "B": "Essentials of fire safety inspections (Основы пожарной безопасности)",
+        "C": "International Training Centre of the ILO (ITCILO)                                   (Учебный центр Международной организации) ",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-itcilo-fire-safety",
+      "title": "Essentials of fire safety inspections",
+      "titleRu": "Основы инспекций пожарной безопасности Учебного центра МОТ (ITCILO)",
+      "issuer": "International Training Centre of the ILO (ITCILO)",
+      "platform": "Other",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://credentials.itcilo.org/f5ef6288-98cb-4ec4-8b68-f6d59626ecb3#gs.48c69j"
+    }
+  },
+  {
+    "sheet": {
+      "row": "92",
+      "date": "44734.0",
+      "title": "Cyber Diplomacy                      (Кибер дипломатия)",
+      "issuer": "United Nations Office for Disarmament Affairs (Управление по вопросам разоружения ООН)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1wlW__FbLCdf-UDIh8I6aa_8k4hvt2V--/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44734.0",
+        "B": "Cyber Diplomacy                      (Кибер дипломатия)",
+        "C": "United Nations Office for Disarmament Affairs (Управление по вопросам разоружения ООН)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-unoda-cyber-diplomacy",
+      "title": "Cyber Diplomacy (Кибердипломатия)",
+      "titleRu": "Управление по вопросам разоружения ООН (UNODA)",
+      "issuer": "United Nations Office for Disarmament Affairs (UNODA)",
+      "platform": "UN / WHO",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1wlW__FbLCdf-UDIh8I6aa_8k4hvt2V--/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "94",
+      "date": "44735.0",
+      "title": "OSOCC Awareness Course",
+      "issuer": "UN OCHA                          (Управление ООН по координации гуманитарных вопросов)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1bxzrnpqRoJIfgVVKH9f-d41DkSgUq73C/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "44735.0",
+        "B": "OSOCC Awareness Course",
+        "C": "UN OCHA                          (Управление ООН по координации гуманитарных вопросов)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-un-ocha-osocc",
+      "title": "OSOCC Awareness Course",
+      "titleRu": "Управление ООН по координации гуманитарных вопросов (UN OCHA)",
+      "issuer": "UN OCHA",
+      "platform": "UN / WHO",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1bxzrnpqRoJIfgVVKH9f-d41DkSgUq73C/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "98",
+      "date": "",
+      "title": "1.Becoming a UN Volunteer           2.Your Benefits and Allowances        3.Serving as a UN Volunteer         4.Know your Obligations and Rights                                                       5.Managing your Transition  6.Final. Conditions of Service for UN Volunteers                                     7. Volunteer and sustainable development goals                    8.Cultural Awareness and Working in Multi-Cultural Environments",
+      "issuer": "United Nations Volunteers (Программа добровольцев ООН)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/12i5EQjNOLdZC1IjwMImvgYB96bc2SfHN/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "1.Becoming a UN Volunteer           2.Your Benefits and Allowances        3.Serving as a UN Volunteer         4.Know your Obligations and Rights                                                       5.Managing your Transition  6.Final. Conditions of Service for UN Volunteers                                     7. Volunteer and sustainable development goals                    8.Cultural Awareness and Working in Multi-Cultural Environments",
+        "C": "United Nations Volunteers (Программа добровольцев ООН)",
+        "D": "Электронный",
+        "E": "Сертификат                     Сертификат                       Сертификат           Сертификат                Сертификат        Сертификат      Сертификат   Сертификат "
+      }
+    },
+    "ts": {
+      "id": "global-unv-program",
+      "title": "Программа добровольцев ООН (United Nations Volunteers — 8 сертификатов)",
+      "titleRu": "Комплексная программа подготовки волонтеров ООН",
+      "issuer": "United Nations Volunteers (UNV)",
+      "platform": "UN / WHO",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/12i5EQjNOLdZC1IjwMImvgYB96bc2SfHN/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "99",
+      "date": "02.06.2022-25.06.2022",
+      "title": "Diploma in Electrical Studies (Диплом в области электротехники)",
+      "issuer": "Alison - Empower Yourself",
+      "cert_type": "Потверждение",
+      "links": [
+        "https://alison.com/certification/check/$2y$10$bjaGCk.2Rbji0caJgfSeRAnEzx26Iv67mCaVLlHWLgmsdBQ8qK"
+      ],
+      "col_vals": {
+        "A": "02.06.2022-25.06.2022",
+        "B": "Diploma in Electrical Studies (Диплом в области электротехники)",
+        "C": "Alison - Empower Yourself",
+        "D": "Потверждение",
+        "E": "Ссылка"
+      }
+    },
+    "ts": {
+      "id": "eng-alison-electrical",
+      "title": "Diploma in Electrical Studies",
+      "titleRu": "Диплом в области электротехники и силовых сетей",
+      "issuer": "Alison - Empower Yourself",
+      "platform": "Other",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://alison.com/certification/check/$2y$10$bjaGCk.2Rbji0caJgfSeRAnEzx26Iv67mCaVLlHWLgmsdBQ8qK"
+    }
+  },
+  {
+    "sheet": {
+      "row": "100",
+      "date": "",
+      "title": "Распределенная выработка электроэнергии",
+      "issuer": "Schneider Electric University",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1q0OMQZplTPgssJCBgqscERVhuzybVj6C/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Распределенная выработка электроэнергии",
+        "C": "Schneider Electric University",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-schneider-distributed",
+      "title": "Распределенная выработка электроэнергии",
+      "titleRu": "Schneider Electric: Распределенная энергетика и микросети",
+      "issuer": "Schneider Electric University",
+      "platform": "Other",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1q0OMQZplTPgssJCBgqscERVhuzybVj6C/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "104",
+      "date": "",
+      "title": "Anticipatory Governance: New ways of sense-making and navigating for uncertainty (Упреждающее управление: новые способы осмысления и навигации в условиях неопределенности)",
+      "issuer": "United Nations Educational, Scientific and Cultural Organization (UNESCO) / Организация Объединенных Наций по вопросам образования, науки и культуры (ЮНЕСКО)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://openlearning.unesco.org/certificates/e02437a7f6294b7d9fb09eb0695be874"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Anticipatory Governance: New ways of sense-making and navigating for uncertainty (Упреждающее управление: новые способы осмысления и навигации в условиях неопределенности)",
+        "C": "United Nations Educational, Scientific and Cultural Organization (UNESCO) / Организация Объединенных Наций по вопросам образования, науки и культуры (ЮНЕСКО)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-unesco-anticipatory",
+      "title": "Anticipatory Governance: New ways of sense-making and navigating for uncertainty",
+      "titleRu": "ЮНЕСКО: Упреждающее управление в условиях неопределенности",
+      "issuer": "UNESCO (ЮНЕСКО)",
+      "platform": "Other",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://openlearning.unesco.org/certificates/e02437a7f6294b7d9fb09eb0695be874"
+    }
+  },
+  {
+    "sheet": {
+      "row": "116",
+      "date": "",
+      "title": "Основы фотографии",
+      "issuer": "Новосибирский Государственный Университет (НГУ)                                 платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/learn/photo",
+        "https://www.nsu.ru/n/",
+        "https://www.coursera.org/account/accomplishments/verify/KSL6UJ9JMQPH"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Основы фотографии",
+        "C": "Новосибирский Государственный Университет (НГУ)                                 платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-nsu-photo",
+      "title": "Основы фотографии",
+      "titleRu": "Экспозиция, ракурс и художественное восприятие кадра",
+      "issuer": "Новосибирский Государственный Университет (НГУ)",
+      "platform": "Coursera",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://www.coursera.org/account/accomplishments/verify/KSL6UJ9JMQPH"
+    }
+  },
+  {
+    "sheet": {
+      "row": "121",
+      "date": "",
+      "title": "Specialization: Animals and Society                                 (Специализация: Животные и общество)",
+      "issuer": "University of Colorado Boulder (Университет штата Колорадо в Боулдере)                           платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/specialization/JGNDB9Q9HQWA"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Specialization: Animals and Society                                 (Специализация: Животные и общество)",
+        "C": "University of Colorado Boulder (Университет штата Колорадо в Боулдере)                           платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат по специализации"
+      }
+    },
+    "ts": {
+      "id": "global-colorado-animals-spec",
+      "title": "Specialization: Animals and Society",
+      "titleRu": "Специализация: Животные, общество и этические институты",
+      "issuer": "University of Colorado Boulder",
+      "platform": "Coursera",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/JGNDB9Q9HQWA"
+    }
+  },
+  {
+    "sheet": {
+      "row": "123",
+      "date": "",
+      "title": "The Bits and Bytes of Computer Networking                                 (Биты и байты компьютерных сетей)",
+      "issuer": "Google                                            (платформа Сoursera)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/R4WHTK6FGK59"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "The Bits and Bytes of Computer Networking                                 (Биты и байты компьютерных сетей)",
+        "C": "Google                                            (платформа Сoursera)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-google-networking",
+      "title": "The Bits and Bytes of Computer Networking",
+      "titleRu": "Биты и байты компьютерных сетей",
+      "issuer": "Google",
+      "platform": "Google",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/R4WHTK6FGK59"
+    }
+  },
+  {
+    "sheet": {
+      "row": "125",
+      "date": "",
+      "title": "Cameras, Exposure, and Photography                  (Камеры, экспозиция и фотография)",
+      "issuer": "Michigan State University (Университет штата Мичиган) платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/CUNZ2A45WDSQ"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Cameras, Exposure, and Photography                  (Камеры, экспозиция и фотография)",
+        "C": "Michigan State University (Университет штата Мичиган) платформа Сoursera   ",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-michigan-cameras",
+      "title": "Cameras, Exposure, and Photography",
+      "titleRu": "Оптика, экспозиция и технические параметры камер",
+      "issuer": "Michigan State University",
+      "platform": "Coursera",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://www.coursera.org/account/accomplishments/verify/CUNZ2A45WDSQ"
+    }
+  },
+  {
+    "sheet": {
+      "row": "128",
+      "date": "",
+      "title": "Exercising Leadership: Foundational Principles (Лидерство: основополагающие принципы)",
+      "issuer": "Harvard University                      (Гарвардский университет)                      Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/abdb4cff5eb047428d758d5b50f9366a"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Exercising Leadership: Foundational Principles (Лидерство: основополагающие принципы)",
+        "C": "Harvard University                      (Гарвардский университет)                      Платформа edX ",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-harvard-leadership",
+      "title": "Exercising Leadership: Foundational Principles",
+      "titleRu": "Лидерство: Основополагающие принципы преодоления кризисов",
+      "issuer": "Harvard University",
+      "platform": "Harvard",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/abdb4cff5eb047428d758d5b50f9366a"
+    }
+  },
+  {
+    "sheet": {
+      "row": "130",
+      "date": "",
+      "title": "Professional Certificate: Leading in a Remote Environment (Профессиональный сертификат: лидерство в удаленной среде)",
+      "issuer": "Harvard University                      (Гарвардский университет)                      Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/b29ff999c4e34861b54c24b7e1e3f3a3/"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Professional Certificate: Leading in a Remote Environment (Профессиональный сертификат: лидерство в удаленной среде)",
+        "C": "Harvard University                      (Гарвардский университет)                      Платформа edX ",
+        "D": "Электронный",
+        "E": "Профессиональный  сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-harvard-remote-spec",
+      "title": "Professional Certificate: Leading in a Remote Environment",
+      "titleRu": "Профессиональный сертификат Гарварда: Лидерство в удаленной среде",
+      "issuer": "Harvard University (Гарвардский университет)",
+      "platform": "Harvard",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/b29ff999c4e34861b54c24b7e1e3f3a3/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "133",
+      "date": "",
+      "title": "Electric Utilities Fundamentals and Future                                 (Основы и будущее электроэнергетики)",
+      "issuer": "University of Colorado                     (Система университетов штата Колорадо)                      Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/JA62T9WPYAEU"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Electric Utilities Fundamentals and Future                                 (Основы и будущее электроэнергетики)",
+        "C": "University of Colorado                     (Система университетов штата Колорадо)                      Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-colorado-utilities",
+      "title": "Electric Utilities Fundamentals and Future",
+      "titleRu": "Основы и будущее коммунальной электроэнергетики",
+      "issuer": "University of Colorado",
+      "platform": "Coursera",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/JA62T9WPYAEU"
+    }
+  },
+  {
+    "sheet": {
+      "row": "134",
+      "date": "",
+      "title": "Professional Certificate: Leadership Essentials (Профессиональная сертификация по теме \"Основы лидерства\")\n 1) Critical Thinking & Problem Solving                                        (Критическое мышление и решение проблем)                                2) Business Communication (Деловое общение)                         3) Teamwork & Collaboration (Командная работа и сотрудничество)",
+      "issuer": "Rochester Institute of Technology (Технологический институт Рочестер)                                 Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/37b74b5973f34b29846554e451e956ed/"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Professional Certificate: Leadership Essentials (Профессиональная сертификация по теме \"Основы лидерства\")\n 1) Critical Thinking & Problem Solving                                        (Критическое мышление и решение проблем)                                2) Business Communication (Деловое общение)                         3) Teamwork & Collaboration (Командная работа и сотрудничество)",
+        "C": "Rochester Institute of Technology (Технологический институт Рочестер)                                 Платформа edX",
+        "D": "Электронный",
+        "E": "Проффессиона-льный                  сертификат 1.Сертификат         2.Сертификат  3.Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-rit-leadership-spec",
+      "title": "Professional Certificate: Leadership Essentials",
+      "titleRu": "Профессиональная сертификация RIT: Основы лидерства",
+      "issuer": "Rochester Institute of Technology (RIT)",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/37b74b5973f34b29846554e451e956ed/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "139",
+      "date": "",
+      "title": "Specialization: Energy Production, Distribution & Safety                    (Специализация: производство, распределение и безопасность энергии)              1) Electric Power Systems (Электроэнергетические системы)                                  2) Natural Gas                           (Природный газ)                                                     3) Safety in the Utility Industry (Безопасность в коммунальном хозяйстве)                 4) Energy: The Enterprise (Энергия: Предприятие)",
+      "issuer": "University at Buffalo, The State University of New York                            (Университет штата Нью-Йорк в Буффало)                                         платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/specialization/2DDQLSGG379M"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Specialization: Energy Production, Distribution & Safety                    (Специализация: производство, распределение и безопасность энергии)              1) Electric Power Systems (Электроэнергетические системы)                                  2) Natural Gas                           (Природный газ)                                                     3) Safety in the Utility Industry (Безопасность в коммунальном хозяйстве)                 4) Energy: The Enterprise (Энергия: Предприятие)",
+        "C": "University at Buffalo, The State University of New York                            (Университет штата Нью-Йорк в Буффало)                                         платформа Сoursera ",
+        "D": "Электронный",
+        "E": "Сертифкат по специализации 1.Сертификат 2.Сертификат 3.Сертификат  4.Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-buffalo-energy-spec",
+      "title": "Specialization: Energy Production, Distribution & Safety",
+      "titleRu": "Специализация: Производство, распределение и безопасность энергии",
+      "issuer": "University at Buffalo, The State University of New York",
+      "platform": "Coursera",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/2DDQLSGG379M"
+    }
+  },
+  {
+    "sheet": {
+      "row": "142",
+      "date": "",
+      "title": "Многосайтовость",
+      "issuer": "1С-Битрикс: Управление сайтом",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1vbcIVYo6s4jjPUKzyusqyA3BYAjSiW8g/view?usp=sharing"
+      ],
+      "col_vals": {
+        "A": "",
+        "B": "Многосайтовость",
+        "C": "1С-Битрикс: Управление сайтом",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-bitrix-multisite",
+      "title": "1С-Битрикс: Многосайтовость",
+      "titleRu": "Развертывание и управление несколькими сайтами на одной CMS",
+      "issuer": "ООО «1С-Битрикс»",
+      "platform": "Other",
+      "category": "programming-web",
+      "year": "2022",
+      "url": "https://drive.google.com/file/d/1vbcIVYo6s4jjPUKzyusqyA3BYAjSiW8g/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "143",
+      "date": "",
+      "title": "Basic Training Course on IAEA Safeguards                            (Базовый учебный курс по гарантиям МАГАТЭ)",
+      "issuer": "IAEA - International Atomic Energy Agency (МАГАТЭ-Международное агентство по атомной энергии)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1dkxkFeta5vOuQUNFgmBZ2V40jp4IEj1t/view?usp=sharing"
+      ],
+      "col_vals": {
+        "B": "Basic Training Course on IAEA Safeguards                            (Базовый учебный курс по гарантиям МАГАТЭ)",
+        "C": "IAEA - International Atomic Energy Agency (МАГАТЭ-Международное агентство по атомной энергии)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-iaea-safeguards",
+      "title": "Basic Training Course on IAEA Safeguards",
+      "titleRu": "Базовый учебный курс по гарантиям МАГАТЭ",
+      "issuer": "IAEA - International Atomic Energy Agency (МАГАТЭ)",
+      "platform": "Other",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://drive.google.com/file/d/1dkxkFeta5vOuQUNFgmBZ2V40jp4IEj1t/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "151",
+      "date": "",
+      "title": "Introduction to Hardware and Operating Systems                  (Введение в аппаратное обеспечение и операционные системы)",
+      "issuer": "IBM                                         платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/RF4BHQHPYZMU"
+      ],
+      "col_vals": {
+        "B": "Introduction to Hardware and Operating Systems                  (Введение в аппаратное обеспечение и операционные системы)",
+        "C": "IBM                                         платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-ibm-hardware-os",
+      "title": "Introduction to Hardware and Operating Systems",
+      "titleRu": "Введение в аппаратное обеспечение и операционные системы",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/RF4BHQHPYZMU"
+    }
+  },
+  {
+    "sheet": {
+      "row": "152",
+      "date": "",
+      "title": "Introduction to Software, Programming, and Databases (Введение в программное обеспечение, программирование и базы данных)",
+      "issuer": "IBM                                         платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/NFTM6R6Q7372"
+      ],
+      "col_vals": {
+        "B": "Introduction to Software, Programming, and Databases (Введение в программное обеспечение, программирование и базы данных)",
+        "C": "IBM                                         платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-ibm-software-db",
+      "title": "Introduction to Software, Programming, and Databases",
+      "titleRu": "Введение в программное обеспечение, программирование и БД",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/NFTM6R6Q7372"
+    }
+  },
+  {
+    "sheet": {
+      "row": "154",
+      "date": "",
+      "title": "Response Considerations During an Outbreak or Pandemic                         (Рекомендации по реагированию во время вспышки или пандемии)",
+      "issuer": "FEMA                                          (Федеральное агентство по управлению в чрезвычайных ситуациях США)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://drive.google.com/file/d/1lm3QUmRHT9m2Ju7H2kQtq5q2W694mXpI/view?usp=sharing"
+      ],
+      "col_vals": {
+        "B": "Response Considerations During an Outbreak or Pandemic                         (Рекомендации по реагированию во время вспышки или пандемии)",
+        "C": "FEMA                                          (Федеральное агентство по управлению в чрезвычайных ситуациях США)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-fema-outbreak",
+      "title": "Response Considerations During an Outbreak or Pandemic",
+      "titleRu": "Рекомендации по реагированию на вспышки и пандемии (FEMA США)",
+      "issuer": "FEMA / The Center for Domestic Preparedness (США)",
+      "platform": "Other",
+      "category": "global-health-safety",
+      "year": "2022",
+      "url": "https://drive.google.com/file/d/1TTOKHwwOqz9pgnJvZ0dk1A6S8moqnOdc/view?usp=sharing"
+    }
+  },
+  {
+    "sheet": {
+      "row": "156",
+      "date": "",
+      "title": "Introduction to Cybersecurity Essentials                                (Введение в основы кибербезопасности)",
+      "issuer": "IBM                                         платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/PPBPHGTB6ETL"
+      ],
+      "col_vals": {
+        "B": "Introduction to Cybersecurity Essentials                                (Введение в основы кибербезопасности)",
+        "C": "IBM                                         платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат    Значок"
+      }
+    },
+    "ts": {
+      "id": "tech-ibm-cybersecurity",
+      "title": "Introduction to Cybersecurity Essentials",
+      "titleRu": "Основы кибербезопасности (Credly Badge)",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/PPBPHGTB6ETL"
+    }
+  },
+  {
+    "sheet": {
+      "row": "160",
+      "date": "",
+      "title": "Introduction to Cloud Computing (Введение в облачные вычисления)",
+      "issuer": "IBM                                         платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/E7URHZ7MAZKY"
+      ],
+      "col_vals": {
+        "B": "Introduction to Cloud Computing (Введение в облачные вычисления)",
+        "C": "IBM                                         платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат    Значок"
+      }
+    },
+    "ts": {
+      "id": "tech-ibm-cloud",
+      "title": "Introduction to Cloud Computing",
+      "titleRu": "Введение в облачные вычисления (IBM Cloud Badge)",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/E7URHZ7MAZKY"
+    }
+  },
+  {
+    "sheet": {
+      "row": "162",
+      "date": "",
+      "title": "IBM Technical Support (Техническая поддержка IBM)",
+      "issuer": "IBM                                         платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/professional-cert/JZKBUASAEK3H"
+      ],
+      "col_vals": {
+        "B": "IBM Technical Support (Техническая поддержка IBM)",
+        "C": "IBM                                         платформа Сoursera",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат                      Значок"
+      }
+    },
+    "ts": {
+      "id": "tech-ibm-tech-support",
+      "title": "IBM Technical Support Professional Certificate",
+      "titleRu": "Профессиональный сертификат: Техническая поддержка IBM",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/professional-cert/JZKBUASAEK3H"
+    }
+  },
+  {
+    "sheet": {
+      "row": "163",
+      "date": "",
+      "title": "Leading From the Emerging Future",
+      "issuer": "Massachusetts Institute of Technology                   (Массачусетский технологический институт) Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/31ae8c9d965c4a0b9dce8db43c2eafff"
+      ],
+      "col_vals": {
+        "B": "Leading From the Emerging Future",
+        "C": "Massachusetts Institute of Technology                   (Массачусетский технологический институт) Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-mit-emerging-future",
+      "title": "Leading From the Emerging Future",
+      "titleRu": "MIT: Лидерство из зарождающегося будущего (Theory U)",
+      "issuer": "Massachusetts Institute of Technology (MIT)",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/31ae8c9d965c4a0b9dce8db43c2eafff"
+    }
+  },
+  {
+    "sheet": {
+      "row": "164",
+      "date": "",
+      "title": "Introduction to Human Resources (HR) Leadership and HR Management Strategies (Введение в управление человеческими ресурсами (HR) и стратегии управления персоналом)",
+      "issuer": "Stellenbosch University (Университет Стелленбос) Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/31ae8c9d965c4a0b9dce8db43c2eafff"
+      ],
+      "col_vals": {
+        "B": " Introduction to Human Resources (HR) Leadership and HR Management Strategies (Введение в управление человеческими ресурсами (HR) и стратегии управления персоналом)",
+        "C": "Stellenbosch University (Университет Стелленбос) Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-mit-emerging-future",
+      "title": "Leading From the Emerging Future",
+      "titleRu": "MIT: Лидерство из зарождающегося будущего (Theory U)",
+      "issuer": "Massachusetts Institute of Technology (MIT)",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/31ae8c9d965c4a0b9dce8db43c2eafff"
+    }
+  },
+  {
+    "sheet": {
+      "row": "167",
+      "date": "",
+      "title": "Strategic Human Resources Management                           (Стратегическое управление человеческими ресурсами)",
+      "issuer": "Stellenbosch University (Университет Стелленбос) Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/b9c639dc5aba44c5a0e942687ca6eacd/"
+      ],
+      "col_vals": {
+        "B": "Strategic Human Resources Management                           (Стратегическое управление человеческими ресурсами)",
+        "C": "Stellenbosch University (Университет Стелленбос) Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-stellenbosch-hr-spec",
+      "title": "Strategic Human Resources Management Professional Certificate",
+      "titleRu": "Профессиональный сертификат: Стратегический HR-менеджмент",
+      "issuer": "Stellenbosch University",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/b9c639dc5aba44c5a0e942687ca6eacd/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "168",
+      "date": "",
+      "title": "Leadership in 21st Century Organizations               (Лидерство в организациях 21 века )",
+      "issuer": "Copenhagen Business School (Копенгагенская школа бизнеса)                                        платформа Сoursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/ED5HTJRS66C5"
+      ],
+      "col_vals": {
+        "B": "Leadership in 21st Century Organizations               (Лидерство в организациях 21 века )",
+        "C": "Copenhagen Business School (Копенгагенская школа бизнеса)                                        платформа Сoursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-cbs-copenhagen",
+      "title": "Leadership in 21st Century Organizations",
+      "titleRu": "Лидерство в организациях 21 века",
+      "issuer": "Copenhagen Business School",
+      "platform": "Coursera",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/ED5HTJRS66C5"
+    }
+  },
+  {
+    "sheet": {
+      "row": "174",
+      "date": "",
+      "title": "Professional certificate: Electric Cars                                     (Профессиональный сертификат: Электромобили)",
+      "issuer": "Delft University of Technology (Делфтский технический университет)                Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/64f8bc65b91e412796f8341cfa862c4e/"
+      ],
+      "col_vals": {
+        "B": "Professional certificate: Electric Cars                                     (Профессиональный сертификат: Электромобили)",
+        "C": "Delft University of Technology (Делфтский технический университет)                Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-delft-ev-spec",
+      "title": "Professional Certificate: Electric Cars",
+      "titleRu": "Профессиональный сертификат: Электромобили и зарядная инфраструктура",
+      "issuer": "Delft University of Technology (Делфтский технический университет)",
+      "platform": "edX",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/64f8bc65b91e412796f8341cfa862c4e/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "175",
+      "date": "",
+      "title": "Mobile Photography: Image Management                      (Мобильная фотография: управление изображениями)",
+      "issuer": "LinkedIn Learning",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.linkedin.com/learning/certificates/1d77433df65e9f765481bfc5c12e80abc8d36e809067ab7bf675975356456d72?u=90799586"
+      ],
+      "col_vals": {
+        "B": "Mobile Photography: Image Management                      (Мобильная фотография: управление изображениями)",
+        "C": "LinkedIn Learning",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-linkedin-mobile-photo",
+      "title": "Mobile Photography: Image Management",
+      "titleRu": "Мобильная съемка и каталогизация медиа-архивов",
+      "issuer": "LinkedIn Learning",
+      "platform": "Other",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://www.linkedin.com/learning/certificates/1d77433df65e9f765481bfc5c12e80abc8d36e809067ab7bf675975356456d72"
+    }
+  },
+  {
+    "sheet": {
+      "row": "176",
+      "date": "",
+      "title": "AppliedStory: Applied Storytelling                       (Прикладное повествование)",
+      "issuer": "Davidson College                  (Колледж Дэвидсон)  Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/04561f8555f44dfd89cab2453d27d564"
+      ],
+      "col_vals": {
+        "B": "AppliedStory: Applied Storytelling                       (Прикладное повествование)",
+        "C": "Davidson College                  (Колледж Дэвидсон)  Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-davidson-storytelling",
+      "title": "Applied Storytelling (Прикладной сторителлинг)",
+      "titleRu": "Драматургия, нарративные структуры и вовлечение аудитории",
+      "issuer": "Davidson College (Колледж Дэвидсон)",
+      "platform": "edX",
+      "category": "marketing-design",
+      "year": "2022",
+      "url": "https://courses.edx.org/certificates/04561f8555f44dfd89cab2453d27d564"
+    }
+  },
+  {
+    "sheet": {
+      "row": "180",
+      "date": "",
+      "title": "Tourism in Transition: Exploring a Sustainable Future                  (Туризм в переходный период: в поисках устойчивого будущего)",
+      "issuer": "Wageningen University & Research                              (Вагенингенский университет) Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/616eef1d5b0143b585757e18ea5eb2da/"
+      ],
+      "col_vals": {
+        "B": "Tourism in Transition: Exploring a Sustainable Future                  (Туризм в переходный период: в поисках устойчивого будущего)",
+        "C": "Wageningen University & Research                              (Вагенингенский университет) Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-wageningen-tourism-spec",
+      "title": "Professional Certificate: Tourism in Transition",
+      "titleRu": "Профессиональный сертификат: Устойчивое развитие туризма и климат",
+      "issuer": "Wageningen University & Research",
+      "platform": "edX",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/616eef1d5b0143b585757e18ea5eb2da/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "185",
+      "date": "",
+      "title": "U.S. Government (Правительство США)",
+      "issuer": "Harvard University                 (Гарвардский университет)                   Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/d0f5caadf504449092ff57a72eed6a59/"
+      ],
+      "col_vals": {
+        "B": "U.S. Government (Правительство США)",
+        "C": "Harvard University                 (Гарвардский университет)                   Платформа edX",
+        "D": "Электронный",
+        "E": " XSeries Program Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-harvard-us-gov-series",
+      "title": "XSeries Program: U.S. Government & Public Policy",
+      "titleRu": "Программа сертификации: Конституционные основы и государственные институты",
+      "issuer": "Harvard University",
+      "platform": "Harvard",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/d0f5caadf504449092ff57a72eed6a59/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "187",
+      "date": "",
+      "title": "Дроны: Автономные беспилотные воздушные системы                                    (Drones: Autonomous unmanned aerial systems)",
+      "issuer": "Лекториум",
+      "cert_type": "Электронный",
+      "links": [
+        "https://mooc.lektorium.tv/certificates/bc8aad2aa07b4200a502d023de34396e"
+      ],
+      "col_vals": {
+        "B": "Дроны: Автономные беспилотные воздушные системы                                    (Drones: Autonomous unmanned aerial systems)",
+        "C": "Лекториум",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-lektorium-drones",
+      "title": "Дроны: Автономные беспилотные воздушные системы",
+      "titleRu": "Автономная навигация, телеметрия и управление БПЛА",
+      "issuer": "Лекториум",
+      "platform": "Other",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://mooc.lektorium.tv/certificates/bc8aad2aa07b4200a502d023de34396e"
+    }
+  },
+  {
+    "sheet": {
+      "row": "195",
+      "date": "",
+      "title": "Race, Gender and Workplace Equity                                             (Раса, гендер и равенство на рабочем месте)",
+      "issuer": "Catalyst                        Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/616eef1d5b0143b585757e18ea5eb2da/"
+      ],
+      "col_vals": {
+        "B": "Race, Gender and Workplace Equity                                             (Раса, гендер и равенство на рабочем месте)",
+        "C": "Catalyst                        Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-wageningen-tourism-spec",
+      "title": "Professional Certificate: Tourism in Transition",
+      "titleRu": "Профессиональный сертификат: Устойчивое развитие туризма и климат",
+      "issuer": "Wageningen University & Research",
+      "platform": "edX",
+      "category": "global-health-safety",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/616eef1d5b0143b585757e18ea5eb2da/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "204",
+      "date": "",
+      "title": "Lean Six Sigma Black Belt Training & Certification Program (Программа обучения и сертификации Lean Six Sigma Black Belt)",
+      "issuer": "Juran                                         Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/bcd6b9b3eee44732936417fb7bc8230a/"
+      ],
+      "col_vals": {
+        "B": "Lean Six Sigma Black Belt Training & Certification Program (Программа обучения и сертификации Lean Six Sigma Black Belt)",
+        "C": "Juran                                         Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-juran-six-sigma-spec",
+      "title": "Lean Six Sigma Black Belt Training & Certification Program",
+      "titleRu": "Программа сертификации Lean Six Sigma Black Belt",
+      "issuer": "Juran Institute",
+      "platform": "edX",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/bcd6b9b3eee44732936417fb7bc8230a/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "205",
+      "date": "",
+      "title": "Lean Production                              (Бережливое производство)",
+      "issuer": "Technical University of Munic (Мюнхенский технический университет)                                    Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/99ef3adf9b5f49738c900001ff0c33ec"
+      ],
+      "col_vals": {
+        "B": " Lean Production                              (Бережливое производство)",
+        "C": "Technical University of Munic (Мюнхенский технический университет)                                    Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-tum-lean-production",
+      "title": "Lean Production",
+      "titleRu": "Бережливое производство и оптимизация технологических цепочек",
+      "issuer": "Technical University of Munich (Мюнхенский технический университет)",
+      "platform": "edX",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/99ef3adf9b5f49738c900001ff0c33ec"
+    }
+  },
+  {
+    "sheet": {
+      "row": "208",
+      "date": "",
+      "title": "Business Excellence in a knowledge-driven Industry 4.0 world                             (Совершенствование бизнеса в мире Индустрии 4.0, основанной на знаниях)",
+      "issuer": "The Hong Kong Polytechnic University (PolyU)                                (Гонконгский политехнический университет)                                   Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/d7fd8f6a35554de788ffb1217afb566a/"
+      ],
+      "col_vals": {
+        "B": "Business Excellence in a knowledge-driven Industry 4.0 world                             (Совершенствование бизнеса в мире Индустрии 4.0, основанной на знаниях)",
+        "C": "The Hong Kong Polytechnic University (PolyU)                                (Гонконгский политехнический университет)                                   Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-polyu-industry4",
+      "title": "Business Excellence in a knowledge-driven Industry 4.0 world",
+      "titleRu": "Профессиональный сертификат: Совершенствование бизнеса в эпоху Индустрии 4.0",
+      "issuer": "The Hong Kong Polytechnic University (PolyU)",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/d7fd8f6a35554de788ffb1217afb566a/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "209",
+      "date": "",
+      "title": "Electricity Distribution (Распределение электроэнергии)",
+      "issuer": "The National University of Singapore                                              (Национальный университет Сингапура)                   Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/a5a5795c1d69429c837870ee32f196cc"
+      ],
+      "col_vals": {
+        "B": "Electricity Distribution (Распределение электроэнергии)",
+        "C": "The National University of Singapore                                              (Национальный университет Сингапура)                   Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-nus-electricity-dist",
+      "title": "Electricity Distribution & Switching Circuits",
+      "titleRu": "Распределение электроэнергии и коммутационные цепи",
+      "issuer": "The National University of Singapore (NUS)",
+      "platform": "edX",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/a5a5795c1d69429c837870ee32f196cc"
+    }
+  },
+  {
+    "sheet": {
+      "row": "211",
+      "date": "",
+      "title": "Foundations of Microgrids (Основы микросетей)",
+      "issuer": "University of Alaska Fairbanks (Университет Аляски в Фэрбенксе)                                    Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/b37d5e99122f47d29967ffa16d8d95ab"
+      ],
+      "col_vals": {
+        "B": "Foundations of Microgrids (Основы микросетей)",
+        "C": "University of Alaska Fairbanks (Университет Аляски в Фэрбенксе)                                    Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-alaska-microgrids",
+      "title": "Foundations of Microgrids",
+      "titleRu": "Основы автономных и изолированных микросетей",
+      "issuer": "University of Alaska Fairbanks",
+      "platform": "edX",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/b37d5e99122f47d29967ffa16d8d95ab"
+    }
+  },
+  {
+    "sheet": {
+      "row": "215",
+      "date": "",
+      "title": "CS50 Technology",
+      "issuer": "Harvard University                 (Гарвардский университет)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://certificates.cs50.io/8dfb8570-aa39-48e8-936a-68a64b8babad.pdf?size=letter"
+      ],
+      "col_vals": {
+        "B": "CS50 Technology",
+        "C": "Harvard University                 (Гарвардский университет)           ",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-harvard-cs50",
+      "title": "CS50 Technology",
+      "titleRu": "CS50: Основы компьютерных технологий и программирования",
+      "issuer": "Harvard University (Гарвардский университет)",
+      "platform": "Harvard",
+      "category": "programming-web",
+      "year": "2023",
+      "url": "https://certificates.cs50.io/8dfb8570-aa39-48e8-936a-68a64b8babad.pdf?size=letter"
+    }
+  },
+  {
+    "sheet": {
+      "row": "218",
+      "date": "",
+      "title": "E-Leadership: liderazgo en la Era Virtual                                  (E-Leadership: Лидерство в виртуальную эпоху)",
+      "issuer": "Anahuac University Network (Сеть университета Анауак) Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/6ff342f3c0a340ef9d6dfbea40e6f0b0/"
+      ],
+      "col_vals": {
+        "B": "E-Leadership: liderazgo en la Era Virtual                                  (E-Leadership: Лидерство в виртуальную эпоху)",
+        "C": "Anahuac University Network (Сеть университета Анауак) Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-anahuac-eleadership",
+      "title": "E-Leadership: liderazgo en la Era Virtual",
+      "titleRu": "Профессиональный сертификат: Электронное лидерство в виртуальную эпоху",
+      "issuer": "Anahuac University Network",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/6ff342f3c0a340ef9d6dfbea40e6f0b0/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "220",
+      "date": "",
+      "title": "Marketing digital y sus análisis basado en datos                (Цифровой маркетинг и его аналитика на основе данных)",
+      "issuer": "Tecnológico de Monterrey (Технический университет Монтеррея)                  Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/afde1c947c1742f48680f889688f5b77"
+      ],
+      "col_vals": {
+        "B": "Marketing digital y sus análisis basado en datos                (Цифровой маркетинг и его аналитика на основе данных)",
+        "C": "Tecnológico de Monterrey (Технический университет Монтеррея)                  Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-monterrey-marketing-spec",
+      "title": "Marketing digital y sus análisis basado en datos",
+      "titleRu": "Профессиональный сертификат: Цифровой маркетинг и аналитика данных",
+      "issuer": "Tecnológico de Monterrey",
+      "platform": "edX",
+      "category": "marketing-design",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/cbeaa185bbf64a14af9d4667d9342a1a/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "221",
+      "date": "",
+      "title": "Marketing digital y customer engagement                             (Цифравой маркетинг и привлечение клиентов)",
+      "issuer": "Tecnológico de Monterrey (Технический университет Монтеррея)                  Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/cbeaa185bbf64a14af9d4667d9342a1a/"
+      ],
+      "col_vals": {
+        "B": "Marketing digital y customer engagement                             (Цифравой маркетинг и привлечение клиентов)",
+        "C": "Tecnológico de Monterrey (Технический университет Монтеррея)                  Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-monterrey-marketing-spec",
+      "title": "Marketing digital y sus análisis basado en datos",
+      "titleRu": "Профессиональный сертификат: Цифровой маркетинг и аналитика данных",
+      "issuer": "Tecnológico de Monterrey",
+      "platform": "edX",
+      "category": "marketing-design",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/cbeaa185bbf64a14af9d4667d9342a1a/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "225",
+      "date": "",
+      "title": "Clean Power                                       (Чистая энергия)",
+      "issuer": "Imperial College London (Имперский колледж Лондона) Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/19bb977705b34e36ae3a9a889ebdf454/"
+      ],
+      "col_vals": {
+        "B": "Clean Power                                       (Чистая энергия)",
+        "C": "Imperial College London (Имперский колледж Лондона) Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "eng-imperial-clean-power",
+      "title": "Professional Certificate: Clean Power",
+      "titleRu": "Профессиональный сертификат: Возобновляемая и чистая энергия",
+      "issuer": "Imperial College London (Имперский колледж Лондона)",
+      "platform": "edX",
+      "category": "engineering-energy",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/19bb977705b34e36ae3a9a889ebdf454/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "228",
+      "date": "",
+      "title": "Retail and Omnichannel Management                  (Розничная торговля и многоканальное управление)",
+      "issuer": "Dartmouth College                     (Дартмут Колледж)                      Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://credentials.edx.org/credentials/dde667d0ecbd4f1584191ce17cd40cc8/"
+      ],
+      "col_vals": {
+        "B": "Retail and Omnichannel Management                  (Розничная торговля и многоканальное управление)",
+        "C": "Dartmouth College                     (Дартмут Колледж)                      Платформа edX",
+        "D": "Электронный",
+        "E": "Профессиональный сертификат"
+      }
+    },
+    "ts": {
+      "id": "mkt-dartmouth-retail-spec",
+      "title": "Retail and Omnichannel Management Professional Certificate",
+      "titleRu": "Профессиональный сертификат: Розничная торговля и омниканальное управление",
+      "issuer": "Dartmouth College (Дартмут Колледж)",
+      "platform": "edX",
+      "category": "marketing-design",
+      "year": "2023",
+      "url": "https://credentials.edx.org/credentials/dde667d0ecbd4f1584191ce17cd40cc8/"
+    }
+  },
+  {
+    "sheet": {
+      "row": "230",
+      "date": "",
+      "title": "Introduction to Risk Management                  (Введение в управление рисками)",
+      "issuer": "New York Institute of Finance (Нью-Йоркский финансовый институт)                       Платформа edX",
+      "cert_type": "Электронный",
+      "links": [
+        "https://courses.edx.org/certificates/acda6754a74c49b69108ad2b4888cb5c"
+      ],
+      "col_vals": {
+        "B": "Introduction to Risk Management                  (Введение в управление рисками)",
+        "C": "New York Institute of Finance (Нью-Йоркский финансовый институт)                       Платформа edX",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-nyif-risk-management",
+      "title": "Risk Management Professional Series",
+      "titleRu": "Управление рисками, стресс-тестирование и регулирование",
+      "issuer": "New York Institute of Finance (Нью-Йоркский финансовый институт)",
+      "platform": "edX",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://courses.edx.org/certificates/acda6754a74c49b69108ad2b4888cb5c"
+    }
+  },
+  {
+    "sheet": {
+      "row": "237",
+      "date": "",
+      "title": "Principles of Management                              (Принципы управления)",
+      "issuer": "Johns Hopkins University (Университет Джона Хопкинса) Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/BUYF85Y8QQ2X"
+      ],
+      "col_vals": {
+        "B": "Principles of Management                              (Принципы управления)",
+        "C": "Johns Hopkins University (Университет Джона Хопкинса) Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgmt-jhu-principles",
+      "title": "Principles of Management",
+      "titleRu": "Фундаментальные принципы управления",
+      "issuer": "Johns Hopkins University",
+      "platform": "Coursera",
+      "category": "management-leadership",
+      "year": "2023",
+      "url": "https://www.coursera.org/account/accomplishments/verify/BUYF85Y8QQ2X"
+    }
+  },
+  {
+    "sheet": {
+      "row": "238",
+      "date": "",
+      "title": "Prompt Engineering\n(Специализация)                           1. Prompt Engineering for ChatGPT                 (Оперативное проектирование для ChatGPT)                                               2.   ChatGPT Advanced Data Analysis                            (ChatGPT Расширенный анализ данных)                             3. Trustworthy Generative AI (Надежный генеративный ИИ)",
+      "issuer": "Vanderbilt University (Университет Вандербильта)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/specialization/75BAPX4WBTMY"
+      ],
+      "col_vals": {
+        "B": "Prompt Engineering\n(Специализация)                           1. Prompt Engineering for ChatGPT                 (Оперативное проектирование для ChatGPT)                                               2.   ChatGPT Advanced Data Analysis                            (ChatGPT Расширенный анализ данных)                             3. Trustworthy Generative AI (Надежный генеративный ИИ)",
+        "C": "Vanderbilt University (Университет Вандербильта)",
+        "D": "Электронный",
+        "E": "Сертификат по специализации                1. Сертификат                            2. Сертификат             3. Сертификат"
+      }
+    },
+    "ts": {
+      "id": "mgkso",
+      "title": "Минский государственный колледж сферы обслуживания (МГКСО)",
+      "titleRu": "Специализация: Промпт-инжиниринг для генеративных моделей",
+      "issuer": "Vanderbilt University (Университет Вандербильта)",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/75BAPX4WBTMY"
+    }
+  },
+  {
+    "sheet": {
+      "row": "239",
+      "date": "",
+      "title": "ChatGPT for Everyone (ЧатGPT для всех)",
+      "issuer": "Learn Prompting",
+      "cert_type": "Электронный",
+      "links": [
+        "https://learnprompting.thinkific.com/certificates/qnpk5lx7ga"
+      ],
+      "col_vals": {
+        "B": "ChatGPT for Everyone (ЧатGPT для всех)",
+        "C": "Learn Prompting",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-learnprompting",
+      "title": "ChatGPT for Everyone",
+      "titleRu": "Практический ChatGPT для всех",
+      "issuer": "Learn Prompting",
+      "platform": "Other",
+      "category": "ai-ml",
+      "year": "2023",
+      "url": "https://learnprompting.thinkific.com/certificates/qnpk5lx7ga"
+    }
+  },
+  {
+    "sheet": {
+      "row": "241",
+      "date": "",
+      "title": "Living with Dementia: Impact on Individuals,\n Caregivers, Communities and Societies                                         (Жизнь с деменцией: влияние на отдельных людей,\nУхаживающие, сообщества и общества)",
+      "issuer": "Johns Hopkins University (Университет Джона Хопкинса) Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/FKKF532X7JH5"
+      ],
+      "col_vals": {
+        "B": "Living with Dementia: Impact on Individuals,\n Caregivers, Communities and Societies                                         (Жизнь с деменцией: влияние на отдельных людей,\nУхаживающие, сообщества и общества)",
+        "C": "Johns Hopkins University (Университет Джона Хопкинса) Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "global-jhu-dementia",
+      "title": "Living with Dementia: Impact on Individuals, Caregivers, Communities",
+      "titleRu": "Жизнь с деменцией: нейрокогнитивные нарушения и уход",
+      "issuer": "Johns Hopkins University",
+      "platform": "Coursera",
+      "category": "global-health-safety",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/FKKF532X7JH5"
+    }
+  },
+  {
+    "sheet": {
+      "row": "242",
+      "date": "",
+      "title": "1.Generative AI: Prompt Engineering Basics (Генеративный ИИ: основы проектирования подсказок)     2.Generative AI: Introduction and Applications\n(Генеративный искусственный интеллект: введение и применение)                                     3. Generative AI: Foundation Models and Platforms (Генеративный ИИ: базовые модели и платформы)             4. Generative AI: Impact, Considerations, and Ethical Issues                 (Генеративный ИИ: влияние, соображения и этические проблемы) 5.Generative AI: Business Transformation and Career Growth (Генеративный ИИ: трансформация бизнеса и карьерный рост)  \n6. Specialization: Generative AI Fundamentals (Специализация: Основы генеративного искусственного интеллекта)",
+      "issuer": "IBM                                                Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/MRUCLTRNEE9Z"
+      ],
+      "col_vals": {
+        "B": "1.Generative AI: Prompt Engineering Basics (Генеративный ИИ: основы проектирования подсказок)     2.Generative AI: Introduction and Applications\n(Генеративный искусственный интеллект: введение и применение)                                     3. Generative AI: Foundation Models and Platforms (Генеративный ИИ: базовые модели и платформы)             4. Generative AI: Impact, Considerations, and Ethical Issues                 (Генеративный ИИ: влияние, соображения и этические проблемы) 5.Generative AI: Business Transformation and Career Growth (Генеративный ИИ: трансформация бизнеса и карьерный рост)  \n6. Specialization: Generative AI Fundamentals (Специализация: Основы генеративного искусственного интеллекта)",
+        "C": "IBM                                                Платформа Coursera",
+        "D": "Электронный",
+        "E": "1.Сертификат    2.Сертификат           3. Сертификат  \nBadge:Generative AI Essentials           Badge:Generative AI: Impact, Considerations, and Ethical Issues               4. Сертификат           5. Сертификат \n6.Сертификат специализации"
+      }
+    },
+    "ts": {
+      "id": "ai-ibm-prompt-basics",
+      "title": "Generative AI: Prompt Engineering Basics",
+      "titleRu": "Основы проектирования подсказок для генеративного ИИ",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/MRUCLTRNEE9Z"
+    }
+  },
+  {
+    "sheet": {
+      "row": "243",
+      "date": "",
+      "title": "Google AI Essentials                  (Основы искусственного интеллекта Google)",
+      "issuer": "Google                             Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/ED35K9D93X2L"
+      ],
+      "col_vals": {
+        "B": "Google AI Essentials                  (Основы искусственного интеллекта Google)",
+        "C": "Google                             Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-google-ai-essentials",
+      "title": "Google AI Essentials",
+      "titleRu": "Основы искусственного интеллекта от Google",
+      "issuer": "Google",
+      "platform": "Google",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/ED35K9D93X2L"
+    }
+  },
+  {
+    "sheet": {
+      "row": "244",
+      "date": "",
+      "title": "1.AI Essentials (Основы искусственного интеллекта)  2.The Intel® AI Value (Ценность Intel® AI)                  3. Intel® AI Win Recipes (Рецепты Intel® AI Win)                4. Specialization: Intel® AI Fundamentals (Специализация: Основы Intel® AI)",
+      "issuer": "Intel                                       Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/4URMB2SNP5HE"
+      ],
+      "col_vals": {
+        "B": "1.AI Essentials (Основы искусственного интеллекта)  2.The Intel® AI Value (Ценность Intel® AI)                  3. Intel® AI Win Recipes (Рецепты Intel® AI Win)                4. Specialization: Intel® AI Fundamentals (Специализация: Основы Intel® AI) ",
+        "C": "Intel                                       Платформа Coursera",
+        "D": "Электронный",
+        "E": "1.Сертификат   2.Сертификат            3.Сертификат  6.Сертификат специализации"
+      }
+    },
+    "ts": {
+      "id": "ai-google-fundamentals",
+      "title": "AI Fundamentals",
+      "titleRu": "Базовые принципы и концепции ИИ",
+      "issuer": "Google",
+      "platform": "Google",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/2SCOC8OZT9PU"
+    }
+  },
+  {
+    "sheet": {
+      "row": "246",
+      "date": "",
+      "title": "Discover Acting               (Откройте для себя актерское мастерство)",
+      "issuer": "University of London (Лондонский университет) Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/UFZLP3EQ7YU7"
+      ],
+      "col_vals": {
+        "B": "Discover Acting               (Откройте для себя актерское мастерство)",
+        "C": "University of London (Лондонский университет) Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-vanderbilt-gpts",
+      "title": "OpenAI GPTs: Creating Your Own Custom AI Assistants",
+      "titleRu": "Создание пользовательских ИИ-помощников в OpenAI GPTs",
+      "issuer": "Vanderbilt University",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2025",
+      "url": "https://www.coursera.org/account/accomplishments/verify/UFZLP3EQ7YU7"
+    }
+  },
+  {
+    "sheet": {
+      "row": "247",
+      "date": "",
+      "title": "Elements of AI                (Элементы искусственного интеллекта)",
+      "issuer": "University of Helsinki (Университет Хельсинки)",
+      "cert_type": "Электронный",
+      "links": [
+        "https://certificates.mooc.fi/validate/mu6fincpf3"
+      ],
+      "col_vals": {
+        "B": "Elements of AI                (Элементы искусственного интеллекта)",
+        "C": "University of Helsinki (Университет Хельсинки)",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-helsinki-elements",
+      "title": "Elements of AI",
+      "titleRu": "Элементы искусственного интеллекта",
+      "issuer": "University of Helsinki",
+      "platform": "Other",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://certificates.mooc.fi/validate/mu6fincpf3"
+    }
+  },
+  {
+    "sheet": {
+      "row": "248",
+      "date": "",
+      "title": "OpenAI GPTs: Creating Your Own Custom AI Assistants               (OpenAI GPTs: Создание собственных пользовательских ИИ-помощников)",
+      "issuer": "Vanderbilt University (Университет Вандербильта) Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/UFZLP3EQ7YU7"
+      ],
+      "col_vals": {
+        "B": "OpenAI GPTs: Creating Your Own Custom AI Assistants               (OpenAI GPTs: Создание собственных пользовательских ИИ-помощников)",
+        "C": "Vanderbilt University (Университет Вандербильта) Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-vanderbilt-gpts",
+      "title": "OpenAI GPTs: Creating Your Own Custom AI Assistants",
+      "titleRu": "Создание пользовательских ИИ-помощников в OpenAI GPTs",
+      "issuer": "Vanderbilt University",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2025",
+      "url": "https://www.coursera.org/account/accomplishments/verify/UFZLP3EQ7YU7"
+    }
+  },
+  {
+    "sheet": {
+      "row": "249",
+      "date": "",
+      "title": "Generative Pre-trained Transformers (GPT) (Генеративные предварительно обученные трансформаторы (GPT))",
+      "issuer": "University of Glasgow (Университет Глазго) Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/T6Z8BK6LZSDF"
+      ],
+      "col_vals": {
+        "B": "Generative Pre-trained Transformers (GPT) (Генеративные предварительно обученные трансформаторы (GPT))",
+        "C": "University of Glasgow (Университет Глазго) Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-glasgow-gpt",
+      "title": "Generative Pre-trained Transformers (GPT)",
+      "titleRu": "Архитектура генеративных предобученных трансформеров",
+      "issuer": "University of Glasgow",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/T6Z8BK6LZSDF"
+    }
+  },
+  {
+    "sheet": {
+      "row": "250",
+      "date": "",
+      "title": "Inteligencia Artificial (IA): Interacciones y prompts (Искусственный интеллект (ИИ): взаимодействие и подсказки)",
+      "issuer": "Universidad de Palermo (Университет Палермо) Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/PN8AZVJZ96VJ"
+      ],
+      "col_vals": {
+        "B": "Inteligencia Artificial (IA): Interacciones y prompts (Искусственный интеллект (ИИ): взаимодействие и подсказки)",
+        "C": "Universidad de Palermo (Университет Палермо) Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-palermo-prompts",
+      "title": "Inteligencia Artificial: Interacciones y prompts",
+      "titleRu": "Искусственный интеллект: взаимодействие и сценарии подсказок",
+      "issuer": "Universidad de Palermo",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/PN8AZVJZ96VJ"
+    }
+  },
+  {
+    "sheet": {
+      "row": "254",
+      "date": "",
+      "title": "Generative AI Content Creation (Генеративный ИИ для создания контента)",
+      "issuer": "Adobe                                               Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/B6X5HFIRROUV"
+      ],
+      "col_vals": {
+        "B": "Generative AI Content Creation (Генеративный ИИ для создания контента)",
+        "C": "Adobe                                               Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-adobe-content",
+      "title": "Generative AI Content Creation",
+      "titleRu": "Создание контента с помощью генеративного ИИ",
+      "issuer": "Adobe",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2025",
+      "url": "https://www.coursera.org/account/accomplishments/verify/B6X5HFIRROUV"
+    }
+  },
+  {
+    "sheet": {
+      "row": "255",
+      "date": "",
+      "title": "Solve Business Problems with AI and Machine Learning (Решайте бизнес-задачи с помощью искусственного интеллекта и машинного обучения)",
+      "issuer": "CertNexus                                              Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/AO7OD79PX22Y"
+      ],
+      "col_vals": {
+        "B": "Solve Business Problems with AI and Machine Learning (Решайте бизнес-задачи с помощью искусственного интеллекта и машинного обучения)",
+        "C": "CertNexus                                              Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-certnexus-problems",
+      "title": "Solve Business Problems with AI and Machine Learning",
+      "titleRu": "Решение бизнес-задач с помощью ИИ и машинного обучения",
+      "issuer": "CertNexus",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/AO7OD79PX22Y"
+    }
+  },
+  {
+    "sheet": {
+      "row": "256",
+      "date": "",
+      "title": "Generative AI Advance Fine-Tuning for LLMs (Генеративный искусственный интеллект для тонкой настройки LLM)",
+      "issuer": "IBM                                               Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/FV2BFCNYJTG8"
+      ],
+      "col_vals": {
+        "B": "Generative AI Advance Fine-Tuning for LLMs (Генеративный искусственный интеллект для тонкой настройки LLM)",
+        "C": "IBM                                               Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-ibm-fine-tuning",
+      "title": "Generative AI Advance Fine-Tuning for LLMs",
+      "titleRu": "Тонкая настройка (Fine-Tuning) больших языковых моделей",
+      "issuer": "IBM",
+      "platform": "IBM",
+      "category": "ai-ml",
+      "year": "2025",
+      "url": "https://www.coursera.org/account/accomplishments/verify/FV2BFCNYJTG8"
+    }
+  },
+  {
+    "sheet": {
+      "row": "258",
+      "date": "",
+      "title": "AI Agents Fundamentals (Основы работы агентов искусственного интеллекта)",
+      "issuer": "Hugging Face",
+      "cert_type": "Электронный",
+      "links": [
+        "https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/4c81fd9ddc2033e7900275a483dd9092d0e08abd7f90d819876d33ca1158c283?response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-02-11.png%3B+filename%3D%222025-02-11.png%22%3B&response-content-type=image%2Fpng&Expires=1744132475&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NDEzMjQ3NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2YyLzM0L2YyMzQ0MTUxZjYwZjYwMjdjNDM2ODIxZGM2MWNmM2YyN2E0NjQzNWRlNTdkZjhkZjUwYWQwMmI1YWNjYTdjMDcvNGM4MWZkOWRkYzIwMzNlNzkwMDI3NWE0ODNkZDkwOTJkMGUwOGFiZDdmOTBkODE5ODc2ZDMzY2ExMTU4YzI4Mz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=ClN1kYVUhRH1KH9ouXZLGk%7EGy0cj0Wh7kPHHDi45GvLoOokiQhSS-QrChKxcmTyGbnPAHvIQsi4wCwjtPbK2PWvBDvLGE96c-n26PXXwlGdxUjtQJFvb61vDUKYvc%7E9ZmojsWNmtpH9aGXCCWzzPh%7EXj95X%7Eb78Bh9queSGYvDqDO%7E3TtjV7KPZ1vjoAQOIk2Ws%7EI7tLV8W46zroPFQbTnQBRnBtxjBewen8gZsxUwXpjKYl1BFNYyeWAY2QVfnKfywLMqjIvZ7De7Df8p-AREzML82IYl2lO7NVQCLYvbtOSOxZUlGkTjHZL7aX6kIOjFNpbx9pbvUT51beqOh-tg__&Key-Pair-Id=K24J24Z295AEI9"
+      ],
+      "col_vals": {
+        "B": "AI Agents Fundamentals (Основы работы агентов искусственного интеллекта)",
+        "C": "Hugging Face",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-huggingface-agents",
+      "title": "AI Agents Fundamentals",
+      "titleRu": "Основы автономных ИИ-агентов",
+      "issuer": "Hugging Face",
+      "platform": "Other",
+      "category": "ai-ml",
+      "year": "2025",
+      "url": "https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/4c81fd9ddc2033e7900275a483dd9092d0e08abd7f90d819876d33ca1158c283"
+    }
+  },
+  {
+    "sheet": {
+      "row": "259",
+      "date": "",
+      "title": "AI Agents: From Prompts to Multi-Agent Systems                            (Агенты искусственного интеллекта: От подсказок до многоагентных систем)",
+      "issuer": "University of California, Davis (Университет Калифорния, Дэвис)                                        Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.coursera.org/account/accomplishments/verify/EVVOCIMERRR5"
+      ],
+      "col_vals": {
+        "B": "AI Agents: From Prompts to Multi-Agent Systems                            (Агенты искусственного интеллекта: От подсказок до многоагентных систем)",
+        "C": "University of California, Davis (Университет Калифорния, Дэвис)                                        Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-uc-davis-multiagent",
+      "title": "AI Agents: From Prompts to Multi-Agent Systems",
+      "titleRu": "ИИ-агенты: от промптов к многоагентным системам",
+      "issuer": "University of California, Davis",
+      "platform": "Coursera",
+      "category": "ai-ml",
+      "year": "2025",
+      "url": "https://www.coursera.org/account/accomplishments/verify/EVVOCIMERRR5"
+    }
+  },
+  {
+    "sheet": {
+      "row": "261",
+      "date": "",
+      "title": "Intro to Snowflake for Devs, Data Scientists, Data Engineers                (Введение в Snowflake для разработчиков, специалистов по обработке данных и инженеров данных)",
+      "issuer": "Snowflake                                     Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.hackerrank.com/certificates/iframe/3e1d77b8b9b5"
+      ],
+      "col_vals": {
+        "B": "Intro to Snowflake for Devs, Data Scientists, Data Engineers                (Введение в Snowflake для разработчиков, специалистов по обработке данных и инженеров данных)",
+        "C": "Snowflake                                     Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "tech-hackerrank-csharp",
+      "title": "C# (Basic) Certificate",
+      "titleRu": "Сертификация базового владения C#",
+      "issuer": "HackerRank",
+      "platform": "Other",
+      "category": "programming-web",
+      "year": "2024",
+      "url": "https://www.hackerrank.com/certificates/iframe/3e1d77b8b9b5"
+    }
+  },
+  {
+    "sheet": {
+      "row": "262",
+      "date": "",
+      "title": "C# (Basic)",
+      "issuer": "hackerrank.com",
+      "cert_type": "Электронный",
+      "links": [
+        "https://www.hackerrank.com/",
+        "https://www.coursera.org/account/accomplishments/verify/2SCOC8OZT9PU"
+      ],
+      "col_vals": {
+        "B": "C# (Basic)",
+        "C": "hackerrank.com",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-google-fundamentals",
+      "title": "AI Fundamentals",
+      "titleRu": "Базовые принципы и концепции ИИ",
+      "issuer": "Google",
+      "platform": "Google",
+      "category": "ai-ml",
+      "year": "2024",
+      "url": "https://www.coursera.org/account/accomplishments/verify/2SCOC8OZT9PU"
+    }
+  },
+  {
+    "sheet": {
+      "row": "264",
+      "date": "",
+      "title": "AI Fundamentals                       (Основы искусственного интеллекта)",
+      "issuer": "Google                                     Платформа Coursera",
+      "cert_type": "Электронный",
+      "links": [
+        "https://verify.skilljar.com/c/mcgx5qh4hpej"
+      ],
+      "col_vals": {
+        "B": "AI Fundamentals                       (Основы искусственного интеллекта)",
+        "C": "Google                                     Платформа Coursera",
+        "D": "Электронный",
+        "E": "Сертификат"
+      }
+    },
+    "ts": {
+      "id": "ai-anthropic-claude-code",
+      "title": "Claude Code in Action",
+      "titleRu": "Claude Code в действии: агентное программирование",
+      "issuer": "Anthropic Academy",
+      "platform": "Other",
+      "category": "ai-ml",
+      "year": "2026",
+      "url": "https://verify.skilljar.com/c/mcgx5qh4hpej"
+    }
+  },
+  {
+    "sheet": {
+      "row": "265",
+      "date": "",
+      "title": "Claude Code in Action",
+      "issuer": "Anthropic Academy",
+      "cert_type": "",
+      "links": [],
+      "col_vals": {
+        "B": "Claude Code in Action",
+        "C": "Anthropic Academy"
+      }
+    },
+    "ts": {
+      "id": "ai-anthropic-claude-code",
+      "title": "Claude Code in Action",
+      "titleRu": "Claude Code в действии: агентное программирование",
+      "issuer": "Anthropic Academy",
+      "platform": "Other",
+      "category": "ai-ml",
+      "year": "2026",
+      "url": "https://verify.skilljar.com/c/mcgx5qh4hpej"
+    }
+  }
+]
