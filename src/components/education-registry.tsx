@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import React, { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import {
   Search,
@@ -17,6 +17,8 @@ import {
   ChevronDown,
   ChevronsDown,
   BookOpen,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import {
   educationCertificates,
@@ -47,7 +49,34 @@ export function EducationRegistry() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
   const [visibleCount, setVisibleCount] = useState<number>(INITIAL_BATCH_SIZE);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const categoryScrollRef = useRef<HTMLDivElement>(null);
+
+  // Check scroll positions for Category pills
+  const updateScrollButtons = useCallback(() => {
+    const el = categoryScrollRef.current;
+    if (!el) return;
+    const hasScroll = el.scrollWidth > el.clientWidth;
+    setCanScrollLeft(el.scrollLeft > 4);
+    setCanScrollRight(hasScroll && el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
+  }, []);
+
+  useEffect(() => {
+    updateScrollButtons();
+    window.addEventListener("resize", updateScrollButtons);
+    return () => window.removeEventListener("resize", updateScrollButtons);
+  }, [updateScrollButtons]);
+
+  const scrollCategories = (direction: "left" | "right") => {
+    const el = categoryScrollRef.current;
+    if (!el) return;
+    const scrollAmount = direction === "left" ? -240 : 240;
+    el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    setTimeout(updateScrollButtons, 300);
+  };
 
   // Keyboard shortcut listener (/ to search, Esc to clear)
   useEffect(() => {
@@ -71,10 +100,14 @@ export function EducationRegistry() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [searchQuery]);
 
-  // Handlers with automatic batch reset to 6 items
-  const handleCategorySelect = (category: string) => {
+  // Handlers with automatic batch reset to 6 items and auto-centering
+  const handleCategorySelect = (category: string, e?: React.MouseEvent<HTMLButtonElement>) => {
     setSelectedCategory(category);
     setVisibleCount(INITIAL_BATCH_SIZE);
+    if (e?.currentTarget) {
+      e.currentTarget.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+    setTimeout(updateScrollButtons, 300);
   };
 
   const handleSearchChange = (query: string) => {
@@ -88,7 +121,7 @@ export function EducationRegistry() {
     setVisibleCount(INITIAL_BATCH_SIZE);
   };
 
-  // Instant In-Memory Filter (Dataset is pre-sorted from highest flagship to vocational)
+  // Instant In-Memory Filter
   const filteredCertificates = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
     return educationCertificates.filter((item) => {
@@ -152,7 +185,7 @@ export function EducationRegistry() {
                 Реестр подтвержденных курсов и специализаций
               </h2>
               <p className="max-w-2xl text-sm leading-relaxed text-[rgba(214,207,191,0.85)]">
-                Здесь собраны пройденные онлайн-программы, академические специализации ведущих мировых институтов (Vanderbilt University, Harvard, Stanford Medicine, MIT, IBM, Google) и сертификаты. Каждая запись содержит прямую ссылку на верификацию.
+                Здесь собраны пройденные онлайн-программы, академические специализации ведущих мировых университетов (Vanderbilt, Harvard, Stanford, MIT, IBM, Google) и сертификаты. Каждая запись содержит прямую ссылку на верификацию.
               </p>
             </div>
 
@@ -227,7 +260,7 @@ export function EducationRegistry() {
         </div>
       </div>
 
-      {/* 2. CONTROL MATRIX (Instant Search + Category Pills + View Mode) */}
+      {/* 2. CONTROL MATRIX (Instant Search + Scrollable Category Pills with Navigation Arrows) */}
       <div className="rounded-panel border border-border-subtle bg-[rgba(18,24,22,0.78)] p-4 md:p-5 space-y-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           {/* Search Input with [ / ] Affordance */}
@@ -295,40 +328,78 @@ export function EducationRegistry() {
           </div>
         </div>
 
-        {/* Category Pill Filters */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+        {/* Category Pill Filters with Tactile Navigation Arrows & Gradient Masks */}
+        <div className="relative flex items-center gap-1.5">
+          {/* Left Arrow Button */}
           <button
             type="button"
-            onClick={() => handleCategorySelect("all")}
-            className={`shrink-0 rounded-panel border px-3.5 py-1.5 text-xs transition duration-150 active:scale-[0.96] ${
-              selectedCategory === "all"
-                ? "border-accent bg-accent/15 font-semibold text-foreground shadow-[0_0_12px_rgba(183,255,60,0.15)]"
-                : "border-border-subtle bg-[rgba(10,13,12,0.5)] text-titanium hover:border-accent/50 hover:text-foreground"
+            onClick={() => scrollCategories("left")}
+            disabled={!canScrollLeft}
+            className={`shrink-0 flex items-center justify-center h-8 w-8 rounded-panel border transition-all duration-150 active:scale-[0.92] ${
+              canScrollLeft
+                ? "border-accent/40 bg-[rgba(10,13,12,0.8)] text-accent hover:border-accent hover:bg-accent/15 shadow-[0_0_10px_rgba(183,255,60,0.12)] cursor-pointer"
+                : "border-border-subtle/40 bg-[rgba(10,13,12,0.3)] text-titanium/30 cursor-not-allowed opacity-40"
             }`}
+            aria-label="Прокрутить категории влево"
           >
-            Все направления ({categoryCounts.all ?? 0})
+            <ChevronLeft size={15} />
           </button>
-          {(Object.keys(CATEGORY_LABELS) as CertificateCategory[]).map((catKey) => {
-            const item = CATEGORY_LABELS[catKey];
-            const count = categoryCounts[catKey] || 0;
-            const active = selectedCategory === catKey;
-            return (
-              <button
-                key={catKey}
-                type="button"
-                onClick={() => handleCategorySelect(catKey)}
-                className={`shrink-0 rounded-panel border px-3.5 py-1.5 text-xs transition duration-150 active:scale-[0.96] flex items-center gap-1.5 ${
-                  active
-                    ? "border-accent bg-accent/15 font-semibold text-foreground shadow-[0_0_12px_rgba(183,255,60,0.15)]"
-                    : "border-border-subtle bg-[rgba(10,13,12,0.5)] text-titanium hover:border-accent/50 hover:text-foreground"
-                }`}
-              >
-                <span>{item.icon}</span>
-                <span>{item.label}</span>
-                <span className="font-mono text-[10px] opacity-75">({count})</span>
-              </button>
-            );
-          })}
+
+          {/* Scrollable Pills Track */}
+          <div
+            ref={categoryScrollRef}
+            onScroll={updateScrollButtons}
+            className="flex-1 flex items-center gap-2 overflow-x-auto py-1 scrollbar-none scroll-smooth"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            <button
+              type="button"
+              onClick={(e) => handleCategorySelect("all", e)}
+              className={`shrink-0 rounded-panel border px-3.5 py-1.5 text-xs transition duration-150 active:scale-[0.96] ${
+                selectedCategory === "all"
+                  ? "border-accent bg-accent/15 font-semibold text-foreground shadow-[0_0_12px_rgba(183,255,60,0.15)]"
+                  : "border-border-subtle bg-[rgba(10,13,12,0.5)] text-titanium hover:border-accent/50 hover:text-foreground"
+              }`}
+            >
+              Все направления ({categoryCounts.all ?? 0})
+            </button>
+            {(Object.keys(CATEGORY_LABELS) as CertificateCategory[]).map((catKey) => {
+              const item = CATEGORY_LABELS[catKey];
+              const count = categoryCounts[catKey] || 0;
+              const active = selectedCategory === catKey;
+              return (
+                <button
+                  key={catKey}
+                  type="button"
+                  onClick={(e) => handleCategorySelect(catKey, e)}
+                  className={`shrink-0 rounded-panel border px-3.5 py-1.5 text-xs transition duration-150 active:scale-[0.96] flex items-center gap-1.5 ${
+                    active
+                      ? "border-accent bg-accent/15 font-semibold text-foreground shadow-[0_0_12px_rgba(183,255,60,0.15)]"
+                      : "border-border-subtle bg-[rgba(10,13,12,0.5)] text-titanium hover:border-accent/50 hover:text-foreground"
+                  }`}
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.label}</span>
+                  <span className="font-mono text-[10px] opacity-75">({count})</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Right Arrow Button */}
+          <button
+            type="button"
+            onClick={() => scrollCategories("right")}
+            disabled={!canScrollRight}
+            className={`shrink-0 flex items-center justify-center h-8 w-8 rounded-panel border transition-all duration-150 active:scale-[0.92] ${
+              canScrollRight
+                ? "border-accent/40 bg-[rgba(10,13,12,0.8)] text-accent hover:border-accent hover:bg-accent/15 shadow-[0_0_10px_rgba(183,255,60,0.12)] cursor-pointer"
+                : "border-border-subtle/40 bg-[rgba(10,13,12,0.3)] text-titanium/30 cursor-not-allowed opacity-40"
+            }`}
+            aria-label="Прокрутить категории вправо"
+          >
+            <ChevronRight size={15} />
+          </button>
         </div>
       </div>
 
@@ -353,7 +424,7 @@ export function EducationRegistry() {
           </button>
         </div>
       ) : viewMode === "grid" ? (
-        /* GRID MODE: Initial 6 items (2 rows of 3) with UNTRUNCATED UNIVERSITY/ISSUER */
+        /* GRID MODE: Initial 6 items (2 rows of 3) */
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visibleCertificates.map((cert) => {
             const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
@@ -389,7 +460,7 @@ export function EducationRegistry() {
                     </span>
                   </div>
 
-                  {/* Flagship / Specialization Badges (Render only when present to maintain consistent spacing) */}
+                  {/* Flagship / Specialization Badges */}
                   {hasBadges && (
                     <div className="mt-3 flex flex-wrap items-center gap-1.5">
                       {cert.isFlagship && (
@@ -459,7 +530,7 @@ export function EducationRegistry() {
           })}
         </div>
       ) : (
-        /* TABLE / COMPACT MODE with Clear University/Issuer column */
+        /* TABLE / COMPACT MODE */
         <div className="overflow-hidden rounded-shell border border-border-subtle bg-[rgba(18,24,22,0.75)]">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-[rgba(214,207,191,0.85)]">
@@ -471,7 +542,7 @@ export function EducationRegistry() {
                   <th className="py-3 px-4 text-right">Подтверждение</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border-subtle/30">
+              <tbody className="divide-y border-border-subtle/30">
                 {visibleCertificates.map((cert) => {
                   const theme = PLATFORM_THEMES[cert.platform] || PLATFORM_THEMES.Other;
                   return (
@@ -479,8 +550,8 @@ export function EducationRegistry() {
                       key={cert.id}
                       className="group transition-colors hover:bg-accent/[0.04] border-l-2 border-l-transparent hover:border-l-accent"
                     >
-                      <td className="py-3 px-4 font-semibold text-foreground">
-                        <div className="flex items-center gap-1.5 min-w-[150px]">
+                      <td className="py-3 px-4 font-semibold text-foreground whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
                           <Building2 size={12} className="text-accent shrink-0" />
                           <span>{cert.issuer}</span>
                         </div>
@@ -490,7 +561,7 @@ export function EducationRegistry() {
                           {cert.title}
                         </div>
                         {cert.titleRu && (
-                          <div className="text-[11px] text-titanium mt-0.5">{cert.titleRu}</div>
+                          <div className="text-[11px] text-titanium">{cert.titleRu}</div>
                         )}
                       </td>
                       <td className="py-3 px-4 hidden md:table-cell whitespace-nowrap">
@@ -503,7 +574,7 @@ export function EducationRegistry() {
                           href={cert.url}
                           target="_blank"
                           rel="noreferrer noopener"
-                          className="inline-flex items-center gap-1.5 rounded-panel border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 active:scale-[0.96] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
+                          className="inline-flex items-center gap-1.5 rounded-panel border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 active:scale-[0.96]"
                         >
                           <span>Сверить</span>
                           <ExternalLink size={11} />
@@ -559,7 +630,7 @@ export function EducationRegistry() {
               <button
                 type="button"
                 onClick={handleShowAll}
-                className="inline-flex items-center justify-center gap-1.5 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-4 py-3 text-xs font-mono text-titanium hover:border-accent/40 hover:text-foreground transition-all duration-150 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="inline-flex items-center justify-center gap-1.5 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.6)] px-4 py-3 text-xs font-mono text-titanium hover:border-accent/40 hover:text-foreground transition-all duration-150 active:scale-[0.98]"
               >
                 <ChevronsDown size={14} />
                 <span>Развернуть весь реестр ({totalCount})</span>
