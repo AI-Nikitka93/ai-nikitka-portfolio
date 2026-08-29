@@ -24,6 +24,7 @@ export function SiteHeader() {
     "/ai-assistant": { label: "Assistant", shortLabel: "Assistant" },
     "/links": { label: "Contact", shortLabel: "Contact" },
     "/awards-credentials": { label: "Awards", shortLabel: "Awards" },
+    "/education": { label: "Education", shortLabel: "Education" },
     "/en": { label: "English", shortLabel: "EN" },
     "/privacy": { label: "Privacy", shortLabel: "Privacy" },
   };
