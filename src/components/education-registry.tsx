@@ -44,7 +44,14 @@ export function EducationRegistry() {
   // Keyboard shortcut listener (/ to search, Esc to clear)
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === "/" && document.activeElement !== searchInputRef.current) {
+      const target = e.target as HTMLElement | null;
+      const isInput =
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.isContentEditable);
+
+      if (e.key === "/" && !isInput) {
         e.preventDefault();
         searchInputRef.current?.focus();
       } else if (e.key === "Escape" && searchQuery) {

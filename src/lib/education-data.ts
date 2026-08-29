@@ -36,13 +36,13 @@ export type EducationCertificate = {
   coursesCount?: number;
 };
 
-export const CATEGORY_LABELS: Record<CertificateCategory, { label: string; icon: string; count: number }> = {
-  "ai-ml": { label: "Искусственный интеллект & ML", icon: "🤖", count: 24 },
-  "programming-web": { label: "Программирование & Веб", icon: "💻", count: 18 },
-  "marketing-design": { label: "Маркетинг, Аналитика & Дизайн", icon: "📈", count: 26 },
-  "engineering-energy": { label: "Энергетика, Инженерия & Lean", icon: "⚡", count: 22 },
-  "management-leadership": { label: "Менеджмент & Лидерство", icon: "🏛️", count: 25 },
-  "global-health-safety": { label: "ООН, ВОЗ, Медицина & Безопасность", icon: "🌍", count: 28 },
+export const CATEGORY_LABELS: Record<CertificateCategory, { label: string; icon: string }> = {
+  "ai-ml": { label: "Искусственный интеллект & ML", icon: "🤖" },
+  "programming-web": { label: "Программирование & Веб", icon: "💻" },
+  "marketing-design": { label: "Маркетинг, Аналитика & Дизайн", icon: "📈" },
+  "engineering-energy": { label: "Энергетика, Инженерия & Lean", icon: "⚡" },
+  "management-leadership": { label: "Менеджмент & Лидерство", icon: "🏛️" },
+  "global-health-safety": { label: "ООН, ВОЗ, Медицина & Безопасность", icon: "🌍" },
 };
 
 export const formalEducationList = [

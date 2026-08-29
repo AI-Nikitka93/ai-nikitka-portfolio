@@ -24,6 +24,7 @@ const expectedStaticRoutes = [
   "/portfolio",
   "/lab",
   "/about",
+  "/education",
   "/blog",
   "/services-calculator",
   "/ai-assistant",
