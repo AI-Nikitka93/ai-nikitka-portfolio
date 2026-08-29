@@ -57,7 +57,7 @@ export function SiteHeader() {
                   AI_NIKITKA93
                 </span>
                 <span className="font-mono text-[9px] uppercase tracking-wider text-titanium leading-none">
-                  {isEnglishRoute ? "Nikita Kizevich // Prompt-First AI" : "Никита Кизевич // Prompt-First Практик"}
+                  {isEnglishRoute ? "Nikita Kizevich // AI & Neural Systems" : "Никита Кизевич // Создатель ИИ-видео и систем"}
                 </span>
               </div>
             </Link>

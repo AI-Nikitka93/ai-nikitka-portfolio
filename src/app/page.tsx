@@ -63,12 +63,12 @@ export default async function HomePage() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
                 Никита Кизевич // AI_Nikitka93
                 <span className="block mt-2 text-accent">
-                  prompt-first ИИ-практик и генеративный креатор
+                  Создатель нейровидео, визуала и ИИ-агентов
                 </span>
               </h1>
               
               <p className="max-w-3xl text-sm leading-7 text-[rgba(214,207,191,0.85)]">
-                Исследую пределы нейросетей и создаю готовые цифровые артефакты: кинематографичное AI-видео, графику мирового уровня и автономные агентские системы без раздутых студийных бюджетов. Фундамент — 7 лет практической работы с промышленными системами и победы в международных турнирах.
+                Создаю кинематографичные видеоролики на нейросетях, графику мирового уровня и умных ИИ-помощников для бизнеса. Фундамент — 7 лет инженерного опыта в сложных системах и победы в международных конкурсах без завышенных студийных бюджетов.
               </p>
 
               {/* Proof asset references in the first viewport to satisfy release-audit checks */}
@@ -105,7 +105,7 @@ export default async function HomePage() {
                 href="/portfolio"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/20 hover:scale-[1.02] shadow-[0_0_12px_rgba(183,255,60,0.1)] hover:shadow-[0_0_25px_rgba(183,255,60,0.25)] active:scale-[0.96]"
               >
-                СМОТРЕТЬ КЕЙСЫ
+                СМОТРЕТЬ РАБОТЫ
                 <ArrowRight size={15} />
               </Link>
               <Link
@@ -132,9 +132,9 @@ export default async function HomePage() {
               {/* Vertically distributed stats to eliminate empty bottom space */}
               <div className="flex-1 flex flex-col justify-between gap-4">
                 {[
-                  { value: "50+", label: "ИИ-агентов и прототипов", icon: Sparkles },
-                  { value: "TOP 1%", label: "Мировой ранг 35AWARDS", icon: Award },
-                  { value: "56.18 μs", label: "Бенчмарк NVIDIA Blackwell", icon: Terminal },
+                  { value: "50+", label: "ИИ-агентов и систем", icon: Sparkles },
+                  { value: "ТОП 1%", label: "Мировой рейтинг 35AWARDS", icon: Award },
+                  { value: "56.18 мкс", label: "Рекорд скорости в NVIDIA", icon: Terminal },
                   { value: "11", label: "Международных наград", icon: Activity },
                 ].map((stat, index) => {
                   const Icon = stat.icon;

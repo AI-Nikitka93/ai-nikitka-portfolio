@@ -25,19 +25,20 @@ export function WireframeBrain() {
   const isEnglishRoute = pathname === "/en" || pathname?.startsWith("/en/");
 
   const t = {
-    sysState: "SYS.STATUS",
-    coordRef: "COORD_REF",
+    sysState: isEnglishRoute ? "SYS.STATUS" : "СТАТУС",
+    coordRef: isEnglishRoute ? "COORD_REF [3D]" : "КООРДИНАТЫ [3D]",
     loading: isEnglishRoute ? "LOADING_MODEL" : "ЗАГРУЗКА_МОДЕЛИ",
     error: isEnglishRoute ? "CORE_FALLBACK" : "АВАРИЙНЫЙ_РЕЖИМ",
-    online: isEnglishRoute ? "ACTIVE // OK" : "В СЕТИ // OK",
-    research: "RESEARCH",
-    researchSub: "ANALYTICS // NOMINAL",
-    architecture: "ARCHITECTURE",
-    architectureSub: "AGENT.CORE // ACTIVE",
-    experiments: "EXPERIMENTS",
-    experimentsSub: "NEURAL.SIM.v4.2",
-    deployment: "DEPLOYMENT",
-    deploymentSub: "EDGE.NODE.01 // LIVE",
+    online: isEnglishRoute ? "ACTIVE // OK" : "В СЕТИ // ВСЁ РАБОТАЕТ",
+    research: isEnglishRoute ? "RESEARCH" : "ИССЛЕДОВАНИЯ",
+    researchSub: isEnglishRoute ? "DATA ANALYTICS // OK" : "АНАЛИЗ ДАННЫХ // В НОРМЕ",
+    architecture: isEnglishRoute ? "ARCHITECTURE" : "АРХИТЕКТУРА",
+    architectureSub: isEnglishRoute ? "AI AGENTS // ACTIVE" : "ИИ-АГЕНТЫ // РАБОТАЮТ",
+    experiments: isEnglishRoute ? "EXPERIMENTS" : "ЭКСПЕРИМЕНТЫ",
+    experimentsSub: isEnglishRoute ? "NEURAL NETS // v4.2" : "НЕЙРОСЕТИ // v4.2",
+    deployment: isEnglishRoute ? "DEPLOYMENT" : "ЗАПУСК И СИСТЕМЫ",
+    deploymentSub: isEnglishRoute ? "EDGE SERVER // LIVE" : "СЕРВЕР // В СЕТИ",
+    centerText: isEnglishRoute ? "AI + NIKITKA" : "ИИ + НИКИТА",
     engineActivated: isEnglishRoute ? "➔ INTERACTIVE NEURAL CORE ➔" : "➔ ИНТЕРАКТИВНОЕ ЯДРО ЛАБОРАТОРИИ ➔"
   };
 
@@ -624,7 +625,7 @@ export function WireframeBrain() {
           className="font-mono text-[9px] font-extrabold tracking-[0.14em] fill-accent"
           style={{ filter: "drop-shadow(0 0 5px rgba(183, 255, 60, 0.85))" }}
         >
-          AI + NIKITKA
+          {t.centerText}
         </text>
 
         {/* 4. Dash-lines pointing to corner labels */}
