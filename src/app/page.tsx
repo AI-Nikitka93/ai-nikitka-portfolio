@@ -22,7 +22,7 @@ import { getPosts } from "@/lib/mdx";
 export const metadata: Metadata = buildMetadata({
   title: "AI_Nikitka93 — портфолио работ и проектов",
   description:
-    "Портфолио Никиты Кизевича: видео, изображения, сайты, проекты с нейросетями, работы и заметки.",
+    "Портфолио Никиты Кизевича (AI_Nikitka93): вайбкодинг сайтов, веб-сервисы, генеративные медиа и автоматизация прикладных задач с помощью нейросетей.",
   path: "/",
   absoluteTitle: true,
   languageAlternates: true,
@@ -63,12 +63,12 @@ export default async function HomePage() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
                 Никита Кизевич // AI_Nikitka93
                 <span className="block mt-2 text-accent">
-                  Создатель нейровидео, визуала и ИИ-агентов
+                  Вайбкодинг сайтов, создание медиа и автоматизация на ИИ
                 </span>
               </h1>
               
               <p className="max-w-3xl text-sm leading-7 text-[rgba(214,207,191,0.85)]">
-                Создаю кинематографичные видеоролики на нейросетях, графику мирового уровня и умных ИИ-помощников для бизнеса. Фундамент — 7 лет инженерного опыта в сложных системах и победы в международных конкурсах без завышенных студийных бюджетов.
+                Решаю прикладные задачи с помощью нейросетей: собираю работающие веб-приложения и сайты через вайбкодинг, создаю графику, музыку и видео, автоматизирую рутину. Я не классический программист, а практик: быстро превращаю идею в готовый рабочий инструмент без раздутых бюджетов и пустых обещаний.
               </p>
 
               {/* Proof asset references in the first viewport to satisfy release-audit checks */}

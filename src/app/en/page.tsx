@@ -36,7 +36,7 @@ const proofPoints = [
 export const metadata: Metadata = buildMetadata({
   title: "English Summary",
   description:
-    "English summary for AI_Nikitka93: selected work by Nikita Kizevich, AI video, images, site helpers and technical experiments.",
+    "English summary for AI_Nikitka93: hands-on vibe-coding, web applications, generative media and practical experiments by Nikita Kizevich.",
   path: "/en",
   locale: "en_US",
   languageAlternates: true,
@@ -49,8 +49,8 @@ export default function EnglishSummaryPage() {
     <PageShell
       contentLang="en"
       eyebrow="English summary"
-      title="Nikita Kizevich / AI_Nikitka93: AI video, visual work and practical digital projects."
-      description="This is a compact English entry point. The main site is Russian-first, but the core positioning is simple: selected public results, visual work and technical experiments, without inflated claims."
+      title="Nikita Kizevich / AI_Nikitka93: Vibe-coding, Web Applications & Generative AI Media."
+      description="This is a compact English entry point. The main site is Russian-first, but the core positioning is simple: hands-on vibe-coding, web applications, generative media and practical experiments, without inflated claims."
       actions={
         <>
           <Link
