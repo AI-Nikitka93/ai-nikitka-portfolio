@@ -54,10 +54,10 @@ export function SiteHeader() {
             <Link href="/" className="flex min-h-11 min-w-0 items-center rounded-panel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent">
               <div className="flex flex-col gap-0.5">
                 <span className="font-display text-base font-extrabold uppercase tracking-wider text-foreground leading-none">
-                  AI ARCHITECT
+                  AI_NIKITKA93
                 </span>
                 <span className="font-mono text-[9px] uppercase tracking-wider text-titanium leading-none">
-                  R&D Engineer / AI Core Architect
+                  {isEnglishRoute ? "Nikita Kizevich // Prompt-First AI" : "Никита Кизевич // Prompt-First Практик"}
                 </span>
               </div>
             </Link>
@@ -69,7 +69,7 @@ export function SiteHeader() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent animate-pulse-lime"></span>
                 </span>
                 <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-accent font-semibold">
-                  AI SYSTEM ONLINE
+                  {isEnglishRoute ? "SIGNAL: ONLINE" : "СИГНАЛ: В СЕТИ"}
                 </span>
               </div>
 
@@ -107,12 +107,12 @@ export function SiteHeader() {
               </nav>
 
               <Link
-                href="/en"
+                href={isEnglishRoute ? "/" : "/en"}
                 aria-current={pathname === "/en" ? "page" : undefined}
                 className="inline-flex min-h-11 min-w-12 items-center justify-center rounded-panel border border-border-subtle px-3 font-mono text-[11px] uppercase tracking-[0.18em] text-titanium transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
-                aria-label="Open English summary"
+                aria-label={isEnglishRoute ? "Переключить на русский" : "Open English summary"}
               >
-                EN
+                {isEnglishRoute ? "RU" : "EN"}
               </Link>
             </div>
 
@@ -123,16 +123,16 @@ export function SiteHeader() {
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent animate-pulse-lime"></span>
                 </span>
                 <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-accent font-semibold">
-                  SYS_OK
+                  {isEnglishRoute ? "ONLINE" : "В СЕТИ"}
                 </span>
               </div>
               <Link
-                href="/en"
+                href={isEnglishRoute ? "/" : "/en"}
                 aria-current={pathname === "/en" ? "page" : undefined}
                 className="inline-flex h-11 min-w-12 items-center justify-center rounded-panel border border-border-subtle px-3 font-mono text-[11px] uppercase tracking-[0.16em] text-titanium transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
-                aria-label="Open English summary"
+                aria-label={isEnglishRoute ? "Переключить на русский" : "Open English summary"}
               >
-                EN
+                {isEnglishRoute ? "RU" : "EN"}
               </Link>
               <button
                 type="button"

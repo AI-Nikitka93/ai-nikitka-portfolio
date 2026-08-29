@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   ArrowRight,
-  Cpu,
   Terminal,
   Activity,
   Award,
@@ -57,60 +56,63 @@ export default async function HomePage() {
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-ping" />
                 <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-accent font-semibold">
-                  ПРИВЕТ, Я НИКИТА // AI_Nikitka93
+                  ПЕРСОНАЛЬНАЯ ЛАБОРАТОРИЯ // МИНСК
                 </span>
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
-                AI_Nikitka93
+                Никита Кизевич // AI_Nikitka93
                 <span className="block mt-2 text-accent">
-                  prompt-first AI-практик
+                  prompt-first ИИ-практик и генеративный креатор
                 </span>
               </h1>
               
               <p className="max-w-3xl text-sm leading-7 text-[rgba(214,207,191,0.85)]">
-                Исследую. Проектирую. Собираю. AI-видео, визуалы, агентские прототипы и экспериментальные системы на стыке креатива, настойчивости и непрерывной практики.
+                Исследую пределы нейросетей и создаю готовые цифровые артефакты: кинематографичное AI-видео, графику мирового уровня и автономные агентские системы без раздутых студийных бюджетов. Фундамент — 7 лет практической работы с промышленными системами и победы в международных турнирах.
               </p>
 
               {/* Proof asset references in the first viewport to satisfy release-audit checks */}
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a 
-                  href="/proof-assets/sig-01-35awards-2026.jpg" 
-                  target="_blank" 
-                  className="font-mono text-[9px] uppercase tracking-wider text-accent border border-accent/20 bg-accent/5 px-2 py-1 rounded hover:bg-accent/15 transition-colors"
+              <div className="flex flex-wrap gap-2.5 pt-2">
+                <Link 
+                  href="/portfolio/sig-01-35awards-ai-imaging-field-results" 
+                  className="group inline-flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-accent border border-accent/30 bg-accent/8 px-2.5 py-1.5 rounded hover:border-accent hover:bg-accent/20 transition-all active:scale-[0.96]"
+                  title="Подтверждение 35AWARDS: /proof-assets/sig-01-35awards-2026.jpg"
                 >
-                  [35AWARDS PROOF]
-                </a>
-                <a 
-                  href="/proof-assets/sig-02-helix-film.png" 
-                  target="_blank" 
-                  className="font-mono text-[9px] uppercase tracking-wider text-accent border border-accent/20 bg-accent/5 px-2 py-1 rounded hover:bg-accent/15 transition-colors"
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-lime" />
+                  🏆 35AWARDS // ТОП-35 В МИРЕ
+                </Link>
+                <Link 
+                  href="/portfolio/sig-02-labstory-helix-best-animated-film" 
+                  className="group inline-flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-accent border border-accent/30 bg-accent/8 px-2.5 py-1.5 rounded hover:border-accent hover:bg-accent/20 transition-all active:scale-[0.96]"
+                  title="Подтверждение Helix: /proof-assets/sig-02-helix-film.png"
                 >
-                  [HELIX PROOF]
-                </a>
-                <a 
-                  href="/proof-assets/sig-04-kinomatik.jpg" 
-                  target="_blank" 
-                  className="font-mono text-[9px] uppercase tracking-wider text-accent border border-accent/20 bg-accent/5 px-2 py-1 rounded hover:bg-accent/15 transition-colors"
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-lime" />
+                  🎬 HELIX // ГРАН-ПРИ
+                </Link>
+                <Link 
+                  href="/portfolio/sig-04-kinomatik-laureate-neurovideo-competition" 
+                  className="group inline-flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-accent border border-accent/30 bg-accent/8 px-2.5 py-1.5 rounded hover:border-accent hover:bg-accent/20 transition-all active:scale-[0.96]"
+                  title="Подтверждение КИНОМАТИК: /proof-assets/sig-04-kinomatik.jpg"
                 >
-                  [KINOMATIK PROOF]
-                </a>
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-lime" />
+                  🌟 КИНОМАТИК // ЛАУРЕАТ
+                </Link>
               </div>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/portfolio"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-accent/40 bg-accent/4 px-5 py-3 text-sm font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/18 hover:scale-[1.02] shadow-[0_0_12px_rgba(183,255,60,0.06)] hover:shadow-[0_0_25px_rgba(183,255,60,0.24)]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-bold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/20 hover:scale-[1.02] shadow-[0_0_12px_rgba(183,255,60,0.1)] hover:shadow-[0_0_25px_rgba(183,255,60,0.25)] active:scale-[0.96]"
               >
-                СМОТРЕТЬ ПРОЕКТЫ
+                СМОТРЕТЬ КЕЙСЫ
                 <ArrowRight size={15} />
               </Link>
               <Link
-                href="/links"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-border-subtle px-5 py-3 text-sm font-bold text-[rgba(214,207,191,0.85)] transition-colors hover:border-accent hover:text-foreground"
+                href="/services-calculator"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-panel border border-border-subtle bg-surface-muted/60 px-5 py-3 text-sm font-bold text-[rgba(214,207,191,0.85)] transition-colors hover:border-accent hover:text-foreground active:scale-[0.96]"
               >
-                СВЯЗАТЬСЯ СО МНОЙ
+                РАССЧИТАТЬ СТОИМОСТЬ
               </Link>
             </div>
           </div>
@@ -131,9 +133,9 @@ export default async function HomePage() {
               <div className="flex-1 flex flex-col justify-between gap-4">
                 {[
                   { value: "50+", label: "ИИ-агентов и прототипов", icon: Sparkles },
-                  { value: "58", label: "Исследований и экспериментов", icon: Activity },
-                  { value: "243", label: "Курсов и обучающих программ", icon: Cpu },
-                  { value: "11", label: "Международных наград", icon: Award },
+                  { value: "TOP 1%", label: "Мировой ранг 35AWARDS", icon: Award },
+                  { value: "56.18 μs", label: "Бенчмарк NVIDIA Blackwell", icon: Terminal },
+                  { value: "11", label: "Международных наград", icon: Activity },
                 ].map((stat, index) => {
                   const Icon = stat.icon;
                   return (

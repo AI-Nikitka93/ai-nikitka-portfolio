@@ -25,20 +25,20 @@ export function WireframeBrain() {
   const isEnglishRoute = pathname === "/en" || pathname?.startsWith("/en/");
 
   const t = {
-    sysState: isEnglishRoute ? "SYS.STATE" : "СТАТУС.СИС",
-    coordRef: isEnglishRoute ? "COORD_REF" : "КООРД_РEФ",
+    sysState: "SYS.STATUS",
+    coordRef: "COORD_REF",
     loading: isEnglishRoute ? "LOADING_MODEL" : "ЗАГРУЗКА_МОДЕЛИ",
     error: isEnglishRoute ? "CORE_FALLBACK" : "АВАРИЙНЫЙ_РЕЖИМ",
-    online: isEnglishRoute ? "ONLINE" : "В СЕТИ",
-    research: isEnglishRoute ? "RESEARCH" : "ИССЛЕДОВАНИЯ",
-    researchSub: isEnglishRoute ? "SYS.ANALYTICS // OK" : "АНАЛИТИКА.СИС // ОК",
-    architecture: isEnglishRoute ? "ARCHITECTURE" : "АРХИТЕКТУРА",
-    architectureSub: isEnglishRoute ? "MODEL.INFRA // ACTIVE" : "ИНФРА.МОДЕЛИ // АКТИВНО",
-    experiments: isEnglishRoute ? "EXPERIMENTS" : "ЭКСПЕРИМЕНТЫ",
-    experimentsSub: isEnglishRoute ? "NEURAL.SIM.v4.2" : "НЕЙРО.СИМ.v4.2",
-    deployment: isEnglishRoute ? "DEPLOYMENT" : "ДЕПЛОЙ",
-    deploymentSub: isEnglishRoute ? "EDGE.NODE.01 // LIVE" : "УЗЕЛ.EDGE.01 // РАБОТАЕТ",
-    engineActivated: isEnglishRoute ? "➔ AI ENGINE ACTIVATED ➔" : "➔ ИИ ЯДРО АКТИВИРОВАНО ➔"
+    online: isEnglishRoute ? "ACTIVE // OK" : "В СЕТИ // OK",
+    research: "RESEARCH",
+    researchSub: "ANALYTICS // NOMINAL",
+    architecture: "ARCHITECTURE",
+    architectureSub: "AGENT.CORE // ACTIVE",
+    experiments: "EXPERIMENTS",
+    experimentsSub: "NEURAL.SIM.v4.2",
+    deployment: "DEPLOYMENT",
+    deploymentSub: "EDGE.NODE.01 // LIVE",
+    engineActivated: isEnglishRoute ? "➔ INTERACTIVE NEURAL CORE ➔" : "➔ ИНТЕРАКТИВНОЕ ЯДРО ЛАБОРАТОРИИ ➔"
   };
 
   const containerRef = useRef<HTMLDivElement>(null);
