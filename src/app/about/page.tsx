@@ -160,6 +160,12 @@ export default function AboutPage() {
             Интерактивный путь
           </Link>
           <Link
+            href="/education"
+            className="rounded-panel border border-accent/40 bg-accent/10 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
+          >
+            Образование и 250+ сертификатов
+          </Link>
+          <Link
             href="/portfolio"
             className="rounded-panel border border-border px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent hover:bg-[rgba(183,255,60,0.06)]"
           >

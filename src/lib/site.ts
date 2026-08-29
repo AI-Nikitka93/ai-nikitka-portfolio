@@ -52,6 +52,7 @@ export const staticRoutes = [
   "/portfolio",
   "/lab",
   "/about",
+  "/education",
   "/blog",
   "/services-calculator",
   "/ai-assistant",

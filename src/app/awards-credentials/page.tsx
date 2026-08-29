@@ -51,8 +51,15 @@ export default function AwardsCredentialsPage() {
       actions={
         <>
           <Link
+            href="/education"
+            className="inline-flex min-h-11 items-center gap-2 rounded-panel border border-accent/40 bg-accent/10 px-4 py-3 text-sm font-bold text-accent transition-colors hover:bg-accent/20"
+          >
+            <GraduationCap size={16} />
+            <span>Образование и 250+ сертификатов</span>
+          </Link>
+          <Link
             href="/portfolio"
-            className="inline-flex min-h-11 items-center rounded-panel border border-accent px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-[rgba(183,255,60,0.08)]"
+            className="inline-flex min-h-11 items-center rounded-panel border border-border px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent hover:bg-[rgba(183,255,60,0.08)]"
           >
             Открыть главные работы
           </Link>

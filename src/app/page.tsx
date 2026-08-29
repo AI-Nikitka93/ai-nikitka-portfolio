@@ -133,29 +133,30 @@ export default async function HomePage() {
               {/* Vertically distributed stats to eliminate empty bottom space */}
               <div className="flex-1 flex flex-col justify-between gap-4">
                 {[
-                  { value: "50+", label: "ИИ-агентов и систем", icon: Sparkles },
-                  { value: "ТОП 1%", label: "Мировой рейтинг 35AWARDS", icon: Award },
-                  { value: "250+", label: "Пройденных курсов и сертификатов", icon: GraduationCap },
-                  { value: "11", label: "Международных наград", icon: Activity },
+                  { value: "50+", label: "ИИ-агентов и систем", icon: Sparkles, href: "/portfolio" },
+                  { value: "ТОП 1%", label: "Мировой рейтинг 35AWARDS", icon: Award, href: "/portfolio/sig-01-35awards-ai-imaging-field-results" },
+                  { value: "250+", label: "Пройденных курсов и сертификатов", icon: GraduationCap, href: "/education" },
+                  { value: "11", label: "Международных наград", icon: Activity, href: "/awards-credentials" },
                 ].map((stat, index) => {
                   const Icon = stat.icon;
                   return (
-                    <div 
-                      key={index} 
-                      className="flex items-center justify-between gap-3 group border-b border-border-subtle/20 pb-4 last:border-0 last:pb-0 flex-1 align-middle"
+                    <Link
+                      key={index}
+                      href={stat.href}
+                      className="flex items-center justify-between gap-3 group border-b border-border-subtle/20 pb-4 last:border-0 last:pb-0 flex-1 align-middle transition-colors hover:bg-accent/[0.03] rounded-panel p-2 -mx-2"
                     >
                       <div className="flex flex-col justify-center">
                         <span className="font-mono text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground group-hover:text-accent transition-colors">
                           {stat.value}
                         </span>
-                        <span className="block mt-1.5 text-xs sm:text-sm font-medium leading-relaxed text-[rgba(214,207,191,0.85)]">
+                        <span className="block mt-1.5 text-xs sm:text-sm font-medium leading-relaxed text-[rgba(214,207,191,0.85)] group-hover:text-foreground transition-colors">
                           {stat.label}
                         </span>
                       </div>
-                      <div className="h-10 w-10 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.4)] flex items-center justify-center text-accent group-hover:border-accent/40 transition-colors shrink-0">
+                      <div className="h-10 w-10 rounded-panel border border-border-subtle bg-[rgba(10,13,12,0.4)] flex items-center justify-center text-accent group-hover:border-accent group-hover:bg-accent/10 transition-colors shrink-0">
                         <Icon size={18} />
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
